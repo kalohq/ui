@@ -1,0 +1,363 @@
+:root {
+  --spacing: 10px;
+  --small: 26px;
+  --medium: 36px;
+  --large: 46px;
+  --x-large: 56px;
+
+  --border-width: 1px;
+  --easing: ease-in-out;
+}
+
+.root {
+  border-radius: 0px;
+  display: inline-block;
+  position: relative;
+}
+
+.button {
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  height: 100%;
+  min-width: 100%;
+  padding: 0;
+  transition: background 0.2s ease, color 0.1s linear;
+  align-items: center;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+/*
+ * Primary
+ */
+.primary {
+  background-color: var(--color-brand-green);
+  color: #fff;
+}
+
+.primary:not(.disabled):hover {
+  background-color: var(--color-brand-green-darker);
+}
+
+/*
+ * Secondary
+ */
+.secondary {
+  background-color: var(--color-brand-blue);
+  color: #fff;
+}
+
+.secondary:not(.disabled):hover {
+  background-color: var(--color-brand-blue-darker);
+}
+
+/*
+ * Disabled
+ */
+.disabled {
+  background-color: var(--color-grey-platinum);
+  color: var(--color-grey-silver);
+  cursor: default;
+}
+
+/*
+ * Tertiary
+ */
+.tertiary {
+  background-color: #fff;
+  border-color: var(--color-grey-platinum);
+  border-style: solid;
+  border-width: 2px;
+  color: var(--color-grey-charcoal);
+  transition: border-color 200ms var(--easing);
+}
+
+.tertiary:not(.disabled):hover {
+  border-color: var(--color-grey-silver);
+  background-color: var(--color-grey-snow);
+}
+
+.tertiary:not(.disabled).active {
+  background-color: var(--color-grey-platinum);
+}
+
+.delete {
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--color-grey-platinum);
+  background-color: #fff;
+  color: var(--color-ui-warning);
+}
+
+.delete:not(.disabled):hover {
+  background-color: var(--color-ui-warning);
+  border-color: var(--color-ui-warning);
+  color: #fff;
+}
+
+.delete:not(.disabled):active {
+  background-color: var(--color-ui-warning-darker);
+  border-color: var(--color-ui-warning-darker);
+  color: #fff;
+}
+
+.confirm {
+  background-color: var(--color-ui-success);
+  border: 2px solid var(--color-ui-success);
+  color: #fff;
+}
+
+.deny {
+  background-color: var(--color-ui-warning);
+  border: 2px solid var(--color-ui-warning);
+  color: #fff;
+}
+
+/*
+ * Sizing
+ */
+.small {
+  height: var(--small);
+  padding: 0 calc(var(--small) / 2);
+}
+
+.medium {
+  height: var(--medium);
+  padding: 0 calc(var(--medium) / 2);
+}
+
+.large {
+  height: var(--large);
+  padding: 0 calc(var(--large) / 2);
+}
+
+.x-large {
+  height: var(--x-large);
+  padding: 0 calc(var(--x-large) / 2);
+}
+
+.loneIcon.small {
+  width: var(--small);
+  line-height: var(--small);
+}
+
+.loneIcon.medium {
+  width: var(--medium);
+  line-height: var(--medium);
+}
+
+.loneIcon.large {
+  width: var(--large);
+  line-height: var(--large);
+}
+
+.loneIcon.x-large {
+  width: var(--x-large);
+  line-height: var(--x-large);
+}
+
+.button::-moz-focus-inner {
+  border: 0;
+}
+
+.placeholder {
+  visibility: hidden;
+}
+
+.loadingSpinner {
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: -150%;
+  transform: translate(-50%, -50%) rotate(0);
+  transition: 0.4s top cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.loading .loadingSpinner {
+  opacity: 1;
+  top: 50%;
+}
+
+.message {
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transition: 0.4s top cubic-bezier(0.175, 0.885, 0.320, 1.275), 0.4s opacity cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  width: 100%;
+}
+
+.message.mayGetLong {
+  padding: 0 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.successMessage {
+  transition:
+    0.4s top cubic-bezier(0.175, 0.885, 0.320, 1.275),
+    0.4s opacity cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  opacity: 0;
+}
+
+.loading .message,
+.loaded .message {
+  opacity: 0;
+  top: 100%;
+  transition:
+    0.4s top cubic-bezier(0.175, 0.885, 0.320, 1.275),
+    0.4s opacity cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.loaded.success .successMessage {
+  opacity: 1;
+  top: 0;
+}
+
+.loading .icon {
+  opacity: 0;
+}
+
+.icon {
+  position: relative;
+  opacity: 1;
+  transition: 0.4s opacity linear;
+  height: 100%;
+  display: inline-block;
+  padding: 0;
+  margin-right: 0;
+  margin-left: 0;
+  vertical-align: top;
+}
+
+.button:not(.loneIcon) .icon {
+  transform: translateX(-8px);
+}
+
+.icon > * {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  vertical-align: top;
+}
+
+.icon.border {
+  margin-left: var(--spacing);
+  border-left: var(--border-width) solid #fff;
+}
+
+.middle .button {
+  border-left: 0px !important;
+  border-right: 0px !important;
+}
+
+.wide {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+
+/**
+ * Grouped buttons
+ */
+.grouped .button {
+  border-radius: 0;
+  border-right-width: 0;
+}
+
+.grouped:first-of-type .button {
+  border-radius: 4px 0 0 4px;
+}
+
+.grouped:last-of-type .button {
+  border-radius: 0 4px 4px 0;
+  border-right-width: 2px;
+}
+
+.grouped .button.tertiary:hover {
+  border-color: var(--color-grey-platinum);
+}
+
+.flex {
+  flex-grow: 1;
+}
+
+.button.grouped + .grouped {
+  border-left: 0;
+}
+
+.grouped.round:first-child {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.grouped.round:last-child {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.spacing:first-child {
+  margin-left: 0;
+}
+
+.spacing:last-child {
+  margin-right: 0;
+}
+
+.spacing {
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+.reverse.spacing:first-child {
+  margin-left: 2.5px;
+  margin-right: 0;
+}
+
+.reverse.spacing:last-child {
+  margin-left: 0;
+  margin-right: 2.5px;
+}
+
+
+.loaded.success .button {
+  transition-duration: 0.1s;
+  background: var(--color-ui-success) !important;
+  color: #fff !important;
+}
+
+.loaded.success .button:hover {
+  transition-duration: 0.1s;
+  background: var(--color-ui-success) !important;
+  color: #fff !important;
+}
+
+.bordered.loaded.success:hover .button {
+  border: 1px solid var(--color-ui-success) !important;
+}
+
+
+@keyframes loadingSpinner {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

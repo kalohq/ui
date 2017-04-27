@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'WebFaktSoftPro';
+  font-weight: 400;
+  font-style: normal;
+  src: url('./fonts/Fakt-Soft-Pro-Blond/FaktSoftPro-Blond.woff') format('woff'),
+       url('./fonts/Fakt-Soft-Pro-Blond/FaktSoftPro-Blond.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'WebFaktSoftPro';
+  font-weight: 500;
+  font-style: normal;
+  src: url('./fonts/Fakt-Soft-Pro-SemiBold/FaktSoftPro-SemiBold.woff') format('woff'),
+       url('./fonts/Fakt-Soft-Pro-SemiBold/FaktSoftPro-SemiBold.ttf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: inherit;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  overflow-y: scroll;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: 'WebFaktSoftPro', sans-serif;
+  color: var(--color-grey-slate);
+  background-color: var(--color-grey-snow);
+}
+
+pre {
+  font-family: monospace;
+}
