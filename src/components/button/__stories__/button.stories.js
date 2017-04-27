@@ -6,7 +6,7 @@ import Button from 'components/button';
 storiesOf('Button', module)
   .addWithInfo(
     'Primary Button',
-    'The primary button should be used once per view.',
+    'The primary action of a view. It should be used no more than once per view.',
     () => {
       return (
         <Button theme="primary">Create Project</Button>
@@ -15,7 +15,7 @@ storiesOf('Button', module)
   )
   .addWithInfo(
     'Secondary Button',
-    'The primary button should be used once per view.',
+    'Used for supporting actions.',
     () => {
       return (
         <Button theme="secondary">Save Changes</Button>
@@ -24,7 +24,7 @@ storiesOf('Button', module)
   )
   .addWithInfo(
     'Tertiary Button',
-    'The tertiary button should be used once per view.',
+    'Our default button. Used for other actions.',
     () => {
       return (
         <Button theme="tertiary">Export Freelancers</Button>
@@ -32,11 +32,20 @@ storiesOf('Button', module)
     }
   )
   .addWithInfo(
-    'Button with Icon',
-    'The tertiary button should be used once per view.',
+    'With icon',
+    'To provide more context to an action, an icon (see the Icon component) can be floated next the button copy',
     () => {
       return (
         <Button theme="tertiary" icon="file_download">Generate Invoice</Button>
+      );
+    }
+  )
+  .addWithInfo(
+    'With lone icon',
+    'A button can also be used with a standalone icon',
+    () => {
+      return (
+        <Button theme="tertiary" size="medium" icon="mode_edit" loneIcon={true} />
       );
     }
   );
