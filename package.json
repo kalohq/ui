@@ -11,7 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build": "webpack --config scripts/webpack/webpack.config.js",
-    "build:production": "webpack -p --config scripts/webpack/webpack.config.js"
+    "build:production": "webpack -p --config scripts/webpack/webpack.config.js",
+    "storybook:static": "build-storybook -c .storybook -o docs"
   },
   "author": "Lystable",
   "license": "ISC",
