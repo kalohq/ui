@@ -11,7 +11,7 @@ const req = require.context('../src', true, /stories\.js$/)
 
 setOptions({
   name: 'Lystable Components',
-  url: 'https://lystable.com',
+  url: 'https://github.com/lystable/ui-library',
   goFullScreen: false,
   showLeftPanel: true,
   showDownPanel: false,
