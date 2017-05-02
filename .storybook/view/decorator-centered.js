@@ -9,7 +9,6 @@ export default function (renderStory) {
   let story = renderStory();
 
   let meta = story.props;
-  console.log(story);
   return (
     <Flex flexDirection="column" padding={[50, 50]} style={{backgroundColor: '#fff'}}>
       <H1 size="extra-large">{meta.context.story}</H1>
