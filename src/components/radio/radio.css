@@ -1,4 +1,4 @@
-.radio__radio__root___1pr9L___3YmkK {
+.root {
   border-radius: 50%;
   border: 1px solid var(--color-grey-silver);
   background-color: #fff;
@@ -8,19 +8,19 @@
   transition: all 200ms ease-in-out;
 }
 
-.radio__radio__checked___2JFGR___2Z-OU {
+.checked {
   border-color: var(--color-brand-blue);
 }
 
-.radio__radio__readonly___1iGqp___3fimd {
+.readonly {
   cursor: default;
 }
 
-.radio__radio__radio___1ESde___1L9NX {
+.radio {
   border-radius: 50%;
 }
 
-.radio__radio__icon___1kSnE___3eDW6 {
+.icon {
   transition-duration: 0.15s !important;
   border-radius: 50%;
   width: 100%;
@@ -29,8 +29,4 @@
   top: 0;
   background-color: var(--color-brand-blue);
   border: 3px solid #fff;
-}
-
-.radio__radio__label___WToVO___1_WAO {
-  margin-left: 10px;
 }

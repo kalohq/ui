@@ -6,9 +6,9 @@
   font-weight: 400;
   src: local('Material Icons'),
     local('MaterialIcons-Regular'),
-    url(styles/fonts/MaterialIcons/MaterialIcons-Regular.woff2) format('woff2'),
-    url(styles/fonts/MaterialIcons/MaterialIcons-Regular.woff) format('woff'),
-    url(styles/fonts/MaterialIcons/MaterialIcons-Regular.ttf) format('truetype');
+    url(assets/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+    url(assets/fonts/MaterialIcons-Regular.woff) format('woff'),
+    url(assets/fonts/MaterialIcons-Regular.ttf) format('truetype');
 }
 
 @font-face {
@@ -20,7 +20,7 @@
   font-style: normal;
 }
 
-.icon__icon__root___1EA4U___1P0AE {
+.root {
   font-family: 'Material Icons';
   font-style: normal;
   font-size: 24px;  /* Preferred icon size */
@@ -47,75 +47,75 @@
   font-feature-settings: 'liga';
 }
 
-.icon__icon__family-material___2o7uB___3vx1F {
+.family-material {
   font-family: 'Material Icons';
 }
 
-.icon__icon__family-fontello___1lsSW___2z8q8 {
+.family-fontello {
   font-family: 'fontello';
 }
 
-.icon__icon__weight-normal___SVXqw___1P4pC {
+.weight-normal {
   font-weight: normal;
 }
 
-.icon__icon__weight-heavy___3Qs6X___2I6NW {
+.weight-heavy {
   font-weight: 600;
 }
 
 /* Sizes */
-.icon__icon__size-12___3GV8H___3Ol2B { font-size: 12px; height: 12px; }
-.icon__icon__size-14___3OLkH___4FGam { font-size: 14px; height: 14px; }
-.icon__icon__size-16___1zXTG___2hcCz { font-size: 16px; height: 16px; }
-.icon__icon__size-18___2Oe_W___H_pXb { font-size: 18px; height: 18px; }
-.icon__icon__size-20___2Y2L2___3qYDf { font-size: 20px; height: 20px; }
-.icon__icon__size-23___2G1j2___1fCWW { font-size: 23px; height: 23px; }
-.icon__icon__size-24___2iMLZ___1zyed { font-size: 24px; height: 24px; }
-.icon__icon__size-26___2YF1x___27VKX { font-size: 26px; height: 26px; }
-.icon__icon__size-36___4i_mw___2BiBe { font-size: 36px; height: 36px; }
-.icon__icon__size-48___1sltk___CFJe9 { font-size: 48px; height: 48px; }
+.size-12 { font-size: 12px; height: 12px; }
+.size-14 { font-size: 14px; height: 14px; }
+.size-16 { font-size: 16px; height: 16px; }
+.size-18 { font-size: 18px; height: 18px; }
+.size-20 { font-size: 20px; height: 20px; }
+.size-23 { font-size: 23px; height: 23px; }
+.size-24 { font-size: 24px; height: 24px; }
+.size-26 { font-size: 26px; height: 26px; }
+.size-36 { font-size: 36px; height: 36px; }
+.size-48 { font-size: 48px; height: 48px; }
 
 /* Themes */
-.icon__icon__theme-light___27OTT___2dEmw { color: #fff; }
-.icon__icon__theme-dark___1v07h___7SA8c { color: #000; }
-.icon__icon__theme-positive___2m_8C___tLoQb { color: #7DD080; }
-.icon__icon__theme-negative___3lrIF___24PFF { color: #D56265; }
-.icon__icon__theme-pending___2krjV___1MnxN { color: rgb(246, 140, 58); }
-.icon__icon__theme-blue___2gbjC___69I-7 { color: rgb(26, 158, 214); }
+.theme-light { color: #fff; }
+.theme-dark { color: #000; }
+.theme-positive { color: #7DD080; }
+.theme-negative { color: #D56265; }
+.theme-pending { color: rgb(246, 140, 58); }
+.theme-blue { color: rgb(26, 158, 214); }
 
-.icon__icon__color-black___HDHnJ___2zd-l {
+.color-black {
   color: var(--color-grey-charcoal);
 }
 
-.icon__icon__color-red___3Oxgt___3VhPr {
+.color-red {
   color: var(--color-brand-red);
 }
 
-.icon__icon__color-blue___2Ik0x___1XUmh {
+.color-blue {
   color: var(--color-brand-blue);
 }
 
-.icon__icon__color-dark-blue___3JITf___1B9Io {
+.color-dark-blue {
   color: #4299C3;
 }
 
-.icon__icon__color-dark-grey___2KWi9___34Vbp {
+.color-dark-grey {
   color: var(--color-grey-charcoal);
 }
 
-.icon__icon__color-grey___1N6Yy___1xZFN {
+.color-grey {
   color: var(--color-grey-silver);
 }
 
-.icon__icon__color-teal___2Lto6___1TSFR {
+.color-teal {
   color: #A9AFC3
 }
 
-.icon__icon__color-light-grey___1B1Ur___3FHnj {
+.color-light-grey {
   color: var(--color-grey-platinum);
 }
 
-.icon__icon__color-white-smoke___3cJUe___37vq2 {
+.color-white-smoke {
   color: rgba(114, 140, 154, .21); /*
     NOTE Until we have a DRY solution, let’s keep this in sync with
     `defaultProps.defaultColor` in `components/supplier-approved-badge/
@@ -123,24 +123,24 @@
   */
 }
 
-.icon__icon__color-white___SLznQ___2q21f {
+.color-white {
   color: #fff;
 }
 
-.icon__icon__color-green___2otdg___3K--2 {
+.color-green {
   color: var(--color-brand-green);
 }
 
-.icon__icon__color-orange___29zAe___3S-zg {
+.color-orange {
   color: var(--color-brand-orange);
 }
 
-.icon__icon__color-white___SLznQ___2q21f {
+.color-white {
   color: #fff;
 }
 
-.icon__icon__color-none___2NCOg___15MMW {}
+.color-none {}
 
-.icon__icon__interactive___30O7y___Lc5Jt {
+.interactive {
   cursor: pointer;
 }

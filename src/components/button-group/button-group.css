@@ -1,16 +1,16 @@
-.button-group__button-group__wide___1FK4n___YiI05 {
+.wide {
   width: 100%;
 }
 
-.button-group__button-group__bordered___3E5VX___3Lq6f > * {
-  border-right: 1px solid var(--color-grey-platinum) !important;
+.bordered > * {
+  border-right: 1px solid #E3EDF1 !important;
 }
 
-.button-group__button-group__bordered___3E5VX___3Lq6f > *:last-child {
+.bordered > *:last-child {
   border-right: 0px solid transparent !important;
 }
 
-.button-group__button-group__reverse___1xlZH___1YNZH {
+.reverse {
   flex-direction: row-reverse;
   justify-content: flex-end;
 }

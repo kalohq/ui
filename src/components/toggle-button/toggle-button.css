@@ -1,5 +1,5 @@
 /* ToggleButton */
-.toggle-button__toggle-button__root___2qv_R___2GAQe {
+.root {
   border-radius: 20px;
   transition: all 0.25s ease-out;
   width: 60px;
@@ -10,30 +10,30 @@
   border: 2px solid var(--color-grey-platinum);
 }
 
-.toggle-button__toggle-button__button___mpk2Q___3i0Pa {
+.button {
   height: 20px;
   width: 20px;
   border-radius: 50%;
   background-color: var(--color-grey-silver);
 }
 
-.toggle-button__toggle-button__selected___MUuZi___yPmMR {
+.selected {
   padding-left: 32px;
 }
 
-.toggle-button__toggle-button__selected___MUuZi___yPmMR .toggle-button__toggle-button__button___mpk2Q___3i0Pa {
+.selected .button {
   background-color: #fff;
 }
 
-.toggle-button__toggle-button__icon___2XB15___36ITS {
+.icon {
   transition: all 0.25s ease-out;
 }
 
-.toggle-button__toggle-button__selectedIcon___3Uj7B___1dHKt {
+.selectedIcon {
   transform: translate(5px, -28px);
 }
 
-.toggle-button__toggle-button__notSelectedIcon___FB2F3___13LqG {
+.notSelectedIcon {
   transform: translate(28px, -28px);
 }
 
@@ -41,26 +41,26 @@
  * Themes
  */
 
-.toggle-button__toggle-button__default___1lu33___1tK5j.toggle-button__toggle-button__selected___MUuZi___yPmMR {
+.default.selected {
   background-color: var(--color-brand-blue);
 }
 
-.toggle-button__toggle-button__green___3A0DE___1XCMd.toggle-button__toggle-button__selected___MUuZi___yPmMR {
+.green.selected {
   background-color: var(--color-brand-green);
 }
 
-.toggle-button__toggle-button__orange___2V4UF___3zbh9.toggle-button__toggle-button__selected___MUuZi___yPmMR {
+.orange.selected {
   background-color: var(--color-brand-orange);
 }
 
-.toggle-button__toggle-button__orangeToGreen___2T6CX___22mB- {
+.orangeToGreen {
   background-color: var(--color-brand-orange);
 }
 
-.toggle-button__toggle-button__orangeToGreen___2T6CX___22mB- .toggle-button__toggle-button__button___mpk2Q___3i0Pa {
+.orangeToGreen .button {
   background-color: #fff;
 }
 
-.toggle-button__toggle-button__orangeToGreen___2T6CX___22mB-.toggle-button__toggle-button__selected___MUuZi___yPmMR {
+.orangeToGreen.selected {
   background-color: var(--color-brand-green);
 }
