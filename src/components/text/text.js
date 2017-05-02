@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PureComponent from 'react-pure-render/component';
 import cx from 'classnames';
-// import {Inline} from 'components/layout';
+import {Inline} from 'components/layout';
 import {isString} from 'lodash';
 
 import styles from './text.css';
@@ -10,7 +10,6 @@ import styles from './text.css';
 /**
  * A generic component for text formatting across the app.
  */
-
 export default class Text extends PureComponent {
 
   static propTypes = {
@@ -85,7 +84,7 @@ export default class Text extends PureComponent {
     weight: 'normal',
     size: 'small',
     margin: 'none',
-    component: 'span',
+    component: Inline,
     multiline: false,
     resetTransform: false,
     align: 'none',
@@ -112,7 +111,7 @@ export default class Text extends PureComponent {
       ...otherProps
     } = this.props;
 
-    const Component = isString(component) ? component : component;
+    const Component = isString(component) ? Inline : component;
 
     return (
       <Component
