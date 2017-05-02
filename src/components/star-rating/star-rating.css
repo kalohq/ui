@@ -1,0 +1,57 @@
+/* StarRating */
+
+.star-rating__star-rating__root___3Bjo2___2KJ3P {
+  display: flex;
+  align-items: center;
+}
+
+.star-rating__star-rating__star___Jq1RZ___21LDa {
+  position: relative;
+  padding-right: 5px;
+  overflow: hidden;
+}
+
+.star-rating__star-rating__icon___32b38___234TV {
+  transition: all 0.2s linear;
+  position: absolute;
+}
+
+.star-rating__star-rating__background___gwFVx___2rSU3 {
+  display: flex;
+}
+
+.star-rating__star-rating__foreground___3Ojk5___1YGkz {
+  display: flex;
+}
+
+.star-rating__star-rating__half___3_SEc___2gzJv {
+  width: 50%;
+  overflow: hidden;
+}
+
+.star-rating__star-rating__color-blue___1WlVy___wpPj- .star-rating__star-rating__background___gwFVx___2rSU3,
+.star-rating__star-rating__color-blue___1WlVy___wpPj- .star-rating__star-rating__foreground___3Ojk5___1YGkz {
+  color: #D2E7F1;
+}
+
+.star-rating__star-rating__color-blue___1WlVy___wpPj- .star-rating__star-rating__foreground___3Ojk5___1YGkz.star-rating__star-rating__highlight___2b7T2___22wZe {
+  color: rgb(26, 158, 214);
+}
+
+.star-rating__star-rating__color-navy___3THZS___1qUTs .star-rating__star-rating__background___gwFVx___2rSU3,
+.star-rating__star-rating__color-navy___3THZS___1qUTs .star-rating__star-rating__foreground___3Ojk5___1YGkz {
+  color: #D1D7DB;
+}
+
+.star-rating__star-rating__color-navy___3THZS___1qUTs .star-rating__star-rating__foreground___3Ojk5___1YGkz.star-rating__star-rating__highlight___2b7T2___22wZe {
+  color: #667B86;
+}
+
+.star-rating__star-rating__color-purple___Y7hr9___2cj1o .star-rating__star-rating__background___gwFVx___2rSU3,
+.star-rating__star-rating__color-purple___Y7hr9___2cj1o .star-rating__star-rating__foreground___3Ojk5___1YGkz {
+  color: #DBE1F9;
+}
+
+.star-rating__star-rating__color-purple___Y7hr9___2cj1o .star-rating__star-rating__foreground___3Ojk5___1YGkz.star-rating__star-rating__highlight___2b7T2___22wZe {
+  color: #869AE9;
+}

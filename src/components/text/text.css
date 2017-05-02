@@ -1,0 +1,208 @@
+.text__text__root___rdxxr___16HqB {
+  font-family: 'WebFaktSoftPro', sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0;
+  cursor: inherit;
+  vertical-align: middle;
+  line-height: 1.6em;
+}
+
+.text__text__resetTransform___3WF8f___2Yfno {
+  text-transform: none;
+}
+
+.text__text__weight-normal___2jc-R___G53T9 {
+  font-weight: 400;
+}
+
+.text__text__weight-semi-bold___3tMb6___39_eC {
+  font-weight: 500;
+}
+
+.text__text__size-extra-extra-small___1QzLI___2pb4R {
+  font-size: 10px;
+}
+
+.text__text__size-extra-small___1jzoi___39aLQ {
+  font-size: 12px;
+}
+
+.text__text__size-small___15RTF___3gDuR {
+  font-size: 14px;
+}
+
+.text__text__size-medium___2Kd3F___MIkxo {
+  font-size: 16px;
+}
+
+.text__text__size-large___3Mwge___1M9L6 {
+  font-size: 18px;
+}
+
+.text__text__size-extra-large___294N0___2R9Iv {
+  font-size: 20px;
+}
+
+.text__text__size-extra-extra-large___1wAKk___3O0iF {
+  font-size: 32px;
+}
+
+.text__text__size-huge___-K_16___YbpTM {
+  font-size: 42px;
+}
+
+.text__text__margin-none___2Kj2Y___iyS9H {
+  margin-bottom: 0;
+}
+
+.text__text__margin-small___2FsK4___3eJai {
+  margin-bottom: 10px;
+}
+
+.text__text__margin-medium___155h____2FKe4 {
+  margin-bottom: 15px;
+}
+
+.text__text__margin-large___17cTQ___30-gB {
+  margin-bottom: 30px;
+}
+
+.text__text__color-red___3Px_L___2LhnC {
+  color: var(--color-brand-red);
+}
+
+.text__text__color-blue___3_Wzl___17XBb {
+  color: var(--color-brand-blue);
+}
+
+.text__text__color-dark-blue___3B9er___3sG_j {
+  color: var(--color-brand-blue-darker);
+}
+
+.text__text__color-dark-grey___29NHp___2z0v_ {
+  color: var(--color-grey-charcoal);
+}
+
+.text__text__color-grey___3nUi0___dM29Q {
+  color: var(--color-grey-slate);
+}
+
+.text__text__color-light-grey___exYTo___17OtW {
+  color: var(--color-grey-silver);
+}
+
+.text__text__color-white___2D9Hx___270Yc {
+  color: #fff;
+}
+
+.text__text__color-green___fhzYc___2nXlD {
+  color: var(--color-brand-green);
+}
+
+.text__text__color-orange___3J0kZ___3Tnt2 {
+  color: var(--color-brand-orange);
+}
+
+.text__text__color-purple___ShokM___A2f50 {
+  color: var(--color-brand-purple);
+}
+
+.text__text__color-navy___30i0x___3yzL_ {
+  color: var(--color-grey-charcoal);
+}
+
+
+.text__text__color-none___3R5Cg___YGj6k {
+
+}
+
+.text__text__hover-color-black___1XWJA___2_qme:hover {
+  color: var(--color-grey-charcoal);
+}
+
+.text__text__hover-color-red___2F6rr___3HEiz:hover {
+  color: var(--color-brand-red);
+}
+
+.text__text__hover-color-blue___XNQwp___2aeYl:hover {
+  color: var(--color-brand-blue);
+}
+
+.text__text__hover-color-dark-blue___3c8gb___3l5Xq:hover {
+  color: var(--color-brand-blue-darker);
+}
+
+.text__text__hover-color-dark-grey___1GXnw___2-Q6F:hover {
+  color: var(--color-grey-charcoal);
+}
+
+.text__text__hover-color-grey___1tBVi___3uyqg:hover {
+  color: var(--color-grey-silver);
+}
+
+.text__text__hover-color-light-grey___3tE5Y___11mED:hover {
+  color: var(--color-grey-platinum);
+}
+
+.text__text__hover-color-white___3vQnw___3mGbZ:hover {
+  color: #fff;
+}
+
+.text__text__hover-color-green___lhz1l___39HE0:hover {
+  color: var(--color-brand-green);
+}
+
+.text__text__hover-color-orange___Lllua___3HuLs:hover {
+  color: var(--color-brand-orange);
+}
+
+.text__text__hover-color-navy___FqigU___3Dnvd:hover {
+  color: var(--color-grey-charcoal);
+}
+
+.text__text__hover-color-none___150s5___1eFB2:hover {
+
+}
+
+.text__text__multiline___2hNs6___1Ro2y {
+  white-space: normal;
+  text-overflow: initial;
+  overflow: visible;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.text__text__align-center___2rIZC___WPONi {
+  text-align: center;
+}
+
+.text__text__align-left___1P4wu___23o0a {
+  text-align: left;
+}
+
+.text__text__align-right___1YVhv___2O2by {
+  text-align: right;
+}
+
+.text__text__align-none___1rc5L___3SooW {
+  text-align: initial;
+}
+
+.text__text__interactive___2WwmA___2LA6Z {
+  cursor: pointer;
+}
+
+.text__text__interactive___2WwmA___2LA6Z:hover {
+  text-decoration: underline;
+}
+
+.text__text__not-interactive___3RZqZ___TxcFC {
+  cursor: default;
+}
+
+.text__text__no-underline___3XdqB___1sLhj,
+.text__text__no-underline___3XdqB___1sLhj:hover {
+  text-decoration: none
+}

@@ -1,0 +1,37 @@
+.loading-spinner__loading-spinner__root___1oE7w___yEZtB {
+  position: relative;
+  transform-origin: 48% 50%;
+  animation: loading-spinner__loading-spinner__loadingSpinner___1LyQk___36FnH 1600ms linear infinite;
+}
+
+.loading-spinner__loading-spinner__root___1oE7w___yEZtB svg {
+  fill: var(--color-grey-silver);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.loading-spinner__loading-spinner__small___3jXfq___gQ0U9 {
+  width: 20px;
+  height: 20px;
+}
+
+.loading-spinner__loading-spinner__medium___3ikkZ___2aaIh {
+  width: 30px;
+  height: 30px;
+}
+
+.loading-spinner__loading-spinner__large___6Bb_P___VE8bw {
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes loading-spinner__loading-spinner__loadingSpinner___1LyQk___36FnH {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,32 @@
+.step-marks__step-marks__root___3lLbn___2mIhJ {
+  display: inline-flex;
+}
+
+.step-marks__step-marks__container___3-AF3___1bsEy > span {
+  flex: 1;
+}
+
+.step-marks__step-marks__filled___232GB___3H2B_ {
+  background: #b4e2f4;
+  border: solid 1px #99d7ef;
+}
+
+.step-marks__step-marks__hollow___1LkH8___33rSq {
+  background: none;
+  border: solid 1px #99d7ef;
+}
+
+.step-marks__step-marks__circle___1puee___3r6rx {
+  width: 12px;
+  height: 12px;
+  margin-right: 12px;
+  border-radius: 50px;
+}
+
+.step-marks__step-marks__circle___1puee___3r6rx:last-child {
+  margin-right: 0px;
+}
+
+.step-marks__step-marks__interactive___3fQpX___1TF6N {
+  cursor: pointer;
+}

@@ -1,0 +1,146 @@
+/* Icon */
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(styles/fonts/MaterialIcons/MaterialIcons-Regular.woff2) format('woff2'),
+    url(styles/fonts/MaterialIcons/MaterialIcons-Regular.woff) format('woff'),
+    url(styles/fonts/MaterialIcons/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'fontello';
+  src:
+    url(./fonts/fontello/fontello.woff) format('woff'),
+    url(./fonts/fontello/fontello.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.icon__icon__root___1EA4U___1P0AE {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  user-select: none;
+  word-break: normal;
+  line-height: 1em;
+
+  /* Align with text */
+  vertical-align: middle;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.icon__icon__family-material___2o7uB___3vx1F {
+  font-family: 'Material Icons';
+}
+
+.icon__icon__family-fontello___1lsSW___2z8q8 {
+  font-family: 'fontello';
+}
+
+.icon__icon__weight-normal___SVXqw___1P4pC {
+  font-weight: normal;
+}
+
+.icon__icon__weight-heavy___3Qs6X___2I6NW {
+  font-weight: 600;
+}
+
+/* Sizes */
+.icon__icon__size-12___3GV8H___3Ol2B { font-size: 12px; height: 12px; }
+.icon__icon__size-14___3OLkH___4FGam { font-size: 14px; height: 14px; }
+.icon__icon__size-16___1zXTG___2hcCz { font-size: 16px; height: 16px; }
+.icon__icon__size-18___2Oe_W___H_pXb { font-size: 18px; height: 18px; }
+.icon__icon__size-20___2Y2L2___3qYDf { font-size: 20px; height: 20px; }
+.icon__icon__size-23___2G1j2___1fCWW { font-size: 23px; height: 23px; }
+.icon__icon__size-24___2iMLZ___1zyed { font-size: 24px; height: 24px; }
+.icon__icon__size-26___2YF1x___27VKX { font-size: 26px; height: 26px; }
+.icon__icon__size-36___4i_mw___2BiBe { font-size: 36px; height: 36px; }
+.icon__icon__size-48___1sltk___CFJe9 { font-size: 48px; height: 48px; }
+
+/* Themes */
+.icon__icon__theme-light___27OTT___2dEmw { color: #fff; }
+.icon__icon__theme-dark___1v07h___7SA8c { color: #000; }
+.icon__icon__theme-positive___2m_8C___tLoQb { color: #7DD080; }
+.icon__icon__theme-negative___3lrIF___24PFF { color: #D56265; }
+.icon__icon__theme-pending___2krjV___1MnxN { color: rgb(246, 140, 58); }
+.icon__icon__theme-blue___2gbjC___69I-7 { color: rgb(26, 158, 214); }
+
+.icon__icon__color-black___HDHnJ___2zd-l {
+  color: var(--color-grey-charcoal);
+}
+
+.icon__icon__color-red___3Oxgt___3VhPr {
+  color: var(--color-brand-red);
+}
+
+.icon__icon__color-blue___2Ik0x___1XUmh {
+  color: var(--color-brand-blue);
+}
+
+.icon__icon__color-dark-blue___3JITf___1B9Io {
+  color: #4299C3;
+}
+
+.icon__icon__color-dark-grey___2KWi9___34Vbp {
+  color: var(--color-grey-charcoal);
+}
+
+.icon__icon__color-grey___1N6Yy___1xZFN {
+  color: var(--color-grey-silver);
+}
+
+.icon__icon__color-teal___2Lto6___1TSFR {
+  color: #A9AFC3
+}
+
+.icon__icon__color-light-grey___1B1Ur___3FHnj {
+  color: var(--color-grey-platinum);
+}
+
+.icon__icon__color-white-smoke___3cJUe___37vq2 {
+  color: rgba(114, 140, 154, .21); /*
+    NOTE Until we have a DRY solution, let’s keep this in sync with
+    `defaultProps.defaultColor` in `components/supplier-approved-badge/
+    supplier-approved-badge`.
+  */
+}
+
+.icon__icon__color-white___SLznQ___2q21f {
+  color: #fff;
+}
+
+.icon__icon__color-green___2otdg___3K--2 {
+  color: var(--color-brand-green);
+}
+
+.icon__icon__color-orange___29zAe___3S-zg {
+  color: var(--color-brand-orange);
+}
+
+.icon__icon__color-white___SLznQ___2q21f {
+  color: #fff;
+}
+
+.icon__icon__color-none___2NCOg___15MMW {}
+
+.icon__icon__interactive___30O7y___Lc5Jt {
+  cursor: pointer;
+}

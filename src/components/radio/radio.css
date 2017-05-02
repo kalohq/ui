@@ -1,0 +1,36 @@
+.radio__radio__root___1pr9L___3YmkK {
+  border-radius: 50%;
+  border: 1px solid var(--color-grey-silver);
+  background-color: #fff;
+  background-position: center center;
+  background-size: 80%;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.radio__radio__checked___2JFGR___2Z-OU {
+  border-color: var(--color-brand-blue);
+}
+
+.radio__radio__readonly___1iGqp___3fimd {
+  cursor: default;
+}
+
+.radio__radio__radio___1ESde___1L9NX {
+  border-radius: 50%;
+}
+
+.radio__radio__icon___1kSnE___3eDW6 {
+  transition-duration: 0.15s !important;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--color-brand-blue);
+  border: 3px solid #fff;
+}
+
+.radio__radio__label___WToVO___1_WAO {
+  margin-left: 10px;
+}

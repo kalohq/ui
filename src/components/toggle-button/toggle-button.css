@@ -1,0 +1,66 @@
+/* ToggleButton */
+.toggle-button__toggle-button__root___2qv_R___2GAQe {
+  border-radius: 20px;
+  transition: all 0.25s ease-out;
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+  padding: 3px 0 3px 3px;
+  background-color: transparent;
+  border: 2px solid var(--color-grey-platinum);
+}
+
+.toggle-button__toggle-button__button___mpk2Q___3i0Pa {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: var(--color-grey-silver);
+}
+
+.toggle-button__toggle-button__selected___MUuZi___yPmMR {
+  padding-left: 32px;
+}
+
+.toggle-button__toggle-button__selected___MUuZi___yPmMR .toggle-button__toggle-button__button___mpk2Q___3i0Pa {
+  background-color: #fff;
+}
+
+.toggle-button__toggle-button__icon___2XB15___36ITS {
+  transition: all 0.25s ease-out;
+}
+
+.toggle-button__toggle-button__selectedIcon___3Uj7B___1dHKt {
+  transform: translate(5px, -28px);
+}
+
+.toggle-button__toggle-button__notSelectedIcon___FB2F3___13LqG {
+  transform: translate(28px, -28px);
+}
+
+/*
+ * Themes
+ */
+
+.toggle-button__toggle-button__default___1lu33___1tK5j.toggle-button__toggle-button__selected___MUuZi___yPmMR {
+  background-color: var(--color-brand-blue);
+}
+
+.toggle-button__toggle-button__green___3A0DE___1XCMd.toggle-button__toggle-button__selected___MUuZi___yPmMR {
+  background-color: var(--color-brand-green);
+}
+
+.toggle-button__toggle-button__orange___2V4UF___3zbh9.toggle-button__toggle-button__selected___MUuZi___yPmMR {
+  background-color: var(--color-brand-orange);
+}
+
+.toggle-button__toggle-button__orangeToGreen___2T6CX___22mB- {
+  background-color: var(--color-brand-orange);
+}
+
+.toggle-button__toggle-button__orangeToGreen___2T6CX___22mB- .toggle-button__toggle-button__button___mpk2Q___3i0Pa {
+  background-color: #fff;
+}
+
+.toggle-button__toggle-button__orangeToGreen___2T6CX___22mB-.toggle-button__toggle-button__selected___MUuZi___yPmMR {
+  background-color: var(--color-brand-green);
+}
