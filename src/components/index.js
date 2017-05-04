@@ -6,7 +6,6 @@ export {H3} from './h3';
 export {Heading} from './heading';
 export {Icon} from './icon';
 export {Input} from './input';
-export {Layout} from './layout';
 export {List} from './list';
 export {LoadingSpinner} from './loading-spinner';
 export {Radio} from './radio';
