@@ -1,0 +1,17 @@
+general:
+  artifacts:
+    - "./lib"
+
+machine:
+  node:
+    version: 6.9.1
+  post:
+    - npm install -g npm@3.7.3
+
+dependencies:
+  override:
+    - npm install
+
+test:
+  override:
+    - npm run coverage
