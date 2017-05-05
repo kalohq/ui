@@ -1,17 +1,17 @@
 instrumentation:
-    extensions: ['.js', '.jsx']
-    excludes: [
-        "**/__tests__/**",
-        "build/**",
-        "vendor/**",
-        "coverage/**",
-        "flow/**",
-        "flow-typed/**",
-        "webpack/**",
-        "code-templates/**",
-        "e2e-test/**",
-        "src/**/components/**/index.js",
-        "serve.js",
-        "src/**/*manifest.js",
-    ]
-    include-all-sources: True
+  extensions: ['.js', '.jsx']
+  excludes: [
+    "docs/**",
+    "build/**",
+    "vendor/**",
+    "coverage/**",
+    "flow/**",
+    "flow-typed/**",
+    "webpack/**",
+    "code-templates/**",
+    "e2e-test/**",
+    "src/**/components/**/index.js",
+    "serve.js",
+    "src/**/*manifest.js",
+  ]
+  include-all-sources: False

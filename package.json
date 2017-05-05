@@ -6,6 +6,9 @@
     "type": "git",
     "url": "https://github.com/lystable/ui-library"
   },
+  "options": {
+    "mocha": "--require src/utils/test/require-hooks --require src/utils/test/init-dom src/**/__tests__/*.{js,jsx}"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,7 +21,7 @@
     "compile": "npm run compile:js && npm run compile:css",
     "build": "npm run compile && cp {package.json,README.md} lib",
     "dist": "cd lib && npm publish",
-    "coverage": "rm -rf coverage/ && babel-node node_modules/.bin/babel-istanbul cover _mocha --report lcovonly -- -R spec $npm_package_options_mocha --timeout 8000"
+    "coverage": "rm -rf coverage/ && NODE_PATH=./src:./src/components babel-node node_modules/.bin/babel-istanbul cover _mocha -- -R spec $npm_package_options_mocha --timeout 8000"
   },
   "author": "Lystable",
   "license": "ISC",
@@ -43,6 +46,7 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
     "getstorybook": "^1.7.0",
+    "jsdom": "7.2.2",
     "lodash": "^4.17.4",
     "mocha": "^3.3.0",
     "postcss-cli": "^3.2.0",
