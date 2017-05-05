@@ -1,1 +1,1 @@
-export {default} from './step-marks';
+export {default as StepMarks} from './step-marks';
