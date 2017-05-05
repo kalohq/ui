@@ -21,7 +21,7 @@
     "compile": "npm run compile:js && npm run compile:css",
     "build": "npm run compile && cp {package.json,README.md} lib",
     "dist": "cd lib && npm publish",
-    "coverage": "rm -rf coverage/ && NODE_PATH=./src:./src/components babel-node node_modules/.bin/babel-istanbul cover _mocha -- -R spec $npm_package_options_mocha --timeout 8000"
+    "coverage": "rm -rf coverage/ && NODE_ENV=test NODE_PATH=./src:./src/components babel-node node_modules/.bin/babel-istanbul cover _mocha -- -R spec $npm_package_options_mocha --timeout 8000"
   },
   "author": "Lystable",
   "license": "ISC",
