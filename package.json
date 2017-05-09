@@ -21,7 +21,9 @@
     "compile": "npm run compile:js && npm run compile:css",
     "build": "npm run compile && cp {package.json,README.md} lib",
     "dist": "cd lib && npm publish",
-    "coverage": "rm -rf coverage/ && NODE_ENV=test NODE_PATH=./src:./src/components babel-node node_modules/.bin/babel-istanbul cover _mocha -- -R spec $npm_package_options_mocha --timeout 8000"
+    "coverage": "rm -rf coverage/ && NODE_ENV=test NODE_PATH=./src:./src/components babel-node node_modules/.bin/babel-istanbul cover _mocha -- -R spec $npm_package_options_mocha --timeout 8000"m,
+    "styleguide": "./node_modules/.bin/styleguidist server",
+    "styleguide:build": "./node_modules/.bin/styleguidist build"
   },
   "author": "Lystable",
   "license": "ISC",
@@ -64,8 +66,9 @@
     "react-intl": "^2.2.3",
     "react-pure-render": "^1.0.2",
     "react-storybook-addon-add-stories-group": "^0.1.0",
+    "react-styleguidist": "^5.2.0",
     "style-loader": "^0.16.1",
-    "webpack": "^2.4.1"
+    "webpack": "^2.5.1"
   },
   "babel": {
     "presets": [
