@@ -1,1 +1,1 @@
-export {default as ButtonGroup} from './button-group';
+export {default} from './button-group';

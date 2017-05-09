@@ -1,1 +1,1 @@
-export {default as FieldHint} from './field-hint';
+export {default} from './field-hint';
