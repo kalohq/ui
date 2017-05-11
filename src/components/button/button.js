@@ -16,11 +16,6 @@ const ICON_SIZE = {
   large: '24',
 };
 
-/**
- * Render an icon for the button
- * @param icon
- * @returns Reactelement
- */
 function renderIcon(icon, border, size) {
   if (!icon) return null;
 
@@ -43,9 +38,6 @@ function renderIcon(icon, border, size) {
       </span>;
 }
 
-/**
- * Render the standard Lystable Button
- */
 export default class Button extends PureComponent {
   static propTypes = {
     children: PropTypes.any,

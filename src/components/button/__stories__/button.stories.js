@@ -2,32 +2,36 @@ import React from 'react';
 import {storiesOf} from '@kadira/storybook';
 
 import Button from 'components/button';
+import ButtonGroup from 'components/button-group';
 
 storiesOf('Button', module)
+  .addWithInfo(
+    'Tertiary Button',
+    "The default style. Unless the action you're building is primary, this is the button you should use.",
+    () => {
+      return <Button theme="tertiary">Export Freelancers</Button>;
+    }
+  )
   .addWithInfo(
     'Primary Button',
     'The primary action of a view. It should be used no more than once per view.',
     () => {
-      return (
-        <Button theme="primary">Create Project</Button>
-      );
+      return <Button theme="primary">Create Project</Button>;
     }
   )
+  .addWithInfo('Secondary Button', 'Used for supporting actions.', () => {
+    return <Button theme="secondary">Save Changes</Button>;
+  })
   .addWithInfo(
-    'Secondary Button',
-    'Used for supporting actions.',
+    'Sizing',
+    'Buttons can be rendered in three different sizes, depending on context.',
     () => {
       return (
-        <Button theme="secondary">Save Changes</Button>
-      );
-    }
-  )
-  .addWithInfo(
-    'Tertiary Button',
-    'Our default button. Used for other actions.',
-    () => {
-      return (
-        <Button theme="tertiary">Export Freelancers</Button>
+        <ButtonGroup spacing={true}>
+          <Button size="small" theme="tertiary">Small</Button>
+          <Button size="medium" theme="tertiary">Medium</Button>
+          <Button size="large" theme="tertiary">Large</Button>
+        </ButtonGroup>
       );
     }
   )
@@ -45,7 +49,12 @@ storiesOf('Button', module)
     'A button can also be used with a standalone icon',
     () => {
       return (
-        <Button theme="tertiary" size="medium" icon="mode_edit" loneIcon={true} />
+        <Button
+          theme="tertiary"
+          size="medium"
+          icon="mode_edit"
+          loneIcon={true}
+        />
       );
     }
   );
