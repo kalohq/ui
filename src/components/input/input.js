@@ -11,9 +11,9 @@ const EXPANDS_BUFFER = 5;
 const BOTTOM_BORDER_WIDTH = 1;
 
 const SIZE_MAP = {
-  'small': 14,
-  'medium': 16,
-  'large': 18,
+  small: 14,
+  medium: 16,
+  large: 18,
   'extra-large': 20,
 };
 
@@ -21,12 +21,7 @@ function getInputFont(size) {
   return `lighter ${SIZE_MAP[size]}px WebFaktSoftPro`;
 }
 
-/**
- * Generic Input component
- * - Can expand to fit user contents with `expands` prop
- */
 export default class Input extends PureComponent {
-
   static propTypes = {
     theme: PropTypes.oneOf([
       'default',
@@ -37,18 +32,8 @@ export default class Input extends PureComponent {
       'transparent',
       'transparent-grey',
     ]),
-    margin: PropTypes.oneOf([
-      'none',
-      'small',
-      'medium',
-      'large',
-    ]),
-    size: PropTypes.oneOf([
-      'small',
-      'medium',
-      'large',
-      'extra-large',
-    ]),
+    margin: PropTypes.oneOf(['none', 'small', 'medium', 'large']),
+    size: PropTypes.oneOf(['small', 'medium', 'large', 'extra-large']),
     fullWidth: PropTypes.bool,
     defaultValue: PropTypes.string,
     value: PropTypes.string,
@@ -137,18 +122,14 @@ export default class Input extends PureComponent {
    * entered as well as the font. We use canvas to measure this value.
    */
   getTextWidth(text, font) {
-    this.canvas = this.canvas ?
-      this.canvas :
-      document.createElement('canvas');
+    this.canvas = this.canvas ? this.canvas : document.createElement('canvas');
     const context = this.canvas.getContext('2d');
     context.font = font;
     return context.measureText(text).width;
   }
 
   render() {
-    const {
-      focused,
-    } = this.state;
+    const {focused} = this.state;
 
     const {
       expands,
@@ -175,31 +156,33 @@ export default class Input extends PureComponent {
       <input
         {...otherProps}
         ref={this.props.focusOnMount ? null : null}
-        className={cx({
-          [styles.root]: true,
-          [styles[theme]]: true,
-          [styles.expands]: expands,
-          [styles.valid]: isBoolean(valid) && valid,
-          [styles.invalid]: isBoolean(valid) && !valid,
-          [styles.blank]: !value,
-          [styles.focused]: focused,
-          [styles[`margin-${margin}`]]: true,
-          [styles.fullWidth]: fullWidth,
-          [styles[`size-${size}`]]: true,
-        }, className)}
+        className={cx(
+          {
+            [styles.root]: true,
+            [styles[theme]]: true,
+            [styles.expands]: expands,
+            [styles.valid]: isBoolean(valid) && valid,
+            [styles.invalid]: isBoolean(valid) && !valid,
+            [styles.blank]: !value,
+            [styles.focused]: focused,
+            [styles[`margin-${margin}`]]: true,
+            [styles.fullWidth]: fullWidth,
+            [styles[`size-${size}`]]: true,
+          },
+          className
+        )}
         style={{
-          borderBottomWidth: (borderless || theme === 'borderless' ? (
-            '0'
-          ) : (
-            `${BOTTOM_BORDER_WIDTH}px`
-          )),
+          borderBottomWidth: borderless || theme === 'borderless'
+            ? '0'
+            : `${BOTTOM_BORDER_WIDTH}px`,
           ...style,
-          width: (expands ? (
-            Math.max(
-              this.getTextWidth(value, getInputFont(size)) + EXPANDS_BUFFER,
-              this.getTextWidth(placeholder, getInputFont(size)) + EXPANDS_BUFFER,
-            )
-          ) : undefined),
+          width: expands
+            ? Math.max(
+                this.getTextWidth(value, getInputFont(size)) + EXPANDS_BUFFER,
+                this.getTextWidth(placeholder, getInputFont(size)) +
+                  EXPANDS_BUFFER
+              )
+            : undefined,
         }}
         onFocus={this.onFocus}
         onBlur={this.onBlur}

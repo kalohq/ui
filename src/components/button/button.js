@@ -24,33 +24,29 @@ const ICON_SIZE = {
 function renderIcon(icon, border, size) {
   if (!icon) return null;
 
-  return (isString(icon)) ? (
-
-    <span
-      className={cx({
-        [styles.icon]: true,
-        [styles.border]: border,
-      })}
-    >
-      <Icon size={!!size ? size : '18'}>{icon}</Icon>
-    </span>
-  ) : (
-    <span
-      className={cx({
-        [styles.icon]: true,
-        [styles.border]: border,
-      })}
-    >
-      {icon}
-    </span>
-  );
+  return isString(icon)
+    ? <span
+        className={cx({
+          [styles.icon]: true,
+          [styles.border]: border,
+        })}
+      >
+        <Icon size={!!size ? size : '18'}>{icon}</Icon>
+      </span>
+    : <span
+        className={cx({
+          [styles.icon]: true,
+          [styles.border]: border,
+        })}
+      >
+        {icon}
+      </span>;
 }
 
 /**
  * Render the standard Lystable Button
  */
 export default class Button extends PureComponent {
-
   static propTypes = {
     children: PropTypes.any,
     message: PropTypes.string,
@@ -60,11 +56,7 @@ export default class Button extends PureComponent {
     iconBorder: PropTypes.bool,
     loneIcon: PropTypes.bool,
     wide: PropTypes.bool,
-    size: PropTypes.oneOf([
-      'small',
-      'medium',
-      'large',
-    ]),
+    size: PropTypes.oneOf(['small', 'medium', 'large']),
     theme: PropTypes.oneOf([
       'primary',
       'secondary',
@@ -109,7 +101,6 @@ export default class Button extends PureComponent {
     this.state = {
       loaded: false,
     };
-
   }
 
   componentWillUnmount() {
@@ -164,33 +155,34 @@ export default class Button extends PureComponent {
       ...otherProps
     } = this.props;
 
-    const {
-      loaded,
-    } = this.state;
+    const {loaded} = this.state;
 
-    const Tag = (this.props.to || this.props.href) ? 'span' : 'button';
+    const Tag = this.props.to || this.props.href ? 'span' : 'button';
 
     const iconElement = renderIcon(
       icon,
       isBoolean(iconBorder) ? iconBorder : !!icon && !!children,
-      ICON_SIZE[size],
+      ICON_SIZE[size]
     );
 
     return (
       <Component
         style={style}
-        className={cx({
-          [styles.root]: true,
-          [styles.grouped]: !!grouped,
-          [styles.spacing]: !!spacing,
-          [styles.wide]: wide,
-          [styles.middle]: middle,
-          [styles.loading]: (loading || waitingForData),
-          [styles.success]: success,
-          [styles.loaded]: loaded,
-          [styles.flex]: flex,
-          [styles.reverse]: reverse,
-        }, className)}
+        className={cx(
+          {
+            [styles.root]: true,
+            [styles.grouped]: !!grouped,
+            [styles.spacing]: !!spacing,
+            [styles.wide]: wide,
+            [styles.middle]: middle,
+            [styles.loading]: loading || waitingForData,
+            [styles.success]: success,
+            [styles.loaded]: loaded,
+            [styles.flex]: flex,
+            [styles.reverse]: reverse,
+          },
+          className
+        )}
         onClick={waitingForData ? undefined : onClick}
         {...otherProps}
       >
@@ -200,7 +192,7 @@ export default class Button extends PureComponent {
           type={type}
           className={cx({
             [styles.button]: true,
-            [styles.disabled]: (waitingForData || disabled || loading),
+            [styles.disabled]: waitingForData || disabled || loading,
             [styles[theme]]: !!theme,
             [styles.active]: !!active,
             [styles[size]]: true,
@@ -219,9 +211,7 @@ export default class Button extends PureComponent {
               [styles.message]: true,
               [styles.mayGetLong]: mayGetLong,
             })}
-            title={mayGetLong ? (
-              children
-            ) : undefined}
+            title={mayGetLong ? children : undefined}
           >
             {iconElement}
             {children}

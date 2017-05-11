@@ -12,7 +12,6 @@ import styles from './button-group.css';
  * - Clones children to ensure Button components received a 'grouped' prop
  */
 export default class ButtonGroup extends PureComponent {
-
   static propTypes = {
     children: PropTypes.node.isRequired,
     flex: PropTypes.bool,
@@ -53,20 +52,19 @@ export default class ButtonGroup extends PureComponent {
         })}
         {...otherProps}
       >
-        {Children.map(children, el => (
-          el
-            ? cloneElement(el,
-              {
-                grouped: !spacing,
-                spacing: !!spacing,
-                reverse,
-                flex,
-              }
-            )
-          : null
-        ))}
+        {Children.map(
+          children,
+          el =>
+            el
+              ? cloneElement(el, {
+                  grouped: !spacing,
+                  spacing: !!spacing,
+                  reverse,
+                  flex,
+                })
+              : null
+        )}
       </Flex>
     );
   }
-
 }

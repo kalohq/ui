@@ -9,35 +9,16 @@ import Icon from 'components/icon';
 import styles from './heading.css';
 
 const ICON_SIZE = {
-  'small': '14',
-  'medium': '14',
-  'large': '14',
+  small: '14',
+  medium: '14',
+  large: '14',
   'extra-large': '24',
 };
 
-/**
- * Heading
- *
- * A generic component for headings across the app.
- *
- * @class  {component} Text
- * @exports Text
- * @extends PureComponent
- *
- */
 export default class Heading extends PureComponent {
-
   static propTypes = {
-    number: PropTypes.oneOf([
-      '1',
-      '2',
-      '3',
-      '4',
-    ]),
-    weight: PropTypes.oneOf([
-      'normal',
-      'semi-bold',
-    ]),
+    number: PropTypes.oneOf(['1', '2', '3', '4']),
+    weight: PropTypes.oneOf(['normal', 'semi-bold']),
     size: PropTypes.oneOf([
       'extra-extra-small',
       'extra-small',
@@ -46,13 +27,7 @@ export default class Heading extends PureComponent {
       'large',
       'extra-large',
     ]),
-    margin: PropTypes.oneOf([
-      'none',
-      'tiny',
-      'small',
-      'medium',
-      'large',
-    ]),
+    margin: PropTypes.oneOf(['none', 'tiny', 'small', 'medium', 'large']),
     color: PropTypes.oneOf([
       'red',
       'blue',
@@ -61,16 +36,8 @@ export default class Heading extends PureComponent {
       'white',
       'grey',
     ]),
-    align: PropTypes.oneOf([
-      'center',
-      'left',
-      'right',
-      'none',
-    ]),
-    hover: PropTypes.oneOf([
-      'underline',
-      'none',
-    ]),
+    align: PropTypes.oneOf(['center', 'left', 'right', 'none']),
+    hover: PropTypes.oneOf(['underline', 'none']),
     flex: PropTypes.bool,
     multiline: PropTypes.bool,
     border: PropTypes.bool,
@@ -136,21 +103,21 @@ export default class Heading extends PureComponent {
         {...props}
         style={{...style, ...propStyle}}
       >
-        {icon ? (
-          <Icon
-            size={ICON_SIZE[size]}
-            color="grey"
-            paddingRight={iconPadding}
-          >{icon}</Icon>
-        ) : null}
+        {icon
+          ? <Icon
+              size={ICON_SIZE[size]}
+              color="grey"
+              paddingRight={iconPadding}
+            >
+              {icon}
+            </Icon>
+          : null}
         {children}
-        {iconAfter ? (
-          <Icon
-            size={ICON_SIZE[size]}
-            color="grey"
-            paddingLeft={iconPadding}
-          >{iconAfter}</Icon>
-        ) : null}
+        {iconAfter
+          ? <Icon size={ICON_SIZE[size]} color="grey" paddingLeft={iconPadding}>
+              {iconAfter}
+            </Icon>
+          : null}
       </DOMHeading>
     );
   }

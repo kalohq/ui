@@ -16,26 +16,13 @@ type RadioProps = {
   readonly: boolean,
   size: number,
   label: string,
-}
+};
 
-/**
- * A basic radio button
- */
 export function Radio(props: RadioProps) {
-
-  const {
-    checked = false,
-    size = 16,
-    readonly,
-    label,
-    ...otherProps
-  } = props;
+  const {checked = false, size = 16, readonly, label, ...otherProps} = props;
 
   return (
-    <Flex
-      alignItems="center"
-      justifyContent="center"
-    >
+    <Flex alignItems="center" justifyContent="center">
       <Box
         position="relative"
         width={size}
@@ -53,17 +40,21 @@ export function Radio(props: RadioProps) {
           transitionEnterTimeout={300}
           transitionLeaveTimeout={300}
         >
-          {checked || isNull(checked) ? (
-            <Inline
-              position="absolute"
-              className={cx({
-                [styles.icon]: true,
-              })}
-            />
-          ) : null}
+          {checked || isNull(checked)
+            ? <Inline
+                position="absolute"
+                className={cx({
+                  [styles.icon]: true,
+                })}
+              />
+            : null}
         </ReactCSSTransitionGroup>
       </Box>
-      {label ? (<Text className={styles.label} size="small" color="grey">{label}</Text>) : null }
+      {label
+        ? <Text className={styles.label} size="small" color="grey">
+            {label}
+          </Text>
+        : null}
     </Flex>
   );
 }

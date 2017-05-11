@@ -7,16 +7,9 @@ import {isString} from 'lodash';
 
 import styles from './text.css';
 
-/**
- * A generic component for text formatting across the app.
- */
 export default class Text extends PureComponent {
-
   static propTypes = {
-    weight: PropTypes.oneOf([
-      'normal',
-      'semi-bold',
-    ]),
+    weight: PropTypes.oneOf(['normal', 'semi-bold']),
     size: PropTypes.oneOf([
       'tiny',
       'extra-small',
@@ -53,22 +46,9 @@ export default class Text extends PureComponent {
       'navy',
       'none',
     ]),
-    margin: PropTypes.oneOf([
-      'none',
-      'small',
-      'medium',
-      'large',
-    ]),
-    align: PropTypes.oneOf([
-      'center',
-      'left',
-      'right',
-      'none',
-    ]),
-    component: PropTypes.oneOfType([
-      PropTypes.func,
-      PropTypes.string,
-    ]),
+    margin: PropTypes.oneOf(['none', 'small', 'medium', 'large']),
+    align: PropTypes.oneOf(['center', 'left', 'right', 'none']),
+    component: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
     multiline: PropTypes.bool,
     children: PropTypes.node,
     className: PropTypes.string,
@@ -92,7 +72,6 @@ export default class Text extends PureComponent {
   };
 
   render() {
-
     const {
       weight,
       size,
@@ -117,20 +96,24 @@ export default class Text extends PureComponent {
       <Component
         component={component}
         onClick={onClick}
-        className={cx({
-          [styles.root]: true,
-          [styles[`weight-${weight}`]]: true,
-          [styles[`size-${size}`]]: true,
-          [styles[`color-${color}`]]: true,
-          [styles[`hover-color-${hoverColor}`]]: true,
-          [styles[`margin-${margin}`]]: true,
-          [styles[`align-${align}`]]: align !== 'none',
-          [styles.resetTransform]: resetTransform,
-          [styles.multiline]: multiline,
-          [styles.interactive]: !!onClick || interactive === true,
-          [styles['not-interactive']]: interactive === false,
-          [styles['no-underline']]: noUnderline,
-        }, className)} {...otherProps}
+        className={cx(
+          {
+            [styles.root]: true,
+            [styles[`weight-${weight}`]]: true,
+            [styles[`size-${size}`]]: true,
+            [styles[`color-${color}`]]: true,
+            [styles[`hover-color-${hoverColor}`]]: true,
+            [styles[`margin-${margin}`]]: true,
+            [styles[`align-${align}`]]: align !== 'none',
+            [styles.resetTransform]: resetTransform,
+            [styles.multiline]: multiline,
+            [styles.interactive]: !!onClick || interactive === true,
+            [styles['not-interactive']]: interactive === false,
+            [styles['no-underline']]: noUnderline,
+          },
+          className
+        )}
+        {...otherProps}
       >
         {children}
       </Component>

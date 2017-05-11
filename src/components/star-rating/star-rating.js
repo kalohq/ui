@@ -9,28 +9,11 @@ import List from 'components/list';
 
 import styles from './star-rating.css';
 
-/**
- * StarRating
- *
- * A component for displaying a star score, supports displaying
- * half stars.
- *
- * @class  {component} StarRatingSelect
- * @exports StarRatingSelect
- * @extends PureComponent
- * @see https://lystable.atlassian.net/browse/LYS-LYS-922a
- *
- */
 export default class StarRating extends PureComponent {
-
   static propTypes = {
     score: PropTypes.number,
     size: PropTypes.oneOf(['18', '24', '36', '48']),
-    color: PropTypes.oneOf([
-      'blue',
-      'purple',
-      'navy',
-    ]).isRequired,
+    color: PropTypes.oneOf(['blue', 'purple', 'navy']).isRequired,
     component: PropTypes.string.isRequired,
   };
 
@@ -42,13 +25,7 @@ export default class StarRating extends PureComponent {
   };
 
   render() {
-
-    const {
-      component: Component,
-      score,
-      size,
-      color,
-    } = this.props;
+    const {component: Component, score, size, color} = this.props;
 
     return (
       <Component
@@ -58,9 +35,9 @@ export default class StarRating extends PureComponent {
         })}
       >
         <List type="horizontal-flex" spaced="small">
-          {range(1, 6).map((star) => {
+          {range(1, 6).map(star => {
             const isLit = score >= star;
-            const isHalf = score < star && score > (star - 1);
+            const isHalf = score < star && score > star - 1;
             return (
               <div
                 key={star}

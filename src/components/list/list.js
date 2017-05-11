@@ -8,26 +8,7 @@ import styles from './list.css';
 
 import PureComponent from 'react-pure-render/component';
 
-/**
- * This is a generic list component. It can be used to
- * avoid re-implementing list style overrides whenever a list is
- * required. It also helps avoid having components that make opinions
- * about their parent (components that use the li tag as root).
- *
- * @example
- *
- * <List type="horizontal">
- *   <p>1</p>
- *   <p>2</p>
- *   <p>3</p>
- * </List>
- *
- * @class  {component} List
- * @exports List
- * @extends {PureComponent}
- */
 export default class List extends PureComponent {
-
   static propTypes = {
     children: PropTypes.iterable,
     type: PropTypes.oneOf([
@@ -76,7 +57,6 @@ export default class List extends PureComponent {
   };
 
   render() {
-
     const {
       type,
       children,
@@ -88,35 +68,39 @@ export default class List extends PureComponent {
       multiline,
       justify,
     } = this.props;
-    const columnWidth = `${(100 / columns)}%`;
+    const columnWidth = `${100 / columns}%`;
     const columnStyle = columns
       ? parseStyleProps({
-        minWidth: columnsFixed ? columnWidth : undefined,
-        maxWidth: columnWidth,
-        flex: columnsFixed ? `1 1 ${columnWidth}` : '1 1 100%',
-      }).style
+          minWidth: columnsFixed ? columnWidth : undefined,
+          maxWidth: columnWidth,
+          flex: columnsFixed ? `1 1 ${columnWidth}` : '1 1 100%',
+        }).style
       : null;
 
     const isMultiline = multiline && type === 'horizontal';
 
     // wrap children in list items
-    const finalChildren = React.Children.map(children, (child, index) => (
-      child ? (
-        <li
-          style={columnStyle}
-          key={child.key || index}
-          className={cx({
-            [styles.item]: true,
-            [styles[`item-${type}`]]: true,
-            [styles[`item-spaced-${spaced}`]]: !!spaced,
-            [styles['item-horizontal-multiline']]: isMultiline,
-            [styles[`item-multiline-spaced-${spaced}`]]: isMultiline ? spaced : false,
-          })}
-        >
-          {child}
-        </li>
-      ) : null
-    ));
+    const finalChildren = React.Children.map(
+      children,
+      (child, index) =>
+        child
+          ? <li
+              style={columnStyle}
+              key={child.key || index}
+              className={cx({
+                [styles.item]: true,
+                [styles[`item-${type}`]]: true,
+                [styles[`item-spaced-${spaced}`]]: !!spaced,
+                [styles['item-horizontal-multiline']]: isMultiline,
+                [styles[`item-multiline-spaced-${spaced}`]]: isMultiline
+                  ? spaced
+                  : false,
+              })}
+            >
+              {child}
+            </li>
+          : null
+    );
 
     const listClassName = cx({
       [styles.root]: true,
@@ -127,9 +111,7 @@ export default class List extends PureComponent {
     });
 
     if (transition) {
-      const {
-        timeout: defaultTimeout = 300,
-      } = transition;
+      const {timeout: defaultTimeout = 300} = transition;
 
       return (
         <ReactCSSTransitionGroup

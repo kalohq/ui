@@ -7,22 +7,8 @@ import Icon from 'components/icon';
 
 import styles from './toggle-button.css';
 
-
-/**
- * ToggleButton
- *
- * A toggle button.
- *
- * @func  {component} ToggleButton
- * @exports ToggleButton
- *
- */
 export default function ToggleButton(props) {
-  const {
-    selected,
-    theme,
-    icon,
-  } = {theme: 'default', icon: null, ...props};
+  const {selected, theme, icon} = {theme: 'default', icon: null, ...props};
 
   return (
     <div>
@@ -42,12 +28,7 @@ export default function ToggleButton(props) {
           [styles.notSelectedIcon]: selected === false,
         })}
       >
-        {isString(icon) ? (
-          <Icon
-            size="16"
-            theme="light"
-          >{icon}</Icon>
-        ) : icon}
+        {isString(icon) ? <Icon size="16" theme="light">{icon}</Icon> : icon}
       </div>
     </div>
   );
@@ -59,9 +40,5 @@ ToggleButton.propTypes = {
     React.PropTypes.string,
     React.PropTypes.node,
   ]),
-  theme: PropTypes.oneOf([
-    'orange',
-    'default',
-    null,
-  ]),
+  theme: PropTypes.oneOf(['orange', 'default', null]),
 };
