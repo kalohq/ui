@@ -6,6 +6,16 @@ import {parseStyleProps} from 'utils/style';
 
 import styles from './icon.css';
 
+import {
+  add,
+  attachment,
+  edit,
+  instagram,
+  linkedin,
+  twitter,
+  youtube,
+} from 'icons';
+
 const FONTELLO_ICONS = {
   linkedin: '\ue800',
   twitter: '\ue801',
@@ -15,16 +25,7 @@ const FONTELLO_ICONS = {
   youtube: '\ue804',
 };
 
-/**
- * Generic Icon Component which is currently using Google Material Icons
- * as well as a custom fontello icon set for rendering
- *
- * To find a reference of available icons see
- * https://www.google.com/design/icons/
- * http://fontello.com/
- */
 export default class Icon extends PureComponent {
-
   static propTypes = {
     children: PropTypes.string.isRequired,
     size: PropTypes.oneOf([
@@ -62,14 +63,8 @@ export default class Icon extends PureComponent {
       'teal',
       'none',
     ]),
-    family: PropTypes.oneOf([
-      'material',
-      'fontello',
-    ]),
-    weight: PropTypes.oneOf([
-      'normal',
-      'heavy',
-    ]),
+    family: PropTypes.oneOf(['material', 'fontello']),
+    weight: PropTypes.oneOf(['normal', 'heavy']),
     className: PropTypes.string,
     onClick: PropTypes.func,
   };
@@ -80,10 +75,6 @@ export default class Icon extends PureComponent {
     weight: 'normal',
   };
 
-  /**
-   * Render Icon Component
-   * @return {ReactElement} Icon
-   */
   render() {
     const {
       size,
@@ -97,27 +88,26 @@ export default class Icon extends PureComponent {
       ...otherProps
     } = this.props;
 
-    const {
-      props,
-      style,
-    } = parseStyleProps(otherProps);
+    const {props, style} = parseStyleProps(otherProps);
 
-    const rootClass = cx({
-      [styles.root]: true,
-      [styles[`size-${size}`]]: !!size,
-      [styles[`theme-${theme}`]]: !!theme,
-      [styles[`family-${family}`]]: true,
-      [styles[`weight-${weight}`]]: true,
-      [styles[`color-${color}`]]: true,
-      [styles.interactive]: !!onClick,
-    }, className);
+    const rootClass = cx(
+      {
+        [styles.root]: true,
+        [styles[`size-${size}`]]: !!size,
+        [styles[`theme-${theme}`]]: !!theme,
+        [styles[`family-${family}`]]: true,
+        [styles[`weight-${weight}`]]: true,
+        [styles[`color-${color}`]]: true,
+        [styles.interactive]: !!onClick,
+      },
+      className
+    );
 
     return (
       <i className={rootClass} onClick={onClick} style={style} {...props}>
-        {family === 'fontello' ?
-          FONTELLO_ICONS[children] || children :
-          children
-        }
+        {family === 'fontello'
+          ? FONTELLO_ICONS[children] || children
+          : children}
       </i>
     );
   }
