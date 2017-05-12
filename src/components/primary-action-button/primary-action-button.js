@@ -1,8 +1,8 @@
 /* @flow */
 import React from 'react';
 
-import Button from 'components/button';
-import Icon from 'components/icon';
+import Button from '../button';
+import Icon from '../icon';
 
 export function PrimaryActionButton(props: {icon?: string}) {
   const {icon = 'add', ...otherProps} = props;

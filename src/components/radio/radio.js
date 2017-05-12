@@ -5,8 +5,8 @@ import {isNull} from 'lodash';
 
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import cx from 'classnames';
-import {Flex, Box, Inline} from 'components/layout';
-import Text from 'components/text';
+import {Flex, Box, Inline} from '../layout';
+import Text from '../text';
 
 import styles from './radio.css';
 

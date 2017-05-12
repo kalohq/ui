@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {range} from 'lodash';
 import cx from 'classnames';
-import {InlineFlex} from 'components/layout';
+import {InlineFlex} from '../layout';
 import {pickStyles} from 'utils/style';
 
 import styles from './step-marks.css';

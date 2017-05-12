@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PureComponent from 'react-pure-render/component';
 import cx from 'classnames';
-import {Inline} from 'components/layout';
+import {Inline} from '../layout';
 import {isString} from 'lodash';
 
 import styles from './text.css';

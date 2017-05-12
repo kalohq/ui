@@ -4,9 +4,9 @@ import cx from 'classnames';
 import {isBoolean, isString} from 'lodash';
 
 import PureComponent from 'react-pure-render/component';
-import {Box, Flex} from 'components/layout';
-import Icon from 'components/icon';
-import LoadingSpinner from 'components/loading-spinner';
+import {Box, Flex} from '../layout';
+import Icon from '../icon';
+import LoadingSpinner from '../loading-spinner';
 
 import styles from './button.css';
 

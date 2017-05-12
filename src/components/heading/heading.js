@@ -4,7 +4,7 @@ import cx from 'classnames';
 import {parseStyleProps} from 'utils/style';
 
 import PureComponent from 'react-pure-render/component';
-import Icon from 'components/icon';
+import Icon from '../icon';
 
 import styles from './heading.css';
 

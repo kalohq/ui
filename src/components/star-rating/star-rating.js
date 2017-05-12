@@ -4,8 +4,8 @@ import PureComponent from 'react-pure-render/component';
 import {range} from 'lodash';
 import cx from 'classnames';
 
-import Icon from 'components/icon';
-import List from 'components/list';
+import Icon from '../icon';
+import List from '../list';
 
 import styles from './star-rating.css';
 

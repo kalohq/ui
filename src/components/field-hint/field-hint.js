@@ -3,9 +3,9 @@ import React from 'react';
 import {pickStyles} from 'utils/style';
 import {isString} from 'lodash';
 
-import {Inline} from 'components/layout';
-import Text from 'components/text';
-import Icon from 'components/icon';
+import {Inline} from '../layout';
+import Text from '../text';
+import Icon from '../icon';
 
 import styles from './field-hint.css';
 

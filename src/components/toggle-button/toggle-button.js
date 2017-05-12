@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import {isString} from 'lodash';
 
-import Icon from 'components/icon';
+import Icon from '../icon';
 
 import styles from './toggle-button.css';
 

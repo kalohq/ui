@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import PureComponent from 'react-pure-render/component';
-import {Flex} from 'components/layout';
+import {Flex} from '../layout';
 
 import styles from './button-group.css';
 
