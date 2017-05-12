@@ -6,16 +6,6 @@ import {parseStyleProps} from 'utils/style';
 
 import styles from './icon.css';
 
-import {
-  add,
-  attachment,
-  edit,
-  instagram,
-  linkedin,
-  twitter,
-  youtube,
-} from 'icons';
-
 const FONTELLO_ICONS = {
   linkedin: '\ue800',
   twitter: '\ue801',
