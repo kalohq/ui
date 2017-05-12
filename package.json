@@ -14,7 +14,7 @@
     "storybook:start": "start-storybook -p 6006",
     "storybook:build": "build-storybook -c .storybook -o docs",
     "compile:css": "./node_modules/.bin/postcss -r -d lib/**/*.css -c postcss.config.js",
-    "compile:js": "./node_modules/.bin/babel src/components --out-dir lib --copy-files --ignore {__stories__}",
+    "compile:js": "./node_modules/.bin/babel src/components --out-dir lib --copy-files --ignore __tests__,__stories__",
     "compile": "npm run compile:js && npm run compile:css",
     "generate": "rimraf lib && npm run compile && cp {package.json,README.md} lib",
     "test:coverage": "rm -rf coverage/ && NODE_ENV=test NODE_PATH=./src:./src/components babel-node node_modules/.bin/babel-istanbul cover _mocha -- -R spec $npm_package_options_mocha --timeout 8000"
