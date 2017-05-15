@@ -33,6 +33,13 @@ storiesOf('Avatar', module)
     }
   )
   .addWithInfo(
+    'confirmed',
+    "Displays the lysted icon to show whether a user has 'claimed' their profile",
+    () => {
+      return <Avatar record="Lauren Plews" confirmed={true} />;
+    }
+  )
+  .addWithInfo(
     'with subrecord',
     "Avatars can be nested to display a secondary avatar (for example, a company)",
     () => {

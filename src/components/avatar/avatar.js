@@ -4,6 +4,7 @@ import cx from 'classnames';
 import {Flex} from '../layout';
 import Icon from '../icon';
 import LoadingSpinner from '../loading-spinner';
+import CustomIcon from '../custom-icon';
 import {pickStyles} from 'utils/style';
 
 import styles from './avatar.css';
@@ -13,6 +14,7 @@ type avatarProps = {
   uploaded?: boolean,
   subRecord?: string,
   subRecordSrc?: string,
+  confirmed?: boolean,
   record: string,
   src: string,
   size: 'small' | 'medium' | 'large' | 'x-large' | 'jumbo',
@@ -20,6 +22,7 @@ type avatarProps = {
 
 const AVATAR_COLOURS = ['green', 'blue', 'purple', 'grey', 'yellow'];
 
+/** Returns an avatar colour based on the record input */
 function getColour(name) {
   if (name) {
     let sum = 0;
@@ -32,6 +35,9 @@ function getColour(name) {
   return AVATAR_COLOURS[1];
 }
 
+/** Returns two initials based on a name
+  * - Pulls the first character from the first and last words
+  */
 function getInitials(name) {
   if (name) {
     let initials = name.match(/\b\w/g) || [];
@@ -57,12 +63,13 @@ export default function Avatar(props: avatarProps) {
     size = 'medium',
     editable,
     uploading,
-    subRecord = null,
-    subRecordSrc = null,
+    subRecord,
+    subRecordSrc,
     record,
     style,
+    confirmed,
     src,
-    uploaded = false,
+    uploaded,
     ...otherProps
   } = props;
 
@@ -111,6 +118,17 @@ export default function Avatar(props: avatarProps) {
             done
           </Icon>
         </Flex>
+      ) : null}
+
+      {confirmed ? (
+        <div className={styles.confirmed} title="Profile confirmed">
+          <CustomIcon
+            size={size === 'small' || size === 'medium' ? 24 : 30}
+            title="This freelancer has claimed their profile and lysted with your team"
+          >
+            lysted
+          </CustomIcon>
+        </div>
       ) : null}
 
       {subRecord ? (
