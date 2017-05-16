@@ -7,32 +7,36 @@ import LoadingSpinner from '../loading-spinner';
 import CustomIcon from '../custom-icon';
 import {pickStyles} from 'utils/style';
 
+import {
+  AVATAR_SIZES,
+  AVATAR_SIZE,
+  AVATAR_COLORS,
+  DEFAULT_SIZE
+} from './constants';
+
 import styles from './avatar.css';
 
 type avatarProps = {
   children?: React$Node,
   uploaded?: boolean,
-  subRecord?: string,
-  subRecordSrc?: string,
   confirmed?: boolean,
   record: string,
   src: string,
-  size: 'small' | 'medium' | 'large' | 'x-large' | 'jumbo',
+  size: AVATAR_SIZE,
 }
 
-const AVATAR_COLOURS = ['green', 'blue', 'purple', 'grey', 'yellow'];
 
-/** Returns an avatar colour based on the record input */
-function getColour(name) {
+/** Returns an avatar color based on the record input */
+function getColor(name) {
   if (name) {
     let sum = 0;
     for (let i = 0, l = name.length; i < l; i++) {
       sum += name.charCodeAt(i);
     }
-    const id = sum % AVATAR_COLOURS.length;
-    return AVATAR_COLOURS[id];
+    const id = sum % AVATAR_COLORS.size;
+    return AVATAR_COLORS.get(String(id));
   }
-  return AVATAR_COLOURS[1];
+  return AVATAR_COLORS.get(String(1));
 }
 
 /** Returns two initials based on a name
@@ -60,12 +64,12 @@ export function AvatarImage(props: {src: ?string}) {
 export default function Avatar(props: avatarProps) {
 
   const {
-    size = 'medium',
+    size = DEFAULT_SIZE,
     editable,
     uploading,
+    record,
     subRecord,
     subRecordSrc,
-    record,
     style,
     confirmed,
     src,
@@ -73,7 +77,7 @@ export default function Avatar(props: avatarProps) {
     ...otherProps
   } = props;
 
-  const avatarColour = getColour(record);
+  const avatarColor = getColor(record);
 
   return (
     <Flex
@@ -84,7 +88,7 @@ export default function Avatar(props: avatarProps) {
         [styles.uploading]: uploading,
         [styles.uploaded]: uploaded,
         [styles.editable]: editable,
-        [styles[avatarColour]]: true,
+        [styles[avatarColor]]: true,
       })}
       justifyContent="center"
       alignItems="center"
