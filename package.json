@@ -83,8 +83,7 @@
       "react"
     ],
     "ignore": [
-      "__stories__",
-      "__tests__"
+      "__stories__"
     ]
   }
 }
