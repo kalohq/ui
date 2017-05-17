@@ -14,4 +14,4 @@ dependencies:
 
 test:
   override:
-    - npm run coverage
+    - npm run test:coverage
