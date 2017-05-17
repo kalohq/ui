@@ -9,7 +9,7 @@
   "options": {
     "mocha": "--require src/utils/test/require-hooks --require src/utils/test/init-dom src/**/__tests__/*.{js,jsx}"
   },
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "storybook:start": "start-storybook -p 6006",
     "storybook:build": "build-storybook -c .storybook -o docs",
@@ -19,6 +19,7 @@
     "generate": "rimraf lib && rsync -av --exclude='__tests__' --exclude='__stories__' src/components/ lib && cp {package.json,README.md} lib",
     "test:coverage": "rm -rf coverage/ && NODE_ENV=test NODE_PATH=./src:./src/components babel-node node_modules/.bin/babel-istanbul cover _mocha -- -R spec $npm_package_options_mocha --timeout 8000"
   },
+  "prepublish": "npm run compile",
   "author": "The Lystable Team",
   "license": "ISC",
   "devDependencies": {
@@ -34,6 +35,7 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "6.22.0",
     "classnames": "^2.2.5",
     "css-loader": "^0.28.0",
     "enzyme": "^2.8.2",
