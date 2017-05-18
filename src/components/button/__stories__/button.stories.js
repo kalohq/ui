@@ -19,6 +19,15 @@ storiesOf('Button', module)
       return <Button theme="primary">Create Project</Button>;
     }
   )
+  .addWithInfo(
+    'disabled state',
+    'Buttons can be disabled by toggling the disabled state. This will prevent any user interaction with the button (onClick will also be disabled)',
+    () => {
+      return (
+        <Button theme="tertiary" disabled={true}>Get Started</Button>
+      );
+    }
+  )
   .addWithInfo('Secondary Button', 'Used for supporting actions.', () => {
     return <Button theme="secondary">Save Changes</Button>;
   })
