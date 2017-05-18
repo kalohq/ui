@@ -20,9 +20,9 @@
         }],
         ["babel-plugin-transform-builtin-extend", {
           globals: ["Error"],
-        }]
-        "babel-plugin-transform-es2015-modules-commonjs",
-      ],
+        }],
+        "babel-plugin-transform-es2015-modules-commonjs"
+      ]
     },
   }
 }
