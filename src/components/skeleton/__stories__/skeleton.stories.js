@@ -38,17 +38,17 @@ storiesOf('Skeleton', module)
     () => (
       <Page>
         <SkeletonPageHeader>
-          <SkeletonPageHeaderHeading>
+          <SkeletonPageHeaderHeading width={PAGE_SIZE}>
             <SkeletonText />
             <SkeletonButton square={true} />
           </SkeletonPageHeaderHeading>
-          <SkeletonPageHeaderToolbar>
+          <SkeletonPageHeaderToolbar width={PAGE_SIZE}>
             <SkeletonText />
             <SkeletonText />
             <SkeletonText />
           </SkeletonPageHeaderToolbar>
         </SkeletonPageHeader>
-        <SkeletonPage width={PAGE_SIZE}>
+        <SkeletonPage width={PAGE_SIZE + 100}>
           <SkeletonGrid>
             <SkeletonCard />
             <SkeletonCard />
@@ -64,17 +64,17 @@ storiesOf('Skeleton', module)
     () => (
       <Page>
         <SkeletonPageHeader>
-          <SkeletonPageHeaderHeading>
+          <SkeletonPageHeaderHeading width={PAGE_SIZE}>
             <SkeletonText />
             <SkeletonAvatar size={2} />
           </SkeletonPageHeaderHeading>
-          <SkeletonPageHeaderToolbar>
+          <SkeletonPageHeaderToolbar width={PAGE_SIZE}>
             <SkeletonText />
             <SkeletonText />
             <SkeletonText />
           </SkeletonPageHeaderToolbar>
         </SkeletonPageHeader>
-        <SkeletonPage width={PAGE_SIZE}>
+        <SkeletonPage width={PAGE_SIZE + 100}>
           <SkeletonList>
             <SkeletonListItem />
             <SkeletonListItem />

@@ -151,15 +151,16 @@ export function SkeletonPageHeader({children}) {
 }
 
 /** Skeleton page header heading */
-export function SkeletonPageHeaderHeading({padding = 50, children}) {
+export function SkeletonPageHeaderHeading({width = 1280, children}) {
   return (
     <Box
       className={{
         [styles.header]: true,
       }}
-      padding={[0, padding]}
     >
       <Box
+        margin={[0, 'auto']}
+        width={width}
         height={80}
         justifyContent="space-between"
         flexDirection="row"
@@ -172,17 +173,18 @@ export function SkeletonPageHeaderHeading({padding = 50, children}) {
 }
 
 /** Skeleton page header heading */
-export function SkeletonPageHeaderToolbar({padding = 50, children}) {
+export function SkeletonPageHeaderToolbar({width = 1280, children}) {
   return (
     <Box
       className={{
         [styles.header]: true,
       }}
-      padding={[0, padding]}
     >
-      <SpacerBox height={46}>
-        {children}
-      </SpacerBox>
+      <Box margin={[0, 'auto']} width={width}>
+        <SpacerBox height={46}>
+          {children}
+        </SpacerBox>
+      </Box>
     </Box>
   );
 }
