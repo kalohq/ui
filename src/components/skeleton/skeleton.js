@@ -16,10 +16,20 @@ const TEXT_HEIGHT = 12;
 const BUTTON_HEIGHT = 36;
 
 /** A box which can space it's children */
-function SpacerBox({spacing = 15, vertical = false, childFlex, children, ...styleProps}) {
+function SpacerBox({
+  spacing = 15,
+  vertical = false,
+  center = true,
+  childFlex,
+  children,
+  ...styleProps
+}) {
+  const alignItems = center
+    ? 'center'
+    : 'stretch';
   const style = vertical
-    ? {alignItems: 'center', marginTop: -spacing}
-    : {flexDirection: 'row', alignItems: 'center', marginLeft: -spacing};
+    ? {alignItems, marginTop: -spacing}
+    : {flexDirection: 'row', alignItems, marginLeft: -spacing};
 
   return (
     <Box {...style} {...styleProps}>
@@ -76,55 +86,73 @@ export function SkeletonAvatar({size = 4}) {
   );
 }
 
-/** Skeleton representation of an avatar */
-export function SkeletonCard() {
+/** Skeleton representation of paper container */
+export function SkeletonPaper({children}) {
   return (
     <Box
       className={{
-        [styles.card]: true,
+        [styles.paper]: true,
+      }}
+      padding={15}
+    >
+      {children}
+    </Box>
+  );
+}
+
+/** Skeleton representation of an avatar */
+export function SkeletonCard({children}) {
+  return (
+    <Box
+      className={{
+        [styles.paper]: true,
       }}
       paddingTop={75}
       paddingBottom={150}
     >
       <SpacerBox vertical={true}>
-        <SkeletonAvatar />
-        <SkeletonText />
-        <SkeletonText size={14} />
+        {children ? children : [
+          <SkeletonAvatar />,
+          <SkeletonText />,
+          <SkeletonText size={14} />,
+        ]}
       </SpacerBox>
     </Box>
   );
 }
 
 /** Skeleton representation of an avatar */
-export function SkeletonListItem() {
+export function SkeletonListItem({children}) {
   return (
     <Box
       className={{
-        [styles.card]: true,
+        [styles.paper]: true,
       }}
       padding={25}
     >
       <SpacerBox>
-        <SkeletonText size={14} />
-        <SkeletonText />
+        {children ? children : [
+          <SkeletonText size={14} />,
+          <SkeletonText />,
+        ]}
       </SpacerBox>
     </Box>
   );
 }
 
 /** Single row horizontal grid skeleton component */
-export function SkeletonGrid({children}) {
+export function SkeletonGrid({children, center}) {
   return (
-    <SpacerBox childFlex={1}>
+    <SpacerBox childFlex={1} center={center}>
       {children}
     </SpacerBox>
   );
 }
 
 /** Vertical list layout skeleton component */
-export function SkeletonList({children}) {
+export function SkeletonList({children, center}) {
   return (
-    <SpacerBox vertical={true} alignItems="stretch">
+    <SpacerBox vertical={true} alignItems="stretch" center={center}>
       {children}
     </SpacerBox>
   );
