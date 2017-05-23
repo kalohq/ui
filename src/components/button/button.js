@@ -193,9 +193,7 @@ export default class Button extends PureComponent {
         >
           <span className={styles.placeholder}>
             {iconElement}
-            {!loneIcon ? (
-              children
-            ): null}
+            {children}
           </span>
           <Flex
             alignItems="center"
@@ -208,9 +206,7 @@ export default class Button extends PureComponent {
             title={mayGetLong ? children : undefined}
           >
             {iconElement}
-            {!loneIcon ? (
-              children
-            ): null}
+            {children}
           </Flex>
           <Flex
             alignItems="center"
@@ -218,9 +214,7 @@ export default class Button extends PureComponent {
             className={styles.successMessage}
           >
             {iconElement}
-            {!loneIcon ? (
-              message
-            ): null}
+            {message}
           </Flex>
           <div className={styles.loadingSpinner}>
             <LoadingSpinner size="small" />
