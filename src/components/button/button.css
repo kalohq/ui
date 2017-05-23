@@ -57,14 +57,6 @@
   background-color: var(--color-brand-blue-darker);
 }
 
-/*
- * Disabled
- */
-.disabled {
-  background-color: var(--color-grey-platinum);
-  color: var(--color-grey-silver);
-  cursor: default;
-}
 
 /*
  * Tertiary
@@ -85,6 +77,15 @@
 
 .tertiary:not(.disabled).active {
   background-color: var(--color-grey-platinum);
+}
+
+/*
+* Disabled
+*/
+.disabled {
+  background-color: var(--color-grey-platinum);
+  color: var(--color-grey-silver);
+  cursor: default;
 }
 
 .delete {

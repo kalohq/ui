@@ -8,10 +8,8 @@ import StepMarks from 'components/step-marks';
 
 import {testComponent} from 'utils/test/react';
 
-describe('hera/components/step-marks', () => {
-
+describe('components/step-marks', () => {
   describe('StepMarks', () => {
-
     const create = testComponent(StepMarks, () => ({
       activeStep: 1,
       numberOfSteps: 3,

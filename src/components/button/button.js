@@ -175,7 +175,7 @@ export default class Button extends PureComponent {
           },
           className
         )}
-        onClick={waitingForData ? undefined : onClick}
+        onClick={waitingForData || disabled ? undefined : onClick}
         {...otherProps}
       >
         <Tag

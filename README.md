@@ -1,4 +1,4 @@
-# Lystable UI Library 🛠
+# Kalo UI 🛠
 An assortment of low-level components pulled from lystable-frontend.
 
 *NB: The contents in `/docs` are auto generated*
