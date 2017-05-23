@@ -4,6 +4,10 @@ import {storiesOf} from '@kadira/storybook';
 import Button from 'components/button';
 import ButtonGroup from 'components/button-group';
 
+var myClickFunction = function () {
+  alert('Hello from an onClick event')
+}
+
 storiesOf('Button', module)
   .addWithInfo(
     'Tertiary Button',
@@ -17,6 +21,15 @@ storiesOf('Button', module)
     'The primary action of a view. It should be used no more than once per view.',
     () => {
       return <Button theme="primary">Create Project</Button>;
+    }
+  )
+  .addWithInfo(
+    'disabled state',
+    'Buttons can be disabled by toggling the disabled state. This will prevent any user interaction with the button (onClick will also be disabled)',
+    () => {
+      return (
+        <Button theme="tertiary" disabled={true} onClick={myClickFunction}>Get Started</Button>
+      );
     }
   )
   .addWithInfo('Secondary Button', 'Used for supporting actions.', () => {

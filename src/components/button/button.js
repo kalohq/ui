@@ -175,7 +175,7 @@ export default class Button extends PureComponent {
           },
           className
         )}
-        onClick={waitingForData ? undefined : onClick}
+        onClick={waitingForData || disabled ? undefined : onClick}
         {...otherProps}
       >
         <Tag
@@ -193,7 +193,9 @@ export default class Button extends PureComponent {
         >
           <span className={styles.placeholder}>
             {iconElement}
-            {children}
+            {!loneIcon ? (
+              children
+            ): null}
           </span>
           <Flex
             alignItems="center"
@@ -206,7 +208,9 @@ export default class Button extends PureComponent {
             title={mayGetLong ? children : undefined}
           >
             {iconElement}
-            {children}
+            {!loneIcon ? (
+              children
+            ): null}
           </Flex>
           <Flex
             alignItems="center"
@@ -214,7 +218,9 @@ export default class Button extends PureComponent {
             className={styles.successMessage}
           >
             {iconElement}
-            {message}
+            {!loneIcon ? (
+              message
+            ): null}
           </Flex>
           <div className={styles.loadingSpinner}>
             <LoadingSpinner size="small" />
