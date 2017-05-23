@@ -1,4 +1,4 @@
-# Lystable UI Library 🛠
+# Kalo UI 🛠
 An assortment of low-level components pulled from lystable-frontend.
 
 *NB: The contents in `/docs` are auto generated*
@@ -8,7 +8,14 @@ When this repo is published to NPM, our fonts don't get published for licensing 
 
 ## Getting Started
 This repo is bundled with React Storybook, an application that allows you to view components in isolation.
-To run it locally:
+
+First install dependencies and setup environment:
+
+```
+npm install
+```
+
+And then to run it locally:
 
 ```
 npm run storybook
