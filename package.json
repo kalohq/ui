@@ -11,6 +11,7 @@
   },
   "main": "index.js",
   "scripts": {
+    "storybook": "npm run storybook:start",
     "storybook:start": "start-storybook -p 6006",
     "storybook:build": "build-storybook -c .storybook -o docs",
     "compile:css": "./node_modules/.bin/postcss -r -d lib/**/*.css -c postcss.config.js",
