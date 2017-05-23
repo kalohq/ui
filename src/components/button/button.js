@@ -219,7 +219,7 @@ export default class Button extends PureComponent {
           >
             {iconElement}
             {!loneIcon ? (
-              children
+              message
             ): null}
           </Flex>
           <div className={styles.loadingSpinner}>
