@@ -19,7 +19,7 @@ const BUTTON_HEIGHT = 36;
 function SpacerBox({spacing = 15, vertical = false, childFlex, children, ...styleProps}) {
   const style = vertical
     ? {alignItems: 'center', marginTop: -spacing}
-    : {flexDirection: 'row', alignItems: 'centre', marginLeft: -spacing};
+    : {flexDirection: 'row', alignItems: 'center', marginLeft: -spacing};
 
   return (
     <Box {...style} {...styleProps}>
@@ -160,7 +160,7 @@ export function SkeletonPageHeaderHeading({padding = 50, children}) {
       padding={[0, padding]}
     >
       <Box
-        margin={[25, 0]}
+        height={80}
         justifyContent="space-between"
         flexDirection="row"
         alignItems="center"
@@ -180,11 +180,9 @@ export function SkeletonPageHeaderToolbar({padding = 50, children}) {
       }}
       padding={[0, padding]}
     >
-      <Box margin={[15, 0]}>
-        <SpacerBox>
-          {children}
-        </SpacerBox>
-      </Box>
+      <SpacerBox height={46}>
+        {children}
+      </SpacerBox>
     </Box>
   );
 }

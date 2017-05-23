@@ -49,7 +49,7 @@ storiesOf('Skeleton', module)
           </SkeletonPageHeaderToolbar>
         </SkeletonPageHeader>
         <SkeletonPage width={PAGE_SIZE}>
-          <SkeletonGrid columns={3}>
+          <SkeletonGrid>
             <SkeletonCard />
             <SkeletonCard />
             <SkeletonCard />
