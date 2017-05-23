@@ -1,0 +1,18 @@
+.circle {
+  border-radius: 50%;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid var(--color-grey-platinum);
+  border-radius: 3px;
+}
+
+.shape {
+  background-color: var(--color-grey-platinum);
+}
+
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid var(--color-grey-platinum);
+}
