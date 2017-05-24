@@ -36,6 +36,7 @@ import {Button} from '@kalo/ui';
 ```
 
 ## Writing new components
+
 Besides the core component file, components should also be included with relevant tests and stories.
 A component directory should follow this pattern:
 
