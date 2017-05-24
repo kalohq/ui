@@ -56,6 +56,7 @@ To publish a new version:
 2. Increase the version in `package.json`
 3. `npm run dist`
 4. `cd lib` and `npm publish`
+5. :boom:
 
 *Publish from the lib folder to ensure that the module is published in a flat file structure.*
 
