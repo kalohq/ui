@@ -29,7 +29,7 @@
     "document": true,
   },
   "rules": {
-    "prettier/prettier": 0,
+    "prettier/prettier": 2,
     "comma-dangle": [2, "always-multiline"],
     "import/no-duplicates": 2,
     "import/first": 0,
