@@ -127,7 +127,7 @@ storiesOf('Skeleton', module)
           <SkeletonList center={false}>
             <SkeletonPaper>
               <SkeletonList center={false}>
-                <SkeletonText size={14} header={true} />
+                <SkeletonText size={14} heading={true} />
                 <SkeletonText size={7} />
                 <SkeletonText size={49} />
                 <SkeletonText size={35} />
@@ -139,7 +139,7 @@ storiesOf('Skeleton', module)
           <SkeletonList>
             <SkeletonPaper>
               <SkeletonList center={false}>
-                <SkeletonText header={true} />
+                <SkeletonText heading={true} />
                 <SkeletonText size={14} />
               </SkeletonList>
             </SkeletonPaper>

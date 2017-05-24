@@ -61,9 +61,9 @@ export function SkeletonShape({shape = 'rect', ...styleProps}) {
  * Skeleton representation of text content
  * TODO: Allow multiline (with appropriate line spacing)
  */
-export function SkeletonText({size = 7, header = false}) {
+export function SkeletonText({size = 7, heading = false}) {
   const width = size * TEXT_SIZE_MULTIPLIER;
-  const height = header ? TEXT_HEIGHT * 2 : TEXT_HEIGHT;
+  const height = heading ? TEXT_HEIGHT * 2 : TEXT_HEIGHT;
   return (
     <SkeletonShape height={height} width={width} />
   );
