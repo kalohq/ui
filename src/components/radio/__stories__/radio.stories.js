@@ -9,7 +9,7 @@ storiesOf('Radio', module)
     'A standard radio button',
     () => {
       return (
-        <Radio label="Turn off notifications" size="medium" checked={true}/>
+        <Radio label="Turn off notifications" size="medium" checked={false} />
       );
     }
   );

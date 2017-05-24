@@ -26,15 +26,21 @@ export function Radio(props: RadioProps) {
   } = props;
 
   return (
-    <Flex alignItems="center" justifyContent="center">
+    <Flex
+      alignItems="center"
+      justifyContent="center"
+      className={cx({
+        [styles.root]: true,
+        [styles.readonly]: readonly,
+      })}
+    >
       <Box
         position="relative"
         width={RADIO_SIZES.properties[size].size}
         height={RADIO_SIZES.properties[size].size}
         className={cx({
-          [styles.root]: true,
+          [styles.radio]: true,
           [styles.checked]: checked,
-          [styles.readonly]: readonly,
         })}
         {...pickStyles(otherProps)}
         {...otherProps}
