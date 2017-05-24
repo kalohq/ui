@@ -46,7 +46,7 @@ export default function Checkbox(props: CheckboxProps) {
         })}
         {...otherProps}
       />
-      {label ? (<Text marginLeft={8} size="small" color="grey">{label}</Text>) : null }
+      {label ? (<Text marginLeft={10} size="small" color="grey">{label}</Text>) : null }
     </Flex>
   );
 }
