@@ -58,5 +58,6 @@ To publish a new version:
 
 *Publish from the lib folder to ensure that the module is published in a flat file structure.*
 
-#### Notes
+#### Gotchas
+
 When this repo is published to NPM, our fonts don't get published for licensing reasons. It currently falls back to the font files that exist in the `lystable-frontend` repo.
