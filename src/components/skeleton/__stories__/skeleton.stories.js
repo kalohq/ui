@@ -126,18 +126,22 @@ storiesOf('Skeleton', module)
         <SkeletonGrid center={false}>
           <SkeletonList center={false}>
             <SkeletonPaper>
-              <SkeletonText />
-              <SkeletonText size={14} />
-              <SkeletonText size={49} />
-              <SkeletonText size={35} />
-              <SkeletonText size={42} />
-              <SkeletonText size={7} />
+              <SkeletonList center={false}>
+                <SkeletonText size={14} header={true} />
+                <SkeletonText size={7} />
+                <SkeletonText size={49} />
+                <SkeletonText size={35} />
+                <SkeletonText size={42} />
+                <SkeletonText size={7} />
+              </SkeletonList>
             </SkeletonPaper>
           </SkeletonList>
           <SkeletonList>
             <SkeletonPaper>
-              <SkeletonText />
-              <SkeletonText size={14} />
+              <SkeletonList center={false}>
+                <SkeletonText header={true} />
+                <SkeletonText size={14} />
+              </SkeletonList>
             </SkeletonPaper>
           </SkeletonList>
         </SkeletonGrid>

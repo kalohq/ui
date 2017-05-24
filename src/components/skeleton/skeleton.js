@@ -61,10 +61,11 @@ export function SkeletonShape({shape = 'rect', ...styleProps}) {
  * Skeleton representation of text content
  * TODO: Allow multiline (with appropriate line spacing)
  */
-export function SkeletonText({size = 7}) {
+export function SkeletonText({size = 7, header = false}) {
   const width = size * TEXT_SIZE_MULTIPLIER;
+  const height = header ? TEXT_HEIGHT * 2 : TEXT_HEIGHT;
   return (
-    <SkeletonShape height={TEXT_HEIGHT} width={width} />
+    <SkeletonShape height={height} width={width} />
   );
 }
 
@@ -213,6 +214,15 @@ export function SkeletonPageHeaderToolbar({width = 1280, children}) {
           {children}
         </SpacerBox>
       </Box>
+    </Box>
+  );
+}
+
+/** Generic content */
+export function SkeletonContent({children}) {
+  return (
+    <Box padding={15}>
+      {children}
     </Box>
   );
 }

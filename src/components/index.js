@@ -20,3 +20,4 @@ export {default as LoadingSpinner} from './loading-spinner';
 // export {default as StepMarks} from './step-marks';
 // export {default as ToggleButton} from './toggle-button';
 // export {default as PrimaryActionButton} from './primary-action-button';
+export * from './skeleton';
