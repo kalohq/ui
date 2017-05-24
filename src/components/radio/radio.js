@@ -11,7 +11,6 @@ import Text from '../text';
 import styles from './radio.css';
 
 type RadioProps = {
-  children?: React$Node,
   checked: ?boolean,
   readonly: boolean,
   size: number,
@@ -51,9 +50,7 @@ export function Radio(props: RadioProps) {
         </ReactCSSTransitionGroup>
       </Box>
       {label
-        ? <Text className={styles.label} size="small" color="grey">
-            {label}
-          </Text>
+        ? <Text marginLeft={10} size="small" color="grey">{label}</Text>
         : null}
     </Flex>
   );
