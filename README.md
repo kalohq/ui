@@ -49,6 +49,7 @@ A component directory should follow this pattern:
 | `__stories__/component-name.stories.js` | Stories to display in React Storybook |
 
 ## Publishing a new version
+
 To publish a new version:
 
 1. Ensure you have been added to the Kalo NPM organisation
