@@ -18,6 +18,7 @@ In order to achieve this, components included in the Kalo UI library should adhe
 - Be standalone - other than direct ones, no dependencies
 
 ## Getting Started
+
 This repo is bundled with React Storybook, an application that allows you to view components in isolation.
 
 First install dependencies and setup environment:
