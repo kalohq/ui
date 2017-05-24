@@ -4,7 +4,7 @@
 
 ---
 
-An assortment of low-level components pulled from lystable-frontend. This repo contains the source code, and a development environment to develop new components in.
+An assortment of low-level components pulled from kalo/frontend. This repo contains the source code, and a playground environment to develop new components in.
 
 ## An Overview
 These are the building blocks of the Kalo platform. Separating them out from the core application logic, allows us to build features without having to worry about low-level components.
@@ -34,6 +34,19 @@ Example: to import a button from the library in your application:
 ```javascript
 import {Button} from '@kalo/ui';
 ```
+
+## Writing new components
+Besides the core component file, components should also be included with relevant tests and stories.
+A component directory should follow this pattern:
+
+| File | Purpose |
+| ------------- |-------------|
+| `component-name.js` | The main component file |
+| `component-name.css` | Any component styles |
+| `index.js` | A minimal file exporting the component |
+| `README.md` | Any related design usage documentation |
+| `__tests__/component-name.test.js` | Component tests |
+| `__stories__/component-name.stories.js` | Stories to display in React Storybook |
 
 ## Publishing a new version
 To publish a new version:
