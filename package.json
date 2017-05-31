@@ -11,7 +11,7 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "start": "start-storybook -p 6000",
+    "start": "start-storybook -p 6060",
     "storybook:build": "build-storybook -c .storybook -o docs",
     "compile:css": "./node_modules/.bin/postcss -r -d lib/**/*.css -c postcss.config.js",
     "compile:js": "./node_modules/.bin/babel src/components --out-dir lib --copy-files --ignore __tests__,__stories__",
