@@ -25,7 +25,7 @@ First install dependencies and setup environment:
 
 ```
 npm install
-npm run storybook
+npm run start
 ```
 You should now have Storybook running at [http://localhost:6060](http://localhost:6060) 🚀
 
