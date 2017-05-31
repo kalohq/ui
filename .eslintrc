@@ -45,6 +45,7 @@
       "argsIgnorePattern": "^__*IGNORED",
       "args": "after-used"
     }],
+    "react/require-default-props": 0,
     "object-property-newline": [2, {allowMultiplePropertiesPerLine: true}],
     // definite nice to haves...
     "react/no-unused-prop-types": 0, // lots to type at this point... and flow may overtake soon
