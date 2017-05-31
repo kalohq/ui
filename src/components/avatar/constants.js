@@ -24,13 +24,7 @@ export const AVATAR_SIZES = new Map({
   },
 });
 
-export type AVATAR_SIZE = (
-  'small' |
-  'medium' |
-  'large' |
-  'x-large' |
-  'jumbo'
-);
+export type AVATAR_SIZE = 'small' | 'medium' | 'large' | 'x-large' | 'jumbo';
 
 export const AVATAR_COLORS = Map({
   0: 'green',
@@ -40,6 +34,6 @@ export const AVATAR_COLORS = Map({
   4: 'yellow',
 });
 
-export const DEFAULT_SIZE = AVATAR_SIZES.MEDIUM;
+export const DEFAULT_SIZE = AVATAR_SIZES.get('MEDIUM');
 
 export const GRAVATAR_FALLBACK_SIZE = 250;

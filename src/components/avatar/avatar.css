@@ -1,3 +1,11 @@
+:root {
+  --small: 25px;
+  --medium: 36px;
+  --large: 60px;
+  --x-large: 90px;
+  --jumbo: 200px;
+}
+
 .root {
   border-radius: 50%;
   transition: all 0.3s linear;
@@ -160,69 +168,41 @@
   position: absolute;
 }
 
-
-.loading,
-.loaded {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-}
-
-.loading {
-  background-color: var(--color-grey-snow);
-}
-
-.loaded {
-  background-color: var(--color-ui-success);
-}
-
-.confirmed {
+.badge {
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-}
-
-.subRecord {
-  position: absolute;
-  border: 2px solid #fff;
-  border-radius: 50%;
-}
-
-.small .confirmed,
-.small .subRecord {
-  top: calc(100% - 22px);
-  left: calc(100% - 20px);
-}
-
-.medium .confirmed,
-.medium .subRecord {
-  bottom: -1px;
-  right: -12px;
-}
-
-.large .subRecord,
-.x-large .subRecord {
-  bottom: -3px;
-  right: -20px;
-}
-
-.large .subRecord {
+  background-color: var(--color-grey-platinum);
   border: 3px solid #fff;
 }
 
-.large .confirmed {
-  top: calc(100% - 27px);
-  left: calc(100% - 27px);
-  background: #fff;
+.small .badge {
+  top: calc(100% - 22px);
+  left: calc(100% - 20px);
+  width: 24px;
+  height: 24px;
+  border: 0;
 }
 
-.x-large .confirmed {
-  top: calc(100% - 26px);
-  left: calc(100% - 32px);
-  background: #fff;
+.medium .badge {
+  bottom: -1px;
+  right: -12px;
+  width: 24px;
+  height: 24px;
+  border: 0;
+}
+
+.large .badge {
+  bottom: -3px;
+  right: -20px;
+  width: calc(var(--medium) + 6px);
+  height: calc(var(--medium) + 6px);
+  border: 3px solid #fff;
+}
+
+.x-large .badge {
+  bottom: -3px;
+  right: -12px;
 }

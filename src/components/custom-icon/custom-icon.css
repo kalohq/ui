@@ -10,8 +10,8 @@
   background-image: url('./assets/drive.svg');
 }
 
-.icon-lysted {
-  background-image: url('./assets/lysted.svg');
+.icon-listed {
+  background-image: url('./assets/listed.svg');
 }
 
 .icon-product {
@@ -34,8 +34,8 @@
   background-image: url('./assets/company-group.svg');
 }
 
-.icon-get-lysted {
-  background-image: url('./assets/get-lysted.svg');
+.icon-get-listed {
+  background-image: url('./assets/get-listed.svg');
 }
 
 .icon-happy-customers {
@@ -110,8 +110,8 @@
   background-image: url('./assets/onboard-import.svg');
 }
 
-.icon-onboard-linktolyst {
-  background-image: url('./assets/onboard-linktolyst.svg');
+.icon-onboard-linktolist {
+  background-image: url('./assets/onboard-linktolist.svg');
 }
 
 .icon-onboard-complete {

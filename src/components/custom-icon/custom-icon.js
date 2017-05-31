@@ -17,10 +17,9 @@ import styles from './custom-icon.css';
  *
  */
 export default class CustomIcon extends PureComponent {
-
   static propTypes = {
     children: PropTypes.oneOf([
-      'lysted',
+      'listed',
       'genie',
       'genie-animated',
       'drive',
@@ -28,7 +27,7 @@ export default class CustomIcon extends PureComponent {
       'careers',
       'company',
       'company-group',
-      'get-lysted',
+      'get-listed',
       'happy-customers',
       'individual-1',
       'individual-2',
@@ -48,7 +47,7 @@ export default class CustomIcon extends PureComponent {
       'onboard-add',
       'onboard-import',
       'onboard-invite',
-      'onboard-linktolyst',
+      'onboard-linktolist',
       'onboard-complete',
       'email',
       'invoice',
@@ -73,15 +72,12 @@ export default class CustomIcon extends PureComponent {
   };
   static defaultProps = {
     size: 24,
+    children: false,
+    className: false,
   };
 
   render() {
-    const {
-      size,
-      children,
-      className,
-      ...otherProps
-    } = this.props;
+    const {size, children, className, ...otherProps} = this.props;
 
     return (
       <Inline
@@ -91,10 +87,14 @@ export default class CustomIcon extends PureComponent {
           width: `${size}px`,
           height: `${size}px`,
         }}
-        className={cx({
-          [styles.root]: true,
-          [styles[`icon-${children}`]]: true,
-        }, className)} {...otherProps}
+        className={cx(
+          {
+            [styles.root]: true,
+            [styles[`icon-${children}`]]: true,
+          },
+          className
+        )}
+        {...otherProps}
       />
     );
   }
