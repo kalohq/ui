@@ -1,17 +1,14 @@
 /* @flow */
 import React from 'react';
 
-type RC = ReactClass<*> | (Object) => React$Element<*>
+type RC = ReactClass<*> | (Object => React$Element<*>);
 
 /** Provide a uniform way of easily creating component fixtures for testing */
 export const testComponent = (
   Component: RC,
-  defaultProps?
-    : () => Object
-    = () => ({}),
+  defaultProps?: () => Object = () => ({}),
 ) => {
-  return (otherProps?: Object, hoc?: (RC) => RC) => {
-
+  return (otherProps?: Object, hoc?: RC => RC) => {
     // our final props for the component merged from default
     // and per-test
     const props = {
@@ -20,9 +17,7 @@ export const testComponent = (
     };
 
     // our final enhanced component
-    const FinalComponent = hoc
-      ? hoc(Component)
-      : Component;
+    const FinalComponent = hoc ? hoc(Component) : Component;
 
     // our element to render given props and component
     const element = React.createElement(FinalComponent, props);
