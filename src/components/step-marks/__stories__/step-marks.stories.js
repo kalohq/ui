@@ -1,24 +1,19 @@
 import React from 'react';
-import {storiesOf} from '@kadira/storybook';
+import {storiesOf} from '@storybook/react';
 
 import StepMarks from 'components/step-marks';
 
-var myClickFunction = function () {
-  alert('Hello')
-}
+const myClickFunction = () => {
+  window.alert('Hello');
+};
 
 storiesOf('StepMarks', module)
   .addWithInfo(
     'StepMarks',
     'Provides indication of where a user is in a flow',
     () => {
-      return (
-        <StepMarks
-          activeStep={3}
-          numberOfSteps={6}
-        />
-      );
-    }
+      return <StepMarks activeStep={3} numberOfSteps={6} />;
+    },
   )
   .addWithInfo(
     'Interactive StepMarks',
@@ -32,5 +27,5 @@ storiesOf('StepMarks', module)
           interactive={true}
         />
       );
-    }
+    },
   );
