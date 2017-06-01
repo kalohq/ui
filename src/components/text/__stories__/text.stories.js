@@ -9,9 +9,7 @@ const examples = [
     description: 'A standard text node',
     render: () => {
       return (
-        <Text size="large" color="blue" weight="semi-bold">
-          Hello World
-        </Text>
+        <Text size="large" color="red" weight="semi-bold">Hello World</Text>
       );
     },
   },
@@ -20,6 +18,6 @@ const examples = [
 examples.forEach(example => {
   storiesOf(
     'Typography',
-    module,
+    module
   ).addWithInfo(example.title, example.description, () => example.render());
 });
