@@ -29,5 +29,5 @@ export const FONTELLO_ICONS = {
 
 export const DEFAULT_SIZE = 16;
 export const DEFAULT_WEIGHT = 'normal';
-export const DEFAULT_COLOR = 'dark-grey';
+export const DEFAULT_COLOR = 'none';
 export const DEFAULT_FAMILY = 'material';
