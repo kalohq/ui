@@ -1,0 +1,13 @@
+[ignore]
+node_modules/
+
+[include]
+
+[libs]
+flow/
+flow-typed/
+
+[options]
+module.system.node.resolve_dirname=src/components
+module.system.node.resolve_dirname=src
+module.system.node.resolve_dirname=node_modules
