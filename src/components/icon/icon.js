@@ -1,13 +1,12 @@
 /* @flow */
 import React from 'react';
 import cx from 'classnames';
-import {pickStyles} from 'utils/style';
+import {parseStyleProps} from 'utils/style';
 
 import styles from './icon.css';
 
 import type {
   ICON_SIZE,
-  ICON_THEME,
   ICON_COLOR,
   ICON_FAMILY,
   ICON_WEIGHT,
@@ -22,13 +21,12 @@ import {
 } from './constants';
 
 type iconProps = {
-  children: 'string',
+  children?: React.Element<*>,
   size?: ICON_SIZE,
-  theme?: ICON_THEME,
   color?: ICON_COLOR,
   family?: ICON_FAMILY,
   weight?: ICON_WEIGHT,
-  className?: 'string',
+  className?: string,
   onClick?: Function,
 };
 
@@ -39,11 +37,12 @@ export default function Icon(props: iconProps) {
     color = DEFAULT_COLOR,
     weight = DEFAULT_WEIGHT,
     family = DEFAULT_FAMILY,
-    theme,
     className,
     onClick,
     ...otherProps
   } = props;
+
+  const {unstyledProps, style} = parseStyleProps(otherProps);
 
   return (
     <i
@@ -51,17 +50,16 @@ export default function Icon(props: iconProps) {
         {
           [styles.root]: true,
           [styles[`size-${size}`]]: !!size,
-          [styles[`theme-${theme}`]]: !!theme,
           [styles[`family-${family}`]]: true,
           [styles[`weight-${weight}`]]: true,
           [styles[`color-${color}`]]: true,
           [styles.interactive]: !!onClick,
         },
-        className
+        className,
       )}
       onClick={onClick}
-      {...pickStyles(otherProps)}
-      {...otherProps}
+      style={style}
+      {...unstyledProps}
     >
       {family === 'fontello' ? FONTELLO_ICONS[children] || children : children}
     </i>
