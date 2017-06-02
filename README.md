@@ -47,6 +47,7 @@ A component directory should follow this pattern:
 | `component-name.js` | The main component file |
 | `component-name.css` | Any component styles |
 | `index.js` | A minimal file exporting the component |
+| `constants.js` | Any component exports/flow types that may be required in other components |
 | `README.md` | Any related design usage documentation |
 | `__tests__/component-name.test.js` | Component tests |
 | `__stories__/component-name.stories.js` | Stories to display in React Storybook |
