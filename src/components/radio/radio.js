@@ -19,8 +19,8 @@ type RadioProps = {
 export function Radio(props: RadioProps) {
   const {
     checked = false,
-    size = 'small',
-    readonly,
+    size = 'medium',
+    readonly = false,
     label,
     ...otherProps
   } = props;
@@ -61,7 +61,9 @@ export function Radio(props: RadioProps) {
         </ReactCSSTransitionGroup>
       </Box>
       {label
-        ? <Text marginLeft={10} size="small" color="grey" component="label">{label}</Text>
+        ? <Text marginLeft={10} size="small" color="grey" component="label">
+            {label}
+          </Text>
         : null}
     </Flex>
   );
