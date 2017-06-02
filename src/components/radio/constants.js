@@ -12,4 +12,4 @@ export const RADIO_SIZES = new Enum({
   },
 });
 
-export type RADIO_SIZE = ('small' | 'medium');
+export type RADIO_SIZE = 'small' | 'medium';
