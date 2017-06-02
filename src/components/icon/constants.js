@@ -4,14 +4,6 @@ import type {TEXT_COLOR} from '../text/constants';
 
 export type ICON_SIZE = 12 | 14 | 16 | 18 | 20 | 23 | 24 | 26 | 36 | 48;
 
-export type ICON_THEME =
-  | 'light'
-  | 'dark'
-  | 'positive'
-  | 'negative'
-  | 'pending'
-  | 'blue';
-
 export type ICON_COLOR = TEXT_COLOR;
 
 export type ICON_WEIGHT = 'normal' | 'bold';
