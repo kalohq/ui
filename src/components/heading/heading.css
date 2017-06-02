@@ -61,33 +61,27 @@
   font-size: 24px;
 }
 
-.color-red,
-.color-red > i {
+.color-red {
   color: var(--color-brand-red);
 }
 
-.color-blue,
-.color-blue > i  {
+.color-blue  {
   color: var(--color-brand-blue);
 }
 
-.color-dark-grey,
-.color-dark-grey > i {
+.color-dark-grey {
   color: var(--color-grey-charcoal);
 }
 
-.color-light-grey,
-.color-light-grey > i {
+.color-light-grey{
   color: var(--color-grey-silver);
 }
 
-.color-grey,
-.color-grey > i {
+.color-grey {
   color: var(--color-grey-slate);
 }
 
-.color-white,
-.color-white > i {
+.color-white {
   color: #fff;
 }
 
@@ -95,7 +89,8 @@
   margin-bottom: 0;
 }
 
-.margin-tiny {
+.margin-tiny,
+.margin-extra-small {
   margin-bottom: 2px;
 }
 
