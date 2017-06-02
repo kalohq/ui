@@ -1,15 +1,15 @@
 import React from 'react';
-import {storiesOf} from '@kadira/storybook';
+import {storiesOf} from '@storybook/react';
 
 import PrimaryActionButton from 'components/primary-action-button';
 
 storiesOf(
   'PrimaryActionButton',
-  module
+  module,
 ).addWithInfo(
   'PrimaryActionButton',
   'Renders a button with explicitly defined props.',
   () => {
     return <PrimaryActionButton icon="add" name="Create Category" />;
-  }
+  },
 );

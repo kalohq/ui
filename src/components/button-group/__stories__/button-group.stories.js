@@ -1,5 +1,5 @@
 import React from 'react';
-import {storiesOf} from '@kadira/storybook';
+import {storiesOf} from '@storybook/react';
 
 import ButtonGroup from 'components/button-group';
 import Button from 'components/button';
@@ -16,7 +16,7 @@ storiesOf('ButtonGroup', module)
           <Button theme="tertiary">Invoice</Button>
         </ButtonGroup>
       );
-    }
+    },
   )
   .addWithInfo(
     'With spacing',
@@ -28,5 +28,5 @@ storiesOf('ButtonGroup', module)
           <Button theme="primary">Create Project</Button>
         </ButtonGroup>
       );
-    }
+    },
   );

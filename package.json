@@ -30,9 +30,6 @@
   "author": "The Kalo Team",
   "license": "ISC",
   "devDependencies": {
-    "@kadira/react-storybook-addon-info": "^3.4.0",
-    "@kadira/storybook": "^2.35.3",
-    "@kadira/storybook-addon-options": "^1.0.2",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
@@ -59,7 +56,6 @@
     "expect": "^1.20.2",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
-    "getstorybook": "^1.7.0",
     "husky": "^0.13.3",
     "jsdom": "7.2.2",
     "lint-staged": "^3.4.2",
@@ -84,7 +80,11 @@
     "react-styleguidist": "^5.2.0",
     "rimraf": "^2.6.1",
     "style-loader": "^0.16.1",
-    "webpack": "^2.5.1"
+    "webpack": "^2.5.1",
+    "@storybook/react": "3.0.0",
+    "@storybook/cli": "3.0.0",
+    "@storybook/addon-options": "3.0.0",
+    "@storybook/addon-info": "3.0.0"
   },
   "babel": {
     "presets": [

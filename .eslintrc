@@ -2,7 +2,7 @@
   "parser": "babel-eslint",
   "plugins": ["react", "import", "flowtype", "prettier"],
   "env": {
-    "browser": false,
+    "browser": true,
     "node": true
   },
   "extends": [
