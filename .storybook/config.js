@@ -9,8 +9,8 @@ import "styles/master.css";
 const req = require.context("../src", true, /stories\.js$/);
 
 setOptions({
-  name: "Lystable Components",
-  url: "https://github.com/lystable/ui-library",
+  name: "Kalo Components",
+  url: "https://github.com/kalohq/ui",
   goFullScreen: false,
   showLeftPanel: true,
   showDownPanel: false,
