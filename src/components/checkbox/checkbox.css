@@ -1,0 +1,30 @@
+.root {
+  cursor: pointer;
+}
+
+.readonly {
+  cursor: default;
+}
+
+.checkbox {
+  border-radius: 3px;
+  border: 1px solid var(--color-grey-silver);
+  background-color: #fff;
+  background-position: center center;
+  background-size: 100%;
+  transition-timing-function: ease-in-out;
+  transition-duration: 200ms;
+  transition-property: background-color, border-color;
+}
+
+.root:hover:not(.readonly) .checkbox:not(.checked) {
+  background-color: var(--color-grey-snow);
+  border-color: var(--color-grey-slate);
+}
+
+.checked {
+  background-color: var(--color-grey-snow);
+  border-color: var(--color-brand-blue);
+  background-image: url('./assets/checked.svg');
+  background-repeat: no-repeat;
+}
