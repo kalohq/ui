@@ -81,7 +81,7 @@ export default function Text(props: textProps) {
           [styles['not-interactive']]: interactive === false,
           [styles['no-underline']]: noUnderline,
         },
-        className
+        className,
       )}
       {...otherProps}
     >
