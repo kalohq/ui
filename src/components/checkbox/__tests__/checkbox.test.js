@@ -6,12 +6,10 @@ import {textMatch} from 'utils/test/enzyme';
 import {testComponent} from 'utils/test/react';
 
 import Checkbox from '../checkbox';
-import Text from 'components/text'
+import Text from 'components/text';
 
 describe('components/checkbox', () => {
-
   describe('Checkbox', () => {
-
     const create = testComponent(Checkbox, () => ({
       size: 'medium',
       checked: true,
@@ -31,7 +29,5 @@ describe('components/checkbox', () => {
       const label = result.find(Text);
       expect(textMatch(label, 'A checkbox label')).toBe(true);
     });
-
   });
-
 });

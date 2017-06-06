@@ -4,7 +4,9 @@ import cx from 'classnames';
 
 import {Flex, Box} from '../layout';
 import Text from '../text';
-import {CHECKBOX_SIZES, CHECKBOX_SIZE} from './constants';
+import type {CHECKBOX_SIZE} from './constants';
+
+import {CHECKBOX_SIZES} from './constants';
 
 import styles from './checkbox.css';
 
@@ -13,7 +15,7 @@ type CheckboxProps = {
   checked: ?boolean,
   readonly: boolean,
   label: string,
-  onClick: func,
+  onClick: () => mixed,
 };
 
 export default function Checkbox(props: CheckboxProps) {
@@ -46,7 +48,9 @@ export default function Checkbox(props: CheckboxProps) {
         })}
         {...otherProps}
       />
-      {label ? (<Text marginLeft={10} size="small" color="grey">{label}</Text>) : null }
+      {label
+        ? <Text marginLeft={10} size="small" color="grey">{label}</Text>
+        : null}
     </Flex>
   );
 }

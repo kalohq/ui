@@ -20,6 +20,7 @@
     "compile": "npm run compile:js && npm run compile:css",
     "test:coverage": "rm -rf coverage/ && NODE_ENV=test NODE_PATH=./src:./src/components babel-node node_modules/.bin/babel-istanbul cover _mocha -- -R spec $npm_package_options_mocha --timeout 8000",
     "dist": "rimraf lib && npm run compile && cp {package.json,README.md} lib",
+    "copy-flow": "flow-copy-source src flowtest --ignore '{**/__tests__/*,**/__stories__/*}'",
     "precommit": "lint-staged"
   },
   "lint-staged": {
@@ -56,6 +57,7 @@
     "expect": "^1.20.2",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
+    "flow-copy-source": "^1.1.0",
     "husky": "^0.13.3",
     "jsdom": "7.2.2",
     "lint-staged": "^3.4.2",

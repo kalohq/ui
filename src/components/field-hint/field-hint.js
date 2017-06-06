@@ -9,7 +9,11 @@ import Icon from '../icon';
 
 import styles from './field-hint.css';
 
-export function FieldHint(props: {hint: string, icon?: React$Node | string}) {
+type fieldHintProps = {
+  hint: string,
+  icon: React$Element<*> | string,
+};
+export function FieldHint(props: fieldHintProps) {
   const {hint, icon, ...otherProps} = props;
 
   return (
