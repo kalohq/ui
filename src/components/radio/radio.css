@@ -1,15 +1,5 @@
 .root {
-  border-radius: 50%;
-  border: 1px solid var(--color-grey-silver);
-  background-color: #fff;
-  background-position: center center;
-  background-size: 80%;
   cursor: pointer;
-  transition: all 200ms ease-in-out;
-}
-
-.checked {
-  border-color: var(--color-brand-blue);
 }
 
 .readonly {
@@ -18,6 +8,19 @@
 
 .radio {
   border-radius: 50%;
+  border: 1px solid var(--color-grey-silver);
+  background-color: #fff;
+  background-position: center center;
+  background-size: 80%;
+  transition: all 200ms ease-in-out;
+}
+
+.root:hover .radio:not(.checked) {
+  border-color: var(--color-grey-slate);
+}
+
+.checked {
+  border-color: var(--color-brand-blue);
 }
 
 .icon {
