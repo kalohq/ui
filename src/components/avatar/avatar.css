@@ -2,8 +2,8 @@
   --small: 25px;
   --medium: 36px;
   --large: 60px;
-  --x-large: 90px;
-  --jumbo: 200px;
+  --extra-large: 90px;
+  --extra-extra-large: 200px;
 }
 
 .root {
@@ -81,13 +81,13 @@
   font-size: 18px;
 }
 
-.x-large {
+.extra-large {
   width: 90px;
   height: 90px;
   font-size: 20px;
 }
 
-.jumbo {
+.extra-extra-large {
   width: 200px;
   height: 200px;
 }
@@ -202,7 +202,7 @@
   border: 3px solid #fff;
 }
 
-.x-large .badge {
+.extra-large .badge {
   bottom: -3px;
   right: -12px;
 }

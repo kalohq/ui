@@ -6,7 +6,8 @@ import Icon from '../icon';
 import CustomIcon from '../custom-icon';
 import {pickStyles} from 'utils/style';
 
-import {AVATAR_SIZE, AVATAR_COLORS, DEFAULT_SIZE} from './constants';
+import type {AVATAR_SIZE} from './constants';
+import {AVATAR_COLORS, DEFAULT_SIZE} from './constants';
 
 import styles from './avatar.css';
 
@@ -14,7 +15,13 @@ type avatarProps = {
   confirmed?: boolean,
   record: string,
   src: string,
-  size: AVATAR_SIZE,
+  style?: Object,
+  size?: AVATAR_SIZE,
+  editable?: boolean,
+  subRecord?: string,
+  subRecordSrc?: string,
+  badge?: string,
+  badgeTitle?: string,
 };
 
 /** Returns an avatar color based on the record input */
@@ -77,11 +84,11 @@ export default function Avatar(props: avatarProps) {
     editable,
     record,
     subRecord,
-    subRecordSrc,
-    style,
+    subRecordSrc = '',
+    style = {},
     src,
-    badge = false,
-    badgeTitle = false,
+    badge = '',
+    badgeTitle = '',
     confirmed = false,
     ...otherProps
   } = props;
@@ -111,7 +118,7 @@ export default function Avatar(props: avatarProps) {
         ? <AvatarBadge
             title="Edit avatar"
             icon="edit"
-            size={size === 'small' || size === 'medium' ? 36 : 30}
+            size={size === 'small' || size === 'medium' ? 24 : 30}
             className={styles.addLogoButton}
           />
         : null}

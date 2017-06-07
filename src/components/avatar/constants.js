@@ -14,24 +14,29 @@ export const AVATAR_SIZES = new Map({
     value: 'large',
     size: 60,
   },
-  X_LARGE: {
-    value: 'x-large',
+  EXTRA_LARGE: {
+    value: 'extra-large',
     size: 90,
   },
-  JUMBO: {
-    value: 'jumbo',
+  EXTRA_EXTRA_LARGE: {
+    value: 'extra-extra-large',
     size: 200,
   },
 });
 
-export type AVATAR_SIZE = 'small' | 'medium' | 'large' | 'x-large' | 'jumbo';
+export type AVATAR_SIZE =
+  | 'small'
+  | 'medium'
+  | 'large'
+  | 'extra-large'
+  | 'extra-extra-large';
 
 export const AVATAR_COLORS = Map({
-  0: 'green',
-  1: 'blue',
-  2: 'purple',
-  3: 'grey',
-  4: 'yellow',
+  '0': 'green',
+  '1': 'blue',
+  '2': 'purple',
+  '3': 'grey',
+  '4': 'yellow',
 });
 
 export const DEFAULT_SIZE = AVATAR_SIZES.get('MEDIUM');

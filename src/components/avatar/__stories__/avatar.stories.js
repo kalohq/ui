@@ -52,7 +52,7 @@ storiesOf('Avatar', module)
       return (
         <Avatar
           record="Remy Sharp"
-          size="x-large"
+          size="extra-large"
           src="https://s3.amazonaws.com/uifaces/faces/twitter/rem/128.jpg"
           subRecord="Harry Roberts"
         />
