@@ -112,8 +112,6 @@ export default function Avatar(props: avatarProps) {
     >
       {src ? <AvatarImage src={src} /> : null}
 
-      {record ? <span className={styles.hiddenName}>{record}</span> : null}
-
       {editable
         ? <AvatarBadge
             title="Edit avatar"

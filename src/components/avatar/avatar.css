@@ -162,12 +162,6 @@
   top: 30px;
 }
 
-.hiddenName {
-  visibility: hidden;
-  user-select: none;
-  position: absolute;
-}
-
 .badge {
   position: absolute;
   display: flex;
