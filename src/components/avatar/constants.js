@@ -1,7 +1,7 @@
 /* @flow */
 import {Map} from 'immutable';
 
-export const AVATAR_SIZES = new Map({
+export const AVATAR_SIZES = Map({
   SMALL: {
     value: 'small',
     size: 25,
