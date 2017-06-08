@@ -172,6 +172,10 @@
   border: 3px solid #fff;
 }
 
+.badge.listed {
+  background-color: #fff;
+}
+
 .small .badge {
   top: calc(100% - 22px);
   left: calc(100% - 20px);

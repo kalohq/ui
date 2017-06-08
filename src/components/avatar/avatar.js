@@ -64,13 +64,14 @@ export function AvatarBadge(props: {
   icon: ?string,
   title: ?string,
   size: 24 | 30,
+  className?: string,
 }) {
-  const {icon, size, title} = props;
+  const {icon, size, title, className} = props;
 
   const ComponentTag = icon === 'listed' ? CustomIcon : Icon;
 
   return (
-    <div className={styles.badge}>
+    <div className={cx({[styles.badge]: true}, className)}>
       <ComponentTag size={size} title={title} color="dark-grey">
         {icon}
       </ComponentTag>
@@ -130,6 +131,7 @@ export default function Avatar(props: avatarProps) {
             }
             icon={confirmed ? 'listed' : badge}
             size={size === 'small' || size === 'medium' ? 24 : 30}
+            className={styles.listed}
           />
         : null}
 
