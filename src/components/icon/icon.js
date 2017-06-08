@@ -22,24 +22,24 @@ import {
 } from './constants';
 
 type iconProps = {
-  children: 'string',
+  children?: string,
   size?: ICON_SIZE,
   theme?: ICON_THEME,
   color?: ICON_COLOR,
   family?: ICON_FAMILY,
   weight?: ICON_WEIGHT,
-  className?: 'string',
+  className?: string,
   onClick?: Function,
 };
 
 export default function Icon(props: iconProps) {
   const {
-    children,
+    children = '',
     size = DEFAULT_SIZE,
     color = DEFAULT_COLOR,
     weight = DEFAULT_WEIGHT,
     family = DEFAULT_FAMILY,
-    theme,
+    theme = '',
     className,
     onClick,
     ...otherProps
@@ -63,7 +63,9 @@ export default function Icon(props: iconProps) {
       {...pickStyles(otherProps)}
       {...otherProps}
     >
-      {family === 'fontello' ? FONTELLO_ICONS[children] || children : children}
+      {family === 'fontello' && children
+        ? FONTELLO_ICONS[children] || children
+        : children}
     </i>
   );
 }

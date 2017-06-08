@@ -1,6 +1,7 @@
 [ignore]
-node_modules/
-
+.*/node_modules/prop-types/.*
+.*/node_modules/jss/.*
+.*/node_modules/findup/.*
 [include]
 
 [libs]
