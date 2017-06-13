@@ -2,7 +2,7 @@
   "parser": "babel-eslint",
   "plugins": ["react", "import", "flowtype", "prettier"],
   "env": {
-    "browser": false,
+    "browser": true,
     "node": true
   },
   "extends": [
@@ -29,7 +29,11 @@
     "document": true,
   },
   "rules": {
-    "prettier/prettier": 0,
+    "prettier/prettier": [2, {
+      "singleQuote": true,
+      "trailingComma": "all",
+      "bracketSpacing": false,
+    }],
     "comma-dangle": [2, "always-multiline"],
     "import/no-duplicates": 2,
     "import/first": 0,

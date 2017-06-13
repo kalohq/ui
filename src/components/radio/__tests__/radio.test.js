@@ -7,11 +7,9 @@ import {testComponent} from 'utils/test/react';
 import Radio from 'components/radio';
 
 describe('components/radio', () => {
-
   describe('Radio', () => {
-
     const create = testComponent(Radio, () => ({
-      size: 24,
+      size: 'medium',
       checked: true,
     }));
 
@@ -20,7 +18,5 @@ describe('components/radio', () => {
       const result = shallow(element);
       expect(result).toExist('should render OK');
     });
-
   });
-
 });

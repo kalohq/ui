@@ -1,15 +1,11 @@
 import React from 'react';
-import {storiesOf} from '@kadira/storybook';
+import {storiesOf} from '@storybook/react';
 
 import LoadingSpinner from 'components/loading-spinner';
 
-storiesOf('LoadingSpinner', module)
-  .addWithInfo(
-    'Loading Spinner',
-    'A standard loading spinner',
-    () => {
-      return (
-        <LoadingSpinner/>
-      );
-    }
-  );
+storiesOf(
+  'LoadingSpinner',
+  module,
+).addWithInfo('Loading Spinner', 'A standard loading spinner', () => {
+  return <LoadingSpinner />;
+});
