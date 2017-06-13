@@ -17,28 +17,27 @@ import {
   SkeletonPageHeaderHeading,
   SkeletonPage,
   SkeletonPaper,
+  SkeletonPageHeaderTabs,
 } from '../skeleton';
+
+/** Dummy page size */
+const PAGE_SIZE = 1080;
 
 /** Page background display container */
 function Page({children, ...styleProps}) {
   const style = {
     background: variables['--color-grey-snow'],
   };
-  
-  return (
-    <Box style={style} {...styleProps}>{children}</Box>
-  );
-}
 
-/** Dummy page size */
-const PAGE_SIZE = 1080;
+  return <Box style={style} {...styleProps}>{children}</Box>;
+}
 
 storiesOf('Skeleton', module)
   .addWithInfo(
     'Skeleton Card Index',
     'A complete skeleton layout with card grid',
     () => (
-      <Page>
+      <Page width={PAGE_SIZE + 100}>
         <SkeletonPageHeader>
           <SkeletonPageHeaderHeading width={PAGE_SIZE}>
             <SkeletonText />
@@ -50,7 +49,7 @@ storiesOf('Skeleton', module)
             <SkeletonText />
           </SkeletonPageHeaderToolbar>
         </SkeletonPageHeader>
-        <SkeletonPage width={PAGE_SIZE + 100}>
+        <SkeletonPage width={PAGE_SIZE}>
           <SkeletonGrid>
             <SkeletonCard />
             <SkeletonCard />
@@ -64,7 +63,7 @@ storiesOf('Skeleton', module)
     'Skeleton List Index',
     'A complete skeleton layout with item list',
     () => (
-      <Page>
+      <Page width={PAGE_SIZE + 100}>
         <SkeletonPageHeader>
           <SkeletonPageHeaderHeading width={PAGE_SIZE}>
             <SkeletonText />
@@ -76,13 +75,33 @@ storiesOf('Skeleton', module)
             <SkeletonText />
           </SkeletonPageHeaderToolbar>
         </SkeletonPageHeader>
-        <SkeletonPage width={PAGE_SIZE + 100}>
+        <SkeletonPage width={PAGE_SIZE}>
           <SkeletonList>
             <SkeletonListItem />
             <SkeletonListItem />
             <SkeletonListItem />
           </SkeletonList>
         </SkeletonPage>
+      </Page>
+    )
+  )
+  .addWithInfo(
+    'Skeleton header tabs',
+    'A skeleton header with tabs rather than seperated toolbar',
+    () => (
+      <Page width={PAGE_SIZE + 100}>
+        <SkeletonPageHeader>
+          <SkeletonPageHeaderHeading width={PAGE_SIZE}>
+            <SkeletonText heading={true} size={14} />
+            <SkeletonButton square={true} />
+          </SkeletonPageHeaderHeading>
+          <SkeletonPageHeaderTabs width={PAGE_SIZE}>
+            <SkeletonText />
+            <SkeletonText />
+            <SkeletonText />
+          </SkeletonPageHeaderTabs>
+        </SkeletonPageHeader>
+        <SkeletonPage width={PAGE_SIZE} />
       </Page>
     )
   )

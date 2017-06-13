@@ -24,21 +24,21 @@ function SpacerBox({
   children,
   ...styleProps
 }) {
-  const alignItems = center
-    ? 'center'
-    : 'stretch';
+  const alignItems = center ? 'center' : 'stretch';
   const style = vertical
     ? {alignItems, marginTop: -spacing}
     : {flexDirection: 'row', alignItems, marginLeft: -spacing};
 
   return (
     <Box {...style} {...styleProps}>
-      {React.Children.map(children, (child) => (
+      {React.Children.map(children, child => (
         <Box
           marginTop={vertical ? spacing : 0}
           marginLeft={!vertical ? spacing : 0}
           flex={childFlex}
-        >{child}</Box>
+        >
+          {child}
+        </Box>
       ))}
     </Box>
   );
@@ -64,37 +64,30 @@ export function SkeletonShape({shape = 'rect', ...styleProps}) {
 export function SkeletonText({size = 7, heading = false}) {
   const width = size * TEXT_SIZE_MULTIPLIER;
   const height = heading ? TEXT_HEIGHT * 2 : TEXT_HEIGHT;
-  return (
-    <SkeletonShape height={height} width={width} />
-  );
+  return <SkeletonShape height={height} width={width} />;
 }
 
 /** Skeleton representation of a button */
 export function SkeletonButton({size = 7, square}) {
-  const width = square
-    ? BUTTON_HEIGHT
-    : size * TEXT_SIZE_MULTIPLIER;
-  return (
-    <SkeletonShape height={BUTTON_HEIGHT} width={width} />
-  );
+  const width = square ? BUTTON_HEIGHT : size * TEXT_SIZE_MULTIPLIER;
+  return <SkeletonShape height={BUTTON_HEIGHT} width={width} />;
 }
 
 /** Skeleton representation of an avatar */
 export function SkeletonAvatar({size = 4}) {
   const width = size * AVATAR_SIZE_MULTIPLIER;
-  return (
-    <SkeletonShape shape="circ" height={width} width={width} />
-  );
+  return <SkeletonShape shape="circ" height={width} width={width} />;
 }
 
 /** Skeleton representation of paper container */
-export function SkeletonPaper({children}) {
+export function SkeletonPaper({children, style}) {
   return (
     <Box
       className={{
         [styles.paper]: true,
       }}
       padding={15}
+      style={style}
     >
       {children}
     </Box>
@@ -112,11 +105,9 @@ export function SkeletonCard({children}) {
       paddingBottom={150}
     >
       <SpacerBox vertical={true}>
-        {children ? children : [
-          <SkeletonAvatar />,
-          <SkeletonText />,
-          <SkeletonText size={14} />,
-        ]}
+        {children
+          ? children
+          : [<SkeletonAvatar />, <SkeletonText />, <SkeletonText size={14} />]}
       </SpacerBox>
     </Box>
   );
@@ -132,10 +123,7 @@ export function SkeletonListItem({children}) {
       padding={25}
     >
       <SpacerBox>
-        {children ? children : [
-          <SkeletonText size={14} />,
-          <SkeletonText />,
-        ]}
+        {children ? children : [<SkeletonText size={14} />, <SkeletonText />]}
       </SpacerBox>
     </Box>
   );
@@ -160,10 +148,10 @@ export function SkeletonList({children, center}) {
 }
 
 /** Skeleton page */
-export function SkeletonPage({children, width = 1280, padding = 50}) {
+export function SkeletonPage({children, width = 1180}) {
   return (
-    <Box minWidth={width}>
-      <Box margin={[50, 'auto']} width={width - padding * 2}>
+    <Box>
+      <Box margin={[50, 'auto']} width={width}>
         {children}
       </Box>
     </Box>
@@ -173,40 +161,38 @@ export function SkeletonPage({children, width = 1280, padding = 50}) {
 /** Skeleton page header */
 export function SkeletonPageHeader({children}) {
   return (
-    <Box>
+    <Box
+      className={{
+        [styles.header]: true,
+      }}
+    >
       {children}
     </Box>
   );
 }
 
 /** Skeleton page header heading */
-export function SkeletonPageHeaderHeading({width = 1280, children}) {
+export function SkeletonPageHeaderHeading({width = 1180, children}) {
   return (
     <Box
-      className={{
-        [styles.header]: true,
-      }}
+      margin={[0, 'auto']}
+      width={width}
+      height={80}
+      justifyContent="space-between"
+      flexDirection="row"
+      alignItems="center"
     >
-      <Box
-        margin={[0, 'auto']}
-        width={width}
-        height={80}
-        justifyContent="space-between"
-        flexDirection="row"
-        alignItems="center"
-      >
-        {children}
-      </Box>
+      {children}
     </Box>
   );
 }
 
 /** Skeleton page header heading */
-export function SkeletonPageHeaderToolbar({width = 1280, children}) {
+export function SkeletonPageHeaderToolbar({width = 1180, children}) {
   return (
     <Box
       className={{
-        [styles.header]: true,
+        [styles.toolbar]: true,
       }}
     >
       <Box margin={[0, 'auto']} width={width}>
@@ -214,6 +200,17 @@ export function SkeletonPageHeaderToolbar({width = 1280, children}) {
           {children}
         </SpacerBox>
       </Box>
+    </Box>
+  );
+}
+
+/** Skeleton page header heading */
+export function SkeletonPageHeaderTabs({width = 1180, children}) {
+  return (
+    <Box margin={[0, 'auto']} width={width}>
+      <SpacerBox height={46}>
+        {children}
+      </SpacerBox>
     </Box>
   );
 }
