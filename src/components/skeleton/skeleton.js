@@ -49,7 +49,7 @@ export function SkeletonShape({shape = 'rect', ...styleProps}) {
   return (
     <Box
       className={{
-        [styles.circle]: shape === 'circ',
+        [styles.circle]: shape === 'circle',
         [styles.shape]: true,
       }}
       {...styleProps}
@@ -76,7 +76,7 @@ export function SkeletonButton({size = 7, square}) {
 /** Skeleton representation of an avatar */
 export function SkeletonAvatar({size = 4}) {
   const width = size * AVATAR_SIZE_MULTIPLIER;
-  return <SkeletonShape shape="circ" height={width} width={width} />;
+  return <SkeletonShape shape="circle" height={width} width={width} />;
 }
 
 /** Skeleton representation of paper container */
