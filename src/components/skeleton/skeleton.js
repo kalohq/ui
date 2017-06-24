@@ -17,7 +17,7 @@ const BUTTON_HEIGHT = 36;
 
 /** A box which can space it's children */
 function SpacerBox({
-  spacing = 15,
+  spacing = 25,
   vertical = false,
   center = true,
   childFlex,
@@ -141,7 +141,7 @@ export function SkeletonGrid({children, center}) {
 /** Vertical list layout skeleton component */
 export function SkeletonList({children, center}) {
   return (
-    <SpacerBox vertical={true} alignItems="stretch" center={center}>
+    <SpacerBox vertical={true} spacing={10} alignItems="stretch" center={center}>
       {children}
     </SpacerBox>
   );
