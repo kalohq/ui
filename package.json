@@ -16,11 +16,11 @@
     "storybook:start": "start-storybook -p 6006",
     "storybook:build": "build-storybook -c .storybook -o docs",
     "compile:css": "./node_modules/.bin/postcss -r -d lib/**/*.css -c postcss.config.js",
-    "compile:js": "./node_modules/.bin/babel src/components --out-dir lib --copy-files --ignore __tests__,__stories__",
+    "compile:js": "./node_modules/.bin/babel src/components --out-dir lib --copy-files --ignore __tests__,__stories__ && npm run copy-flow",
     "compile": "npm run compile:js && npm run compile:css",
     "test:coverage": "rm -rf coverage/ && NODE_ENV=test NODE_PATH=./src:./src/components babel-node node_modules/.bin/babel-istanbul cover _mocha -- -R spec $npm_package_options_mocha --timeout 8000",
     "dist": "rimraf lib && npm run compile && cp {package.json,README.md} lib",
-    "copy-flow": "flow-copy-source src flowtest --ignore '{**/__tests__/*,**/__stories__/*}'",
+    "copy-flow": "flow-copy-source src/components lib --ignore '{index.js,**/__tests__/*,**/__stories__/*}'",
     "precommit": "lint-staged"
   },
   "lint-staged": {
