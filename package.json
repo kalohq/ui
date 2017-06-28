@@ -4,7 +4,7 @@
   "description": "A library of React components",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lystable/ui-library"
+    "url": "https://github.com/kalohq/ui"
   },
   "options": {
     "mocha": "--require src/utils/test/require-hooks --require src/utils/test/init-dom src/**/__tests__/*.{js,jsx}"
@@ -46,7 +46,6 @@
     "enzyme": "^2.8.2",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
-    "eslint-config-lystable": "^6.0.0",
     "eslint-config-prettier": "^2.0.0",
     "eslint-plugin-flowtype": "^2.32.1",
     "eslint-plugin-import": "^2.2.0",
@@ -81,6 +80,7 @@
     "rimraf": "^2.6.1",
     "style-loader": "^0.16.1",
     "webpack": "^2.5.1",
+    "@kalo/eslint-config": "6.0.0",
     "@storybook/react": "3.0.0",
     "@storybook/cli": "3.0.0",
     "@storybook/addon-options": "3.0.0",

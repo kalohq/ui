@@ -6,7 +6,7 @@
     "node": true
   },
   "extends": [
-    "lystable",
+    "@kalo/eslint-config",
     "plugin:flowtype/recommended",
     "prettier",
     "prettier/flowtype",

@@ -65,4 +65,4 @@ To publish a new version:
 
 #### Gotchas
 
-When this repo is published to NPM, our fonts don't get published for licensing reasons. It currently falls back to the font files that exist in the `lystable-frontend` repo.
+When this repo is published to NPM, our fonts don't get published for licensing reasons. It currently falls back to the font files that exist in the `frontend` repo.
