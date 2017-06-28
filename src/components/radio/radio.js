@@ -15,6 +15,7 @@ type RadioProps = {
   readonly: boolean,
   size: RADIO_SIZE,
   label: string,
+  onClick: func,
 };
 
 export function Radio(props: RadioProps) {
@@ -23,6 +24,7 @@ export function Radio(props: RadioProps) {
     size = 'medium',
     readonly = false,
     label,
+    onClick,
     ...otherProps
   } = props;
 
@@ -30,6 +32,7 @@ export function Radio(props: RadioProps) {
     <Flex
       alignItems="center"
       justifyContent="center"
+      onClick={onClick}
       className={cx({
         [styles.root]: true,
         [styles.readonly]: readonly,
