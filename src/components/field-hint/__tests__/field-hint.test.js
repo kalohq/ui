@@ -4,7 +4,7 @@ import expect from 'expect';
 import {shallow} from 'enzyme';
 import {testComponent} from 'utils/test/react';
 
-import FieldHint from 'components/field-hint';
+import FieldHint from '../field-hint';
 
 describe('components/field-hint', () => {
   describe('FieldHint', () => {

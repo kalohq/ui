@@ -15,7 +15,7 @@ type RadioProps = {
   readonly: boolean,
   size: RADIO_SIZE,
   label: string,
-  onClick: func,
+  onClick: Function,
 };
 
 export function Radio(props: RadioProps) {

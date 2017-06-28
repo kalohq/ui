@@ -13,7 +13,8 @@ type fieldHintProps = {
   hint: string,
   icon: React$Element<*> | string,
 };
-export function FieldHint(props: fieldHintProps) {
+
+export default function FieldHint(props: fieldHintProps) {
   const {hint, icon, ...otherProps} = props;
 
   return (
@@ -39,5 +40,3 @@ export function FieldHint(props: fieldHintProps) {
     </Inline>
   );
 }
-
-export default FieldHint;
