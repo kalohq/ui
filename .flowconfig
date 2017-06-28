@@ -1,0 +1,14 @@
+[ignore]
+.*/node_modules/prop-types/.*
+.*/node_modules/jss/.*
+.*/node_modules/findup/.*
+[include]
+
+[libs]
+flow/
+flow-typed/
+
+[options]
+module.system.node.resolve_dirname=src/components
+module.system.node.resolve_dirname=src
+module.system.node.resolve_dirname=node_modules

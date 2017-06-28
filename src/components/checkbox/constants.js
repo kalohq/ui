@@ -12,4 +12,4 @@ export const CHECKBOX_SIZES = new Enum({
   },
 });
 
-export type CHECKBOX_SIZE = ('small' | 'medium');
+export type CHECKBOX_SIZE = 'small' | 'medium';

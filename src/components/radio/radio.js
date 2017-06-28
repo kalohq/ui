@@ -6,7 +6,8 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import cx from 'classnames';
 import {Flex, Box, Inline} from '../layout';
 import Text from '../text';
-import {RADIO_SIZES, RADIO_SIZE} from './constants';
+import {RADIO_SIZES} from './constants';
+import type {RADIO_SIZE} from './constants';
 import styles from './radio.css';
 
 type RadioProps = {
@@ -14,7 +15,7 @@ type RadioProps = {
   readonly: boolean,
   size: RADIO_SIZE,
   label: string,
-  onClick: func,
+  onClick?: Function,
 };
 
 export function Radio(props: RadioProps) {

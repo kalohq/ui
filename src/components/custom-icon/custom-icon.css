@@ -1,0 +1,135 @@
+.root {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: initial;
+  background-size: contain;
+}
+
+.icon-drive {
+  background-image: url('./assets/drive.svg');
+}
+
+.icon-listed {
+  background-image: url('./assets/listed.svg');
+}
+
+.icon-product {
+  background-image: url('./assets/product.svg');
+}
+
+.icon-blog {
+  background-image: url('./assets/blog.svg');
+}
+
+.icon-careers {
+  background-image: url('./assets/careers.svg');
+}
+
+.icon-company {
+  background-image: url('./assets/company.svg');
+}
+
+.icon-company-group {
+  background-image: url('./assets/company-group.svg');
+}
+
+.icon-get-listed {
+  background-image: url('./assets/get-listed.svg');
+}
+
+.icon-happy-customers {
+  background-image: url('./assets/happy-customers.svg');
+}
+
+.icon-individual-1 {
+  background-image: url('./assets/individual-1.svg');
+}
+
+.icon-individual-2 {
+  background-image: url('./assets/individual-2.svg');
+}
+
+.icon-manage {
+  background-image: url('./assets/manage.svg');
+}
+
+.icon-manage-freelancers {
+  background-image: url('./assets/manage-freelancers.svg');
+}
+
+.icon-message {
+  background-image: url('./assets/message.svg');
+}
+
+.icon-onboarding {
+  background-image: url('./assets/onboarding.svg');
+}
+
+.icon-payment {
+  background-image: url('./assets/payment.svg');
+}
+
+.icon-philosophy {
+  background-image: url('./assets/philosophy.svg');
+}
+
+.icon-pricing {
+  background-image: url('./assets/pricing.svg');
+}
+
+.icon-problem {
+  background-image: url('./assets/problem.svg');
+}
+
+.icon-product {
+  background-image: url('./assets/product.svg');
+}
+
+.icon-bullseye {
+  background-image: url('./assets/bullseye.svg');
+}
+
+.icon-genie {
+  background-image: url('./assets/genie.svg');
+}
+
+.icon-genie-animated {
+  background-image: url('./assets/genie-animated.svg');
+}
+
+.icon-onboard-add {
+  background-image: url('./assets/onboard-add.svg');
+}
+
+.icon-onboard-invite {
+  background-image: url('./assets/onboard-invite.svg');
+}
+
+.icon-onboard-import {
+  background-image: url('./assets/onboard-import.svg');
+}
+
+.icon-onboard-linktolist {
+  background-image: url('./assets/onboard-linktolist.svg');
+}
+
+.icon-onboard-complete {
+  background-image: url('./assets/onboard-complete.svg');
+}
+
+.icon-email {
+  background-image: url('./assets/email.svg');
+}
+
+.icon-team {
+  background-image: url('./assets/team.svg');
+}
+
+.icon-invoice {
+  background-image: url('./assets/invoice.svg');
+}
+
+.icon-drag {
+  background-image: url('./assets/drag.svg');
+}
