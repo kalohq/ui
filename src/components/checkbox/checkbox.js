@@ -4,8 +4,8 @@ import cx from 'classnames';
 
 import {Flex, Box} from '../layout';
 import Text from '../text';
-import {CHECKBOX_SIZES} from './constants';
 import type {CHECKBOX_SIZE} from './constants';
+import {CHECKBOX_SIZES} from './constants';
 
 import styles from './checkbox.css';
 

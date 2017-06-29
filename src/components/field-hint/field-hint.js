@@ -9,11 +9,13 @@ import Icon from '../icon';
 
 import styles from './field-hint.css';
 
-export function FieldHint(props: {
+type fieldHintProps = {
   hint: string,
   icon: React$Element<*> | string,
-}) {
-  const {hint, icon = null, ...otherProps} = props;
+};
+
+export default function FieldHint(props: fieldHintProps) {
+  const {hint, icon, ...otherProps} = props;
 
   return (
     <Inline className={styles.root} {...pickStyles(otherProps)}>
@@ -38,5 +40,3 @@ export function FieldHint(props: {
     </Inline>
   );
 }
-
-export default FieldHint;
