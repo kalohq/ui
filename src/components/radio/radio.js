@@ -11,9 +11,9 @@ import type {RADIO_SIZE} from './constants';
 import styles from './radio.css';
 
 type RadioProps = {
-  checked: ?boolean,
-  readonly: boolean,
-  size: RADIO_SIZE,
+  checked?: ?boolean,
+  readonly?: boolean,
+  size?: RADIO_SIZE,
   label: string,
   onClick: Function,
 };
@@ -22,7 +22,7 @@ export function Radio(props: RadioProps) {
   const {
     checked = false,
     size = 'medium',
-    readonly = false,
+    readonly,
     label,
     onClick,
     ...otherProps
