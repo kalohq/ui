@@ -14,6 +14,7 @@ type RadioProps = {
   checked?: ?boolean,
   readonly?: boolean,
   size?: RADIO_SIZE,
+  disabled?: boolean,
   label: string,
   onClick: Function,
 };
@@ -22,6 +23,7 @@ export function Radio(props: RadioProps) {
   const {
     checked = false,
     size = 'medium',
+    disabled,
     readonly,
     label,
     onClick,
@@ -31,10 +33,11 @@ export function Radio(props: RadioProps) {
   return (
     <Flex
       alignItems="center"
-      justifyContent="center"
-      onClick={onClick}
+      justifyContent="start"
+      onClick={readonly || disabled ? null : onClick}
       className={cx({
         [styles.root]: true,
+        [styles.disabled]: disabled,
         [styles.readonly]: readonly,
       })}
     >

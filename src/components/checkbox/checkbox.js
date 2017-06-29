@@ -13,6 +13,7 @@ type CheckboxProps = {
   size: CHECKBOX_SIZE,
   checked: ?boolean,
   readonly: boolean,
+  disabled: boolean,
   label: string,
   onClick: Function,
 };
@@ -20,6 +21,7 @@ type CheckboxProps = {
 export default function Checkbox(props: CheckboxProps) {
   const {
     checked = false,
+    disabled = false,
     size = 'medium',
     readonly,
     label,
@@ -31,10 +33,11 @@ export default function Checkbox(props: CheckboxProps) {
     <Flex
       alignItems="center"
       justifyContent="flex-start"
-      onClick={onClick}
+      onClick={readonly || disabled ? null : onClick}
       className={cx({
         [styles.root]: true,
         [styles.readonly]: readonly,
+        [styles.disabled]: disabled,
       })}
     >
       <Box
@@ -48,7 +51,9 @@ export default function Checkbox(props: CheckboxProps) {
         {...otherProps}
       />
       {label
-        ? <Text marginLeft={10} size="small" color="grey">{label}</Text>
+        ? <Text marginLeft={10} size="small" color="grey">
+            {label}
+          </Text>
         : null}
     </Flex>
   );
