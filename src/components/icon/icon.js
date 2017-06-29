@@ -21,7 +21,7 @@ import {
 } from './constants';
 
 type iconProps = {
-  children?: React.Element<*>,
+  children?: React.Element<*> | string,
   size?: ICON_SIZE,
   color?: ICON_COLOR,
   family?: ICON_FAMILY,
@@ -55,7 +55,7 @@ export default function Icon(props: iconProps) {
           [styles[`color-${color}`]]: true,
           [styles.interactive]: !!onClick,
         },
-        className,
+        className
       )}
       onClick={onClick}
       style={style}

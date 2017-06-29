@@ -25,20 +25,20 @@ import {
 } from './constants';
 
 type textProps = {
-  weight: TEXT_WEIGHT,
-  size: TEXT_SIZE,
-  color: TEXT_COLOR,
-  hoverColor: TEXT_HOVER_COLOR,
-  margin: TEXT_MARGIN,
-  align: TEXT_ALIGN,
-  component: Function | string,
-  multiline: boolean,
+  weight?: TEXT_WEIGHT,
+  size?: TEXT_SIZE,
+  color?: TEXT_COLOR,
+  hoverColor?: TEXT_HOVER_COLOR,
+  margin?: TEXT_MARGIN,
+  align?: TEXT_ALIGN,
+  component?: Function | string,
+  multiline?: boolean,
   children: React.Element<*>,
-  className: string,
-  onClick: Function,
-  interactive: boolean,
-  noUnderline: boolean,
-  resetTransform: boolean,
+  className?: string,
+  onClick?: Function,
+  interactive?: boolean,
+  noUnderline?: boolean,
+  resetTransform?: boolean,
 };
 
 export default function Text(props: textProps) {
@@ -81,7 +81,7 @@ export default function Text(props: textProps) {
           [styles['not-interactive']]: interactive === false,
           [styles['no-underline']]: noUnderline,
         },
-        className,
+        className
       )}
       {...otherProps}
     >

@@ -22,7 +22,7 @@ export function FieldHint(props: {
           ? <Inline>
               {isString(icon)
                 ? <Icon
-                    size="12"
+                    size={12}
                     top={2}
                     marginRight={5}
                     position="relative"
