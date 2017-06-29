@@ -1,7 +1,9 @@
+/* @flow */
 import React from 'react';
 import PropTypes from 'prop-types';
 import PureComponent from 'react-pure-render/component';
 import cx from 'classnames';
+import Radio from '../radio';
 
 import styles from './loading-spinner.css';
 
@@ -30,6 +32,7 @@ export default class LoadingSpinner extends PureComponent {
           [styles[size]]: true,
         })}
       >
+        <Radio label={20} readonly="test" size="somethfing" onClick="test" />
         <svg
           width={`${SPINNER_DIMENSIONS[size]}px`}
           height={`${SPINNER_DIMENSIONS[size]}px`}
