@@ -2,13 +2,10 @@
 0.49.1
 
 [ignore]
-.*/__tests__
-.*/__stories__
 .*/node_modules/react\(-dom\)?/.*
 .*/node_modules/.*/src/.*
 .*/node_modules/jss/.*
 .*/node_modules/findup/.*
-
 
 [include]
 

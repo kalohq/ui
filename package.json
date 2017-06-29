@@ -91,8 +91,5 @@
   "babel": {
     "presets": ["es2015", "stage-2", "react"],
     "ignore": ["__stories__"]
-  },
-  "dependencies": {
-    "flow-bin": "^0.49.1"
   }
 }
