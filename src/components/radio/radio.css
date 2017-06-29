@@ -2,7 +2,8 @@
   cursor: pointer;
 }
 
-.readonly {
+.readonly,
+.disabled {
   cursor: default;
 }
 
@@ -15,12 +16,21 @@
   transition: all 200ms ease-in-out;
 }
 
-.root:hover .radio:not(.checked) {
+.root:hover:not(.disabled):not(.readonly) .radio:not(.checked) {
   border-color: var(--color-grey-slate);
 }
 
 .checked {
   border-color: var(--color-brand-blue);
+}
+
+.disabled .radio {
+  background-color: #fff;
+  border: 1px solid var(--color-grey-silver);
+}
+
+.disabled .icon {
+  background-color: var(--color-grey-silver);
 }
 
 .icon {
