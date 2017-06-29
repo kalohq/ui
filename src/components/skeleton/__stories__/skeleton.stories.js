@@ -29,14 +29,18 @@ function Page({children, ...styleProps}) {
     background: variables['--color-grey-snow'],
   };
 
-  return <Box style={style} {...styleProps}>{children}</Box>;
+  return (
+    <Box style={style} {...styleProps}>
+      {children}
+    </Box>
+  );
 }
 
 storiesOf('Skeleton', module)
   .addWithInfo(
     'Skeleton Card Index',
     'A complete skeleton layout with card grid',
-    () => (
+    () =>
       <Page width={PAGE_SIZE + 100}>
         <SkeletonPageHeader>
           <SkeletonPageHeaderHeading width={PAGE_SIZE}>
@@ -57,12 +61,11 @@ storiesOf('Skeleton', module)
           </SkeletonGrid>
         </SkeletonPage>
       </Page>
-    ),
   )
   .addWithInfo(
     'Skeleton List Index',
     'A complete skeleton layout with item list',
-    () => (
+    () =>
       <Page width={PAGE_SIZE + 100}>
         <SkeletonPageHeader>
           <SkeletonPageHeaderHeading width={PAGE_SIZE}>
@@ -83,12 +86,11 @@ storiesOf('Skeleton', module)
           </SkeletonList>
         </SkeletonPage>
       </Page>
-    ),
   )
   .addWithInfo(
     'Skeleton header tabs',
     'A skeleton header with tabs rather than seperated toolbar',
-    () => (
+    () =>
       <Page width={PAGE_SIZE + 100}>
         <SkeletonPageHeader>
           <SkeletonPageHeaderHeading width={PAGE_SIZE}>
@@ -103,12 +105,11 @@ storiesOf('Skeleton', module)
         </SkeletonPageHeader>
         <SkeletonPage width={PAGE_SIZE} />
       </Page>
-    ),
   )
   .addWithInfo(
     'Overridden card content',
     'Override the vertical content of cards by passing children',
-    () => (
+    () =>
       <Page width={380} padding={30}>
         <SkeletonCard>
           <SkeletonText size={14} />
@@ -119,12 +120,11 @@ storiesOf('Skeleton', module)
           <SkeletonButton size={18} />
         </SkeletonCard>
       </Page>
-    ),
   )
   .addWithInfo(
     'Overridden list item content',
     'Override the horizontal content of list item by passing children',
-    () => (
+    () =>
       <Page padding={30}>
         <SkeletonListItem>
           <SkeletonText size={14} />
@@ -135,12 +135,11 @@ storiesOf('Skeleton', module)
           <SkeletonButton size={18} />
         </SkeletonListItem>
       </Page>
-    ),
   )
   .addWithInfo(
     'Custom layouts',
     'Use lists and grids to represent structured pages',
-    () => (
+    () =>
       <Page padding={30}>
         <SkeletonGrid center={false}>
           <SkeletonList center={false}>
@@ -165,5 +164,4 @@ storiesOf('Skeleton', module)
           </SkeletonList>
         </SkeletonGrid>
       </Page>
-    ),
   );

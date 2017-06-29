@@ -31,7 +31,7 @@
   "rules": {
     "prettier/prettier": [2, {
       "singleQuote": true,
-      "trailingComma": "all",
+      "trailingComma": "es5",
       "bracketSpacing": false,
     }],
     "comma-dangle": [2, "always-multiline"],
@@ -73,6 +73,7 @@
     // incorrectly detects based on our usage
     "import/no-extraneous-dependencies": 0, // we define deps used during dev as devDep
     "react/jsx-filename-extension": 0, // more language extensions than just jsx...
+    "react/require-default-props": 0, // props are defined with flow
     "import/prefer-default-export": 0, // generally prefer collections of utils than many micro-modules
     "arrow-body-style": 0, // freeeedom
     "no-extra-boolean-cast": 0, // no issues with a bit of extra clarity!

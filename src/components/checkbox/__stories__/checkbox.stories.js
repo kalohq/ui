@@ -4,7 +4,8 @@ import {storiesOf} from '@storybook/react';
 import Checkbox from '../checkbox';
 
 const myClickFunction = () => {
-  window.alert('Hello from an onClick event');
+  //eslint-disable-next-line
+  window.alert("Hello from an onClick event");
 };
 
 storiesOf('Checkbox', module)
@@ -26,7 +27,7 @@ storiesOf('Checkbox', module)
           />
         </span>
       );
-    },
+    }
   )
   .addWithInfo(
     'readonly',
@@ -50,7 +51,7 @@ storiesOf('Checkbox', module)
           />
         </span>
       );
-    },
+    }
   )
   .addWithInfo(
     'disabled',
@@ -74,7 +75,7 @@ storiesOf('Checkbox', module)
           />
         </span>
       );
-    },
+    }
   )
   .addWithInfo(
     'sizing',
@@ -90,5 +91,5 @@ storiesOf('Checkbox', module)
           <Checkbox label="Freelancer invoices" size="large" checked={false} />
         </span>
       );
-    },
+    }
   );

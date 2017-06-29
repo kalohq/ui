@@ -5,7 +5,8 @@ import {storiesOf} from '@storybook/react';
 import Radio from 'components/radio';
 
 const myClickFunction = () => {
-  window.alert('Hello from an onClick event');
+  //eslint-disable-next-line
+  window.alert("Hello from an onClick event");
 };
 
 storiesOf('Radio', module)
