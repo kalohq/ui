@@ -1,5 +1,5 @@
 import React from 'react';
-import {storiesOf} from '@kadira/storybook';
+import {storiesOf} from '@storybook/react';
 
 import {Box} from '../../layout';
 import {variables} from '../../../../config/global_css_variables';
@@ -57,7 +57,7 @@ storiesOf('Skeleton', module)
           </SkeletonGrid>
         </SkeletonPage>
       </Page>
-    )
+    ),
   )
   .addWithInfo(
     'Skeleton List Index',
@@ -83,7 +83,7 @@ storiesOf('Skeleton', module)
           </SkeletonList>
         </SkeletonPage>
       </Page>
-    )
+    ),
   )
   .addWithInfo(
     'Skeleton header tabs',
@@ -103,7 +103,7 @@ storiesOf('Skeleton', module)
         </SkeletonPageHeader>
         <SkeletonPage width={PAGE_SIZE} />
       </Page>
-    )
+    ),
   )
   .addWithInfo(
     'Overridden card content',
@@ -119,7 +119,7 @@ storiesOf('Skeleton', module)
           <SkeletonButton size={18} />
         </SkeletonCard>
       </Page>
-    )
+    ),
   )
   .addWithInfo(
     'Overridden list item content',
@@ -135,7 +135,7 @@ storiesOf('Skeleton', module)
           <SkeletonButton size={18} />
         </SkeletonListItem>
       </Page>
-    )
+    ),
   )
   .addWithInfo(
     'Custom layouts',
@@ -165,5 +165,5 @@ storiesOf('Skeleton', module)
           </SkeletonList>
         </SkeletonGrid>
       </Page>
-    )
+    ),
   );
