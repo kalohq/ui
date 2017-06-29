@@ -12,9 +12,10 @@ import styles from './radio.css';
 type RadioProps = {
   checked: ?boolean,
   readonly: boolean,
+  disabled: boolean,
   size: RADIO_SIZE,
   label: string,
-  onClick: func,
+  onClick: Function,
 };
 
 export function Radio(props: RadioProps) {
@@ -22,6 +23,7 @@ export function Radio(props: RadioProps) {
     checked = false,
     size = 'medium',
     readonly = false,
+    disabled = false,
     label,
     onClick,
     ...otherProps
@@ -30,10 +32,11 @@ export function Radio(props: RadioProps) {
   return (
     <Flex
       alignItems="center"
-      justifyContent="center"
-      onClick={onClick}
+      justifyContent="start"
+      onClick={readonly || disabled ? null : onClick}
       className={cx({
         [styles.root]: true,
+        [styles.disabled]: disabled,
         [styles.readonly]: readonly,
       })}
     >
