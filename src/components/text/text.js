@@ -39,6 +39,8 @@ type textProps = {
   interactive?: boolean,
   noUnderline?: boolean,
   resetTransform?: boolean,
+  target?: string,
+  href?: string,
 };
 
 export default function Text(props: textProps) {
@@ -57,6 +59,8 @@ export default function Text(props: textProps) {
     align = DEFAULT_ALIGN,
     noUnderline = false,
     interactive = false,
+    target,
+    href,
     ...otherProps
   } = props;
 
@@ -83,6 +87,8 @@ export default function Text(props: textProps) {
         },
         className
       )}
+      target={target}
+      href={href}
       {...otherProps}
     >
       {children}
