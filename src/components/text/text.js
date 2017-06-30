@@ -3,6 +3,7 @@ import React from 'react';
 import cx from 'classnames';
 import {Inline} from '../layout';
 import {isString} from 'lodash';
+import {pickStyles} from 'utils/style';
 
 import styles from './text.css';
 
@@ -39,6 +40,7 @@ type textProps = {
   interactive?: boolean,
   noUnderline?: boolean,
   resetTransform?: boolean,
+  dangerouslySetInnerHTML?: Object,
   target?: string,
   href?: string,
 };
@@ -59,12 +61,16 @@ export default function Text(props: textProps) {
     align = DEFAULT_ALIGN,
     noUnderline = false,
     interactive = false,
+    dangerouslySetInnerHTML,
     target,
     href,
     ...otherProps
   } = props;
 
   const Component = isString(component) ? Inline : component;
+
+  const childrenProp =
+    children === undefined ? {dangerouslySetInnerHTML} : {children};
 
   return (
     <Component
@@ -89,9 +95,8 @@ export default function Text(props: textProps) {
       )}
       target={target}
       href={href}
-      {...otherProps}
-    >
-      {children}
-    </Component>
+      {...childrenProp}
+      {...pickStyles(otherProps)}
+    />
   );
 }
