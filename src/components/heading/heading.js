@@ -48,7 +48,7 @@ export default function Heading(props: headingProps) {
     hover = 'none',
     icon = false,
     iconAfter = false,
-    iconPadding = 30,
+    iconPadding = 10,
     ...otherProps
   } = props;
 

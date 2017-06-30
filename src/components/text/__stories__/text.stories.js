@@ -9,7 +9,9 @@ const examples = [
     description: 'A standard text node',
     render: () => {
       return (
-        <Text size="large" color="red" weight="semi-bold">Hello World</Text>
+        <Text size="large" color="red" weight="semi-bold">
+          Hello World
+        </Text>
       );
     },
   },
