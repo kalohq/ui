@@ -96,7 +96,7 @@
 }
 
 .color-dark-blue {
-  color: #4299C3;
+  color: var(--color-brand-blue-darker);
 }
 
 .color-dark-grey {
@@ -108,7 +108,7 @@
 }
 
 .color-teal {
-  color: #A9AFC3
+  color: #A9AFC3;
 }
 
 .color-light-grey {
@@ -121,10 +121,6 @@
     `defaultProps.defaultColor` in `components/supplier-approved-badge/
     supplier-approved-badge`.
   */
-}
-
-.color-white {
-  color: #fff;
 }
 
 .color-green {

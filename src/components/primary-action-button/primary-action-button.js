@@ -15,7 +15,9 @@ export function PrimaryActionButton(props: {icon?: string}) {
       name="Primary action button"
       {...otherProps}
     >
-      <Icon size="24">{icon}</Icon>
+      <Icon size={24}>
+        {icon}
+      </Icon>
     </Button>
   );
 }
