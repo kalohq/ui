@@ -5,7 +5,6 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  margin: 0;
   cursor: inherit;
   vertical-align: middle;
   line-height: 1.6em;
@@ -48,7 +47,7 @@
 }
 
 .size-extra-large {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .size-extra-extra-large {

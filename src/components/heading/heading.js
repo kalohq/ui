@@ -1,7 +1,6 @@
 /* @flow */
 import React from 'react';
 import cx from 'classnames';
-import {parseStyleProps} from 'utils/style';
 import Icon from '../icon';
 import Text from '../text';
 import {Block} from '../layout';
@@ -42,7 +41,7 @@ export default function Heading(props: headingProps) {
     number = 3,
     weight = 'normal',
     size = 'small',
-    color = 'dark-grey',
+    color = 'charcoal',
     icon = false,
     iconAfter = false,
     iconPadding = 10,
@@ -51,8 +50,6 @@ export default function Heading(props: headingProps) {
   } = props;
 
   const DOMElement = `h${number}`;
-  const propStyle = otherProps.style;
-  const {unstyledProps, style} = parseStyleProps(otherProps);
 
   return (
     <Text
@@ -61,14 +58,13 @@ export default function Heading(props: headingProps) {
       weight={weight}
       size={size}
       color={color}
-      style={{...style, ...propStyle}}
       className={cx(
         {
           [styles.root]: true,
         },
         className
       )}
-      {...unstyledProps}
+      {...otherProps}
     >
       {icon
         ? <Icon
