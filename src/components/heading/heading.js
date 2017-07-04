@@ -19,7 +19,6 @@ type headingProps = {
   size?: TEXT_SIZE,
   flex?: boolean,
   border?: boolean,
-  multiline?: boolean,
   hover?: HEADING_HOVER,
   icon?: string,
   iconAfter?: boolean,
