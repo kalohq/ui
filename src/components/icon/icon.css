@@ -63,7 +63,14 @@
   font-weight: 600;
 }
 
-/* Sizes */
+.interactive {
+  cursor: pointer;
+}
+
+
+/*
+ * Sizes
+ */
 .size-12 { font-size: 12px; height: 12px; }
 .size-14 { font-size: 14px; height: 14px; }
 .size-16 { font-size: 16px; height: 16px; }
@@ -75,7 +82,10 @@
 .size-36 { font-size: 36px; height: 36px; }
 .size-48 { font-size: 48px; height: 48px; }
 
-/* Themes */
+/*
+ * Themes
+ * - Requires deprecation
+ */
 .theme-light { color: #fff; }
 .theme-dark { color: #000; }
 .theme-positive { color: #7DD080; }
@@ -83,44 +93,36 @@
 .theme-pending { color: rgb(246, 140, 58); }
 .theme-blue { color: rgb(26, 158, 214); }
 
-.color-black {
+/*
+ * Colors
+ */
+
+.color-black,
+.color-dark-grey,
+.color-charcoal {
   color: var(--color-grey-charcoal);
 }
 
-.color-red {
-  color: var(--color-brand-red);
+.color-grey,
+.color-slate {
+  color: var(--color-grey-slate);
 }
 
-.color-blue {
-  color: var(--color-brand-blue);
-}
-
-.color-dark-blue {
-  color: var(--color-brand-blue-darker);
-}
-
-.color-dark-grey {
-  color: var(--color-grey-charcoal);
-}
-
-.color-grey {
+.color-silver {
   color: var(--color-grey-silver);
 }
 
-.color-teal {
-  color: #A9AFC3;
-}
-
+.color-platinum,
 .color-light-grey {
   color: var(--color-grey-platinum);
 }
 
-.color-white-smoke {
-  color: rgba(114, 140, 154, .21); /*
-    NOTE Until we have a DRY solution, let’s keep this in sync with
-    `defaultProps.defaultColor` in `components/supplier-approved-badge/
-    supplier-approved-badge`.
-  */
+.color-snow {
+  color: var(--color-grey-snow);
+}
+
+.color-white {
+  color: #fff;
 }
 
 .color-green {
@@ -131,12 +133,36 @@
   color: var(--color-brand-orange);
 }
 
-.color-white {
-  color: #fff;
+.color-purple {
+  color: var(--color-brand-purple);
+}
+
+.color-blue {
+  color: var(--color-brand-blue);
+}
+
+.color-red {
+  color: var(--color-brand-red);
+}
+
+.color-dark-green {
+  color: var(--color-brand-green-darker);
+}
+
+.color-dark-orange {
+  color: var(--color-brand-orange-darker);
+}
+
+.color-dark-purple {
+  color: var(--color-brand-purple-darker);
+}
+
+.color-dark-blue {
+  color: var(--color-brand-blue-darker);
+}
+
+.color-dark-red {
+  color: var(--color-brand-red-darker);
 }
 
 .color-none {}
-
-.interactive {
-  cursor: pointer;
-}
