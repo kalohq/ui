@@ -83,17 +83,6 @@
 .size-48 { font-size: 48px; height: 48px; }
 
 /*
- * Themes
- * - Requires deprecation
- */
-.theme-light { color: #fff; }
-.theme-dark { color: #000; }
-.theme-positive { color: #7DD080; }
-.theme-negative { color: #D56265; }
-.theme-pending { color: rgb(246, 140, 58); }
-.theme-blue { color: rgb(26, 158, 214); }
-
-/*
  * Colors
  */
 
