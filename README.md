@@ -51,6 +51,16 @@ A component directory should follow this pattern:
 | `__tests__/component-name.test.js` | Component tests |
 | `__stories__/component-name.stories.js` | Stories to display in React Storybook |
 
+## Testing changes with the frontend
+
+To test out changes that you've made in the UI repo within the frontend, follow these steps:
+1. Ensure you've compiled the UI library (`npm run dist`)
+2. In the UI repo, `npm link`
+3. CD in to the frontend, and run 'npm link @kalo/ui'
+4. Fire up the frontend
+
+Remember, that any changes you make in the UI library will need to be recompiled before they're picked up by the frontend repo.
+
 ## Publishing a new version
 
 To publish a new version:
