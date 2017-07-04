@@ -35,7 +35,7 @@ type textProps = {
   domElement?: Function | string,
   component?: Function | string,
   multiline?: boolean,
-  children: React.Element<*>,
+  children?: React.Element<*>,
   className?: string,
   onClick?: Function,
   interactive?: boolean,
