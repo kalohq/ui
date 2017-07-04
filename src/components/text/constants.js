@@ -21,6 +21,9 @@ export type TEXT_COLOR =
   | 'slate'
   | 'charcoal'
   | 'white'
+  | 'dark-grey' // deprecated
+  | 'light-grey' // deprecated
+  | 'grey' // deprecated
   | 'none';
 
 // Deprecated Colors:
