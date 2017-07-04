@@ -22,104 +22,104 @@ For color values, try not to deviate from the following list:
   </tr>
   <tr>
     <td rowspan="15">Brand Colors</td>
-    <td>**red**</td>
-    <td>`var(--color-brand-red)`</td>
+    <td><strong>red</strong></td>
+    <td><code>var(--color-brand-red)</code></td>
     <td>#ea5f6e</td>
   </tr>
   <tr>
     <td>dark-red</td>
-    <td>`var(--color-brand-red-darker)`</td>
+    <td><code>var(--color-brand-red-darker)</code></td>
     <td>#bf3e4c</td>
   </tr>
   <tr>
     <td>light-red</td>
-    <td>`var(--color-brand-red-lighter)`</td>
+    <td><code>var(--color-brand-red-lighter)</code></td>
     <td>#fbdfe2</td>
   </tr>
   <tr>
-    <td>**blue**</td>
-    <td>`var(--color-brand-blue)`</td>
+    <td><strong>blue</strong></td>
+    <td><code>var(--color-brand-blue)</code></td>
     <td>#029dd8</td>
   </tr>
   <tr>
     <td>dark-blue</td>
-    <td>`var(--color-brand-blue-darker)`</td>
+    <td><code>var(--color-brand-blue-darker)</code></td>
     <td>#0078a6</td>
   </tr>
   <tr>
     <td>light-blue</td>
-    <td>`var(--color-brand-blue-lighter)`</td>
+    <td><code>var(--color-brand-blue-lighter)</code></td>
     <td>#ccebf7</td>
   </tr>
   <tr>
-    <td>**orange**</td>
-    <td>`var(--color-brand-orange)`</td>
+    <td><strong>orange</strong></td>
+    <td><code>var(--color-brand-orange)</code></td>
     <td>#fdb81c</td>
   </tr>
   <tr>
     <td>dark-orange</td>
-    <td>`var(--color-brand-orange-darker)`</td>
+    <td><code>var(--color-brand-orange-darker)</code></td>
     <td>#da9c32</td>
   </tr>
   <tr>
     <td>light-orange</td>
-    <td>`var(--color-brand-orange-lighter)`</td>
+    <td><code>var(--color-brand-orange-lighter)</code></td>
     <td>#fff1d2</td>
   </tr>
   <tr>
-    <td>**green**</td>
-    <td>`var(--color-brand-green)`</td>
+    <td><strong>green</strong></td>
+    <td><code>var(--color-brand-green)</code></td>
     <td>#3eb38a</td>
   </tr>
   <tr>
     <td>dark-green</td>
-    <td>`var(--color-brand-green-darker)`</td>
+    <td><code>var(--color-brand-green-darker)</code></td>
     <td>#298665</td>
   </tr>
   <tr>
     <td>light-green</td>
-    <td>`var(--color-brand-green-lighter)`</td>
+    <td><code>var(--color-brand-green-lighter)</code></td>
     <td>#d8f0e8</td>
   </tr>
   <tr>
-    <td>**purple**</td>
-    <td>`var(--color-brand-purple)`</td>
+    <td><strong>purple</strong></td>
+    <td><code>var(--color-brand-purple)</code></td>
     <td>#8a70bd</td>
   </tr>
   <tr>
     <td>dark-purple</td>
-    <td>`var(--color-brand--purple-darker)`</td>
+    <td><code>var(--color-brand--purple-darker)</code></td>
     <td>#604e83</td>
   </tr>
   <tr>
     <td>light-purple</td>
-    <td>`var(--color-brand--purple-lighter)`</td>
+    <td><code>var(--color-brand--purple-lighter)</code></td>
     <td>#e8e2f2</td>
   </tr>
   <tr>
     <td rowspan="5">Neutral Colors</td>
     <td>snow</td>
-    <td>`var(--color-grey-snow)`</td>
+    <td><code>var(--color-grey-snow)</code></td>
     <td>#f9fafc</td>
   </tr>
   <tr>
     <td>platinum</td>
-    <td>`var(--color-grey-platinum)`</td>
+    <td><code>var(--color-grey-platinum)</code></td>
     <td>#eceff1</td>
   </tr>
   <tr>
     <td>silver</td>
-    <td>`var(--color-grey-silver)`</td>
+    <td><code>var(--color-grey-silver)</code></td>
     <td>#b0bec5</td>
   </tr>
   <tr>
     <td>slate</td>
-    <td>`var(--color-grey-slate)`</td>
+    <td><code>var(--color-grey-slate)</code></td>
     <td>#547b89</td>
   </tr>
   <tr>
     <td>charcoal</td>
-    <td>`var(--color-grey-charcoal)`</td>
+    <td><code>var(--color-grey-charcoal)</code></td>
     <td>#234957</td>
   </tr>
 </table>
