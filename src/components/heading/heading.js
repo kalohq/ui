@@ -7,28 +7,19 @@ import {Block} from '../layout';
 
 import styles from './heading.css';
 
-import type {
-  HEADING_NUMBER,
-  HEADING_WEIGHT,
-  HEADING_SIZE,
-  HEADING_MARGIN,
-  HEADING_COLOR,
-  HEADING_ALIGN,
-  HEADING_HOVER,
-} from './constants';
+import type {HEADING_NUMBER, HEADING_HOVER} from './constants';
+
+import type {TEXT_COLOR, TEXT_SIZE} from '../text/constants';
 
 type headingProps = {
   children: React$Element<*>,
   className?: string,
   number: HEADING_NUMBER,
-  weight?: HEADING_WEIGHT,
-  size?: HEADING_SIZE,
-  margin?: HEADING_MARGIN,
-  color?: HEADING_COLOR,
+  color?: TEXT_COLOR,
+  size?: TEXT_SIZE,
   flex?: boolean,
   border?: boolean,
   multiline?: boolean,
-  align?: HEADING_ALIGN,
   hover?: HEADING_HOVER,
   icon?: string,
   iconAfter?: boolean,
@@ -39,11 +30,11 @@ export default function Heading(props: headingProps) {
   const {
     children,
     number = 3,
-    weight = 'normal',
-    size = 'small',
     color = 'charcoal',
     icon = false,
+    size = 'small',
     iconAfter = false,
+    hover = false,
     iconPadding = 10,
     className,
     ...otherProps
@@ -55,8 +46,8 @@ export default function Heading(props: headingProps) {
     <Text
       component={Block}
       domElement={DOMElement}
-      weight={weight}
       size={size}
+      interactive={hover === 'interactive'}
       color={color}
       className={cx(
         {
@@ -79,7 +70,7 @@ export default function Heading(props: headingProps) {
       {iconAfter
         ? <Icon
             size={size === 'extra-large' ? 24 : 14}
-            color="grey"
+            color={color}
             paddingLeft={iconPadding}
           >
             {iconAfter}

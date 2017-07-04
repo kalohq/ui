@@ -10,7 +10,7 @@ storiesOf('Typography', module)
   })
   .addWithInfo('h3 with icon', 'A heading with a left aligned icon', () => {
     return (
-      <H3 icon="lock" color="dark-grey" iconPadding={10}>
+      <H3 icon="lock" color="charcoal" iconPadding={10}>
         Project Documents & Notes
       </H3>
     );

@@ -34,3 +34,11 @@
 .border.margin-large {
   padding-bottom: 30px;
 }
+
+.hover-underline:hover {
+  text-decoration: underline;
+}
+
+.hover-none {
+
+}
