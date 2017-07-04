@@ -2,7 +2,6 @@
 import React from 'react';
 import cx from 'classnames';
 import {Inline} from '../layout';
-import {isString} from 'lodash';
 import {pickStyles} from 'utils/style';
 
 import styles from './text.css';
@@ -32,7 +31,7 @@ type textProps = {
   hoverColor?: TEXT_HOVER_COLOR,
   margin?: TEXT_MARGIN,
   align?: TEXT_ALIGN,
-  component?: Function | string,
+  domElement?: Function | string,
   multiline?: boolean,
   children: React.Element<*>,
   className?: string,
@@ -55,7 +54,7 @@ export default function Text(props: textProps) {
     color = DEFAULT_COLOR,
     hoverColor = DEFAULT_HOVER_COLOR,
     margin = DEFAULT_MARGIN,
-    component = Inline,
+    domElement = false,
     multiline = false,
     resetTransform = false,
     align = DEFAULT_ALIGN,
@@ -67,14 +66,13 @@ export default function Text(props: textProps) {
     ...otherProps
   } = props;
 
-  const Component = isString(component) ? Inline : component;
+  const DOMElement = domElement ? domElement : Inline;
 
   const childrenProp =
     children === undefined ? {dangerouslySetInnerHTML} : {children};
 
   return (
-    <Component
-      component={component}
+    <DOMElement
       onClick={onClick}
       className={cx(
         {

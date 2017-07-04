@@ -1,13 +1,7 @@
 /* Heading */
 
 .root {
-  font-family: 'WebFaktSoftPro', sans-serif;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
   line-height: 1.25em;
-  align-items: center;
-  vertical-align: middle;
 }
 
 .root strong {

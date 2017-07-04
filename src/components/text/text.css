@@ -79,22 +79,6 @@
   color: var(--color-brand-blue);
 }
 
-.color-dark-blue {
-  color: var(--color-brand-blue-darker);
-}
-
-.color-dark-grey {
-  color: var(--color-grey-charcoal);
-}
-
-.color-grey {
-  color: var(--color-grey-slate);
-}
-
-.color-light-grey {
-  color: var(--color-grey-silver);
-}
-
 .color-white {
   color: #fff;
 }
@@ -115,9 +99,7 @@
   color: var(--color-grey-charcoal);
 }
 
-
 .color-none {
-
 }
 
 .hover-color-black:hover {

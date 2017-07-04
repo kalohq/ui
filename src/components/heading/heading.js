@@ -3,6 +3,8 @@ import React from 'react';
 import cx from 'classnames';
 import {parseStyleProps} from 'utils/style';
 import Icon from '../icon';
+import Text from '../text';
+import {Block} from '../layout';
 
 import styles from './heading.css';
 
@@ -18,6 +20,7 @@ import type {
 
 type headingProps = {
   children: React$Element<*>,
+  className?: string,
   number: HEADING_NUMBER,
   weight?: HEADING_WEIGHT,
   size?: HEADING_SIZE,
@@ -39,16 +42,11 @@ export default function Heading(props: headingProps) {
     number = 3,
     weight = 'normal',
     size = 'small',
-    margin = 'none',
     color = 'dark-grey',
-    flex = false,
-    border = false,
-    multiline = false,
-    align = 'none',
-    hover = 'none',
     icon = false,
     iconAfter = false,
     iconPadding = 10,
+    className,
     ...otherProps
   } = props;
 
@@ -57,20 +55,19 @@ export default function Heading(props: headingProps) {
   const {unstyledProps, style} = parseStyleProps(otherProps);
 
   return (
-    <DOMElement
-      className={cx({
-        [styles.root]: true,
-        [styles[`weight-${weight}`]]: true,
-        [styles[`size-${size}`]]: true,
-        [styles[`color-${color}`]]: true,
-        [styles[`margin-${margin}`]]: true,
-        [styles[`align-${align}`]]: true,
-        [styles[`hover-${hover}`]]: true,
-        [styles.multiline]: multiline,
-        [styles.flex]: flex,
-        [styles.border]: border,
-      })}
+    <Text
+      component={Block}
+      domElement={DOMElement}
+      weight={weight}
+      size={size}
+      color={color}
       style={{...style, ...propStyle}}
+      className={cx(
+        {
+          [styles.root]: true,
+        },
+        className
+      )}
       {...unstyledProps}
     >
       {icon
@@ -92,6 +89,6 @@ export default function Heading(props: headingProps) {
             {iconAfter}
           </Icon>
         : null}
-    </DOMElement>
+    </Text>
   );
 }
