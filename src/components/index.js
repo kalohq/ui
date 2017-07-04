@@ -11,3 +11,5 @@ export {default as Icon} from './icon';
 export {default as LoadingSpinner} from './loading-spinner';
 export * from './skeleton';
 export {default as Radio} from './radio';
+
+export {Box, Flex, Block, Inline, InlineBlock, InlineFlex, A} from './layout';
