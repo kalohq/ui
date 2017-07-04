@@ -5,7 +5,6 @@ import cx from 'classnames';
 
 /** Make a new primitive layout component */
 function makePrimitive(name, DefaultComponent, display, defaultStyle) {
-
   class Primitive extends PureComponent {
     render() {
       const {
@@ -16,10 +15,11 @@ function makePrimitive(name, DefaultComponent, display, defaultStyle) {
         ...otherProps
       } = this.props;
 
-      const {
-        props,
-        style,
-      } = parseStyleProps({display, ...defaultStyle, ...otherProps});
+      const {props, style} = parseStyleProps({
+        display,
+        ...defaultStyle,
+        ...otherProps,
+      });
 
       return (
         <Component
