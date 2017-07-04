@@ -84,12 +84,12 @@
   color: var(--color-grey-slate);
 }
 
-.color-silver {
+.color-silver,
+.color-light-grey {
   color: var(--color-grey-silver);
 }
 
-.color-platinum,
-.color-light-grey {
+.color-platinum {
   color: var(--color-grey-platinum);
 }
 
@@ -135,15 +135,18 @@
   color: var(--color-grey-platinum);
 }
 
-.hover-color-silver:hover {
+.hover-color-silver:hover,
+.hover-color-light-grey:hover {
   color: var(--color-grey-silver);
 }
 
-.hover-color-slate:hover {
+.hover-color-slate:hover,
+.hover-color-grey:hover {
   color: var(--color-grey-slate);
 }
 
-.hover-color-charcoal:hover {
+.hover-color-charcoal:hover,
+.hover-color-dark-grey:hover {
   color: var(--color-grey-charcoal);
 }
 
