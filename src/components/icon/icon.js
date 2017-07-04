@@ -2,6 +2,7 @@
 import React from 'react';
 import cx from 'classnames';
 import {parseStyleProps} from 'utils/style';
+import {isString} from 'lodash';
 
 import styles from './icon.css';
 
@@ -61,7 +62,9 @@ export default function Icon(props: iconProps) {
       style={style}
       {...unstyledProps}
     >
-      {family === 'fontello' ? FONTELLO_ICONS[children] || children : children}
+      {family === 'fontello' && isString(children)
+        ? FONTELLO_ICONS[children] || children
+        : children}
     </i>
   );
 }

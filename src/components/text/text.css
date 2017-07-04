@@ -5,10 +5,12 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  margin: 0;
   cursor: inherit;
   vertical-align: middle;
-  line-height: 1.6em;
+}
+
+.root strong {
+  font-weight: 500;
 }
 
 .resetTransform {
@@ -44,7 +46,7 @@
 }
 
 .size-extra-large {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .size-extra-extra-large {
@@ -71,28 +73,28 @@
   margin-bottom: 30px;
 }
 
-.color-red {
-  color: var(--color-brand-red);
-}
-
-.color-blue {
-  color: var(--color-brand-blue);
-}
-
-.color-dark-blue {
-  color: var(--color-brand-blue-darker);
-}
-
-.color-dark-grey {
+.color-black,
+.color-dark-grey,
+.color-charcoal {
   color: var(--color-grey-charcoal);
 }
 
-.color-grey {
+.color-grey,
+.color-slate {
   color: var(--color-grey-slate);
 }
 
+.color-silver,
 .color-light-grey {
   color: var(--color-grey-silver);
+}
+
+.color-platinum {
+  color: var(--color-grey-platinum);
+}
+
+.color-snow {
+  color: var(--color-grey-snow);
 }
 
 .color-white {
@@ -107,20 +109,44 @@
   color: var(--color-brand-orange);
 }
 
+.color-red {
+  color: var(--color-brand-red);
+}
+
+.color-blue {
+  color: var(--color-brand-blue);
+}
+
 .color-purple {
   color: var(--color-brand-purple);
 }
 
-.color-navy {
-  color: var(--color-grey-charcoal);
+.color-none {}
+
+.hover-color-white:hover {
+  color: #fff;
 }
 
-
-.color-none {
-
+.hover-color-snow:hover {
+  color: var(--color-grey-snow);
 }
 
-.hover-color-black:hover {
+.hover-color-platinum:hover {
+  color: var(--color-grey-platinum);
+}
+
+.hover-color-silver:hover,
+.hover-color-light-grey:hover {
+  color: var(--color-grey-silver);
+}
+
+.hover-color-slate:hover,
+.hover-color-grey:hover {
+  color: var(--color-grey-slate);
+}
+
+.hover-color-charcoal:hover,
+.hover-color-dark-grey:hover {
   color: var(--color-grey-charcoal);
 }
 
@@ -136,22 +162,6 @@
   color: var(--color-brand-blue-darker);
 }
 
-.hover-color-dark-grey:hover {
-  color: var(--color-grey-charcoal);
-}
-
-.hover-color-grey:hover {
-  color: var(--color-grey-silver);
-}
-
-.hover-color-light-grey:hover {
-  color: var(--color-grey-platinum);
-}
-
-.hover-color-white:hover {
-  color: #fff;
-}
-
 .hover-color-green:hover {
   color: var(--color-brand-green);
 }
@@ -160,12 +170,7 @@
   color: var(--color-brand-orange);
 }
 
-.hover-color-navy:hover {
-  color: var(--color-grey-charcoal);
-}
-
 .hover-color-none:hover {
-
 }
 
 .multiline {

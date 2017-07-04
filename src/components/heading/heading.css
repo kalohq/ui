@@ -1,13 +1,7 @@
 /* Heading */
 
 .root {
-  font-family: 'WebFaktSoftPro', sans-serif;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
   line-height: 1.25em;
-  align-items: center;
-  vertical-align: middle;
 }
 
 .root strong {
@@ -29,83 +23,6 @@
   border-bottom: 1px solid var(--color-grey-platinum);
 }
 
-.weight-normal {
-  font-weight: 400;
-}
-
-.weight-semi-bold {
-  font-weight: 500;
-}
-
-.size-extra-extra-small {
-  font-size: 10px;
-}
-
-.size-extra-small {
-  font-size: 12px;
-}
-
-.size-small {
-  font-size: 14px;
-}
-
-.size-medium {
-  font-size: 16px;
-}
-
-.size-large {
-  font-size: 18px;
-}
-
-.size-extra-large {
-  font-size: 24px;
-}
-
-.color-red {
-  color: var(--color-brand-red);
-}
-
-.color-blue  {
-  color: var(--color-brand-blue);
-}
-
-.color-dark-grey {
-  color: var(--color-grey-charcoal);
-}
-
-.color-light-grey{
-  color: var(--color-grey-silver);
-}
-
-.color-grey {
-  color: var(--color-grey-slate);
-}
-
-.color-white {
-  color: #fff;
-}
-
-.margin-none {
-  margin-bottom: 0;
-}
-
-.margin-tiny,
-.margin-extra-small {
-  margin-bottom: 2px;
-}
-
-.margin-small {
-  margin-bottom: 10px;
-}
-
-.margin-medium {
-  margin-bottom: 20px;
-}
-
-.margin-large {
-  margin-bottom: 30px;
-}
-
 .border.margin-small {
   padding-bottom: 10px;
 }
@@ -116,31 +33,6 @@
 
 .border.margin-large {
   padding-bottom: 30px;
-}
-
-.multiline {
-  white-space: normal;
-  text-overflow: initial;
-  white-space: pre-wrap;
-  word-break: break-word;
-  overflow: visible;
-  line-height: 1.5em;
-}
-
-.align-center {
-  text-align: center;
-}
-
-.align-left {
-  text-align: left;
-}
-
-.align-right {
-  text-align: right;
-}
-
-.align-none {
-
 }
 
 .hover-underline:hover {
