@@ -17,6 +17,7 @@ type RadioProps = {
   disabled?: boolean,
   label: string,
   onClick: Function,
+  name?: string,
 };
 
 export function Radio(props: RadioProps) {
@@ -27,6 +28,7 @@ export function Radio(props: RadioProps) {
     readonly,
     label,
     onClick,
+    name,
     ...otherProps
   } = props;
 
@@ -35,6 +37,7 @@ export function Radio(props: RadioProps) {
       alignItems="center"
       justifyContent="start"
       onClick={readonly || disabled ? null : onClick}
+      name={name}
       className={cx({
         [styles.root]: true,
         [styles.disabled]: disabled,

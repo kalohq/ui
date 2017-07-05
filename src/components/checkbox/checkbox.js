@@ -16,6 +16,7 @@ type CheckboxProps = {
   disabled: boolean,
   label: string,
   onClick: Function,
+  name?: string,
 };
 
 export default function Checkbox(props: CheckboxProps) {
@@ -26,6 +27,7 @@ export default function Checkbox(props: CheckboxProps) {
     readonly,
     label,
     onClick,
+    name,
     ...otherProps
   } = props;
 
@@ -34,6 +36,7 @@ export default function Checkbox(props: CheckboxProps) {
       alignItems="center"
       justifyContent="flex-start"
       onClick={readonly || disabled ? null : onClick}
+      name={name}
       className={cx({
         [styles.root]: true,
         [styles.readonly]: readonly,
