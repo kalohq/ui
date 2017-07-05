@@ -44,6 +44,7 @@ type textProps = {
   dangerouslySetInnerHTML?: Object,
   target?: string,
   href?: string,
+  name?: string,
 };
 
 export default function Text(props: textProps) {
@@ -66,6 +67,7 @@ export default function Text(props: textProps) {
     dangerouslySetInnerHTML,
     target,
     href,
+    name,
     ...otherProps
   } = props;
 
@@ -95,6 +97,7 @@ export default function Text(props: textProps) {
         },
         className
       )}
+      name={name}
       target={target}
       href={href}
       {...childrenProp}
