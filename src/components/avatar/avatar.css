@@ -24,6 +24,11 @@
   text-transform: uppercase;
 }
 
+.editable {
+  cursor: pointer;
+  position: relative;
+}
+
 .avatar {
   width: 100%;
   border-radius: 50%;
@@ -50,46 +55,37 @@
   justify-content: center;
 }
 
-
-.default {
-
-}
-
-.thin {
-  border: 1px solid #e8e8e8;
-}
-
 /**
-* Sizing
+  * Sizing
 ***/
 
 .small {
-  width: 25px;
-  height: 25px;
+  width: var(--small);
+  height: var(--small);
   font-size: 10px;
 }
 
 .medium {
-  width: 36px;
-  height: 36px;
+  width: var(--medium);
+  height: var(--medium);
   font-size: 12px;
 }
 
 .large {
-  width: 60px;
-  height: 60px;
+  width: var(--large);
+  height: var(--large);
   font-size: 18px;
 }
 
 .extra-large {
-  width: 90px;
-  height: 90px;
+  width: var(--extra-large);
+  height: var(--extra-large);
   font-size: 20px;
 }
 
 .extra-extra-large {
-  width: 200px;
-  height: 200px;
+  width: var(--extra-extra-large);
+  height: var(--extra-extra-large);
 }
 
 
@@ -120,46 +116,6 @@
 .grey {
   background-color: var(--color-brand-grey-lighter);
   color: var(--color-brand-grey);
-}
-
-
-.pencilIcon {
-  color: var(--color-grey-silver);
-  transform: scaleX(-1);
-}
-
-.image {
-  display: block;
-  overflow: hidden;
-  border-radius: 50%;
-  background: #fff;
-  transition: opacity 0.3s linear;
-  opacity: 1;
-  background-position: center;
-  background-size: cover;
-}
-
-.uploading .image {
-  opacity: 0;
-}
-
-.uploaded .image {
-  opacity: 0;
-}
-
-.editable .image {
-  background-color: var(--color-grey-snow);
-}
-
-.editable {
-  cursor: pointer;
-  position: relative;
-}
-
-.placeholder {
-  text-align: center;
-  position: relative;
-  top: 30px;
 }
 
 .badge {
