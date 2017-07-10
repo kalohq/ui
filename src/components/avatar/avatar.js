@@ -63,10 +63,10 @@ export function AvatarImage(props: {src: ?string}) {
 export function AvatarBadge(props: {
   icon: ?string,
   title: ?string,
-  size?: 24,
+  size?: 24 | 30,
   className?: string,
 }) {
-  const {icon, size, title, className} = props;
+  const {icon, title, size, className} = props;
 
   const Component = icon === 'listed' ? CustomIcon : Icon;
 
