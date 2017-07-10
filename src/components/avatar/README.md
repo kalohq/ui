@@ -3,6 +3,8 @@
 This component displays a visual representation of a user, either an image or their initials. This component is purely functional. It is used in conjunction with a similar component in the frontend repo, which implements the Gravatar/Resource fetching logic.
 
 ## Best practices
+- Only display a 'listed' badge if it's contextually relevant.
+- Only pass in a name as the record. The initial are generated from this. For example, passing in the email '92kool@test.com', would result in an initial of `9`.
 
 # Props
 
