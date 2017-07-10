@@ -19,12 +19,12 @@ import type {CUSTOM_ICONS, CUSTOM_ICON_SIZES} from './constants';
 
 type customIconProps = {
   children: CUSTOM_ICONS,
-  size: CUSTOM_ICON_SIZES,
-  className: string,
+  size?: CUSTOM_ICON_SIZES,
+  className?: string,
 };
 
 export default function CustomIcon(props: customIconProps) {
-  const {size = 24, children = false, className = '', ...otherProps} = props;
+  const {size = 24, children, className, ...otherProps} = props;
 
   return (
     <Inline
