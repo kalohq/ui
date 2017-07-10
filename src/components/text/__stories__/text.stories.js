@@ -15,6 +15,23 @@ const examples = [
       );
     },
   },
+  {
+    title: 'as a link',
+    description: 'The component can be overwridden to create a link',
+    render: () => {
+      return (
+        <Text
+          component="a"
+          href="https://kalohq.com"
+          size="large"
+          color="light-red"
+          weight="semi-bold"
+        >
+          Hello World
+        </Text>
+      );
+    },
+  },
 ];
 
 examples.forEach(example => {

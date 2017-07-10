@@ -3,7 +3,6 @@ import React from 'react';
 import cx from 'classnames';
 import Icon from '../icon';
 import Text from '../text';
-import {Block} from '../layout';
 
 import styles from './heading.css';
 
@@ -43,8 +42,7 @@ export default function Heading(props: headingProps) {
 
   return (
     <Text
-      component={Block}
-      domElement={DOMElement}
+      component={DOMElement}
       size={size}
       interactive={hover === 'interactive'}
       color={color}

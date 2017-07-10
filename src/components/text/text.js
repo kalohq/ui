@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 import cx from 'classnames';
-import {Inline} from '../layout';
+import {Inline, Block} from '../layout';
 import {pickStyles} from 'utils/style';
 import {isString} from 'lodash';
 
@@ -57,7 +57,6 @@ export default function Text(props: textProps) {
     color = DEFAULT_COLOR,
     hoverColor = DEFAULT_HOVER_COLOR,
     margin = DEFAULT_MARGIN,
-    domElement = 'span',
     component = Inline,
     multiline = false,
     resetTransform = false,
@@ -71,14 +70,16 @@ export default function Text(props: textProps) {
     ...otherProps
   } = props;
 
-  const Component = isString(component) ? Inline : component;
+  const Component = isString(component)
+    ? ['h1', 'h2', 'h3', 'h4'].indexOf(component) > -1 ? Block : Inline
+    : component;
 
   const childrenProp =
     children === undefined ? {dangerouslySetInnerHTML} : {children};
 
   return (
     <Component
-      component={domElement}
+      component={component}
       onClick={onClick}
       className={cx(
         {
