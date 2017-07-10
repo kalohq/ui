@@ -117,7 +117,7 @@ export default function Avatar(props: avatarProps) {
         ? <AvatarBadge
             title="Edit avatar"
             icon="edit"
-            size={size === 'small' || size === 'medium' ? 24 : 24}
+            size={size === 'small' || size === 'medium' ? 24 : 30}
             className={styles.addLogoButton}
           />
         : null}
@@ -130,7 +130,7 @@ export default function Avatar(props: avatarProps) {
                 : badgeTitle
             }
             icon={confirmed ? 'listed' : badge}
-            size={size === 'small' || size === 'medium' ? 24 : 24}
+            size={size === 'small' || size === 'medium' ? 24 : 30}
             className={styles.listed}
           />
         : null}
