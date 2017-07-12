@@ -9,7 +9,7 @@ const examples = [
     description: 'A standard text node',
     render: () => {
       return (
-        <Text size="large" color="light-red" weight="semi-bold">
+        <Text size="large" color="blue" weight="semi-bold">
           Hello World
         </Text>
       );
@@ -29,6 +29,19 @@ const examples = [
         >
           Hello World
         </Text>
+      );
+    },
+  },
+  {
+    title: 'with interactivity',
+    description: 'A standard text node',
+    render: () => {
+      return (
+        <a href="#">
+          <Text size="large" color="red" weight="semi-bold">
+            An interactive text node
+          </Text>
+        </a>
       );
     },
   },

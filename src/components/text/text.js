@@ -62,7 +62,7 @@ export default function Text(props: textProps) {
     resetTransform = false,
     align = DEFAULT_ALIGN,
     noUnderline = false,
-    interactive = false,
+    interactive,
     dangerouslySetInnerHTML,
     target,
     href,
