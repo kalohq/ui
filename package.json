@@ -88,6 +88,18 @@
     "style-loader": "^0.16.1",
     "webpack": "^2.5.1"
   },
+  "peerDependencies": {
+    "qs": "^6.4.0",
+    "react": "^15.5.4",
+    "classnames": "^2.2.5",
+    "lodash": "^4.17.4",
+    "prop-types": "^15.5.8",
+    "react-addons-css-transition-group": "^15.5.2",
+    "react-dom": "^15.5.4",
+    "react-hotkeys": "^0.9.0",
+    "react-intl": "^2.2.3",
+    "react-pure-render": "^1.0.2"
+  },
   "babel": {
     "presets": ["es2015", "stage-2", "react"],
     "ignore": ["__stories__"]
