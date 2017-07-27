@@ -1,7 +1,7 @@
 /* Heading */
 
 .root {
-  line-height: 1.25em;
+  line-height: 1.25em !important;
 }
 
 .root strong {
