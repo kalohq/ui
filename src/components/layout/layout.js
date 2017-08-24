@@ -11,6 +11,7 @@ function makePrimitive(name, DefaultComponent, display, defaultStyle) {
         component: Component = DefaultComponent,
         elRef,
         style: propStyle,
+        name: propName,
         className,
         ...otherProps
       } = this.props;
@@ -25,6 +26,7 @@ function makePrimitive(name, DefaultComponent, display, defaultStyle) {
         <Component
           ref={elRef}
           className={cx(className)}
+          name={propName}
           {...props}
           style={{...style, ...propStyle}}
         />
