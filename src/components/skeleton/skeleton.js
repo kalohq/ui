@@ -107,7 +107,11 @@ export function SkeletonCard({children}) {
       <SpacerBox vertical={true}>
         {children
           ? children
-          : [<SkeletonAvatar />, <SkeletonText />, <SkeletonText size={14} />]}
+          : [
+              <SkeletonAvatar key="avatar" />,
+              <SkeletonText key="text" />,
+              <SkeletonText key="text-2" size={14} />,
+            ]}
       </SpacerBox>
     </Box>
   );
@@ -141,7 +145,12 @@ export function SkeletonGrid({children, center}) {
 /** Vertical list layout skeleton component */
 export function SkeletonList({children, center}) {
   return (
-    <SpacerBox vertical={true} spacing={10} alignItems="stretch" center={center}>
+    <SpacerBox
+      vertical={true}
+      spacing={10}
+      alignItems="stretch"
+      center={center}
+    >
       {children}
     </SpacerBox>
   );
