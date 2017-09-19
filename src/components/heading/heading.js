@@ -54,25 +54,25 @@ export default function Heading(props: Props) {
       )}
       {...otherProps}
     >
-      {icon
-        ? <Icon
-            size={size === 'extra-large' ? 24 : 14}
-            color={color}
-            paddingRight={iconPadding}
-          >
-            {icon}
-          </Icon>
-        : null}
+      {icon ? (
+        <Icon
+          size={size === 'extra-large' ? 24 : 14}
+          color={color}
+          paddingRight={iconPadding}
+        >
+          {icon}
+        </Icon>
+      ) : null}
       {children}
-      {iconAfter
-        ? <Icon
-            size={size === 'extra-large' ? 24 : 14}
-            color={color}
-            paddingLeft={iconPadding}
-          >
-            {iconAfter}
-          </Icon>
-        : null}
+      {iconAfter ? (
+        <Icon
+          size={size === 'extra-large' ? 24 : 14}
+          color={color}
+          paddingLeft={iconPadding}
+        >
+          {iconAfter}
+        </Icon>
+      ) : null}
     </Text>
   );
 }

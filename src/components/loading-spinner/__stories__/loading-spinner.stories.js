@@ -5,7 +5,7 @@ import LoadingSpinner from 'components/loading-spinner';
 
 storiesOf(
   'LoadingSpinner',
-  module,
+  module
 ).addWithInfo('Loading Spinner', 'A standard loading spinner', () => {
   return <LoadingSpinner />;
 });

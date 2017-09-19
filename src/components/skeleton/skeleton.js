@@ -105,13 +105,15 @@ export function SkeletonCard({children}) {
       paddingBottom={150}
     >
       <SpacerBox vertical={true}>
-        {children
-          ? children
-          : [
-              <SkeletonAvatar key="avatar" />,
-              <SkeletonText key="text" />,
-              <SkeletonText key="text-2" size={14} />,
-            ]}
+        {children ? (
+          children
+        ) : (
+          [
+            <SkeletonAvatar key="avatar" />,
+            <SkeletonText key="text" />,
+            <SkeletonText key="text-2" size={14} />,
+          ]
+        )}
       </SpacerBox>
     </Box>
   );
@@ -127,7 +129,11 @@ export function SkeletonListItem({children}) {
       padding={25}
     >
       <SpacerBox>
-        {children ? children : [<SkeletonText size={14} />, <SkeletonText />]}
+        {children ? (
+          children
+        ) : (
+          [<SkeletonText size={14} key={0} />, <SkeletonText key={1} />]
+        )}
       </SpacerBox>
     </Box>
   );
@@ -205,9 +211,7 @@ export function SkeletonPageHeaderToolbar({width = 1180, children}) {
       }}
     >
       <Box margin={[0, 'auto']} width={width}>
-        <SpacerBox height={46}>
-          {children}
-        </SpacerBox>
+        <SpacerBox height={46}>{children}</SpacerBox>
       </Box>
     </Box>
   );
@@ -217,18 +221,12 @@ export function SkeletonPageHeaderToolbar({width = 1180, children}) {
 export function SkeletonPageHeaderTabs({width = 1180, children}) {
   return (
     <Box margin={[0, 'auto']} width={width}>
-      <SpacerBox height={46}>
-        {children}
-      </SpacerBox>
+      <SpacerBox height={46}>{children}</SpacerBox>
     </Box>
   );
 }
 
 /** Generic content */
 export function SkeletonContent({children}) {
-  return (
-    <Box padding={15}>
-      {children}
-    </Box>
-  );
+  return <Box padding={15}>{children}</Box>;
 }

@@ -4,24 +4,15 @@ import expect from 'expect';
 import {shallow} from 'enzyme';
 import {testComponent} from 'utils/test/react';
 
-import {
-  Box,
-  Block,
-  Flex,
-  Inline,
-  InlineFlex,
-} from 'components/layout';
+import {Box, Block, Flex, Inline, InlineFlex} from 'components/layout';
 
 describe('components/layout', () => {
-
   describe('Box', () => {
-
     const create = testComponent(Box, () => ({
       // insert your default props here ...
     }));
 
     it('should render correctly', () => {
-
       const {element} = create({
         flex: 0,
         onClick: null,
@@ -44,11 +35,9 @@ describe('components/layout', () => {
         flexShrink: 0,
         alignContent: 'flex-start',
       });
-
     });
 
     it('should allow overriding of default styles', () => {
-
       const {element} = create({
         flex: 0,
         alignContent: 'flex-end',
@@ -71,11 +60,9 @@ describe('components/layout', () => {
         alignContent: 'flex-end',
         color: 'red',
       });
-
     });
 
     it('should allow passing vector style values', () => {
-
       const {element} = create({
         margin: [0, 5, '10%', 15],
         padding: [15, undefined],
@@ -96,19 +83,15 @@ describe('components/layout', () => {
         margin: '0 5px 10% 15px',
         padding: '15px 0',
       });
-
     });
-
   });
 
   describe('Block', () => {
-
     const create = testComponent(Block, () => ({
       // insert your default props here ...
     }));
 
     it('should render correctly', () => {
-
       const {element} = create({
         flex: 0,
         onClick: null,
@@ -125,19 +108,15 @@ describe('components/layout', () => {
         display: 'block',
         flex: 0,
       });
-
     });
-
   });
 
   describe('Flex', () => {
-
     const create = testComponent(Flex, () => ({
       // insert your default props here ...
     }));
 
     it('should render correctly', () => {
-
       const {element} = create({
         flex: 0,
         onClick: null,
@@ -154,14 +133,10 @@ describe('components/layout', () => {
         display: 'flex',
         flex: 0,
       });
-
     });
-
   });
 
-
   describe('Inline', () => {
-
     const create = testComponent(Inline, () => ({
       // insert your default props here ...
     }));
@@ -183,13 +158,10 @@ describe('components/layout', () => {
         display: 'inline-block',
         flex: 0,
       });
-
     });
-
   });
 
   describe('InlineFlex', () => {
-
     const create = testComponent(InlineFlex, () => ({
       // insert your default props here ...
     }));
@@ -211,9 +183,6 @@ describe('components/layout', () => {
         display: 'inline-flex',
         flex: 0,
       });
-
     });
-
   });
-
 });

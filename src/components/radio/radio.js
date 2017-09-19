@@ -60,21 +60,21 @@ export function Radio(props: RadioProps) {
           transitionEnterTimeout={300}
           transitionLeaveTimeout={300}
         >
-          {checked || isNull(checked)
-            ? <Inline
-                position="absolute"
-                className={cx({
-                  [styles.icon]: true,
-                })}
-              />
-            : null}
+          {checked || isNull(checked) ? (
+            <Inline
+              position="absolute"
+              className={cx({
+                [styles.icon]: true,
+              })}
+            />
+          ) : null}
         </ReactCSSTransitionGroup>
       </Box>
-      {label
-        ? <Text marginLeft={10} size="small" color="grey" component="label">
-            {label}
-          </Text>
-        : null}
+      {label ? (
+        <Text marginLeft={10} size="small" color="grey" component="label">
+          {label}
+        </Text>
+      ) : null}
     </Flex>
   );
 }

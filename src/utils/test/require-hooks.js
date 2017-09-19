@@ -2,7 +2,7 @@
 import randomString from 'utils/test/random-string';
 
 // CSS imports return an empty object in tests
-require.extensions['.css'] = (module) => {
+require.extensions['.css'] = module => {
   module.exports = {};
 };
 
@@ -19,8 +19,8 @@ require.extensions['.css'] = (module) => {
   'pdf',
   'eot',
   'gif',
-].forEach((extension) => {
-  require.extensions[`.${extension}`] = (module) => {
+].forEach(extension => {
+  require.extensions[`.${extension}`] = module => {
     module.exports = `mock-assets/${randomString()}.${extension}`;
   };
 });

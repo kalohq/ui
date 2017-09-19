@@ -74,9 +74,8 @@ export default function Text(props: textProps) {
     ? ['h1', 'h2', 'h3', 'h4'].indexOf(component) > -1 ? Block : Inline
     : component;
 
-  const childrenProp = children === undefined
-    ? {dangerouslySetInnerHTML}
-    : {children};
+  const childrenProp =
+    children === undefined ? {dangerouslySetInnerHTML} : {children};
 
   return (
     <Component

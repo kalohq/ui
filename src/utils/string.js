@@ -20,8 +20,11 @@ export function inline(str: string, replace: string = ' '): string {
   return str.replace(/[\s]+/g, replace).trim();
 }
 
-export function pluralize(size: number, str: string, plural: string = 's', singular: string = ''): string {
-  return size > 1
-    ? `${str}${plural}`
-    : `${str}${singular}`;
+export function pluralize(
+  size: number,
+  str: string,
+  plural: string = 's',
+  singular: string = ''
+): string {
+  return size > 1 ? `${str}${plural}` : `${str}${singular}`;
 }

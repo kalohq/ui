@@ -17,17 +17,22 @@ describe('components/button', () => {
   describe('Button (default)', () => {
     const newButton = props => shallow(<Button {...props} />);
 
-    it(inline(`
+    it(
+      inline(`
       should trim the message if it overflows when \`mayGetLong\` is true
-    `), () => {
-      const wrapper = newButton({
-        mayGetLong: true,
-        children: 'MY_MESSAGE',
-      });
-      const message = wrapper.find(Flex).filter({name: 'message'});
+    `),
+      () => {
+        const wrapper = newButton({
+          mayGetLong: true,
+          children: 'MY_MESSAGE',
+        });
+        const message = wrapper.find(Flex).filter({name: 'message'});
 
-      expect(message.props().className.split(/\s+/)).toContain(styles.mayGetLong);
-      expect(message.props().title).toBe('MY_MESSAGE');
-    });
+        expect(message.props().className.split(/\s+/)).toContain(
+          styles.mayGetLong
+        );
+        expect(message.props().title).toBe('MY_MESSAGE');
+      }
+    );
   });
 });

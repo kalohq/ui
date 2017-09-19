@@ -63,9 +63,11 @@ export default function Icon(props: Props) {
       style={style}
       {...unstyledProps}
     >
-      {family === 'fontello' && isString(children)
-        ? FONTELLO_ICONS[String(children)] || children
-        : children}
+      {family === 'fontello' && isString(children) ? (
+        FONTELLO_ICONS[String(children)] || children
+      ) : (
+        children
+      )}
     </i>
   );
 }
