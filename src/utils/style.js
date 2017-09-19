@@ -67,7 +67,7 @@ const STYLE_WHITELIST = {
   boxSizing: true,
 };
 
-/**
+/*
  * Flexbox stlyle overrides for Safari 8
  * Safari 8 detection is performed in advance
  */
@@ -94,10 +94,11 @@ const VENDOR_STYLERS =
       }
     : {};
 
-/**
- * Lookup to determine which styles can be given a vector of values
- * Eg. Pass {padding: [0, 5, 5, 0]}
- **/
+/*
+  * Lookup to determine which styles can be given a vector of values
+  * Eg. Pass {padding: [0, 5, 5, 0]}
+  */
+
 const VECTOR_STYLES = {
   padding: true,
   margin: true,
