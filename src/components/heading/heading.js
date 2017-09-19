@@ -1,5 +1,5 @@
 /* @flow */
-import React from 'react';
+import * as React from 'react';
 import cx from 'classnames';
 import Icon from '../icon';
 import Text from '../text';
@@ -10,8 +10,8 @@ import type {HEADING_NUMBER, HEADING_HOVER} from './constants';
 
 import type {TEXT_COLOR, TEXT_SIZE} from '../text/constants';
 
-type headingProps = {
-  children: React$Element<*>,
+type Props = {
+  children: React.Node,
   className?: string,
   number: HEADING_NUMBER,
   color?: TEXT_COLOR,
@@ -24,7 +24,7 @@ type headingProps = {
   iconPadding?: number,
 };
 
-export default function Heading(props: headingProps) {
+export default function Heading(props: Props) {
   const {
     children,
     number = 3,

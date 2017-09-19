@@ -1,5 +1,5 @@
 /* @flow */
-import React from 'react';
+import * as React from 'react';
 import cx from 'classnames';
 import {Inline, Block} from '../layout';
 import {pickStyles} from 'utils/style';
@@ -35,7 +35,7 @@ type textProps = {
   domElement?: Function | string,
   component?: Function | string,
   multiline?: boolean,
-  children?: React.Element<*>,
+  children?: React.Node,
   className?: string,
   onClick?: Function,
   interactive?: boolean,
@@ -74,8 +74,9 @@ export default function Text(props: textProps) {
     ? ['h1', 'h2', 'h3', 'h4'].indexOf(component) > -1 ? Block : Inline
     : component;
 
-  const childrenProp =
-    children === undefined ? {dangerouslySetInnerHTML} : {children};
+  const childrenProp = children === undefined
+    ? {dangerouslySetInnerHTML}
+    : {children};
 
   return (
     <Component

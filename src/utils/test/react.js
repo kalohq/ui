@@ -1,7 +1,7 @@
 /* @flow */
-import React from 'react';
+import * as React from 'react';
 
-type RC = ReactClass<*> | (Object => React$Element<*>);
+type RC = React.ComponentType<*> | (Object => React.Node);
 
 /** Provide a uniform way of easily creating component fixtures for testing */
 export const testComponent = (

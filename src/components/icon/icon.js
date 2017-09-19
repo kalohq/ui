@@ -1,8 +1,7 @@
 /* @flow */
-import React from 'react';
+import * as React from 'react';
 import cx from 'classnames';
 import {parseStyleProps} from 'utils/style';
-import {isString} from 'lodash';
 
 import styles from './icon.css';
 
@@ -21,8 +20,8 @@ import {
   FONTELLO_ICONS,
 } from './constants';
 
-type iconProps = {
-  children?: React.Element<*> | string,
+type Props = {
+  children?: React.Node,
   size?: ICON_SIZE,
   color?: ICON_COLOR,
   family?: ICON_FAMILY,
@@ -31,7 +30,9 @@ type iconProps = {
   onClick?: Function,
 };
 
-export default function Icon(props: iconProps) {
+const isString = (test: any): boolean => typeof test === 'string';
+
+export default function Icon(props: Props) {
   const {
     children,
     size = DEFAULT_SIZE,

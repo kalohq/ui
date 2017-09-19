@@ -7,7 +7,8 @@
     "url": "https://github.com/kalohq/ui"
   },
   "options": {
-    "mocha": "--require src/utils/test/require-hooks --require src/utils/test/init-dom src/**/__tests__/*.{js,jsx}"
+    "mocha":
+      "--require src/utils/test/require-hooks --require src/utils/test/init-dom src/**/__tests__/*.{js,jsx}"
   },
   "main": "lib/index.js",
   "scripts": {
@@ -15,18 +16,21 @@
     "storybook": "npm run storybook:start",
     "storybook:start": "start-storybook -p 6006",
     "storybook:build": "build-storybook -c .storybook -o docs",
-    "compile:css": "./node_modules/.bin/postcss -r -d lib/**/*.css -c postcss.config.js",
-    "compile:js": "./node_modules/.bin/babel src/components --out-dir lib --copy-files --ignore __tests__,__stories__ && npm run copy-flow",
+    "compile:css":
+      "./node_modules/.bin/postcss -r -d lib/**/*.css -c postcss.config.js",
+    "compile:js":
+      "./node_modules/.bin/babel src/components --out-dir lib --copy-files --ignore __tests__,__stories__ && npm run copy-flow",
     "compile": "npm run compile:js && npm run compile:css",
-    "test:coverage": "rm -rf coverage/ && NODE_ENV=test NODE_PATH=./src:./src/components babel-node node_modules/.bin/babel-istanbul cover _mocha -- -R spec $npm_package_options_mocha --timeout 8000",
+    "test:coverage":
+      "rm -rf coverage/ && NODE_ENV=test NODE_PATH=./src:./src/components babel-node node_modules/.bin/babel-istanbul cover _mocha -- -R spec $npm_package_options_mocha --timeout 8000",
     "dist": "rimraf lib && npm run compile && cp {package.json,README.md} lib",
-    "copy-flow": "flow-copy-source src/components lib --ignore '{index.js,**/__tests__/*,**/__stories__/*}'",
+    "copy-flow":
+      "flow-copy-source src/components lib --ignore '{index.js,**/__tests__/*,**/__stories__/*}'",
+    "typecheck": "flow",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint"
-    ]
+    "*.js": ["eslint"]
   },
   "author": "The Kalo Team",
   "license": "ISC",
@@ -62,7 +66,7 @@
     "expect": "^1.20.2",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
-    "flow-bin": "^0.49.1",
+    "flow-bin": "0.53.0",
     "flow-copy-source": "^1.2.0",
     "husky": "^0.13.3",
     "jsdom": "7.2.2",
@@ -91,11 +95,11 @@
     "webpack": "^2.5.1"
   },
   "peerDependencies": {
-    "qs": "^5.2.1",
-    "react": "^15.4.1",
     "classnames": "^2.2.5",
     "lodash": "^4.17.2",
     "prop-types": "^15.5.8",
+    "qs": "^5.2.1",
+    "react": "^15.4.1",
     "react-addons-css-transition-group": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-hotkeys": "^0.9.0",
@@ -103,13 +107,7 @@
     "react-pure-render": "^1.0.2"
   },
   "babel": {
-    "presets": [
-      "es2015",
-      "stage-2",
-      "react"
-    ],
-    "ignore": [
-      "__stories__"
-    ]
+    "presets": ["es2015", "stage-2", "react"],
+    "ignore": ["__stories__"]
   }
 }

@@ -1,9 +1,9 @@
 /* @flow */
-import React from 'react';
+import * as React from 'react';
 import Heading from '../heading';
 
 type h3Props = {
-  children: React.Element<*>,
+  children: React.Node,
 };
 
 export default function H3(props: h3Props) {
