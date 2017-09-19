@@ -6,10 +6,6 @@
     "type": "git",
     "url": "https://github.com/kalohq/ui"
   },
-  "options": {
-    "mocha":
-      "--require src/utils/test/require-hooks --require src/utils/test/init-dom src/**/__tests__/*.{js,jsx}"
-  },
   "main": "lib/index.js",
   "scripts": {
     "start": "npm run storybook:start",
@@ -21,8 +17,7 @@
     "compile:js":
       "./node_modules/.bin/babel src/components --out-dir lib --copy-files --ignore __tests__,__stories__ && npm run copy-flow",
     "compile": "npm run compile:js && npm run compile:css",
-    "test:coverage":
-      "rm -rf coverage/ && NODE_ENV=test NODE_PATH=./src:./src/components babel-node node_modules/.bin/babel-istanbul cover _mocha -- -R spec $npm_package_options_mocha --timeout 8000",
+    "test": "jest",
     "dist": "rimraf lib && npm run compile && cp {package.json,README.md} lib",
     "copy-flow":
       "flow-copy-source src/components lib --ignore '{index.js,**/__tests__/*,**/__stories__/*}'",
@@ -45,6 +40,7 @@
     "babel-core": "6.24.1",
     "babel-eslint": "7.2.3",
     "babel-istanbul": "0.8.0",
+    "babel-jest": "21.0.2",
     "babel-loader": "7.0.0",
     "babel-plugin-lodash": "3.2.11",
     "babel-plugin-react-transform": "2.0.2",
@@ -55,7 +51,7 @@
     "babel-preset-stage-2": "6.24.1",
     "classnames": "2.2.5",
     "css-loader": "0.28.0",
-    "enzyme": "2.8.2",
+    "enzyme": "2.7.1",
     "eslint": "3.19.0",
     "eslint-config-airbnb": "14.1.0",
     "eslint-config-prettier": "2.4.0",
@@ -64,27 +60,25 @@
     "eslint-plugin-jsx-a11y": "5.0.1",
     "eslint-plugin-prettier": "2.0.1",
     "eslint-plugin-react": "7.0.0",
-    "expect": "1.20.2",
     "extract-text-webpack-plugin": "2.1.0",
+    "react-addons-test-utils": "15.4.1",
     "file-loader": "0.11.1",
     "flow-bin": "0.53.0",
     "flow-copy-source": "1.2.0",
     "husky": "0.13.3",
-    "jsdom": "7.2.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "21.0.0",
     "lint-staged": "3.4.2",
     "lodash": "4.17.2",
-    "mocha": "3.3.0",
     "postcss-cli": "3.2.0",
     "postcss-css-variables": "0.7.0",
     "postcss-import": "9.1.0",
     "postcss-loader": "1.3.3",
     "prettier": "1.6.1",
     "prop-types": "15.5.8",
-    "proxyquire": "1.7.11",
     "qs": "5.2.1",
     "react": "15.4.1",
     "react-addons-css-transition-group": "15.4.1",
-    "react-addons-test-utils": "15.5.1",
     "react-dom": "15.4.1",
     "react-hotkeys": "0.9.0",
     "react-intl": "2.1.5",
@@ -110,5 +104,22 @@
   "babel": {
     "presets": ["es2015", "stage-2", "react"],
     "ignore": ["__stories__"]
+  },
+  "jest": {
+    "modulePaths": ["src/core", "src"],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|html)$":
+        "<rootDir>/__mocks__/file-mock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    },
+    "testMatch": ["**/__tests__/**/?(*.)(spec|test).js?(x)"],
+    "coverageDirectory": "./coverage/unit",
+    "collectCoverage": false,
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/*.manifest.js",
+      "!src/**/*.test.js",
+      "!src/tests/e2e/**"
+    ]
   }
 }

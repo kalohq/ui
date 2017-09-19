@@ -1,6 +1,5 @@
 /* @flow */
-/* eslint-env mocha */
-import expect from 'expect';
+/* eslint-env jest */
 import {shallow} from 'enzyme';
 import {testComponent} from 'utils/test/react';
 
@@ -25,7 +24,7 @@ describe('components/layout', () => {
 
       // Should only include whitelisted props in style
       // Note that others not in whitelist will passthrough
-      expect(style).toMatch({
+      expect(style).toMatchObject({
         display: 'flex',
         flex: 0,
         // Expect extra default values
@@ -49,7 +48,7 @@ describe('components/layout', () => {
 
       // Should only include whitelisted props in style
       // Note that others not in whitelist will passthrough
-      expect(style).toMatch({
+      expect(style).toMatchObject({
         display: 'flex',
         flex: 0,
         // Expect extra default values
@@ -70,7 +69,7 @@ describe('components/layout', () => {
       const result = shallow(element);
       const style = result.prop('style');
 
-      expect(style).toMatch({
+      expect(style).toMatchObject({
         // Box defaults
         display: 'flex',
         position: 'relative',
@@ -104,7 +103,7 @@ describe('components/layout', () => {
       expect(onClick).toBe(null);
       // Should only include whitelisted props in style
       // Note that others not in whitelist will passthrough
-      expect(style).toMatch({
+      expect(style).toMatchObject({
         display: 'block',
         flex: 0,
       });
@@ -129,7 +128,7 @@ describe('components/layout', () => {
       expect(onClick).toBe(null);
       // Should only include whitelisted props in style
       // Note that others not in whitelist will passthrough
-      expect(style).toMatch({
+      expect(style).toMatchObject({
         display: 'flex',
         flex: 0,
       });
@@ -154,7 +153,7 @@ describe('components/layout', () => {
       expect(onClick).toBe(null);
       // Should only include whitelisted props in style
       // Note that others not in whitelist will passthrough
-      expect(style).toMatch({
+      expect(style).toMatchObject({
         display: 'inline-block',
         flex: 0,
       });
@@ -179,7 +178,7 @@ describe('components/layout', () => {
       expect(onClick).toBe(null);
       // Should only include whitelisted props in style
       // Note that others not in whitelist will passthrough
-      expect(style).toMatch({
+      expect(style).toMatchObject({
         display: 'inline-flex',
         flex: 0,
       });

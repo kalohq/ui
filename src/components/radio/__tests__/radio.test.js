@@ -1,6 +1,5 @@
 /* @flow */
-/* eslint-env mocha */
-import expect from 'expect';
+/* eslint-env jest */
 import {shallow} from 'enzyme';
 import {testComponent} from 'utils/test/react';
 
@@ -16,7 +15,7 @@ describe('components/radio', () => {
     it('should render shallow component ok', () => {
       const {element} = create();
       const result = shallow(element);
-      expect(result).toExist('should render OK');
+      expect(result).toBeTruthy();
     });
   });
 });
