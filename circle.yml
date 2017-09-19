@@ -17,3 +17,4 @@ test:
     - npm run lint
     - npm run typecheck
     - npm run test -- --coverage
+    - bash <(curl -s https://codecov.io/bash)
