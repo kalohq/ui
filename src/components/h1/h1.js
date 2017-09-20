@@ -1,12 +1,12 @@
 /* @flow */
-import React from 'react';
+import * as React from 'react';
 import Heading from '../heading';
 
-type h1Props = {
-  children: React.Element<*>,
+type Props = {
+  children?: React.Node,
 };
 
-export default function H1(props: h1Props) {
+export default function H1(props: Props) {
   const {children} = props;
 
   return (

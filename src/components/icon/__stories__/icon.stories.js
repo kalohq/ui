@@ -14,8 +14,12 @@ storiesOf(
     return (
       <span>
         <Icon size={36}>https</Icon>
-        <Icon size={36} color="red">thumb_up</Icon>
-        <Icon size={36} color="orange">warning</Icon>
+        <Icon size={36} color="red">
+          thumb_up
+        </Icon>
+        <Icon size={36} color="orange">
+          warning
+        </Icon>
       </span>
     );
   }

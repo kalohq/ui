@@ -6,7 +6,7 @@ import Radio from 'components/radio';
 
 const myClickFunction = () => {
   //eslint-disable-next-line
-  window.alert("Hello from an onClick event");
+  window.alert('Hello from an onClick event');
 };
 
 storiesOf('Radio', module)

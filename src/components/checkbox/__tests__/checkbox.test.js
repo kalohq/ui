@@ -1,12 +1,10 @@
 /* @flow */
-/* eslint-env mocha */
-import expect from 'expect';
+/* eslint-env jest */
 import {shallow} from 'enzyme';
 import {textMatch} from 'utils/test/enzyme';
 import {testComponent} from 'utils/test/react';
 
 import Checkbox from '../checkbox';
-import Text from 'components/text';
 
 describe('components/checkbox', () => {
   describe('Checkbox', () => {
@@ -18,15 +16,16 @@ describe('components/checkbox', () => {
     it('should render shallow component ok', () => {
       const {element} = create();
       const result = shallow(element);
-      expect(result).toExist('should render OK');
+      expect(result).toBeTruthy();
     });
 
     it('should render a checkbox with label', () => {
       const {element} = create({
         label: 'A checkbox label',
       });
+
       const result = shallow(element);
-      const label = result.find(Text);
+      const label = result.find('Text');
       expect(textMatch(label, 'A checkbox label')).toBe(true);
     });
   });

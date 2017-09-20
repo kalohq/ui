@@ -5,7 +5,7 @@ import Checkbox from '../checkbox';
 
 const myClickFunction = () => {
   //eslint-disable-next-line
-  window.alert("Hello from an onClick event");
+  window.alert('Hello from an onClick event');
 };
 
 storiesOf('Checkbox', module)

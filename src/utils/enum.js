@@ -1,10 +1,4 @@
-import {
-  forEach,
-  isPlainObject,
-  merge,
-  mapValues,
-  isArray,
-} from 'lodash';
+import {forEach, isPlainObject, merge, mapValues, isArray} from 'lodash';
 
 /** Ensure consistent value format */
 function toProps(value) {
@@ -16,7 +10,6 @@ function toProps(value) {
  * define enums with associated properties
  */
 export default class Enum {
-
   properties = {};
   values = [];
 
@@ -24,14 +17,15 @@ export default class Enum {
     forEach(spec, (value, keyOrIndex) => {
       const properties = toProps(value);
       if (this.properties[properties.value]) {
-        throw new Error(`Duplicate values (${JSON.stringify(value)}) found in enum spec. `);
+        throw new Error(
+          `Duplicate values (${JSON.stringify(value)}) found in enum spec. `
+        );
       }
       const key = isArray(spec) ? value : keyOrIndex;
       this[key] = properties.value;
       this.values.push(properties.value);
       this.properties[properties.value] = {...properties};
     });
-
   }
 
   *[Symbol.iterator]() {
@@ -48,5 +42,4 @@ export default class Enum {
   static withValues(values, spec) {
     return new Enum(merge({}, mapValues(values, toProps), spec));
   }
-
 }

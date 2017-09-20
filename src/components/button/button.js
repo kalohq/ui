@@ -19,23 +19,25 @@ const ICON_SIZE = {
 function renderIcon(icon, border, size) {
   if (!icon) return null;
 
-  return isString(icon)
-    ? <span
-        className={cx({
-          [styles.icon]: true,
-          [styles.border]: border,
-        })}
-      >
-        <Icon size={!!size ? size : '18'}>{icon}</Icon>
-      </span>
-    : <span
-        className={cx({
-          [styles.icon]: true,
-          [styles.border]: border,
-        })}
-      >
-        {icon}
-      </span>;
+  return isString(icon) ? (
+    <span
+      className={cx({
+        [styles.icon]: true,
+        [styles.border]: border,
+      })}
+    >
+      <Icon size={!!size ? size : '18'}>{icon}</Icon>
+    </span>
+  ) : (
+    <span
+      className={cx({
+        [styles.icon]: true,
+        [styles.border]: border,
+      })}
+    >
+      {icon}
+    </span>
+  );
 }
 
 export default class Button extends PureComponent {
@@ -154,7 +156,7 @@ export default class Button extends PureComponent {
     const iconElement = renderIcon(
       icon,
       isBoolean(iconBorder) ? iconBorder : !!icon && !!children,
-      ICON_SIZE[size],
+      ICON_SIZE[size]
     );
 
     return (
@@ -173,7 +175,7 @@ export default class Button extends PureComponent {
             [styles.flex]: flex,
             [styles.reverse]: reverse,
           },
-          className,
+          className
         )}
         onClick={waitingForData || disabled ? undefined : onClick}
         {...otherProps}

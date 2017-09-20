@@ -4,7 +4,9 @@ import {storiesOf} from '@storybook/react';
 import Button from 'components/button';
 
 const myClickFunction = () => {
+  /* eslint-disable no-alert */
   window.alert('Hello from an onClick event');
+  /* eslint-enable no-alert */
 };
 
 storiesOf('Button', module)

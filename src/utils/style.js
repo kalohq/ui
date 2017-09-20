@@ -67,34 +67,38 @@ const STYLE_WHITELIST = {
   boxSizing: true,
 };
 
-export type StyleProps = {
-  [$Keys<typeof STYLE_WHITELIST>]: string | number | Array<number>,
-};
-
-/**
+/*
  * Flexbox stlyle overrides for Safari 8
  * Safari 8 detection is performed in advance
  */
-const VENDOR_STYLERS = (window.navigator.userAgent.indexOf('Safari/') !== -1 && window.navigator.userAgent.indexOf('Version/8') !== -1) ? {
-  'display': (key, value) => ({key, value: ((value.indexOf('flex') > -1) ? '-webkit-' : '') + value}),
-  'alignContent': (key, value) => ({key: 'WebkitAlignContent', value}),
-  'alignItems': (key, value) => ({key: 'WebkitAlignItems', value}),
-  'alignSelf': (key, value) => ({key: 'WebkitAlignSelf', value}),
-  'justifyContent': (key, value) => ({key: 'WebkitJustifyContent', value}),
-  'order': (key, value) => ({key: 'WebkitOrder', value}),
-  'flexDirection': (key, value) => ({key: 'WebkitFlexDirection', value}),
-  'flexWrap': (key, value) => ({key: 'WebkitFlexWrap', value}),
-  'flexFlow': (key, value) => ({key: 'WebkitFlexFlow', value}),
-  'flex': (key, value) => ({key: 'WebkitFlex', value}),
-  'flexBasis': (key, value) => ({key: 'WebkitFlexBasis', value}),
-  'flexShrink': (key, value) => ({key: 'WebkitFlexShrink', value}),
-  'flexGrow': (key, value) => ({key: 'WebkitFlexGrow', value}),
-} : {};
+const VENDOR_STYLERS =
+  window.navigator.userAgent.indexOf('Safari/') !== -1 &&
+  window.navigator.userAgent.indexOf('Version/8') !== -1
+    ? {
+        display: (key, value) => ({
+          key,
+          value: (value.indexOf('flex') > -1 ? '-webkit-' : '') + value,
+        }),
+        alignContent: (key, value) => ({key: 'WebkitAlignContent', value}),
+        alignItems: (key, value) => ({key: 'WebkitAlignItems', value}),
+        alignSelf: (key, value) => ({key: 'WebkitAlignSelf', value}),
+        justifyContent: (key, value) => ({key: 'WebkitJustifyContent', value}),
+        order: (key, value) => ({key: 'WebkitOrder', value}),
+        flexDirection: (key, value) => ({key: 'WebkitFlexDirection', value}),
+        flexWrap: (key, value) => ({key: 'WebkitFlexWrap', value}),
+        flexFlow: (key, value) => ({key: 'WebkitFlexFlow', value}),
+        flex: (key, value) => ({key: 'WebkitFlex', value}),
+        flexBasis: (key, value) => ({key: 'WebkitFlexBasis', value}),
+        flexShrink: (key, value) => ({key: 'WebkitFlexShrink', value}),
+        flexGrow: (key, value) => ({key: 'WebkitFlexGrow', value}),
+      }
+    : {};
 
-/**
- * Lookup to determine which styles can be given a vector of values
- * Eg. Pass {padding: [0, 5, 5, 0]}
- **/
+/*
+  * Lookup to determine which styles can be given a vector of values
+  * Eg. Pass {padding: [0, 5, 5, 0]}
+  */
+
 const VECTOR_STYLES = {
   padding: true,
   margin: true,
@@ -103,11 +107,7 @@ const VECTOR_STYLES = {
 /** Parse a specific style */
 function parseStyle(name, value) {
   if (VECTOR_STYLES[name] && isArray(value)) {
-    return value.map(v => (
-        v ? isNumber(v) ? `${v}px` : v
-          : 0
-      )
-    ).join(' ');
+    return value.map(v => (v ? (isNumber(v) ? `${v}px` : v) : 0)).join(' ');
   }
 
   return value;

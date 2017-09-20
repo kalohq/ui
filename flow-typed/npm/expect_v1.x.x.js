@@ -1,5 +1,5 @@
-// flow-typed signature: 8b2024df6ce4ca9b2f90e4589273050e
-// flow-typed version: d2b8bb45c2/expect_v1.x.x/flow_>=v0.43.x
+// flow-typed signature: 7f436587e40397b288cf749dcbb42a66
+// flow-typed version: b43dff3e0e/expect_v1.x.x/flow_>=v0.20.x
 
 declare type $npm$expect$ErrorMatcher<T> = Class<T> | Error | RegExp | string;
 
