@@ -1,17 +1,33 @@
 @font-face {
   font-family: 'WebFaktSoftPro';
+  font-weight: 300;
+  font-style: normal;
+  src: url('./fonts/fakt-soft-pro/fsp-blond.woff') format('woff'),
+       url('./fonts/fakt-soft-pro/fsp-blond.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'WebFaktSoftPro';
   font-weight: 400;
   font-style: normal;
-  src: url('./fonts/Fakt-Soft-Pro-Blond/FaktSoftPro-Blond.woff') format('woff'),
-       url('./fonts/Fakt-Soft-Pro-Blond/FaktSoftPro-Blond.ttf') format('truetype');
+  src: url('./fonts/fakt-soft-pro/fsp-normal.woff') format('woff'),
+       url('./fonts/fakt-soft-pro/fsp-normal.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'WebFaktSoftPro';
   font-weight: 500;
   font-style: normal;
-  src: url('./fonts/Fakt-Soft-Pro-SemiBold/FaktSoftPro-SemiBold.woff') format('woff'),
-       url('./fonts/Fakt-Soft-Pro-SemiBold/FaktSoftPro-SemiBold.ttf') format('truetype');
+  src: url('./fonts/fakt-soft-pro/fsp-medium.woff') format('woff'),
+       url('./fonts/fakt-soft-pro/fsp-medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'WebFaktSoftPro';
+  font-weight: 600;
+  font-style: normal;
+  src: url('./fonts/fakt-soft-pro/fsp-semibold.woff') format('woff'),
+       url('./fonts/fakt-soft-pro/fsp-semibold.woff2') format('woff2');
 }
 
 * {
