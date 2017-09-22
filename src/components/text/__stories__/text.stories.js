@@ -45,6 +45,23 @@ const examples = [
       );
     },
   },
+  {
+    title: 'varying font weights',
+    description: '',
+    render: () => {
+      return (
+        <div>
+          <Text weight="light">light</Text>
+          <br />
+          <Text weight="normal">normal</Text>
+          <br />
+          <Text weight="medium">medium</Text>
+          <br />
+          <Text weight="semi-bold">semi-bold</Text>
+        </div>
+      );
+    },
+  },
 ];
 
 examples.forEach(example => {

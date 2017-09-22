@@ -17,12 +17,20 @@
   text-transform: none;
 }
 
+.weight-light {
+  font-weight: 300;
+}
+
 .weight-normal {
   font-weight: 400;
 }
 
-.weight-semi-bold {
+.weight-medium {
   font-weight: 500;
+}
+
+.weight-semi-bold {
+  font-weight: 600;
 }
 
 .size-extra-extra-small {

@@ -1,5 +1,5 @@
 /* @flow */
-export type TEXT_WEIGHT = 'normal' | 'semi-bold';
+export type TEXT_WEIGHT = 'light' | 'normal' | 'medium' | 'semi-bold';
 
 export type TEXT_SIZE =
   | 'tiny'
