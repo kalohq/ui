@@ -36,7 +36,7 @@ export type TEXT_ALIGN = 'center' | 'left' | 'right' | 'none';
 
 export const DEFAULT_HOVER_COLOR = 'none';
 export const DEFAULT_COLOR = 'slate';
-export const DEFAULT_WEIGHT = 'normal';
+export const DEFAULT_WEIGHT = 'light';
 export const DEFAULT_SIZE = 'small';
 export const DEFAULT_MARGIN = 'none';
 export const DEFAULT_ALIGN = 'none';
