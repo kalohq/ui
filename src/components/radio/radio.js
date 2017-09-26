@@ -2,7 +2,7 @@
 import React from 'react';
 import {pickStyles} from 'utils/style';
 import {isNull} from 'lodash';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import CSSTransition from 'react-transition-group/CSSTransition';
 import cx from 'classnames';
 import {Flex, Box, Inline} from '../layout';
 import Text from '../text';
@@ -55,11 +55,7 @@ export function Radio(props: RadioProps) {
         {...pickStyles(otherProps)}
         {...otherProps}
       >
-        <ReactCSSTransitionGroup
-          transitionName="t-scale"
-          transitionEnterTimeout={300}
-          transitionLeaveTimeout={300}
-        >
+        <CSSTransition classNames="t-scale" timeout={{enter: 300, exit: 300}}>
           {checked || isNull(checked) ? (
             <Inline
               position="absolute"
@@ -68,7 +64,7 @@ export function Radio(props: RadioProps) {
               })}
             />
           ) : null}
-        </ReactCSSTransitionGroup>
+        </CSSTransition>
       </Box>
       {label ? (
         <Text marginLeft={10} size="small" color="grey" component="label">

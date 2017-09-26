@@ -51,7 +51,7 @@
     "babel-preset-stage-2": "6.24.1",
     "classnames": "2.2.5",
     "css-loader": "0.28.0",
-    "enzyme": "2.7.1",
+    "enzyme": "3.0.0",
     "eslint": "3.19.0",
     "eslint-config-airbnb": "14.1.0",
     "eslint-config-prettier": "2.4.0",
@@ -61,13 +61,12 @@
     "eslint-plugin-prettier": "2.0.1",
     "eslint-plugin-react": "7.0.0",
     "extract-text-webpack-plugin": "2.1.0",
-    "react-addons-test-utils": "15.4.1",
     "file-loader": "0.11.1",
     "flow-bin": "0.53.0",
     "flow-copy-source": "1.2.0",
     "husky": "0.13.3",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "21.0.0",
+    "jest": "21.2.0",
     "lint-staged": "3.4.2",
     "lodash": "4.17.2",
     "postcss-cli": "3.2.0",
@@ -77,14 +76,16 @@
     "prettier": "1.6.1",
     "prop-types": "15.5.8",
     "qs": "5.2.1",
-    "react": "15.4.1",
-    "react-addons-css-transition-group": "15.4.1",
-    "react-dom": "15.4.1",
+    "react": "16.0.0",
+    "react-addons-test-utils": "15.4.1",
+    "react-dom": "16.0.0",
     "react-hotkeys": "0.9.0",
     "react-intl": "2.1.5",
     "react-pure-render": "1.0.2",
     "react-storybook-addon-add-stories-group": "0.1.0",
     "react-styleguidist": "5.2.0",
+    "react-test-renderer": "16",
+    "react-transition-group": "^2.2.0",
     "rimraf": "2.6.1",
     "style-loader": "0.16.1",
     "webpack": "2.5.1"
@@ -94,12 +95,12 @@
     "lodash": "4.17.2",
     "prop-types": "15.5.8",
     "qs": "5.2.1",
-    "react": "15.4.1",
-    "react-addons-css-transition-group": "15.4.1",
-    "react-dom": "15.4.1",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
     "react-hotkeys": "0.9.0",
     "react-intl": "2.1.5",
-    "react-pure-render": "1.0.2"
+    "react-pure-render": "1.0.2",
+    "react-transition-group": "^2.2.0"
   },
   "babel": {
     "presets": ["es2015", "stage-2", "react"],
@@ -113,6 +114,7 @@
       "\\.(css|less)$": "identity-obj-proxy"
     },
     "testMatch": ["**/__tests__/**/?(*.)(spec|test).js?(x)"],
+    "setupFiles": ["./src/utils/test/global-context.js"],
     "coverageDirectory": "./coverage/unit",
     "collectCoverage": false,
     "collectCoverageFrom": [
@@ -121,5 +123,8 @@
       "!src/**/*.test.js",
       "!src/tests/e2e/**"
     ]
+  },
+  "dependencies": {
+    "enzyme-adapter-react-16": "^1.0.0"
   }
 }
