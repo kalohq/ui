@@ -66,12 +66,10 @@ Remember, that any changes you make in the UI library will need to be recompiled
 To publish a new version:
 
 1. Ensure you have been added to the Kalo NPM organisation
-2. Increase the version in `package.json`
+2. Bump the version in `package.json` (SEMVER)
 3. `npm run dist`
-4. `cd lib` and `npm publish`
+4. `npm publish`
 5. :boom:
-
-*Publish from the lib folder to ensure that the module is published in a flat file structure.*
 
 #### Gotchas
 
