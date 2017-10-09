@@ -49,7 +49,8 @@ export default function Checkbox(props: CheckboxProps) {
         height={CHECKBOX_SIZES.properties[size].size}
         className={cx({
           [styles.checkbox]: true,
-          [styles.checked]: checked,
+          [styles.checked]: checked === true,
+          [styles.partial]: checked === null,
         })}
         {...otherProps}
       />

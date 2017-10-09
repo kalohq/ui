@@ -28,5 +28,14 @@ describe('components/checkbox', () => {
       const label = result.find('Text');
       expect(textMatch(label, 'A checkbox label')).toBe(true);
     });
+
+    it('should render a checkbox partially checked', () => {
+      const {element} = create({
+        label: 'A checkbox label',
+        checked: null,
+      });
+      const result = shallow(element);
+      expect(result).toBeTruthy();
+    });
   });
 });

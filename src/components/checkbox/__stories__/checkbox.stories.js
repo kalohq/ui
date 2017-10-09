@@ -92,4 +92,12 @@ storiesOf('Checkbox', module)
         </span>
       );
     }
-  );
+  )
+  .addWithInfo('partially', 'Checkboxes can be partially checked', () => {
+    return (
+      <span>
+        <Checkbox label="Onboarding freelancers" size="medium" checked={null} />
+        <Checkbox label="Freelancer invoices" size="large" checked={null} />
+      </span>
+    );
+  });
