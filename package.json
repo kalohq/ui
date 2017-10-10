@@ -7,28 +7,27 @@
     "url": "https://github.com/kalohq/ui"
   },
   "main": "lib/index.js",
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "scripts": {
     "start": "npm run storybook:start",
     "storybook": "npm run storybook:start",
     "storybook:start": "start-storybook -p 6006",
     "storybook:build": "build-storybook -c .storybook -o docs",
-    "compile:css": "./node_modules/.bin/postcss -r -d lib/**/*.css -c postcss.config.js",
-    "compile:js": "./node_modules/.bin/babel src/components --out-dir lib --copy-files --ignore __tests__,__stories__ && npm run copy-flow",
+    "compile:css":
+      "./node_modules/.bin/postcss -r -d lib/**/*.css -c postcss.config.js",
+    "compile:js":
+      "./node_modules/.bin/babel src/components --out-dir lib --copy-files --ignore __tests__,__stories__ && npm run copy-flow",
     "compile": "npm run compile:js && npm run compile:css",
     "test": "jest",
     "dist": "rimraf lib && npm run compile",
-    "copy-flow": "flow-copy-source src/components lib --ignore '{index.js,**/__tests__/*,**/__stories__/*}'",
+    "copy-flow":
+      "flow-copy-source src/components lib --ignore '{index.js,**/__tests__/*,**/__stories__/*}'",
     "typecheck": "flow",
     "lint": "eslint src",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint"
-    ]
+    "*.js": ["eslint"]
   },
   "author": "The Kalo Team",
   "license": "ISC",
@@ -104,34 +103,23 @@
     "react-pure-render": "^1.0.2"
   },
   "babel": {
-    "presets": [
-      "es2015",
-      "stage-2",
-      "react"
-    ],
-    "ignore": [
-      "__stories__"
-    ]
+    "presets": ["es2015", "stage-2", "react"],
+    "ignore": ["__stories__"]
   },
   "jest": {
-    "modulePaths": [
-      "src/core",
-      "src"
-    ],
+    "modulePaths": ["src/core", "src"],
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|html)$": "<rootDir>/__mocks__/file-mock.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|html)$":
+        "<rootDir>/__mocks__/file-mock.js",
       "\\.(css|less)$": "identity-obj-proxy"
     },
-    "testMatch": [
-      "**/__tests__/**/?(*.)(spec|test).js?(x)"
-    ],
+    "testMatch": ["**/__tests__/**/?(*.)(spec|test).js?(x)"],
     "coverageDirectory": "./coverage/unit",
     "collectCoverage": false,
     "collectCoverageFrom": [
       "src/**/*.js",
-      "!src/**/*.manifest.js",
       "!src/**/*.test.js",
-      "!src/tests/e2e/**"
+      "!src/**/*.stories.js"
     ]
   }
 }

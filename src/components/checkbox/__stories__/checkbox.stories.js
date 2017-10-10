@@ -93,11 +93,23 @@ storiesOf('Checkbox', module)
       );
     }
   )
-  .addWithInfo('partially', 'Checkboxes can be partially checked', () => {
-    return (
-      <span>
-        <Checkbox label="Onboarding freelancers" size="medium" checked={null} />
-        <Checkbox label="Freelancer invoices" size="large" checked={null} />
-      </span>
-    );
-  });
+  .addWithInfo(
+    'indeterminate',
+    'Checkboxes can be indeterminate checked',
+    () => {
+      return (
+        <span>
+          <Checkbox
+            label="Onboarding freelancers"
+            size="medium"
+            indeterminate={true}
+          />
+          <Checkbox
+            label="Freelancer invoices"
+            size="large"
+            indeterminate={true}
+          />
+        </span>
+      );
+    }
+  );

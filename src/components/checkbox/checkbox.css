@@ -32,10 +32,10 @@
   background-position: initial;
 }
 
-.partial {
+.indeterminate {
   background-color: var(--color-grey-snow);
   border-color: var(--color-brand-blue);
-  background-image: url('./assets/partial.svg');
+  background-image: url('./assets/indeterminate.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: initial;

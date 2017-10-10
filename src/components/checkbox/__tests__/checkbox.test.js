@@ -32,10 +32,13 @@ describe('components/checkbox', () => {
     it('should render a checkbox partially checked', () => {
       const {element} = create({
         label: 'A checkbox label',
-        checked: null,
+        checked: false,
+        indeterminate: true,
       });
       const result = shallow(element);
       expect(result).toBeTruthy();
+      const box = result.find('Box').first();
+      expect(box.prop('className')).toBe('checkbox indeterminate');
     });
   });
 });
