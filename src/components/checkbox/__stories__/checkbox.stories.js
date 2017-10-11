@@ -92,4 +92,24 @@ storiesOf('Checkbox', module)
         </span>
       );
     }
+  )
+  .addWithInfo(
+    'indeterminate',
+    'Checkboxes can be indeterminate checked',
+    () => {
+      return (
+        <span>
+          <Checkbox
+            label="Onboarding freelancers"
+            size="medium"
+            indeterminate={true}
+          />
+          <Checkbox
+            label="Freelancer invoices"
+            size="large"
+            indeterminate={true}
+          />
+        </span>
+      );
+    }
   );

@@ -28,6 +28,17 @@
   border-color: var(--color-brand-blue);
   background-image: url('./assets/checked.svg');
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: initial;
+}
+
+.indeterminate {
+  background-color: var(--color-grey-snow);
+  border-color: var(--color-brand-blue);
+  background-image: url('./assets/indeterminate.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: initial;
 }
 
 .disabled .checked {

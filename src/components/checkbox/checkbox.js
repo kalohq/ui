@@ -12,6 +12,7 @@ import styles from './checkbox.css';
 type CheckboxProps = {
   size: CHECKBOX_SIZE,
   checked: ?boolean,
+  indeterminate: ?boolean,
   readonly: boolean,
   disabled: boolean,
   label: string,
@@ -23,6 +24,7 @@ export default function Checkbox(props: CheckboxProps) {
   const {
     checked = false,
     disabled = false,
+    indeterminate = false,
     size = 'medium',
     readonly,
     label,
@@ -50,6 +52,7 @@ export default function Checkbox(props: CheckboxProps) {
         className={cx({
           [styles.checkbox]: true,
           [styles.checked]: checked,
+          [styles.indeterminate]: indeterminate,
         })}
         {...otherProps}
       />
