@@ -16,7 +16,7 @@
     "compile:css":
       "./node_modules/.bin/postcss -r -d lib/**/*.css -c postcss.config.js",
     "compile:js":
-      "./node_modules/.bin/babel src/components --out-dir lib --copy-files --ignore __tests__,__stories__ && npm run copy-flow",
+      "./node_modules/.bin/babel src/components --out-dir lib --copy-files --ignore __tests__,__stories__",
     "compile": "npm run compile:js && npm run compile:css",
     "test": "jest",
     "dist": "rimraf lib && npm run compile",
