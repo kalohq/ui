@@ -79,16 +79,13 @@ storiesOf('Checkbox', module)
   )
   .addWithInfo(
     'sizing',
-    'Checkboxes can be in two sizes. Medium and Large',
+    'Checkboxes can be in three sizes. Small, medium, and large',
     () => {
       return (
         <span>
-          <Checkbox
-            label="Onboarding freelancers"
-            size="medium"
-            checked={false}
-          />
-          <Checkbox label="Freelancer invoices" size="large" checked={false} />
+          <Checkbox label="Onboarding freelancers" size="small" />
+          <Checkbox label="Onboarding freelancers" size="medium" />
+          <Checkbox label="Freelancer invoices" size="large" />
         </span>
       );
     }

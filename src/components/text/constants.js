@@ -1,13 +1,28 @@
 /* @flow */
+import Enum from 'utils/enum';
+
 export type TEXT_WEIGHT = 'light' | 'normal' | 'medium' | 'semi-bold';
 
-export type TEXT_SIZE =
-  | 'tiny'
-  | 'extra-small'
-  | 'small'
-  | 'medium'
-  | 'large'
-  | 'extra-large';
+export const TEXT_SIZE = new Enum({
+  TINY: {
+    value: 'tiny',
+  },
+  EXTRA_SMALL: {
+    value: 'extra-small',
+  },
+  SMALL: {
+    value: 'small',
+  },
+  MEDIUM: {
+    value: 'medium',
+  },
+  LARGE: {
+    value: 'large',
+  },
+  EXTRA_LARGE: {
+    value: 'extra-large',
+  },
+});
 
 export type TEXT_COLOR =
   | 'red'
