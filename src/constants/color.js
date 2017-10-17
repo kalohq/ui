@@ -1,4 +1,4 @@
-const color = {
+module.exports = {
   pink300: '#FBDFE2',
   pink400: '#FDB3C8',
   pink500: '#EA5F6E',
@@ -42,5 +42,3 @@ const color = {
   grey600: '#89929B',
   grey700: '#707D8A',
 };
-
-export default color;
