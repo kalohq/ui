@@ -10,7 +10,7 @@ export default function (renderStory) {
 
   let meta = story.props;
   return (
-    <Flex flexDirection="column" padding={[50, 50]} style={{backgroundColor: '#fff'}}>
+    <Flex flexDirection="column" padding={[50, 50]} style={{backgroundColor: '#f9fafc'}}>
       <H1 size="extra-large">{meta.context.story}</H1>
       <Text multiline={true}>{meta.info}</Text>
       <Inline style={{border: '1px solid #eceff1'}} padding={[20]} marginTop={20}>
