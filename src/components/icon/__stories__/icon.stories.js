@@ -4,22 +4,22 @@ import {storiesOf} from '@storybook/react';
 
 import Icon from '../icon';
 
+import {ICONS} from '../constants';
+
 storiesOf(
   'Icon',
   module
 ).addWithInfo(
-  'Material Icons',
-  'Renders an icon from the Google Material Design icon set.',
+  'Icon',
+  'Renders an icon from the Google Material Design icon set. See material.io for a list of icons',
   () => {
     return (
       <span>
-        <Icon size={36}>https</Icon>
-        <Icon size={36} color="red">
-          thumb_up
-        </Icon>
-        <Icon size={36} color="orange">
-          warning
-        </Icon>
+        {ICONS.values.map(icon => (
+          <Icon key={icon} size={36}>
+            {icon}
+          </Icon>
+        ))}
       </span>
     );
   }
