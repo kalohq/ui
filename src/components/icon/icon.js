@@ -43,7 +43,7 @@ export default function Icon(props: Props) {
       {...unstyledProps}
     >
       <svg width={size} height={size} fill={color}>
-        <use xlinkHref={`#${children}`} />
+        <use href={`#${children}`} />
       </svg>
     </i>
   );
