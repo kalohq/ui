@@ -65,7 +65,9 @@ gulp.task('js-constants', () =>
  */
 gulp.task('copy-files', () =>
   gulp
-    .src('src/components/**/*(*.woff|*.ttf|*.jpg|*.jpeg|*.png|*.gif|*.svg)')
+    .src(
+      'src/components/**/*(*.woff|*.woff2|*.ttf|*.jpg|*.jpeg|*.png|*.gif|*.svg)'
+    )
     .pipe(gulp.dest('lib'))
 );
 
