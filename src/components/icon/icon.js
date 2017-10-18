@@ -42,7 +42,8 @@ export default function Icon(props: Props) {
       style={style}
       {...unstyledProps}
     >
-      <svg width={size} height={size} fill={color}>
+      <svg width={size} height={size} fill={color} aria-hidden="true">
+        <title>{children}</title>
         <use href={`#${children}`} />
       </svg>
     </i>

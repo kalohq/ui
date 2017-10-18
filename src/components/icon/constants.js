@@ -92,4 +92,73 @@ export const ICONS = new Enum({
   KEYBOARD_ARROW_UP: {
     value: 'keyboard_arrow_up',
   },
+  KEYBOARD_RETURN: {
+    value: 'keyboard_return',
+  },
+  LAUNCH: {
+    value: 'launch',
+  },
+  LINK: {
+    value: 'link',
+  },
+  LOCAL_OFFER: {
+    value: 'local_offer',
+  },
+  LOCATION_ON: {
+    value: 'location_on',
+  },
+  LOCK: {
+    value: 'lock',
+  },
+  MAIL: {
+    value: 'mail',
+  },
+  MESSAGE: {
+    value: 'message',
+  },
+  MORE_VERT: {
+    value: 'more_vert',
+  },
+  NOTE_ADD: {
+    value: 'note_add',
+  },
+  NOTIFICATIONS: {
+    value: 'notifications',
+  },
+  OPEN_IN_NEW: {
+    value: 'open_in_new',
+  },
+  PERSON_OUTLINE: {
+    value: 'person_outline',
+  },
+  PICTURE_AS_PDF: {
+    value: 'picture_as_pdf',
+  },
+  PRESENT_TO_ALL: {
+    value: 'present_to_all',
+  },
+  RECEIPT: {
+    value: 'receipt',
+  },
+  REMOVE_CIRCLE: {
+    value: 'remove_circle',
+  },
+  SEARCH: {
+    value: 'search',
+  },
+  STAR: {
+    value: 'star',
+  },
+  VERIFIED_USER: {
+    value: 'verfied_user',
+  },
+  VIEW_HEADLINE: {
+    value: 'view_headline',
+  },
+  VIEW_MODULE: {
+    value: 'view_module',
+  },
+  WARNING: {
+    value: 'warning',
+  },
 });
