@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const gulpCopy = require('gulp-copy');
 
 const postcss = require('gulp-postcss');
 const cssnext = require('postcss-cssnext');
@@ -62,12 +61,12 @@ gulp.task('js-constants', () =>
 );
 
 /**
- * Compile font files required for Icon
+ * Copy component assets (font files, images)
  */
 gulp.task('copy-files', () =>
   gulp
-    .src('src/components/icon/fonts/**/*')
-    .pipe(gulpCopy('lib/icon', {prefix: 3}))
+    .src('src/components/**/*(*.woff|*.ttf|*.jpg|*.jpeg|*.png|*.gif|*.svg)')
+    .pipe(gulp.dest('lib'))
 );
 
 /**
