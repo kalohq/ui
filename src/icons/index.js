@@ -1,7 +1,7 @@
-export {default as add} from './add.svg';
-export {default as edit} from './edit.svg';
-export {default as attachment} from './attachment.svg';
-export {default as instagram} from './instagram.svg';
-export {default as linkedin} from './linkedin.svg';
-export {default as twitter} from './twitter.svg';
-export {default as youtube} from './youtube.svg';
+export {default as ACCESS_TIME} from './svg/access_time.svg';
+export {
+  default as ACCOUNT_BALANCE_WALLET,
+} from './svg/account_balance_wallet.svg';
+export {default as ARCHIVE} from './svg/archive.svg';
+export {default as ARROW_DROP_DOWN} from './svg/arrow_drop_down.svg';
+export {default as ARROW_DROP_UP} from './svg/arrow_drop_up.svg';
