@@ -194,7 +194,7 @@ export default class Button extends PureComponent {
           type={type}
           className={cx({
             [styles.button]: true,
-            [styles.disabled]: !success || disabled || loading,
+            [styles.disabled]: success ? false : disabled || loading,
             [styles[theme]]: !!theme,
             [styles.active]: !!active,
             [styles[size]]: true,
