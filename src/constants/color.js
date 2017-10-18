@@ -1,4 +1,4 @@
-module.exports = {
+module.exports.color = {
   pink300: '#FBDFE2',
   pink400: '#FDB3C8',
   pink500: '#EA5F6E',

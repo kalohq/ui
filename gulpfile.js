@@ -18,7 +18,7 @@ gulp.task('css', () => {
         cssnext({
           features: {
             customProperties: {
-              variables: cssVariables,
+              variables: cssVariables.color,
             },
           },
         }),
