@@ -17,6 +17,48 @@ export const ICONS = new Enum({
   ADD: {
     value: 'add',
   },
+  INFO_OUTLINE: {
+    value: 'info_outline',
+  },
+  EXTENSION: {
+    value: 'extension',
+  },
+  BORDER_COLOR: {
+    value: 'border_color',
+  },
+  CLEAR: {
+    value: 'clear',
+  },
+  CREDIT_CARD: {
+    value: 'credit_card',
+  },
+  PEOPLE: {
+    value: 'people',
+  },
+  DELETE: {
+    value: 'delete',
+  },
+  PERSON: {
+    value: 'person',
+  },
+  DONE_ALL: {
+    value: 'done_all',
+  },
+  REMOVE: {
+    value: 'remove',
+  },
+  EMAIL: {
+    value: 'email',
+  },
+  SEND: {
+    value: 'send',
+  },
+  SETTINGS: {
+    value: 'settings',
+  },
+  VIEW_WEEK: {
+    value: 'view_week',
+  },
   MODE_EDIT: {
     value: 'mode_edit',
   },
@@ -159,7 +201,7 @@ export const ICONS = new Enum({
     value: 'star',
   },
   VERIFIED_USER: {
-    value: 'verfied_user',
+    value: 'verified_user',
   },
   VIEW_HEADLINE: {
     value: 'view_headline',
