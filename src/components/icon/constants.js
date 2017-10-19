@@ -14,6 +14,15 @@ export const ICONS = new Enum({
   ACCESS_TIME: {
     value: 'access_time',
   },
+  ADD: {
+    value: 'add',
+  },
+  MODE_EDIT: {
+    value: 'mode_edit',
+  },
+  LOOP: {
+    value: 'loop',
+  },
   ACCOUNT_BALANCE: {
     value: 'account_balance',
   },

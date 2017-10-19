@@ -29,6 +29,10 @@ export default function Icon(props: Props) {
 
   const {unstyledProps, style} = parseStyleProps(otherProps);
 
+  if (!ICONS.properties[children]) {
+    console.error(`UI ICON - ${children} is not a defined icon`);
+  }
+
   return (
     <i
       className={cx(

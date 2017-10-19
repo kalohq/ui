@@ -20,6 +20,7 @@ storiesOf(
             {icon}
           </Icon>
         ))}
+        <Icon>test</Icon>
       </span>
     );
   }
