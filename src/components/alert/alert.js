@@ -54,7 +54,7 @@ export default function Alert(props: TProps) {
             {TYPE_ICON_MAP[type]}
           </Icon>
         : null}
-      <Text color={TYPE_COLOR_MAP[type]}>
+      <Text color={TYPE_COLOR_MAP[type]} multiline={true}>
         {children}
       </Text>
     </Box>
