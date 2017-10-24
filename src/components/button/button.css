@@ -37,24 +37,24 @@
  * Primary
  */
 .primary {
-  background-color: var(--color-brand-green);
+  background-color: var(--green500);
   color: #fff;
 }
 
 .primary:not(.disabled):hover {
-  background-color: var(--color-brand-green-darker);
+  background-color: var(--green600);
 }
 
 /*
  * Secondary
  */
 .secondary {
-  background-color: var(--color-brand-blue);
+  background-color: var(--blue500);
   color: #fff;
 }
 
 .secondary:not(.disabled):hover {
-  background-color: var(--color-brand-blue-darker);
+  background-color: var(--blue600);
 }
 
 
@@ -63,60 +63,60 @@
  */
 .tertiary {
   background-color: #fff;
-  border-color: var(--color-grey-platinum);
+  border-color: var(--grey300);
   border-style: solid;
   border-width: 2px;
-  color: var(--color-grey-charcoal);
+  color: var(--navy700);
   transition: border-color 200ms var(--easing);
 }
 
 .tertiary:not(.disabled):hover {
-  border-color: var(--color-grey-silver);
-  background-color: var(--color-grey-snow);
+  border-color: var(--grey400);
+  background-color: var(--grey200);
 }
 
 .tertiary:not(.disabled).active {
-  background-color: var(--color-grey-platinum);
+  background-color: var(--grey300);
 }
 
 /*
 * Disabled
 */
 .disabled {
-  background-color: var(--color-grey-platinum);
-  color: var(--color-grey-silver);
+  background-color: var(--grey300);
+  color: var(--grey400);
   cursor: default;
 }
 
 .delete {
   border-style: solid;
   border-width: 2px;
-  border-color: var(--color-grey-platinum);
+  border-color: var(--pink500);
   background-color: #fff;
-  color: var(--color-ui-warning);
+  color: var(--pink500);
 }
 
 .delete:not(.disabled):hover {
-  background-color: var(--color-ui-warning);
-  border-color: var(--color-ui-warning);
+  background-color: var(--pink500);
+  border-color: var(--pink500);
   color: #fff;
 }
 
 .delete:not(.disabled):active {
-  background-color: var(--color-ui-warning-darker);
-  border-color: var(--color-ui-warning-darker);
+  background-color: var(--pink600);
+  border-color: var(--pink600);
   color: #fff;
 }
 
 .confirm {
-  background-color: var(--color-ui-success);
-  border: 2px solid var(--color-ui-success);
+  background-color: var(--green500);
+  border: 2px solid var(--green500);
   color: #fff;
 }
 
 .deny {
-  background-color: var(--color-ui-warning);
-  border: 2px solid var(--color-ui-warning);
+  background-color: var(--pink500);
+  border: 2px solid var(--pink500);
   color: #fff;
 }
 
@@ -291,7 +291,7 @@
 }
 
 .grouped .button.tertiary:hover {
-  border-color: var(--color-grey-platinum);
+  border-color: var(--grey300);
 }
 
 .flex {
@@ -338,18 +338,18 @@
 
 .loaded.success .button {
   transition-duration: 0.1s;
-  background: var(--color-ui-success) !important;
+  background: var(--green500) !important;
   color: #fff !important;
 }
 
 .loaded.success .button:hover {
   transition-duration: 0.1s;
-  background: var(--color-ui-success) !important;
+  background: var(--green500) !important;
   color: #fff !important;
 }
 
 .bordered.loaded.success:hover .button {
-  border: 1px solid var(--color-ui-success) !important;
+  border: 1px solid var(--green500) !important;
 }
 
 

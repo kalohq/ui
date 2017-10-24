@@ -9,7 +9,7 @@
 
 .radio {
   border-radius: 50%;
-  border: 1px solid var(--color-grey-silver);
+  border: 1px solid var(--grey500);
   background-color: #fff;
   background-position: center center;
   background-size: 80%;
@@ -17,20 +17,20 @@
 }
 
 .root:hover:not(.disabled):not(.readonly) .radio:not(.checked) {
-  border-color: var(--color-grey-slate);
+  border-color: var(--grey600);
 }
 
 .checked {
-  border-color: var(--color-brand-blue);
+  border-color: var(--blue500);
 }
 
 .disabled .radio {
   background-color: #fff;
-  border: 1px solid var(--color-grey-silver);
+  border: 1px solid var(--grey500);
 }
 
 .disabled .icon {
-  background-color: var(--color-grey-silver);
+  background-color: var(--grey500);
 }
 
 .icon {
@@ -40,6 +40,6 @@
   height: 100%;
   left: 0;
   top: 0;
-  background-color: var(--color-brand-blue);
+  background-color: var(--blue500);
   border: 3px solid #fff;
 }

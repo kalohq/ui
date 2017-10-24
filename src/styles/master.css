@@ -1,3 +1,5 @@
+@import '../constants/color.css';
+
 @font-face {
   font-family: 'WebFaktSoftPro';
   font-weight: 300;
@@ -53,8 +55,8 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: 'WebFaktSoftPro', sans-serif;
-  color: var(--color-grey-slate);
-  background-color: var(--color-grey-snow);
+  color: var(--navy600);
+  background-color: var(--grey200);
 }
 
 pre {

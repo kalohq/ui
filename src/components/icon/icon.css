@@ -115,23 +115,23 @@
 }
 
 .color-green {
-  color: var(--color-brand-green);
+  color: var(--green500);
 }
 
 .color-orange {
-  color: var(--color-brand-orange);
+  color: var(--orange500);
 }
 
 .color-red {
-  color: var(--color-brand-red);
+  color: var(--pink500);
 }
 
 .color-blue {
-  color: var(--color-brand-blue);
+  color: var(--blue500);
 }
 
 .color-purple {
-  color: var(--color-brand-purple);
+  color: var(--purple500);
 }
 
 .color-none {}
