@@ -25,6 +25,13 @@ storiesOf('Button', module)
     }
   )
   .addWithInfo(
+    'Delete Button',
+    'An action button for deleting/removing',
+    () => {
+      return <Button theme="delete">Remove freelancer</Button>;
+    }
+  )
+  .addWithInfo(
     'disabled state',
     'Buttons can be disabled by toggling the disabled state. This will prevent any user interaction with the button (onClick will also be disabled)',
     () => {

@@ -9,7 +9,7 @@
 
 .checkbox {
   border-radius: 3px;
-  border: 1px solid var(--color-grey-silver);
+  border: 1px solid var(--grey500);
   background-color: #fff;
   background-position: center center;
   background-size: 100%;
@@ -19,13 +19,13 @@
 }
 
 .root:hover:not(.readonly):not(.disabled) .checkbox:not(.checked) {
-  background-color: var(--color-grey-snow);
-  border-color: var(--color-grey-slate);
+  background-color: var(--grey200);
+  border-color: var(--navy600);
 }
 
 .checked {
-  background-color: var(--color-grey-snow);
-  border-color: var(--color-brand-blue);
+  background-color: var(--grey200);
+  border-color: var(--blue500);
   background-image: url('./assets/checked.svg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,8 +33,8 @@
 }
 
 .indeterminate {
-  background-color: var(--color-grey-snow);
-  border-color: var(--color-brand-blue);
+  background-color: var(--grey200);
+  border-color: var(--blue500);
   background-image: url('./assets/indeterminate.svg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -46,6 +46,6 @@
 }
 
 .disabled .checkbox {
-  background-color: var(--color-grey-snow);
-  border: 1px solid var(--color-grey-silver);
+  background-color: var(--grey200);
+  border: 1px solid var(--grey500);
 }

@@ -20,7 +20,7 @@
 }
 
 .border {
-  border-bottom: 1px solid var(--color-grey-platinum);
+  border-bottom: 1px solid var(--navy300);
 }
 
 .border.margin-small {
