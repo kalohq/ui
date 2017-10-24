@@ -4,19 +4,6 @@ import {Box} from '../../layout';
 
 import Alert, {AlertPopover} from '../';
 
-/**
- * Really hacky container just to get the example visible even though
- * positioning is awful. This is because storybook renders components
- * inside an absolute iframe.
- */
-function PopoverExampleContainer({children}) {
-  return (
-    <Box position="absolute" right={-500} top={-50}>
-      {children}
-    </Box>
-  );
-}
-
 storiesOf('Alert', module)
   .addWithInfo('Info Alert', 'An alert to display information', () => {
     return <Alert type="info">Information Alert</Alert>;
@@ -91,38 +78,34 @@ storiesOf('Alert', module)
   )
   .addWithInfo(
     'Popover Alert',
-    'A container to render alerts anchored absolutely to top right of screen',
+    'A container to render alerts anchored (fixed) to top right of screen',
     () => {
       return (
-        <PopoverExampleContainer>
-          <AlertPopover>
-            <Alert type="info">Information Alert</Alert>
-          </AlertPopover>
-        </PopoverExampleContainer>
+        <AlertPopover>
+          <Alert type="info">Information Alert</Alert>
+        </AlertPopover>
       );
     }
   )
   .addWithInfo(
     'Popover Alert (multiple)',
-    'A container to render multiple alerts anchored absolutely to top right of screen',
+    'A container to render multiple alerts anchored (fixed) to top right of screen',
     () => {
       return (
-        <PopoverExampleContainer>
-          <AlertPopover>
-            <Alert type="info" showIcon={true}>
-              Information Alert
-            </Alert>
-            <Alert type="warning" showIcon={true}>
-              Warning Alert
-            </Alert>
-            <Alert type="error" showIcon={true}>
-              Error Alert
-            </Alert>
-            <Alert type="confirmation" showIcon={true}>
-              Confirmation Alert
-            </Alert>
-          </AlertPopover>
-        </PopoverExampleContainer>
+        <AlertPopover>
+          <Alert type="info" showIcon={true}>
+            Information Alert
+          </Alert>
+          <Alert type="warning" showIcon={true}>
+            Warning Alert
+          </Alert>
+          <Alert type="error" showIcon={true}>
+            Error Alert
+          </Alert>
+          <Alert type="confirmation" showIcon={true}>
+            Confirmation Alert
+          </Alert>
+        </AlertPopover>
       );
     }
   );
