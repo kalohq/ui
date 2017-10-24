@@ -10,6 +10,8 @@ import type {HEADING_NUMBER, HEADING_HOVER} from './constants';
 
 import type {TEXT_COLOR, TEXT_SIZE} from '../text/constants';
 
+import COLORS from '../../constants/color';
+
 type Props = {
   children: React.Node,
   className?: string,
@@ -28,7 +30,7 @@ export default function Heading(props: Props) {
   const {
     children,
     number = 3,
-    color = 'charcoal',
+    color = COLORS.CHARCOAL,
     icon = false,
     size = 'small',
     iconAfter = false,
