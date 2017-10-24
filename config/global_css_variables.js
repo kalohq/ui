@@ -28,11 +28,18 @@ module.exports = {
 
     '--color-ui-success': '#3eb38a',
     '--color-ui-success-darker': '#298665',
+    '--color-ui-success-lighter': '#d9f0e8',
+
+    '--color-ui-error': '#e86070',
+    '--color-ui-error-darker': '#e86070',
+    '--color-ui-error-lighter': '#fdf5f6',
 
     '--color-ui-info': '#fdb81c',
     '--color-ui-info-darker': '#da9c32',
+    '--color-ui-info-lighter': '#e8f5fa',
 
     '--color-ui-warning': '#ea5f6e',
     '--color-ui-warning-darker': '#bf3e4c',
+    '--color-ui-warning-lighter': '#fff8ea',
   },
 };
