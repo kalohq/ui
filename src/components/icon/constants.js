@@ -212,4 +212,19 @@ export const ICONS = new Enum({
   WARNING: {
     value: 'warning',
   },
+  TWITTER: {
+    value: 'twitter',
+  },
+  INSTAGRAM: {
+    value: 'instagram',
+  },
+  LINKEDIN: {
+    value: 'linkedin',
+  },
+  WEBSITE: {
+    value: 'website',
+  },
+  YOUTUBE: {
+    value: 'youtube',
+  },
 });
