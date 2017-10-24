@@ -5,14 +5,14 @@ import {parseStyleProps} from 'utils/style';
 
 import styles from './icon.css';
 
-import type {ICON_SIZE, ICON_COLOR} from './constants';
+import type {ICON_SIZE} from './constants';
 
-import {ICONS, DEFAULT_SIZE, DEFAULT_COLOR} from './constants';
+import {ICONS, ICON_COLORS, DEFAULT_SIZE, DEFAULT_COLOR} from './constants';
 
 type Props = {
   children: string,
   size?: ICON_SIZE,
-  color?: ICON_COLOR,
+  color?: $Keys<typeof ICON_COLORS>,
   className?: string,
   onClick?: Function,
 };
@@ -46,7 +46,12 @@ export default function Icon(props: Props) {
       style={style}
       {...unstyledProps}
     >
-      <svg width={size} height={size} fill={color} aria-hidden="true">
+      <svg
+        width={size}
+        height={size}
+        fill={ICON_COLORS.properties[color].hex}
+        aria-hidden="true"
+      >
         <title>{children}</title>
         <use href={`#${children}`} />
       </svg>

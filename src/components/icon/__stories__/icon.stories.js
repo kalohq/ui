@@ -5,6 +5,7 @@ import {storiesOf} from '@storybook/react';
 import Icon from '../icon';
 
 import {ICONS} from '../constants';
+import COLORS from 'constants/color';
 
 storiesOf(
   'Icon',
@@ -16,7 +17,7 @@ storiesOf(
     return (
       <span>
         {ICONS.values.map(icon => (
-          <Icon key={icon} size={36}>
+          <Icon key={icon} color={COLORS.ORANGE} size={36}>
             {icon}
           </Icon>
         ))}

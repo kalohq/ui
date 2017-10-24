@@ -2,13 +2,13 @@
 
 import Enum from 'utils/enum';
 
-import type {TEXT_COLOR} from '../text/constants';
+import COLORS from '../../constants/color';
 
 export type ICON_SIZE = 12 | 14 | 16 | 18 | 20 | 23 | 24 | 26 | 36 | 48;
-export type ICON_COLOR = TEXT_COLOR;
+export const ICON_COLORS = COLORS;
 
 export const DEFAULT_SIZE = 16;
-export const DEFAULT_COLOR = 'currentColor';
+export const DEFAULT_COLOR = COLORS.CURRENTCOLOR;
 
 export const ICONS = new Enum({
   ACCESS_TIME: {
@@ -226,5 +226,11 @@ export const ICONS = new Enum({
   },
   YOUTUBE: {
     value: 'youtube',
+  },
+  PHONE: {
+    value: 'phone',
+  },
+  FOLDER_SHARED: {
+    value: 'folder_shared',
   },
 });
