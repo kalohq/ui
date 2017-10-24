@@ -10,8 +10,6 @@ import styles from './text.css';
 import type {
   TEXT_WEIGHT,
   TEXT_SIZE,
-  TEXT_COLOR,
-  TEXT_HOVER_COLOR,
   TEXT_MARGIN,
   TEXT_ALIGN,
 } from './constants';
@@ -23,13 +21,15 @@ import {
   DEFAULT_SIZE,
   DEFAULT_MARGIN,
   DEFAULT_ALIGN,
+  TEXT_COLOR,
+  TEXT_HOVER_COLOR,
 } from './constants';
 
 type textProps = {
   weight?: TEXT_WEIGHT,
   size?: TEXT_SIZE,
-  color?: TEXT_COLOR,
-  hoverColor?: TEXT_HOVER_COLOR,
+  color?: $Keys<typeof TEXT_COLOR>,
+  hoverColor?: $Keys<typeof TEXT_HOVER_COLOR>,
   margin?: TEXT_MARGIN,
   align?: TEXT_ALIGN,
   domElement?: Function | string,
@@ -86,7 +86,7 @@ export default function Text(props: textProps) {
           [styles.root]: true,
           [styles[`weight-${weight}`]]: true,
           [styles[`size-${size}`]]: true,
-          [styles[`color-${color}`]]: true,
+          [styles[`color-${TEXT_COLOR.properties[color].value}`]]: true,
           [styles[`hover-color-${hoverColor}`]]: true,
           [styles[`margin-${margin}`]]: true,
           [styles[`align-${align}`]]: align !== 'none',

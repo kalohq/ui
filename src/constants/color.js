@@ -18,6 +18,14 @@ const COLORS = new Enum({
     value: 'pink',
     hex: '#EA5F6E',
   },
+  RED: {
+    value: 'red',
+    hex: '#EA5F6E',
+  },
+  BLUE: {
+    value: 'blue',
+    hex: '#54C3DB',
+  },
   ORANGE: {
     value: 'orange',
     hex: '#FDB81C',
