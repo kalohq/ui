@@ -42,6 +42,22 @@ storiesOf('Button', module)
       );
     }
   )
+  .addWithInfo(
+    'disabled and success state',
+    'Sometimes you want to trigger the success animation while keeping the button disabled/unclickable',
+    () => {
+      return (
+        <Button
+          theme="tertiary"
+          disabled={true}
+          success={true}
+          onClick={myClickFunction}
+        >
+          Get Started
+        </Button>
+      );
+    }
+  )
   .addWithInfo('Secondary Button', 'Used for supporting actions.', () => {
     return <Button theme="secondary">Save Changes</Button>;
   })

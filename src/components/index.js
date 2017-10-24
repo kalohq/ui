@@ -12,4 +12,6 @@ export {default as LoadingSpinner} from './loading-spinner';
 export * from './skeleton';
 export {default as Radio} from './radio';
 
+export {default as Alert, AlertPopover} from './alert';
+
 export {Box, Flex, Block, Inline, InlineBlock, InlineFlex, A} from './layout';

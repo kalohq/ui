@@ -1,0 +1,21 @@
+/* Heading */
+
+.root {
+  border-radius: 4px;
+}
+
+.type-info {
+  background: var(--color-ui-info-lighter);
+}
+
+.type-confirmation {
+  background: var(--color-ui-success-lighter);
+}
+
+.type-error {
+  background: var(--color-ui-error-lighter);
+}
+
+.type-warning {
+  background: var(--color-ui-warning-lighter);
+}

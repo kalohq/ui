@@ -7,6 +7,8 @@ import Text from '../text';
 import type {CHECKBOX_SIZE} from './constants';
 import {CHECKBOX_SIZES} from './constants';
 
+import {TEXT_SIZE} from '../text/constants';
+
 import styles from './checkbox.css';
 
 type CheckboxProps = {
@@ -57,7 +59,11 @@ export default function Checkbox(props: CheckboxProps) {
         {...otherProps}
       />
       {label ? (
-        <Text marginLeft={10} size="small" color="grey">
+        <Text
+          marginLeft={10}
+          size={size === 'small' ? TEXT_SIZE.EXTRA_SMALL : TEXT_SIZE.SMALL}
+          color="grey"
+        >
           {label}
         </Text>
       ) : null}

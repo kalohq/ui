@@ -73,7 +73,6 @@ export default class Button extends PureComponent {
     name: PropTypes.string,
     type: PropTypes.string,
     mayGetLong: PropTypes.bool,
-    waitingForData: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -86,7 +85,6 @@ export default class Button extends PureComponent {
     loneIcon: false,
     loadedTimeout: 600,
     component: Box,
-    waitingForData: false,
   };
 
   constructor() {
@@ -142,7 +140,6 @@ export default class Button extends PureComponent {
       middle,
       style,
       mayGetLong,
-      waitingForData,
       loadedTimeout: _IGNORED,
       readonly: __IGNORED,
       editable: ___IGNORED,
@@ -159,6 +156,17 @@ export default class Button extends PureComponent {
       ICON_SIZE[size]
     );
 
+    const handleClick = event => {
+      // Prevent form submit events propagating if button is mid-request
+      if (loading || disabled) {
+        event.preventDefault();
+        return;
+      }
+      if (onClick) {
+        onClick(event);
+      }
+    };
+
     return (
       <Component
         style={style}
@@ -169,7 +177,7 @@ export default class Button extends PureComponent {
             [styles.spacing]: !!spacing,
             [styles.wide]: wide,
             [styles.middle]: middle,
-            [styles.loading]: loading || waitingForData,
+            [styles.loading]: loading,
             [styles.success]: success,
             [styles.loaded]: loaded,
             [styles.flex]: flex,
@@ -177,7 +185,7 @@ export default class Button extends PureComponent {
           },
           className
         )}
-        onClick={waitingForData || disabled ? undefined : onClick}
+        onClick={handleClick}
         {...otherProps}
       >
         <Tag
@@ -186,7 +194,7 @@ export default class Button extends PureComponent {
           type={type}
           className={cx({
             [styles.button]: true,
-            [styles.disabled]: waitingForData || disabled || loading,
+            [styles.disabled]: success ? false : disabled || loading,
             [styles[theme]]: !!theme,
             [styles.active]: !!active,
             [styles[size]]: true,
