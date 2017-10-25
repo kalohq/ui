@@ -93,29 +93,30 @@ storiesOf('Alert', module)
     () => {
       return (
         <WithIncrement>
-          {count =>
+          {count => (
             <AlertPopover topOffset={32}>
-              {count < 5
-                ? <Alert type="info" showIcon={true}>
-                    Information Alert
-                  </Alert>
-                : null}
-              {count > 0 && count < 6
-                ? <Alert type="warning" showIcon={true}>
-                    Warning Alert
-                  </Alert>
-                : null}
-              {count > 1
-                ? <Alert type="error" showIcon={true}>
-                    Error Alert
-                  </Alert>
-                : null}
-              {count > 2
-                ? <Alert type="confirmation" showIcon={true}>
-                    Confirmation Alert
-                  </Alert>
-                : null}
-            </AlertPopover>}
+              {count < 5 ? (
+                <Alert type="info" showIcon={true}>
+                  Information Alert
+                </Alert>
+              ) : null}
+              {count > 0 && count < 6 ? (
+                <Alert type="warning" showIcon={true}>
+                  Warning Alert
+                </Alert>
+              ) : null}
+              {count > 1 ? (
+                <Alert type="error" showIcon={true}>
+                  Error Alert
+                </Alert>
+              ) : null}
+              {count > 2 ? (
+                <Alert type="confirmation" showIcon={true}>
+                  Confirmation Alert
+                </Alert>
+              ) : null}
+            </AlertPopover>
+          )}
         </WithIncrement>
       );
     }

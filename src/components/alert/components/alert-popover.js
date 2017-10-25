@@ -28,11 +28,11 @@ export default function AlertPopover(props: TProps) {
       {React.Children.map(
         children,
         child =>
-          child
-            ? <Box marginBottom={8}>
-                {React.cloneElement(child, {justifyContent: 'left'})}
-              </Box>
-            : null
+          child ? (
+            <Box marginBottom={8}>
+              {React.cloneElement(child, {justifyContent: 'left'})}
+            </Box>
+          ) : null
       )}
     </CSSTransitionGroup>
   );

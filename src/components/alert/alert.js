@@ -49,11 +49,11 @@ export default function Alert(props: TProps) {
       justifyContent={justifyContent}
       {...otherProps}
     >
-      {showIcon
-        ? <Icon color={TYPE_COLOR_MAP[type]} marginRight={8}>
-            {TYPE_ICON_MAP[type]}
-          </Icon>
-        : null}
+      {showIcon ? (
+        <Icon color={TYPE_COLOR_MAP[type]} marginRight={8}>
+          {TYPE_ICON_MAP[type]}
+        </Icon>
+      ) : null}
       <Text color={TYPE_COLOR_MAP[type]} multiline={true}>
         {children}
       </Text>
