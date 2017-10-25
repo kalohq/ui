@@ -81,7 +81,7 @@ storiesOf('Alert', module)
     'A container to render alerts anchored (fixed) to top right of screen',
     () => {
       return (
-        <AlertPopover>
+        <AlertPopover topOffset={32}>
           <Alert type="info">Information Alert</Alert>
         </AlertPopover>
       );
@@ -92,20 +92,42 @@ storiesOf('Alert', module)
     'A container to render multiple alerts anchored (fixed) to top right of screen',
     () => {
       return (
-        <AlertPopover>
-          <Alert type="info" showIcon={true}>
-            Information Alert
-          </Alert>
-          <Alert type="warning" showIcon={true}>
-            Warning Alert
-          </Alert>
-          <Alert type="error" showIcon={true}>
-            Error Alert
-          </Alert>
-          <Alert type="confirmation" showIcon={true}>
-            Confirmation Alert
-          </Alert>
-        </AlertPopover>
+        <WithIncrement>
+          {count => (
+            <AlertPopover topOffset={32}>
+              {count < 5 ? (
+                <Alert type="info" showIcon={true}>
+                  Information Alert
+                </Alert>
+              ) : null}
+              {count > 0 && count < 6 ? (
+                <Alert type="warning" showIcon={true}>
+                  Warning Alert
+                </Alert>
+              ) : null}
+              {count > 1 ? (
+                <Alert type="error" showIcon={true}>
+                  Error Alert
+                </Alert>
+              ) : null}
+              {count > 2 ? (
+                <Alert type="confirmation" showIcon={true}>
+                  Confirmation Alert
+                </Alert>
+              ) : null}
+            </AlertPopover>
+          )}
+        </WithIncrement>
       );
     }
   );
+
+class WithIncrement extends React.Component {
+  state = {count: 0};
+  componentDidMount() {
+    setInterval(() => this.setState(state => ({count: state.count + 1})), 1000);
+  }
+  render() {
+    return this.props.children(this.state.count);
+  }
+}
