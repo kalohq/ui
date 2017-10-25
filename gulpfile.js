@@ -1,10 +1,6 @@
 const gulp = require('gulp');
-
 const postcss = require('gulp-postcss');
-const cssnext = require('postcss-cssnext');
 const babel = require('gulp-babel');
-
-const cssVariables = require('./src/constants/color.js');
 
 /**
  * Compile component CSS. We also convert variables here
@@ -13,17 +9,7 @@ const cssVariables = require('./src/constants/color.js');
 gulp.task('css', () => {
   return gulp
     .src('./src/components/**/*.css')
-    .pipe(
-      postcss([
-        cssnext({
-          features: {
-            customProperties: {
-              variables: cssVariables.color,
-            },
-          },
-        }),
-      ])
-    )
+    .pipe(postcss())
     .pipe(gulp.dest('lib'));
 });
 

@@ -30,4 +30,12 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new Webpack.LoaderOptionsPlugin({
+      test: /\.css$/,
+      options: {
+        postcss: [],
+      },
+    }),
+  ],
 };
