@@ -5,17 +5,17 @@
 }
 
 .type-info {
-  background: var(--color-ui-info-lighter);
+  background: var(--blue300);
 }
 
 .type-confirmation {
-  background: var(--color-ui-success-lighter);
+  background: var(--green300);
 }
 
 .type-error {
-  background: var(--color-ui-error-lighter);
+  background: var(--pink300);
 }
 
 .type-warning {
-  background: var(--color-ui-warning-lighter);
+  background: var(--orange300);
 }
