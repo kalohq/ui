@@ -9,6 +9,9 @@ module.exports = {
         },
       },
     },
-    cssnano: {},
+    cssnano: {
+      normalizeUrl: false,
+      discardEmpty: false,
+    },
   },
 };
