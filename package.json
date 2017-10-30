@@ -1,13 +1,15 @@
 {
   "name": "@kalo/ui",
-  "version": "0.6.1",
+  "version": "0.6.2-0",
   "description": "A library of React components",
   "repository": {
     "type": "git",
     "url": "https://github.com/kalohq/ui"
   },
   "main": "lib/index.js",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "start": "npm run storybook:start",
     "storybook": "npm run storybook:start",
@@ -16,14 +18,15 @@
     "compile": "gulp build-production",
     "test": "jest",
     "dist": "rimraf lib && npm run compile",
-    "copy-flow":
-      "flow-copy-source src/components lib --ignore '{index.js,**/__tests__/*,**/__stories__/*}'",
+    "copy-flow": "flow-copy-source src/components lib --ignore '{index.js,**/__tests__/*,**/__stories__/*}'",
     "typecheck": "flow",
     "lint": "eslint src",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": ["eslint"]
+    "*.js": [
+      "eslint"
+    ]
   },
   "author": "The Kalo Team",
   "license": "ISC",
@@ -103,17 +106,27 @@
     "react-pure-render": "^1.0.2"
   },
   "babel": {
-    "presets": ["es2015", "stage-2", "react"],
-    "ignore": ["__stories__"]
+    "presets": [
+      "es2015",
+      "stage-2",
+      "react"
+    ],
+    "ignore": [
+      "__stories__"
+    ]
   },
   "jest": {
-    "modulePaths": ["src/core", "src"],
+    "modulePaths": [
+      "src/core",
+      "src"
+    ],
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|html)$":
-        "<rootDir>/__mocks__/file-mock.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|html)$": "<rootDir>/__mocks__/file-mock.js",
       "\\.(css|less)$": "identity-obj-proxy"
     },
-    "testMatch": ["**/__tests__/**/?(*.)(spec|test).js?(x)"],
+    "testMatch": [
+      "**/__tests__/**/?(*.)(spec|test).js?(x)"
+    ],
     "coverageDirectory": "./coverage/unit",
     "collectCoverage": false,
     "collectCoverageFrom": [
