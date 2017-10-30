@@ -63,7 +63,7 @@
  */
 .tertiary {
   background-color: #fff;
-  border-color: var(--grey300);
+  border-color: var(--color-grey-platinum);
   border-style: solid;
   border-width: 2px;
   color: var(--navy700);
@@ -76,14 +76,14 @@
 }
 
 .tertiary:not(.disabled).active {
-  background-color: var(--grey300);
+  background-color: var(--color-grey-platinum);
 }
 
 /*
 * Disabled
 */
 .disabled {
-  background-color: var(--grey300);
+  background-color: var(--color-grey-platinum);
   color: var(--grey400);
   cursor: default;
 }
