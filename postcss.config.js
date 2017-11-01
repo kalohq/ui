@@ -1,4 +1,4 @@
-const cssVariables = require('./src/constants/color');
+const cssVariables = require('./src/.tokens.json');
 
 module.exports = {
   plugins: {

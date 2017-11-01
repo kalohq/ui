@@ -1,6 +1,8 @@
 const gulp = require('gulp');
 const postcss = require('gulp-postcss');
 const babel = require('gulp-babel');
+const theo = require('gulp-theo');
+const header = require('gulp-header');
 
 /**
  * Compile component CSS. We also convert variables here
@@ -33,18 +35,55 @@ gulp.task('js-components', () =>
 );
 
 /**
- * Compile JS constants down to ES5
+ * Compile design token configuration
  */
-gulp.task('js-constants', () =>
+gulp.task('tokens:css', () =>
   gulp
-    .src('src/constants/**/*.js')
+    .src('config/.tokens.yml')
     .pipe(
-      babel({
-        presets: ['es2015', 'stage-2'],
+      theo.plugin({
+        transform: {type: 'web'},
+        format: {type: 'custom-properties.css'},
       })
     )
-    .pipe(gulp.dest('lib/constants'))
+    .pipe(
+      header(
+        '/* This is a generated file. Update in `/config/.tokens.yml` and use `gulp tokens` to regen! */'
+      )
+    )
+    .pipe(gulp.dest('src'))
 );
+
+gulp.task('tokens:json', () =>
+  gulp
+    .src('config/.tokens.yml')
+    .pipe(
+      theo.plugin({
+        transform: {type: 'web'},
+        format: {type: 'json'},
+      })
+    )
+    .pipe(gulp.dest('src'))
+);
+
+gulp.task('tokens:module', () =>
+  gulp
+    .src('config/.tokens.yml')
+    .pipe(
+      theo.plugin({
+        transform: {type: 'web'},
+        format: {type: 'module.js'},
+      })
+    )
+    .pipe(
+      header(
+        '/* This is a generated file. Update in `/config/.tokens.yml` and use `gulp tokens` to regen! */'
+      )
+    )
+    .pipe(gulp.dest('src'))
+);
+
+gulp.task('tokens', ['tokens:css', 'tokens:json', 'tokens:module']);
 
 /**
  * Copy component assets (font files, images)
@@ -60,9 +99,4 @@ gulp.task('copy-files', () =>
 /**
  * General tasks
  */
-gulp.task('build-production', [
-  'css',
-  'js-components',
-  'js-constants',
-  'copy-files',
-]);
+gulp.task('build-production', ['tokens', 'css', 'js-components', 'copy-files']);
