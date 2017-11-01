@@ -83,7 +83,24 @@ gulp.task('tokens:module', () =>
     .pipe(gulp.dest('src'))
 );
 
-gulp.task('tokens', ['tokens:css', 'tokens:json', 'tokens:module']);
+gulp.task('tokens:raw', () =>
+  gulp
+    .src('config/.tokens.yml')
+    .pipe(
+      theo.plugin({
+        transform: {type: 'web'},
+        format: {type: 'raw.json'},
+      })
+    )
+    .pipe(gulp.dest('src'))
+);
+
+gulp.task('tokens', [
+  'tokens:css',
+  'tokens:json',
+  'tokens:module',
+  'tokens:raw',
+]);
 
 /**
  * Copy component assets (font files, images)
