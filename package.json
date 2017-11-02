@@ -14,7 +14,7 @@
     "start": "npm run storybook:start",
     "storybook": "npm run storybook:start",
     "storybook:start": "start-storybook -p 6006",
-    "storybook:build": "build-storybook -c .storybook -o docs",
+    "storybook:build": "build-storybook -c .storybook -o storybook-docs",
     "compile": "gulp build-production",
     "test": "jest",
     "dist": "rimraf lib && npm run compile",
