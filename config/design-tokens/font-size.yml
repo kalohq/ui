@@ -1,0 +1,20 @@
+global:
+  type: 'font-size'
+  category: 'typography'
+props:
+  FONT_SIZE_HEADING_LARGE:
+    value: 32
+  FONT_SIZE_HEADING_MEDIUM:
+    value: 24
+  FONT_SIZE_HEADING_SMALL:
+    value: 16
+  FONT_SIZE_HEADING_X_SMALL:
+    value: 12
+  FONT_SIZE_TEXT_LARGE:
+    value: 18
+  FONT_SIZE_TEXT_MEDIUM:
+    value: 16
+  FONT_SIZE_TEXT_SMALL:
+    value: 14
+  FONT_SIZE_TEXT_X_SMALL:
+    value: 12
