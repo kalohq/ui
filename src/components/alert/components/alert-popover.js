@@ -6,10 +6,11 @@ import CSSTransitionGroup from 'react-addons-css-transition-group';
 type TProps = {
   children: React$Element<*>,
   topOffset?: number,
+  zIndex?: number,
 };
 
 export default function AlertPopover(props: TProps) {
-  const {children, topOffset = 0} = props;
+  const {children, topOffset = 0, zIndex = 999} = props;
 
   return (
     <CSSTransitionGroup
@@ -24,6 +25,7 @@ export default function AlertPopover(props: TProps) {
       top={topOffset + 16}
       maxWidth={400}
       alignItems="flex-end"
+      zIndex={zIndex}
     >
       {React.Children.map(
         children,
