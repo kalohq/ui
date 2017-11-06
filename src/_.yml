@@ -1,0 +1,76 @@
+/* This is a generated file. Update in `/config/.tokens.yml` and use `gulp tokens` to regen! */global:
+  type: color
+  category: colors
+props:
+  pink300:
+    value: '#FBDFE2'
+  pink400:
+    value: '#FDB3C8'
+  pink500:
+    value: '#EA5F6E'
+  pink600:
+    value: '#E05867'
+  pink700:
+    value: '#C34A57'
+  orange300:
+    value: '#FFEDB4'
+  orange400:
+    value: '#FFCE5E'
+  orange500:
+    value: '#FDB81C'
+  orange600:
+    value: '#F6AF0D'
+  orange700:
+    value: '#D89118'
+  purple300:
+    value: '#e8e2f2'
+  purple400:
+    value: '#9F81DA'
+  purple500:
+    value: '#8A70BD'
+  purple600:
+    value: '#775FA8'
+  purple700:
+    value: '#604e83'
+  green300:
+    value: '#D8F0E8'
+  green400:
+    value: '#4FD2A4'
+  green500:
+    value: '#3eb38a'
+  green600:
+    value: '#38A07C'
+  green700:
+    value: '#298665'
+  blue300:
+    value: '#C1F4FF'
+  blue400:
+    value: '#65D2EA'
+  blue500:
+    value: '#54C3DB'
+  blue600:
+    value: '#4DB8CF'
+  blue700:
+    value: '#2BA7C2'
+  navy300:
+    value: '#F9FAFC'
+  navy400:
+    value: '#C6C7D8'
+  navy500:
+    value: '#93A6C1'
+  navy600:
+    value: '#546789'
+  navy700:
+    value: '#374561'
+  grey200:
+    value: '#F9FAFC'
+  grey300:
+    value: '#EEF4FA'
+  grey400:
+    value: '#D0D8DF'
+  grey500:
+    value: '#B0BAC3'
+  grey600:
+    value: '#89929B'
+  grey700:
+    value: '#707D8A'
