@@ -22,11 +22,8 @@ type Props = {
   },
   children?: React.Node,
   open?: boolean,
-  zIndex?: number,
   origin?: string,
-  anchor?: string,
   root?: Object,
-  sticky?: Object,
   paper?: Object,
   onRequestClose?: Function,
   heading?: string,
@@ -35,6 +32,8 @@ type Props = {
 };
 
 export default class PaperMenu extends PureComponent {
+  onWindowClick: Function;
+
   static defaultProps = {
     children: '',
     origin: 'top left',
@@ -59,7 +58,7 @@ export default class PaperMenu extends PureComponent {
     }
   }
 
-  componentWillReceiveProps(newProps) {
+  componentWillReceiveProps(newProps: Props) {
     // We only bind a window click event handler while the menu is open.
     // We also wait for the animation to finish. This means that multiple
     // paper menu’s will not stay open at the same time.
@@ -74,7 +73,7 @@ export default class PaperMenu extends PureComponent {
     }
   }
 
-  onWindowClick(event) {
+  onWindowClick(event: SyntheticEvent<*>) {
     if (
       this.props.open &&
       this.props.closeOnOutsideClick &&
@@ -86,15 +85,11 @@ export default class PaperMenu extends PureComponent {
 
   render() {
     const {
-      offset,
-      anchor,
       open,
       children,
-      zIndex,
       origin,
       paper,
       root,
-      sticky,
       heading,
       optionIcons,
     } = this.props;

@@ -22,6 +22,37 @@ storiesOf(
   }
 );
 
+export class ExampleButton extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      open: false,
+    };
+  }
+
+  toggle() {
+    this.setState({
+      open: !this.state.open,
+    });
+  }
+
+  render() {
+    return (
+      <ButtonDropdown
+        onClick={this.toggle}
+        open={this.state.open}
+        onRequestClose={this.toggle}
+        size="large"
+        selectItems={this.props.selectItems}
+      >
+        {this.props.children}
+      </ButtonDropdown>
+    );
+  }
+}
+
 export class Example extends React.Component {
   constructor(props) {
     super(props);
@@ -42,10 +73,25 @@ export class Example extends React.Component {
     return (
       <Box padding={48} style={{backgroundColor: 'var(--navy300)'}}>
         <ButtonGroup>
-          <ButtonDropdown
-            onClick={this.toggle}
-            open={this.state.open}
-            size="medium"
+          <ExampleButton
+            selectItems={[
+              {
+                title: 'All',
+                onClick: myClickFunction,
+              },
+              {
+                title: 'Pending',
+                onClick: myClickFunction,
+              },
+              {
+                title: 'Approved',
+                onClick: myClickFunction,
+              },
+            ]}
+          >
+            Bulk Select Options
+          </ExampleButton>
+          <ExampleButton
             selectItems={[
               {
                 title: 'Approve invoice',
@@ -57,21 +103,8 @@ export class Example extends React.Component {
               },
             ]}
           >
-            Bulk Actions
-          </ButtonDropdown>
-          <ButtonDropdown
-            onClick={this.toggle}
-            open={this.state.open}
-            size="medium"
-            selectItems={[
-              {
-                title: 'Approve invoice',
-                onClick: myClickFunction,
-              },
-            ]}
-          >
-            4 Selected
-          </ButtonDropdown>
+            Another
+          </ExampleButton>
         </ButtonGroup>
       </Box>
     );

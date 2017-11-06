@@ -1,0 +1,56 @@
+.root {
+  background-color: var(--color-white);
+  cursor: pointer;
+  border-bottom: 1px solid var(--grey300);
+  transition: all 0.2s ease-in;
+  color: inherit;
+  padding: 4px 16px;
+  user-select: none;
+}
+
+.root:not(.disabled):hover {
+  background-color: var(--grey300);
+}
+
+.disabled {
+  cursor: default;
+}
+
+.root:not(.static):not(.disabled) {
+  border-left: 2px solid transparent;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.active {
+  background: var(--blue500);
+  color: #fff;
+  padding-top: 0;
+}
+
+.highlighted {
+  background: var(--color-grey-snow);
+  color: var(--color-brand-blue);
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--navy700);
+}
+
+.content > * {
+  margin-right: 10px !important;
+}
+
+.content > *:last-child {
+  margin-right: 0px !important;
+}

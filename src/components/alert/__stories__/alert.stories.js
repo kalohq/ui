@@ -123,7 +123,10 @@ storiesOf('Alert', module)
   );
 
 class WithIncrement extends React.Component {
-  state = {count: 0};
+  constructor() {
+    super();
+    this.state = {count: 0};
+  }
   componentDidMount() {
     setInterval(() => this.setState(state => ({count: state.count + 1})), 1000);
   }

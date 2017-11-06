@@ -10,7 +10,7 @@
   align-items: center;
   border: none;
   cursor: pointer;
-  display: inline-block;
+  display: inline-flex;
   transition: background 0.2s ease, color 0.1s linear;
   align-items: center;
   vertical-align: middle;
@@ -19,17 +19,9 @@
   border-style: solid;
   border-width: 2px;
   color: var(--navy700);
+  font-weight: 500;
+  font-size: 14px;
   transition: border-color 200ms var(--easing);
-}
-
-
-.root:not(.disabled):hover {
-  border-color: var(--grey400);
-  background-color: var(--grey200);
-}
-
-.root:not(.disabled).active {
-  background-color: var(--grey300);
 }
 
 .root + .root {
@@ -53,7 +45,7 @@
 
 .size-medium {
   height: var(--medium);
-  padding: 2px calc(var(--medium) / 2);
+  padding: 4px calc(var(--medium) / 2);
 }
 
 .size-large {
@@ -66,13 +58,15 @@
   padding: 0 calc(var(--x-large) / 2);
 }
 
-.theme-tertiary:not(.disabled):hover {
+.theme-tertiary:not(.disabled):not(.active):hover {
   border-color: var(--grey400);
   background-color: var(--grey200);
 }
 
 .theme-tertiary:not(.disabled).active {
-  background-color: var(--grey300);
+  background-color: var(--navy500);
+  border-color: var(--navy600);
+  color: #fff;
 }
 
 .theme-primary {
@@ -80,7 +74,7 @@
   color: #fff;
 }
 
-.theme-primary:not(.disabled):hover {
+.theme-primary:not(.disabled):not(.active):hover {
   background-color: var(--green600);
 }
 
@@ -89,13 +83,13 @@
   color: #fff;
 }
 
-.theme-secondary:not(.disabled):hover {
+.theme-secondary:not(.disabled):not(.active):hover {
   background-color: var(--blue600);
 }
 
 .menu {
   position: absolute;
   top: calc(100% + 2px);
-  width: calc(100% + 4px);
+  min-width: calc(100% + 4px);
   left: -2px;
 }

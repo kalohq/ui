@@ -15,7 +15,7 @@ storiesOf(
 
 const InnerLayoutForDemo = props => (
   <Flex flexDirection="column">
-    <Text size="small" color="silver">
+    <Text size="medium" color="slate">
       {props.children}
     </Text>
   </Flex>
@@ -39,17 +39,12 @@ export class Example extends React.Component {
 
   render() {
     return (
-      <Box
-        width={600}
-        height={500}
-        padding={48}
-        style={{backgroundColor: 'var(--grey300)'}}
-      >
+      <Box width={600} height={500} padding={48}>
         <Button size="large" onClick={this.toggle}>
           Toggle dropdown
         </Button>
         <PaperMenu
-          origin="top right"
+          origin="top left"
           anchor="left"
           offset={{x: 0, y: 0}}
           sticky={{width: '300px'}}

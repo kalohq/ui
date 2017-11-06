@@ -3,7 +3,6 @@ import React from 'react';
 import cx from 'classnames';
 import type {List} from 'immutable';
 
-import Text from '../text';
 import Icon from '../icon';
 import PaperMenu, {PaperMenuItem} from '../paper-menu';
 
@@ -16,9 +15,11 @@ type Props = {
   selectItems: List<{
     title: string,
     onClick?: Function,
+    disabled?: boolean,
   }>,
   open?: boolean,
   onClick?: Function,
+  onRequestClose?: Function,
 };
 
 export default function ButtonDropdown(props: Props) {
@@ -29,6 +30,7 @@ export default function ButtonDropdown(props: Props) {
     selectItems,
     open,
     onClick,
+    onRequestClose,
   } = props;
 
   return (
@@ -37,16 +39,23 @@ export default function ButtonDropdown(props: Props) {
         [styles.root]: true,
         [styles[`size-${size}`]]: true,
         [styles[`theme-${theme}`]]: true,
+        [styles.active]: open,
       })}
       onClick={onClick}
     >
-      <Text weight="semi-bold">{children}</Text>
-      {selectItems ? <Icon>keyboard_arrow_down</Icon> : null}
+      {children}
+      {selectItems ? (
+        <Icon marginLeft={8} marginRight={-8} size={20}>
+          keyboard_arrow_down
+        </Icon>
+      ) : null}
       {selectItems ? (
         <div className={styles.menu}>
-          <PaperMenu open={open} origin="top">
+          <PaperMenu open={open} origin="top" onRequestClose={onRequestClose}>
             {selectItems.map(item => (
-              <PaperMenuItem key={item.title}>{item.title}</PaperMenuItem>
+              <PaperMenuItem disabled={item.disabled} key={item.title}>
+                {item.title}
+              </PaperMenuItem>
             ))}
           </PaperMenu>
         </div>
