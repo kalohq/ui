@@ -16,7 +16,6 @@ type Props = {
   elevation?: number,
   hoverElevation?: number,
   className?: string | Object,
-  component?: React.Node | string,
   opaque?: boolean,
   wireframe?: boolean,
   onClick?: Function,
@@ -36,7 +35,6 @@ export default function Paper(props: Props) {
     elevation = 1,
     hoverElevation = 1,
     className,
-    component = Box,
     rounded = true,
     opaque,
     wireframe,
@@ -46,7 +44,6 @@ export default function Paper(props: Props) {
 
   const styleProps = parseStyleProps(otherProps);
 
-  const Component = component;
   const zDepth = Math.min(elevation, 5);
   const hoverZDept = Math.min(hoverElevation, 5);
 
@@ -67,8 +64,8 @@ export default function Paper(props: Props) {
   );
 
   return (
-    <Component className={_classNames} {...styleProps.style} onClick={onClick}>
+    <Box className={_classNames} {...styleProps.style} onClick={onClick}>
       {children}
-    </Component>
+    </Box>
   );
 }

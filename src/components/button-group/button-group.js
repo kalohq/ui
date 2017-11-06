@@ -12,7 +12,7 @@ import styles from './button-group.css';
  */
 
 type Props = {
-  children: React.Node,
+  children: React$Element<*>,
   flex?: boolean,
   bordered?: boolean,
   wide?: boolean,
@@ -44,9 +44,9 @@ export default function ButtonGroup(props: Props) {
       {children ? (
         React.Children.map(
           children,
-          el =>
-            el
-              ? React.cloneElement(el, {
+          child =>
+            child
+              ? React.cloneElement(child, {
                   grouped: !spacing,
                   spacing: !!spacing,
                   reverse,

@@ -9,7 +9,7 @@ import styles from './paper-toolbar.css';
  * @summary A basic toolbar container to display at the top of paper
  */
 
-export function PaperToolbar(props) {
+export function PaperToolbar(props: {children?: React.Node}) {
   const {children} = props;
 
   return (

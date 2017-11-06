@@ -39,14 +39,16 @@ export default function PaperMenuItem(props: Props) {
     ...otherProps
   } = props;
 
-  const _classNames = cx({
-    [styles.root]: true,
-    [styles.highlighted]: highlighted,
-    [styles.active]: active,
-    [styles.success]: success,
-    [styles.disabled]: disabled,
-    [className]: !!className,
-  });
+  const _classNames = cx(
+    {
+      [styles.root]: true,
+      [styles.highlighted]: highlighted,
+      [styles.active]: active,
+      [styles.success]: success,
+      [styles.disabled]: disabled,
+    },
+    className
+  );
 
   return (
     <Box
