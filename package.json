@@ -11,7 +11,6 @@
     "lib"
   ],
   "scripts": {
-    "start": "npm run storybook:start",
     "storybook": "npm run storybook:start",
     "storybook:start": "start-storybook -p 6006",
     "storybook:build": "build-storybook -c .storybook -o storybook-docs",
@@ -23,8 +22,8 @@
     "lint": "eslint src",
     "precommit": "lint-staged",
     "docs:dev": "npm run docs:generate && node docs/server.js",
-    "docs:build": "next build docs",
-    "docs:start": "next start docs",
+    "build": "next build docs",
+    "start": "npm run docs:generate && node docs/server.js",
     "docs:generate": "gulp docs:markdown && react-docgen src/components/button/button.js --out docs/content/component-props.json --ignore [__tests__,__stories__]"
   },
   "lint-staged": {
