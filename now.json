@@ -1,5 +1,5 @@
 {
   "name": "kalo-ui",
   "description": "Kalo UI",
-  "files": ["src", "docs", "config"]
+  "files": ["src", "docs", "config", ".babelrc", "gulpfile.js", "postcss.config.js"]
 }
