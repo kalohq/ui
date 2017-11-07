@@ -22,10 +22,10 @@
     "typecheck": "flow",
     "lint": "eslint src",
     "precommit": "lint-staged",
-    "docs:dev": "node docs/server.js",
+    "docs:dev": "npm run docs:generate && node docs/server.js",
     "docs:build": "next build docs",
     "docs:start": "next start docs",
-    "docs:generate": "react-docgen src/components/button/button.js --out docs/content/component-props.json --ignore [__tests__,__stories__]"
+    "docs:generate": "gulp docs:markdown && react-docgen src/components/button/button.js --out docs/content/component-props.json --ignore [__tests__,__stories__]"
   },
   "lint-staged": {
     "*.js": [
