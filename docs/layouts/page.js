@@ -29,3 +29,9 @@ export default function Page({children, ...props}) {
     </Container>
   );
 }
+
+const PageFlexContainer = styled.div`display: flex;`;
+
+export function PageWrapper({children}) {
+  return <PageFlexContainer>{children}</PageFlexContainer>;
+}

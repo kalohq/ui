@@ -10,8 +10,9 @@
       {
         "root": ["./"],
         "alias": {
-          "components": "docs/components",
-          "layouts": "docs/layouts"
+          "components": "./docs/components",
+          "layouts": "./docs/layouts",
+          "content": "./docs/content"
         }
       }
     ]

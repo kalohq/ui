@@ -4,4 +4,4 @@ routes
   .add('index')
   .add('about')
   .add('components')
-  .add('component', '/component/:componentName', 'component');
+  .add('component', '/components/:componentName', 'component');

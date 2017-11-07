@@ -1,4 +1,0 @@
-'use strict';
-
-module.exports = require('next/dist/lib/error.js');
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRvY3Mvbm9kZV9tb2R1bGVzL25leHQvZGlzdC9wYWdlcy9fZXJyb3IuanMiXSwibmFtZXMiOlsibW9kdWxlIiwiZXhwb3J0cyIsInJlcXVpcmUiXSwibWFwcGluZ3MiOiI7O0FBQUEsT0FBTyxBQUFQLFVBQWlCLEFBQWpCIiwiZmlsZSI6Il9lcnJvci5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiIvVXNlcnMvYXAvUHJvamVjdHMvZGVzaWduLXN5c3RlbS91aSJ9

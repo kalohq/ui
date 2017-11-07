@@ -5,15 +5,15 @@ import styled from 'styled-components';
 
 const AsideContainer = styled.aside`
   width: auto;
-  max-width: 400px;
+  min-width: 320px;
   background-color: #f9fafc;
   height: 100vh;
-  padding-top: 80px;
+  padding: 80px 20px;
 `;
 
 const Title = styled.h1`
-  color: red;
-  font-size: 26px;
+  font-size: 18px;
+  font-weight: 500;
 `;
 
 const LinkGroup = styled.ul`
@@ -22,12 +22,32 @@ const LinkGroup = styled.ul`
   padding: 0;
 `;
 
-export default function Aside(props: {children: React$Node}) {
+const LinkItem = styled.li`
+  width: 100%;
+  display: flex;
+  color: #374561;
+  padding: 4px 16px;
+  font-size: 16px;
+  font-weight: 400;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+`;
+
+export default function Aside({data}) {
   return (
     <AsideContainer>
       <Title>Components</Title>
       <LinkGroup>
-        <Link>What</Link>
+        {data.map(item => {
+          return (
+            <LinkItem>
+              <Link href={item.link}>{item.title}</Link>
+            </LinkItem>
+          );
+        })}
       </LinkGroup>
     </AsideContainer>
   );
