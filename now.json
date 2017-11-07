@@ -1,0 +1,5 @@
+{
+  "name": "kalo-ui",
+  "description": "Kalo UI",
+  "files": ["src", "docs", "config"]
+}
