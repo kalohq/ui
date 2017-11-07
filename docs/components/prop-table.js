@@ -11,21 +11,29 @@ const props = {
     role: {
       type: {name: 'string'},
       required: false,
-      description: '',
+      description: 'An ARIA role tag',
       defaultValue: {value: "'button'", computed: false},
     },
-    disabled: {type: {name: 'bool'}, required: false, description: ''},
-    icon: {type: {name: 'any'}, required: false, description: ''},
+    disabled: {
+      type: {name: 'bool'},
+      required: false,
+      description: 'Disabled user interaction',
+    },
+    icon: {
+      type: {name: 'any'},
+      required: false,
+      description: 'Displays an icon in the button',
+    },
     iconBorder: {
       type: {name: 'bool'},
       required: false,
-      description: '',
+      description: 'Adds a border to the icon',
       defaultValue: {value: 'false', computed: false},
     },
     loneIcon: {
       type: {name: 'bool'},
       required: false,
-      description: '',
+      description: 'Squares off the button if',
       defaultValue: {value: 'false', computed: false},
     },
     wide: {
@@ -44,7 +52,7 @@ const props = {
         ],
       },
       required: false,
-      description: '',
+      description: 'The size of the button',
       defaultValue: {value: "'large'", computed: false},
     },
     theme: {
@@ -61,10 +69,15 @@ const props = {
         ],
       },
       required: false,
-      description: '',
+      description: 'The overall theme',
       defaultValue: {value: "'primary'", computed: false},
     },
-    grouped: {type: {name: 'bool'}, required: false, description: ''},
+    grouped: {
+      type: {name: 'bool'},
+      required: false,
+      description:
+        'Is the button part of a group - this should only be set by ButtonGroup',
+    },
     spacing: {type: {name: 'bool'}, required: false, description: ''},
     flex: {type: {name: 'bool'}, required: false, description: ''},
     active: {type: {name: 'bool'}, required: false, description: ''},
@@ -89,8 +102,16 @@ const props = {
       description: '',
       defaultValue: {value: 'Box', computed: true},
     },
-    name: {type: {name: 'string'}, required: false, description: ''},
-    type: {type: {name: 'string'}, required: false, description: ''},
+    name: {
+      type: {name: 'string'},
+      required: false,
+      description: 'A name to pass down to the DOM',
+    },
+    type: {
+      type: {name: 'string'},
+      required: false,
+      description: 'A type to allow usage in forms',
+    },
     mayGetLong: {type: {name: 'bool'}, required: false, description: ''},
   },
 };
@@ -100,19 +121,21 @@ const Table = styled.table`
   border-collapse: collapse;
 
   tr {
-    border-bottom: 1px solid #eceff1;
+    border: 1px solid #eceff1;
     margin: 0 0 10px;
   }
 
   th {
     font-weight: 600;
-    border-bottom: 2px solid #029dd8;
+    background-color: #f9fafc;
     text-align: left;
-    padding: 8px 0;
+    padding: 14px 16px;
+    font-size: 14px;
   }
 
   td {
-    padding: 12px 0;
+    padding: 10px 16px;
+    font-size: 14px;
   }
 `;
 export default function PropTable() {
@@ -129,8 +152,10 @@ export default function PropTable() {
         {Object.keys(props.props).map(prop => (
           <tr key={prop}>
             <td>{prop}</td>
-            <td>{props.props[prop].type.name}</td>
-            <td>{props.props[prop].type.description}</td>
+            <td>
+              <code>{props.props[prop].type.name}</code>
+            </td>
+            <td>{props.props[prop].description}</td>
           </tr>
         ))}
       </tbody>

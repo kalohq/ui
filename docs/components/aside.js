@@ -5,9 +5,10 @@ import styled from 'styled-components';
 
 const AsideContainer = styled.aside`
   width: auto;
+  height: 100%;
   min-width: 320px;
   background-color: #f9fafc;
-  height: 100vh;
+  min-height: 100vh;
   padding: 80px 20px;
 `;
 
