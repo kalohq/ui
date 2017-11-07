@@ -22,8 +22,8 @@
     "lint": "eslint src",
     "precommit": "lint-staged",
     "docs:dev": "npm run docs:generate && node docs/server.js",
-    "build": "next build docs",
-    "start": "npm run docs:generate && node docs/server.js",
+    "build": "next build docs && npm run docs:generate",
+    "start": "node docs/server.js",
     "docs:generate": "gulp docs:markdown && react-docgen src/components/button/button.js --out docs/content/component-props.json --ignore [__tests__,__stories__]"
   },
   "lint-staged": {
