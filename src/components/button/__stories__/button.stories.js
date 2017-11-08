@@ -11,10 +11,10 @@ const myClickFunction = () => {
 
 storiesOf('Button', module)
   .addWithInfo(
-    'Tertiary Button',
+    'Default Button',
     "The default style. Unless the action you're building is primary, this is the button you should use.",
     () => {
-      return <Button theme="tertiary">Export Freelancers</Button>;
+      return <Button>Export Freelancers</Button>;
     }
   )
   .addWithInfo(
@@ -47,12 +47,7 @@ storiesOf('Button', module)
     'Sometimes you want to trigger the success animation while keeping the button disabled/unclickable',
     () => {
       return (
-        <Button
-          theme="tertiary"
-          disabled={true}
-          success={true}
-          onClick={myClickFunction}
-        >
+        <Button disabled={true} success={true} onClick={myClickFunction}>
           Get Started
         </Button>
       );
@@ -65,24 +60,13 @@ storiesOf('Button', module)
     'With icon',
     'To provide more context to an action, an icon (see the Icon component) can be floated next the button copy',
     () => {
-      return (
-        <Button theme="tertiary" icon="file_download">
-          Generate Invoice
-        </Button>
-      );
+      return <Button icon="file_download">Generate Invoice</Button>;
     }
   )
   .addWithInfo(
     'With lone icon',
     'A button can also be used with a standalone icon',
     () => {
-      return (
-        <Button
-          theme="tertiary"
-          size="medium"
-          icon="mode_edit"
-          loneIcon={true}
-        />
-      );
+      return <Button size="medium" icon="mode_edit" loneIcon={true} />;
     }
   );

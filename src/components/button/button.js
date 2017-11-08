@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+/* @flow */
+import * as React from 'react';
 import cx from 'classnames';
-import {isBoolean, isString} from 'lodash';
+import {isString} from 'lodash';
 
 import PureComponent from 'react-pure-render/component';
-import {Box, Flex} from '../layout';
+
 import Icon from '../icon';
 import LoadingSpinner from '../loading-spinner';
 
@@ -40,55 +40,38 @@ function renderIcon(icon, border, size) {
   );
 }
 
-export default class Button extends PureComponent {
-  static propTypes = {
-    children: PropTypes.any,
-    message: PropTypes.string,
-    role: PropTypes.string,
-    disabled: PropTypes.bool,
-    icon: PropTypes.any,
-    iconBorder: PropTypes.bool,
-    loneIcon: PropTypes.bool,
-    wide: PropTypes.bool,
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
-    theme: PropTypes.oneOf([
-      'primary',
-      'secondary',
-      'tertiary',
-      'disabled',
-      'delete',
-      'deny',
-      'confirm',
-    ]),
-    grouped: PropTypes.bool,
-    spacing: PropTypes.bool,
-    flex: PropTypes.bool,
-    active: PropTypes.bool,
-    loading: PropTypes.bool,
-    success: PropTypes.bool,
-    middle: PropTypes.bool,
-    onClick: PropTypes.func,
-    loadedTimeout: PropTypes.number,
-    component: PropTypes.any,
-    name: PropTypes.string,
-    type: PropTypes.string,
-    mayGetLong: PropTypes.bool,
-  };
+export type ButtonProps = {
+  children?: string,
+  message?: string,
+  disabled?: boolean,
+  icon?: string,
+  size?: 'small' | 'medium' | 'large',
+  theme?: 'primary' | 'secondary' | 'default' | 'delete',
+  grouped?: boolean,
+  spacing?: boolean,
+  active?: boolean,
+  loading?: boolean,
+  success?: boolean,
+  onClick?: Function,
+  loadedTimeout?: number,
+  component?: string | React.Node,
+  name?: string,
+  type?: string,
+  style?: object,
+};
 
+export default class Button extends PureComponent {
   static defaultProps = {
-    role: 'button',
     size: 'large',
-    theme: 'primary',
+    theme: 'default',
     iconBorder: false,
     wide: false,
     loading: false,
-    loneIcon: false,
     loadedTimeout: 600,
-    component: Box,
   };
 
-  constructor() {
-    super();
+  constructor(props: ButtonProps) {
+    super(props);
 
     this.state = {
       loaded: false,
@@ -101,7 +84,7 @@ export default class Button extends PureComponent {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps: ButtonProps) {
     if (this.props.loading && !nextProps.loading) {
       this.setState({loaded: true});
       clearTimeout(this.__loadedTimeout__);
@@ -116,45 +99,28 @@ export default class Button extends PureComponent {
   render() {
     const {
       children,
+      message,
       disabled,
       icon,
-      reverse,
-      iconBorder,
-      loneIcon,
+      size,
       theme,
       grouped,
       spacing,
-      size,
       active,
-      wide,
-      onClick,
       loading,
       success,
-      message,
+      onClick,
+      loadedTimeout,
+      component,
       name,
-      flex,
       type,
-      role,
-      component: Component,
       className,
-      middle,
       style,
-      mayGetLong,
-      loadedTimeout: _IGNORED,
-      readonly: __IGNORED,
-      editable: ___IGNORED,
       ...otherProps
     } = this.props;
 
-    const {loaded} = this.state;
-
-    const Tag = this.props.to || this.props.href ? 'span' : 'button';
-
-    const iconElement = renderIcon(
-      icon,
-      isBoolean(iconBorder) ? iconBorder : !!icon && !!children,
-      ICON_SIZE[size]
-    );
+    const loaded = false;
+    const iconElement = false;
 
     const handleClick = event => {
       // Prevent form submit events propagating if button is mid-request
@@ -162,75 +128,54 @@ export default class Button extends PureComponent {
         event.preventDefault();
         return;
       }
-      if (onClick) {
-        onClick(event);
-      }
+      if (onClick) onClick(event);
     };
 
+    const _classNames = cx(
+      {
+        [styles.root]: true,
+        [styles[`theme-${theme}`]]: !!theme,
+        [styles[`size-${size}`]]: true,
+        [styles.grouped]: !!grouped,
+        [styles.spacing]: !!spacing,
+        [styles.loading]: loading,
+        [styles.success]: success,
+        [styles.loaded]: loaded,
+        [styles.active]: !!active,
+      },
+      className
+    );
+
+    const Tag = this.props.to || this.props.href ? 'a' : 'button';
+
     return (
-      <Component
+      <Tag
+        name={name}
+        type={type}
+        onClick={disabled ? null : handleClick}
         style={style}
-        className={cx(
-          {
-            [styles.root]: true,
-            [styles.grouped]: !!grouped,
-            [styles.spacing]: !!spacing,
-            [styles.wide]: wide,
-            [styles.middle]: middle,
-            [styles.loading]: loading,
-            [styles.success]: success,
-            [styles.loaded]: loaded,
-            [styles.flex]: flex,
-            [styles.reverse]: reverse,
-          },
-          className
-        )}
-        onClick={handleClick}
+        className={_classNames}
+        disabled={disabled || loading}
         {...otherProps}
       >
-        <Tag
-          role={role}
-          name={name}
-          type={type}
-          className={cx({
-            [styles.button]: true,
-            [styles.disabled]: success ? false : disabled || loading,
-            [styles[theme]]: !!theme,
-            [styles.active]: !!active,
-            [styles[size]]: true,
-            [styles.loneIcon]: loneIcon,
-          })}
-        >
-          <span className={styles.placeholder}>
-            {iconElement}
-            {children}
-          </span>
-          <Flex
-            alignItems="center"
-            justifyContent="center"
-            name="message"
-            className={cx({
-              [styles.message]: true,
-              [styles.mayGetLong]: mayGetLong,
-            })}
-            title={mayGetLong ? children : undefined}
-          >
-            {iconElement}
-            {children}
-          </Flex>
-          <Flex
-            alignItems="center"
-            justifyContent="center"
-            className={styles.successMessage}
-          >
-            {iconElement}
-            {message}
-          </Flex>
+        <span className={styles.placeholder}>
+          {iconElement}
+          {children}
+        </span>
+        <div className={cx(styles.content, styles.message)} name="message">
+          {iconElement}
+          {children}
+        </div>
+        <div className={cx(styles.content, styles.successMessage)}>
+          {iconElement}
+          {message}
+        </div>
+        {loading ? (
           <div className={styles.loadingSpinner}>
             <LoadingSpinner size="small" />
           </div>
-        </Tag>
-      </Component>
+        ) : null}
+      </Tag>
     );
   }
 }

@@ -7,61 +7,32 @@
 
   --border-width: 1px;
   --easing: ease-in-out;
+
+  --message-animation: 0.4s top cubic-bezier(0.175, 0.885, 0.320, 1.275), 0.4s opacity cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
 .root {
-  border-radius: 0px;
-  display: inline-block;
-  position: relative;
-}
-
-.button {
   overflow: hidden;
   position: relative;
-  align-items: center;
-  border: none;
+  border: 0;
   border-radius: 4px;
   cursor: pointer;
   display: inline-block;
   font-weight: 500;
   height: 100%;
   min-width: 100%;
-  padding: 0;
-  transition: background 0.2s ease, color 0.1s linear;
-  align-items: center;
   font-size: 14px;
   vertical-align: middle;
 }
 
-/*
- * Primary
- */
-.primary {
-  background-color: var(--green500);
-  color: #fff;
-}
-
-.primary:not(.disabled):hover {
-  background-color: var(--green600);
+.root::-moz-focus-inner {
+  border: 0;
 }
 
 /*
- * Secondary
+ * Default
  */
-.secondary {
-  background-color: var(--blue500);
-  color: #fff;
-}
-
-.secondary:not(.disabled):hover {
-  background-color: var(--blue600);
-}
-
-
-/*
- * Tertiary
- */
-.tertiary {
+ .theme-default {
   background-color: #fff;
   border-color: var(--grey300);
   border-style: solid;
@@ -70,25 +41,55 @@
   transition: border-color 200ms var(--easing);
 }
 
-.tertiary:not(.disabled):hover {
-  border-color: var(--grey400);
+.theme-default:hover {
+  border-color: var(--grey300);
   background-color: var(--grey200);
 }
 
-.tertiary:not(.disabled).active {
+.theme-default:active {
   background-color: var(--grey300);
 }
+
 
 /*
-* Disabled
-*/
-.disabled {
-  background-color: var(--grey300);
-  color: var(--grey400);
-  cursor: default;
+ * Primary
+ */
+.theme-primary {
+  background-color: var(--green500);
+  border: 2px solid transparent;
+  color: #fff;
 }
 
-.delete {
+.theme-primary:hover {
+  background-color: var(--green400);
+}
+
+.theme-primary:active {
+  background-color: var(--green600)
+}
+
+
+/*
+ * Secondary
+ */
+.theme-secondary {
+  background-color: var(--blue500);
+  color: #fff;
+}
+
+.theme-secondary:hover {
+  background-color: var(--blue400);
+}
+
+.theme-secondary:active {
+  background-color: var(--blue600);
+}
+
+/**
+ * Delete
+ */
+
+.theme-delete {
   border-style: solid;
   border-width: 2px;
   border-color: var(--pink500);
@@ -96,75 +97,51 @@
   color: var(--pink500);
 }
 
-.delete:not(.disabled):hover {
+.theme-delete:not(.disabled):hover {
   background-color: var(--pink500);
   border-color: var(--pink500);
   color: #fff;
 }
 
-.delete:not(.disabled):active {
+.theme-delete:not(.disabled):active {
   background-color: var(--pink600);
   border-color: var(--pink600);
-  color: #fff;
-}
-
-.confirm {
-  background-color: var(--green500);
-  border: 2px solid var(--green500);
-  color: #fff;
-}
-
-.deny {
-  background-color: var(--pink500);
-  border: 2px solid var(--pink500);
   color: #fff;
 }
 
 /*
  * Sizing
  */
-.small {
+.size-small {
   height: var(--small);
   padding: 0 calc(var(--small) / 2);
 }
 
-.medium {
+.size-medium {
   height: var(--medium);
   padding: 0 calc(var(--medium) / 2);
 }
 
-.large {
+.size-large {
   height: var(--large);
   padding: 0 calc(var(--large) / 2);
 }
 
-.x-large {
+.size-x-large {
   height: var(--x-large);
   padding: 0 calc(var(--x-large) / 2);
 }
 
-.loneIcon.small {
-  width: var(--small);
-  line-height: var(--small);
-}
 
-.loneIcon.medium {
-  width: var(--medium);
-  line-height: var(--medium);
-}
-
-.loneIcon.large {
-  width: var(--large);
-  line-height: var(--large);
-}
-
-.loneIcon.x-large {
-  width: var(--x-large);
-  line-height: var(--x-large);
-}
-
-.button::-moz-focus-inner {
-  border: 0;
+.content {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .placeholder {
@@ -186,27 +163,12 @@
 }
 
 .message {
-  height: 100%;
-  left: 0;
   opacity: 1;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  transition: 0.4s top cubic-bezier(0.175, 0.885, 0.320, 1.275), 0.4s opacity cubic-bezier(0.175, 0.885, 0.320, 1.275);
-  width: 100%;
-}
-
-.message.mayGetLong {
-  padding: 0 15px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  transition: var(--message-animation);
 }
 
 .successMessage {
-  transition:
-    0.4s top cubic-bezier(0.175, 0.885, 0.320, 1.275),
-    0.4s opacity cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  transition: var(--message-animation);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -219,9 +181,7 @@
 .loaded .message {
   opacity: 0;
   top: 100%;
-  transition:
-    0.4s top cubic-bezier(0.175, 0.885, 0.320, 1.275),
-    0.4s opacity cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  transition: var(--message-animation);
 }
 
 .loaded.success .successMessage {
@@ -256,85 +216,6 @@
   vertical-align: top;
 }
 
-.icon.border {
-  margin-left: var(--spacing);
-  border-left: var(--border-width) solid #fff;
-}
-
-.middle .button {
-  border-left: 0px !important;
-  border-right: 0px !important;
-}
-
-.wide {
-  width: 100%;
-  text-align: center;
-  justify-content: center;
-}
-
-
-/**
- * Grouped buttons
- */
-.grouped .button {
-  border-radius: 0;
-  border-right-width: 0;
-}
-
-.grouped:first-of-type .button {
-  border-radius: 4px 0 0 4px;
-}
-
-.grouped:last-of-type .button {
-  border-radius: 0 4px 4px 0;
-  border-right-width: 2px;
-}
-
-.grouped .button.tertiary:hover {
-  border-color: var(--grey300);
-}
-
-.flex {
-  flex-grow: 1;
-}
-
-.button.grouped + .grouped {
-  border-left: 0;
-}
-
-.grouped.round:first-child {
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
-}
-
-.grouped.round:last-child {
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
-.spacing:first-child {
-  margin-left: 0;
-}
-
-.spacing:last-child {
-  margin-right: 0;
-}
-
-.spacing {
-  margin-left: 2.5px;
-  margin-right: 2.5px;
-}
-
-.reverse.spacing:first-child {
-  margin-left: 2.5px;
-  margin-right: 0;
-}
-
-.reverse.spacing:last-child {
-  margin-left: 0;
-  margin-right: 2.5px;
-}
-
 
 .loaded.success .button {
   transition-duration: 0.1s;
@@ -361,4 +242,15 @@
   to {
     transform: translate(-50%, -50%) rotate(360deg);
   }
+}
+
+
+/**
+ * Disabled
+ */
+
+.root:disabled {
+  background-color: var(--grey300) !important;
+  color: var(--grey400) !important;
+  cursor: default !important;
 }
