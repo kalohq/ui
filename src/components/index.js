@@ -16,6 +16,8 @@ export {default as Radio} from './radio';
 export {default as Paper, PaperToolbar} from './paper';
 export {default as PaperMenu, PaperMenuItem} from './paper-menu';
 
+export {default as Sticky} from './sticky';
+
 export {default as Alert, AlertPopover} from './alert';
 
 export {Box, Flex, Block, Inline, InlineBlock, InlineFlex, A} from './layout';

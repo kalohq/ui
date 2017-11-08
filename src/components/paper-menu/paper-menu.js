@@ -7,6 +7,7 @@ import CSSTransitionGroup from 'react-addons-css-transition-group';
 import H3 from '../h3';
 import Icon from '../icon';
 import Paper from '../paper';
+import Sticky from '../sticky';
 
 import styles from './paper-menu.css';
 
@@ -28,6 +29,9 @@ type Props = {
   heading?: string,
   optionsIcon?: React.Node,
   closeOnOutsideClick?: boolean,
+  sticky?: Object,
+  zIndex?: number,
+  anchor?: string,
 };
 
 export default class PaperMenu extends PureComponent {
@@ -90,40 +94,49 @@ export default class PaperMenu extends PureComponent {
       paper,
       root,
       heading,
+      anchor,
+      offset,
+      zIndex,
+      sticky,
       optionIcons,
     } = this.props;
 
     return (
-      <CSSTransitionGroup
-        transitionName="t-scale"
-        transitionEnterTimeout={300}
-        transitionLeaveTimeout={300}
-        transitionAppearTimeout={300}
-        className={styles.root}
-        style={{transformOrigin: origin}}
-      >
-        {open ? (
-          <div {...root} onClick={event => event.stopPropagation()}>
-            <Paper {...paper}>
-              {heading && (
-                <div className={styles.header}>
-                  <H3>{heading}</H3>
-                  <div className={styles.options}>
-                    {optionIcons}
-                    <div
-                      className={styles.close}
-                      onClick={this.props.onRequestClose}
-                    >
-                      <Icon size={18}>clear</Icon>
+      <Sticky anchor={anchor} offset={offset} zIndex={zIndex} {...sticky}>
+        <CSSTransitionGroup
+          transitionName="t-scale"
+          transitionEnterTimeout={300}
+          transitionLeaveTimeout={300}
+          transitionAppearTimeout={300}
+          style={{transformOrigin: origin}}
+        >
+          {open ? (
+            <div
+              {...root}
+              className={styles.root}
+              onClick={event => event.stopPropagation()}
+            >
+              <Paper {...paper}>
+                {heading && (
+                  <div className={styles.header}>
+                    <H3>{heading}</H3>
+                    <div className={styles.options}>
+                      {optionIcons}
+                      <div
+                        className={styles.close}
+                        onClick={this.props.onRequestClose}
+                      >
+                        <Icon size={18}>clear</Icon>
+                      </div>
                     </div>
                   </div>
-                </div>
-              )}
-              {children}
-            </Paper>
-          </div>
-        ) : null}
-      </CSSTransitionGroup>
+                )}
+                {children}
+              </Paper>
+            </div>
+          ) : null}
+        </CSSTransitionGroup>
+      </Sticky>
     );
   }
 }
