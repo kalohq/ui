@@ -108,12 +108,12 @@ export default class PaperMenu extends PureComponent {
           transitionEnterTimeout={300}
           transitionLeaveTimeout={300}
           transitionAppearTimeout={300}
-          style={{transformOrigin: origin}}
         >
           {open ? (
             <div
               {...root}
               className={styles.root}
+              style={{transformOrigin: origin}}
               onClick={event => event.stopPropagation()}
             >
               <Paper {...paper}>
