@@ -2,6 +2,9 @@
   transform-origin: top;
   transition: box-shadow 0.2s linear;
   transition-duration: 0.2s !important;
+  position: absolute;
+  top: 100%;
+  z-index: 999;
 }
 
 .header {

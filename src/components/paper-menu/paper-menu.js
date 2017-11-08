@@ -1,9 +1,8 @@
 /* @flow */
 import * as React from 'react';
-import cx from 'classnames';
 
 import PureComponent from 'react-pure-render/component';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 import H3 from '../h3';
 import Icon from '../icon';
@@ -95,21 +94,16 @@ export default class PaperMenu extends PureComponent {
     } = this.props;
 
     return (
-      <ReactCSSTransitionGroup
+      <CSSTransitionGroup
         transitionName="t-scale"
         transitionEnterTimeout={300}
         transitionLeaveTimeout={300}
         transitionAppearTimeout={300}
+        className={styles.root}
+        style={{transformOrigin: origin}}
       >
         {open ? (
-          <div
-            {...root}
-            onClick={event => event.stopPropagation()}
-            style={{transformOrigin: origin}}
-            className={cx({
-              [styles.root]: true,
-            })}
-          >
+          <div {...root} onClick={event => event.stopPropagation()}>
             <Paper {...paper}>
               {heading && (
                 <div className={styles.header}>
@@ -129,7 +123,7 @@ export default class PaperMenu extends PureComponent {
             </Paper>
           </div>
         ) : null}
-      </ReactCSSTransitionGroup>
+      </CSSTransitionGroup>
     );
   }
 }
