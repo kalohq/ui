@@ -79,14 +79,6 @@
   background-color: var(--grey300);
 }
 
-/*
-* Disabled
-*/
-.disabled {
-  background-color: var(--grey300);
-  color: var(--grey400);
-  cursor: default;
-}
 
 .delete {
   border-style: solid;
@@ -336,19 +328,19 @@
 }
 
 
-.loaded.success .button {
+.loaded.success .button:not(.disabled) {
   transition-duration: 0.1s;
   background: var(--green500) !important;
   color: #fff !important;
 }
 
-.loaded.success .button:hover {
+.loaded.success .button:hover:not(.disabled) {
   transition-duration: 0.1s;
   background: var(--green500) !important;
   color: #fff !important;
 }
 
-.bordered.loaded.success:hover .button {
+.bordered.loaded.success:hover .button:not(.disabled) {
   border: 1px solid var(--green500) !important;
 }
 
@@ -361,4 +353,13 @@
   to {
     transform: translate(-50%, -50%) rotate(360deg);
   }
+}
+
+/*
+* Disabled
+*/
+.disabled {
+  background-color: var(--grey300);
+  color: var(--grey400);
+  cursor: default;
 }
