@@ -53,7 +53,11 @@ export default function ButtonDropdown(props: Props) {
         <div className={styles.menu}>
           <PaperMenu open={open} origin="top" onRequestClose={onRequestClose}>
             {selectItems.map(item => (
-              <PaperMenuItem disabled={item.disabled} key={item.title}>
+              <PaperMenuItem
+                disabled={item.disabled}
+                key={item.title}
+                onClick={item.onClick}
+              >
                 {item.title}
               </PaperMenuItem>
             ))}
