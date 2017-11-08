@@ -6,10 +6,10 @@ export {default as Text} from './text';
 export {default as Heading} from './heading';
 
 export {default as Button} from './button';
-export {default as ButtonGroup} from './button-group';
-export {default as ButtonDropdoww} from './button-dropdown';
 export {default as Checkbox} from './checkbox';
 export {default as Icon} from './icon';
+export {default as ButtonGroup} from './button-group';
+export {default as ButtonDropdown} from './button-dropdown';
 export {default as LoadingSpinner} from './loading-spinner';
 export * from './skeleton';
 export {default as Radio} from './radio';
