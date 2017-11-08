@@ -21,7 +21,6 @@
   color: var(--navy700);
   font-weight: 500;
   font-size: 14px;
-  transition: border-color 200ms var(--easing);
 }
 
 .root + .root {

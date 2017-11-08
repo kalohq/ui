@@ -31,8 +31,8 @@
 }
 
 .highlighted {
-  background: var(--color-grey-snow);
-  color: var(--color-brand-blue);
+  background: var(--grey200);
+  color: var(--blue500);
 }
 
 .content {
