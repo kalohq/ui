@@ -105,6 +105,20 @@ export class Example extends React.Component {
           >
             Another
           </ExampleButton>
+          <ExampleButton
+            selectItems={[
+              {
+                title: 'An item with quite a long name',
+                onClick: myClickFunction,
+              },
+              {
+                title: 'Export',
+                onClick: myClickFunction,
+              },
+            ]}
+          >
+            1
+          </ExampleButton>
         </ButtonGroup>
       </Box>
     );
