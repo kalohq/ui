@@ -87,18 +87,18 @@ export default class Button extends PureComponent {
     component: Box,
   };
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       loaded: false,
+      success: props.success,
     };
   }
 
   componentWillUnmount() {
-    if (this.__loadedTimeout__) {
-      clearTimeout(this.__loadedTimeout__);
-    }
+    if (this.__loadedTimeout__) clearTimeout(this.__loadedTimeout__);
+    if (this.__successTimeout__) clearTimeout(this.__successTimeout__);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -110,6 +110,14 @@ export default class Button extends PureComponent {
           this.setState({loaded: false});
         }
       }, this.props.loadedTimeout);
+    }
+
+    if (this.props.success) {
+      this.setState({success: true, loaded: true});
+      clearTimeout(this.__successTimeout__);
+      this.__successTimeout__ = setTimeout(() => {
+        this.setState({success: false, loaded: false});
+      }, 1050);
     }
   }
 
@@ -129,7 +137,6 @@ export default class Button extends PureComponent {
       wide,
       onClick,
       loading,
-      success,
       message,
       name,
       flex,
@@ -146,7 +153,7 @@ export default class Button extends PureComponent {
       ...otherProps
     } = this.props;
 
-    const {loaded} = this.state;
+    const {loaded, success} = this.state;
 
     const Tag = this.props.to || this.props.href ? 'span' : 'button';
 
