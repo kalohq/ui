@@ -150,6 +150,7 @@ export default class Button extends PureComponent {
       loadedTimeout: _IGNORED,
       readonly: __IGNORED,
       editable: ___IGNORED,
+      success: ____IGNORED,
       ...otherProps
     } = this.props;
 
@@ -199,7 +200,7 @@ export default class Button extends PureComponent {
           type={type}
           className={cx({
             [styles.button]: true,
-            [styles.disabled]: this.state.success ? false : disabled || loading,
+            [styles.disabled]: disabled || loading,
             [styles[theme]]: !!theme,
             [styles.active]: !!active,
             [styles[size]]: true,

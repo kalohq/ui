@@ -106,6 +106,7 @@ class StatefulButton extends React.Component {
   handleClick() {
     this.setState({
       success: true,
+      disabled: true,
     });
   }
 
@@ -114,6 +115,7 @@ class StatefulButton extends React.Component {
       <Button
         onClick={this.handleClick.bind(this)}
         success={this.state.success}
+        disabled={this.state.disabled}
         message="Done!"
       >
         Click me
