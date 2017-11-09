@@ -8,8 +8,8 @@
   },
   "main": "server.js",
   "scripts": {
-    "docs:dev": "npm run docs:generate && node server.js",
-    "build": "next build docs && npm run docs:generate",
+    "dev": "npm run docs:generate && npm run start",
+    "build": "next build",
     "start": "node server.js"
   },
   "author": "Kalo Product",
