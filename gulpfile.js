@@ -70,7 +70,7 @@ gulp.task('docs:markdown', () => {
   gulp
     .src('./src/components/**/*.md')
     .pipe(gutil.buffer())
-    .pipe(markdownToJSON(marked, './docs/content/components.json'))
+    .pipe(markdownToJSON(marked, './docs/content/components/_data.json'))
     .pipe(gulp.dest('.'));
 });
 /**
