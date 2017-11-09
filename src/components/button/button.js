@@ -92,7 +92,7 @@ export default class Button extends PureComponent {
 
     this.state = {
       loaded: false,
-      success: props.success,
+      success: this.props.success,
     };
   }
 
@@ -112,12 +112,12 @@ export default class Button extends PureComponent {
       }, this.props.loadedTimeout);
     }
 
-    if (this.props.success) {
+    if (nextProps.success) {
       this.setState({success: true, loaded: true});
       clearTimeout(this.__successTimeout__);
       this.__successTimeout__ = setTimeout(() => {
         this.setState({success: false, loaded: false});
-      }, 1050);
+      }, 1500);
     }
   }
 
@@ -153,8 +153,6 @@ export default class Button extends PureComponent {
       ...otherProps
     } = this.props;
 
-    const {loaded, success} = this.state;
-
     const Tag = this.props.to || this.props.href ? 'span' : 'button';
 
     const iconElement = renderIcon(
@@ -185,8 +183,8 @@ export default class Button extends PureComponent {
             [styles.wide]: wide,
             [styles.middle]: middle,
             [styles.loading]: loading,
-            [styles.success]: success,
-            [styles.loaded]: loaded,
+            [styles.success]: this.state.success,
+            [styles.loaded]: this.state.loaded,
             [styles.flex]: flex,
             [styles.reverse]: reverse,
           },
@@ -201,7 +199,7 @@ export default class Button extends PureComponent {
           type={type}
           className={cx({
             [styles.button]: true,
-            [styles.disabled]: success ? false : disabled || loading,
+            [styles.disabled]: this.state.success ? false : disabled || loading,
             [styles[theme]]: !!theme,
             [styles.active]: !!active,
             [styles[size]]: true,
