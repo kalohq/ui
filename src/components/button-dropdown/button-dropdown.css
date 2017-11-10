@@ -63,9 +63,8 @@
 }
 
 .theme-tertiary:not(.disabled).active {
-  background-color: var(--navy500);
-  border-color: var(--navy600);
-  color: #fff;
+  background-color: var(--navy300);
+  border-color: var(--grey400);
 }
 
 .theme-primary {
