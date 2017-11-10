@@ -27,7 +27,7 @@ export default function ButtonDropdown(props: Props) {
     children,
     size = 'large',
     theme = 'tertiary',
-    selectItems,
+    selectItems = [],
     open,
     onClick,
     onRequestClose,
@@ -44,12 +44,12 @@ export default function ButtonDropdown(props: Props) {
       onClick={onClick}
     >
       {children}
-      {selectItems ? (
+      {selectItems.length ? (
         <Icon marginLeft={8} marginRight={-8} size={20}>
           keyboard_arrow_down
         </Icon>
       ) : null}
-      {selectItems ? (
+      {selectItems.length ? (
         <div className={styles.menu}>
           <PaperMenu open={open} origin="top" onRequestClose={onRequestClose}>
             {selectItems.map(item => (

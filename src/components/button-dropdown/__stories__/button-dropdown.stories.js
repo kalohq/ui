@@ -44,7 +44,7 @@ export class ExampleButton extends React.Component {
         onClick={this.toggle}
         open={this.state.open}
         onRequestClose={this.toggle}
-        size="large"
+        size={this.props.size}
         selectItems={this.props.selectItems}
       >
         {this.props.children}
