@@ -5,6 +5,7 @@ import type {List} from 'immutable';
 
 import Icon from '../icon';
 import PaperMenu, {PaperMenuItem} from '../paper-menu';
+import Checkbox from '../checkbox';
 
 import styles from './button-dropdown.css';
 
@@ -20,6 +21,10 @@ type Props = {
   open?: boolean,
   onClick?: Function,
   onRequestClose?: Function,
+  checkboxProps?: {
+    size?: string,
+    onClick?: Function,
+  },
 };
 
 export default function ButtonDropdown(props: Props) {
@@ -31,6 +36,7 @@ export default function ButtonDropdown(props: Props) {
     open,
     onClick,
     onRequestClose,
+    checkboxProps,
   } = props;
 
   return (
@@ -41,29 +47,43 @@ export default function ButtonDropdown(props: Props) {
         [styles[`theme-${theme}`]]: true,
         [styles.active]: open,
       })}
-      onClick={onClick}
     >
-      {children}
-      {selectItems.length ? (
-        <Icon marginLeft={8} marginRight={-8} size={20}>
-          keyboard_arrow_down
-        </Icon>
+      {checkboxProps ? (
+        <Checkbox
+          size="large"
+          marginRight={16}
+          marginLeft={-4}
+          {...checkboxProps}
+        />
       ) : null}
-      {selectItems.length ? (
-        <div className={styles.menu}>
-          <PaperMenu open={open} origin="top" onRequestClose={onRequestClose}>
-            {selectItems.map(item => (
-              <PaperMenuItem
-                disabled={item.disabled}
-                key={item.title}
-                onClick={item.onClick}
-              >
-                {item.title}
-              </PaperMenuItem>
-            ))}
-          </PaperMenu>
-        </div>
-      ) : null}
+      <span onClick={onClick}>
+        {children}
+        {selectItems.length ? (
+          <Icon marginLeft={8} marginRight={-8} size={20}>
+            keyboard_arrow_down
+          </Icon>
+        ) : null}
+        {selectItems.length ? (
+          <div className={styles.menu}>
+            <PaperMenu
+              open={open}
+              origin="top"
+              onRequestClose={onRequestClose}
+              width="100%"
+            >
+              {selectItems.map(item => (
+                <PaperMenuItem
+                  disabled={item.disabled}
+                  key={item.title}
+                  onClick={item.onClick}
+                >
+                  {item.title}
+                </PaperMenuItem>
+              ))}
+            </PaperMenu>
+          </div>
+        ) : null}
+      </span>
     </div>
   );
 }

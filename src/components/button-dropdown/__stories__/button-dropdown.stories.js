@@ -46,6 +46,7 @@ export class ExampleButton extends React.Component {
         onRequestClose={this.toggle}
         size={this.props.size}
         selectItems={this.props.selectItems}
+        checkboxProps={this.props.checkboxProps}
       >
         {this.props.children}
       </ButtonDropdown>
@@ -73,6 +74,23 @@ export class Example extends React.Component {
     return (
       <Box padding={48} style={{backgroundColor: 'var(--navy300)'}}>
         <ButtonGroup>
+          <ExampleButton
+            checkboxProps={{
+              onClick: () => {},
+            }}
+            selectItems={[
+              {
+                title: 'Pending',
+                onClick: myClickFunction,
+              },
+              {
+                title: 'Approved',
+                onClick: myClickFunction,
+              },
+            ]}
+          >
+            Bulk Select Options
+          </ExampleButton>
           <ExampleButton
             selectItems={[
               {
