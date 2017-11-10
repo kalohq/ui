@@ -1,7 +1,8 @@
 /* @flow */
-import React from 'react';
+import * as React from 'react';
 import cx from 'classnames';
 import type {List} from 'immutable';
+import PureComponent from 'react-pure-render/component';
 
 import Icon from '../icon';
 import PaperMenu, {PaperMenuItem} from '../paper-menu';
@@ -27,36 +28,77 @@ type Props = {
   },
 };
 
-export default function ButtonDropdown(props: Props) {
-  const {
-    children,
-    size = 'large',
-    theme = 'tertiary',
-    selectItems = [],
-    open,
-    onClick,
-    onRequestClose,
-    checkboxProps,
-  } = props;
+export default class ButtonDropdown extends PureComponent {
+  onToggle: Function;
+  onClose: Function;
 
-  return (
-    <div
-      className={cx({
-        [styles.root]: true,
-        [styles[`size-${size}`]]: true,
-        [styles[`theme-${theme}`]]: true,
-        [styles.active]: open,
-      })}
-    >
-      {checkboxProps ? (
-        <Checkbox
-          size="large"
-          marginRight={16}
-          marginLeft={-4}
-          {...checkboxProps}
-        />
-      ) : null}
-      <span onClick={onClick}>
+  constructor(props: Props) {
+    super(props);
+
+    this.state = {
+      open: false,
+    };
+
+    this.onToggle = this.onToggle.bind(this);
+    this.wrapperRef = this.onToggle.bind(this);
+    this.onClose = this.onClose.bind(this);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('click', this.onClose);
+  }
+
+  open() {
+    setTimeout(() => window.addEventListener('click', this.onClose), 300);
+    this.setState({open: true});
+  }
+
+  close() {
+    window.removeEventListener('click', this.onClose);
+    this.setState({open: false});
+  }
+
+  onToggle() {
+    if (this.state.open) {
+      this.close();
+    } else {
+      this.open();
+    }
+  }
+
+  onClose() {
+    this.close();
+  }
+
+  render() {
+    const {
+      children,
+      size = 'large',
+      theme = 'tertiary',
+      selectItems = [],
+      checkboxProps,
+    } = this.props;
+
+    return (
+      <div
+        className={cx({
+          [styles.root]: true,
+          [styles[`size-${size}`]]: true,
+          [styles[`theme-${theme}`]]: true,
+          [styles.active]: this.state.open,
+        })}
+        onClick={this.onToggle}
+      >
+        {checkboxProps ? (
+          <span onClick={event => event.stopPropagation()}>
+            <Checkbox
+              size="large"
+              marginRight={16}
+              marginLeft={-4}
+              {...checkboxProps}
+            />
+          </span>
+        ) : null}
         {children}
         {selectItems.length ? (
           <Icon marginLeft={8} marginRight={-8} size={20}>
@@ -66,10 +108,10 @@ export default function ButtonDropdown(props: Props) {
         {selectItems.length ? (
           <div className={styles.menu}>
             <PaperMenu
-              open={open}
+              open={this.state.open}
               origin="top"
-              onRequestClose={onRequestClose}
               width="100%"
+              onClick={event => event.stopPropagation()}
             >
               {selectItems.map(item => (
                 <PaperMenuItem
@@ -83,7 +125,7 @@ export default function ButtonDropdown(props: Props) {
             </PaperMenu>
           </div>
         ) : null}
-      </span>
-    </div>
-  );
+      </div>
+    );
+  }
 }

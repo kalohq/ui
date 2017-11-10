@@ -74,10 +74,26 @@ export class Example extends React.Component {
     return (
       <Box padding={48} style={{backgroundColor: 'var(--navy300)'}}>
         <ButtonGroup>
-          <ExampleButton
+          <ButtonDropdown
+            size="large"
+            selectItems={[
+              {
+                title: 'Pending',
+                onClick: myClickFunction,
+              },
+              {
+                title: 'Approved',
+                onClick: myClickFunction,
+              },
+            ]}
             checkboxProps={{
               onClick: () => {},
             }}
+          >
+            Bulk Select Options
+          </ButtonDropdown>
+          <ButtonDropdown
+            size="large"
             selectItems={[
               {
                 title: 'Pending',
@@ -89,54 +105,23 @@ export class Example extends React.Component {
               },
             ]}
           >
-            Bulk Select Options
-          </ExampleButton>
-          <ExampleButton
+            Another One
+          </ButtonDropdown>
+          <ButtonDropdown
+            size="large"
             selectItems={[
-              {
-                title: 'All',
-                onClick: myClickFunction,
-              },
               {
                 title: 'Pending',
                 onClick: myClickFunction,
               },
               {
                 title: 'Approved',
-                onClick: myClickFunction,
-              },
-            ]}
-          >
-            Bulk Select Options
-          </ExampleButton>
-          <ExampleButton
-            selectItems={[
-              {
-                title: 'Approve invoice',
-                onClick: myClickFunction,
-              },
-              {
-                title: 'Export',
-                onClick: myClickFunction,
-              },
-            ]}
-          >
-            Another
-          </ExampleButton>
-          <ExampleButton
-            selectItems={[
-              {
-                title: 'An item with quite a long name',
-                onClick: myClickFunction,
-              },
-              {
-                title: 'Export',
                 onClick: myClickFunction,
               },
             ]}
           >
             1
-          </ExampleButton>
+          </ButtonDropdown>
         </ButtonGroup>
       </Box>
     );
