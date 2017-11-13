@@ -1,8 +1,17 @@
-const postCSSVariables = require('postcss-css-variables');
-const globalCSSVariables = require('./config/global_css_variables.js');
+const cssVariables = require('./src/constants/color');
 
 module.exports = {
-  plugins: [
-    postCSSVariables(globalCSSVariables),
-  ]
-}
+  plugins: {
+    'postcss-cssnext': {
+      features: {
+        customProperties: {
+          variables: cssVariables.color,
+        },
+      },
+    },
+    cssnano: {
+      normalizeUrl: false,
+      discardEmpty: false,
+    },
+  },
+};

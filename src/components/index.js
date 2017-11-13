@@ -9,8 +9,16 @@ export {default as Button} from './button';
 export {default as Checkbox} from './checkbox';
 export {default as Icon} from './icon';
 export {default as IconSymbols} from './icon-symbols';
+export {default as ButtonGroup} from './button-group';
+export {default as ButtonDropdown} from './button-dropdown';
 export {default as LoadingSpinner} from './loading-spinner';
 export * from './skeleton';
 export {default as Radio} from './radio';
+export {default as Paper, PaperToolbar} from './paper';
+export {default as PaperMenu, PaperMenuItem} from './paper-menu';
+
+export {default as Sticky} from './sticky';
+
+export {default as Alert, AlertPopover} from './alert';
 
 export {Box, Flex, Block, Inline, InlineBlock, InlineFlex, A} from './layout';

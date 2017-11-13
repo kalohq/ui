@@ -1,9 +1,15 @@
+/**
+ * This file is a subset of the master.css found in frontend repo atm
+ */
+
+@import '../constants/color.css';
+
 @font-face {
   font-family: 'WebFaktSoftPro';
   font-weight: 300;
   font-style: normal;
   src: url('./fonts/fakt-soft-pro/FaktSoftPro-Blond.woff') format('woff'),
-       url('./fonts/fakt-soft-pro/FaktSoftPro-Blond.woff2') format('woff2');
+    url('./fonts/fakt-soft-pro/FaktSoftPro-Blond.woff2') format('woff2');
 }
 
 @font-face {
@@ -11,7 +17,7 @@
   font-weight: 400;
   font-style: normal;
   src: url('./fonts/fakt-soft-pro/FaktSoftPro-Normal.woff') format('woff'),
-       url('./fonts/fakt-soft-pro/FaktSoftPro-Normal.woff2') format('woff2');
+    url('./fonts/fakt-soft-pro/FaktSoftPro-Normal.woff2') format('woff2');
 }
 
 @font-face {
@@ -19,7 +25,7 @@
   font-weight: 500;
   font-style: normal;
   src: url('./fonts/fakt-soft-pro/FaktSoftPro-Medium.woff') format('woff'),
-       url('./fonts/fakt-soft-pro/FaktSoftPro-Medium.woff2') format('woff2');
+    url('./fonts/fakt-soft-pro/FaktSoftPro-Medium.woff2') format('woff2');
 }
 
 @font-face {
@@ -27,7 +33,7 @@
   font-weight: 600;
   font-style: normal;
   src: url('./fonts/fakt-soft-pro/FaktSoftPro-SemiBold.woff') format('woff'),
-       url('./fonts/fakt-soft-pro/FaktSoftPro-SemiBold.woff2') format('woff2');
+    url('./fonts/fakt-soft-pro/FaktSoftPro-SemiBold.woff2') format('woff2');
 }
 
 * {
@@ -53,10 +59,174 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: 'WebFaktSoftPro', sans-serif;
-  color: var(--color-grey-slate);
-  background-color: var(--color-grey-snow);
+  color: var(--navy600);
+  background-color: var(--grey200);
 }
 
 pre {
   font-family: monospace;
+}
+
+:global .t-scale-enter {
+  opacity: 0.01;
+  transform: scale(0);
+}
+
+:global .t-scale-enter.t-scale-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all .3s cubic-bezier(0.55, 0, 0.55, 0.2);
+}
+
+:global .t-scale-leave {
+  opacity: 1;
+}
+
+:global .t-scale-leave.t-scale-leave-active {
+  opacity: 0.01;
+  transform: scale(0);
+  transition: all .3s ease-in;
+}
+
+:global .t-scale-appear {
+  opacity: 0.01;
+  transform: scale(0.8);
+}
+
+:global .t-scale-appear.t-scale-appear-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all .3s cubic-bezier(0.55, 0, 0.55, 0.2);
+}
+
+:global .t-slide-enter,
+:global .t-slide-appear,
+:global .t-slide-leave.t-slide-leave-active {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+:global .t-slide-from-right-enter,
+:global .t-slide-from-right-appear,
+:global .t-slide-from-right-leave.t-slide-from-right-leave-active {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+:global .t-slide-inverted-enter,
+:global .t-slide-inverted-appear,
+:global .t-slide-inverted-leave.t-slide-inverted-leave-active {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+:global .t-slide-enter.t-slide-enter-active,
+:global .t-slide-appear.t-slide-appear-active,
+:global .t-slide-leave,
+:global .t-slide-from-right-enter.t-slide-from-right-enter-active,
+:global .t-slide-from-right-appear.t-slide-from-right-appear-active,
+:global .t-slide-from-right-leave,
+:global .t-slide-inverted-enter.t-slide-inverted-enter-active,
+:global .t-slide-inverted-appear.t-slide-inverted-enter-appear,
+:global .t-slide-inverted-leave {
+  opacity: 1;
+  transform: none;
+}
+
+:global .t-slide-enter.t-slide-enter-active,
+:global .t-slide-appear.t-slide-appear-active,
+:global .t-slide-leave.t-slide-leave-active,
+:global .t-slide-from-right-enter.t-slide-from-right-enter-active,
+:global .t-slide-from-right-appear.t-slide-from-right-appear-active,
+:global .t-slide-from-right-leave.t-slide-from-right-leave-active,
+:global .t-slide-inverted-enter.t-slide-inverted-enter-active,
+:global .t-slide-inverted-appear.t-slide-inverted-appear-active,
+:global .t-slide-inverted-leave.t-slide-inverted-leave-active {
+  transition-property: all;
+  transition-duration: .3s;
+}
+
+:global .t-slide-enter.t-slide-enter-active,
+:global .t-slide-leave.t-slide-leave-active,
+:global .t-slide-from-right-enter.t-slide-from-right-enter-active,
+:global .t-slide-from-right-leave.t-slide-from-right-leave-active,
+:global .t-slide-inverted-enter.t-slide-inverted-enter-active,
+:global .t-slide-inverted-leave.t-slide-inverted-leave-active {
+  transition-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
+}
+
+:global @keyframes flop-down {
+  0% {
+    opacity: 0.01;
+    transform: translate(0px, -40px) scale(0.85);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 1;
+  }
+}
+
+:global .t-flop-down-enter {
+  animation: flop-down 0.25s cubic-bezier(0.55, 0, 0.55, 0.2) normal;
+}
+
+:global .t-flop-down-leave {
+  animation: flop-down 0.25s cubic-bezier(0.55, 0, 0.55, 0.2) reverse;
+}
+
+:global .t-fade-in-out-enter {
+  position: absolute;
+  opacity: 0.01;
+}
+
+:global .t-fade-in-out-enter.t-fade-in-out-enter-active {
+  opacity: 1;
+  transition: all .3s cubic-bezier(0.55, 0, 0.55, 0.2);
+}
+
+:global .t-fade-in-out-leave {
+  position: absolute;
+  opacity: 1;
+}
+
+:global .t-fade-in-out-leave.t-fade-in-out-leave-active {
+  opacity: 0.01;
+  transition: all .3s ease-in;
+}
+
+:global .t-fade-in-out-appear {
+  position: absolute;
+  opacity: 0.01;
+}
+
+:global .t-fade-in-out-appear.t-fade-in-out-appear-active {
+  opacity: 1;
+  transition: all .3s cubic-bezier(0.55, 0, 0.55, 0.2);
+}
+
+:global .t-fade-enter {
+  opacity: 0.01;
+}
+
+:global .t-fade-enter.t-fade-enter-active {
+  opacity: 1;
+  transition: all .3s ease-in;
+}
+
+:global .t-fade-leave {
+  opacity: 1;
+}
+
+:global .t-fade-leave.t-fade-leave-active {
+  opacity: 0.01;
+  transition: all .3s ease-in;
+}
+
+:global .t-fade-appear {
+  opacity: 0.01;
+}
+
+:global .t-fade-appear.t-fade-appear-active {
+  opacity: 1;
+  transition: all .3s .3s ease-in;
 }

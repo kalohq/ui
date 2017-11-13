@@ -1,33 +1,32 @@
 {
   "name": "@kalo/ui",
-  "version": "0.6.0-0",
+  "version": "0.7.0-7",
   "description": "A library of React components",
   "repository": {
     "type": "git",
     "url": "https://github.com/kalohq/ui"
   },
   "main": "lib/index.js",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "start": "npm run storybook:start",
     "storybook": "npm run storybook:start",
     "storybook:start": "start-storybook -p 6006",
     "storybook:build": "build-storybook -c .storybook -o docs",
-    "compile:css":
-      "./node_modules/.bin/postcss -r -d lib/**/*.css -c postcss.config.js",
-    "compile:js":
-      "./node_modules/.bin/babel src/components --out-dir lib --copy-files --ignore __tests__,__stories__",
-    "compile": "npm run compile:js && npm run compile:css",
+    "compile": "gulp build-production",
     "test": "jest",
     "dist": "rimraf lib && npm run compile",
-    "copy-flow":
-      "flow-copy-source src/components lib --ignore '{index.js,**/__tests__/*,**/__stories__/*}'",
+    "copy-flow": "flow-copy-source src/components lib --ignore '{index.js,**/__tests__/*,**/__stories__/*}'",
     "typecheck": "flow",
     "lint": "eslint src",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": ["eslint"]
+    "*.js": [
+      "eslint"
+    ]
   },
   "author": "The Kalo Team",
   "license": "ISC",
@@ -62,10 +61,12 @@
     "eslint-plugin-prettier": "2.0.1",
     "eslint-plugin-react": "7.0.0",
     "extract-text-webpack-plugin": "2.1.0",
-    "react-addons-test-utils": "15.4.1",
     "file-loader": "0.11.1",
     "flow-bin": "0.53.0",
     "flow-copy-source": "1.2.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-postcss": "^7.0.0",
     "husky": "0.13.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "21.0.0",
@@ -73,6 +74,7 @@
     "lodash": "4.17.2",
     "postcss-cli": "3.2.0",
     "postcss-css-variables": "0.7.0",
+    "postcss-cssnext": "^3.0.2",
     "postcss-import": "9.1.0",
     "postcss-loader": "1.3.3",
     "prettier": "1.6.1",
@@ -80,6 +82,7 @@
     "qs": "5.2.1",
     "react": "15.4.1",
     "react-addons-css-transition-group": "15.4.1",
+    "react-addons-test-utils": "15.4.1",
     "react-dom": "15.4.1",
     "react-hotkeys": "0.9.0",
     "react-intl": "2.1.5",
@@ -103,17 +106,27 @@
     "react-pure-render": "^1.0.2"
   },
   "babel": {
-    "presets": ["es2015", "stage-2", "react"],
-    "ignore": ["__stories__"]
+    "presets": [
+      "es2015",
+      "stage-2",
+      "react"
+    ],
+    "ignore": [
+      "__stories__"
+    ]
   },
   "jest": {
-    "modulePaths": ["src/core", "src"],
+    "modulePaths": [
+      "src/core",
+      "src"
+    ],
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|html)$":
-        "<rootDir>/__mocks__/file-mock.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|html)$": "<rootDir>/__mocks__/file-mock.js",
       "\\.(css|less)$": "identity-obj-proxy"
     },
-    "testMatch": ["**/__tests__/**/?(*.)(spec|test).js?(x)"],
+    "testMatch": [
+      "**/__tests__/**/?(*.)(spec|test).js?(x)"
+    ],
     "coverageDirectory": "./coverage/unit",
     "collectCoverage": false,
     "collectCoverageFrom": [

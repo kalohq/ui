@@ -1,0 +1,7 @@
+.root {
+  display: none;
+}
+
+.transparent {
+  pointer-events: none;
+}

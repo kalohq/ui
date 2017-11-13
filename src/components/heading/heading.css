@@ -5,7 +5,7 @@
 }
 
 .root strong {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .root > i {
@@ -20,7 +20,7 @@
 }
 
 .border {
-  border-bottom: 1px solid var(--color-grey-platinum);
+  border-bottom: 1px solid var(--navy300);
 }
 
 .border.margin-small {
