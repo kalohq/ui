@@ -1,7 +1,6 @@
 /* @flow */
 import * as React from 'react';
 import cx from 'classnames';
-import {isString} from 'lodash';
 
 import PureComponent from 'react-pure-render/component';
 
@@ -16,30 +15,6 @@ const ICON_SIZE = {
   large: '24',
 };
 
-function renderIcon(icon, border, size) {
-  if (!icon) return null;
-
-  return isString(icon) ? (
-    <span
-      className={cx({
-        [styles.icon]: true,
-        [styles.border]: border,
-      })}
-    >
-      <Icon size={!!size ? size : '18'}>{icon}</Icon>
-    </span>
-  ) : (
-    <span
-      className={cx({
-        [styles.icon]: true,
-        [styles.border]: border,
-      })}
-    >
-      {icon}
-    </span>
-  );
-}
-
 export type ButtonProps = {
   children?: string,
   message?: string,
@@ -51,55 +26,63 @@ export type ButtonProps = {
   spacing?: boolean,
   active?: boolean,
   loading?: boolean,
-  success?: boolean,
   onClick?: Function,
-  loadedTimeout?: number,
-  component?: string | React.Node,
   name?: string,
   type?: string,
-  style?: object,
+  style?: Object,
+  state?: 'success' | 'error',
+  callbackMessage?: string,
 };
 
 export default class Button extends PureComponent {
   static defaultProps = {
     size: 'large',
     theme: 'default',
-    iconBorder: false,
     wide: false,
     loading: false,
-    loadedTimeout: 600,
   };
 
   constructor(props: ButtonProps) {
     super(props);
 
     this.state = {
-      loaded: false,
+      loading: this.props.loading,
+      uiState: this.props.uiState,
     };
   }
 
   componentWillUnmount() {
-    if (this.__loadedTimeout__) {
-      clearTimeout(this.__loadedTimeout__);
+    if (this.__stateTimeout__) {
+      clearTimeout(this.__stateTimeout__);
     }
   }
 
   componentWillReceiveProps(nextProps: ButtonProps) {
-    if (this.props.loading && !nextProps.loading) {
-      this.setState({loaded: true});
-      clearTimeout(this.__loadedTimeout__);
-      this.__loadedTimeout__ = setTimeout(() => {
-        if (this.state.loaded) {
-          this.setState({loaded: false});
-        }
-      }, this.props.loadedTimeout);
+    this.setState({loading: nextProps.loading});
+
+    if (!this.props.state && nextProps.state) {
+      setTimeout(() => {
+        this.setState({uiState: nextProps.state});
+      }, 500);
+      clearTimeout(this.__stateTimeout__);
+      this.__stateTimeout__ = setTimeout(() => {
+        this.setState({uiState: false, loading: false});
+      }, 6000);
     }
+  }
+
+  onClick(event: SyntheticEvent<*>) {
+    // Prevent form submit events propagating if button is mid-request
+    if (this.props.loading || this.props.disabled) {
+      return event.preventDefault();
+    }
+    if (this.props.onClick) this.props.onClick(event);
+    return true;
   }
 
   render() {
     const {
       children,
-      message,
       disabled,
       icon,
       size,
@@ -107,11 +90,9 @@ export default class Button extends PureComponent {
       grouped,
       spacing,
       active,
-      loading,
       success,
       onClick,
-      loadedTimeout,
-      component,
+      callbackMessage,
       name,
       type,
       className,
@@ -119,17 +100,11 @@ export default class Button extends PureComponent {
       ...otherProps
     } = this.props;
 
-    const loaded = false;
-    const iconElement = false;
-
-    const handleClick = event => {
-      // Prevent form submit events propagating if button is mid-request
-      if (loading || disabled) {
-        event.preventDefault();
-        return;
-      }
-      if (onClick) onClick(event);
-    };
+    const ButtonIconElement = () => (
+      <Icon className={styles.icon} size={!!size ? ICON_SIZE[size] : '18'}>
+        {icon}
+      </Icon>
+    );
 
     const _classNames = cx(
       {
@@ -138,10 +113,10 @@ export default class Button extends PureComponent {
         [styles[`size-${size}`]]: true,
         [styles.grouped]: !!grouped,
         [styles.spacing]: !!spacing,
-        [styles.loading]: loading,
+        [styles.loading]: this.state.loading,
         [styles.success]: success,
-        [styles.loaded]: loaded,
         [styles.active]: !!active,
+        [styles[`state-${this.state.uiState}`]]: this.state.uiState,
       },
       className
     );
@@ -152,29 +127,27 @@ export default class Button extends PureComponent {
       <Tag
         name={name}
         type={type}
-        onClick={disabled ? null : handleClick}
+        onClick={disabled || this.state.uiState ? null : onClick}
         style={style}
         className={_classNames}
-        disabled={disabled || loading}
+        disabled={disabled || (this.state.loading && !this.state.uiState)}
         {...otherProps}
       >
         <span className={styles.placeholder}>
-          {iconElement}
-          {children}
+          <ButtonIconElement />
+          {this.state.uiState ? callbackMessage : children}
         </span>
         <div className={cx(styles.content, styles.message)} name="message">
-          {iconElement}
+          <ButtonIconElement />
           {children}
         </div>
-        <div className={cx(styles.content, styles.successMessage)}>
-          {iconElement}
-          {message}
+        <div className={cx(styles.content, styles.callbackMessage)}>
+          <ButtonIconElement />
+          {callbackMessage}
         </div>
-        {loading ? (
-          <div className={styles.loadingSpinner}>
-            <LoadingSpinner size="small" />
-          </div>
-        ) : null}
+        <div className={styles.loadingSpinner}>
+          <LoadingSpinner size="small" />
+        </div>
       </Tag>
     );
   }

@@ -8,7 +8,7 @@
   --border-width: 1px;
   --easing: ease-in-out;
 
-  --message-animation: 0.4s top cubic-bezier(0.175, 0.885, 0.320, 1.275), 0.4s opacity cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  --message-animation: 0.2s top cubic-bezier(0.175, 0.885, 0.320, 1.275), 0.4s opacity cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
 .root {
@@ -23,6 +23,7 @@
   min-width: 100%;
   font-size: 14px;
   vertical-align: middle;
+  transition: all 140ms ease-in-out;
 }
 
 .root::-moz-focus-inner {
@@ -38,7 +39,7 @@
   border-style: solid;
   border-width: 2px;
   color: var(--navy700);
-  transition: border-color 200ms var(--easing);
+  transition: border-color 140ms var(--easing);
 }
 
 .theme-default:hover {
@@ -109,7 +110,7 @@
   color: #fff;
 }
 
-/*
+/**
  * Sizing
  */
 .size-small {
@@ -132,7 +133,54 @@
   padding: 0 calc(var(--x-large) / 2);
 }
 
+/**
+ * States
+ */
 
+
+.loading .loadingSpinner {
+  opacity: 1;
+  top: 50%;
+}
+
+.loading .message {
+  opacity: 0;
+  top: 100%;
+}
+
+.state-success,
+.state-success:hover,
+.state-success:active {
+  background-color: var(--green500);
+  border: 2px solid transparent;
+  color: #fff;
+}
+
+.state-error,
+.state-error:hover,
+.state-error:active {
+  background-color: var(--pink500);
+  border: 2px solid transparent;
+  color: #fff;
+}
+
+.state-success .callbackMessage,
+.state-error .callbackMessage {
+  opacity: 1;
+  top: 0;
+  transition: all 400ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.state-success .loadingSpinner,
+.state-error .loadingSpinner {
+  opacity: 0;
+  top: -150%;
+}
+
+
+/**
+ * Elements
+ */
 .content {
   height: 100%;
   width: 100%;
@@ -144,31 +192,23 @@
   justify-content: center;
 }
 
-.placeholder {
-  visibility: hidden;
-}
-
 .loadingSpinner {
   left: 50%;
   pointer-events: none;
   position: absolute;
   top: -150%;
   transform: translate(-50%, -50%) rotate(0);
-  transition: 0.4s top cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  transition: top 0.4s cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
-.loading .loadingSpinner {
-  opacity: 1;
-  top: 50%;
-}
 
 .message {
   opacity: 1;
   transition: var(--message-animation);
 }
 
-.successMessage {
-  transition: var(--message-animation);
+.callbackMessage {
+  transition: opacity 400ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -177,16 +217,10 @@
   opacity: 0;
 }
 
-.loading .message,
-.loaded .message {
-  opacity: 0;
-  top: 100%;
-  transition: var(--message-animation);
-}
 
-.loaded.success .successMessage {
-  opacity: 1;
-  top: 0;
+.placeholder {
+  visibility: hidden;
+  transition: all 400ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
 .loading .icon {
@@ -197,27 +231,23 @@
   position: relative;
   opacity: 1;
   transition: 0.4s opacity linear;
-  height: 100%;
   display: inline-block;
   padding: 0;
-  margin-right: 0;
-  margin-left: 0;
-  vertical-align: top;
+  margin-right: 8px;
+  margin-left: -8px;
 }
 
 .button:not(.loneIcon) .icon {
   transform: translateX(-8px);
 }
 
-.icon > * {
-  position: relative;
-  top: 50%;
+/* .icon  {
   transform: translateY(-50%);
   vertical-align: top;
-}
+} */
 
 
-.loaded.success .button {
+/* .loaded.success .button {
   transition-duration: 0.1s;
   background: var(--green500) !important;
   color: #fff !important;
@@ -227,11 +257,11 @@
   transition-duration: 0.1s;
   background: var(--green500) !important;
   color: #fff !important;
-}
+} */
 
-.bordered.loaded.success:hover .button {
+/* .bordered.loaded.success:hover .button {
   border: 1px solid var(--green500) !important;
-}
+} */
 
 
 @keyframes loadingSpinner {

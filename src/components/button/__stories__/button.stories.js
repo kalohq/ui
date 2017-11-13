@@ -63,6 +63,16 @@ storiesOf('Button', module)
       return <Button icon="file_download">Generate Invoice</Button>;
     }
   )
+  .addWithInfo('with loading state', 'A button in a loading state', () => {
+    return <Button loading={true}>Generate Invoice</Button>;
+  })
+  .addWithInfo(
+    'with success state',
+    'A button with a callback success state',
+    () => {
+      return <ButtonStates>Click me to change to a success state</ButtonStates>;
+    }
+  )
   .addWithInfo(
     'With lone icon',
     'A button can also be used with a standalone icon',
@@ -70,3 +80,52 @@ storiesOf('Button', module)
       return <Button size="medium" icon="mode_edit" loneIcon={true} />;
     }
   );
+
+class ButtonStates extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      buttonState: false,
+      buttonLoading: false,
+      buttonCallbackMessage: false,
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState({
+      buttonLoading: true,
+    });
+
+    setTimeout(() => {
+      this.setState({
+        buttonState: 'success',
+        buttonCallbackMessage: "You're logged in!",
+      });
+    }, 2000);
+
+    // setTimeout(() => {
+    //   this.setState({
+    //     buttonState: false,
+    //     buttonLoading: false,
+    //     buttonCallbackMessage: false,
+    //   });
+    // }, 3000);
+  }
+
+  render() {
+    return (
+      <Button
+        theme="secondary"
+        state={this.state.buttonState}
+        loading={this.state.buttonLoading}
+        onClick={this.handleClick}
+        callbackMessage={this.state.buttonCallbackMessage}
+      >
+        Click me
+      </Button>
+    );
+  }
+}
