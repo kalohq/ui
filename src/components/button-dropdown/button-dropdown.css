@@ -1,0 +1,99 @@
+:root {
+  --small: 26px;
+  --medium: 36px;
+  --large: 46px;
+  --x-large: 56px;
+}
+
+.root {
+  position: relative;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  transition: background 0.2s ease, color 0.1s linear;
+  align-items: center;
+  vertical-align: middle;
+  background-color: #fff;
+  border-color: var(--grey300);
+  border-style: solid;
+  border-width: 2px;
+  color: var(--navy700);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.root + .root {
+  border-left-color: transparent;
+}
+
+.root:first-of-type {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.root:last-of-type {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.size-small {
+  height: var(--small);
+  padding: 0 calc(var(--small) / 2);
+}
+
+.size-medium {
+  height: var(--medium);
+  padding: 4px calc(var(--medium) / 2);
+}
+
+.size-large {
+  height: var(--large);
+  padding: 0 calc(var(--large) / 2);
+}
+
+.size-x-large {
+  height: var(--x-large);
+  padding: 0 calc(var(--x-large) / 2);
+}
+
+.theme-tertiary:not(.disabled):not(.active):hover {
+  border-color: var(--grey400);
+  background-color: var(--grey200);
+}
+
+.theme-tertiary:not(.disabled).active {
+  background-color: var(--navy300);
+  border-color: var(--grey400);
+}
+
+.theme-primary {
+  background-color: var(--green500);
+  color: #fff;
+}
+
+.theme-primary:not(.disabled):not(.active):hover {
+  background-color: var(--green600);
+}
+
+.theme-secondary {
+  background-color: var(--blue500);
+  color: #fff;
+}
+
+.theme-secondary:not(.disabled):not(.active):hover {
+  background-color: var(--blue600);
+}
+
+.disabled {
+  background-color: var(--grey300);
+  color: var(--grey400);
+  cursor: default;
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 2px);
+  min-width: calc(100% + 4px);
+  left: -2px;
+}
