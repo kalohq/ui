@@ -55,19 +55,29 @@ export default class Button extends PureComponent {
     if (this.__stateTimeout__) {
       clearTimeout(this.__stateTimeout__);
     }
+    if (this.__waitForTextTimeout__) {
+      clearTimeout(this.__waitForTextTimeout__);
+    }
   }
 
   componentWillReceiveProps(nextProps: ButtonProps) {
-    this.setState({loading: nextProps.loading});
+    if (nextProps.loading) {
+      this.setState({loading: true});
+    }
 
-    if (!this.props.state && nextProps.state) {
-      setTimeout(() => {
+    if (nextProps.state) {
+      clearTimeout(this.__waitForTextTimeout__);
+      this.__waitForTextTimeout__ = setTimeout(() => {
         this.setState({uiState: nextProps.state});
       }, 500);
+
       clearTimeout(this.__stateTimeout__);
       this.__stateTimeout__ = setTimeout(() => {
-        this.setState({uiState: false, loading: false});
-      }, 6000);
+        this.setState({
+          uiState: false,
+          loading: false,
+        });
+      }, 3000);
     }
   }
 

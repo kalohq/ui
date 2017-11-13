@@ -94,25 +94,31 @@ class ButtonStates extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  componentWillUnmount() {
+    clearTimeout(this.__demoTimeout__);
+  }
+
   handleClick() {
     this.setState({
       buttonLoading: true,
     });
 
-    setTimeout(() => {
+    clearTimeout(this.__demoTimeout__);
+    this.__demoTimeout__ = setTimeout(() => {
       this.setState({
         buttonState: 'success',
+        buttonLoading: true,
         buttonCallbackMessage: "You're logged in!",
       });
-    }, 2000);
 
-    // setTimeout(() => {
-    //   this.setState({
-    //     buttonState: false,
-    //     buttonLoading: false,
-    //     buttonCallbackMessage: false,
-    //   });
-    // }, 3000);
+      setTimeout(() => {
+        this.setState({
+          buttonState: false,
+          buttonLoading: false,
+          buttonCallbackMessage: false,
+        });
+      }, 3000);
+    }, 2000);
   }
 
   render() {
