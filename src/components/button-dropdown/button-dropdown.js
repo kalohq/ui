@@ -90,14 +90,12 @@ export default class ButtonDropdown extends PureComponent {
         onClick={this.onToggle}
       >
         {checkboxProps ? (
-          <span onClick={event => event.stopPropagation()}>
-            <Checkbox
-              size="large"
-              marginRight={16}
-              marginLeft={-4}
-              {...checkboxProps}
-            />
-          </span>
+          <Checkbox
+            size="large"
+            marginRight={16}
+            marginLeft={-4}
+            {...checkboxProps}
+          />
         ) : null}
         {children}
         {selectItems.length ? (
@@ -107,17 +105,15 @@ export default class ButtonDropdown extends PureComponent {
         ) : null}
         {selectItems.length ? (
           <div className={styles.menu}>
-            <PaperMenu
-              open={this.state.open}
-              origin="top"
-              width="100%"
-              onClick={event => event.stopPropagation()}
-            >
+            <PaperMenu open={this.state.open} origin="top" width="100%">
               {selectItems.map(item => (
                 <PaperMenuItem
                   disabled={item.disabled}
                   key={item.title}
-                  onClick={item.onClick}
+                  onClick={() => {
+                    this.onToggle();
+                    item.onClick();
+                  }}
                 >
                   {item.title}
                 </PaperMenuItem>
