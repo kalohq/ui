@@ -17,7 +17,7 @@ type Props = {
   padded?: boolean,
   name?: string,
   className?: string,
-  onClick?: Function,
+  onClick?: ?Function,
 };
 
 const DEFAULT_HEIGHT = 52;
