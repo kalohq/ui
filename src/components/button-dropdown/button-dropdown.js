@@ -26,6 +26,7 @@ type Props = {
     size?: string,
     onClick?: Function,
   },
+  disabled?: boolean,
 };
 
 export default class ButtonDropdown extends PureComponent {
@@ -75,6 +76,7 @@ export default class ButtonDropdown extends PureComponent {
       children,
       size = 'large',
       theme = 'tertiary',
+      disabled,
       selectItems = [],
       checkboxProps,
     } = this.props;
@@ -86,14 +88,16 @@ export default class ButtonDropdown extends PureComponent {
           [styles[`size-${size}`]]: true,
           [styles[`theme-${theme}`]]: true,
           [styles.active]: this.state.open,
+          [styles.disabled]: disabled,
         })}
-        onClick={this.onToggle}
+        onClick={!disabled ? this.onToggle : null}
       >
         {checkboxProps ? (
           <Checkbox
             size="large"
             marginRight={16}
             marginLeft={-4}
+            disabled={disabled}
             {...checkboxProps}
           />
         ) : null}
@@ -110,10 +114,14 @@ export default class ButtonDropdown extends PureComponent {
                 <PaperMenuItem
                   disabled={item.disabled}
                   key={item.title}
-                  onClick={() => {
-                    this.onToggle();
-                    item.onClick();
-                  }}
+                  onClick={
+                    !item.disabled ? (
+                      () => {
+                        this.onToggle();
+                        item.onClick();
+                      }
+                    ) : null
+                  }
                 >
                   {item.title}
                 </PaperMenuItem>

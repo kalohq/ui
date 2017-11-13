@@ -85,6 +85,12 @@
   background-color: var(--blue600);
 }
 
+.disabled {
+  background-color: var(--grey300);
+  color: var(--grey400);
+  cursor: default;
+}
+
 .menu {
   position: absolute;
   top: calc(100% + 2px);
