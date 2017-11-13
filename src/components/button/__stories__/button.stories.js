@@ -85,4 +85,41 @@ storiesOf('Button', module)
         />
       );
     }
+  )
+  .addWithInfo(
+    'With a success state',
+    'Success states are shown for 1.5 seconds, before being reset.',
+    () => {
+      return <StatefulButton />;
+    }
   );
+
+class StatefulButton extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      success: false,
+    };
+  }
+
+  handleClick() {
+    this.setState({
+      success: true,
+      disabled: true,
+    });
+  }
+
+  render() {
+    return (
+      <Button
+        onClick={this.handleClick.bind(this)}
+        success={this.state.success}
+        disabled={this.state.disabled}
+        message="Done!"
+      >
+        Click me
+      </Button>
+    );
+  }
+}

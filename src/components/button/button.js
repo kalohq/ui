@@ -87,18 +87,18 @@ export default class Button extends PureComponent {
     component: Box,
   };
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       loaded: false,
+      success: this.props.success,
     };
   }
 
   componentWillUnmount() {
-    if (this.__loadedTimeout__) {
-      clearTimeout(this.__loadedTimeout__);
-    }
+    if (this.__loadedTimeout__) clearTimeout(this.__loadedTimeout__);
+    if (this.__successTimeout__) clearTimeout(this.__successTimeout__);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -110,6 +110,14 @@ export default class Button extends PureComponent {
           this.setState({loaded: false});
         }
       }, this.props.loadedTimeout);
+    }
+
+    if (nextProps.success) {
+      this.setState({success: true, loaded: true});
+      clearTimeout(this.__successTimeout__);
+      this.__successTimeout__ = setTimeout(() => {
+        this.setState({success: false, loaded: false});
+      }, 1500);
     }
   }
 
@@ -129,7 +137,6 @@ export default class Button extends PureComponent {
       wide,
       onClick,
       loading,
-      success,
       message,
       name,
       flex,
@@ -143,10 +150,9 @@ export default class Button extends PureComponent {
       loadedTimeout: _IGNORED,
       readonly: __IGNORED,
       editable: ___IGNORED,
+      success: ____IGNORED,
       ...otherProps
     } = this.props;
-
-    const {loaded} = this.state;
 
     const Tag = this.props.to || this.props.href ? 'span' : 'button';
 
@@ -178,8 +184,8 @@ export default class Button extends PureComponent {
             [styles.wide]: wide,
             [styles.middle]: middle,
             [styles.loading]: loading,
-            [styles.success]: success,
-            [styles.loaded]: loaded,
+            [styles.success]: this.state.success,
+            [styles.loaded]: this.state.loaded,
             [styles.flex]: flex,
             [styles.reverse]: reverse,
           },
@@ -194,7 +200,7 @@ export default class Button extends PureComponent {
           type={type}
           className={cx({
             [styles.button]: true,
-            [styles.disabled]: success ? false : disabled || loading,
+            [styles.disabled]: disabled || loading,
             [styles[theme]]: !!theme,
             [styles.active]: !!active,
             [styles[size]]: true,
