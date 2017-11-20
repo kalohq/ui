@@ -215,11 +215,11 @@
   text-decoration: underline;
 }
 
-.not-interactive {
+.notInteractive {
   cursor: default;
 }
 
-.no-underline,
-.no-underline:hover {
+.noUnderline,
+.noUnderline:hover {
   text-decoration: none;
 }
