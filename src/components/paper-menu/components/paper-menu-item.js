@@ -18,6 +18,7 @@ type Props = {
   name?: string,
   className?: string,
   onClick?: ?Function,
+  component?: any,
 };
 
 const DEFAULT_HEIGHT = 52;
@@ -36,6 +37,7 @@ export default function PaperMenuItem(props: Props) {
     success,
     className,
     onClick,
+    component = Box,
     ...otherProps
   } = props;
 
@@ -59,6 +61,7 @@ export default function PaperMenuItem(props: Props) {
       alignContent="center"
       onClick={onClick}
       name={name}
+      component={component}
       {...otherProps}
     >
       {icon ? (
