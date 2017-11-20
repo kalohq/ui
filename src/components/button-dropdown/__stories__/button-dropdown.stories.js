@@ -82,22 +82,10 @@ storiesOf('ButtonDropdown', module)
           <ButtonDropdown
             size="large"
             disabled={true}
-            selectItems={[
-              {
-                title: 'Pending',
-                onClick: myClickFunction,
-              },
-              {
-                title: 'Approved',
-                onClick: myClickFunction,
-              },
-            ]}
             checkboxProps={{
               onClick: () => {},
             }}
-          >
-            Bulk Select Options
-          </ButtonDropdown>
+          />
           <ButtonDropdown
             size="large"
             selectItems={[
