@@ -18,6 +18,8 @@ type Props = {
     title: string,
     onClick?: Function,
     disabled?: boolean,
+    component?: any,
+    componentProps?: any,
   }>,
   open?: boolean,
   onClick?: Function,
@@ -114,6 +116,8 @@ export default class ButtonDropdown extends PureComponent {
                 <PaperMenuItem
                   disabled={item.disabled}
                   key={item.title}
+                  component={item.component}
+                  {...item.componentProps}
                   onClick={
                     !item.disabled ? (
                       () => {

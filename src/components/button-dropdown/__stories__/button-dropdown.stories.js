@@ -26,7 +26,11 @@ storiesOf('ButtonDropdown', module)
               },
               {
                 title: 'Approved',
-                onClick: myClickFunction,
+                component: 'a',
+                componentProps: {
+                  href: 'http://google.com',
+                  target: '_blank',
+                },
               },
             ]}
             checkboxProps={{

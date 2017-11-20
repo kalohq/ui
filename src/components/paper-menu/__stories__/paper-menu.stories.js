@@ -56,6 +56,13 @@ export class Example extends React.Component {
           <PaperMenuItem title="Logout">
             <InnerLayoutForDemo>Logout</InnerLayoutForDemo>
           </PaperMenuItem>
+          <PaperMenuItem
+            component="a"
+            href="http://kalohq.com"
+            title="As a link"
+          >
+            <InnerLayoutForDemo>This is actually a link</InnerLayoutForDemo>
+          </PaperMenuItem>
         </PaperMenu>
       </Box>
     );
