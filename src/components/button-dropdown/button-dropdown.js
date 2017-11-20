@@ -7,6 +7,7 @@ import PureComponent from 'react-pure-render/component';
 import Icon from '../icon';
 import PaperMenu, {PaperMenuItem} from '../paper-menu';
 import Checkbox from '../checkbox';
+import {Box} from '../layout';
 
 import styles from './button-dropdown.css';
 
@@ -97,13 +98,14 @@ export default class ButtonDropdown extends PureComponent {
         {checkboxProps ? (
           <Checkbox
             size="large"
-            marginRight={16}
             marginLeft={-4}
             disabled={disabled}
             {...checkboxProps}
           />
         ) : null}
-        {children}
+        {children ? (
+          <Box marginLeft={checkboxProps ? 16 : 0}>{children}</Box>
+        ) : null}
         {selectItems.length ? (
           <Icon marginLeft={8} marginRight={-8} size={20}>
             keyboard_arrow_down
