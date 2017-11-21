@@ -123,8 +123,8 @@ export default class ButtonDropdown extends PureComponent {
                   onClick={
                     !item.disabled ? (
                       () => {
+                        if (item.onClick) item.onClick();
                         this.onToggle();
-                        item.onClick();
                       }
                     ) : null
                   }
