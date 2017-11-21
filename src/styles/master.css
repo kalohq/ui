@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'WebFaktSoftPro';
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   src: url('./fonts/fakt-soft-pro/FaktSoftPro-Blond.woff') format('woff'),
     url('./fonts/fakt-soft-pro/FaktSoftPro-Blond.woff2') format('woff2');
@@ -30,7 +30,7 @@
 
 @font-face {
   font-family: 'WebFaktSoftPro';
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
   src: url('./fonts/fakt-soft-pro/FaktSoftPro-SemiBold.woff') format('woff'),
     url('./fonts/fakt-soft-pro/FaktSoftPro-SemiBold.woff2') format('woff2');
@@ -75,7 +75,7 @@ pre {
 :global .t-scale-enter.t-scale-enter-active {
   opacity: 1;
   transform: scale(1);
-  transition: all .3s cubic-bezier(0.55, 0, 0.55, 0.2);
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
 }
 
 :global .t-scale-leave {
@@ -85,7 +85,7 @@ pre {
 :global .t-scale-leave.t-scale-leave-active {
   opacity: 0.01;
   transform: scale(0);
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 :global .t-scale-appear {
@@ -96,7 +96,7 @@ pre {
 :global .t-scale-appear.t-scale-appear-active {
   opacity: 1;
   transform: scale(1);
-  transition: all .3s cubic-bezier(0.55, 0, 0.55, 0.2);
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
 }
 
 :global .t-slide-enter,
@@ -143,7 +143,7 @@ pre {
 :global .t-slide-inverted-appear.t-slide-inverted-appear-active,
 :global .t-slide-inverted-leave.t-slide-inverted-leave-active {
   transition-property: all;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
 }
 
 :global .t-slide-enter.t-slide-enter-active,
@@ -181,7 +181,7 @@ pre {
 
 :global .t-fade-in-out-enter.t-fade-in-out-enter-active {
   opacity: 1;
-  transition: all .3s cubic-bezier(0.55, 0, 0.55, 0.2);
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
 }
 
 :global .t-fade-in-out-leave {
@@ -191,7 +191,7 @@ pre {
 
 :global .t-fade-in-out-leave.t-fade-in-out-leave-active {
   opacity: 0.01;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 :global .t-fade-in-out-appear {
@@ -201,7 +201,7 @@ pre {
 
 :global .t-fade-in-out-appear.t-fade-in-out-appear-active {
   opacity: 1;
-  transition: all .3s cubic-bezier(0.55, 0, 0.55, 0.2);
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
 }
 
 :global .t-fade-enter {
@@ -210,7 +210,7 @@ pre {
 
 :global .t-fade-enter.t-fade-enter-active {
   opacity: 1;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 :global .t-fade-leave {
@@ -219,7 +219,7 @@ pre {
 
 :global .t-fade-leave.t-fade-leave-active {
   opacity: 0.01;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 :global .t-fade-appear {
@@ -228,5 +228,5 @@ pre {
 
 :global .t-fade-appear.t-fade-appear-active {
   opacity: 1;
-  transition: all .3s .3s ease-in;
+  transition: all 0.3s 0.3s ease-in;
 }

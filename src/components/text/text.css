@@ -10,7 +10,7 @@
 }
 
 .root strong {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .resetTransform {
@@ -18,7 +18,7 @@
 }
 
 .weight-light {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .weight-normal {
@@ -129,7 +129,8 @@
   color: var(--purple500);
 }
 
-.color-none {}
+.color-none {
+}
 
 .hover-color-white:hover {
   color: #fff;
@@ -220,5 +221,5 @@
 
 .no-underline,
 .no-underline:hover {
-  text-decoration: none
+  text-decoration: none;
 }
