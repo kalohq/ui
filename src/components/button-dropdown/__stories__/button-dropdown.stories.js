@@ -25,7 +25,7 @@ storiesOf('ButtonDropdown', module)
                 onClick: myClickFunction,
               },
               {
-                title: 'Approved',
+                title: 'This is a link',
                 component: 'a',
                 componentProps: {
                   href: 'http://google.com',
