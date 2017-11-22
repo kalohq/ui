@@ -46,4 +46,4 @@ gulp.task('copy-files', () =>
 /**
  * General tasks
  */
-gulp.task('build-production', ['tokens', 'css', 'js-components', 'copy-files']);
+gulp.task('build-production', ['css', 'js-components', 'copy-files']);

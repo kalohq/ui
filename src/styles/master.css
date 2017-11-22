@@ -2,7 +2,7 @@
  * This file is a subset of the master.css found in frontend repo atm
  */
 
-@import '../.tokens.custom-properties.css';
+@import '../design-tokens/tokens.css';
 
 @font-face {
   font-family: 'WebFaktSoftPro';
