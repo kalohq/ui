@@ -21,7 +21,8 @@
     "copy-flow": "flow-copy-source src/components lib --ignore '{index.js,**/__tests__/*,**/__stories__/*}'",
     "typecheck": "flow",
     "lint": "eslint src",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "generate-tokens": "node scripts/tokens.js"
   },
   "lint-staged": {
     "*.js": [
