@@ -39,7 +39,7 @@ gulp.task('js-components', () =>
  */
 gulp.task('tokens:css', () =>
   gulp
-    .src('config/.tokens.yml')
+    .src('config/design-tokens/color.yml')
     .pipe(
       theo.plugin({
         transform: {type: 'web'},
@@ -51,24 +51,24 @@ gulp.task('tokens:css', () =>
         '/* This is a generated file. Update in `/config/.tokens.yml` and use `gulp tokens` to regen! */'
       )
     )
-    .pipe(gulp.dest('src'))
+    .pipe(gulp.dest('src/tokens'))
 );
 
 gulp.task('tokens:json', () =>
   gulp
-    .src('config/.tokens.yml')
+    .src('config/design-tokens/color.yml')
     .pipe(
       theo.plugin({
         transform: {type: 'web'},
         format: {type: 'json'},
       })
     )
-    .pipe(gulp.dest('src'))
+    .pipe(gulp.dest('src/tokens'))
 );
 
 gulp.task('tokens:module', () =>
   gulp
-    .src('config/.tokens.yml')
+    .src('config/design-tokens/color.yml')
     .pipe(
       theo.plugin({
         transform: {type: 'web'},
@@ -80,7 +80,7 @@ gulp.task('tokens:module', () =>
         '/* This is a generated file. Update in `/config/.tokens.yml` and use `gulp tokens` to regen! */'
       )
     )
-    .pipe(gulp.dest('src'))
+    .pipe(gulp.dest('src/tokens'))
 );
 
 gulp.task('tokens:raw', () =>
@@ -92,7 +92,7 @@ gulp.task('tokens:raw', () =>
         format: {type: 'raw.json'},
       })
     )
-    .pipe(gulp.dest('src'))
+    .pipe(gulp.dest('src/tokens'))
 );
 
 gulp.task('tokens', [
