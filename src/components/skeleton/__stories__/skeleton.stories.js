@@ -2,7 +2,7 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 
 import {Box} from '../../layout';
-import * as variables from '../../../.tokens.module.js';
+import * as variables from 'design-tokens/tokens.module.js';
 
 import {
   SkeletonGrid,
