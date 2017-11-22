@@ -1,0 +1,341 @@
+{
+  "aliases": {},
+  "props": {
+    "navy600": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(84, 103, 137)",
+      "originalValue": "#546789",
+      "name": "navy600"
+    },
+    "pink600": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(224, 88, 103)",
+      "originalValue": "#E05867",
+      "name": "pink600"
+    },
+    "navy700": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(55, 69, 97)",
+      "originalValue": "#374561",
+      "name": "navy700"
+    },
+    "pink700": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(195, 74, 87)",
+      "originalValue": "#C34A57",
+      "name": "pink700"
+    },
+    "orange300": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(255, 237, 180)",
+      "originalValue": "#FFEDB4",
+      "name": "orange300"
+    },
+    "orange400": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(255, 206, 94)",
+      "originalValue": "#FFCE5E",
+      "name": "orange400"
+    },
+    "orange500": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(253, 184, 28)",
+      "originalValue": "#FDB81C",
+      "name": "orange500"
+    },
+    "orange600": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(246, 175, 13)",
+      "originalValue": "#F6AF0D",
+      "name": "orange600"
+    },
+    "orange700": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(216, 145, 24)",
+      "originalValue": "#D89118",
+      "name": "orange700"
+    },
+    "green300": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(216, 240, 232)",
+      "originalValue": "#D8F0E8",
+      "name": "green300"
+    },
+    "green400": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(79, 210, 164)",
+      "originalValue": "#4FD2A4",
+      "name": "green400"
+    },
+    "green500": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(62, 179, 138)",
+      "originalValue": "#3eb38a",
+      "name": "green500"
+    },
+    "grey200": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(249, 250, 252)",
+      "originalValue": "#F9FAFC",
+      "name": "grey200"
+    },
+    "green600": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(56, 160, 124)",
+      "originalValue": "#38A07C",
+      "name": "green600"
+    },
+    "grey300": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(238, 244, 250)",
+      "originalValue": "#EEF4FA",
+      "name": "grey300"
+    },
+    "green700": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(41, 134, 101)",
+      "originalValue": "#298665",
+      "name": "green700"
+    },
+    "grey400": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(208, 216, 223)",
+      "originalValue": "#D0D8DF",
+      "name": "grey400"
+    },
+    "grey500": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(176, 186, 195)",
+      "originalValue": "#B0BAC3",
+      "name": "grey500"
+    },
+    "purple300": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(232, 226, 242)",
+      "originalValue": "#e8e2f2",
+      "name": "purple300"
+    },
+    "grey600": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(137, 146, 155)",
+      "originalValue": "#89929B",
+      "name": "grey600"
+    },
+    "grey700": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(112, 125, 138)",
+      "originalValue": "#707D8A",
+      "name": "grey700"
+    },
+    "purple400": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(159, 129, 218)",
+      "originalValue": "#9F81DA",
+      "name": "purple400"
+    },
+    "blue300": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(193, 244, 255)",
+      "originalValue": "#C1F4FF",
+      "name": "blue300"
+    },
+    "purple500": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(138, 112, 189)",
+      "originalValue": "#8A70BD",
+      "name": "purple500"
+    },
+    "blue400": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(101, 210, 234)",
+      "originalValue": "#65D2EA",
+      "name": "blue400"
+    },
+    "purple600": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(119, 95, 168)",
+      "originalValue": "#775FA8",
+      "name": "purple600"
+    },
+    "blue500": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(84, 195, 219)",
+      "originalValue": "#54C3DB",
+      "name": "blue500"
+    },
+    "purple700": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(96, 78, 131)",
+      "originalValue": "#604e83",
+      "name": "purple700"
+    },
+    "blue600": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(77, 184, 207)",
+      "originalValue": "#4DB8CF",
+      "name": "blue600"
+    },
+    "pink300": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(251, 223, 226)",
+      "originalValue": "#FBDFE2",
+      "name": "pink300"
+    },
+    "blue700": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(43, 167, 194)",
+      "originalValue": "#2BA7C2",
+      "name": "blue700"
+    },
+    "navy300": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(249, 250, 252)",
+      "originalValue": "#F9FAFC",
+      "name": "navy300"
+    },
+    "navy400": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(198, 199, 216)",
+      "originalValue": "#C6C7D8",
+      "name": "navy400"
+    },
+    "pink400": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(253, 179, 200)",
+      "originalValue": "#FDB3C8",
+      "name": "pink400"
+    },
+    "navy500": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(147, 166, 193)",
+      "originalValue": "#93A6C1",
+      "name": "navy500"
+    },
+    "pink500": {
+      "type": "color",
+      "category": "colors",
+      "value": "rgb(234, 95, 110)",
+      "originalValue": "#EA5F6E",
+      "name": "pink500"
+    },
+    "FONT_SIZE_HEADING_LARGE": {
+      "type": "font-size",
+      "category": "typography",
+      "value": 32,
+      "originalValue": 32,
+      "name": "FONT_SIZE_HEADING_LARGE"
+    },
+    "FONT_SIZE_HEADING_MEDIUM": {
+      "type": "font-size",
+      "category": "typography",
+      "value": 24,
+      "originalValue": 24,
+      "name": "FONT_SIZE_HEADING_MEDIUM"
+    },
+    "FONT_SIZE_HEADING_SMALL": {
+      "type": "font-size",
+      "category": "typography",
+      "value": 16,
+      "originalValue": 16,
+      "name": "FONT_SIZE_HEADING_SMALL"
+    },
+    "FONT_SIZE_HEADING_X_SMALL": {
+      "type": "font-size",
+      "category": "typography",
+      "value": 12,
+      "originalValue": 12,
+      "name": "FONT_SIZE_HEADING_X_SMALL"
+    },
+    "FONT_SIZE_TEXT_LARGE": {
+      "type": "font-size",
+      "category": "typography",
+      "value": 18,
+      "originalValue": 18,
+      "name": "FONT_SIZE_TEXT_LARGE"
+    },
+    "FONT_SIZE_TEXT_MEDIUM": {
+      "type": "font-size",
+      "category": "typography",
+      "value": 16,
+      "originalValue": 16,
+      "name": "FONT_SIZE_TEXT_MEDIUM"
+    },
+    "FONT_SIZE_TEXT_SMALL": {
+      "type": "font-size",
+      "category": "typography",
+      "value": 14,
+      "originalValue": 14,
+      "name": "FONT_SIZE_TEXT_SMALL"
+    },
+    "FONT_SIZE_TEXT_X_SMALL": {
+      "type": "font-size",
+      "category": "typography",
+      "value": 12,
+      "originalValue": 12,
+      "name": "FONT_SIZE_TEXT_X_SMALL"
+    },
+    "FONT_WEIGHT_LIGHT": {
+      "type": "font-weight",
+      "category": "typography",
+      "value": 300,
+      "originalValue": 300,
+      "name": "FONT_WEIGHT_LIGHT"
+    },
+    "FONT_WEIGHT_NORMAL": {
+      "type": "font-weight",
+      "category": "typography",
+      "value": 400,
+      "originalValue": 400,
+      "name": "FONT_WEIGHT_NORMAL"
+    },
+    "FONT_WEIGHT_MEDIUM": {
+      "type": "font-weight",
+      "category": "typography",
+      "value": 500,
+      "originalValue": 500,
+      "name": "FONT_WEIGHT_MEDIUM"
+    },
+    "FONT_WEIGHT_SEMIBOLD": {
+      "type": "font-weight",
+      "category": "typography",
+      "value": 600,
+      "originalValue": 600,
+      "name": "FONT_WEIGHT_SEMIBOLD"
+    }
+  }
+}

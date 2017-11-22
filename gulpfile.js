@@ -39,7 +39,7 @@ gulp.task('js-components', () =>
  */
 gulp.task('tokens:css', () =>
   gulp
-    .src('config/design-tokens/color.yml')
+    .src('config/design-tokens/tokens.yml')
     .pipe(
       theo.plugin({
         transform: {type: 'web'},
@@ -56,7 +56,7 @@ gulp.task('tokens:css', () =>
 
 gulp.task('tokens:json', () =>
   gulp
-    .src('config/design-tokens/color.yml')
+    .src('config/design-tokens/tokens.yml')
     .pipe(
       theo.plugin({
         transform: {type: 'web'},
@@ -68,7 +68,7 @@ gulp.task('tokens:json', () =>
 
 gulp.task('tokens:module', () =>
   gulp
-    .src('config/design-tokens/color.yml')
+    .src('config/design-tokens/tokens.yml')
     .pipe(
       theo.plugin({
         transform: {type: 'web'},
@@ -85,7 +85,7 @@ gulp.task('tokens:module', () =>
 
 gulp.task('tokens:raw', () =>
   gulp
-    .src('config/.tokens.yml')
+    .src('config/design-tokens/tokens.yml')
     .pipe(
       theo.plugin({
         transform: {type: 'web'},
