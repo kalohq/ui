@@ -1,4 +1,4 @@
-/* This is a generated file. Update in `/config/.tokens.yml` and use `gulp tokens` to regen! */
+
 export const navy600 = "rgb(84, 103, 137)";
 export const pink600 = "rgb(224, 88, 103)";
 export const navy700 = "rgb(55, 69, 97)";
@@ -35,15 +35,16 @@ export const navy400 = "rgb(198, 199, 216)";
 export const pink400 = "rgb(253, 179, 200)";
 export const navy500 = "rgb(147, 166, 193)";
 export const pink500 = "rgb(234, 95, 110)";
-export const fontSizeHeadingLarge = "";
-export const fontSizeHeadingMedium = "";
-export const fontSizeHeadingSmall = "";
-export const fontSizeHeadingXSmall = "";
-export const fontSizeTextLarge = "";
-export const fontSizeTextMedium = "";
-export const fontSizeTextSmall = "";
-export const fontSizeTextXSmall = "";
-export const fontWeightLight = "";
-export const fontWeightNormal = "";
-export const fontWeightMedium = "";
-export const fontWeightSemibold = "";
+export const fontSizeHeadingLarge = "32px";
+export const fontSizeHeadingMedium = "24px";
+export const fontSizeHeadingSmall = "16px";
+export const fontSizeHeadingXSmall = "12px";
+export const fontSizeTextLarge = "18px";
+export const fontSizeTextMedium = "16px";
+export const fontSizeTextSmall = "14px";
+export const fontSizeTextXSmall = "12px";
+export const fontWeightLight = "300";
+export const fontWeightNormal = "400";
+export const fontWeightMedium = "500";
+export const fontWeightSemibold = "600";
+export const borderRadius = "4px";

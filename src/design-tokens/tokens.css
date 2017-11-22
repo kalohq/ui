@@ -1,4 +1,4 @@
-/* This is a generated file. Update in `/config/.tokens.yml` and use `gulp tokens` to regen! */
+
 :root {
   --navy600: rgb(84, 103, 137);
   --pink600: rgb(224, 88, 103);
@@ -36,16 +36,17 @@
   --pink400: rgb(253, 179, 200);
   --navy500: rgb(147, 166, 193);
   --pink500: rgb(234, 95, 110);
-  --font-size-heading-large: 32;
-  --font-size-heading-medium: 24;
-  --font-size-heading-small: 16;
-  --font-size-heading-x-small: 12;
-  --font-size-text-large: 18;
-  --font-size-text-medium: 16;
-  --font-size-text-small: 14;
-  --font-size-text-x-small: 12;
+  --font-size-heading-large: 32px;
+  --font-size-heading-medium: 24px;
+  --font-size-heading-small: 16px;
+  --font-size-heading-x-small: 12px;
+  --font-size-text-large: 18px;
+  --font-size-text-medium: 16px;
+  --font-size-text-small: 14px;
+  --font-size-text-x-small: 12px;
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
+  --border-radius: 4px;
 }

@@ -66,9 +66,7 @@
     "flow-copy-source": "1.2.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
-    "gulp-header": "^1.8.9",
     "gulp-postcss": "^7.0.0",
-    "gulp-theo": "^1.0.0-beta.1",
     "husky": "0.13.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "21.0.0",
@@ -93,6 +91,7 @@
     "react-styleguidist": "5.2.0",
     "rimraf": "2.6.1",
     "style-loader": "0.16.1",
+    "theo": "^6.0.0-beta.7",
     "webpack": "2.5.1"
   },
   "peerDependencies": {

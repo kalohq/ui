@@ -3,18 +3,18 @@ global:
   category: 'typography'
 props:
   FONT_SIZE_HEADING_LARGE:
-    value: 32
+    value: 32px
   FONT_SIZE_HEADING_MEDIUM:
-    value: 24
+    value: 24px
   FONT_SIZE_HEADING_SMALL:
-    value: 16
+    value: 16px
   FONT_SIZE_HEADING_X_SMALL:
-    value: 12
+    value: 12px
   FONT_SIZE_TEXT_LARGE:
-    value: 18
+    value: 18px
   FONT_SIZE_TEXT_MEDIUM:
-    value: 16
+    value: 16px
   FONT_SIZE_TEXT_SMALL:
-    value: 14
+    value: 14px
   FONT_SIZE_TEXT_X_SMALL:
-    value: 12
+    value: 12px

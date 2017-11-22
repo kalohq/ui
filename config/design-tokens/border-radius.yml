@@ -1,0 +1,6 @@
+global:
+  type: 'border-radius'
+  category: 'layout'
+props:
+  BORDER_RADIUS:
+    value: 4px
