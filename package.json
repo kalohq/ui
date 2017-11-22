@@ -15,13 +15,14 @@
     "storybook": "npm run storybook:start",
     "storybook:start": "start-storybook -p 6006",
     "storybook:build": "build-storybook -c .storybook -o docs",
-    "compile": "gulp build-production",
+    "compile": "npm run generate-tokens && gulp build-production",
     "test": "jest",
     "dist": "rimraf lib && npm run compile",
     "copy-flow": "flow-copy-source src/components lib --ignore '{index.js,**/__tests__/*,**/__stories__/*}'",
     "typecheck": "flow",
     "lint": "eslint src",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "generate-tokens": "node scripts/tokens.js"
   },
   "lint-staged": {
     "*.js": [
@@ -91,6 +92,7 @@
     "react-styleguidist": "5.2.0",
     "rimraf": "2.6.1",
     "style-loader": "0.16.1",
+    "theo": "^6.0.0-beta.7",
     "webpack": "2.5.1"
   },
   "peerDependencies": {
@@ -134,5 +136,6 @@
       "!src/**/*.test.js",
       "!src/**/*.stories.js"
     ]
-  }
+  },
+  "dependencies": {}
 }

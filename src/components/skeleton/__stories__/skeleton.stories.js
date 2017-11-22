@@ -2,7 +2,7 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 
 import {Box} from '../../layout';
-import {variables} from '../../../../config/global_css_variables';
+import * as variables from 'design-tokens/tokens.module.js';
 
 import {
   SkeletonGrid,
@@ -26,7 +26,7 @@ const PAGE_SIZE = 1080;
 /** Page background display container */
 function Page({children, ...styleProps}) {
   const style = {
-    background: variables['--color-grey-snow'],
+    background: variables.grey300,
   };
 
   return (

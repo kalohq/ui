@@ -4,8 +4,7 @@
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: local('Material Icons'),
-    local('MaterialIcons-Regular'),
+  src: local('Material Icons'), local('MaterialIcons-Regular'),
     url(./fonts/MaterialIcons/MaterialIcons-Regular.woff2) format('woff2'),
     url(./fonts/MaterialIcons/MaterialIcons-Regular.woff) format('woff'),
     url(./fonts/MaterialIcons/MaterialIcons-Regular.ttf) format('truetype');
@@ -13,8 +12,7 @@
 
 @font-face {
   font-family: 'fontello';
-  src:
-    url(./fonts/fontello/fontello.woff) format('woff'),
+  src: url(./fonts/fontello/fontello.woff) format('woff'),
     url(./fonts/fontello/fontello.ttf) format('truetype');
   font-weight: 400;
   font-style: normal;
@@ -23,7 +21,7 @@
 .root {
   font-family: 'Material Icons';
   font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
+  font-size: 24px; /* Preferred icon size */
   display: inline-block;
   text-transform: none;
   letter-spacing: normal;
@@ -67,20 +65,49 @@
   cursor: pointer;
 }
 
-
 /*
  * Sizes
  */
-.size-12 { font-size: 12px; height: 12px; }
-.size-14 { font-size: 14px; height: 14px; }
-.size-16 { font-size: 16px; height: 16px; }
-.size-18 { font-size: 18px; height: 18px; }
-.size-20 { font-size: 20px; height: 20px; }
-.size-23 { font-size: 23px; height: 23px; }
-.size-24 { font-size: 24px; height: 24px; }
-.size-26 { font-size: 26px; height: 26px; }
-.size-36 { font-size: 36px; height: 36px; }
-.size-48 { font-size: 48px; height: 48px; }
+.size-12 {
+  font-size: 12px;
+  height: 12px;
+}
+.size-14 {
+  font-size: 14px;
+  height: 14px;
+}
+.size-16 {
+  font-size: 16px;
+  height: 16px;
+}
+.size-18 {
+  font-size: 18px;
+  height: 18px;
+}
+.size-20 {
+  font-size: 20px;
+  height: 20px;
+}
+.size-23 {
+  font-size: 23px;
+  height: 23px;
+}
+.size-24 {
+  font-size: 24px;
+  height: 24px;
+}
+.size-26 {
+  font-size: 26px;
+  height: 26px;
+}
+.size-36 {
+  font-size: 36px;
+  height: 36px;
+}
+.size-48 {
+  font-size: 48px;
+  height: 48px;
+}
 
 /*
  * Colors
@@ -89,25 +116,25 @@
 .color-black,
 .color-dark-grey,
 .color-charcoal {
-  color: var(--color-grey-charcoal);
+  color: var(--grey700);
 }
 
 .color-grey,
 .color-slate {
-  color: var(--color-grey-slate);
+  color: var(--grey600);
 }
 
 .color-silver {
-  color: var(--color-grey-silver);
+  color: var(--grey500);
 }
 
 .color-platinum,
 .color-light-grey {
-  color: var(--color-grey-platinum);
+  color: var(--grey400);
 }
 
 .color-snow {
-  color: var(--color-grey-snow);
+  color: var(--grey300);
 }
 
 .color-white {
@@ -134,4 +161,5 @@
   color: var(--purple500);
 }
 
-.color-none {}
+.color-none {
+}
