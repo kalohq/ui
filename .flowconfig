@@ -6,7 +6,6 @@
 .*/node_modules/.*/src/.*
 .*/node_modules/jss/.*
 .*/node_modules/findup/.*
-.*/src/design-tokens/.*
 
 [include]
 
