@@ -119,6 +119,7 @@ export default class ButtonDropdown extends PureComponent {
                   disabled={item.disabled}
                   key={item.title}
                   component={item.component}
+                  minWidth={item.minWidth}
                   {...item.componentProps}
                   onClick={
                     !item.disabled ? (
