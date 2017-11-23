@@ -23,6 +23,8 @@ export class ComponentDocumentation extends Component {
       <Documentation nav={nav}>
         {loading ? (
           'Loading'
+        ) : !component ? (
+          '404'
         ) : (
           <ul>
             <li>{component.name}</li>
