@@ -18,30 +18,14 @@ storiesOf('ButtonDropdown', module)
       return (
         <ButtonGroup>
           <ButtonDropdown
-            size="large"
-            selectItems={[
-              {
-                title: 'Pending',
-                onClick: myClickFunction,
-              },
-              {
-                title: 'This is a link',
-                minWidth: 225,
-                component: 'a',
-                componentProps: {
-                  href: 'http://google.com',
-                  target: '_blank',
-                },
-              },
-            ]}
+            size="small"
+            subdued={true}
             checkboxProps={{
               onClick: () => {},
             }}
-          >
-            Bulk Select Options
-          </ButtonDropdown>
+          />
           <ButtonDropdown
-            size="large"
+            size="small"
             selectItems={[
               {
                 title: 'Pending',
@@ -56,7 +40,7 @@ storiesOf('ButtonDropdown', module)
             Another One
           </ButtonDropdown>
           <ButtonDropdown
-            size="large"
+            size="small"
             selectItems={[
               {
                 title: 'Pending',

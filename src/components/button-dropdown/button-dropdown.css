@@ -1,8 +1,8 @@
 :root {
-  --small: 26px;
-  --medium: 36px;
-  --large: 46px;
-  --x-large: 56px;
+  --buttonDropdown-size-small: 30px;
+  --buttonDropdown-size-medium: 36px;
+  --buttonDropdown-size-large: 46px;
+  --buttonDropdown-size-x-large: 56px;
 }
 
 .root {
@@ -38,23 +38,24 @@
 }
 
 .size-small {
-  height: var(--small);
-  padding: 0 calc(var(--small) / 2);
+  height: var(--buttonDropdown-size-small);
+  padding: 0 calc(var(--buttonDropdown-size-small) / 2);
+  font-size: 12px;
 }
 
 .size-medium {
-  height: var(--medium);
-  padding: 4px calc(var(--medium) / 2);
+  height: var(--buttonDropdown-size-medium);
+  padding: 4px calc(var(--buttonDropdown-size-medium) / 2);
 }
 
 .size-large {
-  height: var(--large);
-  padding: 0 calc(var(--large) / 2);
+  height: var(--buttonDropdown-size-large);
+  padding: 0 calc(var(--buttonDropdown-size-large) / 2);
 }
 
 .size-x-large {
-  height: var(--x-large);
-  padding: 0 calc(var(--x-large) / 2);
+  height: var(--buttonDropdown-size-x-large);
+  padding: 0 calc(var(--buttonDropdown-size-x-large) / 2);
 }
 
 .theme-tertiary:not(.disabled):not(.active):hover {
@@ -83,6 +84,12 @@
 
 .theme-secondary:not(.disabled):not(.active):hover {
   background-color: var(--blue600);
+}
+
+
+.subdued {
+  background-color: var(--grey200);
+  color: var(--grey700);
 }
 
 .disabled {

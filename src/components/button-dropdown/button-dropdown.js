@@ -30,6 +30,7 @@ type Props = {
     onClick?: Function,
   },
   disabled?: boolean,
+  subdued?: boolean,
 };
 
 export default class ButtonDropdown extends PureComponent {
@@ -80,6 +81,7 @@ export default class ButtonDropdown extends PureComponent {
       size = 'large',
       theme = 'tertiary',
       disabled,
+      subdued,
       selectItems = [],
       checkboxProps,
     } = this.props;
@@ -92,19 +94,15 @@ export default class ButtonDropdown extends PureComponent {
           [styles[`theme-${theme}`]]: true,
           [styles.active]: this.state.open,
           [styles.disabled]: disabled,
+          [styles.subdued]: subdued,
         })}
         onClick={!disabled ? this.onToggle : null}
       >
         {checkboxProps ? (
-          <Checkbox
-            size="large"
-            marginLeft={-4}
-            disabled={disabled}
-            {...checkboxProps}
-          />
+          <Checkbox size="large" disabled={disabled} {...checkboxProps} />
         ) : null}
         {children ? (
-          <Box marginLeft={checkboxProps ? 16 : 0}>{children}</Box>
+          <Box marginLeft={checkboxProps ? 12 : 0}>{children}</Box>
         ) : null}
         {selectItems.length ? (
           <Icon marginLeft={8} marginRight={-8} size={20}>
