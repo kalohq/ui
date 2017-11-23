@@ -65,17 +65,25 @@ export default function GlobalNavigation({props}) {
     <StyledBar>
       <Inner>
         <StyledLogo>
-          <Link href="/">Kalo Design System</Link>
+          <Link href="/">
+            <a>Kalo Design System</a>
+          </Link>
         </StyledLogo>
         <StyledNav>
           <li>
-            <Link href="/product/glossary">Product</Link>
+            <Link href="/product/glossary">
+              <a>Product</a>
+            </Link>
           </li>
           <li>
-            <Link href="/brand/color">Brand</Link>
+            <Link href="/brand/color">
+              <a>Brand</a>
+            </Link>
           </li>
           <li>
-            <Link href="/components/button">Components</Link>
+            <Link href="/components/button">
+              <a>Components</a>
+            </Link>
           </li>
         </StyledNav>
       </Inner>

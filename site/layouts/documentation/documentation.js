@@ -1,16 +1,14 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
-import PureComponent from 'react-pure-render/component';
 import {find} from 'lodash';
 
-import Page from 'layouts/page';
-import Aside from 'components/aside';
-import MarkdownContent from 'components/markdown-content';
+import Page from '../page';
+import SideNav from '../../components/side-nav';
 
 const routes = [
   {
-    groupTitle: 'Brand',
-    category: 'brand',
+    title: 'Brand',
+    key: 'brand',
     links: [
       {
         title: 'Colors',
@@ -31,8 +29,8 @@ const routes = [
     ],
   },
   {
-    groupTitle: 'Product',
-    category: 'product',
+    title: 'Product',
+    key: 'product',
     links: [
       {
         title: 'Personas',
@@ -57,37 +55,18 @@ const Main = styled.main`
   max-width: 920px;
 `;
 
-export default class Documentation extends PureComponent {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      routes,
-    };
-  }
-
-  componentWillMount(props) {
-    const currentGroup = find(this.state.routes, [
-      'category',
-      this.props.category,
-    ]);
-    if (currentGroup) {
-      this.setState({
-        data: currentGroup,
-      });
-    }
-  }
-
+export default class Documentation extends Component {
   render() {
-    const {pageTitle, children} = this.props;
+    const {
+      children,
+      category,
+      nav = find(routes, route => route.key === category),
+    } = this.props;
     return (
       <Page>
         <Container>
-          <Aside data={this.state.data} />
-          <Main>
-            <h1>{pageTitle}</h1>
-            <MarkdownContent>{children}</MarkdownContent>
-          </Main>
+          <SideNav title={nav.title} links={nav.links} />
+          <Main>{children}</Main>
         </Container>
       </Page>
     );

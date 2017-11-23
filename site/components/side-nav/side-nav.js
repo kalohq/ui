@@ -37,21 +37,21 @@ const LinkItem = styled.li`
   }
 `;
 
-export default function Aside({data}) {
+export default function SideNav({links, title}: Object) {
   return (
     <AsideContainer>
-      <Title>{data.groupTitle}</Title>
-      {data ? (
-        <LinkGroup>
-          {data.links.map(item => {
-            return (
-              <LinkItem key={item.title}>
-                <Link href={item.path}>{item.title}</Link>
-              </LinkItem>
-            );
-          })}
-        </LinkGroup>
-      ) : null}
+      <Title>{title}</Title>
+      <LinkGroup>
+        {links.map(item => {
+          return (
+            <LinkItem key={item.path}>
+              <Link href={item.path} as={item.as}>
+                <a>{item.title}</a>
+              </Link>
+            </LinkItem>
+          );
+        })}
+      </LinkGroup>
     </AsideContainer>
   );
 }

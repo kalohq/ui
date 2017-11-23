@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, {injectGlobal} from 'styled-components';
 
-import GlobalNavigation from 'components/global-navigation';
+import GlobalNavigation from '../../components/global-navigation';
 
 injectGlobal`
   * {
@@ -21,17 +21,11 @@ const Container = styled.div`
   min-height: 100vh;
 `;
 
-export default function Page({children, ...props}) {
+export default function Page({children}) {
   return (
     <Container>
       <GlobalNavigation />
       {children}
     </Container>
   );
-}
-
-const PageFlexContainer = styled.div`display: flex;`;
-
-export function PageWrapper({children}) {
-  return <PageFlexContainer>{children}</PageFlexContainer>;
 }
