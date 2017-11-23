@@ -19,6 +19,7 @@ type Props = {
   className?: string,
   onClick?: ?Function,
   component?: any,
+  minWidth?: number,
 };
 
 const DEFAULT_HEIGHT = 52;
@@ -38,6 +39,7 @@ export default function PaperMenuItem(props: Props) {
     className,
     onClick,
     component = Box,
+    minWidth,
     ...otherProps
   } = props;
 
@@ -57,6 +59,7 @@ export default function PaperMenuItem(props: Props) {
       className={_classNames}
       flexDirection="row"
       minHeight={DEFAULT_HEIGHT}
+      minWidth={minWidth ? minWidth : 'auto'}
       alignItems="center"
       alignContent="center"
       onClick={onClick}

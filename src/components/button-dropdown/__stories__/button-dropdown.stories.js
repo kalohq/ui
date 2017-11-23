@@ -26,6 +26,7 @@ storiesOf('ButtonDropdown', module)
               },
               {
                 title: 'This is a link',
+                minWidth: 225,
                 component: 'a',
                 componentProps: {
                   href: 'http://google.com',
