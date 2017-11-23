@@ -34,7 +34,7 @@
 
 .wireframe {
   background: transparent;
-  border: 1px dashed var(--color-grey-silver);
+  border: 1px dashed var(--grey500);
 }
 
 .level-0 {

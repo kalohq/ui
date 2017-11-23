@@ -1,5 +1,5 @@
 .root {
-  background-color: var(--color-white);
+  background-color: var(--white);
   cursor: pointer;
   border-bottom: 1px solid var(--grey300);
   transition: all 0.2s ease-in;
