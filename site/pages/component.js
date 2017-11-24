@@ -1,48 +1,134 @@
-import React from 'react';
-import PureComponent from 'react-pure-render/component';
+import React, {Component} from 'react';
+import {toPairs, groupBy, flattenDeep, identity} from 'lodash';
 
-import Aside from 'components/aside';
-import Page from 'layouts/page';
-import Documentation from 'layouts/documentation';
-import PropTable from 'components/prop-table';
-import MarkdownContent from 'components/markdown-content';
+import withQueries, {gql} from '../hocs/withQueries';
 
-import componentData from 'content/components/_data.json';
+import Documentation from '../layouts/documentation';
 
-export default class ComponentDocumentation extends PureComponent {
-  constructor() {
-    super();
-    const links = [];
-    Object.keys(componentData).map(item => {
-      return links.push({
-        title: item,
-        link: `/components/${item}`,
-      });
-    });
-
-    this.state = {
-      data: componentData,
-      links: links,
-    };
-  }
-
-  componentWillMount() {
-    const requestedComponent = this.props.url.query.componentName;
-    this.setState({
-      component: this.state.data[requestedComponent]['README'],
-    });
-  }
-
+export class ComponentDocumentation extends Component {
   render() {
+    const {data} = this.props;
+    const {components, component, loading} = data;
+    const nav = {
+      title: 'Components',
+      links: loading
+        ? []
+        : components.map(c => ({
+            title: c.name,
+            path: `/component?componentName=${c.name}`,
+            as: `/components/${c.name}`,
+          })),
+    };
     return (
-      <Page>
-        <Documentation data={this.state.links}>
-          <MarkdownContent
-            dangerouslySetInnerHTML={{__html: this.state.component.body}}
-          />
-          <PropTable />
-        </Documentation>
-      </Page>
+      <Documentation nav={nav}>
+        {loading ? (
+          'Loading'
+        ) : !component ? (
+          '404'
+        ) : (
+          <ul>
+            <li>{component.name}</li>
+            <li>{component.module.path}</li>
+            <li>Total Usages ({component.usages.length})</li>
+            <li>Component Dependencies ({component.dependencies.length}):</li>
+            <ul>
+              {component.dependencies.map(c => (
+                <li key={c.component ? c.component.id : c.name}>
+                  {c.component ? c.component.name : `Unresolved (${c.name})`}
+                  {c.component ? (
+                    <span>
+                      {' '}
+                      ({c.component.module ? c.component.module.path : 'DOM'})
+                    </span>
+                  ) : null}
+                </li>
+              ))}
+            </ul>
+            <li>Dependant Component ({component.dependants.length}):</li>
+            <ul>
+              {component.dependants.map(c => (
+                <li key={c.component ? c.component.id : c.name}>
+                  {c.component.name} ({c.component.module ? (
+                    c.component.module.path
+                  ) : (
+                    'DOM'
+                  )})
+                </li>
+              ))}
+            </ul>
+            <li>Props by usage:</li>
+            <ul>
+              {toPairs(
+                groupBy(
+                  flattenDeep(
+                    component.usages.map(u => u.props.map(p => p.name))
+                  ),
+                  identity
+                )
+              )
+                .map(([name, u]) => ({name, usages: u.length}))
+                .sort((a, b) => (a.usages > b.usages ? -1 : 1))
+                .map(p => (
+                  <li key={p.name}>
+                    {p.name} ({p.usages})
+                  </li>
+                ))}
+            </ul>
+          </ul>
+        )}
+      </Documentation>
     );
   }
 }
+
+export default withQueries(
+  gql`
+    query componentPage($componentName: String!) {
+      components {
+        name
+      }
+      component(name: $componentName) {
+        id
+        name
+        dependencies {
+          name
+          component {
+            id
+            name
+            module {
+              path
+            }
+          }
+        }
+        dependants {
+          name
+          component {
+            id
+            name
+            module {
+              path
+            }
+          }
+        }
+        usages {
+          name
+          props {
+            name
+          }
+          byComponent {
+            name
+            module {
+              path
+            }
+          }
+        }
+        module {
+          path
+        }
+      }
+    }
+  `,
+  {
+    options: ({url}) => ({variables: {componentName: url.query.componentName}}),
+  }
+)(ComponentDocumentation);
