@@ -1,10 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+/* @flow */
+import * as React from 'react';
 import cx from 'classnames';
-import {isBoolean, isString} from 'lodash';
 
 import PureComponent from 'react-pure-render/component';
-import {Box, Flex} from '../layout';
+
 import Icon from '../icon';
 import LoadingSpinner from '../loading-spinner';
 
@@ -16,101 +15,79 @@ const ICON_SIZE = {
   large: '24',
 };
 
-function renderIcon(icon, border, size) {
-  if (!icon) return null;
-
-  return isString(icon) ? (
-    <span
-      className={cx({
-        [styles.icon]: true,
-        [styles.border]: border,
-      })}
-    >
-      <Icon size={!!size ? size : '18'}>{icon}</Icon>
-    </span>
-  ) : (
-    <span
-      className={cx({
-        [styles.icon]: true,
-        [styles.border]: border,
-      })}
-    >
-      {icon}
-    </span>
-  );
-}
+export type ButtonProps = {
+  children?: string,
+  message?: string,
+  disabled?: boolean,
+  icon?: string,
+  size?: 'small' | 'medium' | 'large',
+  theme?: 'primary' | 'secondary' | 'default' | 'delete',
+  grouped?: boolean,
+  spacing?: boolean,
+  active?: boolean,
+  loading?: boolean,
+  onClick?: Function,
+  name?: string,
+  type?: string,
+  style?: Object,
+  state?: 'success' | 'error',
+  callbackMessage?: string,
+};
 
 export default class Button extends PureComponent {
-  static propTypes = {
-    children: PropTypes.any,
-    message: PropTypes.string,
-    role: PropTypes.string,
-    disabled: PropTypes.bool,
-    icon: PropTypes.any,
-    iconBorder: PropTypes.bool,
-    loneIcon: PropTypes.bool,
-    wide: PropTypes.bool,
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
-    theme: PropTypes.oneOf([
-      'primary',
-      'secondary',
-      'tertiary',
-      'disabled',
-      'delete',
-      'deny',
-      'confirm',
-    ]),
-    grouped: PropTypes.bool,
-    spacing: PropTypes.bool,
-    flex: PropTypes.bool,
-    active: PropTypes.bool,
-    loading: PropTypes.bool,
-    success: PropTypes.bool,
-    middle: PropTypes.bool,
-    onClick: PropTypes.func,
-    loadedTimeout: PropTypes.number,
-    component: PropTypes.any,
-    name: PropTypes.string,
-    type: PropTypes.string,
-    mayGetLong: PropTypes.bool,
-  };
-
   static defaultProps = {
-    role: 'button',
     size: 'large',
-    theme: 'primary',
-    iconBorder: false,
+    theme: 'default',
     wide: false,
     loading: false,
-    loneIcon: false,
-    loadedTimeout: 600,
-    component: Box,
   };
 
-  constructor() {
-    super();
+  constructor(props: ButtonProps) {
+    super(props);
 
     this.state = {
-      loaded: false,
+      loading: this.props.loading,
+      uiState: this.props.uiState,
     };
   }
 
   componentWillUnmount() {
-    if (this.__loadedTimeout__) {
-      clearTimeout(this.__loadedTimeout__);
+    if (this.__stateTimeout__) {
+      clearTimeout(this.__stateTimeout__);
+    }
+    if (this.__waitForTextTimeout__) {
+      clearTimeout(this.__waitForTextTimeout__);
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.loading && !nextProps.loading) {
-      this.setState({loaded: true});
-      clearTimeout(this.__loadedTimeout__);
-      this.__loadedTimeout__ = setTimeout(() => {
-        if (this.state.loaded) {
-          this.setState({loaded: false});
-        }
-      }, this.props.loadedTimeout);
+  componentWillReceiveProps(nextProps: ButtonProps) {
+    if (nextProps.loading) {
+      this.setState({loading: true});
     }
+
+    if (nextProps.state) {
+      clearTimeout(this.__waitForTextTimeout__);
+      this.__waitForTextTimeout__ = setTimeout(() => {
+        this.setState({uiState: nextProps.state});
+      }, 500);
+
+      clearTimeout(this.__stateTimeout__);
+      this.__stateTimeout__ = setTimeout(() => {
+        this.setState({
+          uiState: false,
+          loading: false,
+        });
+      }, 3000);
+    }
+  }
+
+  onClick(event: SyntheticEvent<*>) {
+    // Prevent form submit events propagating if button is mid-request
+    if (this.props.loading || this.props.disabled) {
+      return event.preventDefault();
+    }
+    if (this.props.onClick) this.props.onClick(event);
+    return true;
   }
 
   render() {
@@ -118,119 +95,70 @@ export default class Button extends PureComponent {
       children,
       disabled,
       icon,
-      reverse,
-      iconBorder,
-      loneIcon,
+      size,
       theme,
       grouped,
       spacing,
-      size,
       active,
-      wide,
-      onClick,
-      loading,
       success,
-      message,
+      onClick,
+      callbackMessage,
       name,
-      flex,
       type,
-      role,
-      component: Component,
       className,
-      middle,
       style,
-      mayGetLong,
-      loadedTimeout: _IGNORED,
-      readonly: __IGNORED,
-      editable: ___IGNORED,
       ...otherProps
     } = this.props;
 
-    const {loaded} = this.state;
-
-    const Tag = this.props.to || this.props.href ? 'span' : 'button';
-
-    const iconElement = renderIcon(
-      icon,
-      isBoolean(iconBorder) ? iconBorder : !!icon && !!children,
-      ICON_SIZE[size]
+    const ButtonIconElement = () => (
+      <Icon className={styles.icon} size={!!size ? ICON_SIZE[size] : '18'}>
+        {icon}
+      </Icon>
     );
 
-    const handleClick = event => {
-      // Prevent form submit events propagating if button is mid-request
-      if (loading || disabled) {
-        event.preventDefault();
-        return;
-      }
-      if (onClick) {
-        onClick(event);
-      }
-    };
+    const _classNames = cx(
+      {
+        [styles.root]: true,
+        [styles[`theme-${theme}`]]: !!theme,
+        [styles[`size-${size}`]]: true,
+        [styles.grouped]: !!grouped,
+        [styles.spacing]: !!spacing,
+        [styles.loading]: this.state.loading,
+        [styles.success]: success,
+        [styles.active]: !!active,
+        [styles[`state-${this.state.uiState}`]]: this.state.uiState,
+      },
+      className
+    );
+
+    const Tag = this.props.to || this.props.href ? 'a' : 'button';
 
     return (
-      <Component
+      <Tag
+        name={name}
+        type={type}
+        onClick={disabled || this.state.uiState ? null : onClick}
         style={style}
-        className={cx(
-          {
-            [styles.root]: true,
-            [styles.grouped]: !!grouped,
-            [styles.spacing]: !!spacing,
-            [styles.wide]: wide,
-            [styles.middle]: middle,
-            [styles.loading]: loading,
-            [styles.success]: success,
-            [styles.loaded]: loaded,
-            [styles.flex]: flex,
-            [styles.reverse]: reverse,
-          },
-          className
-        )}
-        onClick={handleClick}
+        className={_classNames}
+        disabled={disabled || (this.state.loading && !this.state.uiState)}
         {...otherProps}
       >
-        <Tag
-          role={role}
-          name={name}
-          type={type}
-          className={cx({
-            [styles.button]: true,
-            [styles.disabled]: success ? false : disabled || loading,
-            [styles[theme]]: !!theme,
-            [styles.active]: !!active,
-            [styles[size]]: true,
-            [styles.loneIcon]: loneIcon,
-          })}
-        >
-          <span className={styles.placeholder}>
-            {iconElement}
-            {children}
-          </span>
-          <Flex
-            alignItems="center"
-            justifyContent="center"
-            name="message"
-            className={cx({
-              [styles.message]: true,
-              [styles.mayGetLong]: mayGetLong,
-            })}
-            title={mayGetLong ? children : undefined}
-          >
-            {iconElement}
-            {children}
-          </Flex>
-          <Flex
-            alignItems="center"
-            justifyContent="center"
-            className={styles.successMessage}
-          >
-            {iconElement}
-            {message}
-          </Flex>
-          <div className={styles.loadingSpinner}>
-            <LoadingSpinner size="small" />
-          </div>
-        </Tag>
-      </Component>
+        <span className={styles.placeholder}>
+          <ButtonIconElement />
+          {this.state.uiState ? callbackMessage : children}
+        </span>
+        <div className={cx(styles.content, styles.message)} name="message">
+          <ButtonIconElement />
+          {children}
+        </div>
+        <div className={cx(styles.content, styles.callbackMessage)}>
+          <ButtonIconElement />
+          {callbackMessage}
+        </div>
+        <div className={styles.loadingSpinner}>
+          <LoadingSpinner size="small" />
+        </div>
+      </Tag>
     );
   }
 }

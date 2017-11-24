@@ -11,10 +11,10 @@ const myClickFunction = () => {
 
 storiesOf('Button', module)
   .addWithInfo(
-    'Tertiary Button',
+    'Default Button',
     "The default style. Unless the action you're building is primary, this is the button you should use.",
     () => {
-      return <Button theme="tertiary">Export Freelancers</Button>;
+      return <Button>Export Freelancers</Button>;
     }
   )
   .addWithInfo(
@@ -47,12 +47,7 @@ storiesOf('Button', module)
     'Sometimes you want to trigger the success animation while keeping the button disabled/unclickable',
     () => {
       return (
-        <Button
-          theme="tertiary"
-          disabled={true}
-          success={true}
-          onClick={myClickFunction}
-        >
+        <Button disabled={true} success={true} onClick={myClickFunction}>
           Get Started
         </Button>
       );
@@ -65,24 +60,78 @@ storiesOf('Button', module)
     'With icon',
     'To provide more context to an action, an icon (see the Icon component) can be floated next the button copy',
     () => {
-      return (
-        <Button theme="tertiary" icon="file_download">
-          Generate Invoice
-        </Button>
-      );
+      return <Button icon="file_download">Generate Invoice</Button>;
+    }
+  )
+  .addWithInfo('with loading state', 'A button in a loading state', () => {
+    return <Button loading={true}>Generate Invoice</Button>;
+  })
+  .addWithInfo(
+    'with success state',
+    'A button with a callback success state',
+    () => {
+      return <ButtonStates>Click me to change to a success state</ButtonStates>;
     }
   )
   .addWithInfo(
     'With lone icon',
     'A button can also be used with a standalone icon',
     () => {
-      return (
-        <Button
-          theme="tertiary"
-          size="medium"
-          icon="mode_edit"
-          loneIcon={true}
-        />
-      );
+      return <Button size="medium" icon="mode_edit" loneIcon={true} />;
     }
   );
+
+class ButtonStates extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      buttonState: false,
+      buttonLoading: false,
+      buttonCallbackMessage: false,
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.__demoTimeout__);
+  }
+
+  handleClick() {
+    this.setState({
+      buttonLoading: true,
+    });
+
+    clearTimeout(this.__demoTimeout__);
+    this.__demoTimeout__ = setTimeout(() => {
+      this.setState({
+        buttonState: 'success',
+        buttonLoading: true,
+        buttonCallbackMessage: "You're logged in!",
+      });
+
+      setTimeout(() => {
+        this.setState({
+          buttonState: false,
+          buttonLoading: false,
+          buttonCallbackMessage: false,
+        });
+      }, 3000);
+    }, 2000);
+  }
+
+  render() {
+    return (
+      <Button
+        theme="secondary"
+        state={this.state.buttonState}
+        loading={this.state.buttonLoading}
+        onClick={this.handleClick}
+        callbackMessage={this.state.buttonCallbackMessage}
+      >
+        Click me
+      </Button>
+    );
+  }
+}
