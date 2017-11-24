@@ -7,6 +7,7 @@ const {getConfig: getReconConfig} = require('recon-config');
 const routes = require('./routes');
 
 const IS_PRODUCTION = process.env.NODE_ENV === 'production';
+const PORT = process.env.PORT || 3000;
 const app = next({
   dir: './',
   dev: !IS_PRODUCTION,
@@ -30,5 +31,5 @@ app.prepare().then(() => {
       })
     )
     .use(handler)
-    .listen(IS_PRODUCTION ? 80 : 3000);
+    .listen(PORT);
 });
