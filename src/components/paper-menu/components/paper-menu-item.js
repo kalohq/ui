@@ -9,6 +9,7 @@ import styles from './paper-menu-item.css';
 
 type Props = {
   icon?: React.Node | string,
+  iconAfter?: React.Node | string,
   children?: React.Node,
   active?: boolean,
   success?: boolean,
@@ -40,6 +41,7 @@ export default function PaperMenuItem(props: Props) {
     onClick,
     component = Box,
     minWidth,
+    iconAfter,
     ...otherProps
   } = props;
 
@@ -76,6 +78,12 @@ export default function PaperMenuItem(props: Props) {
       <Box flexDirection="row" className={styles.content}>
         {children}
       </Box>
+
+      {iconAfter ? (
+        <Box marginLeft={10}>
+          <Icon size={16}>{iconAfter}</Icon>
+        </Box>
+      ) : null}
     </Box>
   );
 }
