@@ -26,7 +26,7 @@ const PAGE_SIZE = 1080;
 /** Page background display container */
 function Page({children, ...styleProps}) {
   const style = {
-    background: variables.grey300,
+    background: variables.grey200,
   };
 
   return (

@@ -4,19 +4,19 @@
 
 .paper {
   background-color: #fff;
-  border: 1px solid var(--grey400);
+  border: 1px solid var(--grey300);
   border-radius: 3px;
 }
 
 .shape {
-  background-color: var(--grey400);
+  background-color: var(--grey300);
 }
 
 .header {
   background-color: #fff;
-  border-bottom: 1px solid var(--grey400);
+  border-bottom: 1px solid var(--grey300);
 }
 
 .toolbar {
-  border-top: 1px solid var(--grey400);
+  border-top: 1px solid var(--grey300);
 }
