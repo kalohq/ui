@@ -8,6 +8,7 @@
   --orange400: rgb(255, 206, 94);
   --orange500: rgb(253, 184, 28);
   --orange600: rgb(246, 175, 13);
+  --white: rgb(255, 255, 255);
   --orange700: rgb(216, 145, 24);
   --green300: rgb(216, 240, 232);
   --green400: rgb(79, 210, 164);
@@ -36,6 +37,7 @@
   --pink400: rgb(253, 179, 200);
   --navy500: rgb(147, 166, 193);
   --pink500: rgb(234, 95, 110);
+  --black: rgb(0, 0, 0);
   --font-size-heading-large: 32px;
   --font-size-heading-medium: 24px;
   --font-size-heading-small: 16px;

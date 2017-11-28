@@ -9,6 +9,7 @@ import styles from './paper-menu-item.css';
 
 type Props = {
   icon?: React.Node | string,
+  iconAfter?: React.Node | string,
   children?: React.Node,
   active?: boolean,
   success?: boolean,
@@ -19,6 +20,7 @@ type Props = {
   className?: string,
   onClick?: ?Function,
   component?: any,
+  minWidth?: number,
 };
 
 const DEFAULT_HEIGHT = 52;
@@ -38,6 +40,8 @@ export default function PaperMenuItem(props: Props) {
     className,
     onClick,
     component = Box,
+    minWidth,
+    iconAfter,
     ...otherProps
   } = props;
 
@@ -57,6 +61,7 @@ export default function PaperMenuItem(props: Props) {
       className={_classNames}
       flexDirection="row"
       minHeight={DEFAULT_HEIGHT}
+      minWidth={minWidth ? minWidth : 'auto'}
       alignItems="center"
       alignContent="center"
       onClick={onClick}
@@ -73,6 +78,12 @@ export default function PaperMenuItem(props: Props) {
       <Box flexDirection="row" className={styles.content}>
         {children}
       </Box>
+
+      {iconAfter ? (
+        <Box marginLeft={10}>
+          <Icon size={16}>{iconAfter}</Icon>
+        </Box>
+      ) : null}
     </Box>
   );
 }

@@ -2,6 +2,10 @@ global:
   type: color
   category: colors
 props:
+  WHITE:
+    value: '#fff'
+  BLACK:
+    value: '#000'
   PINK300:
     value: '#FBDFE2'
   PINK400:
