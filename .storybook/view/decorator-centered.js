@@ -1,6 +1,6 @@
 import React from 'react';
 import {ThemeProvider} from 'emotion-theming';
-import {Flex, Inline} from 'components/layout';
+import {Inline, Flex} from 'components/layout';
 import Node from './node';
 import Text from 'components/text';
 import H1 from 'components/h1';
@@ -16,7 +16,7 @@ export default function(renderStory) {
     <ThemeProvider theme={theme}>
       <Flex
         flexDirection="column"
-        padding={[50, 50]}
+        padding={50}
         style={{backgroundColor: '#fff'}}
       >
         <H1 size="extra-large">{meta.context.story}</H1>
