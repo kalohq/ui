@@ -33,7 +33,8 @@ function extendPrimitive(name, DefaultComponent, display, defaultStyle) {
 }
 
 export const Box = extendPrimitive('Box', GridBox, 'flex', {
-  position: 'relative',
+  /* This might be a bad idea removing this. We'll see... */
+  /* position: 'relative', */
   flexDirection: 'column',
   alignItems: 'stretch',
   flexShrink: 0,
