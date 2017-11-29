@@ -1,10 +1,12 @@
 /* @flow */
 /* eslint-env jest */
 import {shallow} from 'enzyme';
-import {textMatch} from 'utils/test/enzyme';
 import {testComponent} from 'utils/test/react';
+import serializer from 'enzyme-to-json/serializer';
 
 import Checkbox from '../checkbox';
+
+expect.addSnapshotSerializer(serializer);
 
 describe('components/checkbox', () => {
   describe('Checkbox', () => {
@@ -16,7 +18,7 @@ describe('components/checkbox', () => {
     it('should render shallow component ok', () => {
       const {element} = create();
       const result = shallow(element);
-      expect(result).toBeTruthy();
+      expect(result).toMatchSnapshot();
     });
 
     it('should render a checkbox with label', () => {
@@ -25,8 +27,7 @@ describe('components/checkbox', () => {
       });
 
       const result = shallow(element);
-      const label = result.find('Text');
-      expect(textMatch(label, 'A checkbox label')).toBe(true);
+      expect(result).toMatchSnapshot();
     });
 
     it('should render a checkbox partially checked', () => {
@@ -36,9 +37,7 @@ describe('components/checkbox', () => {
         indeterminate: true,
       });
       const result = shallow(element);
-      expect(result).toBeTruthy();
-      const box = result.find('Box').first();
-      expect(box.prop('className')).toBe('checkbox indeterminate');
+      expect(result).toMatchSnapshot();
     });
   });
 });

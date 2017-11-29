@@ -56,6 +56,7 @@
     "emotion": "^8.0.10",
     "emotion-theming": "^8.0.10",
     "enzyme": "2.7.1",
+    "enzyme-to-json": "2.0.0",
     "eslint": "3.19.0",
     "eslint-config-airbnb": "14.1.0",
     "eslint-config-prettier": "2.4.0",
@@ -75,6 +76,7 @@
     "husky": "0.13.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "21.0.0",
+    "jest-glamor-react": "^3.2.2",
     "lint-staged": "3.4.2",
     "lodash": "4.17.2",
     "postcss-cli": "3.2.0",
@@ -132,6 +134,7 @@
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|html)$": "<rootDir>/__mocks__/file-mock.js",
       "\\.(css|less)$": "identity-obj-proxy"
     },
+    "testEnvironment": "jsdom",
     "testMatch": [
       "**/__tests__/**/?(*.)(spec|test).js?(x)"
     ],
