@@ -5,7 +5,7 @@ import {cx} from 'emotion';
 
 import {Box as GridBox, Flex as GridFlex} from 'grid-emotion';
 
-function extendPrimitive(name, DefaultComponent, display, defaultStyle) {
+function extendPrimitive(DefaultComponent, display, defaultStyle) {
   return (initialProps: any) => {
     const {
       component: Component = DefaultComponent,
@@ -32,22 +32,32 @@ function extendPrimitive(name, DefaultComponent, display, defaultStyle) {
   };
 }
 
-export const Box = extendPrimitive('Box', GridBox, 'flex', {
-  /* This might be a bad idea removing this. We'll see... */
-  /* position: 'relative', */
+export const Box = extendPrimitive(GridBox, 'flex', {
   flexDirection: 'column',
   alignItems: 'stretch',
   flexShrink: 0,
   alignContent: 'flex-start',
-  display: 'flex',
 });
 
-export const Flex = extendPrimitive('Flex', GridFlex, 'flex', {
+export const Flex = extendPrimitive(GridFlex, 'flex', {
   flexDirection: 'row',
-  display: 'flex',
 });
+Flex.displayName = 'Flex';
 
-export const Block = extendPrimitive('Block', 'div', 'block');
-export const Inline = extendPrimitive('Inline', 'span', 'inline-block', {
+export const Block = extendPrimitive('div', 'block');
+Block.displayName = 'Block';
+
+export const Inline = extendPrimitive('span', 'inline-block', {
   verticalAlign: 'bottom',
 });
+Inline.displayName = 'Inline';
+
+export const InlineFlex = extendPrimitive('span', 'inline-flex');
+InlineFlex.displayName = 'InlineFlex';
+
+/**
+ * @todo: All of the html primitives should follow here so our api is consistent to the very root...
+ * - Eg. Button, Input, Select, Table etc.
+ */
+export const A = extendPrimitive('a', 'inline-block');
+A.displayName = 'A';
