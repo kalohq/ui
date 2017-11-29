@@ -24,7 +24,7 @@ function extendPrimitive(DefaultComponent, display, defaultStyle) {
       <Component
         ref={elRef}
         className={cx(className)}
-        css={{...style, ...propStyle}}
+        css={{display, ...style, ...propStyle}}
         {...spacingProps}
         {...props}
       />
@@ -37,7 +37,6 @@ export const Box = extendPrimitive(GridBox, 'flex', {
   alignItems: 'stretch',
   flexShrink: 0,
   alignContent: 'flex-start',
-  display: 'flex',
 });
 Box.displayName = 'Box';
 
@@ -54,9 +53,7 @@ export const Inline = extendPrimitive('span', 'inline-block', {
 });
 Inline.displayName = 'Inline';
 
-export const InlineFlex = extendPrimitive('span', 'inline-flex', {
-  display: 'inline-flex',
-});
+export const InlineFlex = extendPrimitive('span', 'inline-flex');
 
 InlineFlex.displayName = 'InlineFlex';
 
