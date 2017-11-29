@@ -20,4 +20,4 @@ export {default as Sticky} from './sticky';
 
 export {default as Alert, AlertPopover} from './alert';
 
-export {Box, Flex, Block, Inline, InlineBlock, InlineFlex, A} from './layout';
+export {Box, Flex, Block, Inline, InlineFlex, A} from './layout';
