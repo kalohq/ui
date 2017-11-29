@@ -37,6 +37,7 @@ export const Box = extendPrimitive(GridBox, 'flex', {
   alignItems: 'stretch',
   flexShrink: 0,
   alignContent: 'flex-start',
+  display: 'flex',
 });
 Box.displayName = 'Box';
 
@@ -53,7 +54,10 @@ export const Inline = extendPrimitive('span', 'inline-block', {
 });
 Inline.displayName = 'Inline';
 
-export const InlineFlex = extendPrimitive('span', 'inline-flex');
+export const InlineFlex = extendPrimitive('span', 'inline-flex', {
+  display: 'inline-flex',
+});
+
 InlineFlex.displayName = 'InlineFlex';
 
 /**
