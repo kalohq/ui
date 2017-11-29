@@ -127,7 +127,7 @@ function parseStyle(name, value) {
 }
 
 /** Pull out styles from props */
-export function parseStyleProps(rawProps) {
+export function parseStyleProps(rawProps, shouldAddVendors = true) {
   const props = {};
   const style = {};
 
@@ -135,7 +135,7 @@ export function parseStyleProps(rawProps) {
     if ({}.hasOwnProperty.call(rawProps, key)) {
       if (STYLE_WHITELIST[key]) {
         const parsedStyleValue = parseStyle(key, rawProps[key]);
-        if (!!VENDOR_STYLERS[key]) {
+        if (shouldAddVendors && !!VENDOR_STYLERS[key]) {
           const pair = VENDOR_STYLERS[key](key, parsedStyleValue);
           style[pair.key] = pair.value;
         } else {
@@ -160,7 +160,7 @@ export function parseStyleProps(rawProps) {
  */
 export function parseStyleAndSpacingProps(rawProps) {
   const spacingProps = {};
-  const {props, style} = parseStyleProps(rawProps);
+  const {props, style} = parseStyleProps(rawProps, false);
 
   for (const key in props) {
     if ({}.hasOwnProperty.call(rawProps, key)) {
