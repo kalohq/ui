@@ -1,59 +1,63 @@
+/* @flow */
 import React from 'react';
-import PureComponent from 'react-pure-render/component';
-import {parseStyleProps} from 'utils/style';
-import cx from 'classnames';
+import {parseStyleAndSpacingProps} from 'utils/style';
+import {cx} from 'emotion';
 
-/** Make a new primitive layout component */
-function makePrimitive(name, DefaultComponent, display, defaultStyle) {
-  class Primitive extends PureComponent {
-    render() {
-      const {
-        component: Component = DefaultComponent,
-        elRef,
-        style: propStyle,
-        className,
-        ...otherProps
-      } = this.props;
+import {Box as GridBox, Flex as GridFlex} from 'grid-emotion';
 
-      const {props, style} = parseStyleProps({
-        display,
-        ...defaultStyle,
-        ...otherProps,
-      });
+function extendPrimitive(DefaultComponent, display, defaultStyle) {
+  return (initialProps: any) => {
+    const {
+      component: Component = DefaultComponent,
+      elRef,
+      style: propStyle,
+      className,
+      ...otherProps
+    } = initialProps;
 
-      return (
-        <Component
-          ref={elRef}
-          className={cx(className)}
-          {...props}
-          style={{...style, ...propStyle}}
-        />
-      );
-    }
-  }
+    const {props, spacingProps, style} = parseStyleAndSpacingProps({
+      ...defaultStyle,
+      ...otherProps,
+    });
 
-  Primitive.displayName = name;
-  return Primitive;
+    return (
+      <Component
+        ref={elRef}
+        className={cx(className)}
+        css={{...style, ...propStyle}}
+        {...spacingProps}
+        {...props}
+      />
+    );
+  };
 }
 
-// Building Blocks
-export const Box = makePrimitive('Box', 'div', 'flex', {
-  // https://github.com/facebook/css-layout#default-values
-  position: 'relative',
+export const Box = extendPrimitive(GridBox, 'flex', {
   flexDirection: 'column',
   alignItems: 'stretch',
   flexShrink: 0,
   alignContent: 'flex-start',
 });
-export const Flex = makePrimitive('Flex', 'div', 'flex');
-export const Block = makePrimitive('Block', 'div', 'block');
-export const Inline = makePrimitive('Inline', 'span', 'inline-block', {
+
+export const Flex = extendPrimitive(GridFlex, 'flex', {
+  flexDirection: 'row',
+});
+Flex.displayName = 'Flex';
+
+export const Block = extendPrimitive('div', 'block');
+Block.displayName = 'Block';
+
+export const Inline = extendPrimitive('span', 'inline-block', {
   verticalAlign: 'bottom',
 });
-export const InlineFlex = makePrimitive('InlineFlex', 'span', 'inline-flex');
+Inline.displayName = 'Inline';
+
+export const InlineFlex = extendPrimitive('span', 'inline-flex');
+InlineFlex.displayName = 'InlineFlex';
 
 /**
- * TODO: All of the html primitives should follow here so our api is consistent to the very root...
+ * @todo: All of the html primitives should follow here so our api is consistent to the very root...
  * - Eg. Button, Input, Select, Table etc.
  */
-export const A = makePrimitive('A', 'a', 'inline-block');
+export const A = extendPrimitive('a', 'inline-block');
+A.displayName = 'A';

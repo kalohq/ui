@@ -1,4 +1,2 @@
 /* @flow */
-export {InlineBlock, InlineFlex, A} from './layout';
-
-export {Box, Flex, Block, Inline} from './new';
+export {Box, Flex, Block, Inline, InlineBlock, InlineFlex, A} from './layout';
