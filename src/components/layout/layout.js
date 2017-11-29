@@ -38,6 +38,7 @@ export const Box = extendPrimitive(GridBox, 'flex', {
   flexShrink: 0,
   alignContent: 'flex-start',
 });
+Box.displayName = 'Box';
 
 export const Flex = extendPrimitive(GridFlex, 'flex', {
   flexDirection: 'row',
