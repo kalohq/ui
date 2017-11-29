@@ -9,8 +9,9 @@ function extendPrimitive(DefaultComponent, display, defaultStyle) {
   return (initialProps: any) => {
     const {
       component: Component = DefaultComponent,
-      elRef,
+      innerRef,
       style: propStyle,
+      forceStyle,
       className,
       ...otherProps
     } = initialProps;
@@ -22,9 +23,10 @@ function extendPrimitive(DefaultComponent, display, defaultStyle) {
 
     return (
       <Component
-        ref={elRef}
+        innerRef={innerRef}
         className={cx(className)}
         css={{display, ...style, ...propStyle}}
+        style={{...forceStyle}}
         {...spacingProps}
         {...props}
       />
