@@ -6,7 +6,7 @@ exports[`components/checkbox Checkbox should render a checkbox partially checked
   className="root"
   justifyContent="flex-start"
 >
-  <Component
+  <Box
     className="checkbox indeterminate"
     height={14}
     position="relative"
@@ -28,7 +28,7 @@ exports[`components/checkbox Checkbox should render a checkbox with label 1`] = 
   className="root"
   justifyContent="flex-start"
 >
-  <Component
+  <Box
     className="checkbox checked"
     height={14}
     position="relative"
@@ -50,7 +50,7 @@ exports[`components/checkbox Checkbox should render shallow component ok 1`] = `
   className="root"
   justifyContent="flex-start"
 >
-  <Component
+  <Box
     className="checkbox checked"
     height={14}
     position="relative"

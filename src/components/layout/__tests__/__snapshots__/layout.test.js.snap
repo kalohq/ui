@@ -2,47 +2,47 @@
 
 exports[`components/layout Block should render correctly 1`] = `
 <div
-  className="css-19hvc9o "
+  className="css-19p5a2z "
   onClick={null}
 />
 `;
 
 exports[`components/layout Box should allow overriding of default styles 1`] = `
 <Box
-  className="css-1exri6 "
+  className="css-1tuq14x "
 />
 `;
 
 exports[`components/layout Box should allow passing vector style values 1`] = `
 <Box
-  className="css-9ucm55 "
+  className="css-1k2ogem "
 />
 `;
 
 exports[`components/layout Box should render correctly 1`] = `
 <Box
-  className="css-1nei8p0 "
+  className="css-22wd28 "
   onClick={null}
 />
 `;
 
 exports[`components/layout Flex should render correctly 1`] = `
 <Flex
-  className="css-k1emoj "
+  className="css-o8eq7g "
   onClick={null}
 />
 `;
 
 exports[`components/layout Inline should render correctly 1`] = `
 <span
-  className="css-11n3vl7 "
+  className="css-2iu3mj "
   onClick={null}
 />
 `;
 
 exports[`components/layout InlineFlex should render correctly 1`] = `
 <span
-  className="css-19hvc9o "
+  className="css-19p5a2z "
   onClick={null}
 />
 `;
