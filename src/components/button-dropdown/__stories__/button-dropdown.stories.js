@@ -38,9 +38,7 @@ storiesOf('ButtonDropdown', module)
             checkboxProps={{
               onClick: () => {},
             }}
-          >
-            Bulk Select Options
-          </ButtonDropdown>
+          />
           <ButtonDropdown
             size="large"
             theme="tertiary"

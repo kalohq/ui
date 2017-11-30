@@ -13,8 +13,6 @@ import styles from './button-dropdown.css';
 
 type Props = {
   children?: string,
-  size?: 'small' | 'medium' | 'large' | 'x-large',
-  theme?: 'tertiary' | 'primary' | 'secondary',
   selectItems: List<{
     title: string,
     onClick?: Function,
@@ -90,15 +88,10 @@ export default class ButtonDropdown extends PureComponent {
         {...otherProps}
       >
         {checkboxProps ? (
-          <Checkbox
-            size="large"
-            marginLeft={-4}
-            disabled={disabled}
-            {...checkboxProps}
-          />
+          <Checkbox size="large" disabled={disabled} {...checkboxProps} />
         ) : null}
         {children ? (
-          <Box marginLeft={checkboxProps ? 16 : 0}>{children}</Box>
+          <Box marginLeft={checkboxProps ? 12 : 0}>{children}</Box>
         ) : null}
         {selectItems.length ? (
           <Icon marginLeft={8} marginRight={-8} size={20}>
