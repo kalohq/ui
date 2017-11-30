@@ -113,7 +113,7 @@ export default class PaperMenu extends PureComponent {
             <div
               {...root}
               className={styles.root}
-              style={{transformOrigin: origin}}
+              css={{transformOrigin: origin}}
               onClick={event => event.stopPropagation()}
             >
               <Paper {...paper}>

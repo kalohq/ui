@@ -87,7 +87,7 @@ export function SkeletonPaper({children, style}) {
         [styles.paper]: true,
       }}
       padding={15}
-      style={style}
+      css={style}
     >
       {children}
     </Box>

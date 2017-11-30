@@ -14,15 +14,11 @@ export default function(renderStory) {
   let meta = story.props;
   return (
     <ThemeProvider theme={theme}>
-      <Flex
-        flexDirection="column"
-        padding={50}
-        style={{backgroundColor: '#fff'}}
-      >
+      <Flex flexDirection="column" padding={50} css={{backgroundColor: '#fff'}}>
         <H1 size="extra-large">{meta.context.story}</H1>
         <Text multiline={true}>{meta.info}</Text>
         <Inline
-          style={{border: '1px solid #eceff1'}}
+          css={{border: '1px solid #eceff1'}}
           padding={[20]}
           marginTop={20}
         >
@@ -31,7 +27,7 @@ export default function(renderStory) {
         </Inline>
 
         <Inline
-          style={{border: '1px solid #eceff1', backgroundColor: '#f9fafc'}}
+          css={{border: '1px solid #eceff1', backgroundColor: '#f9fafc'}}
           padding={[20]}
           marginTop={20}
         >
