@@ -82,13 +82,7 @@ export function SkeletonAvatar({size = 4}) {
 /** Skeleton representation of paper container */
 export function SkeletonPaper({children, style}) {
   return (
-    <Box
-      className={{
-        [styles.paper]: true,
-      }}
-      padding={15}
-      css={style}
-    >
+    <Box className={styles.paper} padding={15} css={style}>
       {children}
     </Box>
   );
