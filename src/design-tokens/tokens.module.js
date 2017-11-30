@@ -50,3 +50,5 @@ export const fontWeightNormal = "400";
 export const fontWeightMedium = "500";
 export const fontWeightSemibold = "600";
 export const borderRadius = "4px";
+export const borderRadiusInput = "4px";
+export const borderRadiusButton = "4px";

@@ -4,3 +4,7 @@ global:
 props:
   BORDER_RADIUS:
     value: 4px
+  BORDER_RADIUS_INPUT:
+    value: 4px
+  BORDER_RADIUS_BUTTON:
+    value: 4px
