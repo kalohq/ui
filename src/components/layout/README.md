@@ -1,6 +1,6 @@
 # Layout
 
-The layout components are the primitive building blocks of the Kalo User Interface. They are a combination of `grid-styled`, and some custom rolled components.
+The layout components are the primitive building blocks of the Kalo User Interface. They are a combination of [grid-styled](https://github.com/jxnblk/grid-styled), and some custom rolled components.
 
 ## Box and Flex (via `grid-styled`)
 A wrapper component that implements some default flex values.
@@ -9,7 +9,7 @@ A wrapper component that implements some default flex values.
 An `inline-block` element.
 
 ## Spacing
-Margin and padding can be set via the `margin` and `padding` props. There are also more granular props for specifycing particular directions: `marginLeft`, `paddingTop` etc.
+Margin and padding can be set via the `margin` and `padding` props. There are also more granular props for specifying particular directions: `marginLeft`, `paddingTop` etc.
 
 These props can take a variety of values:
 - Value specific values: `padding="20px"`
@@ -24,6 +24,6 @@ marginLeft={3} // margin-left: 24px
 ```
 
 ## The css and style props
-The `css` prop is inherited from Emotion and is available on every component. Styles passed in through this prop, will be set via a classname generated at run-time.
+The `css` prop is inherited from [Emotion](https://github.com/emotion-js/emotion) and is available on every component. Styles passed in through this prop, will be set via a classname generated at run-time.
 
 The `style` prop is used to add styles to an element inline via the style attribute. This should be used for regulary computed styles as it is considerably more performant.
