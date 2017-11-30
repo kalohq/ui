@@ -169,7 +169,7 @@ export default class Button extends PureComponent {
 
     return (
       <Component
-        style={style}
+        css={style}
         className={cx(
           {
             [styles.root]: true,

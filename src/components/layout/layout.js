@@ -11,22 +11,23 @@ function extendPrimitive(DefaultComponent, display, defaultStyle) {
     render() {
       const {
         component: Component = DefaultComponent,
-        style: propStyle,
-        forceStyle,
+        css: propCss,
+        style,
         className,
         ...otherProps
       } = this.props;
 
-      const {props, spacingProps, style} = parseStyleAndSpacingProps({
+      const {props, spacingProps, style: css} = parseStyleAndSpacingProps({
         ...defaultStyle,
         ...otherProps,
+        ...propCss,
       });
 
       return (
         <Component
           className={cx(className)}
-          css={{display, ...style, ...propStyle}}
-          style={{...forceStyle}}
+          css={{display, ...css, ...propCss}}
+          style={{...style}}
           {...spacingProps}
           {...props}
         />
