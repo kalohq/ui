@@ -3,6 +3,7 @@ import {storiesOf} from '@storybook/react';
 
 import Button from 'components/button';
 import ButtonGroup from 'components/button-group';
+import Checkbox from 'components/checkbox';
 
 storiesOf(
   'ButtonGroup',
@@ -13,7 +14,9 @@ storiesOf(
   () => {
     return (
       <ButtonGroup>
-        <Button theme="tertiary">Finance</Button>
+        <Button theme="tertiary" subdued={true}>
+          <Checkbox />
+        </Button>
         <Button theme="tertiary">Freelancers</Button>
         <Button theme="tertiary">Tasks</Button>
       </ButtonGroup>

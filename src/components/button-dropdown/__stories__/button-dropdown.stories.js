@@ -18,14 +18,30 @@ storiesOf('ButtonDropdown', module)
       return (
         <ButtonGroup>
           <ButtonDropdown
-            size="small"
-            subdued={true}
+            size="large"
+            theme="tertiary"
+            selectItems={[
+              {
+                title: 'Pending',
+                onClick: myClickFunction,
+              },
+              {
+                title: 'This is a link',
+                minWidth: 225,
+                component: 'a',
+                componentProps: {
+                  href: 'http://google.com',
+                  target: '_blank',
+                },
+              },
+            ]}
             checkboxProps={{
               onClick: () => {},
             }}
           />
           <ButtonDropdown
-            size="small"
+            size="large"
+            theme="tertiary"
             selectItems={[
               {
                 title: 'Pending',
@@ -40,7 +56,8 @@ storiesOf('ButtonDropdown', module)
             Another One
           </ButtonDropdown>
           <ButtonDropdown
-            size="small"
+            size="large"
+            theme="tertiary"
             selectItems={[
               {
                 title: 'Pending',
@@ -66,6 +83,7 @@ storiesOf('ButtonDropdown', module)
         <ButtonGroup>
           <ButtonDropdown
             size="large"
+            theme="tertiary"
             disabled={true}
             checkboxProps={{
               onClick: () => {},
@@ -73,6 +91,7 @@ storiesOf('ButtonDropdown', module)
           />
           <ButtonDropdown
             size="large"
+            theme="tertiary"
             selectItems={[
               {
                 title: 'Pending',
@@ -89,6 +108,7 @@ storiesOf('ButtonDropdown', module)
           </ButtonDropdown>
           <ButtonDropdown
             size="large"
+            theme="tertiary"
             selectItems={[
               {
                 title: 'Pending',

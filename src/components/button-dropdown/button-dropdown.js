@@ -1,6 +1,5 @@
 /* @flow */
 import * as React from 'react';
-import cx from 'classnames';
 import type {List} from 'immutable';
 import PureComponent from 'react-pure-render/component';
 
@@ -8,13 +7,12 @@ import Icon from '../icon';
 import PaperMenu, {PaperMenuItem} from '../paper-menu';
 import Checkbox from '../checkbox';
 import {Box} from '../layout';
+import Button from '../button';
 
 import styles from './button-dropdown.css';
 
 type Props = {
   children?: string,
-  size?: 'small' | 'medium' | 'large' | 'x-large',
-  theme?: 'tertiary' | 'primary' | 'secondary',
   selectItems: List<{
     title: string,
     onClick?: Function,
@@ -30,7 +28,6 @@ type Props = {
     onClick?: Function,
   },
   disabled?: boolean,
-  subdued?: boolean,
 };
 
 export default class ButtonDropdown extends PureComponent {
@@ -78,25 +75,17 @@ export default class ButtonDropdown extends PureComponent {
   render() {
     const {
       children,
-      size = 'large',
-      theme = 'tertiary',
       disabled,
-      subdued,
       selectItems = [],
       checkboxProps,
+      ...otherProps
     } = this.props;
 
     return (
-      <div
-        className={cx({
-          [styles.root]: true,
-          [styles[`size-${size}`]]: true,
-          [styles[`theme-${theme}`]]: true,
-          [styles.active]: this.state.open,
-          [styles.disabled]: disabled,
-          [styles.subdued]: subdued,
-        })}
+      <Button
+        active={this.state.open}
         onClick={!disabled ? this.onToggle : null}
+        {...otherProps}
       >
         {checkboxProps ? (
           <Checkbox size="large" disabled={disabled} {...checkboxProps} />
@@ -134,7 +123,7 @@ export default class ButtonDropdown extends PureComponent {
             </PaperMenu>
           </div>
         ) : null}
-      </div>
+      </Button>
     );
   }
 }
