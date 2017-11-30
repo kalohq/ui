@@ -160,18 +160,22 @@ export function parseStyleProps(rawProps, shouldAddVendors = true) {
  */
 export function parseStyleAndSpacingProps(rawProps) {
   const spacingProps = {};
-  const {props, style} = parseStyleProps(rawProps, false);
+  const otherProps = {};
 
-  for (const key in props) {
+  for (const key in rawProps) {
     if ({}.hasOwnProperty.call(rawProps, key)) {
       if (MAPPED_SPACING_PROPS[key]) {
         spacingProps[MAPPED_SPACING_PROPS[key]] = parseStyle(
           key,
           rawProps[key]
         );
+      } else {
+        otherProps[key] = rawProps[key];
       }
     }
   }
+
+  const {props, style} = parseStyleProps(otherProps, false);
 
   return {props, spacingProps, style};
 }
