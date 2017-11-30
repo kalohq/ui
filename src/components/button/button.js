@@ -201,10 +201,14 @@ export default class Button extends PureComponent {
             [styles.loneIcon]: loneIcon,
           })}
         >
-          <span className={styles.placeholder}>
+          <Flex
+            alignItems="center"
+            justifyContent="center"
+            className={styles.placeholder}
+          >
             {iconElement}
             {children}
-          </span>
+          </Flex>
           <Flex
             alignItems="center"
             justifyContent="center"

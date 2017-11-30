@@ -19,6 +19,7 @@ storiesOf('ButtonDropdown', module)
         <ButtonGroup>
           <ButtonDropdown
             size="large"
+            theme="tertiary"
             selectItems={[
               {
                 title: 'Pending',
@@ -42,6 +43,7 @@ storiesOf('ButtonDropdown', module)
           </ButtonDropdown>
           <ButtonDropdown
             size="large"
+            theme="tertiary"
             selectItems={[
               {
                 title: 'Pending',
@@ -57,6 +59,7 @@ storiesOf('ButtonDropdown', module)
           </ButtonDropdown>
           <ButtonDropdown
             size="large"
+            theme="tertiary"
             selectItems={[
               {
                 title: 'Pending',
@@ -82,6 +85,7 @@ storiesOf('ButtonDropdown', module)
         <ButtonGroup>
           <ButtonDropdown
             size="large"
+            theme="tertiary"
             disabled={true}
             checkboxProps={{
               onClick: () => {},
@@ -89,6 +93,7 @@ storiesOf('ButtonDropdown', module)
           />
           <ButtonDropdown
             size="large"
+            theme="tertiary"
             selectItems={[
               {
                 title: 'Pending',
@@ -105,6 +110,7 @@ storiesOf('ButtonDropdown', module)
           </ButtonDropdown>
           <ButtonDropdown
             size="large"
+            theme="tertiary"
             selectItems={[
               {
                 title: 'Pending',
