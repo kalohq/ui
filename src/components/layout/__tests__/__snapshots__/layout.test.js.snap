@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/layout Block should render correctly 1`] = `
+<div
+  className="css-3qkuu6 "
+  onClick={null}
+  style={Object {}}
+/>
+`;
+
+exports[`components/layout Box should allow overriding of default styles 1`] = `
+<Box
+  className="css-1mhxzb8 "
+  style={Object {}}
+/>
+`;
+
+exports[`components/layout Box should allow passing vector style values 1`] = `
+<Box
+  className="css-1jsov10 "
+  style={Object {}}
+/>
+`;
+
+exports[`components/layout Box should render correctly 1`] = `
+<Box
+  className="css-irib6l "
+  onClick={null}
+  style={Object {}}
+/>
+`;
+
+exports[`components/layout Flex should render correctly 1`] = `
+<Flex
+  className="css-1h2zgvl "
+  onClick={null}
+  style={Object {}}
+/>
+`;
+
+exports[`components/layout Inline should render correctly 1`] = `
+<span
+  className="css-r0akzw "
+  onClick={null}
+  style={Object {}}
+/>
+`;
+
+exports[`components/layout InlineFlex should render correctly 1`] = `
+<span
+  className="css-urobso "
+  onClick={null}
+  style={Object {}}
+/>
+`;

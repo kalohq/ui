@@ -4,6 +4,7 @@
 */
 const theo = require('theo');
 const fs = require('fs');
+const camelCase = require('lodash/camelCase');
 
 const formatsRequired = [
   {
@@ -22,6 +23,10 @@ const formatsRequired = [
     format: 'json',
     fileName: 'tokens.json',
   },
+  {
+    format: 'theme.js',
+    fileName: 'tokens.theme.js',
+  },
 ];
 
 const writeToNewFile = (name, contents) => {
@@ -32,6 +37,23 @@ const writeToNewFile = (name, contents) => {
     console.log('Cannot write file ', e);
   }
 };
+
+/**
+ * A custom token format for passing into a ThemeProvider
+ */
+theo.registerFormat('theme.js', result => {
+  const grouped = result.get('props').groupBy(token => token.get('category'));
+  const collect = {};
+
+  grouped.map((category, index) => {
+    collect[index] = {};
+    return category.map(token => {
+      collect[index][camelCase(token.get('name'))] = token.get('value');
+      return collect;
+    });
+  });
+  return `module.exports = ${JSON.stringify(collect)}`;
+});
 
 formatsRequired.map(format => {
   return theo

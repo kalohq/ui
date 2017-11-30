@@ -67,6 +67,19 @@ const STYLE_WHITELIST = {
   boxSizing: true,
 };
 
+const MAPPED_SPACING_PROPS = {
+  margin: 'm',
+  marginTop: 'mt',
+  marginRight: 'mr',
+  marginBottom: 'mb',
+  marginLeft: 'ml',
+  padding: 'p',
+  paddingTop: 'pt',
+  paddingRight: 'pr',
+  paddingBottom: 'pb',
+  paddingLeft: 'pl',
+};
+
 /*
  * Flexbox stlyle overrides for Safari 8
  * Safari 8 detection is performed in advance
@@ -114,7 +127,7 @@ function parseStyle(name, value) {
 }
 
 /** Pull out styles from props */
-export function parseStyleProps(rawProps) {
+export function parseStyleProps(rawProps, shouldAddVendors = true) {
   const props = {};
   const style = {};
 
@@ -122,7 +135,7 @@ export function parseStyleProps(rawProps) {
     if ({}.hasOwnProperty.call(rawProps, key)) {
       if (STYLE_WHITELIST[key]) {
         const parsedStyleValue = parseStyle(key, rawProps[key]);
-        if (!!VENDOR_STYLERS[key]) {
+        if (shouldAddVendors && !!VENDOR_STYLERS[key]) {
           const pair = VENDOR_STYLERS[key](key, parsedStyleValue);
           style[pair.key] = pair.value;
         } else {
@@ -135,6 +148,32 @@ export function parseStyleProps(rawProps) {
   }
 
   return {props, style};
+}
+
+/**
+ * @summary
+ * Pull out styles from props, as well as map our
+ * custom spacing prop names to ones that our layout
+ * library expects:
+ * 
+ * @example: marginLeft => ml
+ */
+export function parseStyleAndSpacingProps(rawProps) {
+  const spacingProps = {};
+  const {props, style} = parseStyleProps(rawProps, false);
+
+  for (const key in props) {
+    if ({}.hasOwnProperty.call(rawProps, key)) {
+      if (MAPPED_SPACING_PROPS[key]) {
+        spacingProps[MAPPED_SPACING_PROPS[key]] = parseStyle(
+          key,
+          rawProps[key]
+        );
+      }
+    }
+  }
+
+  return {props, spacingProps, style};
 }
 
 /** Filter keys on an object to those from our STYLE_WHITELIST */

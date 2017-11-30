@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/checkbox Checkbox should render a checkbox partially checked 1`] = `
+<Flex
+  alignItems="center"
+  className="root"
+  justifyContent="flex-start"
+>
+  <Box
+    className="checkbox indeterminate"
+    height={14}
+    position="relative"
+    width={14}
+  />
+  <Text
+    color="grey"
+    marginLeft={10}
+    size="small"
+  >
+    A checkbox label
+  </Text>
+</Flex>
+`;
+
+exports[`components/checkbox Checkbox should render a checkbox with label 1`] = `
+<Flex
+  alignItems="center"
+  className="root"
+  justifyContent="flex-start"
+>
+  <Box
+    className="checkbox checked"
+    height={14}
+    position="relative"
+    width={14}
+  />
+  <Text
+    color="grey"
+    marginLeft={10}
+    size="small"
+  >
+    A checkbox label
+  </Text>
+</Flex>
+`;
+
+exports[`components/checkbox Checkbox should render shallow component ok 1`] = `
+<Flex
+  alignItems="center"
+  className="root"
+  justifyContent="flex-start"
+>
+  <Box
+    className="checkbox checked"
+    height={14}
+    position="relative"
+    width={14}
+  />
+</Flex>
+`;
