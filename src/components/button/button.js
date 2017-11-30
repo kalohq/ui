@@ -73,6 +73,7 @@ export default class Button extends PureComponent {
     name: PropTypes.string,
     type: PropTypes.string,
     mayGetLong: PropTypes.bool,
+    subdued: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -140,6 +141,7 @@ export default class Button extends PureComponent {
       middle,
       style,
       mayGetLong,
+      subdued,
       loadedTimeout: _IGNORED,
       readonly: __IGNORED,
       editable: ___IGNORED,
@@ -197,6 +199,7 @@ export default class Button extends PureComponent {
             [styles.disabled]: success ? false : disabled || loading,
             [styles[theme]]: !!theme,
             [styles.active]: !!active,
+            [styles.subdued]: !!subdued,
             [styles[size]]: true,
             [styles.loneIcon]: loneIcon,
           })}

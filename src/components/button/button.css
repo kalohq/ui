@@ -1,6 +1,6 @@
 :root {
   --spacing: 10px;
-  --small: 26px;
+  --small: 30px;
   --medium: 36px;
   --large: 46px;
   --x-large: 56px;
@@ -120,12 +120,18 @@
   color: #fff;
 }
 
+.subdued {
+  background-color: var(--grey200);
+  color: var(--grey700);
+}
+
 /*
  * Sizing
  */
 .small {
   height: var(--small);
   padding: 0 calc(var(--small) / 2);
+  font-size: 12px;
 }
 
 .medium {

@@ -85,6 +85,7 @@ export default class ButtonDropdown extends PureComponent {
       <Button
         active={this.state.open}
         onClick={!disabled ? this.onToggle : null}
+        disabled={disabled}
         {...otherProps}
       >
         {checkboxProps ? (
