@@ -17,7 +17,9 @@ exports[`components/layout Box should allow overriding of default styles 1`] = `
 
 exports[`components/layout Box should allow passing vector style values 1`] = `
 <Box
-  className="css-1jsov10 "
+  className="css-1xfi72r "
+  m="0 5px 10% 15px"
+  p="15px 0"
   style={Object {}}
 />
 `;
