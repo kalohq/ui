@@ -1,69 +1,63 @@
 /* @flow */
-import * as React from 'react';
-import {parseStyleAndSpacingProps} from 'utils/style';
-import {cx} from 'emotion';
-import PureComponent from 'react-pure-render/component';
+import {spaceProps} from 'utils/style';
+import styled from 'react-emotion';
 
-import {Box as GridBox, Flex as GridFlex} from 'grid-emotion';
+/**
+ * Layout primitives
+ */
 
-function extendPrimitive(DefaultComponent, display, defaultStyle) {
-  return class Primitive extends PureComponent {
-    render() {
-      const {
-        component: Component = DefaultComponent,
-        style: propStyle,
-        forceStyle,
-        className,
-        ...otherProps
-      } = this.props;
-
-      const {props, spacingProps, style} = parseStyleAndSpacingProps({
-        ...defaultStyle,
-        ...otherProps,
-      });
-
-      return (
-        <Component
-          className={cx(className)}
-          css={{display, ...style, ...propStyle}}
-          style={{...forceStyle}}
-          {...spacingProps}
-          {...props}
-        />
-      );
-    }
-  };
-}
-
-export const Box = extendPrimitive(GridBox, 'flex', {
-  flexDirection: 'column',
-  alignItems: 'stretch',
-  flexShrink: 0,
-  alignContent: 'flex-start',
-});
+export const Box = styled.div`
+  flex-direction: column;
+  align-items: stretch;
+  flex-shrink: 0;
+  align-content: flex-start;
+  display: flex;
+  ${spaceProps};
+`;
 Box.displayName = 'Box';
 
-export const Flex = extendPrimitive(GridFlex, 'flex', {
-  flexDirection: 'row',
-});
+export const Flex = styled.div`
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  ${spaceProps};
+`;
 Flex.displayName = 'Flex';
 
-export const Block = extendPrimitive('div', 'block');
+export const Block = styled.div`
+  display: block;
+  ${spaceProps};
+`;
 Block.displayName = 'Block';
 
-export const Inline = extendPrimitive('span', 'inline-block', {
-  verticalAlign: 'bottom',
-});
+export const Inline = styled.span`
+  display: inline-block;
+  vertical-align: bottom;
+  ${spaceProps};
+`;
 Inline.displayName = 'Inline';
 
-export const InlineFlex = extendPrimitive('span', 'inline-flex');
-
+export const InlineFlex = styled.span`
+  display: inline-flex;
+  ${spaceProps};
+`;
 InlineFlex.displayName = 'InlineFlex';
 
 /**
- * @todo: All of the html primitives should follow here so our api is consistent to the very root...
- * - Eg. Button, Input, Select, Table etc.
+ * All of our html primitives should follow here so our api is consistent to the very root
+ * Eg. Button, Input, Select, Table etc.
  */
-
-export const A = extendPrimitive('a', 'inline-block');
+export const A = styled('a')`display: inline-block;`;
 A.displayName = 'A';
+
+export const H1 = styled.h1`display: block;`;
+H1.displayName = 'H1';
+
+export const H2 = styled.h2`display: block;`;
+H2.displayName = 'H2';
+
+export const H3 = styled.h3`display: block;`;
+H3.displayName = 'H3';
+
+export const H4 = styled.h4`display: block;`;
+H4.displayName = 'H4';
