@@ -1,5 +1,6 @@
 import React from 'react';
 import {Box} from '../layout';
+import cx from 'classnames';
 
 import styles from './skeleton.css';
 
@@ -48,10 +49,10 @@ function SpacerBox({
 export function SkeletonShape({shape = 'rect', ...styleProps}) {
   return (
     <Box
-      className={{
+      className={cx({
         [styles.circle]: shape === 'circle',
         [styles.shape]: true,
-      }}
+      })}
       {...styleProps}
     />
   );
@@ -83,9 +84,9 @@ export function SkeletonAvatar({size = 4}) {
 export function SkeletonPaper({children, style}) {
   return (
     <Box
-      className={{
+      className={cx({
         [styles.paper]: true,
-      }}
+      })}
       padding={15}
       style={style}
     >
@@ -98,9 +99,9 @@ export function SkeletonPaper({children, style}) {
 export function SkeletonCard({children}) {
   return (
     <Box
-      className={{
+      className={cx({
         [styles.paper]: true,
-      }}
+      })}
       paddingTop={75}
       paddingBottom={150}
     >
@@ -123,9 +124,9 @@ export function SkeletonCard({children}) {
 export function SkeletonListItem({children}) {
   return (
     <Box
-      className={{
+      className={cx({
         [styles.paper]: true,
-      }}
+      })}
       padding={25}
     >
       <SpacerBox>
@@ -177,9 +178,9 @@ export function SkeletonPage({children, width = 1180}) {
 export function SkeletonPageHeader({children}) {
   return (
     <Box
-      className={{
+      className={cx({
         [styles.header]: true,
-      }}
+      })}
     >
       {children}
     </Box>
@@ -206,9 +207,9 @@ export function SkeletonPageHeaderHeading({width = 1180, children}) {
 export function SkeletonPageHeaderToolbar({width = 1180, children}) {
   return (
     <Box
-      className={{
+      className={cx({
         [styles.toolbar]: true,
-      }}
+      })}
     >
       <Box margin={[0, 'auto']} width={width}>
         <SpacerBox height={46}>{children}</SpacerBox>
