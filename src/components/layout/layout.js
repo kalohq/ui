@@ -47,17 +47,32 @@ InlineFlex.displayName = 'InlineFlex';
  * All of our html primitives should follow here so our api is consistent to the very root
  * Eg. Button, Input, Select, Table etc.
  */
-export const A = styled('a')`display: inline-block;`;
+export const A = styled('a')`
+  display: inline-block;
+  ${spaceProps};
+`;
 A.displayName = 'A';
 
-export const H1 = styled.h1`display: block;`;
+export const H1 = styled.h1`
+  display: block;
+  ${spaceProps};
+`;
 H1.displayName = 'H1';
 
-export const H2 = styled.h2`display: block;`;
+export const H2 = styled.h2`
+  display: block;
+  ${spaceProps};
+`;
 H2.displayName = 'H2';
 
-export const H3 = styled.h3`display: block;`;
+export const H3 = styled.h3`
+  display: block;
+  ${spaceProps};
+`;
 H3.displayName = 'H3';
 
-export const H4 = styled.h4`display: block;`;
+export const H4 = styled.h4`
+  display: block;
+  ${spaceProps};
+`;
 H4.displayName = 'H4';
