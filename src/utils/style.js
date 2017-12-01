@@ -1,4 +1,4 @@
-import {isArray, isNumber, isString, pickBy, omitBy} from 'lodash';
+import {isNumber, isString, pickBy, omitBy} from 'lodash';
 
 /**
  * Lookup to determine what props we include in style
@@ -67,131 +67,10 @@ const STYLE_WHITELIST = {
   boxSizing: true,
 };
 
-const MAPPED_SPACING_PROPS = {
-  margin: 'm',
-  marginTop: 'mt',
-  marginRight: 'mr',
-  marginBottom: 'mb',
-  marginLeft: 'ml',
-  padding: 'p',
-  paddingTop: 'pt',
-  paddingRight: 'pr',
-  paddingBottom: 'pb',
-  paddingLeft: 'pl',
-};
-
 /*
  * Flexbox stlyle overrides for Safari 8
  * Safari 8 detection is performed in advance
  */
-const VENDOR_STYLERS =
-  window.navigator.userAgent.indexOf('Safari/') !== -1 &&
-  window.navigator.userAgent.indexOf('Version/8') !== -1
-    ? {
-        display: (key, value) => ({
-          key,
-          value: (value.indexOf('flex') > -1 ? '-webkit-' : '') + value,
-        }),
-        alignContent: (key, value) => ({key: 'WebkitAlignContent', value}),
-        alignItems: (key, value) => ({key: 'WebkitAlignItems', value}),
-        alignSelf: (key, value) => ({key: 'WebkitAlignSelf', value}),
-        justifyContent: (key, value) => ({key: 'WebkitJustifyContent', value}),
-        order: (key, value) => ({key: 'WebkitOrder', value}),
-        flexDirection: (key, value) => ({key: 'WebkitFlexDirection', value}),
-        flexWrap: (key, value) => ({key: 'WebkitFlexWrap', value}),
-        flexFlow: (key, value) => ({key: 'WebkitFlexFlow', value}),
-        flex: (key, value) => ({key: 'WebkitFlex', value}),
-        flexBasis: (key, value) => ({key: 'WebkitFlexBasis', value}),
-        flexShrink: (key, value) => ({key: 'WebkitFlexShrink', value}),
-        flexGrow: (key, value) => ({key: 'WebkitFlexGrow', value}),
-      }
-    : {};
-
-/*
-  * Lookup to determine which styles can be given a vector of values
-  * Eg. Pass {padding: [0, 5, 5, 0]}
-  */
-
-const VECTOR_STYLES = {
-  padding: true,
-  margin: true,
-};
-
-/** Parse a specific style */
-function parseStyle(name, value) {
-  if (VECTOR_STYLES[name] && isArray(value)) {
-    return value.map(v => (v ? (isNumber(v) ? `${v}px` : v) : 0)).join(' ');
-  }
-
-  return value;
-
-  // if (MAPPED_SPACING_PROPS[name] && isString(value) && SPACING_SCALE[value]) {
-  //   return SPACING_SCALE[value];
-  // }
-}
-
-/** Pull out styles from props */
-export function parseStyleProps(rawProps, shouldAddVendors = true) {
-  const props = {};
-  const style = {};
-
-  for (const key in rawProps) {
-    if ({}.hasOwnProperty.call(rawProps, key)) {
-      if (STYLE_WHITELIST[key]) {
-        const parsedStyleValue = parseStyle(key, rawProps[key]);
-        if (shouldAddVendors && !!VENDOR_STYLERS[key]) {
-          const pair = VENDOR_STYLERS[key](key, parsedStyleValue);
-          style[pair.key] = pair.value;
-        } else {
-          style[key] = parsedStyleValue;
-        }
-      } else {
-        props[key] = rawProps[key];
-      }
-    }
-  }
-
-  return {props, style};
-}
-
-/**
- * @summary
- * Pull out styles from props, as well as map our
- * custom spacing prop names to ones that our layout
- * library expects:
- * 
- * @example: marginLeft => ml
- */
-export function parseStyleAndSpacingProps(rawProps) {
-  const spacingProps = {};
-  const otherProps = {};
-
-  for (const key in rawProps) {
-    if ({}.hasOwnProperty.call(rawProps, key)) {
-      if (MAPPED_SPACING_PROPS[key]) {
-        spacingProps[MAPPED_SPACING_PROPS[key]] = parseStyle(
-          key,
-          rawProps[key]
-        );
-      } else {
-        otherProps[key] = rawProps[key];
-      }
-    }
-  }
-
-  const {props, style} = parseStyleProps(otherProps, false);
-
-  return {props, spacingProps, style};
-}
-
-/** Filter keys on an object to those from our STYLE_WHITELIST */
-export function pickStyles(obj) {
-  return pickBy(obj, (v, key) => STYLE_WHITELIST[key]);
-}
-
-export function omitStyles(obj) {
-  return omitBy(obj, (v, key) => STYLE_WHITELIST[key]);
-}
 
 const REGEX = /^(padding|margin)(Top|Right|Bottom|Left)?$/;
 
@@ -201,31 +80,50 @@ const TEMP_SPACING_MAP = {
   large: 16,
 };
 
-const transformSpacingValue = v => {
-  if (isString(v) && TEMP_SPACING_MAP[v]) {
-    return `${String(TEMP_SPACING_MAP[v])}px`;
+const arr = n => (Array.isArray(n) ? n : [n]);
+
+/** Parse a specific style */
+export function parseStyle(name, value) {
+  if (REGEX.test(name)) {
+    return arr(value)
+      .map(v => {
+        if (isNumber(v)) {
+          return `${v}px`;
+        } else if (isString(v) && TEMP_SPACING_MAP[v]) {
+          return `${TEMP_SPACING_MAP[v]}px`;
+        }
+        return v;
+      })
+      .join(' ');
   }
-  return isNumber(v) ? `${String(v)}px` : v;
-};
 
-export function spaceProps(rawProps) {
-  const props = rawProps;
-  const cleanProps = {};
-  const styleProps = Object.keys(props)
-    .filter(key => STYLE_WHITELIST[key])
-    .reduce((obj, key) => {
-      obj[key] = rawProps[key];
-      return obj;
-    }, {});
-  const spacingProps = Object.keys(props).filter(key => REGEX.test(key));
+  return value;
+}
 
-  spacingProps.map(key => {
-    const value = props[key];
+/** Pull out styles from props */
+export function parseStyleProps(rawProps) {
+  const props = {};
+  const style = {};
 
-    cleanProps[key] = isArray(value)
-      ? value.map(transformSpacingValue).join(' ')
-      : transformSpacingValue(value);
-  });
+  for (const key in rawProps) {
+    if ({}.hasOwnProperty.call(rawProps, key)) {
+      if (STYLE_WHITELIST[key]) {
+        const parsedStyleValue = parseStyle(key, rawProps[key]);
+        style[key] = parsedStyleValue;
+      } else {
+        props[key] = rawProps[key];
+      }
+    }
+  }
 
-  return {...styleProps, ...cleanProps};
+  return style;
+}
+
+/** Filter keys on an object to those from our STYLE_WHITELIST */
+export function pickStyles(obj) {
+  return pickBy(obj, (v, key) => STYLE_WHITELIST[key]);
+}
+
+export function omitStyles(obj) {
+  return omitBy(obj, (v, key) => STYLE_WHITELIST[key]);
 }
