@@ -1,4 +1,4 @@
-import {isArray, isNumber, pickBy, omitBy} from 'lodash';
+import {isArray, isNumber, isString, pickBy, omitBy} from 'lodash';
 
 /**
  * Lookup to determine what props we include in style
@@ -124,6 +124,10 @@ function parseStyle(name, value) {
   }
 
   return value;
+
+  // if (MAPPED_SPACING_PROPS[name] && isString(value) && SPACING_SCALE[value]) {
+  //   return SPACING_SCALE[value];
+  // }
 }
 
 /** Pull out styles from props */
@@ -187,4 +191,41 @@ export function pickStyles(obj) {
 
 export function omitStyles(obj) {
   return omitBy(obj, (v, key) => STYLE_WHITELIST[key]);
+}
+
+const REGEX = /^(padding|margin)(Top|Right|Bottom|Left)?$/;
+
+const TEMP_SPACING_MAP = {
+  small: 4,
+  medium: 8,
+  large: 16,
+};
+
+const transformSpacingValue = v => {
+  if (isString(v) && TEMP_SPACING_MAP[v]) {
+    return `${String(TEMP_SPACING_MAP[v])}px`;
+  }
+  return isNumber(v) ? `${String(v)}px` : v;
+};
+
+export function spaceProps(rawProps) {
+  const props = rawProps;
+  const cleanProps = {};
+  const styleProps = Object.keys(props)
+    .filter(key => STYLE_WHITELIST[key])
+    .reduce((obj, key) => {
+      obj[key] = rawProps[key];
+      return obj;
+    }, {});
+  const spacingProps = Object.keys(props).filter(key => REGEX.test(key));
+
+  spacingProps.map(key => {
+    const value = props[key];
+
+    cleanProps[key] = isArray(value)
+      ? value.map(transformSpacingValue).join(' ')
+      : transformSpacingValue(value);
+  });
+
+  return {...styleProps, ...cleanProps};
 }
