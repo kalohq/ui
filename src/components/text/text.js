@@ -1,9 +1,8 @@
 /* @flow */
 import * as React from 'react';
 import cx from 'classnames';
-import {Inline, Block} from '../layout';
+import {Inline} from '../layout';
 import {pickStyles} from 'utils/style';
-import {isString} from 'lodash';
 
 import styles from './text.css';
 
@@ -72,16 +71,13 @@ export default function Text(props: textProps) {
     ...otherProps
   } = props;
 
-  const Component = isString(component)
-    ? ['h1', 'h2', 'h3', 'h4'].indexOf(component) > -1 ? Block : Inline
-    : component;
+  const Component = component ? component : Inline;
 
   const childrenProp =
     children === undefined ? {dangerouslySetInnerHTML} : {children};
 
   return (
     <Component
-      component={component}
       onClick={onClick}
       className={cx(
         {
