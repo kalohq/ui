@@ -1,7 +1,6 @@
 /* @flow */
 import * as React from 'react';
 import cx from 'classnames';
-import {parseStyleProps} from 'utils/style';
 
 import {Box} from '../layout';
 
@@ -42,8 +41,6 @@ export default function Paper(props: Props) {
     ...otherProps
   } = props;
 
-  const styleProps = parseStyleProps(otherProps);
-
   const zDepth = Math.min(elevation, 5);
   const hoverZDept = Math.min(hoverElevation, 5);
 
@@ -64,7 +61,7 @@ export default function Paper(props: Props) {
   );
 
   return (
-    <Box className={_classNames} {...styleProps.style} onClick={onClick}>
+    <Box className={_classNames} onClick={onClick} {...otherProps}>
       {children}
     </Box>
   );
