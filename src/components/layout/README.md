@@ -1,8 +1,8 @@
 # Layout
 
-The layout components are the primitive building blocks of the Kalo User Interface. They are a combination of [grid-styled](https://github.com/jxnblk/grid-styled), and some custom rolled components.
+The layout components are the primitive building blocks of the Kalo User Interface.
 
-## Box and Flex (via `grid-styled`)
+## Box and Flex
 A wrapper component that implements some default flex values.
 
 ## Inline
@@ -13,14 +13,21 @@ Margin and padding can be set via the `margin` and `padding` props. There are al
 
 These props can take a variety of values:
 - Value specific values: `padding="20px"`
-- Or scale values: `margin={2}`
+- Or scale values: `margin="medium"`
 
 The scale values relate to the 8px grid. Any value between 1 and 8, correlates to a mutiple of 8px:
 
 ```js
-marginLeft={1} // margin-left: 8px
-marginLeft={2} // margin-left: 16px
-marginLeft={3} // margin-left: 24px
+marginLeft="extra-small" // margin-left: 4px
+marginLeft="small" // margin-left: 8px
+marginLeft="medium" // margin-left: 16px
+marginLeft="large" // margin-left: 24px
+```
+
+These can also be mixed with pixel specific values:
+
+```js
+padding={[20, "large", "medium", 32]}
 ```
 
 ## The css and style props
