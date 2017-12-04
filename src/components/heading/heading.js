@@ -6,13 +6,14 @@ import Text from '../text';
 
 import styles from './heading.css';
 
-import type {HEADING_HOVER} from './constants';
+import type {HEADING_NUMBER, HEADING_HOVER} from './constants';
 
 import type {TEXT_COLOR, TEXT_SIZE} from '../text/constants';
 
 type Props = {
   children: React.Node,
   className?: string,
+  number: HEADING_NUMBER,
   color?: TEXT_COLOR,
   size?: TEXT_SIZE,
   flex?: boolean,
@@ -26,6 +27,7 @@ type Props = {
 export default function Heading(props: Props) {
   const {
     children,
+    number = 3,
     color = 'charcoal',
     icon = false,
     size = 'small',
@@ -36,8 +38,11 @@ export default function Heading(props: Props) {
     ...otherProps
   } = props;
 
+  const DOMElement = `h${number}`;
+
   return (
     <Text
+      component={DOMElement}
       size={size}
       interactive={hover === 'interactive'}
       color={color}

@@ -48,7 +48,7 @@ export const Box = makePrimitive('Box', 'div', 'flex', {
   display: 'flex',
 });
 
-export const Flex = makePrimitive('Flex', 'div', 'flex', {});
+export const Flex = makePrimitive('Flex', 'div', 'flex');
 export const Block = makePrimitive('Block', 'div', 'block');
 export const Inline = makePrimitive('Inline', 'span', 'inline-block', {
   verticalAlign: 'bottom',
@@ -60,7 +60,3 @@ export const InlineFlex = makePrimitive('InlineFlex', 'span', 'inline-flex');
  * Eg. Button, Input, Select, Table etc.
  */
 export const A = makePrimitive('H1', 'a', 'inline-block');
-export const H1 = makePrimitive('H1', 'h1', 'block');
-export const H2 = makePrimitive('H2', 'h2', 'block');
-export const H3 = makePrimitive('H3', 'h3', 'block');
-export const H4 = makePrimitive('H4', 'h4', 'block');
