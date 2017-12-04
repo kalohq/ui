@@ -2,39 +2,41 @@
 
 exports[`components/layout Block should render correctly 1`] = `
 <div
-  className="css-3qkuu6 "
+  className="css-lvg2xm "
   onClick={null}
   style={Object {}}
 />
 `;
 
 exports[`components/layout Box should allow overriding of default styles 1`] = `
-<Box
-  className="css-1mhxzb8 "
-  style={Object {}}
+<div
+  className="css-rwbbym "
+  style={
+    Object {
+      "color": "red",
+    }
+  }
 />
 `;
 
 exports[`components/layout Box should allow passing vector style values 1`] = `
-<Box
-  className="css-1xfi72r "
-  m="0 5px 10% 15px"
-  p="15px 0"
+<div
+  className="css-s6kp88 "
   style={Object {}}
 />
 `;
 
 exports[`components/layout Box should render correctly 1`] = `
-<Box
-  className="css-irib6l "
+<div
+  className="css-soj31u "
   onClick={null}
   style={Object {}}
 />
 `;
 
 exports[`components/layout Flex should render correctly 1`] = `
-<Flex
-  className="css-1h2zgvl "
+<div
+  className="css-fmu9xg "
   onClick={null}
   style={Object {}}
 />
@@ -42,7 +44,7 @@ exports[`components/layout Flex should render correctly 1`] = `
 
 exports[`components/layout Inline should render correctly 1`] = `
 <span
-  className="css-r0akzw "
+  className="css-s51yq6 "
   onClick={null}
   style={Object {}}
 />
@@ -50,7 +52,7 @@ exports[`components/layout Inline should render correctly 1`] = `
 
 exports[`components/layout InlineFlex should render correctly 1`] = `
 <span
-  className="css-urobso "
+  className="css-1rab86q "
   onClick={null}
   style={Object {}}
 />
