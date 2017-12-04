@@ -3,6 +3,7 @@ import {storiesOf} from '@storybook/react';
 
 import ButtonDropdown from 'components/button-dropdown';
 import ButtonGroup from 'components/button-group';
+import Button from 'components/button';
 
 const myClickFunction = () => {
   /* eslint-disable no-alert */
@@ -19,6 +20,8 @@ storiesOf('ButtonDropdown', module)
         <ButtonGroup>
           <ButtonDropdown
             size="large"
+            theme="tertiary"
+            subdued={true}
             selectItems={[
               {
                 title: 'Pending',
@@ -37,11 +40,10 @@ storiesOf('ButtonDropdown', module)
             checkboxProps={{
               onClick: () => {},
             }}
-          >
-            Bulk Select Options
-          </ButtonDropdown>
+          />
           <ButtonDropdown
             size="large"
+            theme="tertiary"
             selectItems={[
               {
                 title: 'Pending',
@@ -57,6 +59,7 @@ storiesOf('ButtonDropdown', module)
           </ButtonDropdown>
           <ButtonDropdown
             size="large"
+            theme="tertiary"
             selectItems={[
               {
                 title: 'Pending',
@@ -70,6 +73,9 @@ storiesOf('ButtonDropdown', module)
           >
             1
           </ButtonDropdown>
+          <Button size="large" theme="tertiary">
+            Hello World
+          </Button>
         </ButtonGroup>
       );
     }
@@ -82,6 +88,7 @@ storiesOf('ButtonDropdown', module)
         <ButtonGroup>
           <ButtonDropdown
             size="large"
+            theme="tertiary"
             disabled={true}
             checkboxProps={{
               onClick: () => {},
@@ -89,6 +96,7 @@ storiesOf('ButtonDropdown', module)
           />
           <ButtonDropdown
             size="large"
+            theme="tertiary"
             selectItems={[
               {
                 title: 'Pending',
@@ -105,6 +113,7 @@ storiesOf('ButtonDropdown', module)
           </ButtonDropdown>
           <ButtonDropdown
             size="large"
+            theme="tertiary"
             selectItems={[
               {
                 title: 'Pending',

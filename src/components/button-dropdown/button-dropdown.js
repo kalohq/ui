@@ -1,6 +1,5 @@
 /* @flow */
 import * as React from 'react';
-import cx from 'classnames';
 import type {List} from 'immutable';
 import PureComponent from 'react-pure-render/component';
 
@@ -8,13 +7,12 @@ import Icon from '../icon';
 import PaperMenu, {PaperMenuItem} from '../paper-menu';
 import Checkbox from '../checkbox';
 import {Box} from '../layout';
+import Button from '../button';
 
 import styles from './button-dropdown.css';
 
 type Props = {
   children?: string,
-  size?: 'small' | 'medium' | 'large' | 'x-large',
-  theme?: 'tertiary' | 'primary' | 'secondary',
   selectItems: List<{
     title: string,
     onClick?: Function,
@@ -77,34 +75,24 @@ export default class ButtonDropdown extends PureComponent {
   render() {
     const {
       children,
-      size = 'large',
-      theme = 'tertiary',
       disabled,
       selectItems = [],
       checkboxProps,
+      ...otherProps
     } = this.props;
 
     return (
-      <div
-        className={cx({
-          [styles.root]: true,
-          [styles[`size-${size}`]]: true,
-          [styles[`theme-${theme}`]]: true,
-          [styles.active]: this.state.open,
-          [styles.disabled]: disabled,
-        })}
+      <Button
+        active={this.state.open}
         onClick={!disabled ? this.onToggle : null}
+        disabled={disabled}
+        {...otherProps}
       >
         {checkboxProps ? (
-          <Checkbox
-            size="large"
-            marginLeft={-4}
-            disabled={disabled}
-            {...checkboxProps}
-          />
+          <Checkbox size="large" disabled={disabled} {...checkboxProps} />
         ) : null}
         {children ? (
-          <Box marginLeft={checkboxProps ? 16 : 0}>{children}</Box>
+          <Box marginLeft={checkboxProps ? 12 : 0}>{children}</Box>
         ) : null}
         {selectItems.length ? (
           <Icon marginLeft={8} marginRight={-8} size={20}>
@@ -136,7 +124,7 @@ export default class ButtonDropdown extends PureComponent {
             </PaperMenu>
           </div>
         ) : null}
-      </div>
+      </Button>
     );
   }
 }

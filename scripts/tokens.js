@@ -12,6 +12,10 @@ const formatsRequired = [
     fileName: 'tokens.css',
   },
   {
+    format: 'custom-properties-as-an-object',
+    fileName: 'tokens.css.js',
+  },
+  {
     format: 'common.js',
     fileName: 'tokens.js',
   },
@@ -54,6 +58,21 @@ theo.registerFormat('theme.js', result => {
   });
   return `module.exports = ${JSON.stringify(collect)}`;
 });
+
+/**
+ * A custom token format to pass in non-camelCased CSS variables
+ * in to the post-css build step as a standard JS object.
+ */
+theo.registerFormat(
+  'custom-properties-as-an-object',
+  `
+module.exports = {
+  {{#each props as |prop|}}
+    '{{kebabcase prop.name}}': '{{prop.value}}',
+  {{/each}}
+}
+`
+);
 
 formatsRequired.map(format => {
   return theo
