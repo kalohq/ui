@@ -1,60 +1,278 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/checkbox Checkbox should render a checkbox partially checked 1`] = `
-<Flex
-  alignItems="center"
-  className="root"
-  justifyContent="flex-start"
+exports[`Checkbox should render a checkbox partially checked 1`] = `
+.glamor-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.glamor-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+.glamor-1 {
+  display: inline-block;
+  vertical-align: bottom;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 10px;
+}
+
+<div
+  className="glamor-2 root"
+  name={undefined}
+  onClick={undefined}
+  style={Object {}}
 >
-  <Box
-    className="checkbox indeterminate"
-    height={14}
-    position="relative"
-    width={14}
+  .glamor-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+<div
+    className="glamor-0 checkbox indeterminate"
+    style={Object {}}
   />
-  <Text
-    color="grey"
-    marginLeft={10}
-    size="small"
+  .glamor-0 {
+  display: inline-block;
+  vertical-align: bottom;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 10px;
+}
+
+<span
+    className="root weight-light size-small color-grey hover-color-none margin-none glamor-0"
+    href={undefined}
+    name={undefined}
+    onClick={undefined}
+    style={Object {}}
+    target={undefined}
   >
     A checkbox label
-  </Text>
-</Flex>
+  </span>
+</div>
 `;
 
-exports[`components/checkbox Checkbox should render a checkbox with label 1`] = `
-<Flex
-  alignItems="center"
-  className="root"
-  justifyContent="flex-start"
+exports[`Checkbox should render a checkbox with label 1`] = `
+.glamor-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.glamor-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+.glamor-1 {
+  display: inline-block;
+  vertical-align: bottom;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 10px;
+}
+
+<div
+  className="glamor-2 root"
+  name={undefined}
+  onClick={undefined}
+  style={Object {}}
 >
-  <Box
-    className="checkbox checked"
-    height={14}
-    position="relative"
-    width={14}
+  .glamor-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+<div
+    className="glamor-0 checkbox checked"
+    style={Object {}}
   />
-  <Text
-    color="grey"
-    marginLeft={10}
-    size="small"
+  .glamor-0 {
+  display: inline-block;
+  vertical-align: bottom;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 10px;
+}
+
+<span
+    className="root weight-light size-small color-grey hover-color-none margin-none glamor-0"
+    href={undefined}
+    name={undefined}
+    onClick={undefined}
+    style={Object {}}
+    target={undefined}
   >
     A checkbox label
-  </Text>
-</Flex>
+  </span>
+</div>
 `;
 
-exports[`components/checkbox Checkbox should render shallow component ok 1`] = `
-<Flex
-  alignItems="center"
-  className="root"
-  justifyContent="flex-start"
+exports[`Checkbox should render shallow component ok 1`] = `
+.glamor-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.glamor-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+<div
+  className="glamor-1 root"
+  name={undefined}
+  onClick={undefined}
+  style={Object {}}
 >
-  <Box
-    className="checkbox checked"
-    height={14}
-    position="relative"
-    width={14}
+  .glamor-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+<div
+    className="glamor-0 checkbox checked"
+    style={Object {}}
   />
-</Flex>
+</div>
 `;

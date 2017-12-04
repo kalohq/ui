@@ -8,13 +8,7 @@ storiesOf(
   module
 ).addWithInfo('Box', 'A basic wrapping box component', () => {
   return (
-    <Box
-      width={300}
-      height={300}
-      padding={['medium', '18px']}
-      marginTop="large"
-      style={{backgroundColor: 'snow'}}
-    >
+    <Box margin={['small', 'medium', 'large']} paddingTop={'small'}>
       This is the layout box
     </Box>
   );

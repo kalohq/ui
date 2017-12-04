@@ -1,96 +1,96 @@
 /* @flow */
 /* eslint-env jest */
-import {shallow} from 'enzyme';
-import {testComponent} from 'utils/test/react';
-import serializer from 'enzyme-to-json/serializer';
-
+import * as React from 'react';
+import {sheet} from 'emotion';
+import serializer from 'jest-glamor-react';
+import renderer from 'react-test-renderer';
 import {Box, Block, Flex, Inline, InlineFlex} from 'components/layout';
 
-expect.addSnapshotSerializer(serializer);
+expect.addSnapshotSerializer(serializer(sheet));
 
-describe('components/layout', () => {
-  describe('Box', () => {
-    const create = testComponent(Box, (props = {}) => props);
+describe('Box', () => {
+  const create = (props = {}) => renderer.create(<Box {...props} />).toJSON();
 
-    it('should render correctly', () => {
-      const {element} = create({
-        flex: 0,
-        onClick: null,
-      });
-      const result = shallow(element);
-      expect(result).toMatchSnapshot();
-    });
-
-    it('should allow overriding of default styles', () => {
-      const {element} = create({
-        flex: 0,
-        alignContent: 'flex-end',
-        flexShrink: 1,
-        style: {color: 'red'},
-      });
-      const result = shallow(element);
-      expect(result).toMatchSnapshot();
-    });
-
-    it('should allow passing vector style values', () => {
-      const {element} = create({
-        margin: [0, 5, '10%', 15],
-        padding: [15, undefined],
-      });
-      const result = shallow(element);
-      expect(result).toMatchSnapshot();
-    });
+  test('should render correctly', () => {
+    const element = create();
+    expect(element).toMatchSnapshot();
   });
 
-  describe('Block', () => {
-    const create = testComponent(Block, (props = {}) => props);
-
-    it('should render correctly', () => {
-      const {element} = create({
-        flex: 0,
-        onClick: null,
-      });
-      const result = shallow(element);
-      expect(result).toMatchSnapshot();
+  test('should allow overriding of default styles', () => {
+    const element = create({
+      flex: 0,
+      alignContent: 'flex-end',
+      flexShrink: 1,
+      style: {color: 'red'},
     });
+
+    expect(element).toMatchSnapshot();
   });
 
-  describe('Flex', () => {
-    const create = testComponent(Flex, (props = {}) => props);
-
-    it('should render correctly', () => {
-      const {element} = create({
-        flex: 0,
-        onClick: null,
-      });
-      const result = shallow(element);
-      expect(result).toMatchSnapshot();
+  test('should allow passing vector style values', () => {
+    const element = create({
+      margin: [0, 5, '10%', 15],
+      padding: [15, undefined],
     });
+    expect(element).toMatchSnapshot();
   });
 
-  describe('Inline', () => {
-    const create = testComponent(Inline, (props = {}) => props);
-
-    it('should render correctly', () => {
-      const {element} = create({
-        flex: 0,
-        onClick: null,
-      });
-      const result = shallow(element);
-      expect(result).toMatchSnapshot();
+  test('should allow passing spacing scales', () => {
+    const element = create({
+      margin: ['small', 'medium', 'large'],
+      paddingTop: 'small',
     });
+
+    expect(element).toMatchSnapshot();
   });
+});
 
-  describe('InlineFlex', () => {
-    const create = testComponent(InlineFlex, (props = {}) => props);
+describe('Block', () => {
+  const create = (props = {}) => renderer.create(<Block {...props} />).toJSON();
 
-    it('should render correctly', () => {
-      const {element} = create({
-        flex: 0,
-        onClick: null,
-      });
-      const result = shallow(element);
-      expect(result).toMatchSnapshot();
+  test('should render correctly', () => {
+    const element = create({
+      flex: 0,
+      onClick: null,
     });
+    expect(element).toMatchSnapshot();
+  });
+});
+
+describe('Flex', () => {
+  const create = (props = {}) => renderer.create(<Flex {...props} />).toJSON();
+
+  test('should render correctly', () => {
+    const element = create({
+      flex: 0,
+      onClick: null,
+    });
+    expect(element).toMatchSnapshot();
+  });
+});
+
+describe('Inline', () => {
+  const create = (props = {}) =>
+    renderer.create(<Inline {...props} />).toJSON();
+
+  test('should render correctly', () => {
+    const element = create({
+      flex: 0,
+      onClick: null,
+    });
+    expect(element).toMatchSnapshot();
+  });
+});
+
+describe('InlineFlex', () => {
+  const create = (props = {}) =>
+    renderer.create(<InlineFlex {...props} />).toJSON();
+
+  test('should render correctly', () => {
+    const element = create({
+      flex: 0,
+      onClick: null,
+    });
+    expect(element).toMatchSnapshot();
   });
 });
