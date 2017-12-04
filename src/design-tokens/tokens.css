@@ -51,4 +51,6 @@
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --border-radius: 4px;
+  --border-radius-input: 4px;
+  --border-radius-button: 4px;
 }

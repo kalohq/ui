@@ -51,4 +51,6 @@ module.exports = {
   fontWeightMedium: "500",
   fontWeightSemibold: "600",
   borderRadius: "4px",
+  borderRadiusInput: "4px",
+  borderRadiusButton: "4px",
 };
