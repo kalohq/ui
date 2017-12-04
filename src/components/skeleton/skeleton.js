@@ -84,9 +84,9 @@ export function SkeletonAvatar({size = 4}) {
 export function SkeletonPaper({children, style}) {
   return (
     <Box
-      className={cx({
+      className={{
         [styles.paper]: true,
-      })}
+      }}
       padding={15}
       style={style}
     >
@@ -99,9 +99,9 @@ export function SkeletonPaper({children, style}) {
 export function SkeletonCard({children}) {
   return (
     <Box
-      className={cx({
+      className={{
         [styles.paper]: true,
-      })}
+      }}
       paddingTop={75}
       paddingBottom={150}
     >

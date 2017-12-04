@@ -13,7 +13,7 @@ storiesOf(
       height={300}
       padding={['medium', '18px']}
       marginTop="large"
-      style={{backgroundColor: 'red'}}
+      style={{backgroundColor: 'snow'}}
     >
       This is the layout box
     </Box>
