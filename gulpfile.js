@@ -10,7 +10,7 @@ gulp.task('css', () => {
   return gulp
     .src('./src/components/**/*.css')
     .pipe(postcss())
-    .pipe(gulp.dest('lib'));
+    .pipe(gulp.dest('lib/components'));
 });
 
 /**
@@ -29,7 +29,7 @@ gulp.task('js-components', () =>
         ignore: ['__tests__', '__stories__'],
       })
     )
-    .pipe(gulp.dest('lib'))
+    .pipe(gulp.dest('lib/components'))
 );
 
 /**
@@ -40,10 +40,22 @@ gulp.task('copy-files', () =>
     .src(
       'src/components/**/*(*.woff|*.woff2|*.ttf|*.jpg|*.jpeg|*.png|*.gif|*.svg)'
     )
-    .pipe(gulp.dest('lib'))
+    .pipe(gulp.dest('lib/components'))
+);
+
+/**
+ * Copy design tokens to lib
+ */
+gulp.task('copy-design-tokens', () =>
+  gulp.src(['src/design-tokens/**/*']).pipe(gulp.dest('lib/design-tokens'))
 );
 
 /**
  * General tasks
  */
-gulp.task('build-production', ['css', 'js-components', 'copy-files']);
+gulp.task('build-production', [
+  'css',
+  'js-components',
+  'copy-files',
+  'copy-design-tokens',
+]);
