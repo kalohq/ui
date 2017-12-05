@@ -1,187 +1,96 @@
 /* @flow */
 /* eslint-env jest */
-import {shallow} from 'enzyme';
-import {testComponent} from 'utils/test/react';
-
+import * as React from 'react';
+import {sheet} from 'emotion';
+import serializer from 'jest-glamor-react';
+import renderer from 'react-test-renderer';
 import {Box, Block, Flex, Inline, InlineFlex} from 'components/layout';
 
-describe('components/layout', () => {
-  describe('Box', () => {
-    const create = testComponent(Box, () => ({
-      // insert your default props here ...
-    }));
+expect.addSnapshotSerializer(serializer(sheet));
 
-    it('should render correctly', () => {
-      const {element} = create({
-        flex: 0,
-        onClick: null,
-      });
-      const result = shallow(element);
+describe('Box', () => {
+  const create = (props = {}) => renderer.create(<Box {...props} />).toJSON();
 
-      const onClick = result.prop('onClick');
-      const style = result.prop('style');
-      expect(onClick).toBe(null);
-
-      // Should only include whitelisted props in style
-      // Note that others not in whitelist will passthrough
-      expect(style).toMatchObject({
-        display: 'flex',
-        flex: 0,
-        // Expect extra default values
-        position: 'relative',
-        flexDirection: 'column',
-        alignItems: 'stretch',
-        flexShrink: 0,
-        alignContent: 'flex-start',
-      });
-    });
-
-    it('should allow overriding of default styles', () => {
-      const {element} = create({
-        flex: 0,
-        alignContent: 'flex-end',
-        flexShrink: 1,
-        style: {color: 'red'},
-      });
-      const result = shallow(element);
-      const style = result.prop('style');
-
-      // Should only include whitelisted props in style
-      // Note that others not in whitelist will passthrough
-      expect(style).toMatchObject({
-        display: 'flex',
-        flex: 0,
-        // Expect extra default values
-        position: 'relative',
-        flexDirection: 'column',
-        alignItems: 'stretch',
-        flexShrink: 1,
-        alignContent: 'flex-end',
-        color: 'red',
-      });
-    });
-
-    it('should allow passing vector style values', () => {
-      const {element} = create({
-        margin: [0, 5, '10%', 15],
-        padding: [15, undefined],
-      });
-      const result = shallow(element);
-      const style = result.prop('style');
-
-      expect(style).toMatchObject({
-        // Box defaults
-        display: 'flex',
-        position: 'relative',
-        flexDirection: 'column',
-        alignItems: 'stretch',
-        flexShrink: 0,
-        alignContent: 'flex-start',
-
-        // the vector values
-        margin: '0 5px 10% 15px',
-        padding: '15px 0',
-      });
-    });
+  test('should render correctly', () => {
+    const element = create();
+    expect(element).toMatchSnapshot();
   });
 
-  describe('Block', () => {
-    const create = testComponent(Block, () => ({
-      // insert your default props here ...
-    }));
-
-    it('should render correctly', () => {
-      const {element} = create({
-        flex: 0,
-        onClick: null,
-      });
-      const result = shallow(element);
-
-      const onClick = result.prop('onClick');
-      const style = result.prop('style');
-
-      expect(onClick).toBe(null);
-      // Should only include whitelisted props in style
-      // Note that others not in whitelist will passthrough
-      expect(style).toMatchObject({
-        display: 'block',
-        flex: 0,
-      });
+  test('should allow overriding of default styles', () => {
+    const element = create({
+      flex: 0,
+      alignContent: 'flex-end',
+      flexShrink: 1,
+      style: {color: 'red'},
     });
+
+    expect(element).toMatchSnapshot();
   });
 
-  describe('Flex', () => {
-    const create = testComponent(Flex, () => ({
-      // insert your default props here ...
-    }));
-
-    it('should render correctly', () => {
-      const {element} = create({
-        flex: 0,
-        onClick: null,
-      });
-      const result = shallow(element);
-
-      const onClick = result.prop('onClick');
-      const style = result.prop('style');
-
-      expect(onClick).toBe(null);
-      // Should only include whitelisted props in style
-      // Note that others not in whitelist will passthrough
-      expect(style).toMatchObject({
-        display: 'flex',
-        flex: 0,
-      });
+  test('should allow passing vector style values', () => {
+    const element = create({
+      margin: [0, 5, '10%', 15],
+      padding: [15, undefined],
     });
+    expect(element).toMatchSnapshot();
   });
 
-  describe('Inline', () => {
-    const create = testComponent(Inline, () => ({
-      // insert your default props here ...
-    }));
-
-    it('should render correctly', () => {
-      const {element} = create({
-        flex: 0,
-        onClick: null,
-      });
-      const result = shallow(element);
-
-      const onClick = result.prop('onClick');
-      const style = result.prop('style');
-
-      expect(onClick).toBe(null);
-      // Should only include whitelisted props in style
-      // Note that others not in whitelist will passthrough
-      expect(style).toMatchObject({
-        display: 'inline-block',
-        flex: 0,
-      });
+  test('should allow passing spacing scales', () => {
+    const element = create({
+      margin: ['small', 'medium', 'large'],
+      paddingTop: 'small',
     });
+
+    expect(element).toMatchSnapshot();
   });
+});
 
-  describe('InlineFlex', () => {
-    const create = testComponent(InlineFlex, () => ({
-      // insert your default props here ...
-    }));
+describe('Block', () => {
+  const create = (props = {}) => renderer.create(<Block {...props} />).toJSON();
 
-    it('should render correctly', () => {
-      const {element} = create({
-        flex: 0,
-        onClick: null,
-      });
-      const result = shallow(element);
-
-      const onClick = result.prop('onClick');
-      const style = result.prop('style');
-
-      expect(onClick).toBe(null);
-      // Should only include whitelisted props in style
-      // Note that others not in whitelist will passthrough
-      expect(style).toMatchObject({
-        display: 'inline-flex',
-        flex: 0,
-      });
+  test('should render correctly', () => {
+    const element = create({
+      flex: 0,
+      onClick: null,
     });
+    expect(element).toMatchSnapshot();
+  });
+});
+
+describe('Flex', () => {
+  const create = (props = {}) => renderer.create(<Flex {...props} />).toJSON();
+
+  test('should render correctly', () => {
+    const element = create({
+      flex: 0,
+      onClick: null,
+    });
+    expect(element).toMatchSnapshot();
+  });
+});
+
+describe('Inline', () => {
+  const create = (props = {}) =>
+    renderer.create(<Inline {...props} />).toJSON();
+
+  test('should render correctly', () => {
+    const element = create({
+      flex: 0,
+      onClick: null,
+    });
+    expect(element).toMatchSnapshot();
+  });
+});
+
+describe('InlineFlex', () => {
+  const create = (props = {}) =>
+    renderer.create(<InlineFlex {...props} />).toJSON();
+
+  test('should render correctly', () => {
+    const element = create({
+      flex: 0,
+      onClick: null,
+    });
+    expect(element).toMatchSnapshot();
   });
 });

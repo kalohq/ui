@@ -1,4 +1,4 @@
-import {isArray, isNumber, pickBy, omitBy} from 'lodash';
+import {isNumber, isString, pickBy, omitBy} from 'lodash';
 
 /**
  * Lookup to determine what props we include in style
@@ -94,20 +94,31 @@ const VENDOR_STYLERS =
       }
     : {};
 
-/*
-  * Lookup to determine which styles can be given a vector of values
-  * Eg. Pass {padding: [0, 5, 5, 0]}
-  */
+const REGEX = /^(padding|margin)(Top|Right|Bottom|Left)?$/;
 
-const VECTOR_STYLES = {
-  padding: true,
-  margin: true,
+const SPACING_MAP = {
+  'extra-small': 2,
+  small: 4,
+  medium: 8,
+  large: 16,
+  'extra-large': 24,
 };
 
+const arr = n => (Array.isArray(n) ? n : [n]);
+
 /** Parse a specific style */
-function parseStyle(name, value) {
-  if (VECTOR_STYLES[name] && isArray(value)) {
-    return value.map(v => (v ? (isNumber(v) ? `${v}px` : v) : 0)).join(' ');
+export function parseStyle(name, value) {
+  if (REGEX.test(name)) {
+    return arr(value)
+      .map(v => {
+        if (isNumber(v)) {
+          return `${v}px`;
+        } else if (isString(v) && SPACING_MAP[v]) {
+          return `${SPACING_MAP[v]}px`;
+        }
+        return v;
+      })
+      .join(' ');
   }
 
   return value;
@@ -116,7 +127,7 @@ function parseStyle(name, value) {
 /** Pull out styles from props */
 export function parseStyleProps(rawProps) {
   const props = {};
-  const style = {};
+  const style = rawProps.style || {};
 
   for (const key in rawProps) {
     if ({}.hasOwnProperty.call(rawProps, key)) {
@@ -128,7 +139,7 @@ export function parseStyleProps(rawProps) {
         } else {
           style[key] = parsedStyleValue;
         }
-      } else {
+      } else if (key !== 'style') {
         props[key] = rawProps[key];
       }
     }

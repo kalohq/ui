@@ -4,6 +4,7 @@
 */
 const theo = require('theo');
 const fs = require('fs');
+const camelCase = require('lodash/camelCase');
 
 const formatsRequired = [
   {
@@ -26,6 +27,10 @@ const formatsRequired = [
     format: 'json',
     fileName: 'tokens.json',
   },
+  {
+    format: 'theme.js',
+    fileName: 'tokens.theme.js',
+  },
 ];
 
 const writeToNewFile = (name, contents) => {
@@ -38,10 +43,26 @@ const writeToNewFile = (name, contents) => {
 };
 
 /**
+ * A custom token format for passing into a ThemeProvider
+ */
+theo.registerFormat('theme.js', result => {
+  const grouped = result.get('props').groupBy(token => token.get('category'));
+  const collect = {};
+
+  grouped.map((category, index) => {
+    collect[index] = {};
+    return category.map(token => {
+      collect[index][camelCase(token.get('name'))] = token.get('value');
+      return collect;
+    });
+  });
+  return `module.exports = ${JSON.stringify(collect)}`;
+});
+
+/**
  * A custom token format to pass in non-camelCased CSS variables
  * in to the post-css build step as a standard JS object.
  */
-
 theo.registerFormat(
   'custom-properties-as-an-object',
   `
