@@ -96,10 +96,12 @@ const VENDOR_STYLERS =
 
 const REGEX = /^(padding|margin)(Top|Right|Bottom|Left)?$/;
 
-const TEMP_SPACING_MAP = {
+const SPACING_MAP = {
+  'extra-small': 2,
   small: 4,
   medium: 8,
   large: 16,
+  'extra-large': 24,
 };
 
 const arr = n => (Array.isArray(n) ? n : [n]);
@@ -111,8 +113,8 @@ export function parseStyle(name, value) {
       .map(v => {
         if (isNumber(v)) {
           return `${v}px`;
-        } else if (isString(v) && TEMP_SPACING_MAP[v]) {
-          return `${TEMP_SPACING_MAP[v]}px`;
+        } else if (isString(v) && SPACING_MAP[v]) {
+          return `${SPACING_MAP[v]}px`;
         }
         return v;
       })
