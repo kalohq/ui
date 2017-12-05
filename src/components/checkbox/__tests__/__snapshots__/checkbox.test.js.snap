@@ -29,7 +29,7 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
@@ -66,7 +66,7 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
@@ -130,7 +130,7 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
@@ -167,7 +167,7 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
@@ -231,7 +231,7 @@ exports[`Checkbox should render shallow component ok 1`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
@@ -260,7 +260,7 @@ exports[`Checkbox should render shallow component ok 1`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
