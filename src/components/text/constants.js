@@ -26,6 +26,7 @@ export const TEXT_SIZE = new Enum({
 
 export type TEXT_COLOR =
   | 'red'
+  | 'pink'
   | 'blue'
   | 'green'
   | 'orange'

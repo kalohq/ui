@@ -117,7 +117,8 @@
   color: var(--orange500);
 }
 
-.color-red {
+.color-red,
+.color-pink {
   color: var(--pink500);
 }
 
