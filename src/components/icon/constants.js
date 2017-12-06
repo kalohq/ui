@@ -2,13 +2,13 @@
 
 import Enum from 'utils/enum';
 
-import COLORS from '../../constants/color';
+import type {TEXT_COLOR} from '../text/constants';
 
 export type ICON_SIZE = 12 | 14 | 16 | 18 | 20 | 23 | 24 | 26 | 36 | 48;
-export const ICON_COLORS = COLORS;
+export type ICON_COLOR = TEXT_COLOR;
 
 export const DEFAULT_SIZE = 16;
-export const DEFAULT_COLOR = COLORS.CURRENTCOLOR;
+export const DEFAULT_COLOR = 'charcoal';
 
 export const ICONS = new Enum({
   ACCESS_TIME: {

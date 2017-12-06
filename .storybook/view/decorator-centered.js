@@ -45,8 +45,8 @@ export default function(renderStory) {
             </pre>
           </Inline>
         </Inline>
+        <IconSymbols />
       </Flex>
-      <IconSymbols />
     </ThemeProvider>
   );
 }

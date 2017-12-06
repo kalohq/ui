@@ -1,9 +1,8 @@
 /* @flow */
 import * as React from 'react';
-import cx from 'classnames';
-import {parseStyleProps} from 'utils/style';
+import styled from 'react-emotion';
 
-import styles from './icon.css';
+import {Inline} from '../layout';
 
 import type {ICON_SIZE} from './constants';
 
@@ -17,6 +16,13 @@ type Props = {
   onClick?: Function,
 };
 
+const StyledIcon = styled(Inline)`
+  user-select: none;
+  line-height: 1em;
+  vertical-align: middle;
+  cursor: ${props => (props.interactive ? 'pointer' : 'inherit')};
+`;
+
 export default function Icon(props: Props) {
   const {
     children,
@@ -27,34 +33,22 @@ export default function Icon(props: Props) {
     ...otherProps
   } = props;
 
-  const {unstyledProps, style} = parseStyleProps(otherProps);
-
   if (!ICONS.properties[children]) {
     console.error(`UI ICON - ${children} is not a defined icon`);
   }
 
   return (
-    <i
-      className={cx(
-        {
-          [styles.root]: true,
-          [styles.interactive]: !!onClick,
-        },
-        className
-      )}
+    <StyledIcon
+      className={className}
+      component="i"
+      interactive={!!onClick}
       onClick={onClick}
-      style={style}
-      {...unstyledProps}
+      {...otherProps}
     >
-      <svg
-        width={size}
-        height={size}
-        fill={ICON_COLORS.properties[color].hex}
-        aria-hidden="true"
-      >
+      <svg width={size} height={size} style={{fill: color}} aria-hidden="true">
         <title>{children}</title>
         <use href={`#${children}`} />
       </svg>
-    </i>
+    </StyledIcon>
   );
 }
