@@ -6,7 +6,7 @@ machine:
   node:
     version: 6.9.1
   post:
-    - npm install -g npm@5.5.1
+    - npm install -g npm@3.7.3
 
 dependencies:
   override:
