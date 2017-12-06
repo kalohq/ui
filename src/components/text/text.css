@@ -106,7 +106,7 @@
 }
 
 .color-white {
-  color: #fff;
+  color: var(--white);
 }
 
 .color-green {

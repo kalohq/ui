@@ -113,53 +113,54 @@
  * Colors
  */
 
-.color-black,
-.color-dark-grey,
-.color-charcoal {
-  color: var(--grey700);
-}
-
-.color-grey,
-.color-slate {
-  color: var(--grey600);
-}
-
-.color-silver {
-  color: var(--grey500);
-}
-
-.color-platinum,
-.color-light-grey {
-  color: var(--grey400);
-}
-
-.color-snow {
-  color: var(--grey300);
-}
-
-.color-white {
-  color: #fff;
-}
-
-.color-green {
-  color: var(--green500);
-}
-
-.color-orange {
-  color: var(--orange500);
-}
-
-.color-red {
-  color: var(--pink500);
-}
-
-.color-blue {
-  color: var(--blue500);
-}
-
-.color-purple {
-  color: var(--purple500);
-}
-
-.color-none {
-}
+ .color-black,
+ .color-dark-grey,
+ .color-charcoal {
+   color: var(--navy700);
+ }
+ 
+ .color-grey,
+ .color-slate {
+   color: var(--navy600);
+ }
+ 
+ .color-silver,
+ .color-light-grey {
+   color: var(--navy500);
+ }
+ 
+ .color-platinum {
+   color: var(--navy400);
+ }
+ 
+ .color-snow {
+   color: var(--navy300);
+ }
+ 
+ .color-white {
+   color: var(--white);
+ }
+ 
+ .color-green {
+   color: var(--green500);
+ }
+ 
+ .color-orange {
+   color: var(--orange500);
+ }
+ 
+ .color-red,
+ .color-pink {
+   color: var(--pink500);
+ }
+ 
+ .color-blue {
+   color: var(--blue500);
+ }
+ 
+ .color-purple {
+   color: var(--purple500);
+ }
+ 
+ .color-none {
+ }
