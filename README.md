@@ -51,6 +51,10 @@ A component directory should follow this pattern:
 | `__tests__/component-name.test.js` | Component tests |
 | `__stories__/component-name.stories.js` | Stories to display in React Storybook |
 
+## Design Tokens
+
+All design tokens should be defined in our `config/.tokens.yml` config file. When the config file changes we should regenerate various useful files out of that with `gulp tokens`. 
+
 ## Testing changes with the frontend
 
 To test out changes that you've made in the UI repo within the frontend, follow these steps:

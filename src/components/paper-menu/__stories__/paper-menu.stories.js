@@ -50,11 +50,23 @@ export class Example extends React.Component {
           sticky={{width: '300px'}}
           open={this.state.open}
         >
-          <PaperMenuItem title="Switch teams">
+          <PaperMenuItem
+            minWidth={300}
+            title="Switch teams"
+            icon="add"
+            iconAfter="face"
+          >
             <InnerLayoutForDemo>Switch Teams</InnerLayoutForDemo>
           </PaperMenuItem>
           <PaperMenuItem title="Logout">
             <InnerLayoutForDemo>Logout</InnerLayoutForDemo>
+          </PaperMenuItem>
+          <PaperMenuItem
+            component="a"
+            href="http://kalohq.com"
+            title="As a link"
+          >
+            <InnerLayoutForDemo>This is actually a link</InnerLayoutForDemo>
           </PaperMenuItem>
         </PaperMenu>
       </Box>

@@ -1,23 +1,24 @@
 /* @flow */
 import * as React from 'react';
-import cx from 'classnames';
 import type {List} from 'immutable';
 import PureComponent from 'react-pure-render/component';
 
 import Icon from '../icon';
 import PaperMenu, {PaperMenuItem} from '../paper-menu';
 import Checkbox from '../checkbox';
+import {Box} from '../layout';
+import Button from '../button';
 
 import styles from './button-dropdown.css';
 
 type Props = {
   children?: string,
-  size?: 'small' | 'medium' | 'large' | 'x-large',
-  theme?: 'tertiary' | 'primary' | 'secondary',
   selectItems: List<{
     title: string,
     onClick?: Function,
     disabled?: boolean,
+    component?: any,
+    componentProps?: any,
   }>,
   open?: boolean,
   onClick?: Function,
@@ -74,34 +75,25 @@ export default class ButtonDropdown extends PureComponent {
   render() {
     const {
       children,
-      size = 'large',
-      theme = 'tertiary',
       disabled,
       selectItems = [],
       checkboxProps,
+      ...otherProps
     } = this.props;
 
     return (
-      <div
-        className={cx({
-          [styles.root]: true,
-          [styles[`size-${size}`]]: true,
-          [styles[`theme-${theme}`]]: true,
-          [styles.active]: this.state.open,
-          [styles.disabled]: disabled,
-        })}
+      <Button
+        active={this.state.open}
         onClick={!disabled ? this.onToggle : null}
+        disabled={disabled}
+        {...otherProps}
       >
         {checkboxProps ? (
-          <Checkbox
-            size="large"
-            marginRight={16}
-            marginLeft={-4}
-            disabled={disabled}
-            {...checkboxProps}
-          />
+          <Checkbox size="large" disabled={disabled} {...checkboxProps} />
         ) : null}
-        {children}
+        {children ? (
+          <Box marginLeft={checkboxProps ? 12 : 0}>{children}</Box>
+        ) : null}
         {selectItems.length ? (
           <Icon marginLeft={8} marginRight={-8} size={20}>
             keyboard_arrow_down
@@ -114,11 +106,14 @@ export default class ButtonDropdown extends PureComponent {
                 <PaperMenuItem
                   disabled={item.disabled}
                   key={item.title}
+                  component={item.component}
+                  minWidth={item.minWidth}
+                  {...item.componentProps}
                   onClick={
                     !item.disabled ? (
                       () => {
+                        if (item.onClick) item.onClick();
                         this.onToggle();
-                        item.onClick();
                       }
                     ) : null
                   }
@@ -129,7 +124,7 @@ export default class ButtonDropdown extends PureComponent {
             </PaperMenu>
           </div>
         ) : null}
-      </div>
+      </Button>
     );
   }
 }

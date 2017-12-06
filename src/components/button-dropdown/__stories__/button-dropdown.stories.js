@@ -3,6 +3,7 @@ import {storiesOf} from '@storybook/react';
 
 import ButtonDropdown from 'components/button-dropdown';
 import ButtonGroup from 'components/button-group';
+import Button from 'components/button';
 
 const myClickFunction = () => {
   /* eslint-disable no-alert */
@@ -19,24 +20,30 @@ storiesOf('ButtonDropdown', module)
         <ButtonGroup>
           <ButtonDropdown
             size="large"
+            theme="tertiary"
+            subdued={true}
             selectItems={[
               {
                 title: 'Pending',
                 onClick: myClickFunction,
               },
               {
-                title: 'Approved',
-                onClick: myClickFunction,
+                title: 'This is a link',
+                minWidth: 225,
+                component: 'a',
+                componentProps: {
+                  href: 'http://google.com',
+                  target: '_blank',
+                },
               },
             ]}
             checkboxProps={{
               onClick: () => {},
             }}
-          >
-            Bulk Select Options
-          </ButtonDropdown>
+          />
           <ButtonDropdown
             size="large"
+            theme="tertiary"
             selectItems={[
               {
                 title: 'Pending',
@@ -52,6 +59,7 @@ storiesOf('ButtonDropdown', module)
           </ButtonDropdown>
           <ButtonDropdown
             size="large"
+            theme="tertiary"
             selectItems={[
               {
                 title: 'Pending',
@@ -65,6 +73,9 @@ storiesOf('ButtonDropdown', module)
           >
             1
           </ButtonDropdown>
+          <Button size="large" theme="tertiary">
+            Hello World
+          </Button>
         </ButtonGroup>
       );
     }
@@ -77,25 +88,15 @@ storiesOf('ButtonDropdown', module)
         <ButtonGroup>
           <ButtonDropdown
             size="large"
+            theme="tertiary"
             disabled={true}
-            selectItems={[
-              {
-                title: 'Pending',
-                onClick: myClickFunction,
-              },
-              {
-                title: 'Approved',
-                onClick: myClickFunction,
-              },
-            ]}
             checkboxProps={{
               onClick: () => {},
             }}
-          >
-            Bulk Select Options
-          </ButtonDropdown>
+          />
           <ButtonDropdown
             size="large"
+            theme="tertiary"
             selectItems={[
               {
                 title: 'Pending',
@@ -112,6 +113,7 @@ storiesOf('ButtonDropdown', module)
           </ButtonDropdown>
           <ButtonDropdown
             size="large"
+            theme="tertiary"
             selectItems={[
               {
                 title: 'Pending',

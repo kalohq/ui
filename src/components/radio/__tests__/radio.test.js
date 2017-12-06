@@ -1,21 +1,24 @@
 /* @flow */
 /* eslint-env jest */
-import {shallow} from 'enzyme';
-import {testComponent} from 'utils/test/react';
+import * as React from 'react';
+import {sheet} from 'emotion';
+import serializer from 'jest-glamor-react';
+import renderer from 'react-test-renderer';
 
 import Radio from 'components/radio';
 
-describe('components/radio', () => {
-  describe('Radio', () => {
-    const create = testComponent(Radio, () => ({
-      size: 'medium',
-      checked: true,
-    }));
+expect.addSnapshotSerializer(serializer(sheet));
 
-    it('should render shallow component ok', () => {
-      const {element} = create();
-      const result = shallow(element);
-      expect(result).toBeTruthy();
-    });
+describe('Radio', () => {
+  const defaultProps = {
+    size: 'medium',
+    checked: true,
+  };
+  const create = (props = {}) =>
+    renderer.create(<Radio {...defaultProps} {...props} />).toJSON();
+
+  test('should render shallow component ok', () => {
+    const element = create();
+    expect(element).toMatchSnapshot();
   });
 });

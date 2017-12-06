@@ -1,11 +1,12 @@
 .root {
-  background-color: var(--color-white);
+  background-color: var(--white);
   cursor: pointer;
   border-bottom: 1px solid var(--grey300);
   transition: all 0.2s ease-in;
   color: inherit;
   padding: 4px 16px;
   user-select: none;
+  text-decoration: none;
 }
 
 .root:not(.disabled):hover {
