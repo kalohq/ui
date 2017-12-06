@@ -25,7 +25,9 @@ exports[`Paper should render a component with an elevation of 3 1`] = `
   className="glamor-0 root level-3 hover-level-1 border rounded"
   onClick={undefined}
   style={Object {}}
-/>
+>
+  Paper Contents
+</div>
 `;
 
 exports[`Paper should render shallow component ok 1`] = `
@@ -54,5 +56,7 @@ exports[`Paper should render shallow component ok 1`] = `
   onClick={undefined}
   spacing={true}
   style={Object {}}
-/>
+>
+  Paper Contents
+</div>
 `;

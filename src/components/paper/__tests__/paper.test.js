@@ -12,7 +12,13 @@ expect.addSnapshotSerializer(serializer(sheet));
 describe('Paper', () => {
   const defaultProps = {};
   const create = (props = {spacing: true}) =>
-    renderer.create(<Paper {...defaultProps} {...props} />).toJSON();
+    renderer
+      .create(
+        <Paper {...defaultProps} {...props}>
+          Paper Contents
+        </Paper>
+      )
+      .toJSON();
 
   test('should render shallow component ok', () => {
     const element = create();
