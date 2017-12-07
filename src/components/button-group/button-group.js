@@ -12,7 +12,7 @@ import styles from './button-group.css';
  */
 
 type Props = {
-  children: React$Element<*>,
+  children: React.Element<*>,
   flex?: boolean,
   bordered?: boolean,
   wide?: boolean,
