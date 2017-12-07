@@ -15,6 +15,7 @@ describe('ButtonGroup', () => {
   const create = (props = {spacing: true}) =>
     renderer
       .create(
+        // $FlowFixMe
         <ButtonGroup {...defaultProps} {...props}>
           <Button>Button One</Button>
           <Button>Button Two</Button>
