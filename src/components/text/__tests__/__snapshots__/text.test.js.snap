@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text should render green text 1`] = `
+.glamor-0 {
+  display: inline-block;
+  vertical-align: bottom;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+<span
+  className="root weight-light size-medium color-green hover-color-none margin-none glamor-0"
+  href={undefined}
+  name={undefined}
+  onClick={undefined}
+  style={Object {}}
+  target={undefined}
+>
+  Hello World
+</span>
+`;
+
+exports[`Text should render large text 1`] = `
+.glamor-0 {
+  display: inline-block;
+  vertical-align: bottom;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+<span
+  className="root weight-light size-large color-charcoal hover-color-none margin-none glamor-0"
+  href={undefined}
+  name={undefined}
+  onClick={undefined}
+  style={Object {}}
+  target={undefined}
+>
+  Hello World
+</span>
+`;
+
+exports[`Text should render shallow component ok 1`] = `
+.glamor-0 {
+  display: inline-block;
+  vertical-align: bottom;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+<span
+  className="root weight-light size-medium color-charcoal hover-color-none margin-none glamor-0"
+  href={undefined}
+  name={undefined}
+  onClick={undefined}
+  style={Object {}}
+  target={undefined}
+>
+  Hello World
+</span>
+`;

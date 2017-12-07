@@ -1,1 +1,0 @@
-web: cd site && npm run build && npm run start

@@ -1,9 +1,9 @@
+/* @flow */
 import React from 'react';
-import PureComponent from 'react-pure-render/component';
 import {parseStyleProps} from 'utils/style';
+import PureComponent from 'react-pure-render/component';
 import cx from 'classnames';
 
-/** Make a new primitive layout component */
 function makePrimitive(name, DefaultComponent, display, defaultStyle) {
   class Primitive extends PureComponent {
     render() {
@@ -25,8 +25,9 @@ function makePrimitive(name, DefaultComponent, display, defaultStyle) {
         <Component
           ref={elRef}
           className={cx(className)}
+          css={{...style}}
           {...props}
-          style={{...style, ...propStyle}}
+          style={{...propStyle}}
         />
       );
     }
@@ -36,15 +37,18 @@ function makePrimitive(name, DefaultComponent, display, defaultStyle) {
   return Primitive;
 }
 
-// Building Blocks
+/**
+ * Layout primitives
+ */
 export const Box = makePrimitive('Box', 'div', 'flex', {
-  // https://github.com/facebook/css-layout#default-values
   position: 'relative',
   flexDirection: 'column',
   alignItems: 'stretch',
-  flexShrink: 0,
+  flexShrink: '0',
   alignContent: 'flex-start',
+  display: 'flex',
 });
+
 export const Flex = makePrimitive('Flex', 'div', 'flex');
 export const Block = makePrimitive('Block', 'div', 'block');
 export const Inline = makePrimitive('Inline', 'span', 'inline-block', {
@@ -53,7 +57,7 @@ export const Inline = makePrimitive('Inline', 'span', 'inline-block', {
 export const InlineFlex = makePrimitive('InlineFlex', 'span', 'inline-flex');
 
 /**
- * TODO: All of the html primitives should follow here so our api is consistent to the very root...
- * - Eg. Button, Input, Select, Table etc.
+ * All of our html primitives should follow here so our api is consistent to the very root
+ * Eg. Button, Input, Select, Table etc.
  */
-export const A = makePrimitive('A', 'a', 'inline-block');
+export const A = makePrimitive('H1', 'a', 'inline-block');

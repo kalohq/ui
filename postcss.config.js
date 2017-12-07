@@ -1,11 +1,11 @@
-const cssVariables = require('./src/constants/color');
+const cssVariables = require('./src/design-tokens/tokens.css.js');
 
 module.exports = {
   plugins: {
     'postcss-cssnext': {
       features: {
         customProperties: {
-          variables: cssVariables.color,
+          variables: cssVariables,
         },
       },
     },

@@ -15,8 +15,8 @@ type RadioProps = {
   readonly?: boolean,
   size?: RADIO_SIZE,
   disabled?: boolean,
-  label: string,
-  onClick: Function,
+  label?: string,
+  onClick?: Function,
   name?: string,
 };
 
