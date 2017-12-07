@@ -1,7 +1,9 @@
 import React from 'react';
-import styled, {injectGlobal} from 'react-emotion';
+import styled, {injectGlobal, ThemeProvider} from 'react-emotion';
 
 import GlobalNavigation from '../../components/global-navigation';
+
+import theme from '../../../src/components/theme';
 
 injectGlobal`
   * {
@@ -23,9 +25,11 @@ const Container = styled.div`
 
 export default function Page({children}) {
   return (
-    <Container>
-      <GlobalNavigation />
-      {children}
-    </Container>
+    <ThemeProvider theme={theme}>
+      <Container>
+        <GlobalNavigation />
+        {children}
+      </Container>
+    </ThemeProvider>
   );
 }
