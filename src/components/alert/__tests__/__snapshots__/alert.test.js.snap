@@ -2,7 +2,7 @@
 
 exports[`Alert should render a confirmation alert with an icon 1`] = `
 <div
-  className="css-1ch6zj5 root type-confirmation"
+  className="css-ue8dg4 root type-confirmation"
   style={Object {}}
 >
   <i
@@ -17,7 +17,7 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
     check_circle
   </i>
   <span
-    className="root weight-light size-small color-green hover-color-none margin-none multiline css-7yhaxn"
+    className="root weight-light size-small color-green hover-color-none margin-none multiline css-cfmow6"
     href={undefined}
     name={undefined}
     onClick={undefined}
@@ -31,11 +31,11 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
 
 exports[`Alert should render a warning alert 1`] = `
 <div
-  className="css-1ch6zj5 root type-warning"
+  className="css-ue8dg4 root type-warning"
   style={Object {}}
 >
   <span
-    className="root weight-light size-small color-orange hover-color-none margin-none multiline css-7yhaxn"
+    className="root weight-light size-small color-orange hover-color-none margin-none multiline css-cfmow6"
     href={undefined}
     name={undefined}
     onClick={undefined}
@@ -49,11 +49,11 @@ exports[`Alert should render a warning alert 1`] = `
 
 exports[`Alert should render shallow component ok 1`] = `
 <div
-  className="css-1ch6zj5 root type-info"
+  className="css-ue8dg4 root type-info"
   style={Object {}}
 >
   <span
-    className="root weight-light size-small color-blue hover-color-none margin-none multiline css-7yhaxn"
+    className="root weight-light size-small color-blue hover-color-none margin-none multiline css-cfmow6"
     href={undefined}
     name={undefined}
     onClick={undefined}
