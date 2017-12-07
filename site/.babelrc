@@ -1,10 +1,8 @@
 {
-  "presets": [
-    "next/babel"
-  ],
+  "presets": ["next/babel"],
   "plugins": [
     "lodash",
-    ["styled-components", { "ssr": true, "displayName": true, "preprocess": false } ],
+    ["emotion", {"inline": true}],
     ["markdown-in-js/babel"],
     ["babel-plugin-transform-flow-strip-types"],
     [

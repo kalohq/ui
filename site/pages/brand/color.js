@@ -1,6 +1,6 @@
 import React from 'react';
 import markdown from 'markdown-in-js';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 import withDocumentation from 'components/with-documentation';
 

@@ -1,20 +1,22 @@
 import Document, {Head, Main, NextScript} from 'next/document';
-import {ServerStyleSheet} from 'styled-components';
+import {extractCritical} from 'emotion-server';
 import React from 'react';
 
 export default class MyDocument extends Document {
+  static getInitialProps({renderPage}) {
+    const page = renderPage();
+    const styles = extractCritical(page.html);
+    return {...page, ...styles};
+  }
   render() {
-    const sheet = new ServerStyleSheet();
-    const main = sheet.collectStyles(<Main />);
-    const styleTags = sheet.getStyleElement();
     return (
       <html lang="en">
         <Head>
           <title>KIDS</title>
-          {styleTags}
+          <style dangerouslySetInnerHTML={{__html: this.props.css}} />
         </Head>
         <body>
-          <div className="root">{main}</div>
+          <Main />
           <NextScript />
         </body>
       </html>

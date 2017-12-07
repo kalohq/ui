@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, {injectGlobal} from 'styled-components';
+import styled, {injectGlobal} from 'react-emotion';
 
 import GlobalNavigation from '../../components/global-navigation';
 

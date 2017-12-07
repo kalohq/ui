@@ -1,9 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 import Link from 'next/link';
 
-const StyledBar = styled.header`
+const StyledBar = styled('div')`
   width: 100%;
   height: 56px;
   background-color: #374561;
