@@ -1,0 +1,80 @@
+global:
+  type: color
+  category: colors
+props:
+  WHITE:
+    value: '#fff'
+  BLACK:
+    value: '#000'
+  PINK300:
+    value: '#FBDFE2'
+  PINK400:
+    value: '#FDB3C8'
+  PINK500:
+    value: '#EA5F6E'
+  PINK600:
+    value: '#E05867'
+  PINK700:
+    value: '#C34A57'
+  ORANGE300:
+    value: '#FFEDB4'
+  ORANGE400:
+    value: '#FFCE5E'
+  ORANGE500:
+    value: '#FDB81C'
+  ORANGE600:
+    value: '#F6AF0D'
+  ORANGE700:
+    value: '#D89118'
+  PURPLE300:
+    value: '#e8e2f2'
+  PURPLE400:
+    value: '#9F81DA'
+  PURPLE500:
+    value: '#8A70BD'
+  PURPLE600:
+    value: '#775FA8'
+  PURPLE700:
+    value: '#604e83'
+  GREEN300:
+    value: '#D8F0E8'
+  GREEN400:
+    value: '#4FD2A4'
+  GREEN500:
+    value: '#3eb38a'
+  GREEN600:
+    value: '#38A07C'
+  GREEN700:
+    value: '#298665'
+  BLUE300:
+    value: '#C1F4FF'
+  BLUE400:
+    value: '#65D2EA'
+  BLUE500:
+    value: '#54C3DB'
+  BLUE600:
+    value: '#4DB8CF'
+  BLUE700:
+    value: '#2BA7C2'
+  NAVY300:
+    value: '#F9FAFC'
+  NAVY400:
+    value: '#C6C7D8'
+  NAVY500:
+    value: '#93A6C1'
+  NAVY600:
+    value: '#546789'
+  NAVY700:
+    value: '#374561'
+  GREY200:
+    value: '#F9FAFC'
+  GREY300:
+    value: '#EEF4FA'
+  GREY400:
+    value: '#D0D8DF'
+  GREY500:
+    value: '#B0BAC3'
+  GREY600:
+    value: '#89929B'
+  GREY700:
+    value: '#707D8A'

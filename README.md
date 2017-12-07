@@ -1,6 +1,6 @@
 # Kalo UI 🍃
 
-![@kalo/ui](https://img.shields.io/npm/v/@kalo/ui.svg)
+![@kalo/ui](https://img.shields.io/npm/v/@kalo/ui.svg) [![codecov](https://codecov.io/gh/kalohq/ui/branch/master/graph/badge.svg?token=UMKMabKV8s)](https://codecov.io/gh/kalohq/ui)
 
 ---
 
@@ -50,6 +50,10 @@ A component directory should follow this pattern:
 | `README.md` | Any related design usage documentation |
 | `__tests__/component-name.test.js` | Component tests |
 | `__stories__/component-name.stories.js` | Stories to display in React Storybook |
+
+## Design Tokens
+
+All design tokens should be defined in our `config/.tokens.yml` config file. When the config file changes we should regenerate various useful files out of that with `gulp tokens`. 
 
 ## Testing changes with the frontend
 

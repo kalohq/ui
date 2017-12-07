@@ -1,13 +1,32 @@
 import React, {Component} from 'react';
 import {toPairs, groupBy, flattenDeep, identity} from 'lodash';
+import styled from 'styled-components';
 
 import withQueries, {gql} from '../hocs/withQueries';
 
 import Documentation from '../layouts/documentation';
+import * as Stories from '../.stories';
+
+const StoryContainer = styled.div`margin: 32px;`;
 
 export class ComponentDocumentation extends Component {
+  state = {stories: []};
+  async componentDidUpdate(prevProps) {
+    if (
+      prevProps.data.loading &&
+      !this.props.data.loading &&
+      this.props.data.component
+    ) {
+      const load = Stories[this.props.data.component.name];
+      if (load) {
+        const stories = await load;
+        this.setState({stories: toPairs(stories)});
+      }
+    }
+  }
   render() {
     const {data} = this.props;
+    const {stories} = this.state;
     const {components, component, loading} = data;
     const nav = {
       title: 'Components',
@@ -73,6 +92,17 @@ export class ComponentDocumentation extends Component {
                     {p.name} ({p.usages})
                   </li>
                 ))}
+            </ul>
+            <li>Stories ({stories.length}):</li>
+            <ul>
+              {stories.map(([name, Story]) => (
+                <li key={name}>
+                  {name}
+                  <StoryContainer>
+                    <Story />
+                  </StoryContainer>
+                </li>
+              ))}
             </ul>
           </ul>
         )}

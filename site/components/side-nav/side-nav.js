@@ -1,7 +1,7 @@
 /* @flow */
 import * as React from 'react';
 import Link from 'next/link';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 const AsideContainer = styled.aside`
   width: auto;

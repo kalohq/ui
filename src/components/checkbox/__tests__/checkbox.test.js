@@ -1,44 +1,41 @@
 /* @flow */
 /* eslint-env jest */
-import {shallow} from 'enzyme';
-import {textMatch} from 'utils/test/enzyme';
-import {testComponent} from 'utils/test/react';
+import * as React from 'react';
+import {sheet} from 'emotion';
+import serializer from 'jest-glamor-react';
+import renderer from 'react-test-renderer';
 
-import Checkbox from '../checkbox';
+import Checkbox from 'components/checkbox';
 
-describe('components/checkbox', () => {
-  describe('Checkbox', () => {
-    const create = testComponent(Checkbox, () => ({
-      size: 'medium',
-      checked: true,
-    }));
+expect.addSnapshotSerializer(serializer(sheet));
 
-    it('should render shallow component ok', () => {
-      const {element} = create();
-      const result = shallow(element);
-      expect(result).toBeTruthy();
+describe('Checkbox', () => {
+  const defaultProps = {
+    size: 'medium',
+    checked: true,
+  };
+  const create = (props = {}) =>
+    renderer.create(<Checkbox {...defaultProps} {...props} />).toJSON();
+
+  test('should render shallow component ok', () => {
+    const element = create();
+    expect(element).toMatchSnapshot();
+  });
+
+  test('should render a checkbox with label', () => {
+    const element = create({
+      label: 'A checkbox label',
     });
 
-    it('should render a checkbox with label', () => {
-      const {element} = create({
-        label: 'A checkbox label',
-      });
+    expect(element).toMatchSnapshot();
+  });
 
-      const result = shallow(element);
-      const label = result.find('Text');
-      expect(textMatch(label, 'A checkbox label')).toBe(true);
+  test('should render a checkbox partially checked', () => {
+    const element = create({
+      label: 'A checkbox label',
+      checked: false,
+      indeterminate: true,
     });
-
-    it('should render a checkbox partially checked', () => {
-      const {element} = create({
-        label: 'A checkbox label',
-        checked: false,
-        indeterminate: true,
-      });
-      const result = shallow(element);
-      expect(result).toBeTruthy();
-      const box = result.find('Box').first();
-      expect(box.prop('className')).toBe('checkbox indeterminate');
-    });
+    expect(element).toMatchSnapshot();
   });
 });

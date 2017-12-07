@@ -12,13 +12,13 @@ import {TEXT_SIZE} from '../text/constants';
 import styles from './checkbox.css';
 
 type CheckboxProps = {
-  size: CHECKBOX_SIZE,
-  checked: ?boolean,
-  indeterminate: ?boolean,
-  readonly: boolean,
-  disabled: boolean,
-  label: string,
-  onClick: Function,
+  size?: CHECKBOX_SIZE,
+  checked?: ?boolean,
+  indeterminate?: ?boolean,
+  readonly?: boolean,
+  disabled?: boolean,
+  label?: string,
+  onClick?: Function,
   name?: string,
 };
 
