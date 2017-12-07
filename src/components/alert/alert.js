@@ -1,5 +1,5 @@
 /* @flow */
-import React from 'react';
+import * as React from 'react';
 import cx from 'classnames';
 import Icon from '../icon';
 import Text from '../text';
@@ -22,7 +22,7 @@ const TYPE_ICON_MAP = {
 };
 
 type TProps = {
-  children: React$Element<*>,
+  children: React.Node,
   type: $Keys<typeof TYPE_COLOR_MAP>,
   showIcon?: boolean,
   justifyContent?: 'left' | 'center',
