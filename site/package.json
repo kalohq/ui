@@ -10,7 +10,8 @@
   "scripts": {
     "dev": "NODE_ENV=development node --preserve-symlinks server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production node server.js",
+    "docs:generate": "gulp docs:markdown && react-docgen ../src/components/button/button.js --out docs/content/components/_props.json --ignore [__tests__,__stories__]"
   },
   "author": "Kalo Product",
   "license": "ISC",
