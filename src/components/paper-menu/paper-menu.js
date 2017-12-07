@@ -2,7 +2,7 @@
 import * as React from 'react';
 
 import PureComponent from 'react-pure-render/component';
-import CSSTransitionGroup from 'react-addons-css-transition-group';
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 
 import H3 from '../h3';
 import Icon from '../icon';

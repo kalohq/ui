@@ -16,7 +16,8 @@
   "license": "ISC",
   "devDependencies": {
     "@kalo/eslint-config": "^6.0.0",
-    "eslint": "^4.10.0"
+    "eslint": "^4.10.0",
+    "react-transition-group": "^2.2.1"
   },
   "dependencies": {
     "apollo-cache-inmemory": "^1.1.1",

@@ -9,7 +9,7 @@ const routes = require('./routes');
 const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 const PORT = process.env.PORT || 3000;
 const app = next({
-  dir: './',
+  dir: process.cwd(),
   dev: !IS_PRODUCTION,
 });
 const handler = routes.getRequestHandler(app);

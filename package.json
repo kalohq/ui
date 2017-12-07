@@ -6,7 +6,15 @@
     "type": "git",
     "url": "https://github.com/kalohq/ui"
   },
-  "main": "server.js",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "lint-staged": {
+    "*.js": [
+      "eslint"
+    ]
+  },
   "scripts": {
     "start": "npm run storybook:start",
     "storybook": "npm run storybook:start",
@@ -15,8 +23,7 @@
     "compile": "npm run generate-tokens && gulp build-production",
     "test": "jest",
     "dist": "rimraf lib && npm run compile",
-    "copy-flow":
-      "flow-copy-source src/components lib --ignore '{index.js,**/__tests__/*,**/__stories__/*}'",
+    "copy-flow": "flow-copy-source src/components lib --ignore '{index.js,**/__tests__/*,**/__stories__/*}'",
     "typecheck": "flow",
     "lint": "eslint src",
     "precommit": "lint-staged",
@@ -89,6 +96,7 @@
     "react-pure-render": "1.0.2",
     "react-storybook-addon-add-stories-group": "0.1.0",
     "react-test-renderer": "15.4.1",
+    "react-transition-group": "^1.2.1",
     "rimraf": "2.6.1",
     "style-loader": "0.16.1",
     "styled-system": "^1.0.8",
@@ -108,14 +116,18 @@
     "react-pure-render": "^1.0.2"
   },
   "jest": {
-    "modulePaths": ["src/core", "src"],
+    "modulePaths": [
+      "src/core",
+      "src"
+    ],
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|html)$":
-        "<rootDir>/__mocks__/file-mock.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|html)$": "<rootDir>/__mocks__/file-mock.js",
       "\\.(css|less)$": "identity-obj-proxy"
     },
     "testEnvironment": "jsdom",
-    "testMatch": ["**/__tests__/**/?(*.)(spec|test).js?(x)"],
+    "testMatch": [
+      "**/__tests__/**/?(*.)(spec|test).js?(x)"
+    ],
     "coverageDirectory": "./coverage/unit",
     "collectCoverage": false,
     "collectCoverageFrom": [

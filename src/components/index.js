@@ -32,3 +32,5 @@ export {default as Alert, AlertPopover} from './alert';
 export {default as Icon} from './icon';
 export {default as LoadingSpinner} from './loading-spinner';
 export {default as Sticky} from './sticky';
+
+export {default as Theme} from './theme';

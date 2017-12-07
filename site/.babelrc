@@ -12,7 +12,8 @@
         "alias": {
           "components": "./docs/components",
           "layouts": "./docs/layouts",
-          "content": "./docs/content"
+          "content": "./docs/content",
+          "kalo-ui": "../src/components"
         }
       }
     ]

@@ -3,8 +3,6 @@ import styled, {injectGlobal, ThemeProvider} from 'react-emotion';
 
 import GlobalNavigation from '../../components/global-navigation';
 
-import theme from '../../../src/components/theme';
-
 injectGlobal`
   * {
     -webkit-font-smoothing: antialiased;
@@ -25,11 +23,9 @@ const Container = styled.div`
 
 export default function Page({children}) {
   return (
-    <ThemeProvider theme={theme}>
-      <Container>
-        <GlobalNavigation />
-        {children}
-      </Container>
-    </ThemeProvider>
+    <Container>
+      <GlobalNavigation />
+      {children}
+    </Container>
   );
 }

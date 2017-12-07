@@ -26,53 +26,68 @@ export class ComponentDocumentation extends Component {
         ) : !component ? (
           '404'
         ) : (
-          <ul>
-            <li>{component.name}</li>
-            <li>{component.module.path}</li>
-            <li>Total Usages ({component.usages.length})</li>
-            <li>Component Dependencies ({component.dependencies.length}):</li>
+          <span>
+            <h1>{component.name}</h1>
+            <p>Markdown content to be inserted here</p>
             <ul>
-              {component.dependencies.map(c => (
-                <li key={c.component ? c.component.id : c.name}>
-                  {c.component ? c.component.name : `Unresolved (${c.name})`}
-                  {c.component ? (
-                    <span>
-                      {' '}
-                      ({c.component.module ? c.component.module.path : 'DOM'})
-                    </span>
-                  ) : null}
-                </li>
-              ))}
-            </ul>
-            <li>Dependant Component ({component.dependants.length}):</li>
-            <ul>
-              {component.dependants.map(c => (
-                <li key={c.component ? c.component.id : c.name}>
-                  {c.component.name} ({c.component.module ? (
-                    c.component.module.path
-                  ) : (
-                    'DOM'
-                  )})
-                </li>
-              ))}
-            </ul>
-            <li>Props by usage:</li>
-            <ul>
-              {toPairs(
-                groupBy(
-                  flattenDeep(
-                    component.usages.map(u => u.props.map(p => p.name))
-                  ),
-                  identity
-                )
-              )
-                .map(([name, u]) => ({name, usages: u.length}))
-                .sort((a, b) => (a.usages > b.usages ? -1 : 1))
-                .map(p => (
-                  <li key={p.name}>
-                    {p.name} ({p.usages})
+              <li>{component.name}</li>
+              <li>{component.module.path}</li>
+              <li>Total Usages ({component.usages.length})</li>
+              <li>Component Dependencies ({component.dependencies.length}):</li>
+              <ul>
+                {component.dependencies.map(c => (
+                  <li key={c.component ? c.component.id : c.name}>
+                    {c.component ? c.component.name : `Unresolved (${c.name})`}
+                    {c.component ? (
+                      <span>
+                        {' '}
+                        ({c.component.module ? c.component.module.path : 'DOM'})
+                      </span>
+                    ) : null}
                   </li>
                 ))}
+              </ul>
+              <li>Dependant Component ({component.dependants.length}):</li>
+              <ul>
+                {component.dependants.map(c => (
+                  <li key={c.component ? c.component.id : c.name}>
+                    {c.component.name} ({c.component.module ? (
+                      c.component.module.path
+                    ) : (
+                      'DOM'
+                    )})
+                  </li>
+                ))}
+              </ul>
+              <li>Props by usage:</li>
+              <ul>
+                {toPairs(
+                  groupBy(
+                    flattenDeep(
+                      component.usages.map(u => u.props.map(p => p.name))
+                    ),
+                    identity
+                  )
+                )
+                  .map(([name, u]) => ({name, usages: u.length}))
+                  .sort((a, b) => (a.usages > b.usages ? -1 : 1))
+                  .map(p => (
+                    <li key={p.name}>
+                      {p.name} ({p.usages})
+                    </li>
+                  ))}
+              </ul>
+              <li>Stories ({stories.length}):</li>
+              <ul>
+                {stories.map(([name, Story]) => (
+                  <li key={name}>
+                    {name}
+                    <StoryContainer>
+                      <Story />
+                    </StoryContainer>
+                  </li>
+                ))}
+              </ul>
             </ul>
           </ul>
         )}

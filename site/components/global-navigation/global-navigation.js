@@ -60,6 +60,7 @@ const StyledNav = styled.ul`
     }
   }
 `;
+
 export default function GlobalNavigation({props}) {
   return (
     <StyledBar>
