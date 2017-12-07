@@ -21,6 +21,7 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -34,7 +35,6 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
   align-content: flex-start;
-  position: relative;
   width: 14px;
   height: 14px;
 }
@@ -58,6 +58,7 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -71,7 +72,6 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
   align-content: flex-start;
-  position: relative;
   width: 14px;
   height: 14px;
 }
@@ -122,6 +122,7 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -135,7 +136,6 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
   align-content: flex-start;
-  position: relative;
   width: 14px;
   height: 14px;
 }
@@ -159,6 +159,7 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -172,7 +173,6 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
   align-content: flex-start;
-  position: relative;
   width: 14px;
   height: 14px;
 }
@@ -223,6 +223,7 @@ exports[`Checkbox should render shallow component ok 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -236,7 +237,6 @@ exports[`Checkbox should render shallow component ok 1`] = `
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
   align-content: flex-start;
-  position: relative;
   width: 14px;
   height: 14px;
 }
@@ -252,6 +252,7 @@ exports[`Checkbox should render shallow component ok 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -265,7 +266,6 @@ exports[`Checkbox should render shallow component ok 1`] = `
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
   align-content: flex-start;
-  position: relative;
   width: 14px;
   height: 14px;
 }

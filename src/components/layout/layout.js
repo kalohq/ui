@@ -41,6 +41,7 @@ function makePrimitive(name, DefaultComponent, display, defaultStyle) {
  * Layout primitives
  */
 export const Box = makePrimitive('Box', 'div', 'flex', {
+  position: 'relative',
   flexDirection: 'column',
   alignItems: 'stretch',
   flexShrink: '0',
