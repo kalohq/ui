@@ -10,7 +10,7 @@
 }
 
 .root strong {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .resetTransform {
@@ -18,7 +18,7 @@
 }
 
 .weight-light {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .weight-normal {
@@ -30,7 +30,7 @@
 }
 
 .weight-semi-bold {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .size-extra-extra-small {
@@ -129,7 +129,8 @@
   color: var(--purple500);
 }
 
-.color-none {}
+.color-none {
+}
 
 .hover-color-white:hover {
   color: #fff;
@@ -214,11 +215,11 @@
   text-decoration: underline;
 }
 
-.not-interactive {
+.notInteractive {
   cursor: default;
 }
 
-.no-underline,
-.no-underline:hover {
-  text-decoration: none
+.noUnderline,
+.noUnderline:hover {
+  text-decoration: none;
 }

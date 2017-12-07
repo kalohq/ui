@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`H2 should allow weight to be overridden 1`] = `
+.glamor-0 {
+  display: block;
+}
+
+<h2
+  className="glamor-0 root weight-light size-large color-charcoal hover-color-none margin-none root"
+  href={undefined}
+  name={undefined}
+  onClick={undefined}
+  style={Object {}}
+  target={undefined}
+>
+  An H2 Tag
+</h2>
+`;
+
+exports[`H2 should render shallow component ok 1`] = `
+.glamor-0 {
+  display: block;
+}
+
+<h2
+  className="glamor-0 root weight-semi-bold size-large color-charcoal hover-color-none margin-none root"
+  href={undefined}
+  name={undefined}
+  onClick={undefined}
+  style={Object {}}
+  target={undefined}
+>
+  An H2 Tag
+</h2>
+`;

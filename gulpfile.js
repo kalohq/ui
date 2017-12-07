@@ -37,20 +37,6 @@ gulp.task('js-components', () =>
 );
 
 /**
- * Compile JS constants down to ES5
- */
-gulp.task('js-constants', () =>
-  gulp
-    .src('src/constants/**/*.js')
-    .pipe(
-      babel({
-        presets: ['es2015', 'stage-2'],
-      })
-    )
-    .pipe(gulp.dest('lib/constants'))
-);
-
-/**
  * Copy component assets (font files, images)
  */
 gulp.task('copy-files', () =>
@@ -76,9 +62,4 @@ gulp.task('docs:markdown', () => {
 /**
  * General tasks
  */
-gulp.task('build-production', [
-  'css',
-  'js-components',
-  'js-constants',
-  'copy-files',
-]);
+gulp.task('build-production', ['css', 'js-components', 'copy-files']);
