@@ -2,4 +2,5 @@ node_modules
 lib
 coverage
 npm-debug*
+site/.next
 design-tokens/*

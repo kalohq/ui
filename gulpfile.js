@@ -1,6 +1,10 @@
 const gulp = require('gulp');
+const gutil = require('gulp-util');
 const postcss = require('gulp-postcss');
 const babel = require('gulp-babel');
+
+const markdownToJSON = require('gulp-markdown-to-json');
+const marked = require('marked');
 
 /**
  * Compile component CSS. We also convert variables here
@@ -43,6 +47,18 @@ gulp.task('copy-files', () =>
     .pipe(gulp.dest('lib'))
 );
 
+/**
+ * Convert component markdown documentation into
+ * JSON for the docs to consume
+ */
+
+gulp.task('docs:markdown', () => {
+  gulp
+    .src('./src/components/**/*.md')
+    .pipe(gutil.buffer())
+    .pipe(markdownToJSON(marked, './docs/content/components/_data.json'))
+    .pipe(gulp.dest('.'));
+});
 /**
  * General tasks
  */

@@ -1,0 +1,7 @@
+---
+applications:
+- name: kalo-ui
+  memory: 512M
+  instances: 1
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  command: cd site && npm run build && npm run start

@@ -1,7 +1,7 @@
 /* @flow */
 import * as React from 'react';
 import {Box} from '../../layout';
-import CSSTransitionGroup from 'react-addons-css-transition-group';
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 
 type TProps = {
   children: React.Element<*>,

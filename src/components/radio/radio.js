@@ -2,7 +2,7 @@
 import React from 'react';
 import {pickStyles} from 'utils/style';
 import {isNull} from 'lodash';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import ReactCSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import cx from 'classnames';
 import {Flex, Box, Inline} from '../layout';
 import Text from '../text';
