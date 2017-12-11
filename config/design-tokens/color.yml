@@ -1,7 +1,7 @@
 global:
   type: color
   category: colors
-props:
+props: &COLORS
   WHITE:
     value: '#fff'
   BLACK:
@@ -78,3 +78,18 @@ props:
     value: '#89929B'
   GREY700:
     value: '#707D8A'
+  RED:
+    value: "{!PINK500}"
+  PINK:
+    value: "{!PINK500}"
+  BLUE:
+    value: "{!BLUE500}"
+  PURPLE:
+    value: "{!PURPLE500}"
+  ORANGE:
+    value: "{!ORANGE500}"
+  GREEN:
+    value: "{!GREEN500}"
+  NAVY:
+    value: "{!NAVY500}"
+aliases: *COLORS
