@@ -28,7 +28,7 @@ export default function Heading(props: Props) {
   const {
     children,
     number = 3,
-    color = 'charcoal',
+    color = 'navy700',
     icon = false,
     size = 'small',
     iconAfter = false,
