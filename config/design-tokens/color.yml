@@ -92,4 +92,14 @@ props: &COLORS
     value: "{!GREEN500}"
   NAVY:
     value: "{!NAVY500}"
+  CHARCOAL:
+    value: "{!NAVY700}"
+  SLATE:
+    value: "{!NAVY600}"
+  SILVER:
+    value: "{!GREY500}"
+  PLATINUM:
+    value: "{!GREY300}"
+  SNOW:
+    value: "{!GREY200}"
 aliases: *COLORS
