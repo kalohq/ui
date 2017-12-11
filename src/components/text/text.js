@@ -1,18 +1,14 @@
 /* @flow */
 import * as React from 'react';
-import cx from 'classnames';
+import styled, {css} from 'react-emotion';
 import {Inline, Block} from '../layout';
-import {pickStyles} from 'utils/style';
 import {isString} from 'lodash';
-
-import styles from './text.css';
 
 import type {
   TEXT_WEIGHT,
   TEXT_SIZE,
   TEXT_COLOR,
   TEXT_HOVER_COLOR,
-  TEXT_MARGIN,
   TEXT_ALIGN,
 } from './constants';
 
@@ -21,8 +17,9 @@ import {
   DEFAULT_COLOR,
   DEFAULT_WEIGHT,
   DEFAULT_SIZE,
-  DEFAULT_MARGIN,
   DEFAULT_ALIGN,
+  WEIGHT_MAP,
+  SIZE_MAP,
 } from './constants';
 
 type textProps = {
@@ -30,7 +27,6 @@ type textProps = {
   size?: TEXT_SIZE,
   color?: TEXT_COLOR,
   hoverColor?: TEXT_HOVER_COLOR,
-  margin?: TEXT_MARGIN,
   align?: TEXT_ALIGN,
   domElement?: Function | string,
   component?: Function | string,
@@ -48,6 +44,42 @@ type textProps = {
   name?: string,
 };
 
+const StyledText = styled(Inline)`
+  font-family: 'WebFaktSoftPro', sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: ${props =>
+    props.interactive
+      ? 'pointer'
+      : props.notInteractive ? 'default' : 'inherit'};
+  vertical-align: middle;
+  text-align: ${props => props.align};
+  text-decoration: ${props => (props.noUnderline ? 'none' : 'inherit')};
+  font-weight: ${props => WEIGHT_MAP[props.weight]};
+  font-size: ${props => SIZE_MAP[props.size]}px;
+  color: ${props => props.theme.colors[props.color]};
+
+  &:hover {
+    color: ${props => props.theme.colors[props.hoverColor]};
+    text-decoration: ${props => (props.noUnderline ? 'none' : 'inherit')};
+  }
+
+  ${props =>
+    props.multiline &&
+    css`
+      white-space: normal;
+      text-overflow: initial;
+      overflow: visible;
+      white-space: pre-wrap;
+      word-break: break-word;
+    `};
+
+  strong {
+    font-weight: ${props => props.theme.typography.fontWeightMedium};
+  }
+`;
+
 export default function Text(props: textProps) {
   const {
     children,
@@ -57,12 +89,9 @@ export default function Text(props: textProps) {
     size = DEFAULT_SIZE,
     color = DEFAULT_COLOR,
     hoverColor = DEFAULT_HOVER_COLOR,
-    margin = DEFAULT_MARGIN,
     component = Inline,
     multiline,
-    resetTransform,
     align = DEFAULT_ALIGN,
-    noUnderline,
     interactive,
     notInteractive,
     dangerouslySetInnerHTML,
@@ -72,39 +101,33 @@ export default function Text(props: textProps) {
     ...otherProps
   } = props;
 
-  const Component = isString(component)
+  const tagOverride = isString(component)
     ? ['h1', 'h2', 'h3', 'h4'].indexOf(component) > -1 ? Block : Inline
     : component;
 
   const childrenProp =
     children === undefined ? {dangerouslySetInnerHTML} : {children};
 
+  const Component = StyledText.withComponent(tagOverride);
+
   return (
     <Component
+      weight={weight}
+      color={color}
+      size={size}
+      hoverColor={hoverColor}
+      align={align}
+      multiline={multiline}
+      interactive={interactive}
+      notInteractive={notInteractive}
       component={component}
       onClick={onClick}
-      className={cx(
-        {
-          [styles.root]: true,
-          [styles[`weight-${weight}`]]: true,
-          [styles[`size-${size}`]]: true,
-          [styles[`color-${color}`]]: true,
-          [styles[`hover-color-${hoverColor}`]]: true,
-          [styles[`margin-${margin}`]]: true,
-          [styles[`align-${align}`]]: align !== 'none',
-          [styles.resetTransform]: resetTransform,
-          [styles.multiline]: multiline,
-          [styles.interactive]: (!!onClick && !notInteractive) || interactive,
-          [styles.notInteractive]: notInteractive,
-          [styles.noUnderline]: noUnderline,
-        },
-        className
-      )}
+      className={className}
       name={name}
       target={target}
       href={href}
       {...childrenProp}
-      {...pickStyles(otherProps)}
+      {...otherProps}
     />
   );
 }

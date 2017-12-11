@@ -1,22 +1,22 @@
 /* Text */
 
-.root {
+/* .root {
   font-family: 'WebFaktSoftPro', sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   cursor: inherit;
   vertical-align: middle;
-}
+} */
 
-.root strong {
+/* .root strong {
   font-weight: 500;
-}
+} */
 
 .resetTransform {
   text-transform: none;
 }
-
+/* 
 .weight-light {
   font-weight: 400;
 }
@@ -31,8 +31,8 @@
 
 .weight-semi-bold {
   font-weight: 500;
-}
-
+} */
+/* 
 .size-extra-extra-small {
   font-size: 10px;
 }
@@ -63,25 +63,9 @@
 
 .size-huge {
   font-size: 42px;
-}
+} */
 
-.margin-none {
-  margin-bottom: 0;
-}
-
-.margin-small {
-  margin-bottom: 10px;
-}
-
-.margin-medium {
-  margin-bottom: 15px;
-}
-
-.margin-large {
-  margin-bottom: 30px;
-}
-
-.color-black,
+/* .color-black,
 .color-dark-grey,
 .color-charcoal {
   color: var(--navy700);
@@ -181,17 +165,17 @@
 }
 
 .hover-color-none:hover {
-}
+} */
 
-.multiline {
-  white-space: normal;
+/* .multiline { */
+  /* white-space: normal;
   text-overflow: initial;
   overflow: visible;
   white-space: pre-wrap;
-  word-break: break-word;
+  word-break: break-word; */
 }
 
-.align-center {
+/* .align-center {
   text-align: center;
 }
 
@@ -205,7 +189,7 @@
 
 .align-none {
   text-align: initial;
-}
+} */
 
 .interactive {
   cursor: pointer;
