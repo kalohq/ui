@@ -47,7 +47,9 @@ gulp.task('copy-files', () =>
  * Copy design tokens to lib
  */
 gulp.task('copy-design-tokens', () =>
-  gulp.src(['src/design-tokens/**/*']).pipe(gulp.dest('lib/design-tokens'))
+  gulp
+    .src(['src/design-tokens/*(*.js|*.json|*.css)'])
+    .pipe(gulp.dest('lib/design-tokens'))
 );
 
 /**
