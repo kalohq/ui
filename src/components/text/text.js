@@ -94,6 +94,7 @@ export default function Text(props: textProps) {
     align = DEFAULT_ALIGN,
     interactive,
     notInteractive,
+    noUnderline,
     dangerouslySetInnerHTML,
     target,
     href,
@@ -120,6 +121,7 @@ export default function Text(props: textProps) {
       multiline={multiline}
       interactive={interactive}
       notInteractive={notInteractive}
+      noUnderline={noUnderline}
       component={component}
       onClick={onClick}
       className={className}
