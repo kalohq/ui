@@ -14,7 +14,7 @@ storiesOf(
     return (
       <span>
         <Icon size={36}>https</Icon>
-        <Icon size={36} color="red">
+        <Icon size={36} color="pink">
           thumb_up
         </Icon>
         <Icon size={36} color="orange">
