@@ -4,7 +4,9 @@ import * as React from 'react';
 import {sheet} from 'emotion';
 import serializer from 'jest-glamor-react';
 import renderer from 'react-test-renderer';
+import {ThemeProvider} from 'emotion-theming';
 
+import theme from 'components/theme';
 import Text from 'components/text';
 
 expect.addSnapshotSerializer(serializer(sheet));
@@ -17,9 +19,11 @@ describe('Text', () => {
   const create = (props = {}) =>
     renderer
       .create(
-        <Text {...defaultProps} {...props}>
-          Hello World
-        </Text>
+        <ThemeProvider theme={theme}>
+          <Text {...defaultProps} {...props}>
+            Hello World
+          </Text>
+        </ThemeProvider>
       )
       .toJSON();
 
