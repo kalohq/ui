@@ -12,7 +12,6 @@ import type {
   TEXT_SIZE,
   TEXT_COLOR,
   TEXT_HOVER_COLOR,
-  TEXT_MARGIN,
   TEXT_ALIGN,
 } from './constants';
 
@@ -21,7 +20,6 @@ import {
   DEFAULT_COLOR,
   DEFAULT_WEIGHT,
   DEFAULT_SIZE,
-  DEFAULT_MARGIN,
   DEFAULT_ALIGN,
 } from './constants';
 
@@ -57,7 +55,6 @@ export default function Text(props: textProps) {
     size = DEFAULT_SIZE,
     color = DEFAULT_COLOR,
     hoverColor = DEFAULT_HOVER_COLOR,
-    margin = DEFAULT_MARGIN,
     component = Inline,
     multiline,
     resetTransform,
@@ -90,7 +87,6 @@ export default function Text(props: textProps) {
           [styles[`size-${size}`]]: true,
           [styles[`color-${color}`]]: true,
           [styles[`hover-color-${hoverColor}`]]: true,
-          [styles[`margin-${margin}`]]: true,
           [styles[`align-${align}`]]: align !== 'none',
           [styles.resetTransform]: resetTransform,
           [styles.multiline]: multiline,
