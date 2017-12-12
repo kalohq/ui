@@ -80,6 +80,7 @@ export type TEXT_COLOR =
   | 'black'
   | 'none'
   /* DEPRECATED */
+  | 'red'
   | 'snow' // deprecated
   | 'platinum' // deprecated
   | 'silver' // deprecated
