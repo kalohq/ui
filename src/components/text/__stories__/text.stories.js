@@ -62,6 +62,22 @@ const examples = [
       );
     },
   },
+  {
+    title: 'with spacing',
+    description:
+      'Just like the layout components, margin and padding can also be passed down to the underlying component',
+    render: () => {
+      return (
+        <span>
+          <Text margin={20}>with a margin of 20</Text>
+          <br />
+          <Text paddingTop="medium">
+            with a top padding using the spacing scale values
+          </Text>
+        </span>
+      );
+    },
+  },
 ];
 
 examples.forEach(example => {
