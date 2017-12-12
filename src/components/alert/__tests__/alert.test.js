@@ -3,7 +3,9 @@
 import * as React from 'react';
 import serializer from 'jest-glamor-react';
 import renderer from 'react-test-renderer';
+import {ThemeProvider} from 'emotion-theming';
 
+import theme from 'components/theme';
 import Alert from 'components/alert';
 
 expect.addSnapshotSerializer(serializer);
@@ -15,11 +17,13 @@ describe('Alert', () => {
   const create = (props = {}) =>
     renderer
       .create(
-        <Alert
-          {...defaultProps}
-          {...props}
-          children={`A ${props.type || defaultProps.type} alert`}
-        />
+        <ThemeProvider theme={theme}>
+          <Alert
+            {...defaultProps}
+            {...props}
+            children={`A ${props.type || defaultProps.type} alert`}
+          />
+        </ThemeProvider>
       )
       .toJSON();
 

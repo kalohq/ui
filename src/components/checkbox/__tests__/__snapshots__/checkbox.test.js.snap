@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox should render a checkbox partially checked 1`] = `
-.glamor-2 {
+.glamor-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -39,16 +39,34 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   height: 14px;
 }
 
-.glamor-1 {
+.glamor-2 {
   display: inline-block;
   vertical-align: bottom;
   display: inline-block;
   vertical-align: bottom;
   margin-left: 10px;
+  font-family: 'WebFaktSoftPro',sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: inherit;
+  vertical-align: middle;
+  text-align: initial;
+  text-decoration: inherit;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.glamor-2:hover {
+  text-decoration: inherit;
+}
+
+.glamor-2 strong {
+  font-weight: 500;
 }
 
 <div
-  className="glamor-2 root"
+  className="glamor-3 root"
   name={undefined}
   onClick={undefined}
   style={Object {}}
@@ -80,21 +98,47 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
     className="glamor-0 checkbox indeterminate"
     style={Object {}}
   />
-  .glamor-0 {
+  .glamor-1 {
   display: inline-block;
   vertical-align: bottom;
   display: inline-block;
   vertical-align: bottom;
   margin-left: 10px;
+  font-family: 'WebFaktSoftPro',sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: inherit;
+  vertical-align: middle;
+  text-align: initial;
+  text-decoration: inherit;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.glamor-1:hover {
+  text-decoration: inherit;
+}
+
+.glamor-1 strong {
+  font-weight: 500;
 }
 
 <span
-    className="root weight-light size-small color-grey hover-color-none glamor-0"
+    align="initial"
+    className="glamor-0 glamor-1"
+    color="grey"
+    hoverColor="none"
     href={undefined}
+    interactive={undefined}
+    multiline={undefined}
     name={undefined}
+    notInteractive={undefined}
     onClick={undefined}
+    size="small"
     style={Object {}}
     target={undefined}
+    weight="light"
   >
     A checkbox label
   </span>
@@ -102,7 +146,7 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
 `;
 
 exports[`Checkbox should render a checkbox with label 1`] = `
-.glamor-2 {
+.glamor-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -140,16 +184,34 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   height: 14px;
 }
 
-.glamor-1 {
+.glamor-2 {
   display: inline-block;
   vertical-align: bottom;
   display: inline-block;
   vertical-align: bottom;
   margin-left: 10px;
+  font-family: 'WebFaktSoftPro',sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: inherit;
+  vertical-align: middle;
+  text-align: initial;
+  text-decoration: inherit;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.glamor-2:hover {
+  text-decoration: inherit;
+}
+
+.glamor-2 strong {
+  font-weight: 500;
 }
 
 <div
-  className="glamor-2 root"
+  className="glamor-3 root"
   name={undefined}
   onClick={undefined}
   style={Object {}}
@@ -181,21 +243,47 @@ exports[`Checkbox should render a checkbox with label 1`] = `
     className="glamor-0 checkbox checked"
     style={Object {}}
   />
-  .glamor-0 {
+  .glamor-1 {
   display: inline-block;
   vertical-align: bottom;
   display: inline-block;
   vertical-align: bottom;
   margin-left: 10px;
+  font-family: 'WebFaktSoftPro',sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: inherit;
+  vertical-align: middle;
+  text-align: initial;
+  text-decoration: inherit;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.glamor-1:hover {
+  text-decoration: inherit;
+}
+
+.glamor-1 strong {
+  font-weight: 500;
 }
 
 <span
-    className="root weight-light size-small color-grey hover-color-none glamor-0"
+    align="initial"
+    className="glamor-0 glamor-1"
+    color="grey"
+    hoverColor="none"
     href={undefined}
+    interactive={undefined}
+    multiline={undefined}
     name={undefined}
+    notInteractive={undefined}
     onClick={undefined}
+    size="small"
     style={Object {}}
     target={undefined}
+    weight="light"
   >
     A checkbox label
   </span>
