@@ -97,6 +97,7 @@ const VENDOR_STYLERS =
 const REGEX = /^(padding|margin)(Top|Right|Bottom|Left)?$/;
 
 const SPACING_MAP = {
+  none: '0',
   'extra-small': 2,
   small: 4,
   medium: 8,
