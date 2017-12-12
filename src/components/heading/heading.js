@@ -17,7 +17,6 @@ type Props = {
   color?: TEXT_COLOR,
   size?: TEXT_SIZE,
   flex?: boolean,
-  border?: boolean,
   hover?: HEADING_HOVER,
   icon?: string,
   iconAfter?: boolean,
