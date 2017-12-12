@@ -27,7 +27,7 @@ storiesOf('Alert', module)
     'An alert to display a warning',
     () => {
       return (
-        <Alert display="block" type="warning" showIcon={true}>
+        <Alert type="warning" showIcon={true}>
           Warning Alert
         </Alert>
       );
