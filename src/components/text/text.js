@@ -28,7 +28,6 @@ type textProps = {
   size?: TEXT_SIZE,
   color?: TEXT_COLOR,
   hoverColor?: TEXT_HOVER_COLOR,
-  margin?: TEXT_MARGIN,
   align?: TEXT_ALIGN,
   domElement?: Function | string,
   component?: Function | string,
