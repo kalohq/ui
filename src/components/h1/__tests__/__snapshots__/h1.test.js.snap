@@ -6,7 +6,7 @@ exports[`H1 should allow weight to be overridden 1`] = `
 }
 
 <h1
-  className="glamor-0 root weight-medium size-extra-large color-charcoal hover-color-none margin-none root"
+  className="glamor-0 root weight-medium size-extra-large color-charcoal hover-color-none root"
   href={undefined}
   name={undefined}
   onClick={undefined}
@@ -23,7 +23,7 @@ exports[`H1 should render shallow component ok 1`] = `
 }
 
 <h1
-  className="glamor-0 root weight-normal size-extra-large color-charcoal hover-color-none margin-none root"
+  className="glamor-0 root weight-normal size-extra-large color-charcoal hover-color-none root"
   href={undefined}
   name={undefined}
   onClick={undefined}

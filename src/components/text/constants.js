@@ -91,15 +91,12 @@ export type TEXT_COLOR =
 
 export type TEXT_HOVER_COLOR = TEXT_COLOR;
 
-export type TEXT_MARGIN = 'none' | 'small' | 'medium' | 'large' | 'extra-large';
-
 export type TEXT_ALIGN = 'center' | 'left' | 'right' | 'initial';
 
 export const DEFAULT_HOVER_COLOR = 'none';
 export const DEFAULT_COLOR = 'navy600';
 export const DEFAULT_WEIGHT = 'light';
 export const DEFAULT_SIZE = 'small';
-export const DEFAULT_MARGIN = 'none';
 export const DEFAULT_ALIGN = 'initial';
 
 export const WEIGHT_MAP = {
