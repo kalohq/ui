@@ -20,6 +20,9 @@ storiesOf(
         <Icon size={36} color="orange">
           warning
         </Icon>
+        <Icon size={36} color="purple" family="fontello">
+          twitter
+        </Icon>
       </span>
     );
   }
