@@ -61,3 +61,4 @@ export const InlineFlex = makePrimitive('InlineFlex', 'span', 'inline-flex');
  * Eg. Button, Input, Select, Table etc.
  */
 export const A = makePrimitive('H1', 'a', 'inline-block');
+export const I = makePrimitive('I', 'i', 'inline-block');
