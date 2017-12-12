@@ -9,7 +9,7 @@ exports[`Text should render green text 1`] = `
 }
 
 <span
-  className="root weight-light size-medium color-green hover-color-none margin-none glamor-0"
+  className="root weight-light size-medium color-green hover-color-none glamor-0"
   href={undefined}
   name={undefined}
   onClick={undefined}
@@ -29,7 +29,7 @@ exports[`Text should render large text 1`] = `
 }
 
 <span
-  className="root weight-light size-large color-charcoal hover-color-none margin-none glamor-0"
+  className="root weight-light size-large color-charcoal hover-color-none glamor-0"
   href={undefined}
   name={undefined}
   onClick={undefined}
@@ -49,7 +49,7 @@ exports[`Text should render shallow component ok 1`] = `
 }
 
 <span
-  className="root weight-light size-medium color-charcoal hover-color-none margin-none glamor-0"
+  className="root weight-light size-medium color-charcoal hover-color-none glamor-0"
   href={undefined}
   name={undefined}
   onClick={undefined}

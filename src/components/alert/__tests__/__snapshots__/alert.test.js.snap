@@ -17,7 +17,7 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
     check_circle
   </i>
   <span
-    className="root weight-light size-small color-green hover-color-none margin-none multiline css-cfmow6"
+    className="root weight-light size-small color-green hover-color-none multiline css-cfmow6"
     href={undefined}
     name={undefined}
     onClick={undefined}
@@ -35,7 +35,7 @@ exports[`Alert should render a warning alert 1`] = `
   style={Object {}}
 >
   <span
-    className="root weight-light size-small color-orange hover-color-none margin-none multiline css-cfmow6"
+    className="root weight-light size-small color-orange hover-color-none multiline css-cfmow6"
     href={undefined}
     name={undefined}
     onClick={undefined}
@@ -53,7 +53,7 @@ exports[`Alert should render shallow component ok 1`] = `
   style={Object {}}
 >
   <span
-    className="root weight-light size-small color-blue hover-color-none margin-none multiline css-cfmow6"
+    className="root weight-light size-small color-blue hover-color-none multiline css-cfmow6"
     href={undefined}
     name={undefined}
     onClick={undefined}

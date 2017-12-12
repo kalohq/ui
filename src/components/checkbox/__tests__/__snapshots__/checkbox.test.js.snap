@@ -89,7 +89,7 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
 }
 
 <span
-    className="root weight-light size-small color-grey hover-color-none margin-none glamor-0"
+    className="root weight-light size-small color-grey hover-color-none glamor-0"
     href={undefined}
     name={undefined}
     onClick={undefined}
@@ -190,7 +190,7 @@ exports[`Checkbox should render a checkbox with label 1`] = `
 }
 
 <span
-    className="root weight-light size-small color-grey hover-color-none margin-none glamor-0"
+    className="root weight-light size-small color-grey hover-color-none glamor-0"
     href={undefined}
     name={undefined}
     onClick={undefined}
