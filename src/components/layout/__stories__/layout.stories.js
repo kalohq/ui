@@ -15,6 +15,6 @@ storiesOf('Layout', module)
     'InlineFlex',
     'A span element with inline-flex set as its display property',
     () => {
-      return <InlineFlex component="main">An inline flex component</InlineFlex>;
+      return <InlineFlex>An inline flex component</InlineFlex>;
     }
   );
