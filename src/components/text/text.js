@@ -1,8 +1,8 @@
 /* @flow */
 import * as React from 'react';
 import styled, {css} from 'react-emotion';
-import {Inline, Block} from '../layout';
-import {isString} from 'lodash';
+
+import {Inline} from '../layout';
 
 import type {
   TEXT_WEIGHT,
@@ -12,17 +12,9 @@ import type {
   TEXT_ALIGN,
 } from './constants';
 
-import {
-  DEFAULT_HOVER_COLOR,
-  DEFAULT_COLOR,
-  DEFAULT_WEIGHT,
-  DEFAULT_SIZE,
-  DEFAULT_ALIGN,
-  WEIGHT_MAP,
-  SIZE_MAP,
-} from './constants';
+import {WEIGHT_MAP, SIZE_MAP} from './constants';
 
-type textProps = {
+type TProps = {
   weight?: TEXT_WEIGHT,
   size?: TEXT_SIZE,
   color?: TEXT_COLOR,
@@ -45,6 +37,7 @@ type textProps = {
 };
 
 const StyledText = styled(Inline)`
+  display: ${props => (props.display ? props.display : 'inline')};
   font-family: 'WebFaktSoftPro', sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -80,56 +73,33 @@ const StyledText = styled(Inline)`
   }
 `;
 
-export default function Text(props: textProps) {
+export default function Text(props: TProps) {
   const {
-    children,
-    className,
-    onClick,
-    weight = DEFAULT_WEIGHT,
-    size = DEFAULT_SIZE,
-    color = DEFAULT_COLOR,
-    hoverColor = DEFAULT_HOVER_COLOR,
-    component = Inline,
-    multiline,
-    align = DEFAULT_ALIGN,
+    weight = 'normal',
+    size = 'small',
+    align = 'initial',
+    color = 'navy600',
+    hoverColor = 'none',
     interactive,
-    notInteractive,
     noUnderline,
-    dangerouslySetInnerHTML,
-    target,
-    href,
-    name,
+    onClick,
+    children,
     ...otherProps
   } = props;
 
-  const tagOverride = isString(component)
-    ? ['h1', 'h2', 'h3', 'h4'].indexOf(component) > -1 ? Block : Inline
-    : component;
-
-  const childrenProp =
-    children === undefined ? {dangerouslySetInnerHTML} : {children};
-
-  const Component = StyledText.withComponent(tagOverride);
-
   return (
-    <Component
+    <StyledText
+      onClick={onClick}
       weight={weight}
       color={color}
-      size={size}
       hoverColor={hoverColor}
       align={align}
-      multiline={multiline}
-      interactive={interactive}
-      notInteractive={notInteractive}
+      interactive={interactive || onClick}
       noUnderline={noUnderline}
-      component={component}
-      onClick={onClick}
-      className={className}
-      name={name}
-      target={target}
-      href={href}
-      {...childrenProp}
+      size={size}
       {...otherProps}
-    />
+    >
+      {children}
+    </StyledText>
   );
 }
