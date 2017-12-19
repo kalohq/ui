@@ -4,17 +4,16 @@ exports[`Text should render green text 1`] = `
 .glamor-1 {
   display: inline-block;
   vertical-align: bottom;
-  display: inline-block;
-  vertical-align: bottom;
+  display: inline;
   font-family: 'WebFaktSoftPro',sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   cursor: inherit;
   vertical-align: middle;
-  text-align: initial;
+  text-align: unset;
   text-decoration: inherit;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   color: rgb(62,179,138);
 }
@@ -28,20 +27,11 @@ exports[`Text should render green text 1`] = `
 }
 
 <span
-  align="initial"
   className="glamor-0 glamor-1"
   color="green"
-  hoverColor="none"
-  href={undefined}
-  interactive={undefined}
-  multiline={undefined}
-  name={undefined}
-  notInteractive={undefined}
   onClick={undefined}
   size="medium"
   style={Object {}}
-  target={undefined}
-  weight="light"
 >
   Hello World
 </span>
@@ -51,17 +41,16 @@ exports[`Text should render large text 1`] = `
 .glamor-1 {
   display: inline-block;
   vertical-align: bottom;
-  display: inline-block;
-  vertical-align: bottom;
+  display: inline;
   font-family: 'WebFaktSoftPro',sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   cursor: inherit;
   vertical-align: middle;
-  text-align: initial;
+  text-align: unset;
   text-decoration: inherit;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 18px;
   color: rgb(55,69,97);
 }
@@ -75,20 +64,11 @@ exports[`Text should render large text 1`] = `
 }
 
 <span
-  align="initial"
   className="glamor-0 glamor-1"
   color="charcoal"
-  hoverColor="none"
-  href={undefined}
-  interactive={undefined}
-  multiline={undefined}
-  name={undefined}
-  notInteractive={undefined}
   onClick={undefined}
   size="large"
   style={Object {}}
-  target={undefined}
-  weight="light"
 >
   Hello World
 </span>
@@ -98,17 +78,16 @@ exports[`Text should render shallow component ok 1`] = `
 .glamor-1 {
   display: inline-block;
   vertical-align: bottom;
-  display: inline-block;
-  vertical-align: bottom;
+  display: inline;
   font-family: 'WebFaktSoftPro',sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   cursor: inherit;
   vertical-align: middle;
-  text-align: initial;
+  text-align: unset;
   text-decoration: inherit;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   color: rgb(55,69,97);
 }
@@ -122,20 +101,11 @@ exports[`Text should render shallow component ok 1`] = `
 }
 
 <span
-  align="initial"
   className="glamor-0 glamor-1"
   color="charcoal"
-  hoverColor="none"
-  href={undefined}
-  interactive={undefined}
-  multiline={undefined}
-  name={undefined}
-  notInteractive={undefined}
   onClick={undefined}
   size="medium"
   style={Object {}}
-  target={undefined}
-  weight="light"
 >
   Hello World
 </span>

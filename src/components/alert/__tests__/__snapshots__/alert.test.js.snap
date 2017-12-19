@@ -2,36 +2,24 @@
 
 exports[`Alert should render a confirmation alert with an icon 1`] = `
 <div
-  className="css-heeknc root type-confirmation"
+  className="root type-confirmation css-qjfb1y0 css-1s43nw"
   style={Object {}}
 >
   <i
-    className="css-8urzj60 css-17ykkxk"
+    className="css-13vyqxr0 css-nemf5x"
     color="green"
-    family="material"
-    interactive={false}
     onClick={undefined}
     size={16}
     style={Object {}}
-    weight="normal"
   >
     check_circle
   </i>
   <span
-    align="initial"
-    className="css-1mpt92p1 css-e58m6b"
+    className="css-oelz5t0 css-68cpdf"
     color="green"
-    hoverColor="none"
-    href={undefined}
-    interactive={undefined}
-    multiline={true}
-    name={undefined}
-    notInteractive={undefined}
     onClick={undefined}
     size="small"
     style={Object {}}
-    target={undefined}
-    weight="light"
   >
     A confirmation alert
   </span>
@@ -40,24 +28,15 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
 
 exports[`Alert should render a warning alert 1`] = `
 <div
-  className="css-heeknc root type-warning"
+  className="root type-warning css-qjfb1y0 css-1s43nw"
   style={Object {}}
 >
   <span
-    align="initial"
-    className="css-1mpt92p1 css-sp22wf"
+    className="css-oelz5t0 css-1ipmkpn"
     color="orange"
-    hoverColor="none"
-    href={undefined}
-    interactive={undefined}
-    multiline={true}
-    name={undefined}
-    notInteractive={undefined}
     onClick={undefined}
     size="small"
     style={Object {}}
-    target={undefined}
-    weight="light"
   >
     A warning alert
   </span>
@@ -66,24 +45,15 @@ exports[`Alert should render a warning alert 1`] = `
 
 exports[`Alert should render shallow component ok 1`] = `
 <div
-  className="css-heeknc root type-info"
+  className="root type-info css-qjfb1y0 css-1s43nw"
   style={Object {}}
 >
   <span
-    align="initial"
-    className="css-1mpt92p1 css-11unkrt"
+    className="css-oelz5t0 css-9j79q6"
     color="blue"
-    hoverColor="none"
-    href={undefined}
-    interactive={undefined}
-    multiline={true}
-    name={undefined}
-    notInteractive={undefined}
     onClick={undefined}
     size="small"
     style={Object {}}
-    target={undefined}
-    weight="light"
   >
     A info alert
   </span>
