@@ -20,7 +20,6 @@ type Props = {
   icon?: string,
   iconAfter?: boolean,
   iconPadding?: number,
-  component?: string,
 };
 
 export default function Heading(props: Props) {
@@ -33,14 +32,12 @@ export default function Heading(props: Props) {
     hover = false,
     iconPadding = 10,
     className,
-    component,
     ...otherProps
   } = props;
 
   return (
     <Text
       size={size}
-      component={component}
       interactive={hover === 'interactive'}
       display="block"
       color={color}
