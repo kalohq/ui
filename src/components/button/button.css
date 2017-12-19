@@ -244,7 +244,7 @@
   opacity: 1;
   transition: 0.4s opacity linear;
   height: 100%;
-  display: inline-block;
+  display: inline-flex;
   padding: 0;
   margin-right: 0;
   margin-left: 0;

@@ -2,27 +2,24 @@
 
 exports[`Alert should render a confirmation alert with an icon 1`] = `
 <div
-  className="css-ue8dg4 root type-confirmation"
+  className="root type-confirmation css-qjfb1y0 css-1s43nw"
   style={Object {}}
 >
   <i
-    className="root size-16 family-material weight-normal color-green"
+    className="css-13vyqxr0 css-nemf5x"
+    color="green"
     onClick={undefined}
-    style={
-      Object {
-        "marginRight": "8px",
-      }
-    }
+    size={16}
+    style={Object {}}
   >
     check_circle
   </i>
   <span
-    className="root weight-light size-small color-green hover-color-none multiline css-cfmow6"
-    href={undefined}
-    name={undefined}
+    className="css-oelz5t0 css-68cpdf"
+    color="green"
     onClick={undefined}
+    size="small"
     style={Object {}}
-    target={undefined}
   >
     A confirmation alert
   </span>
@@ -31,16 +28,15 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
 
 exports[`Alert should render a warning alert 1`] = `
 <div
-  className="css-ue8dg4 root type-warning"
+  className="root type-warning css-qjfb1y0 css-1s43nw"
   style={Object {}}
 >
   <span
-    className="root weight-light size-small color-orange hover-color-none multiline css-cfmow6"
-    href={undefined}
-    name={undefined}
+    className="css-oelz5t0 css-1ipmkpn"
+    color="orange"
     onClick={undefined}
+    size="small"
     style={Object {}}
-    target={undefined}
   >
     A warning alert
   </span>
@@ -49,16 +45,15 @@ exports[`Alert should render a warning alert 1`] = `
 
 exports[`Alert should render shallow component ok 1`] = `
 <div
-  className="css-ue8dg4 root type-info"
+  className="root type-info css-qjfb1y0 css-1s43nw"
   style={Object {}}
 >
   <span
-    className="root weight-light size-small color-blue hover-color-none multiline css-cfmow6"
-    href={undefined}
-    name={undefined}
+    className="css-oelz5t0 css-9j79q6"
+    color="blue"
     onClick={undefined}
+    size="small"
     style={Object {}}
-    target={undefined}
   >
     A info alert
   </span>
