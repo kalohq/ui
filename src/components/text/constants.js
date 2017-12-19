@@ -92,7 +92,7 @@ export type TEXT_COLOR =
 
 export type TEXT_HOVER_COLOR = TEXT_COLOR;
 
-export type TEXT_ALIGN = 'center' | 'left' | 'right' | 'initial';
+export type TEXT_ALIGN = 'center' | 'left' | 'right' | 'initial' | 'unset';
 
 export const WEIGHT_MAP = {
   light: 300,

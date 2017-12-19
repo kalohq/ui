@@ -77,7 +77,7 @@ export default function Text(props: TProps) {
   const {
     weight = 'normal',
     size = 'small',
-    align = 'initial',
+    align = 'unset',
     color = 'navy600',
     hoverColor = 'none',
     interactive,
