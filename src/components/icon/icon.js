@@ -2,7 +2,7 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {injectGlobal} from 'emotion';
-import {I} from '../layout';
+import {Inline} from '../layout';
 
 import MaterialIconsWoff2 from './fonts/MaterialIcons/MaterialIcons-Regular.woff2';
 import MaterialIconsWoff from './fonts/MaterialIcons/MaterialIcons-Regular.woff';
@@ -56,7 +56,7 @@ injectGlobal`
   }
 `;
 
-const StyledIcon = styled(I)`
+const StyledIcon = styled(Inline)`
   font-family: ${props =>
     props.family === 'fontello' ? 'fontello' : 'Material Icons'};
   font-style: normal;
@@ -102,6 +102,7 @@ export default function Icon(props: Props) {
       interactive={!!onClick}
       className={className}
       onClick={onClick}
+      component="i"
       {...otherProps}
     >
       {family === 'fontello' && isString(children) ? (
