@@ -9,7 +9,7 @@ import {
 import PureComponent from 'react-pure-render/component';
 import styled, {cx} from 'react-emotion';
 
-function makePrimitive(name, DefaultComponent, display, defaultStyle) {
+const makePrimitive = DefaultComponent =>
   class Primitive extends PureComponent {
     render() {
       const {
@@ -21,8 +21,6 @@ function makePrimitive(name, DefaultComponent, display, defaultStyle) {
       } = this.props;
 
       const {props, style} = parseStyleProps({
-        display,
-        ...defaultStyle,
         ...otherProps,
       });
 
@@ -31,92 +29,20 @@ function makePrimitive(name, DefaultComponent, display, defaultStyle) {
       return (
         <Component
           ref={elRef}
-          className={cx(className)}
+          className={className ? cx(className) : null}
           css={{...style}}
           {...cleanedProps}
           style={{...propStyle}}
         />
       );
     }
-  }
+  };
 
-  Primitive.displayName = name;
-  return Primitive;
-}
-
-class BaseComponent extends PureComponent {
-  render() {
-    const {
-      component: Component = 'div',
-      elRef,
-      style: propStyle,
-      className,
-      ...otherProps
-    } = this.props;
-
-    const cleanedProps = cleanProps(otherProps);
-
-    return (
-      <Component
-        ref={elRef}
-        className={className ? cx(className) : null}
-        {...cleanedProps}
-        style={{...propStyle}}
-      />
-    );
-  }
-}
-
-class SpanBaseComponent extends PureComponent {
-  render() {
-    const {
-      component: Component = 'span',
-      elRef,
-      style: propStyle,
-      className,
-      ...otherProps
-    } = this.props;
-
-    const cleanedProps = cleanProps(otherProps);
-
-    return (
-      <Component
-        ref={elRef}
-        className={className ? cx(className) : null}
-        {...cleanedProps}
-        style={{...propStyle}}
-      />
-    );
-  }
-}
-
-class ABaseComponent extends PureComponent {
-  render() {
-    const {
-      component: Component = 'a',
-      elRef,
-      style: propStyle,
-      className,
-      ...otherProps
-    } = this.props;
-
-    const cleanedProps = cleanProps(otherProps);
-
-    return (
-      <Component
-        ref={elRef}
-        className={className ? cx(className) : null}
-        {...cleanedProps}
-        style={{...propStyle}}
-      />
-    );
-  }
-}
 /** 
  * Layout primitives
  */
 
-export const Box = styled(BaseComponent)`
+export const Box = styled(makePrimitive('div'))`
   position: relative;
   flex-direction: column;
   align-items: stretch;
@@ -128,21 +54,21 @@ export const Box = styled(BaseComponent)`
 `;
 Box.displayName = 'Box';
 
-export const Flex = styled(BaseComponent)`
+export const Flex = styled(makePrimitive('div'))`
   display: flex;
   ${spacing};
   ${filterStyleProps};
 `;
 Flex.displayName = 'Flex';
 
-export const Block = styled(BaseComponent)`
+export const Block = styled(makePrimitive('div'))`
   display: block;
   ${spacing};
   ${filterStyleProps};
 `;
 Block.displayName = 'Block';
 
-export const Inline = styled(BaseComponent)`
+export const Inline = styled(makePrimitive('span'))`
   display: inline-block;
   vertical-align: bottom;
   ${spacing};
@@ -150,7 +76,7 @@ export const Inline = styled(BaseComponent)`
 `;
 Inline.displayName = 'Inline';
 
-export const InlineFlex = styled(SpanBaseComponent)`
+export const InlineFlex = styled(makePrimitive('span'))`
   display: inline-flex;
   ${spacing};
   ${filterStyleProps};
@@ -162,7 +88,7 @@ InlineFlex.displayName = 'InlineFlex';
  * Eg. Button, Input, Select, Table etc.
  */
 
-export const A = styled(ABaseComponent)`
+export const A = styled(makePrimitive('a'))`
   display: inline-flex;
   ${spacing};
   ${filterStyleProps};
