@@ -3,6 +3,12 @@ import {storiesOf} from '@storybook/react';
 
 import Text from '../text';
 
+const myClickFunction = () => {
+  /* eslint-disable no-alert */
+  window.alert('Hello from an onClick event');
+  /* eslint-enable no-alert */
+};
+
 const examples = [
   {
     title: 'a text node',
@@ -60,6 +66,14 @@ const examples = [
           <Text weight="semi-bold">semi-bold</Text>
         </div>
       );
+    },
+  },
+  {
+    title: 'with onClick',
+    description:
+      'If an onClick event is present, several interactive styles will be set automatically',
+    render: () => {
+      return <Text onClick={myClickFunction}>I have an onClick event</Text>;
     },
   },
   {

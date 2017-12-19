@@ -55,7 +55,8 @@ const StyledText = styled(Inline)`
 
   &:hover {
     color: ${props => props.theme.colors[props.hoverColor]};
-    text-decoration: ${props => (props.noUnderline ? 'none' : 'inherit')};
+    text-decoration: ${props =>
+      props.onClick ? (props.noUnderline ? 'none' : 'underline') : 'inherit'};
   }
 
   ${props =>
