@@ -9,7 +9,7 @@ import {
 import PureComponent from 'react-pure-render/component';
 import styled, {cx} from 'react-emotion';
 
-const makePrimitive = DefaultComponent =>
+const makePrimitive = (name, DefaultComponent) => {
   class Primitive extends PureComponent {
     render() {
       const {
@@ -36,13 +36,17 @@ const makePrimitive = DefaultComponent =>
         />
       );
     }
-  };
+  }
+
+  Primitive.displayName = `Primitive${name}`;
+  return Primitive;
+};
 
 /** 
  * Layout primitives
  */
 
-export const Box = styled(makePrimitive('div'))`
+export const Box = styled(makePrimitive('Box', 'div'))`
   position: relative;
   flex-direction: column;
   align-items: stretch;
@@ -54,21 +58,21 @@ export const Box = styled(makePrimitive('div'))`
 `;
 Box.displayName = 'Box';
 
-export const Flex = styled(makePrimitive('div'))`
+export const Flex = styled(makePrimitive('Flex', 'div'))`
   display: flex;
   ${spacing};
   ${filterStyleProps};
 `;
 Flex.displayName = 'Flex';
 
-export const Block = styled(makePrimitive('div'))`
+export const Block = styled(makePrimitive('Block', 'div'))`
   display: block;
   ${spacing};
   ${filterStyleProps};
 `;
 Block.displayName = 'Block';
 
-export const Inline = styled(makePrimitive('span'))`
+export const Inline = styled(makePrimitive('Inline', 'span'))`
   display: inline-block;
   vertical-align: bottom;
   ${spacing};
@@ -76,7 +80,7 @@ export const Inline = styled(makePrimitive('span'))`
 `;
 Inline.displayName = 'Inline';
 
-export const InlineFlex = styled(makePrimitive('span'))`
+export const InlineFlex = styled(makePrimitive('InlineFlex', 'span'))`
   display: inline-flex;
   ${spacing};
   ${filterStyleProps};
@@ -88,7 +92,7 @@ InlineFlex.displayName = 'InlineFlex';
  * Eg. Button, Input, Select, Table etc.
  */
 
-export const A = styled(makePrimitive('a'))`
+export const A = styled(makePrimitive('A', 'a'))`
   display: inline-flex;
   ${spacing};
   ${filterStyleProps};
