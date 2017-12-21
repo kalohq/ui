@@ -16,8 +16,8 @@ const SPACING_MAP = {
 };
 
 /**
- * Removes props that haven't been whitelisted, to ensure
- * that non-valid props don't pollute the DOM
+ * Removes props that haven’t been whitelisted, to ensure
+ * that non-valid props don’t pollute the DOM
  */
 export function cleanProps(originalProps: Object) {
   const cleanedProps = Object.keys(originalProps)
@@ -64,7 +64,7 @@ export function parseStyle(name: string, value: string | number | Array<*>) {
     return returnArray(value)
       .map(v => {
         if (isNumber(v)) {
-          return `${v}px`;
+          return `${String(v)}px`;
           // $FlowFixMe
         } else if (isString(v) && SPACING_MAP[v]) {
           return `${SPACING_MAP[v]}px`;
