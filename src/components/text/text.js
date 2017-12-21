@@ -39,7 +39,6 @@ type TProps = {
 };
 
 const StyledText = styled(Inline)`
-  display: ${props => (props.display ? props.display : 'inline')};
   font-family: 'WebFaktSoftPro', sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -48,7 +47,6 @@ const StyledText = styled(Inline)`
     props.interactive
       ? 'pointer'
       : props.notInteractive ? 'default' : 'inherit'};
-  vertical-align: middle;
   text-align: ${props => props.align};
   text-decoration: ${props => (props.noUnderline ? 'none' : 'inherit')};
   font-weight: ${props => WEIGHT_MAP[props.weight]};
