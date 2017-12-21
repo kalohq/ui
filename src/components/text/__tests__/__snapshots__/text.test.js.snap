@@ -4,13 +4,11 @@ exports[`Text should render green text 1`] = `
 .glamor-1 {
   display: inline-block;
   vertical-align: bottom;
-  display: inline;
   font-family: 'WebFaktSoftPro',sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   cursor: inherit;
-  vertical-align: middle;
   text-align: unset;
   text-decoration: inherit;
   font-weight: 400;
@@ -41,13 +39,11 @@ exports[`Text should render large text 1`] = `
 .glamor-1 {
   display: inline-block;
   vertical-align: bottom;
-  display: inline;
   font-family: 'WebFaktSoftPro',sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   cursor: inherit;
-  vertical-align: middle;
   text-align: unset;
   text-decoration: inherit;
   font-weight: 400;
@@ -78,13 +74,11 @@ exports[`Text should render shallow component ok 1`] = `
 .glamor-1 {
   display: inline-block;
   vertical-align: bottom;
-  display: inline;
   font-family: 'WebFaktSoftPro',sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   cursor: inherit;
-  vertical-align: middle;
   text-align: unset;
   text-decoration: inherit;
   font-weight: 400;

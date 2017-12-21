@@ -6,13 +6,11 @@ exports[`H1 should allow weight to be overridden 1`] = `
   display: inline-block;
   vertical-align: bottom;
   display: block;
-  display: block;
   font-family: 'WebFaktSoftPro',sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   cursor: inherit;
-  vertical-align: middle;
   text-align: unset;
   text-decoration: inherit;
   font-weight: 500;
@@ -45,13 +43,11 @@ exports[`H1 should render shallow component ok 1`] = `
   display: inline-block;
   vertical-align: bottom;
   display: block;
-  display: block;
   font-family: 'WebFaktSoftPro',sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   cursor: inherit;
-  vertical-align: middle;
   text-align: unset;
   text-decoration: inherit;
   font-weight: 400;
