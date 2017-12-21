@@ -3,6 +3,7 @@ import * as React from 'react';
 import styled from 'react-emotion';
 import {injectGlobal} from 'emotion';
 import {Inline} from '../layout';
+import DefaultTheme from '../theme';
 
 import MaterialIconsWoff2 from './fonts/MaterialIcons/MaterialIcons-Regular.woff2';
 import MaterialIconsWoff from './fonts/MaterialIcons/MaterialIcons-Regular.woff';
@@ -33,6 +34,7 @@ type Props = {
   weight?: ICON_WEIGHT,
   className?: string,
   onClick?: Function,
+  theme?: Object,
 };
 
 // eslint-disable-next-line
@@ -90,6 +92,7 @@ export default function Icon(props: Props) {
     family = DEFAULT_FAMILY,
     className,
     onClick,
+    theme = DefaultTheme,
     ...otherProps
   } = props;
 
@@ -103,6 +106,7 @@ export default function Icon(props: Props) {
       className={className}
       onClick={onClick}
       component="i"
+      theme={theme}
       {...otherProps}
     >
       {family === 'fontello' && isString(children) ? (

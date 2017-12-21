@@ -3,6 +3,7 @@ import * as React from 'react';
 import styled, {css} from 'react-emotion';
 
 import {Inline} from '../layout';
+import DefaultTheme from '../theme';
 
 import type {
   TEXT_WEIGHT,
@@ -34,6 +35,7 @@ type TProps = {
   target?: string,
   href?: string,
   name?: string,
+  theme?: Object,
 };
 
 const StyledText = styled(Inline)`
@@ -85,6 +87,7 @@ export default function Text(props: TProps) {
     noUnderline,
     onClick,
     children,
+    theme = DefaultTheme,
     ...otherProps
   } = props;
 
@@ -98,6 +101,7 @@ export default function Text(props: TProps) {
       interactive={interactive || onClick}
       noUnderline={noUnderline}
       size={size}
+      theme={theme}
       {...otherProps}
     >
       {children}
