@@ -108,7 +108,7 @@ props: &COLORS
   INHERIT:
     value: "inherit"
     type: "string"
-  CURRENTCOLOR:
+  CURRENT_COLOR:
     value: "currentColor"
     type: "string"
 aliases: *COLORS
