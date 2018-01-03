@@ -4,8 +4,6 @@ import styled from 'react-emotion';
 import {Inline} from '../layout';
 import DefaultTheme from '../theme';
 
-import COLORS from '../../design-tokens/tokens';
-
 import type {ICON_SIZE} from './constants';
 
 import {ICONS, ICON_COLORS, DEFAULT_SIZE, DEFAULT_COLOR} from './constants';
@@ -26,7 +24,7 @@ const StyledIcon = styled(Inline)`
   cursor: ${props => (props.interactive ? 'cursor' : 'inherit')};
   font-size: ${props => `${props.size}px`};
   height: ${props => `${props.size}px`};
-  color: ${props => props.theme.colors[props.color]};
+  fill: ${props => props.theme.colors[props.color]};
 `;
 
 export default function Icon(props: Props) {
@@ -52,14 +50,10 @@ export default function Icon(props: Props) {
       onClick={onClick}
       theme={theme}
       size={size}
+      color={color}
       {...otherProps}
     >
-      <svg
-        width={size}
-        height={size}
-        style={{fill: COLORS[color]}}
-        aria-hidden="true"
-      >
+      <svg width={size} height={size} aria-hidden="true">
         <title>{children}</title>
         <use href={`#${children}`} />
       </svg>
