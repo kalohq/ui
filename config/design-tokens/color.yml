@@ -103,7 +103,9 @@ props: &COLORS
   SNOW:
     value: "{!GREY200}"
   NONE:
-    value: "none"
+    value: ""
+    type: "string"
   INHERIT:
-    value: "inherit"  
+    value: "inherit"
+    type: "string"
 aliases: *COLORS
