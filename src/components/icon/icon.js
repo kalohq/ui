@@ -1,8 +1,10 @@
 /* @flow */
 import * as React from 'react';
 import styled from 'react-emotion';
-
 import {Inline} from '../layout';
+import DefaultTheme from '../theme';
+
+import COLORS from '../../design-tokens/tokens';
 
 import type {ICON_SIZE} from './constants';
 
@@ -14,13 +16,17 @@ type Props = {
   color?: $Keys<typeof ICON_COLORS>,
   className?: string,
   onClick?: Function,
+  theme?: Object,
 };
 
 const StyledIcon = styled(Inline)`
   user-select: none;
   line-height: 1em;
   vertical-align: middle;
-  cursor: ${props => (props.interactive ? 'pointer' : 'inherit')};
+  cursor: ${props => (props.interactive ? 'cursor' : 'inherit')};
+  font-size: ${props => `${props.size}px`};
+  height: ${props => `${props.size}px`};
+  color: ${props => props.theme.colors[props.color]};
 `;
 
 export default function Icon(props: Props) {
@@ -30,6 +36,7 @@ export default function Icon(props: Props) {
     color = DEFAULT_COLOR,
     className,
     onClick,
+    theme = DefaultTheme,
     ...otherProps
   } = props;
 
@@ -43,9 +50,16 @@ export default function Icon(props: Props) {
       component="i"
       interactive={!!onClick}
       onClick={onClick}
+      theme={theme}
+      size={size}
       {...otherProps}
     >
-      <svg width={size} height={size} style={{fill: color}} aria-hidden="true">
+      <svg
+        width={size}
+        height={size}
+        style={{fill: COLORS[color]}}
+        aria-hidden="true"
+      >
         <title>{children}</title>
         <use href={`#${children}`} />
       </svg>

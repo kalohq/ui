@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert should render a confirmation alert with an icon 1`] = `
+<div
+  className="root type-confirmation css-16s6ajv0 css-qt79m4"
+  style={Object {}}
+>
+  <i
+    className="css-j4zkv10 css-v4li1d"
+    color="green"
+    onClick={undefined}
+    size={16}
+    style={Object {}}
+  >
+    check_circle
+  </i>
+  <span
+    className="css-16ef8bd0 css-1vqitqk"
+    color="green"
+    onClick={undefined}
+    size="small"
+    style={Object {}}
+  >
+    A confirmation alert
+  </span>
+</div>
+`;
+
+exports[`Alert should render a warning alert 1`] = `
+<div
+  className="root type-warning css-16s6ajv0 css-qt79m4"
+  style={Object {}}
+>
+  <span
+    className="css-16ef8bd0 css-k98h6i"
+    color="orange"
+    onClick={undefined}
+    size="small"
+    style={Object {}}
+  >
+    A warning alert
+  </span>
+</div>
+`;
+
+exports[`Alert should render shallow component ok 1`] = `
+<div
+  className="root type-info css-16s6ajv0 css-qt79m4"
+  style={Object {}}
+>
+  <span
+    className="css-16ef8bd0 css-v9zri0"
+    color="blue"
+    onClick={undefined}
+    size="small"
+    style={Object {}}
+  >
+    A info alert
+  </span>
+</div>
+`;

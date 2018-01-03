@@ -16,11 +16,10 @@ storiesOf(
     return (
       <span>
         {ICONS.values.map(icon => (
-          <Icon key={icon} color="orange" size={36}>
+          <Icon key={icon} color="blue400" size={36}>
             {icon}
           </Icon>
         ))}
-        <Icon>test</Icon>
       </span>
     );
   }

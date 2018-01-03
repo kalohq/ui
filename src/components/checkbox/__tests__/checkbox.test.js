@@ -4,7 +4,9 @@ import * as React from 'react';
 import {sheet} from 'emotion';
 import serializer from 'jest-glamor-react';
 import renderer from 'react-test-renderer';
+import {ThemeProvider} from 'emotion-theming';
 
+import theme from 'components/theme';
 import Checkbox from 'components/checkbox';
 
 expect.addSnapshotSerializer(serializer(sheet));
@@ -15,7 +17,13 @@ describe('Checkbox', () => {
     checked: true,
   };
   const create = (props = {}) =>
-    renderer.create(<Checkbox {...defaultProps} {...props} />).toJSON();
+    renderer
+      .create(
+        <ThemeProvider theme={theme}>
+          <Checkbox {...defaultProps} {...props} />
+        </ThemeProvider>
+      )
+      .toJSON();
 
   test('should render shallow component ok', () => {
     const element = create();

@@ -1,74 +1,38 @@
+/* @flow */
 import {isNumber, isString, pickBy, omitBy} from 'lodash';
+import STYLE_WHITELIST from 'utils/style/style-whitelist';
+import PROP_WHITELIST_REGEX from 'utils/style/prop-whitelist';
+import {returnArray} from 'utils/array';
 
-/**
- * Lookup to determine what props we include in style
- *
- * For now this is limited purely to style rules dealing with
- * layout and sizing (cur. box & text layout).
- */
-const STYLE_WHITELIST = {
-  alignItems: true,
-  alignContent: true,
-  alignSelf: true,
-  borderWidth: true,
-  borderTopWidth: true,
-  borderRightWidth: true,
-  borderBottomWidth: true,
-  borderLeftWidth: true,
-  display: true,
-  cursor: true,
-  flex: true,
-  flexBasis: true,
-  flexDirection: true,
-  flexFlow: true,
-  flexGrow: true,
-  flexShrink: true,
-  flexWrap: true,
-  justifyContent: true,
-  order: true,
-  padding: true,
-  paddingTop: true,
-  paddingRight: true,
-  paddingBottom: true,
-  paddingLeft: true,
-  margin: true,
-  marginTop: true,
-  marginRight: true,
-  marginBottom: true,
-  marginLeft: true,
-  position: true,
-  top: true,
-  right: true,
-  bottom: true,
-  left: true,
-  width: true,
-  height: true,
-  minWidth: true,
-  minHeight: true,
-  maxWidth: true,
-  maxHeight: true,
-  float: true,
-  zIndex: true,
-  overflow: true,
-  overflowX: true,
-  overflowY: true,
-  tableLayout: true,
-  verticalAlign: true,
-  textAlign: true,
-  textAlignLast: true,
-  textIndent: true,
-  textOverflow: true,
-  textTransform: true,
-  whiteSpace: true,
-  wordBreak: true,
-  wordSpacing: true,
-  wordWrap: true,
-  lineHeight: true,
-  boxSizing: true,
+const SPACING_REGEX = /^(padding|margin)(Top|Right|Bottom|Left)?$/;
+
+const SPACING_MAP = {
+  none: '0',
+  'extra-small': 2,
+  small: 4,
+  medium: 8,
+  large: 16,
+  'extra-large': 24,
 };
 
-/*
- * Flexbox stlyle overrides for Safari 8
+/**
+ * Removes props that haven’t been whitelisted, to ensure
+ * that non-valid props don’t pollute the DOM
+ */
+export function cleanProps(originalProps: Object) {
+  const cleanedProps = Object.keys(originalProps)
+    .filter(key => PROP_WHITELIST_REGEX.test(key))
+    .reduce((obj, key) => {
+      const obj2 = {...obj};
+      obj2[key] = originalProps[key];
+      return obj2;
+    }, {});
+
+  return cleanedProps;
+}
+
+/** 
+ * Flexbox style overrides for Safari 8
  * Safari 8 detection is performed in advance
  */
 const VENDOR_STYLERS =
@@ -94,25 +58,14 @@ const VENDOR_STYLERS =
       }
     : {};
 
-const REGEX = /^(padding|margin)(Top|Right|Bottom|Left)?$/;
-
-const SPACING_MAP = {
-  'extra-small': 2,
-  small: 4,
-  medium: 8,
-  large: 16,
-  'extra-large': 24,
-};
-
-const arr = n => (Array.isArray(n) ? n : [n]);
-
 /** Parse a specific style */
-export function parseStyle(name, value) {
-  if (REGEX.test(name)) {
-    return arr(value)
+export function parseStyle(name: string, value: string | number | Array<*>) {
+  if (SPACING_REGEX.test(name)) {
+    return returnArray(value)
       .map(v => {
         if (isNumber(v)) {
-          return `${v}px`;
+          return `${String(v)}px`;
+          // $FlowFixMe
         } else if (isString(v) && SPACING_MAP[v]) {
           return `${SPACING_MAP[v]}px`;
         }
@@ -125,14 +78,14 @@ export function parseStyle(name, value) {
 }
 
 /** Pull out styles from props */
-export function parseStyleProps(rawProps) {
+export function parseStyleProps(originalProps: Object): Object {
   const props = {};
-  const style = rawProps.style || {};
+  const style = originalProps.style || {};
 
-  for (const key in rawProps) {
-    if ({}.hasOwnProperty.call(rawProps, key)) {
+  for (const key in originalProps) {
+    if ({}.hasOwnProperty.call(originalProps, key)) {
       if (STYLE_WHITELIST[key]) {
-        const parsedStyleValue = parseStyle(key, rawProps[key]);
+        const parsedStyleValue = parseStyle(key, originalProps[key]);
         if (!!VENDOR_STYLERS[key]) {
           const pair = VENDOR_STYLERS[key](key, parsedStyleValue);
           style[pair.key] = pair.value;
@@ -140,7 +93,7 @@ export function parseStyleProps(rawProps) {
           style[key] = parsedStyleValue;
         }
       } else if (key !== 'style') {
-        props[key] = rawProps[key];
+        props[key] = originalProps[key];
       }
     }
   }
@@ -148,11 +101,72 @@ export function parseStyleProps(rawProps) {
   return {props, style};
 }
 
-/** Filter keys on an object to those from our STYLE_WHITELIST */
-export function pickStyles(obj) {
-  return pickBy(obj, (v, key) => STYLE_WHITELIST[key]);
+export function stylePropTransform(originalProps: Object): Object {
+  const props = {};
+
+  Object.keys(originalProps).map(prop => {
+    if (STYLE_WHITELIST[prop]) {
+      props[prop] = parseStyle(prop, originalProps[prop]);
+      return props[prop];
+    }
+    return false;
+  });
+
+  return props;
 }
 
-export function omitStyles(obj) {
-  return omitBy(obj, (v, key) => STYLE_WHITELIST[key]);
+/** Filter keys on an object to those from our STYLE_WHITELIST */
+export const pickStyles = (obj: Object) =>
+  // $FlowFixMe
+  pickBy(obj, (v, key) => STYLE_WHITELIST[key]);
+
+export const omitStyles = (obj: Object) =>
+  // $FlowFixMe
+  omitBy(obj, (v, key) => STYLE_WHITELIST[key]);
+
+/**
+ * Transforms margin and padding props in to real pixel values.
+ * We use this rather than the built in Emotion transformers
+ * to transform our custom scale values ('small', 'medium' etc.)
+ */
+export function spacing(originalProps: Object): Object {
+  const props = {};
+  Object.keys(originalProps)
+    .filter(prop => SPACING_REGEX.test(prop))
+    .map(prop => {
+      props[prop] = returnArray(originalProps[prop])
+        .map(
+          val =>
+            isNumber(val)
+              ? `${String(val)}px`
+              : // $FlowFixMe
+                isString(val) && SPACING_MAP[val]
+                ? `${SPACING_MAP[val]}px`
+                : val
+        )
+        .join(' ');
+
+      return props[prop];
+    });
+
+  return props;
 }
+
+/**
+ * Filters style props to be passed back to emotion as
+ * a CSS object. Emotion takes care of the rest.
+ *
+ * We also remove spacing props, as these are transformed
+ * in a seperate function (see 'spacing' function below)
+ */
+export const filterStyleProps = (originalProps: Object): Object => {
+  const filteredProps = Object.keys(originalProps)
+    .filter(key => STYLE_WHITELIST[key])
+    .filter(key => !SPACING_REGEX.test(key))
+    .reduce((obj, key) => {
+      const obj2 = obj;
+      obj2[key] = originalProps[key];
+      return obj2;
+    }, {});
+  return filteredProps;
+};

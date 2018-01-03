@@ -1,10 +1,10 @@
 /* @flow */
-import React from 'react';
+import * as React from 'react';
 import {Box} from '../../layout';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 type TProps = {
-  children: React$Element<*>,
+  children: React.Element<*>,
   topOffset?: number,
   zIndex?: number,
 };

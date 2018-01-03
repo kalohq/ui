@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`H4 should allow size to be overridden 1`] = `
+.glamor-1 {
+  display: block;
+  display: inline-block;
+  vertical-align: bottom;
+  display: block;
+  font-family: 'WebFaktSoftPro',sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: inherit;
+  text-align: unset;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  color: rgb(55,69,97);
+}
+
+.glamor-1:hover {
+  text-decoration: inherit;
+}
+
+.glamor-1 strong {
+  font-weight: 500;
+}
+
+<h4
+  className="root glamor-0 glamor-1"
+  color="navy700"
+  onClick={undefined}
+  size="large"
+  style={Object {}}
+>
+  An H4 Tag
+</h4>
+`;
+
+exports[`H4 should render shallow component ok 1`] = `
+.glamor-1 {
+  display: block;
+  display: inline-block;
+  vertical-align: bottom;
+  display: block;
+  font-family: 'WebFaktSoftPro',sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: inherit;
+  text-align: unset;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(55,69,97);
+}
+
+.glamor-1:hover {
+  text-decoration: inherit;
+}
+
+.glamor-1 strong {
+  font-weight: 500;
+}
+
+<h4
+  className="root glamor-0 glamor-1"
+  color="navy700"
+  onClick={undefined}
+  size="small"
+  style={Object {}}
+>
+  An H4 Tag
+</h4>
+`;

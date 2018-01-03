@@ -25,33 +25,89 @@ export const TEXT_SIZE = new Enum({
 });
 
 export type TEXT_COLOR =
-  | 'red'
-  | 'blue'
+  /* PINK */
+  | 'pink'
+  | 'pink300'
+  | 'pink400'
+  | 'pink500'
+  | 'pink600'
+  | 'pink700'
+  /* GREEN */
   | 'green'
-  | 'orange'
+  | 'green300'
+  | 'green400'
+  | 'green500'
+  | 'green600'
+  | 'green700'
+  /* BLUE */
+  | 'blue'
+  | 'blue300'
+  | 'blue400'
+  | 'blue500'
+  | 'blue600'
+  | 'blue700'
+  /* PURPLE */
   | 'purple'
-  | 'snow'
-  | 'platinum'
-  | 'silver'
-  | 'slate'
-  | 'charcoal'
+  | 'purple300'
+  | 'purple400'
+  | 'purple500'
+  | 'purple600'
+  | 'purple700'
+  /* ORANGE */
+  | 'orange'
+  | 'orange300'
+  | 'orange400'
+  | 'orange500'
+  | 'orange600'
+  | 'orange700'
+  /* NAVY */
+  | 'navy'
+  | 'navy300'
+  | 'navy400'
+  | 'navy500'
+  | 'navy600'
+  | 'navy700'
+  /* GREY */
+  | 'grey'
+  | 'grey200'
+  | 'grey300'
+  | 'grey400'
+  | 'grey500'
+  | 'grey600'
+  | 'grey700'
+  /* MISC */
   | 'white'
+  | 'black'
+  | 'none'
+  /* DEPRECATED */
+  | 'red'
+  | 'snow' // deprecated
+  | 'platinum' // deprecated
+  | 'silver' // deprecated
+  | 'slate' // deprecated
+  | 'charcoal' // deprecated
   | 'dark-grey' // deprecated
   | 'light-grey' // deprecated
-  | 'grey' // deprecated
-  | 'none';
+  | 'grey'; // deprecated
 
-// Deprecated Colors:
-//  navy, light-grey, dark-grey
 export type TEXT_HOVER_COLOR = TEXT_COLOR;
 
-export type TEXT_MARGIN = 'none' | 'small' | 'medium' | 'large' | 'extra-large';
+export type TEXT_ALIGN = 'center' | 'left' | 'right' | 'initial' | 'unset';
 
-export type TEXT_ALIGN = 'center' | 'left' | 'right' | 'none';
+export const WEIGHT_MAP = {
+  light: 300,
+  normal: 400,
+  medium: 500,
+  'semi-bold': 600,
+};
 
-export const DEFAULT_HOVER_COLOR = 'none';
-export const DEFAULT_COLOR = 'grey';
-export const DEFAULT_WEIGHT = 'light';
-export const DEFAULT_SIZE = 'small';
-export const DEFAULT_MARGIN = 'none';
-export const DEFAULT_ALIGN = 'none';
+export const SIZE_MAP = {
+  'extra-extra-small': 10,
+  'extra-small': 12,
+  small: 14,
+  medium: 16,
+  large: 18,
+  'extra-large': 24,
+  'extra-extra-large': 32,
+  'extra-extra-extra-large': 32,
+};

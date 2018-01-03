@@ -3,6 +3,12 @@ import {storiesOf} from '@storybook/react';
 
 import Text from '../text';
 
+const myClickFunction = () => {
+  /* eslint-disable no-alert */
+  window.alert('Hello from an onClick event');
+  /* eslint-enable no-alert */
+};
+
 const examples = [
   {
     title: 'a text node',
@@ -38,7 +44,7 @@ const examples = [
     render: () => {
       return (
         <a href="#">
-          <Text size="large" color="red" weight="semi-bold">
+          <Text size="large" color="pink" weight="semi-bold">
             An interactive text node
           </Text>
         </a>
@@ -58,6 +64,32 @@ const examples = [
           <Text weight="medium">medium</Text>
           <br />
           <Text weight="semi-bold">semi-bold</Text>
+        </div>
+      );
+    },
+  },
+  {
+    title: 'with onClick',
+    description:
+      'If an onClick event is present, several interactive styles will be set automatically',
+    render: () => {
+      return <Text onClick={myClickFunction}>I have an onClick event</Text>;
+    },
+  },
+  {
+    title: 'with spacing',
+    description:
+      'As Text extends the layout components, all of the spacing props are available',
+    render: () => {
+      return (
+        <div>
+          <Text margin={20}>with fixed pixel margin</Text>
+          <br />
+          <Text margin="small">with scaled margin</Text>
+          <br />
+          <Text paddingLeft="medium">with scaled left padding</Text>
+          <br />
+          <Text paddingRight={90}>with fixed pixel right padding </Text>
         </div>
       );
     },

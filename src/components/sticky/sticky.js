@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {omit} from 'lodash';
 import PropTypes from 'prop-types';
-import cx from 'classnames';
 import {getFixedOffset} from 'utils/dom';
 
 import styles from './sticky.css';
@@ -267,7 +266,7 @@ export default class Sticky extends React.Component {
 
     return (
       <div
-        className={cx({[styles.transparent]: noPointerEvents})}
+        className={noPointerEvents ? styles.transparent : null}
         {...omit(otherProps, ['offset'])}
       >
         {children}
@@ -276,6 +275,6 @@ export default class Sticky extends React.Component {
   }
 
   render() {
-    return <div className={cx({[styles.root]: true})} ref="root" />;
+    return <div className={styles.root} ref="root" />;
   }
 }
