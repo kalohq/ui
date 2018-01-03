@@ -1,7 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Block should render correctly 1`] = `
-.glamor-0 {
+.glamor-1 {
+  -webkit-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
   display: block;
   -webkit-flex: 0;
   -ms-flex: 0;
@@ -9,18 +12,23 @@ exports[`Block should render correctly 1`] = `
 }
 
 <div
-  className="glamor-0 "
+  className="glamor-0 glamor-1"
   onClick={null}
   style={Object {}}
 />
 `;
 
 exports[`Box should allow overriding of default styles 1`] = `
-.glamor-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.glamor-1 {
+  -webkit-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: flex-end;
+  align-content: flex-end;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -29,19 +37,29 @@ exports[`Box should allow overriding of default styles 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  -webkit-align-content: flex-end;
-  -ms-flex-line-pack: flex-end;
-  align-content: flex-end;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 0;
   -ms-flex: 0;
   flex: 0;
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: flex-end;
+  align-content: flex-end;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
 }
 
 <div
-  className="glamor-0 "
+  className="glamor-0 glamor-1"
   style={
     Object {
       "color": "red",
@@ -51,11 +69,9 @@ exports[`Box should allow overriding of default styles 1`] = `
 `;
 
 exports[`Box should allow passing spacing scales 1`] = `
-.glamor-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.glamor-1 {
+  margin: 4px 8px 16px;
+  padding-top: 4px;
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -70,22 +86,24 @@ exports[`Box should allow passing spacing scales 1`] = `
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
   align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   margin: 4px 8px 16px;
   padding-top: 4px;
 }
 
 <div
-  className="glamor-0 "
+  className="glamor-0 glamor-1"
   style={Object {}}
 />
 `;
 
 exports[`Box should allow passing vector style values 1`] = `
-.glamor-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.glamor-1 {
+  margin: 0px 5px 10% 15px;
+  padding: 15px;
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -100,22 +118,22 @@ exports[`Box should allow passing vector style values 1`] = `
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
   align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0px 5px 10% 15px;
   padding: 15px;
 }
 
 <div
-  className="glamor-0 "
+  className="glamor-0 glamor-1"
   style={Object {}}
 />
 `;
 
 exports[`Box should render correctly 1`] = `
-.glamor-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -130,16 +148,23 @@ exports[`Box should render correctly 1`] = `
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
   align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <div
-  className="glamor-0 "
+  className="glamor-0 glamor-1"
   style={Object {}}
 />
 `;
 
 exports[`Flex should render correctly 1`] = `
-.glamor-0 {
+.glamor-1 {
+  -webkit-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -150,14 +175,17 @@ exports[`Flex should render correctly 1`] = `
 }
 
 <div
-  className="glamor-0 "
+  className="glamor-0 glamor-1"
   onClick={null}
   style={Object {}}
 />
 `;
 
 exports[`Inline should render correctly 1`] = `
-.glamor-0 {
+.glamor-1 {
+  -webkit-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
   display: inline-block;
   vertical-align: bottom;
   -webkit-flex: 0;
@@ -166,14 +194,17 @@ exports[`Inline should render correctly 1`] = `
 }
 
 <span
-  className="glamor-0 "
+  className="glamor-0 glamor-1"
   onClick={null}
   style={Object {}}
 />
 `;
 
 exports[`InlineFlex should render correctly 1`] = `
-.glamor-0 {
+.glamor-1 {
+  -webkit-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -184,7 +215,7 @@ exports[`InlineFlex should render correctly 1`] = `
 }
 
 <span
-  className="glamor-0 "
+  className="glamor-0 glamor-1"
   onClick={null}
   style={Object {}}
 />

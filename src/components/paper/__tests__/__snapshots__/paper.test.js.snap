@@ -1,11 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Paper should render a component with an elevation of 3 1`] = `
-.glamor-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -20,10 +16,14 @@ exports[`Paper should render a component with an elevation of 3 1`] = `
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
   align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <div
-  className="glamor-0 root level-3 hover-level-1 border rounded"
+  className="root level-3 hover-level-1 border rounded glamor-0 glamor-1"
   onClick={undefined}
   style={Object {}}
 >
@@ -32,11 +32,7 @@ exports[`Paper should render a component with an elevation of 3 1`] = `
 `;
 
 exports[`Paper should render shallow component ok 1`] = `
-.glamor-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -51,10 +47,14 @@ exports[`Paper should render shallow component ok 1`] = `
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
   align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <div
-  className="glamor-0 root level-1 hover-level-1 border rounded"
+  className="root level-1 hover-level-1 border rounded glamor-0 glamor-1"
   onClick={undefined}
   spacing={true}
   style={Object {}}

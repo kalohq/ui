@@ -1,60 +1,105 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Text should render green text 1`] = `
-.glamor-0 {
+.glamor-1 {
   display: inline-block;
   vertical-align: bottom;
-  display: inline-block;
-  vertical-align: bottom;
+  font-family: 'WebFaktSoftPro',sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: inherit;
+  text-align: unset;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(62,179,138);
+}
+
+.glamor-1:hover {
+  text-decoration: inherit;
+}
+
+.glamor-1 strong {
+  font-weight: 500;
 }
 
 <span
-  className="root weight-light size-medium color-green hover-color-none glamor-0"
-  href={undefined}
-  name={undefined}
+  className="glamor-0 glamor-1"
+  color="green"
   onClick={undefined}
+  size="medium"
   style={Object {}}
-  target={undefined}
 >
   Hello World
 </span>
 `;
 
 exports[`Text should render large text 1`] = `
-.glamor-0 {
+.glamor-1 {
   display: inline-block;
   vertical-align: bottom;
-  display: inline-block;
-  vertical-align: bottom;
+  font-family: 'WebFaktSoftPro',sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: inherit;
+  text-align: unset;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  color: rgb(55,69,97);
+}
+
+.glamor-1:hover {
+  text-decoration: inherit;
+}
+
+.glamor-1 strong {
+  font-weight: 500;
 }
 
 <span
-  className="root weight-light size-large color-charcoal hover-color-none glamor-0"
-  href={undefined}
-  name={undefined}
+  className="glamor-0 glamor-1"
+  color="charcoal"
   onClick={undefined}
+  size="large"
   style={Object {}}
-  target={undefined}
 >
   Hello World
 </span>
 `;
 
 exports[`Text should render shallow component ok 1`] = `
-.glamor-0 {
+.glamor-1 {
   display: inline-block;
   vertical-align: bottom;
-  display: inline-block;
-  vertical-align: bottom;
+  font-family: 'WebFaktSoftPro',sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: inherit;
+  text-align: unset;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(55,69,97);
+}
+
+.glamor-1:hover {
+  text-decoration: inherit;
+}
+
+.glamor-1 strong {
+  font-weight: 500;
 }
 
 <span
-  className="root weight-light size-medium color-charcoal hover-color-none glamor-0"
-  href={undefined}
-  name={undefined}
+  className="glamor-0 glamor-1"
+  color="charcoal"
   onClick={undefined}
+  size="medium"
   style={Object {}}
-  target={undefined}
 >
   Hello World
 </span>

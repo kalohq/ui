@@ -9,7 +9,7 @@ import styles from './alert.css';
 
 const TYPE_COLOR_MAP = {
   info: 'blue',
-  error: 'red',
+  error: 'pink',
   warning: 'orange',
   confirmation: 'green',
 };

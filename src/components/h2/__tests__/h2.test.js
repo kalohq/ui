@@ -4,7 +4,9 @@ import * as React from 'react';
 import {sheet} from 'emotion';
 import serializer from 'jest-glamor-react';
 import renderer from 'react-test-renderer';
+import {ThemeProvider} from 'emotion-theming';
 
+import theme from 'components/theme';
 import H2 from 'components/h2';
 
 expect.addSnapshotSerializer(serializer(sheet));
@@ -14,9 +16,11 @@ describe('H2', () => {
   const create = (props = {}) =>
     renderer
       .create(
-        <H2 {...defaultProps} {...props}>
-          An H2 Tag
-        </H2>
+        <ThemeProvider theme={theme}>
+          <H2 {...defaultProps} {...props}>
+            An H2 Tag
+          </H2>
+        </ThemeProvider>
       )
       .toJSON();
 

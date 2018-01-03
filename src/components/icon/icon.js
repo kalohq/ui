@@ -1,9 +1,15 @@
 /* @flow */
 import * as React from 'react';
-import cx from 'classnames';
-import {parseStyleProps} from 'utils/style';
+import styled from 'react-emotion';
+import {injectGlobal} from 'emotion';
+import {Inline} from '../layout';
+import DefaultTheme from '../theme';
 
-import styles from './icon.css';
+import MaterialIconsWoff2 from './fonts/MaterialIcons/MaterialIcons-Regular.woff2';
+import MaterialIconsWoff from './fonts/MaterialIcons/MaterialIcons-Regular.woff';
+import MaterialIconsTtf from './fonts/MaterialIcons/MaterialIcons-Regular.ttf';
+import FontelloWoff from './fonts/fontello/fontello.woff';
+import FontelloTtf from './fonts/fontello/fontello.ttf';
 
 import type {
   ICON_SIZE,
@@ -28,7 +34,52 @@ type Props = {
   weight?: ICON_WEIGHT,
   className?: string,
   onClick?: Function,
+  theme?: Object,
 };
+
+// eslint-disable-next-line
+injectGlobal`
+  @font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'), local('MaterialIcons-Regular'),
+      url(${MaterialIconsWoff2}) format('woff2'),
+      url(${MaterialIconsWoff}) format('woff'),
+      url(${MaterialIconsTtf}) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'fontello';
+    src: url(${FontelloWoff}) format('woff'),
+      url(${FontelloTtf}) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+`;
+
+const StyledIcon = styled(Inline)`
+  font-family: ${props =>
+    props.family === 'fontello' ? 'fontello' : 'Material Icons'};
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  user-select: none;
+  word-break: normal;
+  line-height: 1em;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+
+  cursor: ${props => (props.interactive ? 'cursor' : 'inherit')};
+  font-size: ${props => props.size}px;
+  height: ${props => props.size}px;
+  color: ${props => props.theme.colors[props.color]};
+`;
 
 const isString = (test: any): boolean => typeof test === 'string';
 
@@ -41,33 +92,28 @@ export default function Icon(props: Props) {
     family = DEFAULT_FAMILY,
     className,
     onClick,
+    theme = DefaultTheme,
     ...otherProps
   } = props;
 
-  const {unstyledProps, style} = parseStyleProps(otherProps);
-
   return (
-    <i
-      className={cx(
-        {
-          [styles.root]: true,
-          [styles[`size-${size}`]]: !!size,
-          [styles[`family-${family}`]]: true,
-          [styles[`weight-${weight}`]]: true,
-          [styles[`color-${color}`]]: true,
-          [styles.interactive]: !!onClick,
-        },
-        className
-      )}
+    <StyledIcon
+      size={size}
+      family={family}
+      weight={weight}
+      color={color}
+      interactive={!!onClick}
+      className={className}
       onClick={onClick}
-      style={style}
-      {...unstyledProps}
+      component="i"
+      theme={theme}
+      {...otherProps}
     >
       {family === 'fontello' && isString(children) ? (
         FONTELLO_ICONS[String(children)] || children
       ) : (
         children
       )}
-    </i>
+    </StyledIcon>
   );
 }
