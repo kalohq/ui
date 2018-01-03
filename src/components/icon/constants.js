@@ -233,4 +233,22 @@ export const ICONS = new Enum({
   FOLDER_SHARED: {
     value: 'folder_shared',
   },
+  ATTACH_FILE: {
+    value: 'attach_file',
+  },
+  ATTACH_MONEY: {
+    value: 'attach_money',
+  },
+  COMMENT: {
+    value: 'comment',
+  },
+  EXIT_TO_APP: {
+    value: 'exit_to_app',
+  },
+  PERM_CONTACT_CALENDAR: {
+    value: 'perm_contact_calendar',
+  },
+  PLAYLIST_ADD_CHECK: {
+    value: 'playlist_add_check',
+  },
 });
