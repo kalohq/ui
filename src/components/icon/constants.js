@@ -254,4 +254,7 @@ export const ICONS = new Enum({
   PLAYLIST_ADD_CHECK: {
     value: 'playlist_add_check',
   },
+  PAYMENT: {
+    value: 'payment',
+  },
 });
