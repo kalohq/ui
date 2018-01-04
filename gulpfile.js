@@ -16,12 +16,13 @@ gulp.task('css', () => {
 /**
  * Compile component JS from ES6/JSX down to ES5
  */
-gulp.task('js-components', () =>
+gulp.task('js', () =>
   gulp
     .src([
-      'src/components/**/*.js',
-      '!src/components/**/__tests__/*',
-      '!src/components/**/__stories__/*',
+      'src/**/*.js',
+      '!**/__tests__/*',
+      '!**/__stories__/*',
+      '!src/utils/test/**/*',
     ])
     .pipe(
       babel({
@@ -29,7 +30,7 @@ gulp.task('js-components', () =>
         ignore: ['__tests__', '__stories__'],
       })
     )
-    .pipe(gulp.dest('lib/components'))
+    .pipe(gulp.dest('lib'))
 );
 
 /**
@@ -57,7 +58,7 @@ gulp.task('copy-design-tokens', () =>
  */
 gulp.task('build-production', [
   'css',
-  'js-components',
+  'js',
   'copy-files',
   'copy-design-tokens',
 ]);
