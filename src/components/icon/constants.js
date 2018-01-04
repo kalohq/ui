@@ -221,6 +221,12 @@ export const ICONS = new Enum({
   WEBSITE: {
     value: 'website',
   },
+  LINKEDIN: {
+    value: 'linkedin',
+  },
+  GLOBE: {
+    value: 'globe',
+  },
   YOUTUBE: {
     value: 'youtube',
   },

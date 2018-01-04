@@ -31,7 +31,7 @@ export default function Icon(props: Props) {
   const {
     children,
     size = DEFAULT_SIZE,
-    color = DEFAULT_COLOR,
+    color = 'currentColor',
     className,
     onClick,
     theme = DefaultTheme,
