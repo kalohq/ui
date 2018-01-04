@@ -48,6 +48,9 @@ const generate = () => {
       const formattedData = result.symbol.sprite.contents
         .toString()
         .replace('xlink:href', 'xlinkHref')
+        .replace('fill-opacity', 'fillOpacity')
+        .replace('fill-rule', 'fillRule')
+        .replace('clip-path', 'clipPath')
         .replace(
           'xmlns:xlink="http://www.w3.org/1999/xlink"',
           'style={{display: "none"}}'
