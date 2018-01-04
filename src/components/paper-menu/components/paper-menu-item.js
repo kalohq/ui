@@ -1,6 +1,7 @@
 /* @flow */
 import * as React from 'react';
 import cx from 'classnames';
+import {isString} from 'lodash';
 
 import {Box} from '../../layout';
 import Icon from '../../icon';
@@ -71,7 +72,7 @@ export default function PaperMenuItem(props: Props) {
     >
       {icon ? (
         <Box marginRight={10}>
-          <Icon size={16}>{icon}</Icon>
+          {isString(icon) ? <Icon size={16}>{String(icon)}</Icon> : icon}
         </Box>
       ) : null}
 
@@ -81,7 +82,11 @@ export default function PaperMenuItem(props: Props) {
 
       {iconAfter ? (
         <Box marginLeft={10}>
-          <Icon size={16}>{iconAfter}</Icon>
+          {isString(iconAfter) ? (
+            <Icon size={16}>{String(iconAfter)}</Icon>
+          ) : (
+            iconAfter
+          )}
         </Box>
       ) : null}
     </Box>

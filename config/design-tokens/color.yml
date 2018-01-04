@@ -102,4 +102,13 @@ props: &COLORS
     value: "{!GREY300}"
   SNOW:
     value: "{!GREY200}"
+  NONE:
+    value: ""
+    type: "string"
+  INHERIT:
+    value: "inherit"
+    type: "string"
+  CURRENT_COLOR:
+    value: "currentColor"
+    type: "string"
 aliases: *COLORS

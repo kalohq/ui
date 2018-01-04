@@ -30,7 +30,7 @@ const examples = [
           component="a"
           href="https://kalohq.com"
           size="large"
-          color="light-red"
+          color="red"
           weight="semi-bold"
         >
           Hello World

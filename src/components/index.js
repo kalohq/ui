@@ -30,6 +30,7 @@ export {default as Radio} from './radio';
  */
 export {default as Alert, AlertPopover} from './alert';
 export {default as Icon} from './icon';
+export {default as IconSymbols} from './icon-symbols';
 export {default as LoadingSpinner} from './loading-spinner';
 export {default as Sticky} from './sticky';
 

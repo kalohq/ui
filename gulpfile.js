@@ -21,6 +21,7 @@ gulp.task('js', () =>
     .src([
       'src/**/*.js',
       '!**/__tests__/*',
+      '!src/design-tokens/*',
       '!**/__stories__/*',
       '!src/utils/test/**/*',
     ])
