@@ -260,4 +260,22 @@ export const ICONS = new Enum({
   TV: {
     value: 'tv',
   },
+  ARROW_DROP_DOWN_CIRCLE: {
+    value: 'arrow_drop_down_circle',
+  },
+  ART_TRACK: {
+    value: 'art_track',
+  },
+  CREATE: {
+    value: 'create',
+  },
+  FILE_UPLOAD: {
+    value: 'file_upload',
+  },
+  RADIO_BUTTON_CHECKED: {
+    value: 'radio_button_checked',
+  },
+  SHORT_TEXT: {
+    value: 'short_text',
+  },
 });
