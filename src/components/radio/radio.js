@@ -71,7 +71,7 @@ export function Radio(props: RadioProps) {
         </ReactCSSTransitionGroup>
       </Box>
       {label ? (
-        <Text marginLeft={10} size="small" color="grey" component="label">
+        <Text marginLeft={10} size="small" color="navy700" component="label">
           {label}
         </Text>
       ) : null}

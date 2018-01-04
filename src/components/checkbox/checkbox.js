@@ -62,7 +62,7 @@ export default function Checkbox(props: CheckboxProps) {
         <Text
           marginLeft={10}
           size={size === 'small' ? TEXT_SIZE.EXTRA_SMALL : TEXT_SIZE.SMALL}
-          color="grey"
+          color="navy600"
         >
           {label}
         </Text>

@@ -65,6 +65,7 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   text-decoration: inherit;
   font-weight: 400;
   font-size: 14px;
+  color: rgb(84,103,137);
 }
 
 .glamor-3:hover {
@@ -126,6 +127,7 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   text-decoration: inherit;
   font-weight: 400;
   font-size: 14px;
+  color: rgb(84,103,137);
 }
 
 .glamor-1:hover {
@@ -138,7 +140,7 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
 
 <span
     className="glamor-0 glamor-1"
-    color="grey"
+    color="navy600"
     onClick={undefined}
     size="small"
     style={Object {}}
@@ -213,6 +215,7 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   text-decoration: inherit;
   font-weight: 400;
   font-size: 14px;
+  color: rgb(84,103,137);
 }
 
 .glamor-3:hover {
@@ -274,6 +277,7 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   text-decoration: inherit;
   font-weight: 400;
   font-size: 14px;
+  color: rgb(84,103,137);
 }
 
 .glamor-1:hover {
@@ -286,7 +290,7 @@ exports[`Checkbox should render a checkbox with label 1`] = `
 
 <span
     className="glamor-0 glamor-1"
-    color="grey"
+    color="navy600"
     onClick={undefined}
     size="small"
     style={Object {}}
