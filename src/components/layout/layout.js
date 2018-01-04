@@ -5,7 +5,7 @@ import {
   cleanProps,
   spacing,
   filterStyleProps,
-} from 'utils/style';
+} from '../../utils/style';
 import PureComponent from 'react-pure-render/component';
 import styled, {cx} from 'react-emotion';
 
