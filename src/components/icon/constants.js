@@ -218,9 +218,6 @@ export const ICONS = new Enum({
   INSTAGRAM: {
     value: 'instagram',
   },
-  LINKEDIN: {
-    value: 'linkedin',
-  },
   WEBSITE: {
     value: 'website',
   },
