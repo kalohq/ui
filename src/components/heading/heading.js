@@ -18,7 +18,7 @@ type Props = {
   flex?: boolean,
   hover?: HEADING_HOVER,
   icon?: string,
-  iconAfter?: boolean,
+  iconAfter?: string,
   iconPadding?: number,
 };
 
@@ -28,7 +28,7 @@ export default function Heading(props: Props) {
     color = 'navy700',
     icon = false,
     size = 'small',
-    iconAfter = false,
+    iconAfter,
     hover = false,
     iconPadding = 10,
     className,
