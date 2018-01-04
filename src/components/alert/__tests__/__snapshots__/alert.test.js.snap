@@ -6,7 +6,7 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
   style={Object {}}
 >
   <i
-    className="css-j4zkv10 css-pjp10r"
+    className="css-1qps5ds0 css-1clu7cm"
     color="green"
     onClick={undefined}
     size={16}
