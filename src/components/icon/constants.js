@@ -8,7 +8,7 @@ export type ICON_SIZE = 12 | 14 | 16 | 18 | 20 | 23 | 24 | 26 | 36 | 48;
 export type ICON_COLOR = TEXT_COLOR;
 
 export const DEFAULT_SIZE = 16;
-export const DEFAULT_COLOR = 'charcoal';
+export const DEFAULT_COLOR = 'currentColor';
 
 export const ICONS = new Enum({
   ACCESS_TIME: {

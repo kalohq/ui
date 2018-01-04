@@ -4,14 +4,14 @@ import styled from 'react-emotion';
 import {Inline} from '../layout';
 import DefaultTheme from '../theme';
 
-import type {ICON_SIZE} from './constants';
+import type {ICON_SIZE, ICON_COLOR} from './constants';
 
-import {ICONS, ICON_COLORS, DEFAULT_SIZE, DEFAULT_COLOR} from './constants';
+import {ICONS, DEFAULT_SIZE, DEFAULT_COLOR} from './constants';
 
 type Props = {
-  children: string,
+  children: $Keys<typeof ICONS>,
   size?: ICON_SIZE,
-  color?: $Keys<typeof ICON_COLORS>,
+  color?: ICON_COLOR,
   className?: string,
   onClick?: Function,
   theme?: Object,
@@ -31,16 +31,12 @@ export default function Icon(props: Props) {
   const {
     children,
     size = DEFAULT_SIZE,
-    color = 'currentColor',
+    color = DEFAULT_COLOR,
     className,
     onClick,
     theme = DefaultTheme,
     ...otherProps
   } = props;
-
-  if (!ICONS.properties[children]) {
-    console.error(`UI ICON - ${children} is not a defined icon`);
-  }
 
   return (
     <StyledIcon
