@@ -14,62 +14,14 @@ export const ICONS = new Enum({
   ACCESS_TIME: {
     value: 'access_time',
   },
-  ADD: {
-    value: 'add',
-  },
-  INFO_OUTLINE: {
-    value: 'info_outline',
-  },
-  EXTENSION: {
-    value: 'extension',
-  },
-  BORDER_COLOR: {
-    value: 'border_color',
-  },
-  CLEAR: {
-    value: 'clear',
-  },
-  CREDIT_CARD: {
-    value: 'credit_card',
-  },
-  PEOPLE: {
-    value: 'people',
-  },
-  DELETE: {
-    value: 'delete',
-  },
-  PERSON: {
-    value: 'person',
-  },
-  DONE_ALL: {
-    value: 'done_all',
-  },
-  REMOVE: {
-    value: 'remove',
-  },
-  EMAIL: {
-    value: 'email',
-  },
-  SEND: {
-    value: 'send',
-  },
-  SETTINGS: {
-    value: 'settings',
-  },
-  VIEW_WEEK: {
-    value: 'view_week',
-  },
-  MODE_EDIT: {
-    value: 'mode_edit',
-  },
-  LOOP: {
-    value: 'loop',
-  },
   ACCOUNT_BALANCE: {
     value: 'account_balance',
   },
   ACCOUNT_BALANCE_WALLET: {
     value: 'account_balance_wallet',
+  },
+  ADD: {
+    value: 'add',
   },
   ARCHIVE: {
     value: 'archive',
@@ -77,26 +29,41 @@ export const ICONS = new Enum({
   ARROW_DROP_DOWN: {
     value: 'arrow_drop_down',
   },
+  ARROW_DROP_DOWN_CIRCLE: {
+    value: 'arrow_drop_down_circle',
+  },
   ARROW_DROP_UP: {
     value: 'arrow_drop_up',
+  },
+  ART_TRACK: {
+    value: 'art_track',
   },
   ASSIGNMENT: {
     value: 'assignment',
   },
+  ATTACH_FILE: {
+    value: 'attach_file',
+  },
+  ATTACH_MONEY: {
+    value: 'attach_money',
+  },
   AUTORENEW: {
     value: 'autorenew',
+  },
+  BORDER_COLOR: {
+    value: 'border_color',
   },
   CHAT: {
     value: 'chat',
   },
-  CHECK_BOX_OUTLINE_BLANK: {
-    value: 'check_box_outline_blank',
+  CHECK: {
+    value: 'check',
   },
   CHECK_BOX: {
     value: 'check_box',
   },
-  CHECK: {
-    value: 'check',
+  CHECK_BOX_OUTLINE_BLANK: {
+    value: 'check_box_outline_blank',
   },
   CHEVRON_LEFT: {
     value: 'chevron_left',
@@ -104,17 +71,53 @@ export const ICONS = new Enum({
   CHEVRON_RIGHT: {
     value: 'chevron_right',
   },
+  CLEAR: {
+    value: 'clear',
+  },
   CLOSE: {
     value: 'close',
+  },
+  COMMENT: {
+    value: 'comment',
+  },
+  CREATE: {
+    value: 'create',
+  },
+  CREDIT_CARD: {
+    value: 'credit_card',
   },
   DATE_RANGE: {
     value: 'date_range',
   },
+  DELETE: {
+    value: 'delete',
+  },
   DONE: {
     value: 'done',
   },
+  DONE_ALL: {
+    value: 'done_all',
+  },
   EDIT: {
     value: 'edit',
+  },
+  EMAIL: {
+    value: 'email',
+  },
+  EXIT_TO_APP: {
+    value: 'exit_to_app',
+  },
+  EXTENSION: {
+    value: 'extension',
+  },
+  FILE_UPLOAD: {
+    value: 'file_upload',
+  },
+  FOLDER_SHARED: {
+    value: 'folder_shared',
+  },
+  GLOBE: {
+    value: 'globe',
   },
   GROUP: {
     value: 'group',
@@ -128,8 +131,14 @@ export const ICONS = new Enum({
   INFO: {
     value: 'info',
   },
+  INFO_OUTLINE: {
+    value: 'info_outline',
+  },
   INSERT_DRIVE_FILE: {
     value: 'insert_drive_file',
+  },
+  INSTAGRAM: {
+    value: 'instagram',
   },
   KEYBOARD_ARROW_DOWN: {
     value: 'keyboard_arrow_down',
@@ -152,6 +161,9 @@ export const ICONS = new Enum({
   LINK: {
     value: 'link',
   },
+  LINKEDIN: {
+    value: 'linkedin',
+  },
   LOCAL_OFFER: {
     value: 'local_offer',
   },
@@ -161,11 +173,17 @@ export const ICONS = new Enum({
   LOCK: {
     value: 'lock',
   },
+  LOOP: {
+    value: 'loop',
+  },
   MAIL: {
     value: 'mail',
   },
   MESSAGE: {
     value: 'message',
+  },
+  MODE_EDIT: {
+    value: 'mode_edit',
   },
   MORE_VERT: {
     value: 'more_vert',
@@ -179,17 +197,41 @@ export const ICONS = new Enum({
   OPEN_IN_NEW: {
     value: 'open_in_new',
   },
+  PAYMENT: {
+    value: 'payment',
+  },
+  PEOPLE: {
+    value: 'people',
+  },
+  PERM_CONTACT_CALENDAR: {
+    value: 'perm_contact_calendar',
+  },
+  PERSON: {
+    value: 'person',
+  },
   PERSON_OUTLINE: {
     value: 'person_outline',
+  },
+  PHONE: {
+    value: 'phone',
   },
   PICTURE_AS_PDF: {
     value: 'picture_as_pdf',
   },
+  PLAYLIST_ADD_CHECK: {
+    value: 'playlist_add_check',
+  },
   PRESENT_TO_ALL: {
     value: 'present_to_all',
   },
+  RADIO_BUTTON_CHECKED: {
+    value: 'radio_button_checked',
+  },
   RECEIPT: {
     value: 'receipt',
+  },
+  REMOVE: {
+    value: 'remove',
   },
   REMOVE_CIRCLE: {
     value: 'remove_circle',
@@ -197,8 +239,23 @@ export const ICONS = new Enum({
   SEARCH: {
     value: 'search',
   },
+  SEND: {
+    value: 'send',
+  },
+  SETTINGS: {
+    value: 'settings',
+  },
+  SHORT_TEXT: {
+    value: 'short_text',
+  },
   STAR: {
     value: 'star',
+  },
+  TV: {
+    value: 'tv',
+  },
+  TWITTER: {
+    value: 'twitter',
   },
   VERIFIED_USER: {
     value: 'verified_user',
@@ -209,73 +266,16 @@ export const ICONS = new Enum({
   VIEW_MODULE: {
     value: 'view_module',
   },
+  VIEW_WEEK: {
+    value: 'view_week',
+  },
   WARNING: {
     value: 'warning',
-  },
-  TWITTER: {
-    value: 'twitter',
-  },
-  INSTAGRAM: {
-    value: 'instagram',
   },
   WEBSITE: {
     value: 'website',
   },
-  LINKEDIN: {
-    value: 'linkedin',
-  },
-  GLOBE: {
-    value: 'globe',
-  },
   YOUTUBE: {
     value: 'youtube',
-  },
-  PHONE: {
-    value: 'phone',
-  },
-  FOLDER_SHARED: {
-    value: 'folder_shared',
-  },
-  ATTACH_FILE: {
-    value: 'attach_file',
-  },
-  ATTACH_MONEY: {
-    value: 'attach_money',
-  },
-  COMMENT: {
-    value: 'comment',
-  },
-  EXIT_TO_APP: {
-    value: 'exit_to_app',
-  },
-  PERM_CONTACT_CALENDAR: {
-    value: 'perm_contact_calendar',
-  },
-  PLAYLIST_ADD_CHECK: {
-    value: 'playlist_add_check',
-  },
-  PAYMENT: {
-    value: 'payment',
-  },
-  TV: {
-    value: 'tv',
-  },
-  ARROW_DROP_DOWN_CIRCLE: {
-    value: 'arrow_drop_down_circle',
-  },
-  ART_TRACK: {
-    value: 'art_track',
-  },
-  CREATE: {
-    value: 'create',
-  },
-  FILE_UPLOAD: {
-    value: 'file_upload',
-  },
-  RADIO_BUTTON_CHECKED: {
-    value: 'radio_button_checked',
-  },
-  SHORT_TEXT: {
-    value: 'short_text',
   },
 });
