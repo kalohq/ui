@@ -1,8 +1,8 @@
 /* @flow */
 import {isNumber, isString, pickBy, omitBy} from 'lodash';
-import STYLE_WHITELIST from 'utils/style/style-whitelist';
-import PROP_WHITELIST_REGEX from 'utils/style/prop-whitelist';
-import {returnArray} from 'utils/array';
+import STYLE_WHITELIST from './style/style-whitelist';
+import PROP_WHITELIST_REGEX from './style/prop-whitelist';
+import {returnArray} from './array';
 
 const SPACING_REGEX = /^(padding|margin)(Top|Right|Bottom|Left)?$/;
 
