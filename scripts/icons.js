@@ -47,10 +47,10 @@ const generate = () => {
       if (error) return console.log(error); // eslint-disable-line no-console
       const formattedData = result.symbol.sprite.contents
         .toString()
-        .replace('xlink:href', 'xlinkHref')
-        .replace('fill-opacity', 'fillOpacity')
-        .replace('fill-rule', 'fillRule')
-        .replace('clip-path', 'clipPath')
+        .replace(/xlink:href/g, 'xlinkHref')
+        .replace(/fill-opacity/g, 'fillOpacity')
+        .replace(/fill-rule/g, 'fillRule')
+        .replace(/clip-path/g, 'clipPath')
         .replace(
           'xmlns:xlink="http://www.w3.org/1999/xlink"',
           'style={{display: "none"}}'
