@@ -2,11 +2,11 @@
 
 exports[`Alert should render a confirmation alert with an icon 1`] = `
 <div
-  className="root type-confirmation css-16s6ajv0 css-qt79m4"
+  className="root type-confirmation css-134evea0 css-xbq6yp"
   style={Object {}}
 >
   <i
-    className="css-j4zkv10 css-v4li1d"
+    className="css-j4zkv10 css-pjp10r"
     color="green"
     onClick={undefined}
     size={16}
@@ -15,7 +15,7 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
     check_circle
   </i>
   <span
-    className="css-16ef8bd0 css-1vqitqk"
+    className="css-16ef8bd0 css-1oduhpk"
     color="green"
     onClick={undefined}
     size="small"
@@ -28,11 +28,11 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
 
 exports[`Alert should render a warning alert 1`] = `
 <div
-  className="root type-warning css-16s6ajv0 css-qt79m4"
+  className="root type-warning css-134evea0 css-xbq6yp"
   style={Object {}}
 >
   <span
-    className="css-16ef8bd0 css-k98h6i"
+    className="css-16ef8bd0 css-i4nqd3"
     color="orange"
     onClick={undefined}
     size="small"
@@ -45,11 +45,11 @@ exports[`Alert should render a warning alert 1`] = `
 
 exports[`Alert should render shallow component ok 1`] = `
 <div
-  className="root type-info css-16s6ajv0 css-qt79m4"
+  className="root type-info css-134evea0 css-xbq6yp"
   style={Object {}}
 >
   <span
-    className="css-16ef8bd0 css-v9zri0"
+    className="css-16ef8bd0 css-1bicsvo"
     color="blue"
     onClick={undefined}
     size="small"
