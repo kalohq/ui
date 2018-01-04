@@ -460,6 +460,13 @@ const props = {
   yChannelSelector: true,
   z: true,
   zoomAndPan: true,
+
+  //
+  // react-router specific
+  //
+  query: true,
+  activeClassName: true,
+  params: true,
 };
 
 export default new RegExp(

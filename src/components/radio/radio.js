@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import {pickStyles} from 'utils/style';
+import {pickStyles} from '../../utils/style';
 import {isNull} from 'lodash';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import cx from 'classnames';
