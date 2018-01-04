@@ -257,4 +257,7 @@ export const ICONS = new Enum({
   PAYMENT: {
     value: 'payment',
   },
+  TV: {
+    value: 'tv',
+  },
 });
