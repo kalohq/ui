@@ -7,14 +7,20 @@ const AsideContainer = styled.aside`
   width: auto;
   height: 100%;
   min-width: 320px;
-  background-color: #f9fafc;
-  min-height: 100vh;
-  padding: 80px 20px;
+  background-color: ${props => props.theme.colors.grey300};
+  border-right: 1px solid ${props => props.theme.colors.grey400};
+  min-height: calc(100vh - 56px);
+  padding: 20px 0 0;
+  position: fixed;
+  left: 0;
+  top: 56px;
+  overflow-y: auto;
 `;
 
 const Title = styled.h1`
   font-size: 18px;
   font-weight: 500;
+  padding-left: 32px;
 `;
 
 const LinkGroup = styled.ul`
@@ -27,7 +33,8 @@ const LinkItem = styled.li`
   width: 100%;
   display: flex;
   color: #374561;
-  padding: 8px 16px 8px 0;
+  padding: 16px 32px;
+  border-bottom: 1px solid ${props => props.theme.colors.grey400};
   font-size: 16px;
   font-weight: 400;
 

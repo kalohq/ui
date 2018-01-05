@@ -1,13 +1,34 @@
 import React, {Component} from 'react';
-import {toPairs, groupBy, flattenDeep, identity} from 'lodash';
-import styled from 'styled-components';
+import {toPairs} from 'lodash';
+import styled from 'react-emotion';
 
 import withQueries, {gql} from '../hocs/withQueries';
 
 import Documentation from '../layouts/documentation';
 import * as Stories from '../.stories';
 
-const StoryContainer = styled.div`margin: 32px;`;
+const StoryContainer = styled('div')`
+  margin: 32px 0;
+  border: 1px solid ${props => props.theme.colors.grey400};
+  border-radius: ${props => props.theme.layout.borderRadius};
+  width: 100%;
+  padding: 16px;
+`;
+
+const StoryExample = styled('div')`
+  margin: 16px 0;
+  display: inline-block;
+  padding: 16px;
+`;
+
+const StoryTitle = styled('div')`
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: ${props => props.theme.colors.navy600};
+`;
+
+const StoryCode = styled('div')`position: relative;`;
 
 export class ComponentDocumentation extends Component {
   state = {stories: []};
@@ -38,89 +59,39 @@ export class ComponentDocumentation extends Component {
             as: `/components/${c.name}`,
           })),
     };
-    return (
-      <Documentation nav={nav}>
-        {loading ? (
-          'Loading'
-        ) : !component ? (
-          '404'
-        ) : (
-          <span>
-            <h1>{component.name}</h1>
-            <p>Markdown content to be inserted here</p>
+    return loading ? (
+      'Loading'
+    ) : !component ? (
+      '404'
+    ) : (
+      <Documentation nav={nav} pageTitle={component.name}>
+        <span>
+          <p>Markdown content to be inserted here</p>
+          <ul>
+            <li>Dependant Component ({component.dependants.length}):</li>
             <ul>
-              <li>{component.name}</li>
-              <li>{component.module.path}</li>
-              <li>Total Usages ({component.usages.length})</li>
-              <li>Component Dependencies ({component.dependencies.length}):</li>
-              <ul>
-                {component.dependencies.map(c => (
-                  <li key={c.component ? c.component.id : c.name}>
-                    {c.component ? c.component.name : `Unresolved (${c.name})`}
-                    {c.component ? (
-                      <span>
-                        {' '}
-                        ({c.component.module ? c.component.module.path : 'DOM'})
-                      </span>
-                    ) : null}
-                  </li>
-                ))}
-              </ul>
-              <li>Dependant Component ({component.dependants.length}):</li>
-              <ul>
-                {component.dependants.map(c => (
-                  <li key={c.component ? c.component.id : c.name}>
-                    {c.component.name} ({c.component.module ? (
-                      c.component.module.path
-                    ) : (
-                      'DOM'
-                    )})
-                  </li>
-                ))}
-              </ul>
-              <li>Props by usage:</li>
-              <ul>
-                {toPairs(
-                  groupBy(
-                    flattenDeep(
-                      component.usages.map(u => u.props.map(p => p.name))
-                    ),
-                    identity
-                  )
-                )
-                  .map(([name, u]) => ({name, usages: u.length}))
-                  .sort((a, b) => (a.usages > b.usages ? -1 : 1))
-                  .map(p => (
-                    <li key={p.name}>
-                      {p.name} ({p.usages})
-                    </li>
-                  ))}
-              </ul>
-              <li>Stories ({stories.length}):</li>
-              <ul>
-                {stories.map(([name, Story]) => (
-                  <li key={name}>
-                    {name}
-                    <StoryContainer>
-                      <Story />
-                    </StoryContainer>
-                  </li>
-                ))}
-              </ul>
-            </ul>
-            <li>Stories ({stories.length}):</li>
-            <ul>
-              {stories.map(([name, Story]) => (
-                <li key={name}>
-                  {name}
-                  <StoryContainer>
-                    <Story />
-                  </StoryContainer>
+              {component.dependants.map(c => (
+                <li key={c.component ? c.component.id : c.name}>
+                  {c.component.name} ({c.component.module ? (
+                    c.component.module.path
+                  ) : (
+                    'DOM'
+                  )})
                 </li>
               ))}
             </ul>
+            <li>Stories ({stories.length}):</li>
+            {stories.map(([name, Story]) => (
+              <StoryContainer key={name}>
+                <StoryTitle>{name}</StoryTitle>
+                <StoryExample>
+                  <Story />
+                </StoryExample>
+                <StoryCode>source code to go here</StoryCode>
+              </StoryContainer>
+            ))}
           </ul>
-        )}
+        </span>
       </Documentation>
     );
   }

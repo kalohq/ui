@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'react-emotion';
 import {find} from 'lodash';
+import {Helmet} from 'react-helmet';
 
 import Page from '../page';
 import SideNav from '../../components/side-nav';
@@ -48,11 +49,13 @@ const Container = styled.div`
   width: 100%;
   min-height: 100vh;
   display: flex;
+  padding-left: 320px;
 `;
 
 const Main = styled.main`
   padding: 80px 60px;
-  max-width: 920px;
+  width: 100%;
+  max-width: 960px;
 `;
 
 export default class Documentation extends Component {
@@ -60,13 +63,18 @@ export default class Documentation extends Component {
     const {
       children,
       category,
+      pageTitle,
       nav = find(routes, route => route.key === category),
     } = this.props;
     return (
       <Page>
         <Container>
+          <Helmet title={`${pageTitle} - Kalo Design System`} />
           <SideNav title={nav.title} links={nav.links} />
-          <Main>{children}</Main>
+          <Main>
+            <h1>{pageTitle}</h1>
+            {children}
+          </Main>
         </Container>
       </Page>
     );

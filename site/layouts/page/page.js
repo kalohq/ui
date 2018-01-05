@@ -1,7 +1,15 @@
 import React from 'react';
-import styled, {injectGlobal, ThemeProvider} from 'react-emotion';
+import styled, {injectGlobal} from 'react-emotion';
+
+import {ThemeProvider} from 'emotion-theming';
 
 import GlobalNavigation from '../../components/global-navigation';
+import theme from '../../components/theme';
+
+const Container = styled('div')`
+  width: 100%;
+  min-height: 100vh;
+`;
 
 injectGlobal`
   * {
@@ -12,20 +20,17 @@ injectGlobal`
   html {
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-family: 'Fakt Soft Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   }
-`;
-
-const Container = styled.div`
-  width: 100%;
-  min-height: 100vh;
 `;
 
 export default function Page({children}) {
   return (
-    <Container>
-      <GlobalNavigation />
-      {children}
-    </Container>
+    <ThemeProvider theme={theme}>
+      <Container>
+        <GlobalNavigation />
+        {children}
+      </Container>
+    </ThemeProvider>
   );
 }

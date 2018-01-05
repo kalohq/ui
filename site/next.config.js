@@ -10,6 +10,7 @@ module.exports = {
     config.resolve.alias = {
       react: path.resolve(__dirname, './node_modules', 'react'),
       'react-dom': path.resolve(__dirname, './node_modules', 'react-dom'),
+      'kalo-ui': path.resolve(__dirname, '../src/components'),
     };
     config.module.rules.push(
       {

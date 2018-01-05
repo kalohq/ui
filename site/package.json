@@ -48,6 +48,7 @@
     "react-apollo": "^2.0.1",
     "react-dom": "^16.0.0",
     "react-emotion": "^8.0.12",
+    "react-helmet": "^5.2.0",
     "react-pure-render": "^1.0.2",
     "recon-config": "0.0.7",
     "recon-engine": "0.0.7",

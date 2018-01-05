@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
-          <title>KIDS</title>
+          <title>Kalo Design System</title>
           <style dangerouslySetInnerHTML={{__html: this.props.css}} />
         </Head>
         <body>

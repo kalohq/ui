@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Documentation from 'layouts/documentation';
+import Documentation from '../../layouts/documentation';
 
 export default function withDocumentation(options) {
   return function withContent(content) {
