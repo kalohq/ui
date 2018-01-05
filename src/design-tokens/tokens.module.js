@@ -67,3 +67,7 @@ export const fontWeightSemibold = "600";
 export const borderRadius = "4px";
 export const borderRadiusInput = "4px";
 export const borderRadiusButton = "4px";
+export const info = "#C1F4FF";
+export const confirmation = "#D8F0E8";
+export const error = "#FBDFE2";
+export const warning = "#FFEDB4";

@@ -68,4 +68,8 @@
   --border-radius: 4px;
   --border-radius-input: 4px;
   --border-radius-button: 4px;
+  --info: #C1F4FF;
+  --confirmation: #D8F0E8;
+  --error: #FBDFE2;
+  --warning: #FFEDB4;
 }
