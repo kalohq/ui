@@ -55,7 +55,7 @@ export default function Alert(props: TProps) {
           {TYPE_ICON_MAP[type]}
         </Icon>
       ) : null}
-      <Text color={TYPE_COLOR_MAP[type]} size="extra-small" multiline={true}>
+      <Text color={TYPE_COLOR_MAP[type]} size="small" multiline={true}>
         {children}
       </Text>
     </StyledAlert>
