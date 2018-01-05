@@ -68,8 +68,8 @@ module.exports = {
   borderRadius: "4px",
   borderRadiusInput: "4px",
   borderRadiusButton: "4px",
-  info: "#C1F4FF",
-  confirmation: "#D8F0E8",
-  error: "#FBDFE2",
-  warning: "#FFEDB4",
+  info: "#c3f9ff",
+  confirmation: "#e4f7f1",
+  error: "#ffebee",
+  warning: "#fff5ce",
 };
