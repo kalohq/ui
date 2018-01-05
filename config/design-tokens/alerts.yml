@@ -5,10 +5,10 @@ imports:
   - ./color.yml
 props:
   INFO:
-    value: "{!BLUE300}"
+    value: "#c3f9ff"
   CONFIRMATION:
-    value: "{!GREEN300}"
+    value: "#e4f7f1"
   ERROR:
-    value: "{!PINK300}"
+    value: "#ffebee"
   WARNING:
-    value: "{!ORANGE300}"
+    value: "#fff5ce"
