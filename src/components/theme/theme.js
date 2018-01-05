@@ -1,6 +1,6 @@
 /* @flow */
 
-import tokens from 'design-tokens/tokens.theme.js';
+import tokens from '../../design-tokens/tokens.theme.js';
 
 /**
  * ThemeProvider Kalo Theme

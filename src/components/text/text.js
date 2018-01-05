@@ -1,36 +1,25 @@
 /* @flow */
 import * as React from 'react';
-import cx from 'classnames';
-import {Inline, Block} from '../layout';
-import {pickStyles} from 'utils/style';
-import {isString} from 'lodash';
+import styled, {css} from 'react-emotion';
 
-import styles from './text.css';
+import {Inline} from '../layout';
+import DefaultTheme from '../theme';
 
 import type {
   TEXT_WEIGHT,
   TEXT_SIZE,
   TEXT_COLOR,
   TEXT_HOVER_COLOR,
-  TEXT_MARGIN,
   TEXT_ALIGN,
 } from './constants';
 
-import {
-  DEFAULT_HOVER_COLOR,
-  DEFAULT_COLOR,
-  DEFAULT_WEIGHT,
-  DEFAULT_SIZE,
-  DEFAULT_MARGIN,
-  DEFAULT_ALIGN,
-} from './constants';
+import {WEIGHT_MAP, SIZE_MAP} from './constants';
 
-type textProps = {
+type TProps = {
   weight?: TEXT_WEIGHT,
   size?: TEXT_SIZE,
   color?: TEXT_COLOR,
   hoverColor?: TEXT_HOVER_COLOR,
-  margin?: TEXT_MARGIN,
   align?: TEXT_ALIGN,
   domElement?: Function | string,
   component?: Function | string,
@@ -46,65 +35,74 @@ type textProps = {
   target?: string,
   href?: string,
   name?: string,
+  theme?: Object,
 };
 
-export default function Text(props: textProps) {
+const StyledText = styled(Inline)`
+  font-family: 'WebFaktSoftPro', sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: ${props =>
+    props.interactive
+      ? 'pointer'
+      : props.notInteractive ? 'default' : 'inherit'};
+  text-align: ${props => props.align};
+  text-decoration: ${props => (props.noUnderline ? 'none' : 'inherit')};
+  font-weight: ${props => WEIGHT_MAP[props.weight]};
+  font-size: ${props => SIZE_MAP[props.size]}px;
+  color: ${props => props.theme.colors[props.color]};
+
+  &:hover {
+    color: ${props => props.theme.colors[props.hoverColor]};
+    text-decoration: ${props =>
+      props.onClick ? (props.noUnderline ? 'none' : 'underline') : 'inherit'};
+  }
+
+  ${props =>
+    props.multiline &&
+    css`
+      white-space: normal;
+      text-overflow: initial;
+      overflow: visible;
+      white-space: pre-wrap;
+      word-break: break-word;
+    `};
+
+  strong {
+    font-weight: ${props => props.theme.typography.fontWeightMedium};
+  }
+`;
+
+export default function Text(props: TProps) {
   const {
-    children,
-    className,
-    onClick,
-    weight = DEFAULT_WEIGHT,
-    size = DEFAULT_SIZE,
-    color = DEFAULT_COLOR,
-    hoverColor = DEFAULT_HOVER_COLOR,
-    margin = DEFAULT_MARGIN,
-    component = Inline,
-    multiline,
-    resetTransform,
-    align = DEFAULT_ALIGN,
-    noUnderline,
+    weight = 'normal',
+    size = 'small',
+    align = 'unset',
+    color = 'navy600',
+    hoverColor = 'none',
     interactive,
-    notInteractive,
-    dangerouslySetInnerHTML,
-    target,
-    href,
-    name,
+    noUnderline,
+    onClick,
+    children,
+    theme = DefaultTheme,
     ...otherProps
   } = props;
 
-  const Component = isString(component)
-    ? ['h1', 'h2', 'h3', 'h4'].indexOf(component) > -1 ? Block : Inline
-    : component;
-
-  const childrenProp =
-    children === undefined ? {dangerouslySetInnerHTML} : {children};
-
   return (
-    <Component
-      component={component}
+    <StyledText
       onClick={onClick}
-      className={cx(
-        {
-          [styles.root]: true,
-          [styles[`weight-${weight}`]]: true,
-          [styles[`size-${size}`]]: true,
-          [styles[`color-${color}`]]: true,
-          [styles[`hover-color-${hoverColor}`]]: true,
-          [styles[`margin-${margin}`]]: true,
-          [styles[`align-${align}`]]: align !== 'none',
-          [styles.resetTransform]: resetTransform,
-          [styles.multiline]: multiline,
-          [styles.interactive]: (!!onClick && !notInteractive) || interactive,
-          [styles.notInteractive]: notInteractive,
-          [styles.noUnderline]: noUnderline,
-        },
-        className
-      )}
-      name={name}
-      target={target}
-      href={href}
-      {...childrenProp}
-      {...pickStyles(otherProps)}
-    />
+      weight={weight}
+      color={color}
+      hoverColor={hoverColor}
+      align={align}
+      interactive={interactive || onClick}
+      noUnderline={noUnderline}
+      size={size}
+      theme={theme}
+      {...otherProps}
+    >
+      {children}
+    </StyledText>
   );
 }

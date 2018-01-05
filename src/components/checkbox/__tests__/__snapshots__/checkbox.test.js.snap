@@ -1,7 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox should render a checkbox partially checked 1`] = `
-.glamor-2 {
+.glamor-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,11 +24,10 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   justify-content: flex-start;
 }
 
-.glamor-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.glamor-1 {
+  position: relative;
+  width: 14px;
+  height: 14px;
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -35,29 +42,50 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
   align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
   width: 14px;
   height: 14px;
 }
 
-.glamor-1 {
-  display: inline-block;
-  vertical-align: bottom;
+.glamor-3 {
+  margin-left: 10px;
   display: inline-block;
   vertical-align: bottom;
   margin-left: 10px;
+  font-family: 'WebFaktSoftPro',sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: inherit;
+  text-align: unset;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(84,103,137);
+}
+
+.glamor-3:hover {
+  text-decoration: inherit;
+}
+
+.glamor-3 strong {
+  font-weight: 500;
 }
 
 <div
-  className="glamor-2 root"
+  className="root glamor-4 glamor-5"
   name={undefined}
   onClick={undefined}
   style={Object {}}
 >
-  .glamor-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  .glamor-1 {
+  position: relative;
+  width: 14px;
+  height: 14px;
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -72,29 +100,50 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
   align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
   width: 14px;
   height: 14px;
 }
 
 <div
-    className="glamor-0 checkbox indeterminate"
+    className="checkbox indeterminate glamor-0 glamor-1"
     style={Object {}}
   />
-  .glamor-0 {
-  display: inline-block;
-  vertical-align: bottom;
+  .glamor-1 {
+  margin-left: 10px;
   display: inline-block;
   vertical-align: bottom;
   margin-left: 10px;
+  font-family: 'WebFaktSoftPro',sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: inherit;
+  text-align: unset;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(84,103,137);
+}
+
+.glamor-1:hover {
+  text-decoration: inherit;
+}
+
+.glamor-1 strong {
+  font-weight: 500;
 }
 
 <span
-    className="root weight-light size-small color-grey hover-color-none margin-none glamor-0"
-    href={undefined}
-    name={undefined}
+    className="glamor-0 glamor-1"
+    color="navy600"
     onClick={undefined}
+    size="small"
     style={Object {}}
-    target={undefined}
   >
     A checkbox label
   </span>
@@ -102,7 +151,15 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
 `;
 
 exports[`Checkbox should render a checkbox with label 1`] = `
-.glamor-2 {
+.glamor-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -117,11 +174,10 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   justify-content: flex-start;
 }
 
-.glamor-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.glamor-1 {
+  position: relative;
+  width: 14px;
+  height: 14px;
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -136,29 +192,50 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
   align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
   width: 14px;
   height: 14px;
 }
 
-.glamor-1 {
-  display: inline-block;
-  vertical-align: bottom;
+.glamor-3 {
+  margin-left: 10px;
   display: inline-block;
   vertical-align: bottom;
   margin-left: 10px;
+  font-family: 'WebFaktSoftPro',sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: inherit;
+  text-align: unset;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(84,103,137);
+}
+
+.glamor-3:hover {
+  text-decoration: inherit;
+}
+
+.glamor-3 strong {
+  font-weight: 500;
 }
 
 <div
-  className="glamor-2 root"
+  className="root glamor-4 glamor-5"
   name={undefined}
   onClick={undefined}
   style={Object {}}
 >
-  .glamor-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  .glamor-1 {
+  position: relative;
+  width: 14px;
+  height: 14px;
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -173,29 +250,50 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
   align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
   width: 14px;
   height: 14px;
 }
 
 <div
-    className="glamor-0 checkbox checked"
+    className="checkbox checked glamor-0 glamor-1"
     style={Object {}}
   />
-  .glamor-0 {
-  display: inline-block;
-  vertical-align: bottom;
+  .glamor-1 {
+  margin-left: 10px;
   display: inline-block;
   vertical-align: bottom;
   margin-left: 10px;
+  font-family: 'WebFaktSoftPro',sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: inherit;
+  text-align: unset;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(84,103,137);
+}
+
+.glamor-1:hover {
+  text-decoration: inherit;
+}
+
+.glamor-1 strong {
+  font-weight: 500;
 }
 
 <span
-    className="root weight-light size-small color-grey hover-color-none margin-none glamor-0"
-    href={undefined}
-    name={undefined}
+    className="glamor-0 glamor-1"
+    color="navy600"
     onClick={undefined}
+    size="small"
     style={Object {}}
-    target={undefined}
   >
     A checkbox label
   </span>
@@ -203,7 +301,15 @@ exports[`Checkbox should render a checkbox with label 1`] = `
 `;
 
 exports[`Checkbox should render shallow component ok 1`] = `
-.glamor-1 {
+.glamor-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -218,11 +324,10 @@ exports[`Checkbox should render shallow component ok 1`] = `
   justify-content: flex-start;
 }
 
-.glamor-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.glamor-1 {
+  position: relative;
+  width: 14px;
+  height: 14px;
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -237,21 +342,25 @@ exports[`Checkbox should render shallow component ok 1`] = `
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
   align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
   width: 14px;
   height: 14px;
 }
 
 <div
-  className="glamor-1 root"
+  className="root glamor-2 glamor-3"
   name={undefined}
   onClick={undefined}
   style={Object {}}
 >
-  .glamor-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  .glamor-1 {
+  position: relative;
+  width: 14px;
+  height: 14px;
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -266,12 +375,17 @@ exports[`Checkbox should render shallow component ok 1`] = `
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: flex-start;
   align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
   width: 14px;
   height: 14px;
 }
 
 <div
-    className="glamor-0 checkbox checked"
+    className="checkbox checked glamor-0 glamor-1"
     style={Object {}}
   />
 </div>

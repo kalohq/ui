@@ -1,34 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`H2 should allow weight to be overridden 1`] = `
-.glamor-0 {
+.glamor-1 {
   display: block;
+  display: inline-block;
+  vertical-align: bottom;
+  display: block;
+  font-family: 'WebFaktSoftPro',sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: inherit;
+  text-align: unset;
+  text-decoration: inherit;
+  font-weight: 300;
+  font-size: 18px;
+  color: rgb(55,69,97);
+}
+
+.glamor-1:hover {
+  text-decoration: inherit;
+}
+
+.glamor-1 strong {
+  font-weight: 500;
 }
 
 <h2
-  className="glamor-0 root weight-light size-large color-charcoal hover-color-none margin-none root"
-  href={undefined}
-  name={undefined}
+  className="root glamor-0 glamor-1"
+  color="navy700"
   onClick={undefined}
+  size="large"
   style={Object {}}
-  target={undefined}
 >
   An H2 Tag
 </h2>
 `;
 
 exports[`H2 should render shallow component ok 1`] = `
-.glamor-0 {
+.glamor-1 {
   display: block;
+  display: inline-block;
+  vertical-align: bottom;
+  display: block;
+  font-family: 'WebFaktSoftPro',sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: inherit;
+  text-align: unset;
+  text-decoration: inherit;
+  font-weight: 600;
+  font-size: 18px;
+  color: rgb(55,69,97);
+}
+
+.glamor-1:hover {
+  text-decoration: inherit;
+}
+
+.glamor-1 strong {
+  font-weight: 500;
 }
 
 <h2
-  className="glamor-0 root weight-semi-bold size-large color-charcoal hover-color-none margin-none root"
-  href={undefined}
-  name={undefined}
+  className="root glamor-0 glamor-1"
+  color="navy700"
   onClick={undefined}
+  size="large"
   style={Object {}}
-  target={undefined}
 >
   An H2 Tag
 </h2>

@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import {pickStyles} from 'utils/style';
+import {pickStyles} from '../../utils/style';
 import {isNull} from 'lodash';
 import ReactCSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import cx from 'classnames';
@@ -71,7 +71,7 @@ export function Radio(props: RadioProps) {
         </ReactCSSTransitionGroup>
       </Box>
       {label ? (
-        <Text marginLeft={10} size="small" color="grey" component="label">
+        <Text marginLeft={10} size="small" color="navy700" component="label">
           {label}
         </Text>
       ) : null}

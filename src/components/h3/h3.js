@@ -10,7 +10,7 @@ export default function H3(props: h3Props) {
   const {children} = props;
 
   return (
-    <Heading number={3} weight="semi-bold" size="small" {...props}>
+    <Heading component="h3" weight="semi-bold" size="small" {...props}>
       {children}
     </Heading>
   );

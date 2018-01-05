@@ -1,10 +1,11 @@
 import React from 'react';
 import {ThemeProvider} from 'emotion-theming';
-import {Inline, Flex} from 'components/layout';
+import {Inline, Flex, Box} from 'components/layout';
 import Node from './node';
 import Text from 'components/text';
 import H1 from 'components/h1';
 import H3 from 'components/h3';
+import IconSymbols from 'components/icon-symbols';
 
 import theme from 'components/theme';
 
@@ -36,14 +37,15 @@ export default function(renderStory) {
           marginTop={20}
         >
           <H3 marginBottom={10}>Source Code</H3>
-          <Inline>
+          <Box>
             <pre>
               {React.Children.map(story.props.children, (root, idx) => (
                 <Node key={idx} depth={0} node={root} />
               ))}
             </pre>
-          </Inline>
+          </Box>
         </Inline>
+        <IconSymbols />
       </Flex>
     </ThemeProvider>
   );

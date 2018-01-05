@@ -2,27 +2,35 @@
 
 exports[`Alert should render a confirmation alert with an icon 1`] = `
 <div
-  className="css-ue8dg4 root type-confirmation"
+  className="root type-confirmation css-134evea0 css-xbq6yp"
   style={Object {}}
 >
   <i
-    className="root size-16 family-material weight-normal color-green"
+    className="css-1qps5ds0 css-1clu7cm"
+    color="green"
     onClick={undefined}
-    style={
-      Object {
-        "marginRight": "8px",
-      }
-    }
+    size={16}
+    style={Object {}}
   >
-    check_circle
+    <svg
+      aria-hidden="true"
+      height={16}
+      width={16}
+    >
+      <title>
+        check_circle
+      </title>
+      <use
+        href="#check_circle"
+      />
+    </svg>
   </i>
   <span
-    className="root weight-light size-small color-green hover-color-none margin-none multiline css-cfmow6"
-    href={undefined}
-    name={undefined}
+    className="css-16ef8bd0 css-1oduhpk"
+    color="green"
     onClick={undefined}
+    size="small"
     style={Object {}}
-    target={undefined}
   >
     A confirmation alert
   </span>
@@ -31,16 +39,15 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
 
 exports[`Alert should render a warning alert 1`] = `
 <div
-  className="css-ue8dg4 root type-warning"
+  className="root type-warning css-134evea0 css-xbq6yp"
   style={Object {}}
 >
   <span
-    className="root weight-light size-small color-orange hover-color-none margin-none multiline css-cfmow6"
-    href={undefined}
-    name={undefined}
+    className="css-16ef8bd0 css-i4nqd3"
+    color="orange"
     onClick={undefined}
+    size="small"
     style={Object {}}
-    target={undefined}
   >
     A warning alert
   </span>
@@ -49,16 +56,15 @@ exports[`Alert should render a warning alert 1`] = `
 
 exports[`Alert should render shallow component ok 1`] = `
 <div
-  className="css-ue8dg4 root type-info"
+  className="root type-info css-134evea0 css-xbq6yp"
   style={Object {}}
 >
   <span
-    className="root weight-light size-small color-blue hover-color-none margin-none multiline css-cfmow6"
-    href={undefined}
-    name={undefined}
+    className="css-16ef8bd0 css-1bicsvo"
+    color="blue"
     onClick={undefined}
+    size="small"
     style={Object {}}
-    target={undefined}
   >
     A info alert
   </span>

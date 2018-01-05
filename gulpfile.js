@@ -14,18 +14,20 @@ gulp.task('css', () => {
   return gulp
     .src('./src/components/**/*.css')
     .pipe(postcss())
-    .pipe(gulp.dest('lib'));
+    .pipe(gulp.dest('lib/components'));
 });
 
 /**
  * Compile component JS from ES6/JSX down to ES5
  */
-gulp.task('js-components', () =>
+gulp.task('js', () =>
   gulp
     .src([
-      'src/components/**/*.js',
-      '!src/components/**/__tests__/*',
-      '!src/components/**/__stories__/*',
+      'src/**/*.js',
+      '!**/__tests__/*',
+      '!src/design-tokens/*',
+      '!**/__stories__/*',
+      '!src/utils/test/**/*',
     ])
     .pipe(
       babel({
@@ -44,7 +46,16 @@ gulp.task('copy-files', () =>
     .src(
       'src/components/**/*(*.woff|*.woff2|*.ttf|*.jpg|*.jpeg|*.png|*.gif|*.svg)'
     )
-    .pipe(gulp.dest('lib'))
+    .pipe(gulp.dest('lib/components'))
+);
+
+/**
+ * Copy design tokens to lib
+ */
+gulp.task('copy-design-tokens', () =>
+  gulp
+    .src(['src/design-tokens/*(*.js|*.json|*.css)'])
+    .pipe(gulp.dest('lib/design-tokens'))
 );
 
 /**
@@ -62,4 +73,9 @@ gulp.task('docs:markdown', () => {
 /**
  * General tasks
  */
-gulp.task('build-production', ['css', 'js-components', 'copy-files']);
+gulp.task('build-production', [
+  'css',
+  'js',
+  'copy-files',
+  'copy-design-tokens',
+]);

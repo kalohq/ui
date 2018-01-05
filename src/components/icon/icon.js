@@ -1,73 +1,58 @@
 /* @flow */
 import * as React from 'react';
-import cx from 'classnames';
-import {parseStyleProps} from 'utils/style';
+import styled from 'react-emotion';
+import {Inline} from '../layout';
+import DefaultTheme from '../theme';
 
-import styles from './icon.css';
+import type {ICON_SIZE, ICON_COLOR} from './constants';
 
-import type {
-  ICON_SIZE,
-  ICON_COLOR,
-  ICON_FAMILY,
-  ICON_WEIGHT,
-} from './constants';
-
-import {
-  DEFAULT_SIZE,
-  DEFAULT_WEIGHT,
-  DEFAULT_COLOR,
-  DEFAULT_FAMILY,
-  FONTELLO_ICONS,
-} from './constants';
+import {ICONS, DEFAULT_SIZE, DEFAULT_COLOR} from './constants';
 
 type Props = {
-  children?: React.Node,
+  children: $Keys<typeof ICONS>,
   size?: ICON_SIZE,
   color?: ICON_COLOR,
-  family?: ICON_FAMILY,
-  weight?: ICON_WEIGHT,
   className?: string,
   onClick?: Function,
+  theme?: Object,
 };
 
-const isString = (test: any): boolean => typeof test === 'string';
+const StyledIcon = styled(Inline)`
+  user-select: none;
+  line-height: 1em;
+  vertical-align: middle;
+  cursor: ${props => (props.interactive ? 'cursor' : 'inherit')};
+  font-size: ${props => `${props.size}px`};
+  height: ${props => `${props.size}px`};
+  fill: ${props => props.theme.colors[props.color]};
+`;
 
 export default function Icon(props: Props) {
   const {
     children,
     size = DEFAULT_SIZE,
     color = DEFAULT_COLOR,
-    weight = DEFAULT_WEIGHT,
-    family = DEFAULT_FAMILY,
     className,
     onClick,
+    theme = DefaultTheme,
     ...otherProps
   } = props;
 
-  const {unstyledProps, style} = parseStyleProps(otherProps);
-
   return (
-    <i
-      className={cx(
-        {
-          [styles.root]: true,
-          [styles[`size-${size}`]]: !!size,
-          [styles[`family-${family}`]]: true,
-          [styles[`weight-${weight}`]]: true,
-          [styles[`color-${color}`]]: true,
-          [styles.interactive]: !!onClick,
-        },
-        className
-      )}
+    <StyledIcon
+      className={className}
+      component="i"
+      interactive={!!onClick}
       onClick={onClick}
-      style={style}
-      {...unstyledProps}
+      theme={theme}
+      size={size}
+      color={color}
+      {...otherProps}
     >
-      {family === 'fontello' && isString(children) ? (
-        FONTELLO_ICONS[String(children)] || children
-      ) : (
-        children
-      )}
-    </i>
+      <svg width={size} height={size} aria-hidden="true">
+        <title>{children}</title>
+        <use href={`#${children}`} />
+      </svg>
+    </StyledIcon>
   );
 }
