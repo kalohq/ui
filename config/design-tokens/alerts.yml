@@ -1,0 +1,14 @@
+global:
+  type: 'alerts'
+  category: 'alerts'
+imports:
+  - ./color.yml
+props:
+  INFO:
+    value: "{!BLUE300}"
+  CONFIRMATION:
+    value: "{!GREEN300}"
+  ERROR:
+    value: "{!PINK300}"
+  WARNING:
+    value: "{!ORANGE300}"

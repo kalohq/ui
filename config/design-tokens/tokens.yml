@@ -4,3 +4,4 @@ imports:
   - ./font-size.yml
   - ./font-weight.yml
   - ./border-radius.yml
+  - ./alerts.yml
