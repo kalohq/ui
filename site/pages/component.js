@@ -87,7 +87,6 @@ export class ComponentDocumentation extends Component {
                 <StoryExample>
                   <Story />
                 </StoryExample>
-                <StoryCode>source code to go here</StoryCode>
               </StoryContainer>
             ))}
           </ul>
