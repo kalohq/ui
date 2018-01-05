@@ -1,11 +1,10 @@
 /* @flow */
 import * as React from 'react';
-import cx from 'classnames';
+import styled from 'react-emotion';
+
 import Icon from '../icon';
 import Text from '../text';
 import {Box} from '../layout';
-
-import styles from './alert.css';
 
 const TYPE_COLOR_MAP = {
   info: 'blue',
@@ -28,25 +27,27 @@ type TProps = {
   justifyContent?: 'left' | 'center',
 };
 
+const StyledAlert = styled(Box)`
+  border-radius: ${props => props.theme.layout.borderRadius};
+  background-color: ${props => props.theme.alerts[props.type]};
+`;
+
 export default function Alert(props: TProps) {
   const {
     children,
     showIcon,
-    type,
+    type = 'info',
     justifyContent = 'center',
     ...otherProps
   } = props;
 
   return (
-    <Box
-      className={cx({
-        [styles.root]: true,
-        [styles[`type-${type}`]]: true,
-      })}
-      padding={[8, 16]}
+    <StyledAlert
+      padding={['medium', 'large']}
       flexDirection="row"
       alignItems="center"
       justifyContent={justifyContent}
+      type={type}
       {...otherProps}
     >
       {showIcon ? (
@@ -54,9 +55,9 @@ export default function Alert(props: TProps) {
           {TYPE_ICON_MAP[type]}
         </Icon>
       ) : null}
-      <Text color={TYPE_COLOR_MAP[type]} multiline={true}>
+      <Text color={TYPE_COLOR_MAP[type]} size="extra-small" multiline={true}>
         {children}
       </Text>
-    </Box>
+    </StyledAlert>
   );
 }
