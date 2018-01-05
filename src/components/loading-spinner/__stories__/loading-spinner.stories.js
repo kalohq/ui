@@ -1,11 +1,6 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
 
-import LoadingSpinner from 'components/loading-spinner';
+import CLoadingSpinner from 'components/loading-spinner';
 
-storiesOf(
-  'LoadingSpinner',
-  module
-).addWithInfo('Loading Spinner', 'A standard loading spinner', () => {
-  return <LoadingSpinner />;
-});
+/** A standard loading spinner */
+export const LoadingSpinner = () => <CLoadingSpinner />;
