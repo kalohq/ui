@@ -13,7 +13,9 @@ Object {
   "borderRadiusButton": "4px",
   "borderRadiusInput": "4px",
   "charcoal": "rgb(55, 69, 97)",
+  "confirmation": "#e4f7f1",
   "currentColor": "currentColor",
+  "error": "#ffebee",
   "fontSizeHeadingLarge": "32px",
   "fontSizeHeadingMedium": "24px",
   "fontSizeHeadingSmall": "16px",
@@ -38,6 +40,7 @@ Object {
   "grey500": "rgb(176, 186, 195)",
   "grey600": "rgb(137, 146, 155)",
   "grey700": "rgb(112, 125, 138)",
+  "info": "#c3f9ff",
   "inherit": "inherit",
   "navy": "rgb(147, 166, 193)",
   "navy300": "rgb(249, 250, 252)",
@@ -69,6 +72,7 @@ Object {
   "silver": "rgb(176, 186, 195)",
   "slate": "rgb(84, 103, 137)",
   "snow": "rgb(249, 250, 252)",
+  "warning": "#fff5ce",
   "white": "rgb(255, 255, 255)",
 }
 `;
