@@ -1,9 +1,9 @@
 /* @flow */
 import React from 'react';
 import styled from 'react-emotion';
-import {storiesOf} from '@storybook/react';
 
 import Icon from 'components/icon';
+import IconSymbols from 'components/icon-symbols';
 import Text from 'components/text';
 
 import {ICONS} from '../constants';
@@ -24,24 +24,19 @@ const IconBlock = styled('div')`
   background-color: ${props => props.theme.colors.grey200};
 `;
 
-storiesOf(
-  'Icon',
-  module
-).addWithInfo(
-  'Icon',
-  'Renders an icon from the Google Material Design icon set. See material.io for a list of icons',
-  () => {
-    return (
-      <GridContainer>
-        {ICONS.values.map(icon => (
-          <IconBlock key={icon}>
-            <Icon color="blue400" size={24}>
-              {icon}
-            </Icon>
-            <Text>{icon}</Text>
-          </IconBlock>
-        ))}
-      </GridContainer>
-    );
-  }
-);
+/** Renders an icon from the Google Material Design icon set. See material.io for a list of icons */
+export function IconSet() {
+  return (
+    <GridContainer>
+      <IconSymbols />
+      {ICONS.values.map(icon => (
+        <IconBlock key={icon}>
+          <Icon color="blue400" size={24}>
+            {icon}
+          </Icon>
+          <Text>{icon}</Text>
+        </IconBlock>
+      ))}
+    </GridContainer>
+  );
+}

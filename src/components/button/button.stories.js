@@ -1,7 +1,6 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
 
-import Button from 'components/button';
+import Button from './button';
 
 const myClickFunction = () => {
   /* eslint-disable no-alert */
