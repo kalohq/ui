@@ -6,7 +6,7 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
   style={Object {}}
 >
   <i
-    className="css-1qps5ds0 css-1clu7cm"
+    className="css-6o5tv90 css-1evqljd"
     color="green"
     onClick={undefined}
     size={16}
@@ -21,7 +21,7 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
         check_circle
       </title>
       <use
-        href="#check_circle"
+        xlinkHref="#check_circle"
       />
     </svg>
   </i>
