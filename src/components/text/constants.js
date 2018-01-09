@@ -87,8 +87,7 @@ export type TEXT_COLOR =
   | 'slate' // deprecated
   | 'charcoal' // deprecated
   | 'dark-grey' // deprecated
-  | 'light-grey' // deprecated
-  | 'grey'; // deprecated
+  | 'light-grey'; // deprecated
 
 export type TEXT_HOVER_COLOR = TEXT_COLOR;
 
