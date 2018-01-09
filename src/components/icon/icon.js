@@ -51,7 +51,7 @@ export default function Icon(props: Props) {
     >
       <svg width={size} height={size} aria-hidden="true">
         <title>{children}</title>
-        <use href={`#${children}`} />
+        <use xlinkHref={`#${children}`} />
       </svg>
     </StyledIcon>
   );
