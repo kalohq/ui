@@ -104,6 +104,9 @@ export const ICONS = new Enum({
   EMAIL: {
     value: 'email',
   },
+  ERROR_OUTLINE: {
+    value: 'error_outline',
+  },
   EXIT_TO_APP: {
     value: 'exit_to_app',
   },
@@ -205,6 +208,9 @@ export const ICONS = new Enum({
   },
   PERM_CONTACT_CALENDAR: {
     value: 'perm_contact_calendar',
+  },
+  PERM_IDENTITY: {
+    value: 'perm_identity',
   },
   PERSON: {
     value: 'person',
