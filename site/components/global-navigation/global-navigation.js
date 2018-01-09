@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 const StyledBar = styled('div')`
   width: 100%;
-  height: 56px;
-  background-color: #374561;
+  height: 58px;
+  background-color: ${props => props.theme.colors.pink500};
   position: fixed;
   top: 0;
   left: 0;
@@ -25,16 +25,9 @@ const StyledLogo = styled.div`
   }
 `;
 
-const StyledSearch = styled.div`
-  width: 250px;
-  height: 30px;
-  background-color: #374561;
-  border-radius: 40px;
-`;
-
 const Inner = styled.div`
   width: 100%;
-  padding: 0 32px;
+  padding: 0 36px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -50,7 +43,7 @@ const StyledNav = styled.ul`
   height: 56px;
 
   li {
-    padding: 4px 8px;
+    padding: 6px 8px;
 
     a {
       color: #fff;
@@ -61,7 +54,7 @@ const StyledNav = styled.ul`
   }
 `;
 
-export default function GlobalNavigation({props}) {
+export default function GlobalNavigation() {
   return (
     <StyledBar>
       <Inner>

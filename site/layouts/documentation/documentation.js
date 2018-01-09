@@ -5,6 +5,7 @@ import {Helmet} from 'react-helmet';
 
 import Page from '../page';
 import SideNav from '../../components/side-nav';
+import {H1} from '../../components/typography';
 
 const routes = [
   {
@@ -18,10 +19,6 @@ const routes = [
       {
         title: 'Typography',
         path: '/brand/typography',
-      },
-      {
-        title: 'Illustrations',
-        path: '/brand/illustrations',
       },
       {
         title: 'Logos',
@@ -72,7 +69,7 @@ export default class Documentation extends Component {
           <Helmet title={`${pageTitle} - Kalo Design System`} />
           <SideNav title={nav.title} links={nav.links} />
           <Main>
-            <h1>{pageTitle}</h1>
+            <H1>{pageTitle}</H1>
             {children}
           </Main>
         </Container>

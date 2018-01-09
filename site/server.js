@@ -22,6 +22,29 @@ const express = require('express');
 app.prepare().then(() => {
   const cwd = path.resolve(process.cwd(), '../');
 
+  /** Import Markdown documentation files */
+  const mdPaths = glob.sync('src/**/README.md', {cwd}).map(docPath => {
+    const fullDocumentationPath = path.resolve(cwd, docPath);
+    const name = upperFirst(
+      camelCase(path.parse(path.parse(docPath).name).name)
+    );
+
+    return [name, fullDocumentationPath];
+  });
+
+  fs.writeFileSync(
+    path.resolve(__dirname, '.markdown'),
+    `// This file is generated. Do not edit!
+// import dynamic from 'next/dynamic';
+${mdPaths
+      .map(
+        p =>
+          `export const ${p[0]} = /*dynamic(*/import('${p[1]}')/*, {ssr: false})*/;`
+      )
+      .join('\n')}`,
+    'utf8'
+  );
+
   // TODO: Move this hackiness out of here
   const storyPaths = glob
     .sync('src/**/__stories__/**/*.stories.js', {cwd})

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Documentation from '../../layouts/documentation';
+import MarkdownContent from '../../components/markdown-content';
 
 export default function withDocumentation(options) {
   return function withContent(content) {
@@ -12,7 +13,7 @@ export default function withDocumentation(options) {
           category={options.category}
           pageTitle={options.title}
         >
-          {content}
+          <MarkdownContent>{content}</MarkdownContent>
         </Documentation>
       );
     };

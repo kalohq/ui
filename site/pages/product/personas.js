@@ -1,6 +1,6 @@
 import markdown from 'markdown-in-js';
 
-import withDocumentation from 'components/with-documentation';
+import withDocumentation from '../../components/with-documentation';
 
 export default withDocumentation({
   title: 'Personas',

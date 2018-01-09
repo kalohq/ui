@@ -3,8 +3,9 @@ import {toPairs} from 'lodash';
 import styled from 'react-emotion';
 
 import withQueries, {gql} from '../hocs/withQueries';
-
 import Documentation from '../layouts/documentation';
+import {H2} from '../components/typography';
+
 import * as Stories from '../.stories';
 
 const StoryContainer = styled('div')`
@@ -16,9 +17,8 @@ const StoryContainer = styled('div')`
 `;
 
 const StoryExample = styled('div')`
-  margin: 16px 0;
+  margin: 16px 0 0;
   display: inline-block;
-  padding: 16px;
 `;
 
 const StoryTitle = styled('div')`
@@ -28,10 +28,13 @@ const StoryTitle = styled('div')`
   color: ${props => props.theme.colors.navy600};
 `;
 
-const StoryCode = styled('div')`position: relative;`;
-
 export class ComponentDocumentation extends Component {
-  state = {stories: []};
+  constructor() {
+    super();
+    this.state = {
+      stories: [],
+    };
+  }
   async componentDidUpdate(prevProps) {
     if (
       prevProps.data.loading &&
@@ -41,7 +44,7 @@ export class ComponentDocumentation extends Component {
       const load = Stories[this.props.data.component.name];
       if (load) {
         const stories = await load;
-        this.setState({stories: toPairs(stories)});
+        this.setState({stories: toPairs(stories)}); // eslint-disable-line react/no-did-update-set-state
       }
     }
   }
@@ -67,29 +70,26 @@ export class ComponentDocumentation extends Component {
       <Documentation nav={nav} pageTitle={component.name}>
         <span>
           <p>Markdown content to be inserted here</p>
-          <ul>
-            <li>Dependant Component ({component.dependants.length}):</li>
-            <ul>
-              {component.dependants.map(c => (
-                <li key={c.component ? c.component.id : c.name}>
-                  {c.component.name} ({c.component.module ? (
-                    c.component.module.path
-                  ) : (
-                    'DOM'
-                  )})
-                </li>
+          {stories.length >= 1 ? (
+            <React.Fragment>
+              <H2>
+                {stories.length} {stories.length === 1 ? 'Story' : 'Stories'}
+              </H2>
+              {stories.map(([name, Story]) => (
+                <StoryContainer key={name}>
+                  <StoryTitle>
+                    {name
+                      .replace(/([A-Z])/g, ' $1')
+                      .charAt(0)
+                      .toUpperCase() + name.replace(/([A-Z])/g, ' $1').slice(1)}
+                  </StoryTitle>
+                  <StoryExample>
+                    <Story />
+                  </StoryExample>
+                </StoryContainer>
               ))}
-            </ul>
-            <li>Stories ({stories.length}):</li>
-            {stories.map(([name, Story]) => (
-              <StoryContainer key={name}>
-                <StoryTitle>{name}</StoryTitle>
-                <StoryExample>
-                  <Story />
-                </StoryExample>
-              </StoryContainer>
-            ))}
-          </ul>
+            </React.Fragment>
+          ) : null}
         </span>
       </Documentation>
     );
