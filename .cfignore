@@ -1,0 +1,4 @@
+node_modules
+lib
+site/node_modules
+site/.next
