@@ -1,6 +1,6 @@
 /* @flow */
 
-import Enum from 'utils/enum';
+import Enum from '../../utils/enum';
 
 import type {TEXT_COLOR} from '../text/constants';
 

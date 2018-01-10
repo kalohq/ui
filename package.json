@@ -18,7 +18,8 @@
     "compile": "npm run generate-tokens && npm run generate-icon-symbols && gulp build-production",
     "test": "jest",
     "dist": "rimraf lib && npm run compile",
-    "copy-flow": "flow-copy-source src/components lib --ignore '{index.js,**/__tests__/*,**/__stories__/*}'",
+    "copy-flow":
+      "flow-copy-source src/components lib --ignore '{index.js,**/__tests__/*,**/__stories__/*}'",
     "typecheck": "flow",
     "lint": "eslint src",
     "precommit": "lint-staged",
@@ -26,9 +27,7 @@
     "generate-icon-symbols": "node scripts/icons.js"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint"
-    ]
+    "*.js": ["eslint"]
   },
   "author": "The Kalo Team",
   "license": "ISC",
@@ -117,20 +116,11 @@
     "react-pure-render": "^1.0.2"
   },
   "babel": {
-    "presets": [
-      "es2015",
-      "stage-2",
-      "react"
-    ],
-    "ignore": [
-      "__stories__"
-    ]
+    "presets": ["es2015", "stage-2", "react"],
+    "ignore": ["__stories__"]
   },
   "jest": {
-    "modulePaths": [
-      "src/core",
-      "src"
-    ],
+    "modulePaths": ["src/core", "src"],
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|html)$": "<rootDir>/src/utils/test/mocks/file-mock.js",
       "\\.(css|less)$": "identity-obj-proxy"
