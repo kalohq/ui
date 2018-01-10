@@ -1,21 +1,10 @@
 {
   "presets": ["next/babel"],
+  "extends": "../.babelrc",
   "plugins": [
     "lodash",
     ["emotion", {"inline": true}],
     ["markdown-in-js/babel"],
-    ["babel-plugin-transform-flow-strip-types"],
-    [
-      "module-resolver",
-      {
-        "root": ["./"],
-        "alias": {
-          "components": "./docs/components",
-          "layouts": "./docs/layouts",
-          "content": "./docs/content",
-          "kalo-ui": "../src/components"
-        }
-      }
-    ]
+    ["babel-plugin-transform-flow-strip-types"]
   ]
 }

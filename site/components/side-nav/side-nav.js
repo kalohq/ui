@@ -38,6 +38,14 @@ const LinkItem = styled.li`
   font-size: 16px;
   font-weight: 400;
 
+  &:first-of-type {
+    border-top: 1px solid ${props => props.theme.colors.grey400};
+  }
+
+  &:hover {
+    background-color: ${props => props.theme.colors.grey200};
+  }
+
   a {
     text-decoration: none;
     color: inherit;

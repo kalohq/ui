@@ -1,6 +1,7 @@
 import React from 'react';
 import markdown from 'markdown-in-js';
 import styled from 'react-emotion';
+require('prismjs');
 
 import withDocumentation from '../../components/with-documentation';
 
@@ -18,7 +19,7 @@ const colors = [
   },
   {
     swatch: 'Navy',
-    key: '#93A6C1',
+    key: '#374561',
     colors: {
       navy300: '#F9FAFC',
       navy400: '#C6C7D8',
@@ -120,6 +121,25 @@ export default withDocumentation({
   title: 'Color',
   category: 'brand',
 })(markdown`
+The Kalo brand palette consists of two primary colors, and four secondary.
+
+## Colors and variables
+The whole color palette is available in several different formats (CSS variables, JS variables, and via the theme prop).
+Variables use the color name (seen below on the right). For example, to use pink in CSS, access it like so:
+
+\`\`\`css
+h1 {
+  color: var(--pink500);
+}
+\`\`\`
+
+Or if you want to use Emotion to access the lightest shade of orange:
+
+\`\`\`js
+color: ${props => props.theme.colors.pink500}
+\`\`\`
+
+## Palette
 <Swatches>
   ${colors.map(swatch => (
     <Swatch

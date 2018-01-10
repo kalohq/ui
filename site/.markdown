@@ -1,0 +1,7 @@
+// This file is generated. Do not edit!
+// import dynamic from 'next/dynamic';
+export const Readme = /*dynamic(*/import('/Users/ap/Projects/kalo/ui/src/components/button/README.md')/*, {ssr: false})*/;
+export const Readme = /*dynamic(*/import('/Users/ap/Projects/kalo/ui/src/components/checkbox/README.md')/*, {ssr: false})*/;
+export const Readme = /*dynamic(*/import('/Users/ap/Projects/kalo/ui/src/components/layout/README.md')/*, {ssr: false})*/;
+export const Readme = /*dynamic(*/import('/Users/ap/Projects/kalo/ui/src/components/paper/README.md')/*, {ssr: false})*/;
+export const Readme = /*dynamic(*/import('/Users/ap/Projects/kalo/ui/src/design-tokens/README.md')/*, {ssr: false})*/;

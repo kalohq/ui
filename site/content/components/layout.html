@@ -1,0 +1,26 @@
+<h1 id="layout">Layout</h1>
+<p>The layout components are the primitive building blocks of the Kalo User Interface.</p>
+<h2 id="box-and-flex">Box and Flex</h2>
+<p>A wrapper component that implements some default flex values.</p>
+<h2 id="inline">Inline</h2>
+<p>An <code>inline-block</code> element.</p>
+<h2 id="spacing">Spacing</h2>
+<p>Margin and padding can be set via the <code>margin</code> and <code>padding</code> props. The re are also more granular props for specifying particular directions: <code>marginLeft</code>, <code>paddingTop</code> etc.</p>
+<p>These props can take a variety of values:</p>
+<ul>
+<li>Value specific values: <code>padding=&quot;20px&quot;</code></li>
+<li>Or scale values: <code>margin=&quot;medium&quot;</code></li>
+</ul>
+<p>The scale values relate to a multiple of 8px:</p>
+<pre><code class="lang-js">marginLeft=&quot;extra-small&quot; // margin-left: 2px
+marginLeft=&quot;small&quot; // margin-left: 4px
+marginLeft=&quot;medium&quot; // margin-left: 8px
+marginLeft=&quot;large&quot; // margin-left: 16px
+marginLeft=&quot;extra-large&quot; // margin-left: 24px
+</code></pre>
+<p>These can also be mixed with pixel specific values:</p>
+<pre><code class="lang-js">padding={[20, &quot;large&quot;, &quot;medium&quot;, 38]}
+</code></pre>
+<h2 id="the-css-and-style-props">The css and style props</h2>
+<p>The <code>css</code> prop is inherited from <a href="https://github.com/emotion-js/emotion">Emotion</a> and is available on every component. Styles passed in through this prop, will be set via a classname generated at run-time.</p>
+<p>The <code>style</code> prop is used to add styles to an element inline via the style attribute. This should be used for regulary computed styles as it is considerably more performant.</p>

@@ -5,7 +5,8 @@ const graphqlHTTP = require('express-graphql');
 const {createEngine: createReconEngine} = require('recon-engine');
 const {getConfig: getReconConfig} = require('recon-config');
 const glob = require('glob');
-const {camelCase, upperFirst, fromPairs} = require('lodash');
+const {camelCase, upperFirst} = require('lodash');
+const marked = require('marked');
 
 const routes = require('./routes');
 
@@ -23,27 +24,21 @@ app.prepare().then(() => {
   const cwd = path.resolve(process.cwd(), '../');
 
   /** Import Markdown documentation files */
-  const mdPaths = glob.sync('src/**/README.md', {cwd}).map(docPath => {
+  glob.sync('src/components/**/README.md', {cwd}).map(docPath => {
     const fullDocumentationPath = path.resolve(cwd, docPath);
-    const name = upperFirst(
-      camelCase(path.parse(path.parse(docPath).name).name)
+
+    const componentName = docPath
+      .replace(/src\/components\//, '')
+      .replace(/\/README.md/, '');
+
+    console.log(`Converting markdown for ${componentName}`);
+
+    return fs.writeFileSync(
+      path.join(__dirname, `./content/components/${componentName}.html`),
+      marked(fs.readFileSync(fullDocumentationPath, 'utf-8')),
+      'utf8'
     );
-
-    return [name, fullDocumentationPath];
   });
-
-  fs.writeFileSync(
-    path.resolve(__dirname, '.markdown'),
-    `// This file is generated. Do not edit!
-// import dynamic from 'next/dynamic';
-${mdPaths
-      .map(
-        p =>
-          `export const ${p[0]} = /*dynamic(*/import('${p[1]}')/*, {ssr: false})*/;`
-      )
-      .join('\n')}`,
-    'utf8'
-  );
 
   // TODO: Move this hackiness out of here
   const storyPaths = glob

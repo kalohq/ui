@@ -2,15 +2,16 @@
 const path = require('path');
 
 module.exports = {
+  transpileModules: ['../src'],
   webpack: config => {
     config.resolve.modules.push(
       path.resolve(__dirname, '../src'),
       path.resolve(__dirname, '../node_modules')
     );
     config.resolve.alias = {
-      react: path.resolve(__dirname, './node_modules', 'react'),
-      'react-dom': path.resolve(__dirname, './node_modules', 'react-dom'),
-      'kalo-ui': path.resolve(__dirname, '../src/components'),
+      react: path.resolve(__dirname, 'node_modules', 'react'),
+      'react-dom': path.resolve(__dirname, 'node_modules', 'react-dom'),
+      kui: path.resolve(__dirname, '../src'),
     };
     config.module.rules.push(
       {

@@ -97,7 +97,6 @@
     "react-pure-render": "1.0.2",
     "react-storybook-addon-add-stories-group": "0.1.0",
     "react-test-renderer": "15.4.1",
-    "react-transition-group": "^1.2.1",
     "rimraf": "2.6.1",
     "style-loader": "0.16.1",
     "styled-system": "^1.0.8",
@@ -137,5 +136,8 @@
       "!src/**/*.test.js",
       "!src/**/*.stories.js"
     ]
+  },
+  "dependencies": {
+    "marked": "^0.3.12"
   }
 }
