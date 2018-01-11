@@ -1,10 +1,9 @@
 /* @flow */
 import React from 'react';
 import styled from 'react-emotion';
-import {storiesOf} from '@storybook/react';
 
-import Icon from 'components/icon';
-import Text from 'components/text';
+import Icon from '../icon';
+import Text from '../../text';
 
 import {ICONS} from '../constants';
 
@@ -24,14 +23,12 @@ const IconBlock = styled('div')`
   background-color: ${props => props.theme.colors.grey200};
 `;
 
-storiesOf(
-  'Icon',
-  module
-).addWithInfo(
-  'Icon',
-  'Renders an icon from the Google Material Design icon set. See material.io for a list of icons',
-  () => {
-    return (
+export const examples = [
+  {
+    title: 'Icons',
+    description:
+      'Renders an icon from the Google Material Design icon set. See material.io for a list of icons',
+    render: () => (
       <GridContainer>
         {ICONS.values.map(icon => (
           <IconBlock key={icon}>
@@ -42,6 +39,6 @@ storiesOf(
           </IconBlock>
         ))}
       </GridContainer>
-    );
-  }
-);
+    ),
+  },
+];

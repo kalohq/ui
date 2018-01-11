@@ -1,17 +1,17 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
 
-import PaperMenu, {PaperMenuItem} from 'components/paper-menu';
-import {Flex, Box} from 'components/layout';
-import Text from 'components/text';
-import Button from 'components/button';
+import PaperMenu, {PaperMenuItem} from '../paper-menu';
+import {Flex, Box} from '../../layout';
+import Text from '../../text';
+import Button from '../../button';
 
-storiesOf(
-  'PaperMenu',
-  module
-).addWithInfo('PaperMenu', 'A dropdown menu utilising Paper styling', () => {
-  return <Example />;
-});
+export const examples = [
+  {
+    title: 'PaperMenu',
+    description: 'A dropdown menu utilising Paper styling',
+    render: () => <Example />,
+  },
+];
 
 const InnerLayoutForDemo = props => (
   <Flex flexDirection="column">

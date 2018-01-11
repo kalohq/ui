@@ -1,5 +1,4 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
 
 import Text from '../text';
 
@@ -9,7 +8,7 @@ const myClickFunction = () => {
   /* eslint-enable no-alert */
 };
 
-const examples = [
+export const examples = [
   {
     title: 'a text node',
     description: 'A standard text node',
@@ -95,10 +94,3 @@ const examples = [
     },
   },
 ];
-
-examples.forEach(example => {
-  storiesOf(
-    'Typography',
-    module
-  ).addWithInfo(example.title, example.description, () => example.render());
-});

@@ -1,5 +1,5 @@
 /* @flow */
-import Enum from 'utils/enum';
+import Enum from '../../utils/enum';
 
 export const RADIO_SIZES = new Enum({
   SMALL: {
