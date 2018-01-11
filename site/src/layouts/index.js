@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import {ThemeProvider} from 'emotion-theming';
 import styled, {injectGlobal} from 'react-emotion';
-import {find} from 'lodash';
+import {upperFirst} from 'lodash';
 
 import Header from '../components/header';
 import SideNav from '../components/side-nav';
@@ -11,54 +11,12 @@ import theme from '../../../src/components/theme';
 
 import FSPBlond from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-Blond.woff';
 import FSPBlond2 from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-Blond.woff2';
-
 import FSPNormal from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-Normal.woff';
 import FSPNormal2 from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-Normal.woff2';
-
 import FSPMedium from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-Medium.woff';
 import FSPMedium2 from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-Medium.woff2';
-
 import FSPSemiBold from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-SemiBold.woff';
 import FSPSemiBold2 from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-SemiBold.woff2';
-
-const routes = [
-  {
-    title: 'Brand',
-    key: 'brand',
-    links: [
-      {
-        title: 'Colors',
-        path: '/brand/color',
-      },
-      {
-        title: 'Typography',
-        path: '/brand/typography',
-      },
-      {
-        title: 'Illustrations',
-        path: '/brand/illustrations',
-      },
-      {
-        title: 'Logos',
-        path: '/brand/logos',
-      },
-    ],
-  },
-  {
-    title: 'Product',
-    key: 'product',
-    links: [
-      {
-        title: 'Personas',
-        path: '/product/personas',
-      },
-      {
-        title: 'Glossary',
-        path: '/product/glossary',
-      },
-    ],
-  },
-];
 
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
@@ -235,27 +193,35 @@ const Container = styled.div`
 `;
 
 const Main = styled.main`
-  padding: 80px 60px;
-  max-width: 920px;
+  padding: 120px 60px 60px;
+  width: 920px;
   margin-left: 320px;
 `;
 
-export default function TemplateWrapper({data, ...otherProps}) {
-  const {
-    category = 'product',
-    nav = find(routes, route => route.key === category),
-    children,
-  } = otherProps;
+export default function Page({
+  data,
+  pageTitle,
+  children,
+  location,
+  category = 'product',
+}) {
+  const {edges: pages} = data.allSitePage;
 
-  const {edges: pages} = data.allMarkdownRemark;
+  const currentCategory = location.pathname.includes('components')
+    ? 'components'
+    : location.pathname.includes('brand') ? 'brand' : 'product';
+
+  const currentGroup = pages.filter(node =>
+    node.node.path.includes(currentCategory)
+  );
 
   return (
     <ThemeProvider theme={theme}>
       <Container>
-        <Helmet title="Kalo Design System" />
+        <Helmet title={`${pageTitle} - Kalo Design System`} />
         <Header />
-        <SideNav title={nav.title} links={pages} />
-        <Main>{children()}</Main>
+        <SideNav title={upperFirst(category)} links={currentGroup} />
+        <Main>{children()}</Main>3
       </Container>
     </ThemeProvider>
   );
@@ -263,13 +229,11 @@ export default function TemplateWrapper({data, ...otherProps}) {
 
 export const pageQuery = graphql`
   query AsideNavQuery {
-    allMarkdownRemark(limit: 1000) {
+    allSitePage {
       edges {
         node {
-          fields {
-            slug
-            componentName
-          }
+          path
+          component
         }
       }
     }

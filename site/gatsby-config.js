@@ -23,6 +23,13 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `../src/components`,
+        name: 'componentDocumentation',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/pages`,
         name: 'pages',
       },
     },

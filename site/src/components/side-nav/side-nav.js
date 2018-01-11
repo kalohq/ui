@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Link from 'gatsby-link';
 import styled from 'react-emotion';
+import {upperFirst} from 'lodash';
 
 const AsideContainer = styled.aside`
   width: auto;
@@ -58,9 +59,9 @@ export default function SideNav({links, title}) {
       <LinkGroup>
         {links.map(item => {
           return (
-            <LinkItem key={item.node.fields.slug}>
-              <Link to={item.node.fields.slug}>
-                <a>{item.node.fields.componentName}</a>
+            <LinkItem key={item.node.path}>
+              <Link to={item.node.path}>
+                <a>{upperFirst(item.node.path)}</a>
               </Link>
             </LinkItem>
           );

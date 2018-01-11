@@ -98,7 +98,7 @@ export default function GlobalNavigation() {
     <StyledBar>
       <Inner>
         <StyledLogo>
-          <Link href="/">
+          <Link to="/">
             <a>Kalo Design System</a>
           </Link>
         </StyledLogo>
