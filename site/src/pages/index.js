@@ -38,7 +38,7 @@ const IndexPage = ({data}) => {
         <ActionCard
           title="Sketch Kit"
           description="Sketch library implementation for the Kalo Design System"
-          link={data.site.siteMetadata.githubRepoLink}
+          link={data.site.siteMetadata.sketchKitLink}
         />
       </GridContainer>
     </DocumentationContent>
