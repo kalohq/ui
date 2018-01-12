@@ -65,6 +65,9 @@ export const ICONS = new Enum({
   CHECK_BOX_OUTLINE_BLANK: {
     value: 'check_box_outline_blank',
   },
+  CHECK_CIRCLE: {
+    value: 'check_circle',
+  },
   CHEVRON_LEFT: {
     value: 'chevron_left',
   },
