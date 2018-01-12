@@ -1,5 +1,7 @@
 import React from 'react';
 
+import DocumentationContent from '../../components/documentation-content';
+
 const terms = [
   {
     term: 'Category',
@@ -29,22 +31,17 @@ const terms = [
 ];
 
 const GlossaryPage = () => (
-  <div>
+  <DocumentationContent>
     <h1>Product Glossary</h1>
     <p>Commonly used words and phrases used across the Kalo product</p>
-    <table>
-      <tr>
-        <th>Term</th>
-        <th>Definition</th>
-      </tr>
-      {terms.map(({term, definition}) => (
-        <tr key={term}>
-          <td>{term}</td>
-          <td>{definition}</td>
-        </tr>
-      ))}
-    </table>
-  </div>
+
+    {terms.map(({term, definition}) => (
+      <section key={term}>
+        <h3>{term}</h3>
+        <p>{definition}</p>
+      </section>
+    ))}
+  </DocumentationContent>
 );
 
 export default GlossaryPage;
