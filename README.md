@@ -1,4 +1,4 @@
-# Kalo UI 🍃
+# @kalo/ui 🍃
 
 ![@kalo/ui](https://img.shields.io/npm/v/@kalo/ui.svg) [![codecov](https://codecov.io/gh/kalohq/ui/branch/master/graph/badge.svg?token=UMKMabKV8s)](https://codecov.io/gh/kalohq/ui)
 
