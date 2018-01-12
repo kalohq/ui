@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Link from 'gatsby-link';
 import styled from 'react-emotion';
-import {upperFirst, camelCase} from 'lodash';
+import {upperFirst} from 'lodash';
 
 const MENU_WIDTH = '280px';
 
@@ -110,34 +110,24 @@ export default function SideNav({links}) {
           {Object.keys(links).map(linkGroup => (
             <div key={linkGroup}>
               <Title>{upperFirst(linkGroup)}</Title>
-              {links[linkGroup].map(item => {
-                const pagePath = item.slug;
-                const pageName = upperFirst(
-                  camelCase(
-                    item.slug
-                      .replace(/\/(product|components|brand)\//, '')
-                      .replace(/\//, '')
-                  )
-                );
-                return (
-                  <LinkItem isCurrent={item.isCurrent} key={pagePath}>
-                    <Link to={pagePath}>{pageName}</Link>
-                    {item.isCurrent && item.toc ? (
-                      <StyledLinkItemToc>
-                        <span dangerouslySetInnerHTML={{__html: item.toc}} />
-                        <ul>
-                          <li>
-                            <a href="#props">Props</a>
-                          </li>
-                          <li>
-                            <a href="#examples">Examples</a>
-                          </li>
-                        </ul>
-                      </StyledLinkItemToc>
-                    ) : null}
-                  </LinkItem>
-                );
-              })}
+              {links[linkGroup].map(item => (
+                <LinkItem isCurrent={item.isCurrent} key={item.slug}>
+                  <Link to={item.slug}>{item.name}</Link>
+                  {item.isCurrent && item.toc ? (
+                    <StyledLinkItemToc>
+                      <span dangerouslySetInnerHTML={{__html: item.toc}} />
+                      <ul>
+                        <li>
+                          <a href="#props">Props</a>
+                        </li>
+                        <li>
+                          <a href="#examples">Examples</a>
+                        </li>
+                      </ul>
+                    </StyledLinkItemToc>
+                  ) : null}
+                </LinkItem>
+              ))}
             </div>
           ))}
         </LinkGroup>

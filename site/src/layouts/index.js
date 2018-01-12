@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import {ThemeProvider} from 'emotion-theming';
 import styled, {injectGlobal} from 'react-emotion';
-import {groupBy} from 'lodash';
+import {groupBy, upperFirst, camelCase} from 'lodash';
 
 import Header from '../components/header';
 import SideNav from '../components/side-nav';
@@ -207,10 +207,16 @@ export default function Page({data, children, location}) {
   const currentPath = location.pathname;
   const currentCategory = location.pathname.split(/[\\\/]/)[1];
 
+  const stripPageNameFromPath = val =>
+    val.replace(/\/(product|components|brand|meta)\//, '').replace(/\//, '');
+
   pages.map(page =>
     sitePages.push({
       slug: page.node.path,
       isCurrent: currentPath === page.node.path,
+      name: upperFirst(
+        stripPageNameFromPath(page.node.path.replace(/-/g, ' '))
+      ),
       category: page.node.path.split(/[\\\/]/)[1],
     })
   );
@@ -221,6 +227,9 @@ export default function Page({data, children, location}) {
         ? sitePages.push({
             slug: page.node.fields.slug,
             toc: page.node.tableOfContents,
+            name: upperFirst(
+              camelCase(stripPageNameFromPath(page.node.fields.slug))
+            ),
             isCurrent: currentPath === page.node.fields.slug,
             category: page.node.fields.slug.split(/[\\\/]/)[1],
           })
@@ -265,7 +274,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allSitePage(filter: {path: {regex: "/(brand|product)/"}}) {
+    allSitePage(filter: {path: {regex: "/(brand|product|meta)/"}}) {
       edges {
         node {
           path
