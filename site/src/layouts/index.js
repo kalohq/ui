@@ -200,7 +200,7 @@ const Main = styled.main`
 
 const FlexWrapper = styled.div`display: flex;`;
 
-export default function Page({data, pageTitle, children, location}) {
+export default function Page({data, children, location}) {
   const {edges: pages} = data.allSitePage;
   const projectMeta = data.site.siteMetadata;
   const sitePages = [];
@@ -232,7 +232,7 @@ export default function Page({data, pageTitle, children, location}) {
   return (
     <ThemeProvider theme={theme}>
       <Container>
-        <Helmet title={`${pageTitle} - Kalo Design System`} />
+        <Helmet title="Kalo Design System" />
         <Header projectMeta={projectMeta} />
         <FlexWrapper>
           <SideNav currentCategory={currentCategory} links={groupedSitePages} />
