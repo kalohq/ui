@@ -68,13 +68,11 @@ export default function SideNav({links, title}) {
             return (
               <LinkItem key={item.node.path}>
                 <Link to={item.node.path}>
-                  <a>
-                    {upperFirst(
-                      item.node.path
-                        .replace(/\/(product|components|brand)\//, '')
-                        .replace(/\//, '')
-                    )}
-                  </a>
+                  {upperFirst(
+                    item.node.path
+                      .replace(/\/(product|components|brand)\//, '')
+                      .replace(/\//, '')
+                  )}
                 </Link>
               </LinkItem>
             );
