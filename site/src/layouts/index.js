@@ -194,7 +194,7 @@ const Container = styled.div`
 `;
 
 const Main = styled.main`
-  padding: 80px 60px 60px;
+  padding: 100px 60px 60px;
   max-width: 1120px;
   width: 100%;
 `;

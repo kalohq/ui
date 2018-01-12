@@ -11,7 +11,6 @@ const GridContainer = styled.div`
 `;
 
 const IndexPage = ({data}) => {
-  console.log(data);
   return (
     <DocumentationContent>
       <h1>Kalo UI Documentation</h1>

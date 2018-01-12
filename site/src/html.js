@@ -3,9 +3,9 @@ import React from 'react';
 let stylesStr;
 if (process.env.NODE_ENV === `production`) {
   try {
-    stylesStr = require('!raw-loader!../public/styles.css');
+    stylesStr = require('!raw-loader!../public/styles.css'); // eslint-disable-line global-require, import/no-webpack-loader-syntax, import/no-unresolved
   } catch (e) {
-    console.log(e);
+    console.log(e); // eslint-disable-line no-console
   }
 }
 
@@ -25,10 +25,13 @@ export default function Html({headComponents, body, postBodyComponents}) {
       <head>
         <meta name="referrer" content="origin" />
         <meta charSet="utf-8" />
-        <meta name="description" content="Gatsby example site using Emotion" />
+        <meta
+          name="description"
+          content="Documentation, tooling, and resources for the Kalo Product team"
+        />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Gatsby Emotion</title>
+        <title>Kalo Design System</title>
         {headComponents}
         {css}
       </head>
