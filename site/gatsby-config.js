@@ -27,16 +27,16 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        path: `../src/components`,
+        path: '../src/components',
         name: 'componentDocumentation',
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        path: `./src/pages`,
+        path: './src/pages',
         name: 'pages',
       },
     },

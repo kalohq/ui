@@ -3,7 +3,6 @@ import {upperFirst, camelCase} from 'lodash';
 import styled from 'react-emotion';
 
 import DocumentationContent from '../components/documentation-content';
-import Toc from '../components/toc';
 import PropTable from '../components/prop-table';
 
 import * as Stories from '../data/stories.js';
@@ -54,17 +53,13 @@ const FlexWrapper = styled.div`display: flex;`;
 
 const DocContent = styled.div`width: 100%;`;
 
-const DocToc = styled.div`
-  position: relative;
-  min-width: 220px;
-  margin-left: 64px;
-`;
-
 export default function ComponentDocumentation(props) {
   const {data} = props;
   const {markdownRemark: component, allComponentMetadata} = data;
 
-  const componentProps = allComponentMetadata.edges[0].node.props;
+  const componentProps = allComponentMetadata
+    ? allComponentMetadata.edges[0].node.props
+    : false;
   const componentName = upperFirst(camelCase(component.fields.componentName));
   const stories = Stories[componentName]
     ? Stories[componentName].examples
@@ -105,11 +100,6 @@ export default function ComponentDocumentation(props) {
           </div>
         ) : null}
       </DocContent>
-      {component.tableOfContents ? (
-        <DocToc>
-          <Toc data={component.tableOfContents} />
-        </DocToc>
-      ) : null}
     </FlexWrapper>
   );
 }

@@ -195,8 +195,7 @@ const Container = styled.div`
 
 const Main = styled.main`
   padding: 100px 60px 60px;
-  max-width: 1120px;
-  width: 100%;
+  width: 920px;
 `;
 
 const FlexWrapper = styled.div`display: flex;`;
@@ -210,14 +209,33 @@ export default function Page({
 }) {
   const {edges: pages} = data.allSitePage;
   const projectMeta = data.site.siteMetadata;
+  const sitePages = [];
+  const currentPath = location.pathname;
 
-  const currentCategory = location.pathname.includes('components')
-    ? 'components'
-    : location.pathname.includes('brand') ? 'brand' : 'product';
-
-  const currentGroup = pages.filter(node =>
-    node.node.path.includes(currentCategory)
+  pages.map(page =>
+    sitePages.push({
+      slug: page.node.path,
+      isCurrent: currentPath === page.node.page,
+    })
   );
+  data.allMarkdownRemark.edges.map(
+    page =>
+      page.node.fields
+        ? sitePages.push({
+            slug: page.node.fields.slug,
+            toc: page.node.tableOfContents,
+            isCurrent: currentPath === page.node.fields.slug,
+          })
+        : false
+  );
+
+  // const currentCategory = currentPath.includes('components')
+  // ? 'components'
+  // : currentPath.includes('brand') ? 'brand' : 'product';
+
+  // const currentGroup = pages.filter(node =>
+  //   node.node.path.includes(currentCategory)
+  // );
 
   return (
     <ThemeProvider theme={theme}>
@@ -225,7 +243,7 @@ export default function Page({
         <Helmet title={`${pageTitle} - Kalo Design System`} />
         <Header projectMeta={projectMeta} />
         <FlexWrapper>
-          <SideNav title={upperFirst(category)} links={currentGroup} />
+          <SideNav title={upperFirst(category)} links={sitePages} />
           <Main>{children()}</Main>
         </FlexWrapper>
         <IconSymbols />
@@ -244,7 +262,18 @@ export const pageQuery = graphql`
         sketchKitLink
       }
     }
-    allSitePage {
+    allMarkdownRemark {
+      edges {
+        node {
+          tableOfContents
+          html
+          fields {
+            slug
+          }
+        }
+      }
+    }
+    allSitePage(filter: {path: {regex: "/(brand|product)/"}}) {
       edges {
         node {
           path

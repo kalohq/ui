@@ -2,7 +2,7 @@ const path = require('path');
 const slugify = require('slug');
 const fs = require('fs');
 const glob = require('glob');
-const {upperFirst, camelCase, lowerCase} = require('lodash');
+const {upperFirst, camelCase} = require('lodash');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const {cssModulesConfig} = require('gatsby-1-config-css-modules');
 const {createFilePath} = require('gatsby-source-filesystem');
@@ -16,6 +16,7 @@ exports.onCreateNode = ({node, getNode, boundActionCreators}) => {
     if (
       node.parent &&
       node.parent.includes('../src/components') &&
+      node.parent.includes('README') &&
       !node.parent.includes('__stories__') &&
       !node.parent.includes('__tests__')
     ) {
@@ -64,18 +65,18 @@ exports.onCreateNode = ({node, getNode, boundActionCreators}) => {
       !node.parent.includes('__stories__') &&
       !node.parent.includes('__tests__')
     ) {
-      const slug = `/components/${slugify(lowerCase(node.displayName))}/`;
+      // const slug = `/components/${slugify(lowerCase(node.displayName))}/`;
       createNodeField({
         node,
         name: 'componentName',
         value: node.displayName,
       });
 
-      createNodeField({
-        node,
-        name: 'slug',
-        value: slug,
-      });
+      // createNodeField({
+      //   node,
+      //   name: 'slug',
+      //   value: slug,
+      // });
     }
   }
 };
