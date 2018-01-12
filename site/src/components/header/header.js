@@ -93,14 +93,15 @@ const GitHubLogo = () => (
   </svg>
 );
 
-export default function GlobalNavigation({projectTitle, projectVersion}) {
+export default function GlobalNavigation({projectMeta}) {
+  const {title, version, sketchKitLink, githubRepoLink} = projectMeta;
   return (
     <StyledBar>
       <Inner>
         <StyledLogo>
           <Link to="/">
             <a>
-              {projectTitle} - v{projectVersion}
+              {title} - v{version}
             </a>
           </Link>
         </StyledLogo>
@@ -108,7 +109,8 @@ export default function GlobalNavigation({projectTitle, projectVersion}) {
           <NavItem link="/product/glossary">Product</NavItem>
           <NavItem link="/brand/color">Brand</NavItem>
           <NavItem link="/components/Button">Components</NavItem>
-          <NavItem href="https://github.com/kalohq/ui">GitHub</NavItem>
+          <NavItem href={sketchKitLink}>Sketch Kit</NavItem>
+          <NavItem href={githubRepoLink}>GitHub</NavItem>
         </StyledNav>
       </Inner>
     </StyledBar>

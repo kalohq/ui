@@ -2,7 +2,7 @@ import * as React from 'react';
 import {upperFirst, camelCase} from 'lodash';
 import styled from 'react-emotion';
 
-import MarkdownContent from '../components/markdown-content';
+import DocumentationContent from '../components/documentation-content';
 import Toc from '../components/toc';
 import PropTable from '../components/prop-table';
 
@@ -72,7 +72,9 @@ export default function ComponentDocumentation(props) {
   return (
     <FlexWrapper>
       <DocContent>
-        <MarkdownContent dangerouslySetInnerHTML={{__html: component.html}} />
+        <DocumentationContent
+          dangerouslySetInnerHTML={{__html: component.html}}
+        />
         {componentProps && componentProps.props ? (
           <section>
             <StyledTitle id="props">Props</StyledTitle>

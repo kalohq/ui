@@ -4,10 +4,9 @@ import Link from 'gatsby-link';
 
 const StyledActionCard = styled(Link)`
   display: block;
-  background-color: #fff;
-  border: 1px solid ${props => props.theme.colors.grey300};
+  background-color: ${props => props.theme.colors.grey200};
+  border: 1px solid ${props => props.theme.colors.grey400};
   border-radius: ${props => props.theme.layout.borderRadius};
-  margin-bottom: 16px;
   padding: 16px;
   text-decoration: none;
 

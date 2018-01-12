@@ -5,6 +5,9 @@ module.exports = {
   siteMetadata: {
     title: 'Kalo Design System',
     version: uiVersion,
+    sketchKitLink:
+      'https://drive.google.com/file/d/0B--bXeGhrriocHkwWHVoajh2VGs/view?usp=sharing',
+    githubRepoLink: 'https://github.com/kalohq/ui',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

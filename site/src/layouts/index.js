@@ -194,7 +194,7 @@ const Container = styled.div`
 `;
 
 const Main = styled.main`
-  padding: 120px 60px 60px;
+  padding: 80px 60px 60px;
   max-width: 1120px;
   width: 100%;
 `;
@@ -209,7 +209,7 @@ export default function Page({
   category = 'product',
 }) {
   const {edges: pages} = data.allSitePage;
-  const {title: projectTitle, version: projectVersion} = data.site.siteMetadata;
+  const projectMeta = data.site.siteMetadata;
 
   const currentCategory = location.pathname.includes('components')
     ? 'components'
@@ -223,7 +223,7 @@ export default function Page({
     <ThemeProvider theme={theme}>
       <Container>
         <Helmet title={`${pageTitle} - Kalo Design System`} />
-        <Header projectTitle={projectTitle} projectVersion={projectVersion} />
+        <Header projectMeta={projectMeta} />
         <FlexWrapper>
           <SideNav title={upperFirst(category)} links={currentGroup} />
           <Main>{children()}</Main>
@@ -240,6 +240,8 @@ export const pageQuery = graphql`
       siteMetadata {
         version
         title
+        githubRepoLink
+        sketchKitLink
       }
     }
     allSitePage {
