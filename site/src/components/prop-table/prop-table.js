@@ -37,7 +37,7 @@ const StyledTable = styled.table`
 
   tr td:first-of-type {
     text-align: right;
-    color: ${props => props.theme.colors.pink500};
+    color: ${props => props.theme.colors.blue500};
   }
 
   tr td:nth-of-type(2) {
