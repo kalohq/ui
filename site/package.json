@@ -34,17 +34,14 @@
     "@kalo/eslint-config": "^6.0.0",
     "eslint": "^4.10.0"
   },
-  "keywords": [
-    "gatsby",
-    "design system",
-    "kalo"
-  ],
+  "keywords": ["gatsby", "design system", "kalo"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "npm run build && touch public/Staticfile && cf push",
+    "format":
+      "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\""
   }
 }
