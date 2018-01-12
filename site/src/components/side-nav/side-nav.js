@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Link from 'gatsby-link';
 import styled from 'react-emotion';
-import {upperFirst} from 'lodash';
+import {upperFirst, camelCase} from 'lodash';
 
 const MENU_WIDTH = '280px';
 
@@ -113,9 +113,11 @@ export default function SideNav({links}) {
               {links[linkGroup].map(item => {
                 const pagePath = item.slug;
                 const pageName = upperFirst(
-                  item.slug
-                    .replace(/\/(product|components|brand)\//, '')
-                    .replace(/\//, '')
+                  camelCase(
+                    item.slug
+                      .replace(/\/(product|components|brand)\//, '')
+                      .replace(/\//, '')
+                  )
                 );
                 return (
                   <LinkItem isCurrent={item.isCurrent} key={pagePath}>
