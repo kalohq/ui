@@ -99,7 +99,7 @@ injectGlobal`
     background: #eee8d5;
   }
   pre[class*='language-'] {
-    padding: 1em;
+    padding: 24px 32px;
     margin: 0.5em 0;
     overflow: auto;
   }
