@@ -13,38 +13,42 @@
     "prettier/react"
   ],
   "settings": {
-    "import/ignore": [
-      "node_modules",
-      /.css$/
-    ],
+    "import/ignore": ["node_modules", /.css$/],
     "import/resolver": {
       "node": {
         "moduleDirectory": ["src", "src/components", "node_modules"]
-      },
+      }
     }
   },
 
   "globals": {
     "window": true,
     "document": true,
+    "graphql": true
   },
   "rules": {
-    "prettier/prettier": [2, {
-      "singleQuote": true,
-      "trailingComma": "es5",
-      "bracketSpacing": false,
-    }],
+    "prettier/prettier": [
+      2,
+      {
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "bracketSpacing": false
+      }
+    ],
     "comma-dangle": [2, "always-multiline"],
     "import/no-duplicates": 2,
     "import/first": 0,
     "no-duplicate-imports": 0,
     "no-useless-escape": 0,
     "arrow-parens": 0,
-    "no-unused-vars": [2, {
-      "varsIgnorePattern": "^__*IGNORED",
-      "argsIgnorePattern": "^__*IGNORED",
-      "args": "after-used"
-    }],
+    "no-unused-vars": [
+      2,
+      {
+        "varsIgnorePattern": "^__*IGNORED",
+        "argsIgnorePattern": "^__*IGNORED",
+        "args": "after-used"
+      }
+    ],
     "object-property-newline": [2, {allowMultiplePropertiesPerLine: true}],
     // definite nice to haves...
     "react/no-unused-prop-types": 0, // lots to type at this point... and flow may overtake soon
