@@ -126,6 +126,7 @@ export const pageQuery = graphql`
             name
             type {
               name
+              raw
             }
             flowType {
               name

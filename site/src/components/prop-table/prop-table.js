@@ -32,7 +32,7 @@ const StyledTable = styled.table`
   }
 
   tr th:nth-of-type(2) {
-    width: 120px;
+    width: 180px;
   }
 
   tr td:first-of-type {
@@ -59,9 +59,11 @@ export default function PropTable({data}) {
             <pre>{prop.name}</pre>
           </td>
           {prop.flowType ? (
-            <td>{prop.flowType.name}</td>
+            <td>
+              {prop.flowType.raw ? prop.flowType.raw : prop.flowType.name}
+            </td>
           ) : (
-            <td>{prop.type.name}</td>
+            <td>{prop.type.raw ? prop.type.raw : prop.type.name}</td>
           )}
           <td>{prop.docblock}</td>
         </tr>
