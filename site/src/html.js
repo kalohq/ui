@@ -1,5 +1,7 @@
 import React from 'react';
 
+import favicon from 'static/favicon.png';
+
 let stylesStr;
 if (process.env.NODE_ENV === `production`) {
   try {
@@ -30,6 +32,7 @@ export default function Html({headComponents, body, postBodyComponents}) {
           content="Documentation, tooling, and resources for the Kalo Product team"
         />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="shortcut icon" href={favicon} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Kalo Design System</title>
         {headComponents}
