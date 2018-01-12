@@ -62,8 +62,9 @@ const DocToc = styled.div`
 
 export default function ComponentDocumentation(props) {
   const {data} = props;
-  const {markdownRemark: component, componentMetadata: componentProps} = data;
+  const {markdownRemark: component, allComponentMetadata} = data;
 
+  const componentProps = allComponentMetadata.edges[0].node.props;
   const componentName = upperFirst(camelCase(component.fields.componentName));
   const stories = Stories[componentName]
     ? Stories[componentName].examples
@@ -75,10 +76,10 @@ export default function ComponentDocumentation(props) {
         <DocumentationContent
           dangerouslySetInnerHTML={{__html: component.html}}
         />
-        {componentProps && componentProps.props ? (
+        {componentProps ? (
           <section>
             <StyledTitle id="props">Props</StyledTitle>
-            <PropTable data={componentProps.props} />
+            <PropTable data={componentProps} />
           </section>
         ) : null}
         {stories ? (
@@ -114,18 +115,28 @@ export default function ComponentDocumentation(props) {
 }
 
 export const pageQuery = graphql`
-  query ComponentByPath($slug: String!) {
-    componentMetadata(fields: {slug: {eq: $slug}}) {
-      displayName
-      props {
-        name
-        required
-      }
-      fields {
-        componentName
+  query ComponentByPath($componentName: String!) {
+    allComponentMetadata(filter: {displayName: {eq: $componentName}}) {
+      edges {
+        node {
+          displayName
+          props {
+            required
+            docblock
+            name
+            type {
+              name
+            }
+            flowType {
+              name
+              raw
+              nullable
+            }
+          }
+        }
       }
     }
-    markdownRemark(fields: {slug: {eq: $slug}}) {
+    markdownRemark(fields: {componentName: {eq: $componentName}}) {
       tableOfContents
       html
       excerpt

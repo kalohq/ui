@@ -14,7 +14,6 @@ const AsideContainer = styled.aside`
   min-height: calc(100vh - 56px);
   padding: 20px 0 0;
   margin-top: 56px;
-  overflow-y: auto;
   position: relative;
 `;
 
@@ -22,6 +21,8 @@ const FixedContainer = styled.div`
   position: fixed;
   left: 0;
   width: ${MENU_WIDTH};
+  height: 100%;
+  overflow-y: auto;
 `;
 
 const Title = styled.h1`

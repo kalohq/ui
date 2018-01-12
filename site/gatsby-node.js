@@ -30,13 +30,15 @@ exports.onCreateNode = ({node, getNode, boundActionCreators}) => {
         .replace(/\//, '')
         .replace(/\/README\//, '');
 
+      const componentDisplayName = upperFirst(camelCase(componentName));
+
       const slug = `/components/${slugify(componentName)}/`;
       const category = 'components';
 
       createNodeField({
         node,
         name: `componentName`,
-        value: componentName,
+        value: componentDisplayName,
       });
 
       /** Used to categorise the pages - product, brand, components etc */
@@ -79,7 +81,7 @@ exports.onCreateNode = ({node, getNode, boundActionCreators}) => {
 };
 
 exports.onPreBootstrap = () => {
-  console.log('Starting generating Stories import bundle');
+  console.log('Starting generating Stories import bundle'); // eslint-disable-line no-console
 
   const cwd = path.resolve(process.cwd(), '../');
 
@@ -109,7 +111,7 @@ module.exports = {
     'utf8'
   );
 
-  console.log('Finished generating stories import bundle');
+  console.log('Finished generating stories import bundle'); // eslint-disable-line no-console
 };
 
 exports.createPages = ({boundActionCreators, graphql}) => {
@@ -138,12 +140,13 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 
     // Create pages for each markdown file.
     posts.forEach(({node}) => {
-      const {slug} = node.fields;
+      const {slug, componentName} = node.fields;
       createPage({
         path: slug,
         component: componentPageTemplate,
         context: {
           slug,
+          componentName,
         },
       });
     });
@@ -152,13 +155,14 @@ exports.createPages = ({boundActionCreators, graphql}) => {
   });
 };
 
-exports.modifyWebpackConfig = ({config, env, stage}) => {
+exports.modifyWebpackConfig = ({config, stage}) => {
   config.merge({
     resolve: {
       root: path.resolve(__dirname, './src'),
       extensions: ['', '.js', '.jsx', '.json'],
     },
     postcss: [
+      // eslint-disable-next-line global-require
       require('postcss-cssnext')({
         browsers: 'last 2 versions',
         features: {
