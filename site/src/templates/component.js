@@ -64,8 +64,6 @@ export default function ComponentDocumentation(props) {
   const {data} = props;
   const {markdownRemark: component, componentMetadata: componentProps} = data;
 
-  console.log(componentProps);
-
   const componentName = upperFirst(camelCase(component.fields.componentName));
   const stories = Stories[componentName]
     ? Stories[componentName].examples
@@ -75,7 +73,7 @@ export default function ComponentDocumentation(props) {
     <FlexWrapper>
       <DocContent>
         <MarkdownContent dangerouslySetInnerHTML={{__html: component.html}} />
-        {componentProps.props ? (
+        {componentProps && componentProps.props ? (
           <section>
             <StyledTitle id="props">Props</StyledTitle>
             <PropTable data={componentProps.props} />
