@@ -1,9 +1,11 @@
 import React from 'react';
 
+import DocumentationContent from '../../components/documentation-content';
+
 const PersonasPage = () => (
-  <div>
+  <DocumentationContent>
     <h1>Personas</h1>
-  </div>
+  </DocumentationContent>
 );
 
 export default PersonasPage;

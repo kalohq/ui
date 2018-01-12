@@ -1,9 +1,11 @@
 import React from 'react';
 
+import DocumentationContent from '../../components/documentation-content';
+
 const BrandTypographyPage = () => (
-  <div>
+  <DocumentationContent>
     <h1>Typography</h1>
-  </div>
+  </DocumentationContent>
 );
 
 export default BrandTypographyPage;
