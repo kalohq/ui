@@ -19,4 +19,17 @@ export const examples = [
       </ButtonGroup>
     ),
   },
+  {
+    title: 'In reversed order',
+    description: 'Child buttons can have their order reversed',
+    render: () => (
+      <ButtonGroup reverse={true}>
+        <Button theme="tertiary" subdued={true}>
+          <Checkbox />
+        </Button>
+        <Button theme="tertiary">Freelancers</Button>
+        <Button theme="tertiary">Tasks</Button>
+      </ButtonGroup>
+    ),
+  },
 ];
