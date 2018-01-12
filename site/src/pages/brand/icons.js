@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'react-emotion';
 
+import DocumentationContent from '../../components/documentation-content';
+
 import Icon from '../../../../src/components/icon';
 
 import {ICONS} from '../../../../src/components/icon/constants';
@@ -10,6 +12,7 @@ const IconGridContainer = styled('div')`
   display: grid;
   grid-gap: 1px;
   grid-template-columns: repeat(5, 20%);
+  background-color: ${props => props.theme.colors.grey300};
 `;
 
 const IconBlock = styled('div')`
@@ -21,8 +24,15 @@ const IconBlock = styled('div')`
   background-color: ${props => props.theme.colors.grey200};
 `;
 
+const IconTitle = styled.span`
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: 400;
+  color: ${props => props.theme.colors.navy500};
+`;
+
 const BrandIconsPage = () => (
-  <div>
+  <DocumentationContent>
     <h1>Icon Set</h1>
     <p>
       The icons used throughout Kalo are a mixture of{' '}
@@ -41,14 +51,14 @@ const BrandIconsPage = () => (
     <IconGridContainer>
       {ICONS.values.map(icon => (
         <IconBlock key={icon}>
-          <Icon color="blue400" size={36}>
+          <Icon color="pink500" size={36}>
             {icon}
           </Icon>
-          <span>{icon}</span>
+          <IconTitle>{icon}</IconTitle>
         </IconBlock>
       ))}
     </IconGridContainer>
-  </div>
+  </DocumentationContent>
 );
 
 export default BrandIconsPage;
