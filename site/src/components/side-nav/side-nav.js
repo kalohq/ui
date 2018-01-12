@@ -26,9 +26,11 @@ const FixedContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 18px;
-  font-weight: 500;
-  padding-left: 32px;
+  font-size: 16px;
+  font-weight: 600;
+  color: ${props => props.theme.colors.navy700};
+  padding: 12px 32px;
+  margin: 0;
 `;
 
 const LinkGroup = styled.ul`
@@ -41,18 +43,20 @@ const LinkItem = styled.li`
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: #374561;
-  padding: 12px 32px;
+  color: ${props => props.theme.colors.navy700};
+  padding: 8px 32px 8px 44px;
   font-size: 16px;
   font-weight: 400;
   border-bottom: 1px solid ${props => props.theme.colors.grey300};
+  background-color: ${props =>
+    props.isCurrent ? props.theme.colors.grey300 : 'transparent'};
 
   &:first-of-type {
     border-top: 1px solid ${props => props.theme.colors.grey300};
   }
 
   &:hover {
-    background-color: ${props => props.theme.colors.grey200};
+    background-color: ${props => props.theme.colors.grey300};
   }
 
   a {
@@ -98,40 +102,42 @@ const StyledLinkItemToc = styled.div`
   font-size: 14px;
 `;
 
-export default function SideNav({links, title}) {
+export default function SideNav({links}) {
   return (
     <AsideContainer>
       <FixedContainer>
-        <Title>{title}</Title>
         <LinkGroup>
-          {links.map(item => {
-            const pagePath = item.slug;
-            const pageName = upperFirst(
-              item.slug
-                .replace(/\/(product|components|brand)\//, '')
-                .replace(/\//, '')
-            );
-            return (
-              <LinkItem key={pagePath}>
-                <Link to={pagePath}>{pageName}</Link>
-                {item.isCurrent && item.toc ? (
-                  <StyledLinkItemToc>
-                    <span dangerouslySetInnerHTML={{__html: item.toc}} />
-                    <ul>
-                      <li>
-                        <a href="#props">Props</a>
-                      </li>
-                      <li>
-                        <a href="#examples">Examples</a>
-                      </li>
-                    </ul>
-                  </StyledLinkItemToc>
-                ) : (
-                  false
-                )}
-              </LinkItem>
-            );
-          })}
+          {Object.keys(links).map(linkGroup => (
+            <div key={linkGroup}>
+              <Title>{upperFirst(linkGroup)}</Title>
+              {links[linkGroup].map(item => {
+                const pagePath = item.slug;
+                const pageName = upperFirst(
+                  item.slug
+                    .replace(/\/(product|components|brand)\//, '')
+                    .replace(/\//, '')
+                );
+                return (
+                  <LinkItem isCurrent={item.isCurrent} key={pagePath}>
+                    <Link to={pagePath}>{pageName}</Link>
+                    {item.isCurrent && item.toc ? (
+                      <StyledLinkItemToc>
+                        <span dangerouslySetInnerHTML={{__html: item.toc}} />
+                        <ul>
+                          <li>
+                            <a href="#props">Props</a>
+                          </li>
+                          <li>
+                            <a href="#examples">Examples</a>
+                          </li>
+                        </ul>
+                      </StyledLinkItemToc>
+                    ) : null}
+                  </LinkItem>
+                );
+              })}
+            </div>
+          ))}
         </LinkGroup>
       </FixedContainer>
     </AsideContainer>

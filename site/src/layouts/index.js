@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import {ThemeProvider} from 'emotion-theming';
 import styled, {injectGlobal} from 'react-emotion';
-import {upperFirst} from 'lodash';
+import {groupBy} from 'lodash';
 
 import Header from '../components/header';
 import SideNav from '../components/side-nav';
@@ -200,24 +200,21 @@ const Main = styled.main`
 
 const FlexWrapper = styled.div`display: flex;`;
 
-export default function Page({
-  data,
-  pageTitle,
-  children,
-  location,
-  category = 'product',
-}) {
+export default function Page({data, pageTitle, children, location}) {
   const {edges: pages} = data.allSitePage;
   const projectMeta = data.site.siteMetadata;
   const sitePages = [];
   const currentPath = location.pathname;
+  const currentCategory = location.pathname.split(/[\\\/]/)[1];
 
   pages.map(page =>
     sitePages.push({
       slug: page.node.path,
-      isCurrent: currentPath === page.node.page,
+      isCurrent: currentPath === page.node.path,
+      category: page.node.path.split(/[\\\/]/)[1],
     })
   );
+
   data.allMarkdownRemark.edges.map(
     page =>
       page.node.fields
@@ -225,17 +222,12 @@ export default function Page({
             slug: page.node.fields.slug,
             toc: page.node.tableOfContents,
             isCurrent: currentPath === page.node.fields.slug,
+            category: page.node.fields.slug.split(/[\\\/]/)[1],
           })
         : false
   );
 
-  // const currentCategory = currentPath.includes('components')
-  // ? 'components'
-  // : currentPath.includes('brand') ? 'brand' : 'product';
-
-  // const currentGroup = pages.filter(node =>
-  //   node.node.path.includes(currentCategory)
-  // );
+  const groupedSitePages = groupBy(sitePages, page => page.category);
 
   return (
     <ThemeProvider theme={theme}>
@@ -243,7 +235,7 @@ export default function Page({
         <Helmet title={`${pageTitle} - Kalo Design System`} />
         <Header projectMeta={projectMeta} />
         <FlexWrapper>
-          <SideNav title={upperFirst(category)} links={sitePages} />
+          <SideNav currentCategory={currentCategory} links={groupedSitePages} />
           <Main>{children()}</Main>
         </FlexWrapper>
         <IconSymbols />

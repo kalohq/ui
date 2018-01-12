@@ -85,15 +85,12 @@ export default function GlobalNavigation({projectMeta}) {
       <Inner>
         <StyledLogo>
           <Link to="/">
-            {title} - v{version}
+            {title} ({version})
           </Link>
         </StyledLogo>
         <StyledNav>
-          <NavItem link="/product/glossary">Product</NavItem>
-          <NavItem link="/brand/color">Brand</NavItem>
-          <NavItem link="/components/Button">Components</NavItem>
           <NavItem href={sketchKitLink}>Sketch Kit</NavItem>
-          <NavItem href={githubRepoLink}>GitHub</NavItem>
+          <NavItem href={githubRepoLink}>GitHub Repo</NavItem>
         </StyledNav>
       </Inner>
     </StyledBar>
