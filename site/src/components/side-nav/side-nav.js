@@ -3,18 +3,25 @@ import Link from 'gatsby-link';
 import styled from 'react-emotion';
 import {upperFirst} from 'lodash';
 
+const MENU_WIDTH = '280px';
+
 const AsideContainer = styled.aside`
   width: auto;
   height: 100%;
-  min-width: 320px;
-  background-color: ${props => props.theme.colors.grey300};
-  border-right: 1px solid ${props => props.theme.colors.grey400};
+  min-width: ${MENU_WIDTH};
+  background-color: ${props => props.theme.colors.grey200};
+  border-right: 1px solid ${props => props.theme.colors.grey300};
   min-height: calc(100vh - 56px);
   padding: 20px 0 0;
+  margin-top: 56px;
+  overflow-y: auto;
+  position: relative;
+`;
+
+const FixedContainer = styled.div`
   position: fixed;
   left: 0;
-  top: 56px;
-  overflow-y: auto;
+  width: ${MENU_WIDTH};
 `;
 
 const Title = styled.h1`
@@ -33,13 +40,12 @@ const LinkItem = styled.li`
   width: 100%;
   display: flex;
   color: #374561;
-  padding: 16px 32px;
-  border-bottom: 1px solid ${props => props.theme.colors.grey400};
+  padding: 12px 32px;
   font-size: 16px;
   font-weight: 400;
 
   &:first-of-type {
-    border-top: 1px solid ${props => props.theme.colors.grey400};
+    border-top: 1px solid ${props => props.theme.colors.grey300};
   }
 
   &:hover {
@@ -55,18 +61,26 @@ const LinkItem = styled.li`
 export default function SideNav({links, title}) {
   return (
     <AsideContainer>
-      <Title>{title}</Title>
-      <LinkGroup>
-        {links.map(item => {
-          return (
-            <LinkItem key={item.node.path}>
-              <Link to={item.node.path}>
-                <a>{upperFirst(item.node.path)}</a>
-              </Link>
-            </LinkItem>
-          );
-        })}
-      </LinkGroup>
+      <FixedContainer>
+        <Title>{title}</Title>
+        <LinkGroup>
+          {links.map(item => {
+            return (
+              <LinkItem key={item.node.path}>
+                <Link to={item.node.path}>
+                  <a>
+                    {upperFirst(
+                      item.node.path
+                        .replace(/\/(product|components|brand)\//, '')
+                        .replace(/\//, '')
+                    )}
+                  </a>
+                </Link>
+              </LinkItem>
+            );
+          })}
+        </LinkGroup>
+      </FixedContainer>
     </AsideContainer>
   );
 }

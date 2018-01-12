@@ -3,6 +3,8 @@ import {upperFirst, camelCase} from 'lodash';
 import styled from 'react-emotion';
 
 import MarkdownContent from '../components/markdown-content';
+import Toc from '../components/toc';
+import PropTable from '../components/prop-table';
 
 import * as Stories from '../data/stories.js';
 
@@ -38,50 +40,93 @@ const StoryDescription = styled.span`
 
 const StoryMain = styled.div`
   width: 100%;
-  padding: 16px;
+  padding: 32px 16px;
   background-color: ${props => props.theme.colors.grey200};
+`;
+
+const StyledTitle = styled.h2`
+  font-size: 20px;
+  font-weight: 500;
+  color: ${props => props.theme.colors.navy700};
+`;
+
+const FlexWrapper = styled.div`display: flex;`;
+
+const DocContent = styled.div`width: 100%;`;
+
+const DocToc = styled.div`
+  position: relative;
+  min-width: 220px;
+  margin-left: 64px;
 `;
 
 export default function ComponentDocumentation(props) {
   const {data} = props;
-  const {markdownRemark: component} = data;
+  const {markdownRemark: component, componentMetadata: componentProps} = data;
+
+  console.log(componentProps);
+
   const componentName = upperFirst(camelCase(component.fields.componentName));
   const stories = Stories[componentName]
     ? Stories[componentName].examples
     : false;
 
   return (
-    <div>
-      <MarkdownContent dangerouslySetInnerHTML={{__html: component.html}} />
-      {stories ? (
-        <div>
-          <h3>
-            {stories.length}
-            {stories.length === 1 ? 'story' : 'stories'}
-          </h3>
-          {stories.map(story => {
-            const Story = story.render;
-            return (
-              <StoryContainer key={story.title}>
-                <StoryContainerHeader>
-                  <StoryTitle>{story.title}</StoryTitle>
-                  <StoryDescription>{story.description}</StoryDescription>
-                </StoryContainerHeader>
-                <StoryMain>
-                  <Story />
-                </StoryMain>
-              </StoryContainer>
-            );
-          })}
-        </div>
+    <FlexWrapper>
+      <DocContent>
+        <MarkdownContent dangerouslySetInnerHTML={{__html: component.html}} />
+        {componentProps.props ? (
+          <section>
+            <StyledTitle id="props">Props</StyledTitle>
+            <PropTable data={componentProps.props} />
+          </section>
+        ) : null}
+        {stories ? (
+          <div>
+            <StyledTitle id="examples">
+              {stories.length === 1 ? 'Example ' : 'Examples '}
+              ({stories.length})
+            </StyledTitle>
+            {stories.map(story => {
+              const Story = story.render;
+              return (
+                <StoryContainer key={story.title}>
+                  <StoryContainerHeader>
+                    <StoryTitle>{story.title}</StoryTitle>
+                    <StoryDescription>{story.description}</StoryDescription>
+                  </StoryContainerHeader>
+                  <StoryMain>
+                    <Story />
+                  </StoryMain>
+                </StoryContainer>
+              );
+            })}
+          </div>
+        ) : null}
+      </DocContent>
+      {component.tableOfContents ? (
+        <DocToc>
+          <Toc data={component.tableOfContents} />
+        </DocToc>
       ) : null}
-    </div>
+    </FlexWrapper>
   );
 }
 
 export const pageQuery = graphql`
   query ComponentByPath($slug: String!) {
+    componentMetadata(fields: {slug: {eq: $slug}}) {
+      displayName
+      props {
+        name
+        required
+      }
+      fields {
+        componentName
+      }
+    }
     markdownRemark(fields: {slug: {eq: $slug}}) {
+      tableOfContents
       html
       excerpt
       timeToRead

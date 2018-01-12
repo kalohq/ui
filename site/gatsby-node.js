@@ -2,7 +2,7 @@ const path = require('path');
 const slugify = require('slug');
 const fs = require('fs');
 const glob = require('glob');
-const {upperFirst, camelCase} = require('lodash');
+const {upperFirst, camelCase, lowerCase} = require('lodash');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const {cssModulesConfig} = require('gatsby-1-config-css-modules');
 const {createFilePath} = require('gatsby-source-filesystem');
@@ -13,39 +13,68 @@ exports.onCreateNode = ({node, getNode, boundActionCreators}) => {
   const {createNodeField} = boundActionCreators;
 
   if (node.internal.type === `MarkdownRemark`) {
-    const relativePath = createFilePath({
-      node,
-      getNode,
-      basePath: 'pages',
-    });
+    if (
+      node.parent &&
+      node.parent.includes('../src/components') &&
+      !node.parent.includes('__stories__') &&
+      !node.parent.includes('__tests__')
+    ) {
+      const relativePath = createFilePath({
+        node,
+        getNode,
+        basePath: 'pages',
+      });
 
-    /** @TODO write a proper REGEX */
-    const componentName = relativePath
-      .replace(/\//, '')
-      .replace(/\/README\//, '');
+      /** @TODO write a proper REGEX */
+      const componentName = relativePath
+        .replace(/\//, '')
+        .replace(/\/README\//, '');
 
-    const slug = `/components/${slugify(componentName)}/`;
-    const category = 'components';
+      const slug = `/components/${slugify(componentName)}/`;
+      const category = 'components';
 
-    createNodeField({
-      node,
-      name: `componentName`,
-      value: componentName,
-    });
+      createNodeField({
+        node,
+        name: `componentName`,
+        value: componentName,
+      });
 
-    /** Used to categorise the pages - product, brand, components etc */
-    createNodeField({
-      node,
-      name: 'category',
-      value: category,
-    });
+      /** Used to categorise the pages - product, brand, components etc */
+      createNodeField({
+        node,
+        name: 'category',
+        value: category,
+      });
 
-    /** Used to generate the page slug */
-    createNodeField({
-      node,
-      name: 'slug',
-      value: slug,
-    });
+      /** Used to generate the page slug */
+      createNodeField({
+        node,
+        name: 'slug',
+        value: slug,
+      });
+    }
+  }
+
+  if (node.internal.type === `ComponentMetadata`) {
+    if (
+      node.parent &&
+      node.parent.includes('../src/components') &&
+      !node.parent.includes('__stories__') &&
+      !node.parent.includes('__tests__')
+    ) {
+      const slug = `/components/${slugify(lowerCase(node.displayName))}/`;
+      createNodeField({
+        node,
+        name: 'componentName',
+        value: node.displayName,
+      });
+
+      createNodeField({
+        node,
+        name: 'slug',
+        value: slug,
+      });
+    }
   }
 };
 

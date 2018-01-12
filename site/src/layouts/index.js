@@ -8,6 +8,7 @@ import Header from '../components/header';
 import SideNav from '../components/side-nav';
 
 import theme from '../../../src/components/theme';
+import IconSymbols from '../../../src/components/icon-symbols';
 
 import FSPBlond from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-Blond.woff';
 import FSPBlond2 from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-Blond.woff2';
@@ -194,9 +195,11 @@ const Container = styled.div`
 
 const Main = styled.main`
   padding: 120px 60px 60px;
-  width: 920px;
-  margin-left: 320px;
+  max-width: 1120px;
+  width: 100%;
 `;
+
+const FlexWrapper = styled.div`display: flex;`;
 
 export default function Page({
   data,
@@ -206,6 +209,7 @@ export default function Page({
   category = 'product',
 }) {
   const {edges: pages} = data.allSitePage;
+  const {title: projectTitle, version: projectVersion} = data.site.siteMetadata;
 
   const currentCategory = location.pathname.includes('components')
     ? 'components'
@@ -219,9 +223,12 @@ export default function Page({
     <ThemeProvider theme={theme}>
       <Container>
         <Helmet title={`${pageTitle} - Kalo Design System`} />
-        <Header />
-        <SideNav title={upperFirst(category)} links={currentGroup} />
-        <Main>{children()}</Main>3
+        <Header projectTitle={projectTitle} projectVersion={projectVersion} />
+        <FlexWrapper>
+          <SideNav title={upperFirst(category)} links={currentGroup} />
+          <Main>{children()}</Main>
+        </FlexWrapper>
+        <IconSymbols />
       </Container>
     </ThemeProvider>
   );
@@ -229,6 +236,12 @@ export default function Page({
 
 export const pageQuery = graphql`
   query AsideNavQuery {
+    site {
+      siteMetadata {
+        version
+        title
+      }
+    }
     allSitePage {
       edges {
         node {

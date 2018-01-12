@@ -6,7 +6,7 @@ import Link from 'gatsby-link';
 const StyledBar = styled('div')`
   width: 100%;
   height: 58px;
-  background-color: ${props => props.theme.colors.pink500};
+  background-color: ${props => props.theme.colors.navy700};
   position: fixed;
   top: 0;
   left: 0;
@@ -72,9 +72,9 @@ const StyledNavItem = styled.div`
   }
 `;
 
-const NavItem = ({children, link}) => (
+const NavItem = ({children, link, href}) => (
   <StyledNavItem>
-    <Link to={link}>{children}</Link>
+    {href ? <a href={href}>{children}</a> : <Link to={link}>{children}</Link>}
   </StyledNavItem>
 );
 
@@ -93,20 +93,22 @@ const GitHubLogo = () => (
   </svg>
 );
 
-export default function GlobalNavigation() {
+export default function GlobalNavigation({projectTitle, projectVersion}) {
   return (
     <StyledBar>
       <Inner>
         <StyledLogo>
           <Link to="/">
-            <a>Kalo Design System</a>
+            <a>
+              {projectTitle} - v{projectVersion}
+            </a>
           </Link>
         </StyledLogo>
         <StyledNav>
           <NavItem link="/product/glossary">Product</NavItem>
           <NavItem link="/brand/color">Brand</NavItem>
           <NavItem link="/components/Button">Components</NavItem>
-          <NavItem link="https://github.com/kalohq/ui">GitHub</NavItem>
+          <NavItem href="https://github.com/kalohq/ui">GitHub</NavItem>
         </StyledNav>
       </Inner>
     </StyledBar>
