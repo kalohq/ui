@@ -1,6 +1,6 @@
 import styled from 'react-emotion';
 
-const MarkdownContent = styled.article`
+const DocumentationContent = styled.article`
   p,
   li {
     font-size: 16px;
@@ -31,4 +31,4 @@ const MarkdownContent = styled.article`
   }
 `;
 
-export default MarkdownContent;
+export default DocumentationContent;
