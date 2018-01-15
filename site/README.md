@@ -7,7 +7,7 @@ Welcome to the @kalo-ui documentation. The docs are built using [Gatsby](https:/
 - `cd site` to change in to the site directory
 - `npm install`
 - `npm run start`
-- And you should be up and running at [localhost:3000](http://localhost:3000)
+- And you should be up and running at [localhost:8000](http://localhost:8000)
 
 ## Deploying
 There are currently a few gotchas to deploying the site.
