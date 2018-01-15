@@ -7,15 +7,14 @@
     "url": "https://github.com/kalohq/ui"
   },
   "main": "lib/components/index.js",
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "scripts": {
     "start": "npm run storybook:start",
     "storybook": "npm run storybook:start",
     "storybook:start": "start-storybook -p 6006",
     "storybook:build": "build-storybook -c .storybook -o docs",
-    "compile": "npm run generate-tokens && npm run generate-icon-symbols && gulp build-production",
+    "compile":
+      "npm run generate-tokens && npm run generate-icon-symbols && gulp build-production",
     "test": "jest",
     "dist": "rimraf lib && npm run compile",
     "copy-flow":
@@ -24,7 +23,9 @@
     "lint": "eslint src",
     "precommit": "lint-staged",
     "generate-tokens": "node scripts/tokens.js",
-    "generate-icon-symbols": "node scripts/icons.js"
+    "generate-icon-symbols": "node scripts/icons.js",
+    "new-component":
+      "reactman --config ./config/code-templates/reactman-config.json"
   },
   "lint-staged": {
     "*.js": ["eslint"]
@@ -101,7 +102,8 @@
     "styled-system": "^1.0.8",
     "svg-sprite": "^1.3.7",
     "theo": "^6.0.0-beta.9",
-    "webpack": "2.5.1"
+    "webpack": "2.5.1",
+    "reactman": "2.1.0"
   },
   "peerDependencies": {
     "classnames": "^2.2.5",
@@ -122,13 +124,13 @@
   "jest": {
     "modulePaths": ["src/core", "src"],
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|html)$": "<rootDir>/src/utils/test/mocks/file-mock.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|html)$":
+        "<rootDir>/src/utils/test/mocks/file-mock.js",
       "\\.(css|less)$": "identity-obj-proxy"
     },
     "testEnvironment": "jsdom",
-    "testMatch": [
-      "**/__tests__/**/?(*.)(spec|test).js?(x)"
-    ],
+    "testMatch": ["**/__tests__/**/?(*.)(spec|test).js?(x)"],
+    "testPathIgnorePatterns": ["config"],
     "coverageDirectory": "./coverage/unit",
     "collectCoverage": false,
     "collectCoverageFrom": [
