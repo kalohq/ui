@@ -59,6 +59,18 @@ const colors = [
       orange700: '#D89118',
     },
   },
+  {
+    swatch: 'Grey',
+    key: '#B0BAC3',
+    colors: {
+      grey200: '#F9FAFC',
+      grey300: '#EEF4FA',
+      grey400: '#D0D8DF',
+      grey500: '#B0BAC3',
+      grey600: '#89929B',
+      grey700: '#707D8A',
+    },
+  },
 ];
 
 const Swatches = styled.div`
@@ -84,29 +96,30 @@ const StyledSwatchItem = styled.div`
   background-color: ${props => props.color};
   height: 50px;
   padding: 16px;
-  h3,
-  h4 {
-    margin: 0;
-    padding: 0;
-    color: #fff;
-  }
-  h3 {
-    font-size: 14px;
-    font-weight: 500;
-  }
-  h4 {
+`;
+
+const StyledSwatchItemColorName = styled.span`
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  color: ${props =>
+    props.isLight ? props.theme.colors.navy600 : props.theme.colors.white};
+  span {
     font-weight: 400;
-    font-size: 14px;
+    float: right;
   }
 `;
 
-const Swatch = ({colors, name, keyColor}) => (
+const Swatch = ({colorGroup, name, keyColor}) => (
   <div>
     <StyledSwatchHeader color={keyColor}>{name}</StyledSwatchHeader>
-    {Object.keys(colors).map(color => (
-      <StyledSwatchItem key={color} color={colors[color]}>
-        <h3>{color}</h3>
-        <h4>{colors[color]}</h4>
+    {Object.keys(colorGroup).map(color => (
+      <StyledSwatchItem key={color} color={colorGroup[color]}>
+        <StyledSwatchItemColorName isLight={color.match(/(200|300)/)}>
+          {color} <span>{colorGroup[color]}</span>
+        </StyledSwatchItemColorName>
       </StyledSwatchItem>
     ))}
   </div>
@@ -133,7 +146,7 @@ const BrandColorsPage = () => (
           name={swatch.swatch}
           key={swatch.swatch}
           keyColor={swatch.key}
-          colors={swatch.colors}
+          colorGroup={swatch.colors}
         />
       ))}
     </Swatches>
