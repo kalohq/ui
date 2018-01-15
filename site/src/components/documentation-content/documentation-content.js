@@ -13,7 +13,7 @@ const DocumentationContent = styled.article`
 
   h1 {
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 400;
     color: ${props => props.theme.colors.navy700};
     margin: 0 0 16px 0;
     padding: 0;
@@ -23,7 +23,9 @@ const DocumentationContent = styled.article`
     font-size: 20px;
     font-weight: 500;
     color: ${props => props.theme.colors.navy700};
+    margin-top: 40px;
   }
+
   h3 {
     font-size: 18px;
     font-weight: 500;
