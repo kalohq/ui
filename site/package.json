@@ -32,16 +32,22 @@
   },
   "devDependencies": {
     "@kalo/eslint-config": "^6.0.0",
-    "eslint": "^4.10.0"
+    "eslint": "3.19.0",
+    "eslint-config-airbnb": "14.1.0",
+    "eslint-config-prettier": "2.4.0",
+    "eslint-plugin-flowtype": "2.32.1",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "5.0.1",
+    "eslint-plugin-prettier": "2.0.1",
+    "eslint-plugin-react": "7.0.0",
+    "prettier": "1.6.1"
   },
   "keywords": ["gatsby", "design system", "kalo"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "deploy": "npm run build && touch public/Staticfile && cf push",
-    "format":
-      "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\""
+    "start": "gatsby develop",
+    "deploy": "npm run build && touch public/Staticfile && cf push"
   }
 }
