@@ -28,7 +28,7 @@ const IndexPage = ({data}) => {
         <ActionCard
           title="Download logos"
           description="Our brand logos and how to use them"
-          link="/brand/logos"
+          link="/brand/logo"
         />
         <ActionCard
           title="Components"

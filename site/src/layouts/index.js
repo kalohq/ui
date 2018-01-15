@@ -80,7 +80,7 @@ injectGlobal`
     tab-size: 4;
     -ms-hyphens: none;
     hyphens: none;
-    background-color: #EEF4FA;
+    background-color: #f9fafc;
     color: #374561;
     border-radius: 4px;
   }
