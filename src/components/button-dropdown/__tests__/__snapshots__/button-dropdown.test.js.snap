@@ -1,0 +1,1091 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonDropdown should render shallow component ok 1`] = `
+.glamor-11 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.glamor-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.glamor-1 {
+  margin-left: 8px;
+  margin-right: -8px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 8px;
+  margin-right: -8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1em;
+  vertical-align: middle;
+  cursor: inherit;
+  font-size: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+<div
+  className="root glamor-10 glamor-11"
+  onClick={[Function]}
+  style={Object {}}
+>
+  .glamor-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.glamor-1 {
+  margin-left: 8px;
+  margin-right: -8px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 8px;
+  margin-right: -8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1em;
+  vertical-align: middle;
+  cursor: inherit;
+  font-size: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+<button
+    className="button tertiary medium"
+    name={undefined}
+    role="button"
+    type={undefined}
+  >
+    .glamor-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.glamor-1 {
+  margin-left: 8px;
+  margin-right: -8px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 8px;
+  margin-right: -8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1em;
+  vertical-align: middle;
+  cursor: inherit;
+  font-size: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+<div
+      className="placeholder glamor-2 glamor-3"
+      style={Object {}}
+    >
+      .glamor-1 {
+  margin-left: 8px;
+  margin-right: -8px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 8px;
+  margin-right: -8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1em;
+  vertical-align: middle;
+  cursor: inherit;
+  font-size: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+<i
+        className="glamor-0 glamor-1"
+        color="currentColor"
+        onClick={undefined}
+        size={20}
+        style={Object {}}
+        title={undefined}
+      >
+        <svg
+          aria-hidden="true"
+          height={20}
+          width={20}
+        >
+          <title>
+            keyboard_arrow_down
+          </title>
+          <use
+            xlinkHref="#keyboard_arrow_down"
+          />
+        </svg>
+      </i>
+      <div
+        className="menu"
+      >
+        <div
+          className="root"
+        />
+      </div>
+    </div>
+    .glamor-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.glamor-1 {
+  margin-left: 8px;
+  margin-right: -8px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 8px;
+  margin-right: -8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1em;
+  vertical-align: middle;
+  cursor: inherit;
+  font-size: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+<div
+      className="message glamor-2 glamor-3"
+      name="message"
+      style={Object {}}
+      title={undefined}
+    >
+      .glamor-1 {
+  margin-left: 8px;
+  margin-right: -8px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 8px;
+  margin-right: -8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1em;
+  vertical-align: middle;
+  cursor: inherit;
+  font-size: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+<i
+        className="glamor-0 glamor-1"
+        color="currentColor"
+        onClick={undefined}
+        size={20}
+        style={Object {}}
+        title={undefined}
+      >
+        <svg
+          aria-hidden="true"
+          height={20}
+          width={20}
+        >
+          <title>
+            keyboard_arrow_down
+          </title>
+          <use
+            xlinkHref="#keyboard_arrow_down"
+          />
+        </svg>
+      </i>
+      <div
+        className="menu"
+      >
+        <div
+          className="root"
+        />
+      </div>
+    </div>
+    .glamor-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
+      className="successMessage glamor-0 glamor-1"
+      style={Object {}}
+    />
+    <div
+      className="loadingSpinner"
+    >
+      <div
+        className="root small"
+      >
+        <svg
+          height="20px"
+          viewBox="0 0 20 20"
+          width="20px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.33335912,2.33334154 C7.33335912,3.62501275 8.37502945,4.66668308 9.66670066,4.66668308 C10.9583719,4.66668308 12.0000422,3.62501275 12.0000422,2.33334154 C12.0000422,1.04167033 10.9583719,0 9.66670066,0 C8.37502945,0 7.33335912,1.04167033 7.33335912,2.33334154 L7.33335912,2.33334154 Z M14.8542189,6.81252396 C16.1458901,6.81252396 17.1875604,5.77085363 17.1875604,4.47918242 C17.1875604,3.18751121 16.1458901,2.14584088 14.8542189,2.14584088 C13.5625477,2.14584088 12.5208774,3.18751121 12.5208774,4.47918242 C12.5208774,5.77085363 13.5625477,6.81252396 14.8542189,6.81252396 L14.8542189,6.81252396 Z M4.47918242,6.81252396 C5.77085363,6.81252396 6.81252396,5.77085363 6.81252396,4.47918242 C6.81252396,3.18751121 5.77085363,2.14584088 4.47918242,2.14584088 C3.18751121,2.14584088 2.14584088,3.18751121 2.14584088,4.47918242 C2.14584088,5.77085363 3.18751121,6.81252396 4.47918242,6.81252396 L4.47918242,6.81252396 Z M17.0000598,12.0000422 C18.291731,12.0000422 19.3334013,10.9583719 19.3334013,9.66670066 C19.3334013,8.37502945 18.291731,7.33335912 17.0000598,7.33335912 C15.7083886,7.33335912 14.6667182,8.37502945 14.6667182,9.66670066 C14.6667182,10.9583719 15.7083886,12.0000422 17.0000598,12.0000422 L17.0000598,12.0000422 Z M2.33334154,12.0000422 C3.62501275,12.0000422 4.66668308,10.9583719 4.66668308,9.66670066 C4.66668308,8.37502945 3.62501275,7.33335912 2.33334154,7.33335912 C1.04167033,7.33335912 0,8.37502945 0,9.66670066 C0,10.9583719 1.04167033,12.0000422 2.33334154,12.0000422 L2.33334154,12.0000422 Z M4.47918242,17.1875604 C5.77085363,17.1875604 6.81252396,16.1458901 6.81252396,14.8542189 C6.81252396,13.5625477 5.77085363,12.5208774 4.47918242,12.5208774 C3.18751121,12.5208774 2.14584088,13.5625477 2.14584088,14.8542189 C2.14584088,16.1458901 3.18751121,17.1875604 4.47918242,17.1875604 L4.47918242,17.1875604 Z M14.8542189,17.1875604 C16.1458901,17.1875604 17.1875604,16.1458901 17.1875604,14.8542189 C17.1875604,13.5625477 16.1458901,12.5208774 14.8542189,12.5208774 C13.5625477,12.5208774 12.5208774,13.5625477 12.5208774,14.8542189 C12.5208774,16.1458901 13.5625477,17.1875604 14.8542189,17.1875604 L14.8542189,17.1875604 Z M9.66670066,19.3334013 C10.9583719,19.3334013 12.0000422,18.291731 12.0000422,17.0000598 C12.0000422,15.7083886 10.9583719,14.6667182 9.66670066,14.6667182 C8.37502945,14.6667182 7.33335912,15.7083886 7.33335912,17.0000598 C7.33335912,18.291731 8.37502945,19.3334013 9.66670066,19.3334013 L9.66670066,19.3334013 Z"
+            stroke="none"
+          />
+        </svg>
+      </div>
+    </div>
+  </button>
+</div>
+`;
+
+exports[`ButtonDropdown should render with a checkbox 1`] = `
+.glamor-19 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.glamor-7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.glamor-5 {
+  margin-left: 8px;
+  margin-right: -8px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 8px;
+  margin-right: -8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1em;
+  vertical-align: middle;
+  cursor: inherit;
+  font-size: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.glamor-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.glamor-1 {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+<div
+  className="root glamor-0 glamor-19"
+  onClick={[Function]}
+  style={Object {}}
+>
+  .glamor-7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.glamor-5 {
+  margin-left: 8px;
+  margin-right: -8px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 8px;
+  margin-right: -8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1em;
+  vertical-align: middle;
+  cursor: inherit;
+  font-size: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.glamor-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.glamor-1 {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+<button
+    className="button tertiary medium"
+    name={undefined}
+    role="button"
+    type={undefined}
+  >
+    .glamor-7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.glamor-5 {
+  margin-left: 8px;
+  margin-right: -8px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 8px;
+  margin-right: -8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1em;
+  vertical-align: middle;
+  cursor: inherit;
+  font-size: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.glamor-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.glamor-1 {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+<div
+      className="placeholder glamor-2 glamor-7"
+      style={Object {}}
+    >
+      .glamor-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.glamor-1 {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+<div
+        className="root glamor-2 glamor-3"
+        name={undefined}
+        onClick={[Function]}
+        style={Object {}}
+      >
+        .glamor-1 {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+<div
+          className="checkbox glamor-0 glamor-1"
+          style={Object {}}
+        />
+      </div>
+      .glamor-1 {
+  margin-left: 8px;
+  margin-right: -8px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 8px;
+  margin-right: -8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1em;
+  vertical-align: middle;
+  cursor: inherit;
+  font-size: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+<i
+        className="glamor-0 glamor-1"
+        color="currentColor"
+        onClick={undefined}
+        size={20}
+        style={Object {}}
+        title={undefined}
+      >
+        <svg
+          aria-hidden="true"
+          height={20}
+          width={20}
+        >
+          <title>
+            keyboard_arrow_down
+          </title>
+          <use
+            xlinkHref="#keyboard_arrow_down"
+          />
+        </svg>
+      </i>
+      <div
+        className="menu"
+      >
+        <div
+          className="root"
+        />
+      </div>
+    </div>
+    .glamor-7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.glamor-5 {
+  margin-left: 8px;
+  margin-right: -8px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 8px;
+  margin-right: -8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1em;
+  vertical-align: middle;
+  cursor: inherit;
+  font-size: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.glamor-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.glamor-1 {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+<div
+      className="message glamor-2 glamor-7"
+      name="message"
+      style={Object {}}
+      title={undefined}
+    >
+      .glamor-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.glamor-1 {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+<div
+        className="root glamor-2 glamor-3"
+        name={undefined}
+        onClick={[Function]}
+        style={Object {}}
+      >
+        .glamor-1 {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+<div
+          className="checkbox glamor-0 glamor-1"
+          style={Object {}}
+        />
+      </div>
+      .glamor-1 {
+  margin-left: 8px;
+  margin-right: -8px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 8px;
+  margin-right: -8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1em;
+  vertical-align: middle;
+  cursor: inherit;
+  font-size: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+<i
+        className="glamor-0 glamor-1"
+        color="currentColor"
+        onClick={undefined}
+        size={20}
+        style={Object {}}
+        title={undefined}
+      >
+        <svg
+          aria-hidden="true"
+          height={20}
+          width={20}
+        >
+          <title>
+            keyboard_arrow_down
+          </title>
+          <use
+            xlinkHref="#keyboard_arrow_down"
+          />
+        </svg>
+      </i>
+      <div
+        className="menu"
+      >
+        <div
+          className="root"
+        />
+      </div>
+    </div>
+    .glamor-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
+      className="successMessage glamor-0 glamor-1"
+      style={Object {}}
+    />
+    <div
+      className="loadingSpinner"
+    >
+      <div
+        className="root small"
+      >
+        <svg
+          height="20px"
+          viewBox="0 0 20 20"
+          width="20px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.33335912,2.33334154 C7.33335912,3.62501275 8.37502945,4.66668308 9.66670066,4.66668308 C10.9583719,4.66668308 12.0000422,3.62501275 12.0000422,2.33334154 C12.0000422,1.04167033 10.9583719,0 9.66670066,0 C8.37502945,0 7.33335912,1.04167033 7.33335912,2.33334154 L7.33335912,2.33334154 Z M14.8542189,6.81252396 C16.1458901,6.81252396 17.1875604,5.77085363 17.1875604,4.47918242 C17.1875604,3.18751121 16.1458901,2.14584088 14.8542189,2.14584088 C13.5625477,2.14584088 12.5208774,3.18751121 12.5208774,4.47918242 C12.5208774,5.77085363 13.5625477,6.81252396 14.8542189,6.81252396 L14.8542189,6.81252396 Z M4.47918242,6.81252396 C5.77085363,6.81252396 6.81252396,5.77085363 6.81252396,4.47918242 C6.81252396,3.18751121 5.77085363,2.14584088 4.47918242,2.14584088 C3.18751121,2.14584088 2.14584088,3.18751121 2.14584088,4.47918242 C2.14584088,5.77085363 3.18751121,6.81252396 4.47918242,6.81252396 L4.47918242,6.81252396 Z M17.0000598,12.0000422 C18.291731,12.0000422 19.3334013,10.9583719 19.3334013,9.66670066 C19.3334013,8.37502945 18.291731,7.33335912 17.0000598,7.33335912 C15.7083886,7.33335912 14.6667182,8.37502945 14.6667182,9.66670066 C14.6667182,10.9583719 15.7083886,12.0000422 17.0000598,12.0000422 L17.0000598,12.0000422 Z M2.33334154,12.0000422 C3.62501275,12.0000422 4.66668308,10.9583719 4.66668308,9.66670066 C4.66668308,8.37502945 3.62501275,7.33335912 2.33334154,7.33335912 C1.04167033,7.33335912 0,8.37502945 0,9.66670066 C0,10.9583719 1.04167033,12.0000422 2.33334154,12.0000422 L2.33334154,12.0000422 Z M4.47918242,17.1875604 C5.77085363,17.1875604 6.81252396,16.1458901 6.81252396,14.8542189 C6.81252396,13.5625477 5.77085363,12.5208774 4.47918242,12.5208774 C3.18751121,12.5208774 2.14584088,13.5625477 2.14584088,14.8542189 C2.14584088,16.1458901 3.18751121,17.1875604 4.47918242,17.1875604 L4.47918242,17.1875604 Z M14.8542189,17.1875604 C16.1458901,17.1875604 17.1875604,16.1458901 17.1875604,14.8542189 C17.1875604,13.5625477 16.1458901,12.5208774 14.8542189,12.5208774 C13.5625477,12.5208774 12.5208774,13.5625477 12.5208774,14.8542189 C12.5208774,16.1458901 13.5625477,17.1875604 14.8542189,17.1875604 L14.8542189,17.1875604 Z M9.66670066,19.3334013 C10.9583719,19.3334013 12.0000422,18.291731 12.0000422,17.0000598 C12.0000422,15.7083886 10.9583719,14.6667182 9.66670066,14.6667182 C8.37502945,14.6667182 7.33335912,15.7083886 7.33335912,17.0000598 C7.33335912,18.291731 8.37502945,19.3334013 9.66670066,19.3334013 L9.66670066,19.3334013 Z"
+            stroke="none"
+          />
+        </svg>
+      </div>
+    </div>
+  </button>
+</div>
+`;
