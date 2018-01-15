@@ -1,5 +1,5 @@
 /* @flow */
-import Enum from 'utils/enum';
+import Enum from '../../utils/enum';
 
 export type TEXT_WEIGHT = 'light' | 'normal' | 'medium' | 'semi-bold';
 

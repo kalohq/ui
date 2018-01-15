@@ -36,6 +36,7 @@ export function cleanProps(originalProps: Object) {
  * Safari 8 detection is performed in advance
  */
 const VENDOR_STYLERS =
+  typeof window !== 'undefined' &&
   window.navigator.userAgent.indexOf('Safari/') !== -1 &&
   window.navigator.userAgent.indexOf('Version/8') !== -1
     ? {
