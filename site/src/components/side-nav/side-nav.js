@@ -23,10 +23,13 @@ const FixedContainer = styled.div`
   width: ${MENU_WIDTH};
   height: 100%;
   overflow-y: auto;
+  margin-top: 70px;
+  padding-bottom: 70px;
+  top: 0;
 `;
 
 const Title = styled.h1`
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   color: ${props => props.theme.colors.navy700};
   padding: 12px 32px;
@@ -45,7 +48,7 @@ const LinkItem = styled.li`
   flex-direction: column;
   color: ${props => props.theme.colors.navy700};
   padding: 8px 32px 8px 44px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   border-bottom: 1px solid ${props => props.theme.colors.grey300};
   background-color: ${props =>
