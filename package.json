@@ -130,6 +130,7 @@
     },
     "testEnvironment": "jsdom",
     "testMatch": ["**/__tests__/**/?(*.)(spec|test).js?(x)"],
+    "testPathIgnorePatterns": ["config"],
     "coverageDirectory": "./coverage/unit",
     "collectCoverage": false,
     "collectCoverageFrom": [
