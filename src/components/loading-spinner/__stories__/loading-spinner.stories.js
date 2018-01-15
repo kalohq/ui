@@ -1,11 +1,23 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
 
-import LoadingSpinner from 'components/loading-spinner';
+import LoadingSpinner from '../loading-spinner';
 
-storiesOf(
-  'LoadingSpinner',
-  module
-).addWithInfo('Loading Spinner', 'A standard loading spinner', () => {
-  return <LoadingSpinner />;
-});
+export const examples = [
+  {
+    title: 'LoadingSpinner',
+    description: 'A standard loading spinner',
+    render: () => <LoadingSpinner />,
+  },
+  {
+    title: 'Different sizes',
+    description:
+      'There are three different sizes of loading spinner: small, medium, and large',
+    render: () => (
+      <span>
+        <LoadingSpinner size="small" />
+        <LoadingSpinner size="medium" />
+        <LoadingSpinner size="large" />
+      </span>
+    ),
+  },
+];

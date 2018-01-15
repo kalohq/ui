@@ -6,17 +6,23 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import cx from 'classnames';
 import {Flex, Box, Inline} from '../layout';
 import Text from '../text';
-import type {RADIO_SIZE} from './constants';
 import {RADIO_SIZES} from './constants';
 import styles from './radio.css';
 
 type RadioProps = {
+  /** Is the radio button checked */
   checked?: ?boolean,
+  /** Disables user interaction although can still be checked */
   readonly?: boolean,
-  size?: RADIO_SIZE,
+  /** Changes the size of the radio */
+  size?: 'small' | 'medium',
+  /** Disables user interaction */
   disabled?: boolean,
+  /** A label to display to the right of the radio button */
   label?: string,
+  /** A function to call when a user clicks */
   onClick?: Function,
+  /** A name to pass down to the DOM - useful for testing */
   name?: string,
 };
 
