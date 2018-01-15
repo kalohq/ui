@@ -14,6 +14,7 @@
     "gatsby": "^1.9.149",
     "gatsby-link": "^1.6.34",
     "gatsby-plugin-emotion": "^1.1.10",
+    "gatsby-plugin-google-analytics": "^1.0.15",
     "gatsby-plugin-react-helmet": "^2.0.3",
     "gatsby-remark-prismjs": "^1.2.11",
     "gatsby-source-filesystem": "^1.5.11",
@@ -42,7 +43,11 @@
     "eslint-plugin-react": "7.0.0",
     "prettier": "1.6.1"
   },
-  "keywords": ["gatsby", "design system", "kalo"],
+  "keywords": [
+    "gatsby",
+    "design system",
+    "kalo"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
