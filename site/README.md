@@ -1,13 +1,22 @@
-# gatsby-starter-default
-The default Gatsby starter
+# @kalo/ui documentation site
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+Welcome to the @kalo-ui documentation. The docs are built using [Gatsby](https://www.gatsbyjs.org).
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-example-site
-```
+## Running locally
+- Clone the UI repo locally.
+- `cd site` to change in to the site directory
+- `npm install`
+- `npm run start`
+- And you should be up and running at [localhost:3000](http://localhost:3000)
 
-## Deploy
+## Deploying
+There are currently a few gotchas to deploying the site.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+Rather than building the site during deployment, it must first be built locally. The following sequence should help resolve this:
+
+- `npm run build` - (in this directory (ui/site))
+- `cf push` - (to push to CloudFoundry)
+
+*This first command will do two things:*
+- *Build the site using the Gatsby buildsystem*
+- *Create an empty `Staticfile` in the public directory. This allows us to deploy just the public directory, rather than the whole site directory*
