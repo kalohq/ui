@@ -9,7 +9,7 @@ const AsideContainer = styled.aside`
   width: auto;
   height: 100%;
   min-width: ${MENU_WIDTH};
-  background-color: ${props => props.theme.colors.grey200};
+  background-color: ${props => props.theme.colors.white};
   border-right: 1px solid ${props => props.theme.colors.grey300};
   min-height: calc(100vh - 56px);
   padding: 20px 0 0;
@@ -47,7 +47,7 @@ const LinkItem = styled.li`
   display: flex;
   flex-direction: column;
   color: ${props => props.theme.colors.navy700};
-  padding: 8px 32px 8px 44px;
+  padding: 14px 32px 14px 44px;
   font-size: 14px;
   font-weight: 400;
   border-bottom: 1px solid ${props => props.theme.colors.grey300};
