@@ -55,30 +55,33 @@ exports.onCreateNode = ({node, getNode, boundActionCreators}) => {
         name: 'slug',
         value: slug,
       });
+
+      createNodeField({
+        node,
+        name: 'ignorePage',
+        value: false,
+      });
     }
   }
 
-  // if (node.internal.type === `ComponentMetadata`) {
-  //   if (
-  //     node.parent &&
-  //     node.parent.includes('../src/components') &&
-  //     !node.parent.includes('__stories__') &&
-  //     !node.parent.includes('__tests__')
-  //   ) {
-  //     // const slug = `/components/${slugify(lowerCase(node.displayName))}/`;
-  //     createNodeField({
-  //       node,
-  //       name: 'componentName',
-  //       value: node.displayName,
-  //     });
-
-  //     // createNodeField({
-  //     //   node,
-  //     //   name: 'slug',
-  //     //   value: slug,
-  //     // });
-  //   }
-  // }
+  /**
+   * Add a field so that we can ignore these from later searches.
+   * This allows us to remove duplicated pages.
+   */
+  if (node.internal.type === `ComponentMetadata`) {
+    if (
+      node.parent &&
+      node.parent.includes('../src/components') &&
+      !node.parent.includes('__stories__') &&
+      !node.parent.includes('__tests__')
+    ) {
+      createNodeField({
+        node,
+        name: 'ignorePage',
+        value: true,
+      });
+    }
+  }
 };
 
 exports.onPreBootstrap = () => {
@@ -121,7 +124,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
   const componentPageTemplate = path.resolve(`src/templates/component.js`);
   return graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(sort: {fields: [fields___componentName], order: ASC}, filter: {fields: {ignorePage: {eq: false}}}) {
         edges {
           node {
             fields {

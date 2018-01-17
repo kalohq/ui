@@ -263,7 +263,7 @@ export const pageQuery = graphql`
         sketchKitLink
       }
     }
-    allMarkdownRemark {
+    allMarkdownRemark(sort: {fields: [fields___componentName], order: ASC}) {
       edges {
         node {
           tableOfContents
