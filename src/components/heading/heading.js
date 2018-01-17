@@ -19,7 +19,7 @@ type TProps = {
   color?: TEXT_COLOR,
   /** Sets the size of the heading */
   size?: TEXT_SIZE,
-  flex?: boolean,
+  /** Sets interactive styles for the underlying text component - See Text component */
   hover?: HEADING_HOVER,
   /** Displays an icon before the heading */
   icon?: string,
