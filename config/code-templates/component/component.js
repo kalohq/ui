@@ -4,22 +4,21 @@ import styled from 'react-emotion';
 
 import {Box} from '../layout';
 
+const Styled{{exports}} = styled(Box)``;
 /**
  * {{description}}
  */
-export function {{exports}}(
-  props: {
-    children?: React$Node,
-  }
-) {
+
+type TProps = {
+  children?: React$Node,
+};
+
+export default function {{exports}}(props: TProps) {
   const {children, ...otherProps} = props;
 
   return (
-    <Box>
-      {{exports}}
+    <Styled{{exports}}>
       {children}
-    </Box>
+    </Styled{{exports}}>
   );
 }
-
-export default {{exports}};

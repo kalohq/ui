@@ -12,7 +12,8 @@
         "component/__tests__/component.test.js":
           "components/{{filenameSlug}}/__tests__/{{filenameSlug}}.test.js",
         "component/__stories__/component.stories.js":
-          "components/{{filenameSlug}}/__stories__/{{filenameSlug}}.stories.js"
+          "components/{{filenameSlug}}/__stories__/{{filenameSlug}}.stories.js",
+        "component/README.md": "components/{{filenameSlug}}/{{readmeSlug}}.md"
       },
       "script": [
         {
@@ -38,9 +39,16 @@
         },
         {
           "name": "index",
-          "description": "Index filename (dont change)",
+          "description": "Index filename (skip this step - don't change)",
           "required": true,
           "default": "index",
+          "type": "string"
+        },
+        {
+          "name": "readme",
+          "description": "Readme filename (skip this step - don't change)",
+          "required": true,
+          "default": "README",
           "type": "string"
         }
       ]
