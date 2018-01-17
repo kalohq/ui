@@ -10,19 +10,26 @@ import type {HEADING_HOVER} from './constants';
 
 import type {TEXT_COLOR, TEXT_SIZE} from '../text/constants';
 
-type Props = {
+type TProps = {
+  /** The heading content */
   children: React.Node,
+  /** A class to pass down */
   className?: string,
+  /** Sets the text color and fill color of any child icon */
   color?: TEXT_COLOR,
+  /** Sets the size of the heading */
   size?: TEXT_SIZE,
   flex?: boolean,
   hover?: HEADING_HOVER,
+  /** Displays an icon before the heading */
   icon?: string,
+  /** Displays an icon after the heading */
   iconAfter?: string,
+  /** Adds padding between the icon and heading text */
   iconPadding?: number,
 };
 
-export default function Heading(props: Props) {
+export default function Heading(props: TProps) {
   const {
     children,
     color = 'navy700',
