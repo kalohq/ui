@@ -5,10 +5,8 @@ import {{exports}} from '../{{filenameSlug}}';
 
 export const examples = [
   {
-    title: '{{exports}} (default)',
-    description: 'An example of {{exports}} (default)',
-    render: () => (
-      <{{exports}} />
-    )
-  }
+    title: '{{exports}}',
+    description: 'A standard {{exports}}',
+    render: () => <{{exports}} />,
+  },
 ]
