@@ -1,37 +1,73 @@
 /* @flow */
-import React from 'react';
-import cx from 'classnames';
+import * as React from 'react';
 import {focusOnMount as _focusOnMount} from '../../utils/react';
 import PureComponent from 'react-pure-render/component';
 import {isBoolean, isString} from 'lodash';
+import styled, {css} from 'react-emotion';
 
 import Text from '../text';
 import {Flex} from '../layout';
 
-import styles from './input.css';
-
 const EXPANDS_BUFFER = 5;
 
-const SIZE_MAP = {
-  small: 14,
-  medium: 16,
-  large: 18,
-  'extra-large': 20,
+const INPUT_SIZE_MAP = {
+  small: {
+    fontSize: 14,
+    size: 32,
+  },
+  medium: {
+    fontSize: 14,
+    size: 40,
+  },
+  large: {
+    fontSize: 16,
+    size: 48,
+  },
 };
 
-function getInputFont(size) {
-  return `normal ${SIZE_MAP[size]}px WebFaktSoftPro`;
-}
+const getInputFont = size =>
+  `normal ${INPUT_SIZE_MAP[size].fontSize}px WebFaktSoftPro`;
 
-export const InputAddon = (props: {content: string, type: string}) => {
+const StyledInputAddon = styled(Flex)`
+  min-width: 40px;
+  height: 40px;
+  flex-flow: column;
+  text-align: center;
+
+  ${props =>
+    props.inputTheme === 'default' &&
+    css`
+      background-color: ${props.theme.colors.grey300};
+      color: ${props.theme.colors.navy600};
+      border: 1px solid #dfe2e4;
+      padding: 0 16px;
+
+      ${props.addonType === 'prefix' &&
+        css`
+          border-right: 0;
+          border-radius: ${props.theme.layout.borderRadiusInput} 0 0
+            ${props.theme.layout.borderRadiusInput};
+        `};
+      ${props.addonType === 'suffix' &&
+        css`
+          border-left: 0;
+          border-radius: 0 ${props.theme.layout.borderRadiusInput}
+            ${props.theme.layout.borderRadiusInput} 0;
+        `};
+    `};
+`;
+
+export const InputAddon = (props: {
+  content: string | React.Node,
+  type: string,
+  inputTheme: 'default' | 'transparent' | 'well',
+}) => {
   return (
-    <Flex
+    <StyledInputAddon
       justifyContent="center"
       alignItems="center"
-      className={cx({
-        [styles.addon]: true,
-        [styles[`addon-${props.type}`]]: true,
-      })}
+      addonType={props.type}
+      inputTheme={props.inputTheme}
     >
       {isString(props.content) ? (
         <Text size="small" color="slate" weight="semi-bold">
@@ -40,8 +76,153 @@ export const InputAddon = (props: {content: string, type: string}) => {
       ) : (
         props.content
       )}
-    </Flex>
+    </StyledInputAddon>
   );
+};
+
+const StyledInputContainer = styled(Flex)`
+  font-size: 16px;
+  font-weight: ${props => props.theme.typography.fontWeightNormal};
+  transition: background-color, border-color 160ms linear;
+  user-select: text;
+  width: ${props => (props.fullWidth ? '100%' : 'auto')};
+`;
+
+const StyledInput = styled.input`
+  width: 100%;
+  min-width: 0;
+  color: ${props => props.theme.colors.navy700};
+  font-size: ${props => INPUT_SIZE_MAP[props.size].fontSize}px;
+  height: ${props => INPUT_SIZE_MAP[props.size].size}px;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:-webkit-autofill {
+    background-color: transparent;
+  }
+
+  &:disabled {
+    background-color: ${props => props.theme.colors.navy300};
+    border: 1px solid #dbdfe2;
+    cursor: not-allowed;
+    color: ${props => props.theme.colors.grey500};
+  }
+
+  &:read-only {
+    background-color: ${props => props.theme.colors.navy300};
+    border: 1px dashed #dbdfe2;
+    color: ${props => props.theme.colors.navy600};
+  }
+
+  ${props =>
+    props.inputTheme === 'default' &&
+    css`
+      background-color: #fff;
+      border-radius: ${props.theme.layout.borderRadiusInput};
+      border: 1px solid #dfe2e4;
+      padding: 4px 8px 4px 16px;
+
+      &::placeholder {
+        color: ${props.theme.colors.navy700};
+      }
+
+      &:not(:read-only):not(:disabled):hover {
+        border-color: ${props.theme.colors.grey500};
+      }
+
+      &:not(:read-only):not(:disabled):focus {
+        border-color: ${props.theme.colors.blue500};
+      }
+
+      ${props.withAddonPrefix &&
+        css`
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        `};
+      ${props.withAddonSuffix &&
+        css`
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        `};
+    `};
+
+  ${props =>
+    props.inputTheme === 'transparent' &&
+    css`
+      background: transparent;
+      border: 0;
+      padding: 4px 0;
+
+      &::placeholder {
+        color: ${props.theme.colors.navy500};
+      }
+
+      &:disabled,
+      &:read-only {
+        background-color: transparent;
+        border: 0;
+      }
+    `};
+
+  ${props =>
+    props.inputTheme === 'well' &&
+    css`
+      border: 1px solid ${props.theme.colors.grey500};
+      padding: 7px 10px;
+    `} ${props =>
+      props.valid &&
+      css`
+        border-color: ${props.theme.colors.green500}!important;
+      `};
+
+  ${props =>
+    props.invalid &&
+    css`
+      border-color: ${props.theme.colors.pink500}!important;
+    `};
+`;
+
+type TProps = {
+  /** The visual theme of the input */
+  theme?: 'default' | 'transparent' | 'well',
+  /** Adds a bottom margin */
+  margin?: 'none' | 'small' | 'medium' | 'large',
+  /** The overall size of the input */
+  size?: 'small' | 'medium' | 'large' | 'extra-large',
+  /** Sets the initial value for the input outside of the React lifecycle */
+  defaultValue?: string,
+  /** The value of the input */
+  value?: string,
+  /** A function to call when a user focuses on the input */
+  onFocus?: Function,
+  /** A function to call when a user focuses away from the input */
+  onBlur?: Function,
+  /** A function to call when the input value changes */
+  onChange?: Function,
+  onEdited?: Function,
+  /** A style object to pass to the underlying element */
+  style?: Object,
+  /** A class to pass down */
+  className?: string,
+  expands?: boolean,
+  /** Will focus the input automatically on render */
+  focusOnMount?: boolean,
+  /** Sets the input placeholder copy */
+  placeholder?: string,
+  /** Displays the input with a valid status if true, and an invalid status if false */
+  valid?: boolean,
+  /** Removes user interaction, but can still display a value */
+  readonly?: boolean,
+  /** A name to pass down to the DOM */
+  name?: string,
+  /** A React 'ref' */
+  inputRef?: Function,
+  /** A value to display before (to the left) of the input */
+  addonPrefix: string | React.Node,
+  /** A value to display after (to the right) the input */
+  addonSuffix: string | React.Node,
 };
 
 export default class Input extends PureComponent {
@@ -59,28 +240,7 @@ export default class Input extends PureComponent {
   onBlur: Function;
   onChange: Function;
 
-  constructor(props: {
-    theme?: 'default' | 'transparent' | 'well',
-    margin?: 'none' | 'small' | 'medium' | 'large',
-    size?: 'small' | 'medium' | 'large' | 'extra-large',
-    defaultValue?: string,
-    value?: string,
-    onFocus?: Function,
-    onBlur?: Function,
-    onChange?: Function,
-    onEdited?: Function,
-    style?: Object,
-    className?: string,
-    expands?: boolean,
-    focusOnMount?: boolean,
-    placeholder?: string,
-    valid?: boolean,
-    readonly?: boolean,
-    name?: string,
-    inputRef?: Function,
-    addonPrefix: string | React$Element<*>,
-    addonSuffix: string | React$Element<*>,
-  }) {
+  constructor(props: TProps) {
     super(props);
 
     this.state = {focused: false, changed: false};
@@ -90,7 +250,7 @@ export default class Input extends PureComponent {
     this.onChange = this.onChange.bind(this);
   }
 
-  onFocus(event: SyntheticEvent) {
+  onFocus(event: SyntheticEvent<*>) {
     if (this.props.onFocus) {
       this.props.onFocus(event);
 
@@ -102,7 +262,7 @@ export default class Input extends PureComponent {
     }
   }
 
-  onBlur(event: SyntheticEvent) {
+  onBlur(event: SyntheticEvent<*>) {
     if (this.props.onBlur) {
       this.props.onBlur(event);
     }
@@ -119,7 +279,7 @@ export default class Input extends PureComponent {
     }
   }
 
-  onChange(event: SyntheticEvent) {
+  onChange(event: SyntheticEvent<*>) {
     if (this.props.onChange) {
       this.props.onChange(event);
     }
@@ -167,24 +327,6 @@ export default class Input extends PureComponent {
 
     const {focused} = this.state;
 
-    const _classNames = cx(
-      {
-        [styles.root]: true,
-        [styles[`theme-${theme}`]]: true,
-        [styles.expands]: expands,
-        [styles.valid]: isBoolean(valid) && valid,
-        [styles.invalid]: isBoolean(valid) && !valid,
-        [styles.blank]: !value,
-        [styles.focused]: focused,
-        [styles[`margin-${margin}`]]: true,
-        [styles.fullWidth]: fullWidth,
-        [styles[`size-${size}`]]: true,
-        [styles.withAddonPrefix]: !!addonPrefix,
-        [styles.withAddonSuffix]: !!addonSuffix,
-      },
-      className
-    );
-
     const _styles = {
       ...style,
       width: expands
@@ -196,15 +338,27 @@ export default class Input extends PureComponent {
     };
 
     return (
-      <Flex className={_classNames}>
+      <StyledInputContainer marginBottom={margin} className={className}>
         {addonPrefix ? (
-          <InputAddon content={addonPrefix} type="prefix" />
+          <InputAddon inputTheme={theme} content={addonPrefix} type="prefix" />
         ) : null}
-        <input
+        <StyledInput
           {...otherProps}
+          /** Emotion Props */
+          inputTheme={theme}
+          expands={expands}
+          valid={isBoolean(valid) && valid}
+          invalid={isBoolean(valid) && !valid}
+          focused={focused}
+          margin={margin}
+          fullWidth={fullWidth}
+          size={size}
+          withAddonPrefix={!!addonPrefix}
+          withAddonSuffix={!!addonSuffix}
+          /** Other Props */
           ref={focusOnMount ? _focusOnMount : inputRef}
           style={_styles}
-          className={styles.input}
+          className={className}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChange={readonly ? undefined : this.onChange}
@@ -215,9 +369,9 @@ export default class Input extends PureComponent {
           readOnly={readonly}
         />
         {addonSuffix ? (
-          <InputAddon content={addonSuffix} type="suffix" />
+          <InputAddon inputTheme={theme} content={addonSuffix} type="suffix" />
         ) : null}
-      </Flex>
+      </StyledInputContainer>
     );
   }
 }

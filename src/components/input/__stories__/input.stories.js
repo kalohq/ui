@@ -46,4 +46,14 @@ export const examples = [
       <Input size="medium" addonSuffix="kalohq.com" placeholder="0.00" />
     ),
   },
+  {
+    title: 'With valid status',
+    description: 'Displays an input with a valid status',
+    render: () => <Input valid={true} value="hello@kalohq.com" />,
+  },
+  {
+    title: 'With invalid status',
+    description: 'Displays an input with an invalid status',
+    render: () => <Input valid={false} value="hello@kalohq.com" />,
+  },
 ];

@@ -23,6 +23,7 @@ export {default as Button} from './button';
 export {default as ButtonDropdown} from './button-dropdown';
 export {default as ButtonGroup} from './button-group';
 export {default as Checkbox} from './checkbox';
+export {default as Input} from './input';
 export {default as Radio} from './radio';
 export {default as Field} from './field';
 export {default as FieldHint} from './field-hint';
