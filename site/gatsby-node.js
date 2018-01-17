@@ -58,27 +58,27 @@ exports.onCreateNode = ({node, getNode, boundActionCreators}) => {
     }
   }
 
-  if (node.internal.type === `ComponentMetadata`) {
-    if (
-      node.parent &&
-      node.parent.includes('../src/components') &&
-      !node.parent.includes('__stories__') &&
-      !node.parent.includes('__tests__')
-    ) {
-      // const slug = `/components/${slugify(lowerCase(node.displayName))}/`;
-      createNodeField({
-        node,
-        name: 'componentName',
-        value: node.displayName,
-      });
+  // if (node.internal.type === `ComponentMetadata`) {
+  //   if (
+  //     node.parent &&
+  //     node.parent.includes('../src/components') &&
+  //     !node.parent.includes('__stories__') &&
+  //     !node.parent.includes('__tests__')
+  //   ) {
+  //     // const slug = `/components/${slugify(lowerCase(node.displayName))}/`;
+  //     createNodeField({
+  //       node,
+  //       name: 'componentName',
+  //       value: node.displayName,
+  //     });
 
-      // createNodeField({
-      //   node,
-      //   name: 'slug',
-      //   value: slug,
-      // });
-    }
-  }
+  //     // createNodeField({
+  //     //   node,
+  //     //   name: 'slug',
+  //     //   value: slug,
+  //     // });
+  //   }
+  // }
 };
 
 exports.onPreBootstrap = () => {
