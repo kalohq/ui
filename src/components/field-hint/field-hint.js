@@ -7,12 +7,12 @@ import Text from '../text';
 import Icon from '../icon';
 import {Inline} from '../layout';
 
-type Props = {
+type TProps = {
   hint?: string,
   icon?: React$Node | string,
 };
 
-export default function FieldHint(props: Props) {
+export default function FieldHint(props: TProps) {
   const {hint, icon, ...otherProps} = props;
 
   return (

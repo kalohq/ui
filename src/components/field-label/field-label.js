@@ -7,7 +7,7 @@ import Text from '../text';
 import Icon from '../icon';
 import {Inline} from '../layout';
 
-export type Props = {
+export type TProps = {
   htmlFor?: string,
   children?: React$Node,
   required?: boolean,
@@ -17,7 +17,7 @@ export type Props = {
   width?: number,
 };
 
-export default function FieldLabel(props: Props) {
+export default function FieldLabel(props: TProps) {
   const {
     htmlFor,
     children,

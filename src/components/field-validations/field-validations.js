@@ -17,7 +17,9 @@ const StyledFieldValidation = styled.div`
 `;
 
 type TProps = {
+  /** A list of validations to be displayed to the user */
   validations?: List<Validation>,
+  /** Visually centeres the validations */
   centered?: boolean,
 };
 
