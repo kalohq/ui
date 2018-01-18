@@ -37,7 +37,11 @@ const StyledDocumentationContent = styled.article`
 
 const DocumentationContent = ({children, raw, pageTitle, pageDescription}) => (
   <div>
-    <Helmet title={`${pageTitle} - Kalo Design System`}>
+    <Helmet
+      title={
+        pageTitle ? `${pageTitle} - Kalo Design System` : 'Kalo Design System'
+      }
+    >
       <meta name="description" content={pageDescription} />
     </Helmet>
     {raw ? (
