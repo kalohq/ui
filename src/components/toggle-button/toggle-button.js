@@ -65,8 +65,8 @@ type TProps = {
   /** Is the toggle toggled? */
   value?: boolean,
   /** A function to call when toggled */
-  onChange?: Function,
-  value: boolean,
+  onChange: Function,
+  value?: boolean,
   /** A label to display next to the toggle button  */
   label?: string,
   /** The overall visual theme of the button */
@@ -74,7 +74,7 @@ type TProps = {
 };
 
 export default function ToggleButton(props: TProps) {
-  const {value, theme = 'default', onChange, label} = props;
+  const {value = false, theme = 'default', onChange, label} = props;
 
   return (
     <Box

@@ -4,7 +4,7 @@ import {List} from 'immutable';
 import styled from 'react-emotion';
 
 import FieldValidation from '../field-validation';
-import type {Validation} from '../field-validation';
+import type Validation from '../field-validation';
 
 export type Validations = List<Validation>;
 
@@ -18,7 +18,7 @@ const StyledFieldValidation = styled.div`
 
 type TProps = {
   /** A list of validations to be displayed to the user */
-  validations?: List<Validation>,
+  validations?: Validations,
   /** Visually centeres the validations */
   centered?: boolean,
 };
@@ -30,6 +30,7 @@ export default function FieldValidations(props: TProps) {
     <StyledFieldValidation centered={centered}>
       {validations ? (
         validations.map(validation => (
+          // $FlowFixMe
           <FieldValidation validation={validation} key={validation.message} />
         ))
       ) : null}

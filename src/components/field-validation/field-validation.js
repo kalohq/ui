@@ -6,11 +6,11 @@ export type Validation = {
   message: string,
 };
 
-type Props = {
+type TProps = {
   validation: Validation,
 };
 
-export default function FieldValidation(props: Props) {
+export default function FieldValidation(props: TProps) {
   const {validation} = props;
 
   return (

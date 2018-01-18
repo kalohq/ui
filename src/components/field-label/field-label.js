@@ -55,7 +55,7 @@ export default function FieldLabel(props: TProps) {
         <Inline paddingLeft={5} marginTop={-1} verticalAlign="text-bottom">
           {isString(icon) ? (
             <Icon size={12} verticalAlign="middle">
-              {icon}
+              {String(icon)}
             </Icon>
           ) : (
             icon

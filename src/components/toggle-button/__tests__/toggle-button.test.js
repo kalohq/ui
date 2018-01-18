@@ -12,7 +12,7 @@ describe('ToggleButton', () => {
     const element = renderer
       .create(
         <ThemeProvider theme={theme}>
-          <ToggleButton />
+          <ToggleButton onChange={() => {}} />
         </ThemeProvider>
       )
       .toJSON();

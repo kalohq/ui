@@ -1,19 +1,20 @@
 /* @flow */
 import * as React from 'react';
 import {pickStyles} from '../../utils/style';
+import {List} from 'immutable';
 
 import {Box} from '../layout';
 import FieldHint from '../field-hint';
 import FieldLabel from '../field-label';
 import FieldValidations from '../field-validations';
 
-import type {Validations} from '../field-validations';
-import type {Props as LabelProps} from '../field-label';
+import type Validation from '../field-validation';
+import type LabelProps from '../field-label';
 
 export type TProps = {
   children?: React.Node,
   /** A list of validations */
-  validations?: Validations,
+  validations?: List<Validation>,
   /** A label to be displayed above the input */
   label?: React.Node,
   /** A secondary label - This can be a function (for example, to toggle an option) */
