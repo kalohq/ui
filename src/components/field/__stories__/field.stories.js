@@ -1,6 +1,5 @@
 /* @flow */
 import React from 'react';
-import {List} from 'immutable';
 
 import Field from '../field';
 import Input from '../../input';
@@ -26,9 +25,10 @@ export const examples = [
     title: 'Field with validation',
     description: 'A field with an input with validations',
     render: () => (
+      // $FlowFixMe
       <Field
         label="Your email"
-        validations={List({message: 'Your email was not valid'})}
+        validations={[{message: 'Your email was not valid'}]}
       >
         <Input placeholder="hello@kalohq.com" />
       </Field>
