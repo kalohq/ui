@@ -1,24 +1,57 @@
 /* eslint-env jest */
-import expect from 'expect';
 import {shallow} from 'enzyme';
 import React from 'react';
-
-import Input from 'components/input';
+import renderer from 'react-test-renderer';
+import {ThemeProvider} from 'emotion-theming';
 
 import Field from '../field';
+import Input from '../..//input';
+import theme from '../../theme';
 
-describe('components/field', () => {
-  describe('Field (default)', () => {
-    it('should render as expected', () => {
-      const component = (
-        <Field label="My Label" hint="My Hint">
-          <Input value="My Input Value" />
-        </Field>
-      );
-      const result = shallow(component);
-      expect(result.html()).toMatch(/My Label/);
-      expect(result.html()).toMatch(/My Hint/);
-      expect(result.find(Input).is({value: 'My Input Value'})).toBe(true);
+describe('Field', () => {
+  const defaultProps = {
+    label: 'My Label',
+    hint: 'My Hint',
+  };
+
+  const create = props => (
+    <Field {...defaultProps} {...props}>
+      <ThemeProvider theme={theme}>
+        <Input value="My Input Value" />
+      </ThemeProvider>
+    </Field>
+  );
+
+  test('should render shallow component ok', () => {
+    const element = renderer
+      .create(
+        <ThemeProvider theme={theme}>
+          <Field {...defaultProps}>
+            <Input value="My Input Value" />
+          </Field>
+        </ThemeProvider>
+      )
+      .toJSON();
+    expect(element).toMatchSnapshot();
+  });
+
+  test('should render as expected', () => {
+    const element = create();
+    const result = shallow(element);
+    expect(result.html()).toMatch(/My Label/);
+    expect(result.html()).toMatch(/My Hint/);
+    expect(result.find(Input).is({value: 'My Input Value'})).toBe(true);
+  });
+
+  test('should render with validations', () => {
+    const element = create({
+      validations: [
+        {
+          message: 'Your email was incorrect',
+        },
+      ],
     });
+    const result = shallow(element);
+    expect(result.html()).toMatch(/Your email was incorrect/);
   });
 });

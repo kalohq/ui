@@ -1,24 +1,26 @@
 /* @flow */
 /* eslint-env jest */
-import expect from 'expect';
+import React from 'react';
 import {shallow} from 'enzyme';
-import {testComponent} from 'utils/test/react';
+import renderer from 'react-test-renderer';
 
 import FieldHint from '../field-hint';
+import Icon from '../../icon';
 
-describe('components/field-hint', () => {
-  describe('FieldHint', () => {
-    const create = testComponent(FieldHint, () => ({
-      // insert your default props here ...
-    }));
+describe('FieldHint', () => {
+  const create = props => <FieldHint {...props} />;
 
-    it('should render shallow component ok', () => {
-      const {element} = create({
-        // insert test specific props here ...
-        children: 'Child',
-      });
-      const result = shallow(element);
-      expect(result).toExist('should render OK');
+  test('should render shallow component ok', () => {
+    const element = renderer.create(<FieldHint />).toJSON();
+    expect(element).toMatchSnapshot();
+  });
+
+  test('should render with a custom icon', () => {
+    const element = create({
+      icon: 'archive',
     });
+
+    const result = shallow(element);
+    expect(result.find(Icon).length).toBe(1);
   });
 });

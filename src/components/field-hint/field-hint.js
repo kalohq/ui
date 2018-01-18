@@ -28,7 +28,7 @@ export default function FieldHint(props: TProps) {
                 position="relative"
                 verticalAlign="baseline"
               >
-                {icon}
+                {String(icon)}
               </Icon>
             ) : (
               icon

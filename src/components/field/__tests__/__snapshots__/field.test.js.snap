@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Field should render shallow component ok 1`] = `
+<div
+  className="css-134evea0 css-1lsspws"
+  onClick={undefined}
+  style={Object {}}
+>
+  <div
+    className="css-134evea0 css-1x0f447"
+    style={Object {}}
+  >
+    <label
+      className="css-16ef8bd0 css-1i78l7h"
+      color="navy600"
+      htmlFor={undefined}
+      onClick={undefined}
+      size="small"
+      style={Object {}}
+      title={undefined}
+    >
+      My Label
+    </label>
+  </div>
+  <div
+    className="css-13nj03s1 css-11q3kj7"
+    style={Object {}}
+  >
+    <input
+      className="css-kus6en css-13nj03s2"
+      defaultValue={undefined}
+      name={undefined}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder={undefined}
+      readOnly={undefined}
+      size="medium"
+      style={
+        Object {
+          "width": undefined,
+        }
+      }
+      value="My Input Value"
+    />
+  </div>
+  <span
+    className="css-134evea3 css-c43ebs"
+    style={Object {}}
+  >
+    <span
+      className="css-16ef8bd0 css-1u1iks6"
+      color="navy600"
+      onClick={undefined}
+      size="extra-small"
+      style={Object {}}
+    >
+      My Hint
+    </span>
+  </span>
+</div>
+`;

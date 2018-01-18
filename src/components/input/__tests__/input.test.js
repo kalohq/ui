@@ -2,36 +2,44 @@
 /* eslint-env jest */
 import React from 'react';
 import {shallow} from 'enzyme';
-import expect from 'expect';
+import renderer from 'react-test-renderer';
+import {ThemeProvider} from 'emotion-theming';
 
+import theme from '../../theme';
 import Input, {InputAddon} from '../input';
 
-describe('components/input', () => {
-  describe('Input (default)', () => {
-    const create = props => shallow(<Input {...props} />);
+describe('Input', () => {
+  const create = props => shallow(<Input {...props} />);
 
-    it('should render shallow component ok', () => {
-      const element = create({
-        theme: 'default',
-      });
+  const defaultProps = {
+    size: 'medium',
+    theme: 'default',
+  };
 
-      expect(element).toExist('should render OK');
+  test('should render shallow component ok', () => {
+    const element = renderer
+      .create(
+        <ThemeProvider theme={theme}>
+          <Input {...defaultProps} />
+        </ThemeProvider>
+      )
+      .toJSON();
+    expect(element).toMatchSnapshot();
+  });
+
+  test('should render prefixed addon content', () => {
+    const element = create({
+      theme: 'default',
+      addonPrefix: '£',
     });
+    expect(element.find(InputAddon).length).toBe(1);
+  });
 
-    it('should render prefixed addon content', () => {
-      const element = create({
-        theme: 'default',
-        addonPrefix: '£',
-      });
-      expect(element.find(InputAddon).length).toBe(1);
+  test('should render suffixed addon content', () => {
+    const element = create({
+      theme: 'default',
+      addonSuffix: '£',
     });
-
-    it('should render suffixed addon content', () => {
-      const element = create({
-        theme: 'default',
-        addonSuffix: '£',
-      });
-      expect(element.find(InputAddon).length).toBe(1);
-    });
+    expect(element.find(InputAddon).length).toBe(1);
   });
 });
