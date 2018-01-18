@@ -4,9 +4,7 @@ general:
 
 machine:
   node:
-    version: 6.9.1
-  post:
-    - npm install -g npm@5.5.1
+    version: 8.9.3
 
 dependencies:
   override:
