@@ -20,11 +20,11 @@ const StoryContainerHeader = styled.div`
   border-radius: ${props => props.theme.layout.borderRadius} 0 0
     ${props => props.theme.layout.borderRadius};
   border-bottom: 1px solid ${props => props.theme.colors.grey300};
-  padding: 8px 16px;
+  padding: 16px;
 `;
 
 const StoryTitle = styled.h3`
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   color: ${props => props.theme.colors.navy600};
   margin: 0;
@@ -32,7 +32,7 @@ const StoryTitle = styled.h3`
 `;
 
 const StoryDescription = styled.span`
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   color: ${props => props.theme.colors.navy600};
 `;
@@ -40,7 +40,10 @@ const StoryDescription = styled.span`
 const StoryMain = styled.div`
   width: 100%;
   padding: 32px 16px;
-  background-color: ${props => props.theme.colors.grey200};
+  background-color: ${props =>
+    props.background === 'white'
+      ? props.theme.colors.white
+      : props.theme.colors.grey200};
 `;
 
 const StyledTitle = styled.h2`
@@ -92,7 +95,7 @@ export default function ComponentDocumentation(props) {
                     <StoryTitle>{story.title}</StoryTitle>
                     <StoryDescription>{story.description}</StoryDescription>
                   </StoryContainerHeader>
-                  <StoryMain>
+                  <StoryMain background={story.background}>
                     <Story />
                   </StoryMain>
                 </StoryContainer>

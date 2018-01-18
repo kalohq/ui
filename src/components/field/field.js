@@ -82,6 +82,7 @@ export default function Field(props: TProps) {
             locked={locked}
             icon={icon}
             labelProps={labelProps}
+            marginBottom={8}
           >
             {label}
           </FieldLabel>
