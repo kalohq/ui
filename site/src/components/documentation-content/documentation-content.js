@@ -33,6 +33,13 @@ const StyledDocumentationContent = styled.article`
     font-weight: 500;
     color: ${props => props.theme.colors.navy700};
   }
+
+  p > code {
+    background-color: ${props => props.theme.colors.grey200};
+    font-size: 14px;
+    padding: 4px;
+    border-radius: 4px;
+  }
 `;
 
 const DocumentationContent = ({children, raw, pageTitle, pageDescription}) => (
