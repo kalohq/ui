@@ -2,6 +2,6 @@
 
 exports[`FieldValidations should render shallow component ok 1`] = `
 <div
-  className="css-1ylngii css-1b9obwq0"
+  className="css-80ji2w css-vd11ey0"
 />
 `;
