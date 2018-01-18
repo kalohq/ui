@@ -1,31 +1,21 @@
 /* @flow */
 /* eslint-env jest */
 import React from 'react';
-import {shallow} from 'enzyme';
-import serializer from 'enzyme-to-json/serializer';
+import renderer from 'react-test-renderer';
+import {ThemeProvider} from 'emotion-theming';
 
 import ToggleButton from '../toggle-button';
+import theme from '../../theme';
 
-expect.addSnapshotSerializer(serializer);
-
-describe('components/toggle-button', () => {
-  describe('ToggleButton (default)', () => {
-    const create = (spread = {}) => {
-      const props = {
-        // (insert your default props here)
-        ...spread,
-      };
-      const element = <ToggleButton {...props} />;
-      return {props, element};
-    };
-
-    it('should shallow render as expected', () => {
-      const {element} = create({
-        // (insert test specific props here)
-        children: 'Child',
-      });
-      const result = shallow(element);
-      expect(result).toMatchSnapshot();
-    });
+describe('ToggleButton', () => {
+  test('should render shallow component ok', () => {
+    const element = renderer
+      .create(
+        <ThemeProvider theme={theme}>
+          <ToggleButton />
+        </ThemeProvider>
+      )
+      .toJSON();
+    expect(element).toMatchSnapshot();
   });
 });

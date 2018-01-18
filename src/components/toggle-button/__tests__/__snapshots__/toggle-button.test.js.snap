@@ -1,17 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/toggle-button ToggleButton (default) should shallow render as expected 1`] = `
-<Box
-  alignItems="center"
-  flexDirection="row"
+exports[`ToggleButton should render shallow component ok 1`] = `
+<div
+  className="css-134evea0 css-1wynm0n"
   onClick={[Function]}
+  style={Object {}}
 >
-  <Styled(div)
-    toggleButtonTheme="default"
+  <div
+    className="css-lvh3bq css-13hfc2d0"
+    selected={undefined}
   >
-    <Styled(div)
-      toggleButtonTheme="default"
+    <div
+      className="css-ffns5 css-13hfc2d1"
+      selected={undefined}
     />
-  </Styled(div)>
-</Box>
+  </div>
+</div>
 `;
