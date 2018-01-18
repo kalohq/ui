@@ -55,7 +55,7 @@ const DocContent = styled.div`width: 100%;`;
 
 export default function ComponentDocumentation(props) {
   const {data} = props;
-  const {markdownRemark: component, allComponentMetadata} = data;
+  const {markdownRemark: component, allComponentMetadata, site} = data;
 
   const componentProps = allComponentMetadata
     ? allComponentMetadata.edges[0].node.props
@@ -64,12 +64,13 @@ export default function ComponentDocumentation(props) {
   const stories = Stories[componentName]
     ? Stories[componentName].examples
     : false;
-
   return (
     <FlexWrapper>
       <DocContent>
         <DocumentationContent
-          dangerouslySetInnerHTML={{__html: component.html}}
+          pageTitle={`${componentName} - ${site.siteMetadata.title}`}
+          pageDescription={component.excerpt}
+          children={component.html}
         />
         {componentProps ? (
           <section>
@@ -106,6 +107,11 @@ export default function ComponentDocumentation(props) {
 
 export const pageQuery = graphql`
   query ComponentByPath($componentName: String!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allComponentMetadata(filter: {displayName: {eq: $componentName}}) {
       edges {
         node {

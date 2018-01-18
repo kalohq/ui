@@ -31,7 +31,7 @@ const terms = [
 ];
 
 const GlossaryPage = () => (
-  <DocumentationContent>
+  <DocumentationContent pageTitle="Product Glossary">
     <h1>Product Glossary</h1>
     <p>Commonly used words and phrases used across the Kalo product</p>
 

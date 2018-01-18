@@ -126,7 +126,10 @@ const Swatch = ({colorGroup, name, keyColor}) => (
 );
 
 const BrandColorsPage = () => (
-  <DocumentationContent>
+  <DocumentationContent
+    pageTitle="Color Palette"
+    pageDescription="The Kalo brand palette consists of two primary colors, and four secondary."
+  >
     <h1>Color</h1>
     <p>
       The Kalo brand palette consists of two primary colors, and four secondary.

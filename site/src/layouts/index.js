@@ -1,5 +1,4 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import {ThemeProvider} from 'emotion-theming';
 import styled, {injectGlobal} from 'react-emotion';
 import {groupBy, upperFirst, camelCase} from 'lodash';
@@ -241,7 +240,6 @@ export default function Page({data, children, location}) {
   return (
     <ThemeProvider theme={theme}>
       <Container>
-        <Helmet title="Kalo Design System" />
         <Header projectMeta={projectMeta} />
         <FlexWrapper>
           <SideNav currentCategory={currentCategory} links={groupedSitePages} />
@@ -263,7 +261,7 @@ export const pageQuery = graphql`
         sketchKitLink
       }
     }
-    allMarkdownRemark {
+    allMarkdownRemark(sort: {fields: [fields___componentName], order: ASC}) {
       edges {
         node {
           tableOfContents

@@ -1,6 +1,8 @@
+import React from 'react';
 import styled from 'react-emotion';
+import Helmet from 'react-helmet';
 
-const DocumentationContent = styled.article`
+const StyledDocumentationContent = styled.article`
   p,
   li {
     font-size: 16px;
@@ -32,5 +34,22 @@ const DocumentationContent = styled.article`
     color: ${props => props.theme.colors.navy700};
   }
 `;
+
+const DocumentationContent = ({children, raw, pageTitle, pageDescription}) => (
+  <div>
+    <Helmet
+      title={
+        pageTitle ? `${pageTitle} - Kalo Design System` : 'Kalo Design System'
+      }
+    >
+      <meta name="description" content={pageDescription} />
+    </Helmet>
+    {raw ? (
+      <StyledDocumentationContent dangerouslySetInnerHTML={{__html: raw}} />
+    ) : (
+      <StyledDocumentationContent>{children}</StyledDocumentationContent>
+    )}
+  </div>
+);
 
 export default DocumentationContent;

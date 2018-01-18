@@ -5,7 +5,10 @@ import DocumentationContent from '../../components/documentation-content';
 import logoMisuse from './assets/logo-misuse.png';
 
 const BrandLogoPage = () => (
-  <DocumentationContent>
+  <DocumentationContent
+    pageTitle="Brand logos"
+    pageDescription="This is our brand logo. We have a couple of guidelines about how and when to use it."
+  >
     <h1>Brand assets and logos</h1>
     <p>
       This is our brand logo. We have a couple of guidelines about how and when
