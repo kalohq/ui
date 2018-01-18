@@ -70,7 +70,7 @@ export default function ComponentDocumentation(props) {
         <DocumentationContent
           pageTitle={`${componentName} - ${site.siteMetadata.title}`}
           pageDescription={component.excerpt}
-          children={component.html}
+          raw={component.html}
         />
         {componentProps ? (
           <section>
