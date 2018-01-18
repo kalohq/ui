@@ -3,7 +3,10 @@ import React from 'react';
 import DocumentationContent from '../../components/documentation-content';
 
 const MetaDesignTokensPage = () => (
-  <DocumentationContent>
+  <DocumentationContent
+    pageTitle="Design Tokens"
+    pageDescription="The Kalo design system is built up from design tokens. Design tokens are the very lowest level variables that together, make up larger components."
+  >
     <h1>Design tokens</h1>
     <p>
       The Kalo design system is built up from design tokens. Design tokens are

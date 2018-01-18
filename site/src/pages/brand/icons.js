@@ -88,7 +88,10 @@ class IconSetWithSearch extends React.Component {
 }
 
 const BrandIconsPage = () => (
-  <DocumentationContent>
+  <DocumentationContent
+    pageTitle="Iconography"
+    pageDescription="Our icon set is a mixture of Material Icons, and custom icons designed in house."
+  >
     <h1>Icon Set</h1>
     <p>
       The icons used throughout Kalo are a mixture of{' '}
