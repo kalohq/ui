@@ -136,6 +136,7 @@
     "collectCoverageFrom": [
       "src/**/*.js",
       "!src/**/*.test.js",
+      "!src/**/index.js",
       "!src/**/*.stories.js",
       "!src/components/icon-symbols/**/*",
       "!src/design-tokens/**/*",
