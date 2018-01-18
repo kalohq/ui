@@ -7,7 +7,7 @@ import {Box} from '../layout';
 import FieldLabel from '../field-label';
 import Text from '../text';
 
-function FieldsetHeader(props: {
+export function FieldsetHeader(props: {
   legend: string,
   description?: string,
   meta?: string,

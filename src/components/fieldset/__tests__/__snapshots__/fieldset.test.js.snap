@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render shallow component ok 1`] = `
+<fieldset
+  className="css-155rrlq0 css-1u5seyf"
+  name={undefined}
+  onClick={undefined}
+  style={Object {}}
+>
+  <div
+    className="css-134evea0 css-1lsspws"
+    onClick={undefined}
+    style={Object {}}
+  >
+    <div
+      className="css-134evea0 css-1x0f447"
+      style={Object {}}
+    >
+      <label
+        className="css-16ef8bd0 css-kzbo9d"
+        color="navy600"
+        htmlFor={undefined}
+        onClick={undefined}
+        size="small"
+        style={Object {}}
+        title={undefined}
+      >
+        Your name
+        <span
+          className="css-134evea3 css-14z43x8"
+          style={Object {}}
+        >
+          *
+        </span>
+      </label>
+    </div>
+    <div
+      className="css-13nj03s1 css-11q3kj7"
+      style={Object {}}
+    >
+      <input
+        className="css-kus6en css-13nj03s2"
+        defaultValue={undefined}
+        name="Alex"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="Alex"
+        readOnly={undefined}
+        size="medium"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+        value={undefined}
+      />
+    </div>
+  </div>
+</fieldset>
+`;

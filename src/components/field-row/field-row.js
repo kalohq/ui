@@ -4,7 +4,7 @@ import {pickStyles} from '../../utils/style';
 
 import {Box} from '../layout';
 
-const DEFAULT_SPACING = 20;
+export const DEFAULT_SPACING = 20;
 
 /**
  * Render fields (children) in a row

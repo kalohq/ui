@@ -2,30 +2,54 @@
 /* eslint-env jest */
 import React from 'react';
 import {shallow} from 'enzyme';
-import serializer from 'enzyme-to-json/serializer';
+import renderer from 'react-test-renderer';
+import {ThemeProvider} from 'emotion-theming';
 
-import FieldRow from '../field-row';
+import theme from '../../theme';
+import Input from '../../input';
+import FieldRow, {DEFAULT_SPACING} from '../field-row';
+import Field from '../../field';
 
-expect.addSnapshotSerializer(serializer);
+describe('Input', () => {
+  const create = props =>
+    shallow(
+      <FieldRow {...props}>
+        <Field label="Project name">
+          <Input placeholder="My first project" />
+        </Field>
+        <Field label="Task name">
+          <Input placeholder="My first task" />
+        </Field>
+      </FieldRow>
+    );
 
-describe('components/field-row', () => {
-  describe('FieldRow (default)', () => {
-    const create = (spread = {}) => {
-      const props = {
-        // (insert your default props here)
-        ...spread,
-      };
-      const element = <FieldRow {...props} />;
-      return {props, element};
-    };
+  test('should render shallow component ok', () => {
+    const element = renderer
+      .create(
+        <ThemeProvider theme={theme}>
+          <FieldRow>
+            <Field label="Project name">
+              <Input placeholder="My first project" />
+            </Field>
+            <Field label="Task name">
+              <Input placeholder="My first task" />
+            </Field>
+          </FieldRow>
+        </ThemeProvider>
+      )
+      .toJSON();
+    expect(element).toMatchSnapshot();
+  });
 
-    it('should shallow render as expected', () => {
-      const {element} = create({
-        // (insert test specific props here)
-        children: 'Child',
-      });
-      const result = shallow(element);
-      expect(result).toMatchSnapshot();
+  test('should add default spacing to child components', () => {
+    const element = create({
+      legend: 'Your name',
     });
+    expect(
+      element
+        .find(Field)
+        .at(1)
+        .props().paddingLeft
+    ).toBe(DEFAULT_SPACING);
   });
 });

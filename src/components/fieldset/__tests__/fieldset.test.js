@@ -2,30 +2,47 @@
 /* eslint-env jest */
 import React from 'react';
 import {shallow} from 'enzyme';
-import serializer from 'enzyme-to-json/serializer';
+import renderer from 'react-test-renderer';
+import {ThemeProvider} from 'emotion-theming';
 
-import Fieldset from '../fieldset';
+import theme from '../../theme';
+import Input from '../../input';
+import Fieldset, {FieldsetHeader} from '../fieldset';
+import Field from '../../field';
 
-expect.addSnapshotSerializer(serializer);
+const defaultProps = {
+  inset: false,
+};
 
-describe('components/fieldset', () => {
-  describe('Fieldset (default)', () => {
-    const create = (spread = {}) => {
-      const props = {
-        // (insert your default props here)
-        ...spread,
-      };
-      const element = <Fieldset {...props} />;
-      return {props, element};
-    };
+describe('Input', () => {
+  const create = props =>
+    shallow(
+      <Fieldset {...defaultProps} {...props}>
+        <Field label="Your name" required={true}>
+          <Input placeholder="Alex" />
+        </Field>
+      </Fieldset>
+    );
 
-    it('should shallow render as expected', () => {
-      const {element} = create({
-        // (insert test specific props here)
-        children: 'Child',
-      });
-      const result = shallow(element);
-      expect(result).toMatchSnapshot();
+  test('should render shallow component ok', () => {
+    const element = renderer
+      .create(
+        <ThemeProvider theme={theme}>
+          <Fieldset>
+            <Field label="Your name" required={true}>
+              <Input placeholder="Alex" />
+            </Field>
+          </Fieldset>
+        </ThemeProvider>
+      )
+      .toJSON();
+    expect(element).toMatchSnapshot();
+  });
+
+  test('should render a FieldsetHeader if a legend is passed', () => {
+    const element = create({
+      legend: 'Your name',
     });
+    expect(element.find(FieldsetHeader).length).toBe(1);
   });
 });

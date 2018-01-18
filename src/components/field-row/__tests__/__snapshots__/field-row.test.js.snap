@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render shallow component ok 1`] = `
+<div
+  className="css-134evea0 css-1xa3xzo"
+  style={Object {}}
+>
+  <div
+    className="css-134evea0 css-1uzqqyh"
+    onClick={undefined}
+    style={Object {}}
+  >
+    <div
+      className="css-134evea0 css-1x0f447"
+      style={Object {}}
+    >
+      <label
+        className="css-16ef8bd0 css-kzbo9d"
+        color="navy600"
+        htmlFor={undefined}
+        onClick={undefined}
+        size="small"
+        style={Object {}}
+        title={undefined}
+      >
+        Project name
+      </label>
+    </div>
+    <div
+      className="css-13nj03s1 css-11q3kj7"
+      style={Object {}}
+    >
+      <input
+        className="css-kus6en css-13nj03s2"
+        defaultValue={undefined}
+        name="My first project"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="My first project"
+        readOnly={undefined}
+        size="medium"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+        value={undefined}
+      />
+    </div>
+  </div>
+  <div
+    className="css-134evea0 css-1uzqqyh"
+    onClick={undefined}
+    style={Object {}}
+  >
+    <div
+      className="css-134evea0 css-1x0f447"
+      style={Object {}}
+    >
+      <label
+        className="css-16ef8bd0 css-kzbo9d"
+        color="navy600"
+        htmlFor={undefined}
+        onClick={undefined}
+        size="small"
+        style={Object {}}
+        title={undefined}
+      >
+        Task name
+      </label>
+    </div>
+    <div
+      className="css-13nj03s1 css-11q3kj7"
+      style={Object {}}
+    >
+      <input
+        className="css-kus6en css-13nj03s2"
+        defaultValue={undefined}
+        name="My first task"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="My first task"
+        readOnly={undefined}
+        size="medium"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+        value={undefined}
+      />
+    </div>
+  </div>
+</div>
+`;
