@@ -263,7 +263,7 @@ export const ICONS = new Enum({
   STAR: {
     value: 'star',
   },
-  SWAR_VERT: {
+  SWAP_VERT: {
     value: 'swap_vert',
   },
   TV: {
