@@ -67,8 +67,10 @@ export default function PropTable({data}) {
             <td>
               {prop.flowType.raw ? prop.flowType.raw : prop.flowType.name}
             </td>
-          ) : (
+          ) : prop.type ? (
             <td>{prop.type.raw ? prop.type.raw : prop.type.name}</td>
+          ) : (
+            <td>no type</td>
           )}
           <td>{prop.docblock}</td>
         </tr>
