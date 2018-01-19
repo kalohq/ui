@@ -1,0 +1,27 @@
+global:
+  type: 'string'
+  category: 'input'
+imports:
+  - color.yml
+  - border-radius.yml
+props:
+  INPUT_DEFAULT_BORDER:
+    value: "1px solid {!GREY300}"
+  INPUT_HOVER_BORDER:
+    value: "1px solid {!GREY500}"
+  INPUT_ACTIVE_BORDER:
+    value: "1px solid {!BLUE500}"
+  INPUT_DISABLED_BORDER:
+    value: "1px solid {!GREY400}"
+  INPUT_DISABLED_BACKGROUND:
+    value: "{!NAVY300}"
+  INPUT_DISABLED_COLOR:
+    value: "{!NAVY600}"
+  INPUT_READONLY_BORDER:
+    value: "1px dashed {!GREY400}"
+  INPUT_READONLY_BACKGROUND:
+    value: "{!NAVY300}"
+  INPUT_READONLY_COLOR:
+    value: "{!NAVY600}"
+  INPUT_BORDER_RADIUS:
+    value: "{!BORDER_RADIUS}"
