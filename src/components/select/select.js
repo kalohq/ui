@@ -7,8 +7,6 @@ import {Block} from '../layout';
 import Text from '../text';
 import Icon from '../icon';
 
-import styles from './select.css';
-
 const StyledSelect = styled(Block)`
   width: 100%;
   position: relative;
@@ -72,8 +70,10 @@ const StyledIconClear = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30px;
-  width: 30px;
+  height: 28px;
+  width: 28px;
+  background-color: ${props => props.theme.colors.grey300};
+  border-radius: ${props => props.theme.layout.borderRadius};
 `;
 
 const StyledSelectOptions = styled.div`
@@ -119,6 +119,15 @@ const StyledOption = styled.div`
       border-radius: 0;
       border: none;
     `};
+`;
+
+const StyledSelectSelected = styled.div`
+  transition: all 0.15s linear;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 10px;
+  height: 40px;
 `;
 /**
  * The kalo generic select component
@@ -232,8 +241,7 @@ export default class Select extends PureComponent {
         open={open}
         {...otherProps}
       >
-        <div
-          className={styles.selected}
+        <StyledSelectSelected
           onClick={readonly || disabled ? undefined : this.onToggle}
         >
           {!!selection ? (
@@ -272,7 +280,7 @@ export default class Select extends PureComponent {
               </Icon>
             </StyledIconChevron>
           ) : null}
-        </div>
+        </StyledSelectSelected>
         <StyledSelectOptions
           open={open}
           onClick={event => event.stopPropagation()}
