@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render shallow component ok 1`] = `
+<textarea
+  className="css-oqlomp css-11stfb70"
+  disabled={undefined}
+  onChange={undefined}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onScroll={[Function]}
+  readOnly={undefined}
+  size="medium"
+  style={
+    Object {
+      "height": undefined,
+    }
+  }
+/>
+`;
