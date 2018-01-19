@@ -78,5 +78,5 @@ module.exports = {
   inputDisabledBorder: "1px solid #D0D8DF",
   inputReadonlyColor: "#546789",
   inputDisabledBackground: "#F9FAFC",
-  inputDefaultBorder: "1px solid #EEF4FA",
+  inputDefaultBorder: "1px solid #D0D8DF",
 };

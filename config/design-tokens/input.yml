@@ -6,7 +6,7 @@ imports:
   - border-radius.yml
 props:
   INPUT_DEFAULT_BORDER:
-    value: "1px solid {!GREY300}"
+    value: "1px solid {!GREY400}"
   INPUT_HOVER_BORDER:
     value: "1px solid {!GREY500}"
   INPUT_ACTIVE_BORDER:

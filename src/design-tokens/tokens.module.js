@@ -77,4 +77,4 @@ export const inputReadonlyBackground = "#F9FAFC";
 export const inputDisabledBorder = "1px solid #D0D8DF";
 export const inputReadonlyColor = "#546789";
 export const inputDisabledBackground = "#F9FAFC";
-export const inputDefaultBorder = "1px solid #EEF4FA";
+export const inputDefaultBorder = "1px solid #D0D8DF";
