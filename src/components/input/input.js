@@ -85,7 +85,7 @@ const StyledInputContainer = styled(Flex)`
   font-weight: ${props => props.theme.typography.fontWeightNormal};
   transition: background-color, border-color 160ms linear;
   user-select: text;
-  width: ${props => (props.fullWidth ? '100%' : 'auto')};
+  width: 100%;
 `;
 
 const StyledInput = styled.input`
@@ -104,36 +104,36 @@ const StyledInput = styled.input`
   }
 
   &:disabled {
-    background-color: ${props => props.theme.colors.navy300};
-    border: 1px solid #dbdfe2;
+    background-color: ${props => props.theme.input.inputDisabledBackground};
+    border: ${props => props.theme.input.inputDisabledBorder};
     cursor: not-allowed;
-    color: ${props => props.theme.colors.grey500};
+    color: ${props => props.theme.input.inputDisabledColor};
   }
 
   &:read-only {
-    background-color: ${props => props.theme.colors.navy300};
-    border: 1px dashed #dbdfe2;
-    color: ${props => props.theme.colors.navy600};
+    background-color: ${props => props.theme.input.inputReadonlyBackground};
+    border: ${props => props.theme.input.inputReadonlyBorder};
+    color: ${props => props.theme.input.inputReadonlyColor};
   }
 
   ${props =>
     props.inputTheme === 'default' &&
     css`
       background-color: #fff;
-      border-radius: ${props.theme.layout.borderRadiusInput};
-      border: 1px solid #dfe2e4;
+      border-Radius: ${props.theme.input.inputBorderRadius};
+      border: ${props.theme.input.inputDefaultBorder};
       padding: 4px 8px 4px 16px;
 
       &::placeholder {
-        color: ${props.theme.colors.navy700};
+        color: ${props.theme.colors.grey500};
       }
 
       &:not(:read-only):not(:disabled):hover {
-        border-color: ${props.theme.colors.grey500};
+        border: ${props.theme.input.inputHoverBorder};
       }
 
       &:not(:read-only):not(:disabled):focus {
-        border-color: ${props.theme.colors.blue500};
+        border: ${props.theme.input.inputActiveBorder};
       }
 
       ${props.withAddonPrefix &&

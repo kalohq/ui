@@ -25,11 +25,11 @@ export const examples = [
     description: 'Inputs can be one of three sizes',
     render: () => (
       <span>
-        <Input value="Small input" size="small" />
+        <Input placeholder="Small input" size="small" />
         <br />
-        <Input value="Medium input" size="medium" />
+        <Input placeholder="Medium input" size="medium" />
         <br />
-        <Input value="Large input" size="large" />
+        <Input placeholder="Large input" size="large" />
       </span>
     ),
   },
@@ -49,11 +49,11 @@ export const examples = [
   {
     title: 'With valid status',
     description: 'Displays an input with a valid status',
-    render: () => <Input valid={true} value="hello@kalohq.com" />,
+    render: () => <Input valid={true} placeholder="hello@kalohq.com" />,
   },
   {
     title: 'With invalid status',
     description: 'Displays an input with an invalid status',
-    render: () => <Input valid={false} value="hello@kalohq.com" />,
+    render: () => <Input valid={false} placeholder="hello@kalohq.com" />,
   },
 ];

@@ -10,15 +10,15 @@ import Icon from '../icon';
 const StyledSelect = styled(Block)`
   width: 100%;
   position: relative;
-  border: 1px solid ${props => props.theme.colors.grey400};
-  border-radius: ${props => props.theme.layout.borderRadiusInput};
+  border: ${props => props.theme.input.inputDefaultBorder};
+  border-radius: ${props => props.theme.input.inputBorderRadius};
   background-color: ${props => props.theme.colors.white};
   height: 40px;
   text-align: ${props => (props.center ? 'center' : 'left')};
   cursor: pointer;
 
   &:hover {
-    border-color: ${props => props.theme.colors.grey500};
+    border: ${props => props.theme.input.inputHoverBorder};
   }
 
   ${props =>
@@ -31,26 +31,26 @@ const StyledSelect = styled(Block)`
   ${props =>
     props.readonly &&
     css`
-      background-color: ${props.theme.colors.navy300};
-      border: 1px dashed #dbdfe2;
+      background-color: ${props.theme.input.inputReadonlyBackground};
+      border: ${props.theme.input.inputReadonlyBorder};
       cursor: default;
-      color: ${props.theme.colors.navy600};
+      color: ${props.theme.input.inputReadonlyColor};
 
       &:hover {
-        border-color: #dbdfe2;
+        border: ${props.theme.input.inputReadonlyBorder};
       }
     `};
 
   ${props =>
     props.disabled &&
     css`
-      background-color: ${props.theme.colors.navy300};
-      border: 1px solid #dbdfe2;
+      background-color: ${props.theme.input.inputDisabledBackground};
+      border: ${props.theme.input.inputDisabledBorder};
       cursor: not-allowed;
-      color: ${props.theme.colors.grey500};
+      color: ${props.theme.input.inputDisabledColor};
 
       &:hover {
-        border-color: #dbdfe2;
+        border: ${props.theme.input.inputDisabledBorder};
       }
     `};
 `;

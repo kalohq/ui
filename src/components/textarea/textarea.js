@@ -40,31 +40,32 @@ const StyledTextarea = styled.textarea`
   }
 
   &:disabled {
-    background-color: ${props => props.theme.colors.navy300};
-    border: 1px solid #dbdfe2;
+    background-color: ${props => props.theme.input.inputDisabledBackground};
+    border: ${props => props.theme.input.inputDisabledBorder};
     cursor: not-allowed;
-    color: ${props => props.theme.colors.grey500};
+    color: ${props => props.theme.input.inputDisabledColor};
   }
 
   &:readonly {
-    background-color: ${props => props.theme.colors.navy300};
-    border: 1px dashed #dbdfe2;
-    color: ${props => props.theme.colors.navy600};
+    background-color: ${props => props.theme.input.inputReadonlyBackground};
+    border: ${props => props.theme.input.inputReadonlyBorder};
+    cursor: default;
+    color: ${props => props.theme.input.inputReadonlyColor};
   }
 
   ${props =>
     props.textareaTheme === 'default' &&
     css`
       background-color: ${props.theme.colors.white};
-      border: 1px solid #dfe2e4;
-      border-radius: ${props.theme.layout.borderRadiusInput};
+      border: ${props.theme.input.inputDefaultBorder};
+      border-radius: ${props.theme.input.inputBorderRadius};
 
       &:not(:read-only):not(:disabled):hover {
-        border-color: ${props.theme.colors.grey500};
+        border: ${props.theme.input.inputHoverBorder};
       }
 
       &:not(:read-only):not(:disabled):focus {
-        border-color: ${props.theme.colors.blue500};
+        border: ${props.theme.input.inputActiveBorder};
       }
     `};
 
