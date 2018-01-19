@@ -191,6 +191,9 @@ export const ICONS = new Enum({
   MODE_EDIT: {
     value: 'mode_edit',
   },
+  MONETIZATION_ON: {
+    value: 'monetization_on',
+  },
   MORE_VERT: {
     value: 'more_vert',
   },
@@ -259,6 +262,9 @@ export const ICONS = new Enum({
   },
   STAR: {
     value: 'star',
+  },
+  SWAP_VERT: {
+    value: 'swap_vert',
   },
   TV: {
     value: 'tv',
