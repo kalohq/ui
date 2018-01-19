@@ -25,6 +25,7 @@ export {default as ButtonGroup} from './button-group';
 export {default as Checkbox} from './checkbox';
 export {default as Input} from './input';
 export {default as Radio} from './radio';
+export {default as Select} from './select';
 export {default as Field} from './field';
 export {default as FieldHint} from './field-hint';
 export {default as FieldLabel} from './field-label';
