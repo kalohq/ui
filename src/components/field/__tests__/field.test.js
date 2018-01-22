@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer';
 import {ThemeProvider} from 'emotion-theming';
 
 import Field from '../field';
-import Input from '../..//input';
+import Input from '../../input';
 import theme from '../../theme';
 
 describe('Field', () => {

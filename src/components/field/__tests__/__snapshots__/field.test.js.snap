@@ -11,7 +11,7 @@ exports[`Field should render shallow component ok 1`] = `
     style={Object {}}
   >
     <label
-      className="css-16ef8bd0 css-kzbo9d"
+      className="css-16ef8bd0 css-1i78l7h"
       color="navy600"
       htmlFor={undefined}
       onClick={undefined}
@@ -23,11 +23,11 @@ exports[`Field should render shallow component ok 1`] = `
     </label>
   </div>
   <div
-    className="css-13nj03s1 css-11q3kj7"
+    className="css-xnmmcr1 css-1p93vdy"
     style={Object {}}
   >
     <input
-      className="css-kus6en css-13nj03s2"
+      className="css-14pze4m css-xnmmcr2"
       defaultValue={undefined}
       name={undefined}
       onBlur={[Function]}

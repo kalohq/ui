@@ -2,11 +2,11 @@
 
 exports[`Input should render shallow component ok 1`] = `
 <div
-  className="css-13nj03s1 css-11q3kj7"
+  className="css-xnmmcr1 css-1p93vdy"
   style={Object {}}
 >
   <input
-    className="css-kus6en css-13nj03s2"
+    className="css-14pze4m css-xnmmcr2"
     defaultValue={undefined}
     name={undefined}
     onBlur={[Function]}

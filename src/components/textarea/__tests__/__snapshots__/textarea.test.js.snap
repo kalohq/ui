@@ -2,7 +2,7 @@
 
 exports[`Input should render shallow component ok 1`] = `
 <textarea
-  className="css-oqlomp css-11stfb70"
+  className="css-1bx4i9j css-d45byt0"
   disabled={undefined}
   onChange={undefined}
   onKeyDown={[Function]}
