@@ -120,7 +120,7 @@ const StyledInput = styled.input`
     props.inputTheme === 'default' &&
     css`
       background-color: #fff;
-      border-Radius: ${props.theme.input.inputBorderRadius};
+      border-radius: ${props.theme.input.inputBorderRadius};
       border: ${props.theme.input.inputDefaultBorder};
       padding: 4px 8px 4px 16px;
 
