@@ -31,6 +31,7 @@ export {default as FieldRow} from './field-row';
 export {default as FieldValidation} from './field-validation';
 export {default as FieldValidations} from './field-validations';
 export {default as Fieldset} from './fieldset';
+export {default as Form} from './form';
 export {default as Input} from './input';
 export {Option as SelectOption} from './select';
 export {default as Radio} from './radio';
