@@ -74,13 +74,21 @@ type TProps = {
 };
 
 export default function ToggleButton(props: TProps) {
-  const {value = false, theme = 'default', onChange, label} = props;
+  const {
+    value = false,
+    theme = 'default',
+    onChange,
+    label,
+    ...otherProps
+  } = props;
 
   return (
     <Box
       flexDirection="row"
       alignItems="center"
+      id="toggle-button"
       onClick={() => onChange(!value)}
+      {...otherProps}
     >
       <StyledToggleButton selected={value} toggleButtonTheme={theme}>
         <StyledButton toggleButtonTheme={theme} selected={value} />
