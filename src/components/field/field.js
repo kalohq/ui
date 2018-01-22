@@ -41,7 +41,7 @@ export type TProps = {
   /** Centers the field and children components */
   centered?: boolean,
   /** Toggles ability for component to override child props */
-  controller?: boolean,
+  controlChildren?: boolean,
   /** on blur handler to pass to input children */
   onBlur?: Function,
 };
@@ -67,7 +67,7 @@ export default function Field(props: TProps) {
     className,
     labelAction,
     onBlur,
-    controller = false,
+    controlChildren = true,
     ...otherProps
   } = props;
 
@@ -103,7 +103,9 @@ export default function Field(props: TProps) {
           {labelAction}
         </Box>
       ) : null}
-      {controller ? (
+      {!controlChildren ? (
+        children
+      ) : (
         React.Children.map(children, child =>
           React.cloneElement(child, {
             onBlur,
@@ -121,8 +123,6 @@ export default function Field(props: TProps) {
                 : child.props.readonly,
           })
         )
-      ) : (
-        children
       )}
       {!!validations ? (
         <FieldValidations centered={centered} validations={validations} />
