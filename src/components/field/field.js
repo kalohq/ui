@@ -15,6 +15,8 @@ export type TProps = {
   children?: React.Node,
   /** A list of validations */
   validations?: List<Validation>,
+  /** Any disabling permissions for this field */
+  permissions?: Array<Error>,
   /** A label to be displayed above the input */
   label?: React.Node,
   /** A secondary label - This can be a function (for example, to toggle an option) */
@@ -38,6 +40,10 @@ export type TProps = {
   className?: string,
   /** Centers the field and children components */
   centered?: boolean,
+  /** Toggles ability for component to override child props */
+  controller?: boolean,
+  /** on blur handler to pass to input children */
+  onBlur?: Function,
 };
 
 /**
@@ -47,6 +53,7 @@ export default function Field(props: TProps) {
   const {
     children,
     validations,
+    permissions = [],
     label,
     labelProps = {},
     htmlFor,
@@ -59,8 +66,15 @@ export default function Field(props: TProps) {
     onClick,
     className,
     labelAction,
+    onBlur,
+    controller = false,
     ...otherProps
   } = props;
+
+  const hintText = permissions.length > 0 ? permissions[0].message : hint;
+
+  const disabled = permissions.length > 0;
+
   return (
     <Box
       className={className}
@@ -82,18 +96,38 @@ export default function Field(props: TProps) {
             locked={locked}
             icon={icon}
             labelProps={labelProps}
-            marginBottom={8}
+            marginBottom={4}
           >
             {label}
           </FieldLabel>
           {labelAction}
         </Box>
       ) : null}
-      {children}
+      {controller ? (
+        React.Children.map(children, child =>
+          React.cloneElement(child, {
+            onBlur,
+            disabled:
+              child.props.disabled === undefined
+                ? disabled
+                : child.props.disabled,
+            editable:
+              child.props.editable === undefined
+                ? !disabled
+                : child.props.editable,
+            readonly:
+              child.props.readonly === undefined
+                ? disabled
+                : child.props.readonly,
+          })
+        )
+      ) : (
+        children
+      )}
       {!!validations ? (
         <FieldValidations centered={centered} validations={validations} />
-      ) : hint ? (
-        <FieldHint hint={hint} icon={hintIcon ? hintIcon : undefined} />
+      ) : hintText ? (
+        <FieldHint hint={hintText} icon={hintIcon ? hintIcon : undefined} />
       ) : null}
     </Box>
   );

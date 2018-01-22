@@ -24,7 +24,6 @@ export {default as ButtonDropdown} from './button-dropdown';
 export {default as ButtonGroup} from './button-group';
 export {default as Checkbox} from './checkbox';
 export {default as Field} from './field';
-export {default as FieldControlled} from './field-controlled';
 export {default as FieldHint} from './field-hint';
 export {default as FieldLabel} from './field-label';
 export {default as FieldRow} from './field-row';
