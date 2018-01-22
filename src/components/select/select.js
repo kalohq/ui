@@ -207,13 +207,13 @@ export default class Select extends PureComponent {
     this.close();
   }
 
-  onClear(event) {
+  onClear(event: SyntheticEvent<*>) {
     this.props.onSelect(undefined);
     this.close();
     event.stopPropagation();
   }
 
-  onSelect(value) {
+  onSelect(value: SyntheticEvent<*>) {
     this.props.onSelect(value);
     this.close();
   }

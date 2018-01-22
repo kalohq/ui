@@ -12,7 +12,7 @@ export const DEFAULT_SPACING = 20;
 
 type TProps = {
   /** A set of one or more fields */
-  children?: React.Node,
+  children?: React$Element<*>,
   /** Pixel value of spacing between field elements */
   gutter?: number,
   /** A class to pass down */
@@ -33,14 +33,14 @@ export default function FieldRow(props: TProps) {
     >
       {React.Children.map(
         children,
-        c =>
-          c
-            ? React.cloneElement(c, {
-                flex: c.props.flex || 1,
+        child =>
+          child
+            ? React.cloneElement(child, {
+                flex: child.props.flex || 1,
                 marginLeft: 0,
                 paddingLeft: gutter,
               })
-            : c
+            : child
       )}
     </Box>
   );

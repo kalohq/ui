@@ -153,7 +153,7 @@ export default class Textarea extends PureComponent {
     removeNode(this.mirror);
   }
 
-  onKeyDown(event: SyntheticEvent) {
+  onKeyDown(event: SyntheticEvent<*>) {
     if (
       !!this.props.onReturn &&
       event.which === 13 &&
@@ -168,7 +168,7 @@ export default class Textarea extends PureComponent {
    * Key up is hooked to watch for content changes
    * @param {Event} event
    */
-  onKeyUp(event: SyntheticEvent) {
+  onKeyUp(event: SyntheticEvent<*>) {
     this.update();
 
     if (this.props.onKeyUp) {
@@ -181,7 +181,7 @@ export default class Textarea extends PureComponent {
    * to fit content
    * @param {Event} event
    */
-  onScroll(event: SyntheticWheelEvent) {
+  onScroll(event: SyntheticWheelEvent<*>) {
     if (this.props.expand) {
       event.preventDefault();
       const el = ReactDOM.findDOMNode(this);

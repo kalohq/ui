@@ -12,7 +12,7 @@ import type Validation from '../field-validation';
 import type LabelProps from '../field-label';
 
 export type TProps = {
-  children?: React.Node,
+  children?: React$Element<*>,
   /** A list of validations */
   validations?: List<Validation>,
   /** Any disabling permissions for this field */
