@@ -3,15 +3,16 @@
 exports[`ToggleButton should render shallow component ok 1`] = `
 <div
   className="css-134evea0 css-1wynm0n"
+  id="toggle-button"
   onClick={[Function]}
   style={Object {}}
 >
   <div
-    className="css-1hpzezq css-1tfwnwe0"
+    className="css-1mfdy6w css-18ye4kh0"
     selected={false}
   >
     <div
-      className="css-1s8amr css-1tfwnwe1"
+      className="css-1csuntb css-18ye4kh1"
       selected={false}
     />
   </div>

@@ -2,14 +2,14 @@
 
 exports[`Select should render a disabled select 1`] = `
 <div
-  className="css-1swkges0 css-1m828nk"
+  className="css-tvxmfb0 css-1s58okm"
   disabled={true}
   onSelect={[Function]}
   open={false}
   style={Object {}}
 >
   <div
-    className="css-onm5hg css-1swkges5"
+    className="css-hvar41 css-tvxmfb5"
     onClick={undefined}
   >
     <span
@@ -22,7 +22,7 @@ exports[`Select should render a disabled select 1`] = `
       Select…
     </span>
     <div
-      className="css-1mwuavy css-1swkges1"
+      className="css-elkfk7 css-tvxmfb1"
       open={false}
     >
       <i
@@ -49,12 +49,12 @@ exports[`Select should render a disabled select 1`] = `
     </div>
   </div>
   <div
-    className="css-1eeeuuf css-1swkges3"
+    className="css-17y3pak css-tvxmfb3"
     onClick={[Function]}
     open={false}
   >
     <div
-      className="css-wxixsf css-1swkges4"
+      className="css-14jjchb css-tvxmfb4"
       name="Hertfordshire"
       onClick={[Function]}
       selected={undefined}
@@ -64,7 +64,7 @@ exports[`Select should render a disabled select 1`] = `
       </div>
     </div>
     <div
-      className="css-wxixsf css-1swkges4"
+      className="css-14jjchb css-tvxmfb4"
       name="Bedfordshire"
       onClick={[Function]}
       selected={undefined}
@@ -74,7 +74,7 @@ exports[`Select should render a disabled select 1`] = `
       </div>
     </div>
     <div
-      className="css-wxixsf css-1swkges4"
+      className="css-14jjchb css-tvxmfb4"
       name="Oxfordshire"
       onClick={[Function]}
       selected={undefined}
@@ -84,7 +84,7 @@ exports[`Select should render a disabled select 1`] = `
       </div>
     </div>
     <div
-      className="css-wxixsf css-1swkges4"
+      className="css-14jjchb css-tvxmfb4"
       name="Hampshire"
       onClick={[Function]}
       selected={undefined}
@@ -99,14 +99,14 @@ exports[`Select should render a disabled select 1`] = `
 
 exports[`Select should render a readonly select 1`] = `
 <div
-  className="css-1swkges0 css-o8r1u8"
+  className="css-tvxmfb0 css-umjnfj"
   disabled={false}
   onSelect={[Function]}
   open={false}
   style={Object {}}
 >
   <div
-    className="css-onm5hg css-1swkges5"
+    className="css-hvar41 css-tvxmfb5"
     onClick={undefined}
   >
     <span
@@ -119,7 +119,7 @@ exports[`Select should render a readonly select 1`] = `
       Select…
     </span>
     <div
-      className="css-1mwuavy css-1swkges1"
+      className="css-elkfk7 css-tvxmfb1"
       open={false}
     >
       <i
@@ -146,12 +146,12 @@ exports[`Select should render a readonly select 1`] = `
     </div>
   </div>
   <div
-    className="css-1eeeuuf css-1swkges3"
+    className="css-17y3pak css-tvxmfb3"
     onClick={[Function]}
     open={false}
   >
     <div
-      className="css-wxixsf css-1swkges4"
+      className="css-14jjchb css-tvxmfb4"
       name="Hertfordshire"
       onClick={[Function]}
       selected={undefined}
@@ -161,7 +161,7 @@ exports[`Select should render a readonly select 1`] = `
       </div>
     </div>
     <div
-      className="css-wxixsf css-1swkges4"
+      className="css-14jjchb css-tvxmfb4"
       name="Bedfordshire"
       onClick={[Function]}
       selected={undefined}
@@ -171,7 +171,7 @@ exports[`Select should render a readonly select 1`] = `
       </div>
     </div>
     <div
-      className="css-wxixsf css-1swkges4"
+      className="css-14jjchb css-tvxmfb4"
       name="Oxfordshire"
       onClick={[Function]}
       selected={undefined}
@@ -181,7 +181,7 @@ exports[`Select should render a readonly select 1`] = `
       </div>
     </div>
     <div
-      className="css-wxixsf css-1swkges4"
+      className="css-14jjchb css-tvxmfb4"
       name="Hampshire"
       onClick={[Function]}
       selected={undefined}
@@ -196,14 +196,14 @@ exports[`Select should render a readonly select 1`] = `
 
 exports[`Select should render shallow component ok 1`] = `
 <div
-  className="css-1swkges0 css-1wzgmu5"
+  className="css-tvxmfb0 css-1jyqghw"
   disabled={false}
   onSelect={[Function]}
   open={false}
   style={Object {}}
 >
   <div
-    className="css-onm5hg css-1swkges5"
+    className="css-hvar41 css-tvxmfb5"
     onClick={[Function]}
   >
     <span
@@ -216,7 +216,7 @@ exports[`Select should render shallow component ok 1`] = `
       Select…
     </span>
     <div
-      className="css-1mwuavy css-1swkges1"
+      className="css-elkfk7 css-tvxmfb1"
       open={false}
     >
       <i
@@ -243,12 +243,12 @@ exports[`Select should render shallow component ok 1`] = `
     </div>
   </div>
   <div
-    className="css-1eeeuuf css-1swkges3"
+    className="css-17y3pak css-tvxmfb3"
     onClick={[Function]}
     open={false}
   >
     <div
-      className="css-wxixsf css-1swkges4"
+      className="css-14jjchb css-tvxmfb4"
       name="Hertfordshire"
       onClick={[Function]}
       selected={undefined}
@@ -258,7 +258,7 @@ exports[`Select should render shallow component ok 1`] = `
       </div>
     </div>
     <div
-      className="css-wxixsf css-1swkges4"
+      className="css-14jjchb css-tvxmfb4"
       name="Bedfordshire"
       onClick={[Function]}
       selected={undefined}
@@ -268,7 +268,7 @@ exports[`Select should render shallow component ok 1`] = `
       </div>
     </div>
     <div
-      className="css-wxixsf css-1swkges4"
+      className="css-14jjchb css-tvxmfb4"
       name="Oxfordshire"
       onClick={[Function]}
       selected={undefined}
@@ -278,7 +278,7 @@ exports[`Select should render shallow component ok 1`] = `
       </div>
     </div>
     <div
-      className="css-wxixsf css-1swkges4"
+      className="css-14jjchb css-tvxmfb4"
       name="Hampshire"
       onClick={[Function]}
       selected={undefined}
