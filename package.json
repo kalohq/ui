@@ -10,15 +10,15 @@
   "files": ["lib"],
   "scripts": {
     "compile":
-      "npm run generate-tokens && npm run generate-icon-symbols && gulp build-production",
+      "npm run generate:tokens && npm run generate:icons && gulp build-production",
     "test": "jest",
     "dist": "rimraf lib && npm run compile",
     "typecheck": "flow",
     "lint": "eslint src",
     "precommit": "lint-staged",
-    "generate-tokens": "node scripts/tokens.js",
-    "generate-icon-symbols": "node scripts/icons.js",
-    "new-component":
+    "generate:tokens": "node scripts/tokens.js",
+    "generate:icons": "node scripts/icons.js",
+    "generate:component":
       "reactman --config ./config/code-templates/reactman-config.json"
   },
   "lint-staged": {
