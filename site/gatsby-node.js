@@ -85,7 +85,7 @@ exports.onCreateNode = ({node, getNode, boundActionCreators}) => {
 };
 
 exports.onPreBootstrap = () => {
-  console.log('Starting generating Stories import bundle'); // eslint-disable-line no-console
+  console.log('Start: Generate stories import bundle'); // eslint-disable-line no-console
 
   const cwd = path.resolve(process.cwd(), '../');
 
@@ -115,7 +115,7 @@ module.exports = {
     'utf8'
   );
 
-  console.log('Finished generating stories import bundle'); // eslint-disable-line no-console
+  console.log('END: generating stories import bundle'); // eslint-disable-line no-console
 };
 
 exports.createPages = ({boundActionCreators, graphql}) => {
