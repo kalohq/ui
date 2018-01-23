@@ -26,11 +26,6 @@ const IndexPage = ({data}) => {
           link="/brand/color"
         />
         <ActionCard
-          title="Download logos"
-          description="Our brand logos and how to use them"
-          link="/brand/logo"
-        />
-        <ActionCard
           title="Components"
           description="React components, code snippets, and guidelines"
           link="/components/button"
@@ -39,6 +34,14 @@ const IndexPage = ({data}) => {
           title="Sketch Kit"
           description="Sketch library implementation for the Kalo Design System"
           link={data.site.siteMetadata.sketchKitLink}
+          externalLink={true}
+        />
+        <ActionCard
+          title="Sketch Palette"
+          description="A sketch palette with the Kalo brand colors"
+          link={data.site.siteMetadata.sketchPaletteLink}
+          externalLink={true}
+          download={true}
         />
       </GridContainer>
     </DocumentationContent>
@@ -52,6 +55,7 @@ export const pageQuery = graphql`
       siteMetadata {
         githubRepoLink
         sketchKitLink
+        sketchPaletteLink
       }
     }
   }
