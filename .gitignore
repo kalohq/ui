@@ -3,3 +3,11 @@ lib
 coverage
 npm-debug*
 design-tokens/*
+
+##
+# Documentation site
+##
+
+site/public
+site/src/data/stories.js
+site/.cache

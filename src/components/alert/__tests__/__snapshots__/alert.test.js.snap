@@ -7,11 +7,12 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
   type="confirmation"
 >
   <i
-    className="css-1qps5ds0 css-1clu7cm"
+    className="css-fj83eq0 css-bwiye3"
     color="green"
     onClick={undefined}
     size={16}
     style={Object {}}
+    title={undefined}
   >
     <svg
       aria-hidden="true"
@@ -22,7 +23,7 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
         check_circle
       </title>
       <use
-        href="#check_circle"
+        xlinkHref="#check_circle"
       />
     </svg>
   </i>

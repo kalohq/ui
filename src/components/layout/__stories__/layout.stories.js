@@ -1,20 +1,20 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
 
-import {Box, InlineFlex} from 'components/layout';
+import {Box, InlineFlex} from '../layout';
 
-storiesOf('Layout', module)
-  .addWithInfo('Box', 'A basic wrapping box component', () => {
-    return (
+export const examples = [
+  {
+    title: 'Box',
+    description: 'A basic wrapping box component',
+    render: () => (
       <Box margin={['small', 'medium', 'large']} paddingTop={'small'}>
         This is the layout box
       </Box>
-    );
-  })
-  .addWithInfo(
-    'InlineFlex',
-    'A span element with inline-flex set as its display property',
-    () => {
-      return <InlineFlex>An inline flex component</InlineFlex>;
-    }
-  );
+    ),
+  },
+  {
+    title: 'InlineFlex',
+    description: 'A span element with inline-flex set as its display property',
+    render: () => <InlineFlex>An inline flex component</InlineFlex>,
+  },
+];

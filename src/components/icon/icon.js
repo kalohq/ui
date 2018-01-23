@@ -15,6 +15,7 @@ type Props = {
   className?: string,
   onClick?: Function,
   theme?: Object,
+  title?: string,
 };
 
 const StyledIcon = styled(Inline)`
@@ -35,6 +36,7 @@ export default function Icon(props: Props) {
     className,
     onClick,
     theme = DefaultTheme,
+    title,
     ...otherProps
   } = props;
 
@@ -47,11 +49,12 @@ export default function Icon(props: Props) {
       theme={theme}
       size={size}
       color={color}
+      title={title}
       {...otherProps}
     >
       <svg width={size} height={size} aria-hidden="true">
-        <title>{children}</title>
-        <use href={`#${children}`} />
+        <title>{title ? title : children}</title>
+        <use xlinkHref={`#${children}`} />
       </svg>
     </StyledIcon>
   );

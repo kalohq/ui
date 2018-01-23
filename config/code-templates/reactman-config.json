@@ -1,0 +1,57 @@
+{
+  "templatesFolder": "./config/code-templates/",
+  "outputFolder": "./src/",
+  "issue_tracker": "https://kalohq.atlassian.net/",
+  "default_script": "component",
+  "scripts": {
+    "component": {
+      "files": {
+        "component/component.js":
+          "components/{{filenameSlug}}/{{filenameSlug}}.js",
+        "component/index.js": "components/{{filenameSlug}}/{{indexSlug}}.js",
+        "component/__tests__/component.test.js":
+          "components/{{filenameSlug}}/__tests__/{{filenameSlug}}.test.js",
+        "component/__stories__/component.stories.js":
+          "components/{{filenameSlug}}/__stories__/{{filenameSlug}}.stories.js",
+        "component/README.md": "components/{{filenameSlug}}/{{readmeSlug}}.md"
+      },
+      "script": [
+        {
+          "name": "exports",
+          "description": "Exports",
+          "required": true,
+          "default": "Exports",
+          "type": "string"
+        },
+        {
+          "name": "filename",
+          "description": "Filename",
+          "required": true,
+          "default": "my-file-name",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "description": "Description",
+          "default": "A react component",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "index",
+          "description": "Index filename (skip this step - don't change)",
+          "required": true,
+          "default": "index",
+          "type": "string"
+        },
+        {
+          "name": "readme",
+          "description": "Readme filename (skip this step - don't change)",
+          "required": true,
+          "default": "README",
+          "type": "string"
+        }
+      ]
+    }
+  }
+}

@@ -1,6 +1,6 @@
 /* @flow */
 
-import Enum from 'utils/enum';
+import Enum from '../../utils/enum';
 
 import type {TEXT_COLOR} from '../text/constants';
 
@@ -65,6 +65,9 @@ export const ICONS = new Enum({
   CHECK_BOX_OUTLINE_BLANK: {
     value: 'check_box_outline_blank',
   },
+  CHECK_CIRCLE: {
+    value: 'check_circle',
+  },
   CHEVRON_LEFT: {
     value: 'chevron_left',
   },
@@ -103,6 +106,9 @@ export const ICONS = new Enum({
   },
   EMAIL: {
     value: 'email',
+  },
+  ERROR_OUTLINE: {
+    value: 'error_outline',
   },
   EXIT_TO_APP: {
     value: 'exit_to_app',
@@ -185,6 +191,9 @@ export const ICONS = new Enum({
   MODE_EDIT: {
     value: 'mode_edit',
   },
+  MONETIZATION_ON: {
+    value: 'monetization_on',
+  },
   MORE_VERT: {
     value: 'more_vert',
   },
@@ -205,6 +214,9 @@ export const ICONS = new Enum({
   },
   PERM_CONTACT_CALENDAR: {
     value: 'perm_contact_calendar',
+  },
+  PERM_IDENTITY: {
+    value: 'perm_identity',
   },
   PERSON: {
     value: 'person',
@@ -250,6 +262,9 @@ export const ICONS = new Enum({
   },
   STAR: {
     value: 'star',
+  },
+  SWAP_VERT: {
+    value: 'swap_vert',
   },
   TV: {
     value: 'tv',

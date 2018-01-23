@@ -92,6 +92,8 @@ props: &COLORS
     value: "{!GREEN500}"
   NAVY:
     value: "{!NAVY500}"
+  GREY: 
+    value: "{!GREY600}"
   CHARCOAL:
     value: "{!NAVY700}"
   SLATE:

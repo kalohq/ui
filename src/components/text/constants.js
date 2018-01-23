@@ -1,5 +1,5 @@
 /* @flow */
-import Enum from 'utils/enum';
+import Enum from '../../utils/enum';
 
 export type TEXT_WEIGHT = 'light' | 'normal' | 'medium' | 'semi-bold';
 
@@ -87,8 +87,7 @@ export type TEXT_COLOR =
   | 'slate' // deprecated
   | 'charcoal' // deprecated
   | 'dark-grey' // deprecated
-  | 'light-grey' // deprecated
-  | 'grey'; // deprecated
+  | 'light-grey'; // deprecated
 
 export type TEXT_HOVER_COLOR = TEXT_COLOR;
 

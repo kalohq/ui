@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {omit} from 'lodash';
 import PropTypes from 'prop-types';
-import {getFixedOffset} from 'utils/dom';
+import {getFixedOffset} from '../../utils/dom';
 
 import styles from './sticky.css';
 

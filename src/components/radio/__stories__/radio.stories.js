@@ -1,17 +1,18 @@
 /* @flow */
 import React from 'react';
-import {storiesOf} from '@storybook/react';
 
-import Radio from 'components/radio';
+import Radio from '../radio';
 
 const myClickFunction = () => {
   //eslint-disable-next-line
   window.alert('Hello from an onClick event');
 };
 
-storiesOf('Radio', module)
-  .addWithInfo('Single Radio', 'A standard radio button', () => {
-    return (
+export const examples = [
+  {
+    title: 'Radio',
+    description: 'A standard radio button',
+    render: () => (
       <span>
         <Radio
           label="Turn off notifications"
@@ -24,10 +25,12 @@ storiesOf('Radio', module)
           onClick={myClickFunction}
         />
       </span>
-    );
-  })
-  .addWithInfo('disabled', 'A disabled radio button', () => {
-    return (
+    ),
+  },
+  {
+    title: 'Disabled',
+    description: 'A disabled radio button',
+    render: () => (
       <span>
         <Radio
           label="Turn off notifications"
@@ -42,10 +45,12 @@ storiesOf('Radio', module)
           disabled={true}
         />
       </span>
-    );
-  })
-  .addWithInfo('readonly', 'A readonly radio button', () => {
-    return (
+    ),
+  },
+  {
+    title: 'Readonly',
+    description: 'A readonly radio button',
+    render: () => (
       <span>
         <Radio
           label="Turn off notifications"
@@ -60,5 +65,6 @@ storiesOf('Radio', module)
           readonly={true}
         />
       </span>
-    );
-  });
+    ),
+  },
+];
