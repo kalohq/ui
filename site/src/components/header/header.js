@@ -85,7 +85,13 @@ const NavItem = ({children, link, href, download}) => (
 );
 
 export default function GlobalNavigation({projectMeta}) {
-  const {title, version, sketchKitLink, githubRepoLink} = projectMeta;
+  const {
+    title,
+    version,
+    sketchKitLink,
+    sketchPaletteLink,
+    githubRepoLink,
+  } = projectMeta;
   return (
     <StyledBar>
       <Inner>
@@ -96,7 +102,7 @@ export default function GlobalNavigation({projectMeta}) {
         </StyledLogo>
         <StyledNav>
           <NavItem href={sketchKitLink}>Sketch Kit</NavItem>
-          <NavItem href={sketchKitLink} download={true}>
+          <NavItem href={sketchPaletteLink} download={true}>
             Sketch Palette
           </NavItem>
           <NavItem href={githubRepoLink}>GitHub Repo</NavItem>
