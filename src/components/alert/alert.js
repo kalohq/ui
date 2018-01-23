@@ -47,6 +47,7 @@ export default function Alert(props: TProps) {
       flexDirection="row"
       alignItems="center"
       justifyContent={justifyContent}
+      role="alert"
       type={type}
       {...otherProps}
     >
