@@ -75,4 +75,13 @@ export const examples = [
       </Field>
     ),
   },
+  {
+    title: 'Inline field',
+    description: 'Displays the field with the label and input on the same line',
+    render: () => (
+      <Field label="Your email" inline={true} labelWidth={100}>
+        <Input placeholder="hello@kalohq.com" />
+      </Field>
+    ),
+  },
 ];

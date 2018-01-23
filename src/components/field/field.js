@@ -44,6 +44,10 @@ export type TProps = {
   controlChildren?: boolean,
   /** on blur handler to pass to input children */
   onBlur?: Function,
+  /** Displays the field inline with the label and input floated */
+  inline?: boolean,
+  /** Set a width for the field label */
+  labelWidth?: number,
 };
 
 /**
@@ -66,6 +70,8 @@ export default function Field(props: TProps) {
     onClick,
     className,
     labelAction,
+    inline = false,
+    labelWidth,
     onBlur,
     controlChildren = true,
     ...otherProps
@@ -81,49 +87,56 @@ export default function Field(props: TProps) {
       onClick={onClick}
       position="relative"
       flexDirection="column"
-      justifyContent="inherit"
+      justifyContent={inline ? 'space-between' : 'inherit'}
       {...pickStyles(otherProps)}
     >
-      {label ? (
-        <Box
-          flexDirection="row"
-          alignItems="center"
-          justifyContent={centered ? 'center' : 'space-between'}
-        >
-          <FieldLabel
-            htmlFor={htmlFor}
-            required={required}
-            locked={locked}
-            icon={icon}
-            labelProps={labelProps}
-            marginBottom={4}
+      <Box
+        flexDirection={inline ? 'row' : 'column'}
+        justifyContent={labelWidth ? 'flex-start' : 'space-between'}
+      >
+        {label ? (
+          <Box
+            flexDirection="row"
+            alignItems="center"
+            justifyContent={centered ? 'center' : 'space-between'}
           >
-            {label}
-          </FieldLabel>
-          {labelAction}
-        </Box>
-      ) : null}
-      {!controlChildren ? (
-        children
-      ) : (
-        React.Children.map(children, child =>
-          React.cloneElement(child, {
-            onBlur,
-            disabled:
-              child.props.disabled === undefined
-                ? disabled
-                : child.props.disabled,
-            editable:
-              child.props.editable === undefined
-                ? !disabled
-                : child.props.editable,
-            readonly:
-              child.props.readonly === undefined
-                ? disabled
-                : child.props.readonly,
-          })
-        )
-      )}
+            <FieldLabel
+              htmlFor={htmlFor}
+              required={required}
+              locked={locked}
+              icon={icon}
+              labelProps={labelProps}
+              marginBottom={inline ? 0 : 4}
+              marginRight={inline ? 8 : 0}
+              width={labelWidth}
+            >
+              {label}
+            </FieldLabel>
+            {labelAction}
+          </Box>
+        ) : null}
+        {!controlChildren ? (
+          children
+        ) : (
+          React.Children.map(children, child =>
+            React.cloneElement(child, {
+              onBlur,
+              disabled:
+                child.props.disabled === undefined
+                  ? disabled
+                  : child.props.disabled,
+              editable:
+                child.props.editable === undefined
+                  ? !disabled
+                  : child.props.editable,
+              readonly:
+                child.props.readonly === undefined
+                  ? disabled
+                  : child.props.readonly,
+            })
+          )
+        )}
+      </Box>
       {!!validations ? (
         <FieldValidations centered={centered} validations={validations} />
       ) : hintText ? (
