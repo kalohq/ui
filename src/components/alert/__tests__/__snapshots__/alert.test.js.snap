@@ -2,8 +2,10 @@
 
 exports[`Alert should render a confirmation alert with an icon 1`] = `
 <div
-  className="root type-confirmation css-134evea0 css-xbq6yp"
+  className="css-1bmpwsg0 css-1q5hagj"
+  role="alert"
   style={Object {}}
+  type="confirmation"
 >
   <i
     className="css-fj83eq0 css-bwiye3"
@@ -40,8 +42,10 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
 
 exports[`Alert should render a warning alert 1`] = `
 <div
-  className="root type-warning css-134evea0 css-xbq6yp"
+  className="css-1bmpwsg0 css-1lxa1de"
+  role="alert"
   style={Object {}}
+  type="warning"
 >
   <span
     className="css-16ef8bd0 css-i4nqd3"
@@ -57,8 +61,10 @@ exports[`Alert should render a warning alert 1`] = `
 
 exports[`Alert should render shallow component ok 1`] = `
 <div
-  className="root type-info css-134evea0 css-xbq6yp"
+  className="css-1bmpwsg0 css-h3o9uw"
+  role="alert"
   style={Object {}}
+  type="info"
 >
   <span
     className="css-16ef8bd0 css-1bicsvo"

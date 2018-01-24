@@ -72,6 +72,14 @@ const StyledDocumentationContent = styled.article`
       }
     }
   }
+
+  code {
+    font-weight: 400;
+    background-color: ${props => props.theme.colors.grey200};
+    display: inline;
+    font-size: 12px;
+    padding: 4px 6px;
+  }
 `;
 
 const DocumentationContent = ({children, raw, pageTitle, pageDescription}) => (

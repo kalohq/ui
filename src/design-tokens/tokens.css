@@ -79,4 +79,8 @@
   --input-readonly-color: "#546789";
   --input-disabled-background: "#F9FAFC";
   --input-default-border: "1px solid #D0D8DF";
+  --info: rgb(232, 250, 252);
+  --confirmation: rgb(229, 247, 241);
+  --error: rgb(255, 235, 238);
+  --warning: rgb(255, 246, 216);
 }

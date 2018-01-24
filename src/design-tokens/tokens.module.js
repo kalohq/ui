@@ -78,3 +78,7 @@ export const inputDisabledBorder = "1px solid #D0D8DF";
 export const inputReadonlyColor = "#546789";
 export const inputDisabledBackground = "#F9FAFC";
 export const inputDefaultBorder = "1px solid #D0D8DF";
+export const info = "rgb(232, 250, 252)";
+export const confirmation = "rgb(229, 247, 241)";
+export const error = "rgb(255, 235, 238)";
+export const warning = "rgb(255, 246, 216)";

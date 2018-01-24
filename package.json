@@ -11,20 +11,15 @@
     "lib"
   ],
   "scripts": {
-    "start": "npm run storybook:start",
-    "storybook": "npm run storybook:start",
-    "storybook:start": "start-storybook -p 6006",
-    "storybook:build": "build-storybook -c .storybook -o docs",
-    "compile": "npm run generate-tokens && npm run generate-icon-symbols && gulp build-production",
+    "compile": "npm run generate:tokens && npm run generate:icons && gulp build-production",
     "test": "jest",
     "dist": "rimraf lib && npm run compile",
-    "copy-flow": "flow-copy-source src/components lib --ignore '{index.js,**/__tests__/*,**/__stories__/*}'",
     "typecheck": "flow",
     "lint": "eslint src",
     "precommit": "lint-staged",
-    "generate-tokens": "node scripts/tokens.js",
-    "generate-icon-symbols": "node scripts/icons.js",
-    "new-component": "reactman --config ./config/code-templates/reactman-config.json"
+    "generate:tokens": "node scripts/tokens.js",
+    "generate:icons": "node scripts/icons.js",
+    "generate:component": "reactman --config ./config/code-templates/reactman-config.json"
   },
   "lint-staged": {
     "*.js": [
@@ -35,10 +30,6 @@
   "license": "ISC",
   "devDependencies": {
     "@kalo/eslint-config": "6.0.0",
-    "@storybook/addon-info": "3.0.0",
-    "@storybook/addon-options": "3.0.0",
-    "@storybook/cli": "3.0.0",
-    "@storybook/react": "3.0.0",
     "babel-cli": "6.24.1",
     "babel-core": "6.24.1",
     "babel-eslint": "7.2.3",
@@ -70,7 +61,6 @@
     "extract-text-webpack-plugin": "2.1.0",
     "file-loader": "0.11.1",
     "flow-bin": "0.53.0",
-    "flow-copy-source": "1.2.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
     "gulp-postcss": "^7.0.0",
@@ -96,12 +86,10 @@
     "react-hotkeys": "^0.9.0",
     "react-intl": "2.1.5",
     "react-pure-render": "1.0.2",
-    "react-storybook-addon-add-stories-group": "0.1.0",
     "react-test-renderer": "15.4.1",
     "reactman": "2.1.0",
     "rimraf": "2.6.1",
     "style-loader": "0.16.1",
-    "styled-system": "^1.0.8",
     "svg-sprite": "^1.3.7",
     "theo": "^6.0.0-beta.9",
     "webpack": "2.5.1"

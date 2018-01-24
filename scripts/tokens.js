@@ -31,14 +31,18 @@ const formatsRequired = [
     format: 'theme.js',
     fileName: 'tokens.theme.js',
   },
+  {
+    format: 'sketch',
+    fileName: 'kalo-ui.sketchpalette',
+  },
 ];
 
 const writeToNewFile = (name, contents) => {
   try {
     fs.writeFileSync(`./src/design-tokens/${name}`, contents);
-    console.log(`Writing tokens to ./src/design-tokens/${name}`);
+    console.log(`Writing tokens to ./src/design-tokens/${name}`); // eslint-disable-line no-console
   } catch (e) {
-    console.log('Cannot write file ', e);
+    console.log('Cannot write file ', e); // eslint-disable-line no-console
   }
 };
 
@@ -74,6 +78,42 @@ module.exports = {
 `
 );
 
+/**
+ * A custom token format to generate a sketch pallete for product
+ * designers. 
+ */
+theo.registerFormat('sketch', result => {
+  const TEMPLATE_BASE = {
+    compatibleVersion: '2.0',
+    pluginVersion: '2.0',
+    colors: [],
+  };
+
+  result
+    .get('props')
+    .filter(token => token.get('category') === 'colors')
+    .filter(token => token.get('value').match(/rgb/))
+    .filter(token => token.get('originalValue').match(/#/))
+    .sort((a, b) => a.get('name').localeCompare(b.get('name')))
+    .map(token => {
+      const [r, g, b] = token
+        .get('value')
+        .replace('rgb(', '')
+        .replace(')', '')
+        .split(',')
+        .map(i => i / 255);
+
+      return TEMPLATE_BASE.colors.push({
+        red: r,
+        green: g,
+        blue: b,
+        alpha: 1,
+      });
+    });
+
+  return JSON.stringify(TEMPLATE_BASE);
+});
+
 formatsRequired.map(format => {
   return theo
     .convert({
@@ -88,5 +128,5 @@ formatsRequired.map(format => {
     .then(vars => {
       writeToNewFile(format.fileName, vars);
     })
-    .catch(error => console.log(`Something went wrong: ${error}`));
+    .catch(error => console.log(`Something went wrong: ${error}`)); // eslint-disable-line no-console
 });
