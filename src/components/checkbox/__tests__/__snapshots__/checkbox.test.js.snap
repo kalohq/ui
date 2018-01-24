@@ -82,9 +82,11 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
 }
 
 <div
+  aria-checked="mixed"
   className="root glamor-4 glamor-5"
   name={undefined}
   onClick={undefined}
+  role="checkbox"
   style={Object {}}
 >
   .glamor-1 {
@@ -242,9 +244,11 @@ exports[`Checkbox should render a checkbox with label 1`] = `
 }
 
 <div
+  aria-checked={true}
   className="root glamor-4 glamor-5"
   name={undefined}
   onClick={undefined}
+  role="checkbox"
   style={Object {}}
 >
   .glamor-1 {
@@ -372,9 +376,11 @@ exports[`Checkbox should render shallow component ok 1`] = `
 }
 
 <div
+  aria-checked={true}
   className="root glamor-2 glamor-3"
   name={undefined}
   onClick={undefined}
+  role="checkbox"
   style={Object {}}
 >
   .glamor-1 {
