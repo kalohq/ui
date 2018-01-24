@@ -6,7 +6,7 @@ This is a collection of form components which make creating consistent forms alo
 
 ```js
 // This could be ANY "input component"
-import {Input, Fieldset, Field, FieldRow} from '@kalo/ui';
+import {Form, Fieldset, FieldRow, Field, Input} from '@kalo/ui';
 
 function MyForm() {
   return (
@@ -29,7 +29,7 @@ Just rendering a form would be pretty useless. We need it to change values and u
 
 Building on the example from the HOC documentation lets see how we can simplify the rendering of our form using our form kit.
 
-> This example is a rewrite of the form component seen in [withForm HOC](https://github.com/kalohq/frontend/blob/develop/src/core/decorators/with-form/with-form.js) documentaton. Check that out first!
+*This example is a rewrite of the form component seen in [withForm HOC](https://github.com/kalohq/frontend/blob/develop/src/core/decorators/with-form/with-form.js) documentaton. Check that out first!*
 
 ```js
 // Let's import some of the core form components from Kalo UI
