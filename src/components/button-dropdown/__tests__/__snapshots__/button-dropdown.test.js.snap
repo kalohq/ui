@@ -721,9 +721,11 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
 }
 
 <div
+        aria-checked={false}
         className="root glamor-2 glamor-3"
         name={undefined}
         onClick={[Function]}
+        role="checkbox"
         style={Object {}}
       >
         .glamor-1 {
@@ -955,9 +957,11 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
 }
 
 <div
+        aria-checked={false}
         className="root glamor-2 glamor-3"
         name={undefined}
         onClick={[Function]}
+        role="checkbox"
         style={Object {}}
       >
         .glamor-1 {

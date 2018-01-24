@@ -41,6 +41,8 @@ export default function Checkbox(props: CheckboxProps) {
       justifyContent="flex-start"
       onClick={readonly || disabled ? null : onClick}
       name={name}
+      role="checkbox"
+      aria-checked={indeterminate ? 'mixed' : checked}
       className={cx({
         [styles.root]: true,
         [styles.readonly]: readonly,

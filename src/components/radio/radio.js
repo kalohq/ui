@@ -44,6 +44,9 @@ export function Radio(props: RadioProps) {
       justifyContent="start"
       onClick={readonly || disabled ? null : onClick}
       name={name}
+      role="radio"
+      aria-checked={checked}
+      aria-disabled={disabled}
       className={cx({
         [styles.root]: true,
         [styles.disabled]: disabled,
