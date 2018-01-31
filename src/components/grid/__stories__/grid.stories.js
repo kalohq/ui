@@ -10,10 +10,12 @@ const DemoSlab = styled.div`
   width: 100%;
   background-color: #fff;
   padding: 16px;
-  text-align: center;
   color: ${props => props.theme.colors.navy500};
   border: 1px solid ${props => props.theme.colors.grey300};
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const DemoCard = styled.div`
@@ -74,6 +76,40 @@ export const examples = [
     ),
   },
   {
+    title: 'Nested grid',
+    description: 'Rows and columns can be nested as deeply as possible',
+    render: () => (
+      <Grid>
+        <Row marginBottom="large" alignItems="center">
+          <Column columns={2}>
+            <DemoSlab>2</DemoSlab>
+          </Column>
+          <Column columns={10}>
+            <DemoSlab>
+              <Row>
+                <Column columns={2}>
+                  <DemoSlab>2</DemoSlab>
+                </Column>
+                <Column columns={10}>
+                  <DemoSlab>
+                    <Row>
+                      <Column columns={5}>
+                        <DemoSlab>5</DemoSlab>
+                      </Column>
+                      <Column columns={7}>
+                        <DemoSlab>7</DemoSlab>
+                      </Column>
+                    </Row>
+                  </DemoSlab>
+                </Column>
+              </Row>
+            </DemoSlab>
+          </Column>
+        </Row>
+      </Grid>
+    ),
+  },
+  {
     title: 'With justification',
     description: 'Justification can be added to horizontally align columns',
     render: () => (
@@ -96,7 +132,7 @@ export const examples = [
       <Grid>
         <DemoCard>
           <Row spacing="small" alignItems="center">
-            <Column columns={2}>
+            <Column columns={4}>
               <H3 margin="none">A longer project title</H3>
             </Column>
             <Column columns={2}>
@@ -114,10 +150,18 @@ export const examples = [
       <Grid>
         <Row spacing="medium" alignItems="center">
           <Column columns={6}>
-            <input type="text" style={{width: '100%'}} />
+            <input
+              placeholder="Your first name"
+              type="text"
+              style={{width: '100%'}}
+            />
           </Column>
           <Column columns={6}>
-            <input type="text" style={{width: '100%'}} />
+            <input
+              placeholder="Your email"
+              type="text"
+              style={{width: '100%'}}
+            />
           </Column>
         </Row>
       </Grid>
