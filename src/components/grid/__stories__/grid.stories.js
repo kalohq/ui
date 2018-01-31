@@ -36,16 +36,7 @@ export const examples = [
             <DemoSlab>2</DemoSlab>
           </Column>
           <Column columns={10}>
-            <DemoSlab>
-              <Row>
-                <Column columns={2}>
-                  <DemoSlab>2</DemoSlab>
-                </Column>
-                <Column columns={10}>
-                  <DemoSlab>10</DemoSlab>
-                </Column>
-              </Row>
-            </DemoSlab>
+            <DemoSlab>10</DemoSlab>
           </Column>
         </Row>
 
