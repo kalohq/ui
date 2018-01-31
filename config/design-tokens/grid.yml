@@ -1,5 +1,5 @@
 global:
-  type: 'grid'
+  type: 'number'
   category: 'grid'
 props:
   GRID_MAX_WIDTH:
