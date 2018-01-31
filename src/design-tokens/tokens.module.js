@@ -72,3 +72,4 @@ export const info = "rgb(232, 250, 252)";
 export const confirmation = "rgb(229, 247, 241)";
 export const error = "rgb(255, 235, 238)";
 export const warning = "rgb(255, 246, 216)";
+export const gridMaxWidth = "";

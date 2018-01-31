@@ -73,4 +73,5 @@ module.exports = {
   confirmation: "rgb(229, 247, 241)",
   error: "rgb(255, 235, 238)",
   warning: "rgb(255, 246, 216)",
+  gridMaxWidth: "",
 };
