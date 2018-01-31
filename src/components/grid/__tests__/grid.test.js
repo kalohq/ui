@@ -1,31 +1,33 @@
 /* @flow */
 /* eslint-env jest */
-import React from 'react';
-import {shallow} from 'enzyme';
-import serializer from 'enzyme-to-json/serializer';
+import * as React from 'react';
+import {sheet} from 'emotion';
+import serializer from 'jest-glamor-react';
+import renderer from 'react-test-renderer';
+import {ThemeProvider} from 'emotion-theming';
 
-import Grid from '../grid';
+import theme from 'components/theme';
+import {Grid, Row, Column} from 'components/grid';
 
-expect.addSnapshotSerializer(serializer);
+expect.addSnapshotSerializer(serializer(sheet));
 
 describe('components/grid', () => {
-  describe('Grid (default)', () => {
-    const create = (spread = {}) => {
-      const props = {
-        // (insert your default props here)
-        ...spread,
-      };
-      const element = <Grid {...props} />;
-      return {props, element};
-    };
+  const create = (props = {}) =>
+    renderer
+      .create(
+        <ThemeProvider theme={theme}>
+          <Grid {...props}>
+            <Row>
+              <Column columns={2} />
+              <Column columns={10} />
+            </Row>
+          </Grid>
+        </ThemeProvider>
+      )
+      .toJSON();
 
-    it('should shallow render as expected', () => {
-      const {element} = create({
-        // (insert test specific props here)
-        children: 'Child',
-      });
-      const result = shallow(element);
-      expect(result).toMatchSnapshot();
-    });
+  test('should render shallow component ok', () => {
+    const element = create();
+    expect(element).toMatchSnapshot();
   });
 });
