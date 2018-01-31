@@ -4,7 +4,7 @@ import {toNumber} from 'lodash';
 
 import {Box, Flex} from '../layout';
 
-const GRID_MAX_WIDTH = 1080;
+const GRID_MAX_WIDTH = 1200;
 
 /**
  * Some low level grid components
