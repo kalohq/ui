@@ -19,13 +19,13 @@ type TRowProps = {
   children?: any,
   gutter?: string,
   collapse?: boolean,
-  spacing?: 'small' | 'medium' | 'large' | 'extra-large',
+  spacing?: 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large',
 };
 
 export function Row(props: TRowProps) {
   const {
     children,
-    spacing = 'small',
+    spacing = 'medium',
     gutter = null,
     collapse = false,
     ...otherProps
