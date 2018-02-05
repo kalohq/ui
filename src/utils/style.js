@@ -8,11 +8,11 @@ const SPACING_REGEX = /^(padding|margin)(Top|Right|Bottom|Left)?$/;
 
 const SPACING_MAP = {
   none: '0',
-  'extra-small': 2,
-  small: 4,
-  medium: 8,
-  large: 16,
-  'extra-large': 24,
+  'extra-small': 4,
+  small: 8,
+  medium: 16,
+  large: 32,
+  'extra-large': 64,
 };
 
 /**
