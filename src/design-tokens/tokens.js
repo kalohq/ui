@@ -80,4 +80,12 @@ module.exports = {
   spacingMedium: "16px",
   spacingLarge: "32px",
   spacingExtraLarge: "64px",
+  zIndexSeaLevel: "",
+  zIndexAboveFollowingDom: "",
+  zIndexContextualMenu: "",
+  zIndexDialog: "",
+  zIndexAutoCompleteMenu: "",
+  zIndexModal: "",
+  zIndexHigherThanAnything: "",
+  zIndexTopOfTheWorld: "",
 };
