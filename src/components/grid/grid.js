@@ -16,6 +16,8 @@ export const Grid = styled(Flex)`
   margin-right: auto;
 `;
 
+Grid.displayName = 'Grid';
+
 type TRowProps = {
   children?: any,
   gutter?: 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large',
