@@ -11,13 +11,14 @@ import {Box, Flex} from '../layout';
 export const Grid = styled(Flex)`
   width: 100%;
   flex-direction: column;
-  max-width: ${props => props.theme.grid.gridMaxWidth};
-  margin: 0 auto;
+  max-width: ${props => props.theme.grid.gridMaxWidth}px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 type TRowProps = {
   children?: any,
-  gutter?: string,
+  gutter?: 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large',
   collapse?: boolean,
   spacing?: 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large',
 };
@@ -26,7 +27,7 @@ export function Row(props: TRowProps) {
   const {
     children,
     spacing = 'medium',
-    gutter = null,
+    gutter = false,
     collapse = false,
     ...otherProps
   } = props;
@@ -34,6 +35,7 @@ export function Row(props: TRowProps) {
   return (
     <Flex
       width="100%"
+      flexWrap="wrap"
       paddingLeft={gutter}
       paddingRight={gutter}
       {...otherProps}
@@ -64,7 +66,7 @@ export function Column(props: TColumnProps) {
   const _width = `${100 / 12 * toNumber(columns)}%`;
 
   return (
-    <Box flexDirection="row" width={_width} {...otherProps}>
+    <Box flexDirection="column" width={_width} {...otherProps}>
       {children}
     </Box>
   );
