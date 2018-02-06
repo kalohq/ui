@@ -1,5 +1,5 @@
 global:
-  type: 'border-radius'
+  type: 'unit'
   category: 'layout'
 props:
   BORDER_RADIUS:

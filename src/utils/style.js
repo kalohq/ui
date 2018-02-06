@@ -4,15 +4,17 @@ import STYLE_WHITELIST from './style/style-whitelist';
 import PROP_WHITELIST_REGEX from './style/prop-whitelist';
 import {returnArray} from './array';
 
+import tokens from '../design-tokens/tokens.js';
+
 const SPACING_REGEX = /^(padding|margin)(Top|Right|Bottom|Left)?$/;
 
 const SPACING_MAP = {
-  none: '0',
-  'extra-small': 2,
-  small: 4,
-  medium: 8,
-  large: 16,
-  'extra-large': 24,
+  none: tokens.spacingNone,
+  'extra-small': tokens.spacingExtraSmall,
+  small: tokens.spacingSmall,
+  medium: tokens.spacingMedium,
+  large: tokens.spacingLarge,
+  'extra-large': tokens.spacingExtraLarge,
 };
 
 /**
@@ -68,7 +70,7 @@ export function parseStyle(name: string, value: string | number | Array<*>) {
           return `${String(v)}px`;
           // $FlowFixMe
         } else if (isString(v) && SPACING_MAP[v]) {
-          return `${SPACING_MAP[v]}px`;
+          return SPACING_MAP[v];
         }
         return v;
       })
@@ -141,9 +143,7 @@ export function spacing(originalProps: Object): Object {
             isNumber(val)
               ? `${String(val)}px`
               : // $FlowFixMe
-                isString(val) && SPACING_MAP[val]
-                ? `${SPACING_MAP[val]}px`
-                : val
+                isString(val) && SPACING_MAP[val] ? SPACING_MAP[val] : val
         )
         .join(' ');
 

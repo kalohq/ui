@@ -5,3 +5,5 @@ imports:
   - ./font-weight.yml
   - ./border-radius.yml
   - ./alerts.yml
+  - ./grid.yml
+  - ./layout.yml
