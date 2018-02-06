@@ -184,6 +184,170 @@ injectGlobal`
     outline: 0.4em solid #dc322f;
     outline-offset: 0.4em;
   }
+
+  .t-scale-enter {
+    opacity: 0.01;
+    transform: scale(0);
+  }
+
+  .t-scale-enter.t-scale-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+  }
+
+  .t-scale-leave {
+    opacity: 1;
+  }
+
+  .t-scale-leave.t-scale-leave-active {
+    opacity: 0.01;
+    transform: scale(0);
+    transition: all 0.3s ease-in;
+  }
+
+  .t-scale-appear {
+    opacity: 0.01;
+    transform: scale(0.8);
+  }
+
+  .t-scale-appear.t-scale-appear-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+  }
+
+  .t-slide-enter,
+  .t-slide-appear,
+  .t-slide-leave.t-slide-leave-active {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  .t-slide-from-right-enter,
+  .t-slide-from-right-appear,
+  .t-slide-from-right-leave.t-slide-from-right-leave-active {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  .t-slide-inverted-enter,
+  .t-slide-inverted-appear,
+  .t-slide-inverted-leave.t-slide-inverted-leave-active {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .t-slide-enter.t-slide-enter-active,
+  .t-slide-appear.t-slide-appear-active,
+  .t-slide-leave,
+  .t-slide-from-right-enter.t-slide-from-right-enter-active,
+  .t-slide-from-right-appear.t-slide-from-right-appear-active,
+  .t-slide-from-right-leave,
+  .t-slide-inverted-enter.t-slide-inverted-enter-active,
+  .t-slide-inverted-appear.t-slide-inverted-enter-appear,
+  .t-slide-inverted-leave {
+    opacity: 1;
+    transform: none;
+  }
+
+  .t-slide-enter.t-slide-enter-active,
+  .t-slide-appear.t-slide-appear-active,
+  .t-slide-leave.t-slide-leave-active,
+  .t-slide-from-right-enter.t-slide-from-right-enter-active,
+  .t-slide-from-right-appear.t-slide-from-right-appear-active,
+  .t-slide-from-right-leave.t-slide-from-right-leave-active,
+  .t-slide-inverted-enter.t-slide-inverted-enter-active,
+  .t-slide-inverted-appear.t-slide-inverted-appear-active,
+  .t-slide-inverted-leave.t-slide-inverted-leave-active {
+    transition-property: all;
+    transition-duration: 0.3s;
+  }
+
+  .t-slide-enter.t-slide-enter-active,
+  .t-slide-leave.t-slide-leave-active,
+  .t-slide-from-right-enter.t-slide-from-right-enter-active,
+  .t-slide-from-right-leave.t-slide-from-right-leave-active,
+  .t-slide-inverted-enter.t-slide-inverted-enter-active,
+  .t-slide-inverted-leave.t-slide-inverted-leave-active {
+    transition-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
+  }
+
+  @keyframes flop-down {
+    0% {
+      opacity: 0.01;
+      transform: translate(0px, -40px) scale(0.85);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+      opacity: 1;
+    }
+  }
+
+  .t-flop-down-enter {
+    animation: flop-down 0.25s cubic-bezier(0.55, 0, 0.55, 0.2) normal;
+  }
+
+  .t-flop-down-leave {
+    animation: flop-down 0.25s cubic-bezier(0.55, 0, 0.55, 0.2) reverse;
+  }
+
+  .t-fade-in-out-enter {
+    position: absolute;
+    opacity: 0.01;
+  }
+
+  .t-fade-in-out-enter.t-fade-in-out-enter-active {
+    opacity: 1;
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+  }
+
+  .t-fade-in-out-leave {
+    position: absolute;
+    opacity: 1;
+  }
+
+  .t-fade-in-out-leave.t-fade-in-out-leave-active {
+    opacity: 0.01;
+    transition: all 0.3s ease-in;
+  }
+
+  .t-fade-in-out-appear {
+    position: absolute;
+    opacity: 0.01;
+  }
+
+  .t-fade-in-out-appear.t-fade-in-out-appear-active {
+    opacity: 1;
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+  }
+
+  .t-fade-enter {
+    opacity: 0.01;
+  }
+
+  .t-fade-enter.t-fade-enter-active {
+    opacity: 1;
+    transition: all 0.3s ease-in;
+  }
+
+  .t-fade-leave {
+    opacity: 1;
+  }
+
+  .t-fade-leave.t-fade-leave-active {
+    opacity: 0.01;
+    transition: all 0.3s ease-in;
+  }
+
+  .t-fade-appear {
+    opacity: 0.01;
+  }
+
+  .t-fade-appear.t-fade-appear-active {
+    opacity: 1;
+    transition: all 0.3s 0.3s ease-in;
+  }
 `;
 
 const Container = styled.div`
