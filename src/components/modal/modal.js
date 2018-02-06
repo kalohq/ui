@@ -2,8 +2,9 @@
 import React from 'react';
 import styled from 'react-emotion';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import Portal from '../portal';
+import {HotKeys} from 'react-hotkeys';
 
+import Portal from '../portal';
 import {Box} from '../layout';
 import Icon from '../icon';
 import H2 from '../h2';
@@ -125,48 +126,53 @@ export default function Modal(props: TProps) {
 
   const overlayCanClose = closeOnOverlayClick && onCloseRequest;
 
+  const hotKeyHandlers = {
+    esc: onCloseRequest,
+  };
+
   return open ? (
     <Portal>
-      <StyledModalContainer
-        overlayCanClose={overlayCanClose}
-        onClick={overlayCanClose ? onCloseRequest : undefined}
-        style={{zIndex}}
-        tabindex="-1"
-      >
-        <ReactCSSTransitionGroup
-          transitionName="t-slide"
-          transitionAppear={true}
-          transitionEnterTimeout={300}
-          transitionLeaveTimeout={300}
-          transitionAppearTimeout={300}
+      <HotKeys handlers={hotKeyHandlers}>
+        <StyledModalContainer
+          overlayCanClose={overlayCanClose}
+          onClick={overlayCanClose ? onCloseRequest : undefined}
+          style={{zIndex}}
         >
-          <StyledModal
-            onClick={event => event.stopPropagation()}
-            zIndex={zIndex}
-            role="dialog"
-            aria-labelledby="modalTitle"
+          <ReactCSSTransitionGroup
+            transitionName="t-slide"
+            transitionAppear={true}
+            transitionEnterTimeout={300}
+            transitionLeaveTimeout={300}
+            transitionAppearTimeout={300}
           >
-            <StyledModalHeader
-              flexDirection="row"
-              justifyContent="center"
-              alignItems="center"
-              {...props}
+            <StyledModal
+              onClick={event => event.stopPropagation()}
+              zIndex={zIndex}
+              role="dialog"
+              aria-labelledby="modalTitle"
             >
-              <H2 id="modalTitle">{title}</H2>
-              {onCloseRequest ? (
-                <Box marginLeft="auto">
-                  <StyledModalClose onClick={onCloseRequest} type="button">
-                    <Icon color="navy600" size={24}>
-                      clear
-                    </Icon>
-                  </StyledModalClose>
-                </Box>
-              ) : null}
-            </StyledModalHeader>
-            {children}
-          </StyledModal>
-        </ReactCSSTransitionGroup>
-      </StyledModalContainer>
+              <StyledModalHeader
+                flexDirection="row"
+                justifyContent="center"
+                alignItems="center"
+                {...props}
+              >
+                <H2 id="modalTitle">{title}</H2>
+                {onCloseRequest ? (
+                  <Box marginLeft="auto">
+                    <StyledModalClose onClick={onCloseRequest} type="button">
+                      <Icon color="navy600" size={24}>
+                        clear
+                      </Icon>
+                    </StyledModalClose>
+                  </Box>
+                ) : null}
+              </StyledModalHeader>
+              {children}
+            </StyledModal>
+          </ReactCSSTransitionGroup>
+        </StyledModalContainer>
+      </HotKeys>
     </Portal>
   ) : null;
 }
