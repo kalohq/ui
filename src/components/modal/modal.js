@@ -131,6 +131,7 @@ export default function Modal(props: TProps) {
         overlayCanClose={overlayCanClose}
         onClick={overlayCanClose ? onCloseRequest : undefined}
         style={{zIndex}}
+        tabindex="-1"
       >
         <ReactCSSTransitionGroup
           transitionName="t-slide"
@@ -142,6 +143,8 @@ export default function Modal(props: TProps) {
           <StyledModal
             onClick={event => event.stopPropagation()}
             zIndex={zIndex}
+            role="dialog"
+            aria-labelledby="modalTitle"
           >
             <StyledModalHeader
               flexDirection="row"
@@ -149,7 +152,7 @@ export default function Modal(props: TProps) {
               alignItems="center"
               {...props}
             >
-              <H2>{title}</H2>
+              <H2 id="modalTitle">{title}</H2>
               {onCloseRequest ? (
                 <Box marginLeft="auto">
                   <StyledModalClose onClick={onCloseRequest} type="button">
