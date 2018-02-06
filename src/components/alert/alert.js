@@ -43,7 +43,7 @@ export default function Alert(props: TProps) {
 
   return (
     <StyledAlert
-      padding={['medium', 'large']}
+      padding={['small', 'medium']}
       flexDirection="row"
       alignItems="center"
       justifyContent={justifyContent}
