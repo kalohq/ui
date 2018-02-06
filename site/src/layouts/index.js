@@ -241,7 +241,7 @@ export default function Page({data, children, location}) {
         <Header projectMeta={projectMeta} />
         <FlexWrapper>
           <SideNav currentCategory={currentCategory} links={groupedSitePages} />
-          {children()}
+          <div style={{paddingTop: 58, width: '100%'}}>{children()}</div>
         </FlexWrapper>
         <IconSymbols />
       </Container>

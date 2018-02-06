@@ -1,6 +1,7 @@
 import React from 'react';
 
 import DocumentationContent from '../../components/documentation-content';
+import Wrapper from '../../components/wrapper';
 
 const terms = [
   {
@@ -32,15 +33,17 @@ const terms = [
 
 const GlossaryPage = () => (
   <DocumentationContent pageTitle="Product Glossary">
-    <h1>Product Glossary</h1>
-    <p>Commonly used words and phrases used across the Kalo product</p>
+    <Wrapper>
+      <h1>Product Glossary</h1>
+      <p>Commonly used words and phrases used across the Kalo product</p>
 
-    {terms.map(({term, definition}) => (
-      <section key={term}>
-        <h3>{term}</h3>
-        <p>{definition}</p>
-      </section>
-    ))}
+      {terms.map(({term, definition}) => (
+        <section key={term}>
+          <h3>{term}</h3>
+          <p>{definition}</p>
+        </section>
+      ))}
+    </Wrapper>
   </DocumentationContent>
 );
 

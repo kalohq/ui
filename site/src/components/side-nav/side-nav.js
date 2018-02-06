@@ -23,18 +23,18 @@ const FixedContainer = styled.div`
   width: ${MENU_WIDTH};
   height: 100%;
   overflow-y: auto;
-  margin-top: 70px;
+  margin-top: 56px;
   padding-bottom: 70px;
   top: 0;
 `;
 
 const Title = styled.h1`
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   color: ${props => props.theme.colors.navy700};
-  padding: 12px 32px;
+  padding: 24px 44px 4px;
   margin: 0;
-  border-bottom: 1px solid ${props => props.theme.colors.grey300};
+  border-top: 1px solid ${props => props.theme.colors.grey300};
 `;
 
 const LinkGroup = styled.ul`
@@ -47,7 +47,7 @@ const LinkItem = styled.li`
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: ${props => props.theme.colors.navy700};
+  color: ${props => props.theme.colors.navy600};
   padding: 8px 32px 8px 44px;
   font-size: 14px;
   font-weight: 400;

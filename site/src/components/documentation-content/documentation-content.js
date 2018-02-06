@@ -75,14 +75,8 @@ const StyledDocumentationContent = styled.article`
   }
 `;
 
-const Main = styled.main`
-  padding: 100px 60px 60px;
-  max-width: 920px;
-  width: 100%;
-`;
-
 const DocumentationContent = ({children, raw, pageTitle, pageDescription}) => (
-  <Main>
+  <div style={{paddingTop: 62, width: '100%'}}>
     <Helmet
       title={
         pageTitle ? `${pageTitle} - Kalo Design System` : 'Kalo Design System'
@@ -95,7 +89,7 @@ const DocumentationContent = ({children, raw, pageTitle, pageDescription}) => (
     ) : (
       <StyledDocumentationContent>{children}</StyledDocumentationContent>
     )}
-  </Main>
+  </div>
 );
 
 export default DocumentationContent;

@@ -19,9 +19,9 @@ const StyledLogo = styled.div`
   font-weight: 500;
 
   a {
+    color: inherit;
     display: flex;
     align-items: center;
-    color: inherit;
     text-decoration: none;
   }
 `;
