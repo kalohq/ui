@@ -1,5 +1,4 @@
-import React from 'react';
-import createFragment from 'react-addons-create-fragment';
+import * as React from 'react';
 
 const valueStyles = {
   func: {
@@ -47,7 +46,14 @@ const previewArray = val => {
   } else {
     delete items[`c${val.length - 1}`];
   }
-  return <span style={valueStyles.array}>[{createFragment(items)}]</span>;
+
+  return (
+    /** These spans should be replaced with fragments once Gatsby is
+      * updated to React 16 */
+    <span style={valueStyles.array}>
+      [{Object.keys(items).map(item => <span key={item}>{items[item]}</span>)}]
+    </span>
+  );
 };
 
 const previewObject = val => {
@@ -66,9 +72,7 @@ const previewObject = val => {
   }
   return (
     <span style={valueStyles.object}>
-      {'{'}
-      {createFragment(items)}
-      {'}'}
+      {Object.keys(items).map(item => <span key={item}>{items[item]}</span>)}
     </span>
   );
 };
