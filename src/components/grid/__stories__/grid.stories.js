@@ -11,19 +11,23 @@ const DemoSlab = styled.div`
   background-color: #fff;
   padding: 16px;
   color: ${props => props.theme.colors.navy500};
-  border: 1px solid ${props => props.theme.colors.grey300};
+  border: 1px solid ${props => props.theme.colors.grey400};
   font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
+DemoSlab.displayName = 'DemoSlab';
+
 const DemoCard = styled.div`
   width: 100%;
   background-color: #fff;
-  border: 1px solid ${props => props.theme.colors.grey300};
+  border: 1px solid ${props => props.theme.colors.grey400};
   padding: 16px 16px;
 `;
+
+DemoCard.displayName = 'DemoCard';
 
 export const examples = [
   {

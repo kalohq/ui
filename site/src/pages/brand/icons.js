@@ -3,6 +3,7 @@ import Link from 'gatsby-link';
 import styled from 'react-emotion';
 
 import DocumentationContent from '../../components/documentation-content';
+import Wrapper from '../../components/wrapper';
 
 import Icon from '../../../../src/components/icon';
 
@@ -92,22 +93,24 @@ const BrandIconsPage = () => (
     pageTitle="Iconography"
     pageDescription="Our icon set is a mixture of Material Icons, and custom icons designed in house."
   >
-    <h1>Icon Set</h1>
-    <p>
-      The icons used throughout Kalo are a mixture of{' '}
-      <a href="https://material.io/icons/">Material icons</a> custom icons
-      designed in house.
-    </p>
+    <Wrapper>
+      <h1>Icon Set</h1>
+      <p>
+        The icons used throughout Kalo are a mixture of{' '}
+        <a href="https://material.io/icons/">Material icons</a> custom icons
+        designed in house.
+      </p>
 
-    <h2>Implementation</h2>
-    <p>
-      If you're developing in the platform, you'll want to use the Icon
-      component. See <Link to="/component/icon">here</Link> for documentation on
-      this component.
-    </p>
+      <h2>Implementation</h2>
+      <p>
+        If you're developing in the platform, you'll want to use the Icon
+        component. See <Link to="/component/icon">here</Link> for documentation
+        on this component.
+      </p>
 
-    <h2>Full set</h2>
-    <IconSetWithSearch />
+      <h2>Full set</h2>
+      <IconSetWithSearch />
+    </Wrapper>
   </DocumentationContent>
 );
 
