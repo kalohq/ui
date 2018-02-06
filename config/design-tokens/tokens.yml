@@ -6,3 +6,4 @@ imports:
   - ./border-radius.yml
   - ./alerts.yml
   - ./grid.yml
+  - ./layout.yml

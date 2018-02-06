@@ -1,0 +1,17 @@
+global:
+  type: 'unit'
+  category: 'layout'
+props:
+  SPACING_NONE:
+    value: 0px
+  SPACING_EXTRA_SMALL:
+    value: 4px
+  SPACING_SMALL:
+    value: 8px
+  SPACING_MEDIUM:
+    value: 16px
+  SPACING_LARGE:
+    value: 32px
+  SPACING_EXTRA_LARGE:
+    value: 64px
+  

@@ -74,4 +74,10 @@ module.exports = {
     'error': 'rgb(255, 235, 238)',
     'warning': 'rgb(255, 246, 216)',
     'grid-max-width': '1200',
+    'spacing-none': '0px',
+    'spacing-extra-small': '4px',
+    'spacing-small': '8px',
+    'spacing-medium': '16px',
+    'spacing-large': '32px',
+    'spacing-extra-large': '64px',
 }

@@ -74,4 +74,10 @@ module.exports = {
   error: "rgb(255, 235, 238)",
   warning: "rgb(255, 246, 216)",
   gridMaxWidth: "",
+  spacingNone: "0px",
+  spacingExtraSmall: "4px",
+  spacingSmall: "8px",
+  spacingMedium: "16px",
+  spacingLarge: "32px",
+  spacingExtraLarge: "64px",
 };
