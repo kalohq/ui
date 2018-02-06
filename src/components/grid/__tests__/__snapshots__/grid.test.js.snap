@@ -10,27 +10,34 @@ exports[`components/grid should render shallow component ok 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  max-width: 1200;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .glamor-5 {
   width: 100%;
-  padding-left: px;
-  padding-right: px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-left: false;
+  padding-right: false;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding-left: px;
-  padding-right: px;
+  padding-left: false;
+  padding-right: false;
   width: 100%;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .glamor-1 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 16.666666666666668%;
   padding-left: 16px;
   padding-right: 16px;
@@ -54,16 +61,16 @@ exports[`components/grid should render shallow component ok 1`] = `
   display: flex;
   padding-left: 16px;
   padding-right: 16px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 16.666666666666668%;
 }
 
 .glamor-3 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 83.33333333333334%;
   padding-left: 16px;
   padding-right: 16px;
@@ -87,9 +94,9 @@ exports[`components/grid should render shallow component ok 1`] = `
   display: flex;
   padding-left: 16px;
   padding-right: 16px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 83.33333333333334%;
 }
 
@@ -99,21 +106,27 @@ exports[`components/grid should render shallow component ok 1`] = `
 >
   .glamor-5 {
   width: 100%;
-  padding-left: px;
-  padding-right: px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-left: false;
+  padding-right: false;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding-left: px;
-  padding-right: px;
+  padding-left: false;
+  padding-right: false;
   width: 100%;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .glamor-1 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 16.666666666666668%;
   padding-left: 16px;
   padding-right: 16px;
@@ -137,16 +150,16 @@ exports[`components/grid should render shallow component ok 1`] = `
   display: flex;
   padding-left: 16px;
   padding-right: 16px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 16.666666666666668%;
 }
 
 .glamor-3 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 83.33333333333334%;
   padding-left: 16px;
   padding-right: 16px;
@@ -170,9 +183,9 @@ exports[`components/grid should render shallow component ok 1`] = `
   display: flex;
   padding-left: 16px;
   padding-right: 16px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 83.33333333333334%;
 }
 
@@ -181,9 +194,9 @@ exports[`components/grid should render shallow component ok 1`] = `
     style={Object {}}
   >
     .glamor-1 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 16.666666666666668%;
   padding-left: 16px;
   padding-right: 16px;
@@ -207,9 +220,9 @@ exports[`components/grid should render shallow component ok 1`] = `
   display: flex;
   padding-left: 16px;
   padding-right: 16px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 16.666666666666668%;
 }
 
@@ -218,9 +231,9 @@ exports[`components/grid should render shallow component ok 1`] = `
       style={Object {}}
     />
     .glamor-1 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 83.33333333333334%;
   padding-left: 16px;
   padding-right: 16px;
@@ -244,9 +257,9 @@ exports[`components/grid should render shallow component ok 1`] = `
   display: flex;
   padding-left: 16px;
   padding-right: 16px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 83.33333333333334%;
 }
 

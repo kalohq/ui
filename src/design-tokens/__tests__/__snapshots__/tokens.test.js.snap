@@ -74,6 +74,12 @@ Object {
   "silver": "rgb(176, 186, 195)",
   "slate": "rgb(84, 103, 137)",
   "snow": "rgb(249, 250, 252)",
+  "spacingExtraLarge": "64px",
+  "spacingExtraSmall": "4px",
+  "spacingLarge": "32px",
+  "spacingMedium": "16px",
+  "spacingNone": "0px",
+  "spacingSmall": "8px",
   "warning": "rgb(255, 246, 216)",
   "white": "rgb(255, 255, 255)",
 }
