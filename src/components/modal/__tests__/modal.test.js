@@ -9,10 +9,9 @@ import Modal from '../modal';
 expect.addSnapshotSerializer(serializer);
 
 describe('components/modal', () => {
-  describe('Modal (default)', () => {
+  describe('Modal', () => {
     const create = (spread = {}) => {
       const props = {
-        // (insert your default props here)
         ...spread,
       };
       const element = <Modal {...props} />;
@@ -21,11 +20,20 @@ describe('components/modal', () => {
 
     it('should shallow render as expected', () => {
       const {element} = create({
-        // (insert test specific props here)
-        children: 'Child',
+        title: 'Remove freelancer',
       });
       const result = shallow(element);
       expect(result).toMatchSnapshot();
+    });
+
+    it('should render with a title', () => {
+      const TITLE = 'Remove freelancer';
+
+      const {element} = create({
+        title: TITLE,
+      });
+      const result = shallow(element);
+      expect(result.find('H2').contains(TITLE)).toBe(true);
     });
   });
 });
