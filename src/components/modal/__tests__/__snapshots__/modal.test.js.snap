@@ -14,7 +14,7 @@ exports[`components/modal Modal should shallow render as expected 1`] = `
     <Styled(PrimitiveBox)
       style={
         Object {
-          "zIndex": "",
+          "zIndex": "200",
         }
       }
     >
@@ -31,7 +31,7 @@ exports[`components/modal Modal should shallow render as expected 1`] = `
           aria-labelledby="modalTitle"
           onClick={[Function]}
           role="dialog"
-          zIndex=""
+          zIndex="200"
         >
           <Styled(PrimitiveBox)
             alignItems="center"
