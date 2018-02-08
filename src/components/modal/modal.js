@@ -1,5 +1,5 @@
 /* @flow */
-import React from 'react';
+import * as React from 'react';
 import styled from 'react-emotion';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import {HotKeys} from 'react-hotkeys';
@@ -102,11 +102,13 @@ ModalActions.displayName = 'ModalActions';
  */
 
 type TProps = {
-  children?: React$Node,
+  /** Children */
+  children?: React.Node,
   /** Is the modal open? */
   open: boolean,
   /** Allows the modal to be dismissed by clicking outside */
   closeOnOverlayClick?: boolean,
+  /** A function to call when the user tries to close the modal */
   onCloseRequest?: boolean,
   /** A custom z-index value */
   zIndex?: number,
