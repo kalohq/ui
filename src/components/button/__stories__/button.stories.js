@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Button from '../button';
+import ButtonGroup from '../../button-group';
 
 const myClickFunction = () => {
   /* eslint-disable no-alert */
@@ -71,6 +72,24 @@ export const examples = [
     description: 'A button can also be used with a standalone icon',
     render: () => (
       <Button theme="tertiary" size="medium" icon="mode_edit" loneIcon={true} />
+    ),
+  },
+  {
+    title: 'Sizing',
+    description:
+      'Buttons come in three different sizes: small, medium, and large',
+    render: () => (
+      <ButtonGroup spacing={true}>
+        <Button theme="tertiary" size="small">
+          Small
+        </Button>
+        <Button theme="tertiary" size="medium">
+          Medium
+        </Button>
+        <Button theme="tertiary" size="large">
+          Large
+        </Button>
+      </ButtonGroup>
     ),
   },
 ];
