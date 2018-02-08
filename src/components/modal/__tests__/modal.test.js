@@ -12,7 +12,7 @@ describe('components/modal', () => {
   describe('Modal', () => {
     const create = (spread = {}) => {
       const props = {
-        open: false,
+        open: true,
         ...spread,
       };
       const element = <Modal {...props} />;

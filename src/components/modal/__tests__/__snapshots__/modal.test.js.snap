@@ -37,6 +37,7 @@ exports[`components/modal Modal should shallow render as expected 1`] = `
             alignItems="center"
             flexDirection="row"
             justifyContent="center"
+            open={true}
             title="Remove freelancer"
           >
             <H2
