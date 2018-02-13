@@ -83,7 +83,7 @@ const StyledDocumentationContent = styled.article`
 `;
 
 const DocumentationContent = ({children, raw, pageTitle, pageDescription}) => (
-  <div>
+  <div style={{paddingTop: 62, width: '100%'}}>
     <Helmet
       title={
         pageTitle ? `${pageTitle} - Kalo Design System` : 'Kalo Design System'

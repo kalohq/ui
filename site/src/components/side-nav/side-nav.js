@@ -9,7 +9,7 @@ const AsideContainer = styled.aside`
   width: auto;
   height: 100%;
   min-width: ${MENU_WIDTH};
-  background-color: ${props => props.theme.colors.white};
+  background-color: ${props => props.theme.colors.grey200};
   border-right: 1px solid ${props => props.theme.colors.grey300};
   min-height: calc(100vh - 56px);
   padding: 20px 0 0;
@@ -23,17 +23,18 @@ const FixedContainer = styled.div`
   width: ${MENU_WIDTH};
   height: 100%;
   overflow-y: auto;
-  margin-top: 70px;
+  margin-top: 56px;
   padding-bottom: 70px;
   top: 0;
 `;
 
 const Title = styled.h1`
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   color: ${props => props.theme.colors.navy700};
-  padding: 12px 32px;
+  padding: 24px 44px 4px;
   margin: 0;
+  border-top: 1px solid ${props => props.theme.colors.grey300};
 `;
 
 const LinkGroup = styled.ul`
@@ -46,17 +47,12 @@ const LinkItem = styled.li`
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: ${props => props.theme.colors.navy700};
-  padding: 14px 32px 14px 44px;
+  color: ${props => props.theme.colors.navy600};
+  padding: 8px 32px 8px 44px;
   font-size: 14px;
   font-weight: 400;
-  border-bottom: 1px solid ${props => props.theme.colors.grey300};
   background-color: ${props =>
     props.isCurrent ? props.theme.colors.grey300 : 'transparent'};
-
-  &:first-of-type {
-    border-top: 1px solid ${props => props.theme.colors.grey300};
-  }
 
   &:hover {
     background-color: ${props => props.theme.colors.grey300};

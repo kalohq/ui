@@ -1,10 +1,13 @@
 import React from 'react';
 
 import DocumentationContent from '../../components/documentation-content';
+import Wrapper from '../../components/wrapper';
 
 const BrandTypographyPage = () => (
   <DocumentationContent pageTitle="Typography">
-    <h1>Typography</h1>
+    <Wrapper>
+      <h1>Typography</h1>
+    </Wrapper>
   </DocumentationContent>
 );
 

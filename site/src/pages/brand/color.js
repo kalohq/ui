@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'react-emotion';
 
 import DocumentationContent from '../../components/documentation-content';
+import Wrapper from '../../components/wrapper';
 
 const colors = [
   {
@@ -130,29 +131,32 @@ const BrandColorsPage = () => (
     pageTitle="Color Palette"
     pageDescription="The Kalo brand palette consists of two primary colors, and four secondary."
   >
-    <h1>Color</h1>
-    <p>
-      The Kalo brand palette consists of two primary colors, and four secondary.
-    </p>
-    <h2>Colors and variables</h2>
-    <p>
-      The whole color palette is available in several different formats (CSS
-      variables, JS variables, and via the theme prop). Variables use the color
-      name (seen below on the right). For example, to use pink in CSS, access it
-      like so:
-    </p>
-    <h2>Palette</h2>
+    <Wrapper>
+      <h1>Color</h1>
+      <p>
+        The Kalo brand palette consists of two primary colors, and four
+        secondary.
+      </p>
+      <h2>Colors and variables</h2>
+      <p>
+        The whole color palette is available in several different formats (CSS
+        variables, JS variables, and via the theme prop). Variables use the
+        color name (seen below on the right). For example, to use pink in CSS,
+        access it like so:
+      </p>
+      <h2>Palette</h2>
 
-    <Swatches>
-      {colors.map(swatch => (
-        <Swatch
-          name={swatch.swatch}
-          key={swatch.swatch}
-          keyColor={swatch.key}
-          colorGroup={swatch.colors}
-        />
-      ))}
-    </Swatches>
+      <Swatches>
+        {colors.map(swatch => (
+          <Swatch
+            name={swatch.swatch}
+            key={swatch.swatch}
+            keyColor={swatch.key}
+            colorGroup={swatch.colors}
+          />
+        ))}
+      </Swatches>
+    </Wrapper>
   </DocumentationContent>
 );
 

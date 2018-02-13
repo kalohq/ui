@@ -192,12 +192,10 @@ const Container = styled.div`
   display: flex;
 `;
 
-const Main = styled.main`
-  padding: 100px 60px 60px;
-  width: 920px;
+const FlexWrapper = styled.div`
+  display: flex;
+  width: 100%;
 `;
-
-const FlexWrapper = styled.div`display: flex;`;
 
 export default function Page({data, children, location}) {
   const {edges: pages} = data.allSitePage;
@@ -243,7 +241,7 @@ export default function Page({data, children, location}) {
         <Header projectMeta={projectMeta} />
         <FlexWrapper>
           <SideNav currentCategory={currentCategory} links={groupedSitePages} />
-          <Main>{children()}</Main>
+          <div style={{paddingTop: 58, width: '100%'}}>{children()}</div>
         </FlexWrapper>
         <IconSymbols />
       </Container>
