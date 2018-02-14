@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ButtonDropdown should render shallow component ok 1`] = `
-.glamor-11 {
+.glamor-7 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -22,15 +22,7 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
   display: flex;
 }
 
-.glamor-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.glamor-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -46,8 +38,6 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
 }
 
 .glamor-1 {
-  margin-left: 8px;
-  margin-right: -8px;
   display: inline-block;
   vertical-align: bottom;
   margin-left: 8px;
@@ -65,19 +55,11 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
 }
 
 <div
-  className="root glamor-10 glamor-11"
+  className="root glamor-7"
   onClick={[Function]}
   style={Object {}}
 >
-  .glamor-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  .glamor-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -93,8 +75,6 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
 }
 
 .glamor-1 {
-  margin-left: 8px;
-  margin-right: -8px;
   display: inline-block;
   vertical-align: bottom;
   margin-left: 8px;
@@ -117,15 +97,7 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
     role="button"
     type={undefined}
   >
-    .glamor-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+    .glamor-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -141,8 +113,6 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
 }
 
 .glamor-1 {
-  margin-left: 8px;
-  margin-right: -8px;
   display: inline-block;
   vertical-align: bottom;
   margin-left: 8px;
@@ -160,12 +130,10 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
 }
 
 <div
-      className="placeholder glamor-2 glamor-3"
+      className="placeholder glamor-2"
       style={Object {}}
     >
       .glamor-1 {
-  margin-left: 8px;
-  margin-right: -8px;
   display: inline-block;
   vertical-align: bottom;
   margin-left: 8px;
@@ -211,15 +179,7 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
         />
       </div>
     </div>
-    .glamor-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+    .glamor-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -235,8 +195,6 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
 }
 
 .glamor-1 {
-  margin-left: 8px;
-  margin-right: -8px;
   display: inline-block;
   vertical-align: bottom;
   margin-left: 8px;
@@ -254,14 +212,12 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
 }
 
 <div
-      className="message glamor-2 glamor-3"
+      className="message glamor-2"
       name="message"
       style={Object {}}
       title={undefined}
     >
       .glamor-1 {
-  margin-left: 8px;
-  margin-right: -8px;
   display: inline-block;
   vertical-align: bottom;
   margin-left: 8px;
@@ -307,15 +263,7 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
         />
       </div>
     </div>
-    .glamor-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+    .glamor-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -331,7 +279,7 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
 }
 
 <div
-      className="successMessage glamor-0 glamor-1"
+      className="successMessage glamor-0"
       style={Object {}}
     />
     <div
@@ -358,7 +306,7 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
 `;
 
 exports[`ButtonDropdown should render with a checkbox 1`] = `
-.glamor-19 {
+.glamor-11 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -379,15 +327,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   display: flex;
 }
 
-.glamor-7 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.glamor-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -402,9 +342,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   justify-content: center;
 }
 
-.glamor-5 {
-  margin-left: 8px;
-  margin-right: -8px;
+.glamor-3 {
   display: inline-block;
   vertical-align: bottom;
   margin-left: 8px;
@@ -421,15 +359,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   fill: currentColor;
 }
 
-.glamor-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+.glamor-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -444,10 +374,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   justify-content: flex-start;
 }
 
-.glamor-1 {
-  position: relative;
-  width: 16px;
-  height: 16px;
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -466,25 +393,16 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   width: 16px;
   height: 16px;
 }
 
 <div
-  className="root glamor-0 glamor-19"
+  className="root glamor-11"
   onClick={[Function]}
   style={Object {}}
 >
-  .glamor-7 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  .glamor-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -499,9 +417,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   justify-content: center;
 }
 
-.glamor-5 {
-  margin-left: 8px;
-  margin-right: -8px;
+.glamor-3 {
   display: inline-block;
   vertical-align: bottom;
   margin-left: 8px;
@@ -518,15 +434,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   fill: currentColor;
 }
 
-.glamor-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+.glamor-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -541,10 +449,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   justify-content: flex-start;
 }
 
-.glamor-1 {
-  position: relative;
-  width: 16px;
-  height: 16px;
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -563,7 +468,6 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   width: 16px;
   height: 16px;
 }
@@ -574,15 +478,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
     role="button"
     type={undefined}
   >
-    .glamor-7 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+    .glamor-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -597,9 +493,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   justify-content: center;
 }
 
-.glamor-5 {
-  margin-left: 8px;
-  margin-right: -8px;
+.glamor-3 {
   display: inline-block;
   vertical-align: bottom;
   margin-left: 8px;
@@ -616,15 +510,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   fill: currentColor;
 }
 
-.glamor-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+.glamor-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -639,10 +525,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   justify-content: flex-start;
 }
 
-.glamor-1 {
-  position: relative;
-  width: 16px;
-  height: 16px;
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -661,24 +544,15 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   width: 16px;
   height: 16px;
 }
 
 <div
-      className="placeholder glamor-2 glamor-7"
+      className="placeholder glamor-4"
       style={Object {}}
     >
-      .glamor-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+      .glamor-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -693,10 +567,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   justify-content: flex-start;
 }
 
-.glamor-1 {
-  position: relative;
-  width: 16px;
-  height: 16px;
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -715,23 +586,19 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   width: 16px;
   height: 16px;
 }
 
 <div
         aria-checked={false}
-        className="root glamor-2 glamor-3"
+        className="root glamor-1"
         name={undefined}
         onClick={[Function]}
         role="checkbox"
         style={Object {}}
       >
-        .glamor-1 {
-  position: relative;
-  width: 16px;
-  height: 16px;
+        .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -750,19 +617,16 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   width: 16px;
   height: 16px;
 }
 
 <div
-          className="checkbox glamor-0 glamor-1"
+          className="checkbox glamor-0"
           style={Object {}}
         />
       </div>
       .glamor-1 {
-  margin-left: 8px;
-  margin-right: -8px;
   display: inline-block;
   vertical-align: bottom;
   margin-left: 8px;
@@ -808,15 +672,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
         />
       </div>
     </div>
-    .glamor-7 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+    .glamor-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -831,9 +687,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   justify-content: center;
 }
 
-.glamor-5 {
-  margin-left: 8px;
-  margin-right: -8px;
+.glamor-3 {
   display: inline-block;
   vertical-align: bottom;
   margin-left: 8px;
@@ -850,15 +704,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   fill: currentColor;
 }
 
-.glamor-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+.glamor-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -873,10 +719,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   justify-content: flex-start;
 }
 
-.glamor-1 {
-  position: relative;
-  width: 16px;
-  height: 16px;
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -895,26 +738,17 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   width: 16px;
   height: 16px;
 }
 
 <div
-      className="message glamor-2 glamor-7"
+      className="message glamor-4"
       name="message"
       style={Object {}}
       title={undefined}
     >
-      .glamor-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+      .glamor-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -929,10 +763,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   justify-content: flex-start;
 }
 
-.glamor-1 {
-  position: relative;
-  width: 16px;
-  height: 16px;
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -951,23 +782,19 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   width: 16px;
   height: 16px;
 }
 
 <div
         aria-checked={false}
-        className="root glamor-2 glamor-3"
+        className="root glamor-1"
         name={undefined}
         onClick={[Function]}
         role="checkbox"
         style={Object {}}
       >
-        .glamor-1 {
-  position: relative;
-  width: 16px;
-  height: 16px;
+        .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -986,19 +813,16 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   width: 16px;
   height: 16px;
 }
 
 <div
-          className="checkbox glamor-0 glamor-1"
+          className="checkbox glamor-0"
           style={Object {}}
         />
       </div>
       .glamor-1 {
-  margin-left: 8px;
-  margin-right: -8px;
   display: inline-block;
   vertical-align: bottom;
   margin-left: 8px;
@@ -1044,15 +868,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
         />
       </div>
     </div>
-    .glamor-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+    .glamor-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1068,7 +884,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
 }
 
 <div
-      className="successMessage glamor-0 glamor-1"
+      className="successMessage glamor-0"
       style={Object {}}
     />
     <div

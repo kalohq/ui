@@ -2,26 +2,26 @@
 
 exports[`Input should render shallow component ok 1`] = `
 <fieldset
-  className="css-155rrlq0 css-1u5seyf"
+  className="css-155rrlq0 css-1ne5kij"
   name={undefined}
   onClick={undefined}
   style={Object {}}
 >
   <div
-    className="css-134evea0 css-1lsspws"
+    className="css-1um3mzq"
     onClick={undefined}
     style={Object {}}
   >
     <div
-      className="css-134evea0 css-16j9e65"
+      className="css-jbik9l"
       style={Object {}}
     >
       <div
-        className="css-134evea0 css-1x0f447"
+        className="css-1ertpse"
         style={Object {}}
       >
         <label
-          className="css-16ef8bd0 css-uci0iz"
+          className="css-16ef8bd0 css-1hye6w1"
           color="navy600"
           htmlFor={undefined}
           onClick={undefined}
@@ -31,7 +31,7 @@ exports[`Input should render shallow component ok 1`] = `
         >
           Your name
           <span
-            className="css-134evea3 css-14z43x8"
+            className="css-a42xn"
             style={Object {}}
           >
             *
@@ -39,7 +39,7 @@ exports[`Input should render shallow component ok 1`] = `
         </label>
       </div>
       <div
-        className="css-xnmmcr1 css-1p93vdy"
+        className="css-xnmmcr1 css-5uudc2"
         style={Object {}}
       >
         <input

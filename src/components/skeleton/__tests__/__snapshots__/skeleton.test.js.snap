@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/skeleton SkeletonAvatar should render shallow component ok 1`] = `
-.glamor-1 {
-  height: 40px;
-  width: 40px;
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -27,15 +25,13 @@ exports[`components/skeleton SkeletonAvatar should render shallow component ok 1
 }
 
 <div
-  className="circle shape glamor-0 glamor-1"
+  className="circle shape glamor-0"
   style={Object {}}
 />
 `;
 
 exports[`components/skeleton SkeletonButton should render shallow component ok 1`] = `
-.glamor-1 {
-  height: 36px;
-  width: 36px;
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -59,18 +55,13 @@ exports[`components/skeleton SkeletonButton should render shallow component ok 1
 }
 
 <div
-  className="shape glamor-0 glamor-1"
+  className="shape glamor-0"
   style={Object {}}
 />
 `;
 
 exports[`components/skeleton SkeletonGrid should render shallow component ok 1`] = `
-.glamor-5 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  margin-top: -10px;
+.glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -90,156 +81,125 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -10px;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.glamor-3 {
-  margin-top: 10px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 10px;
-  margin-left: 0px;
-}
-
-.glamor-19 {
-  height: 12px;
-  width: 140px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 140px;
-}
-
-.glamor-33 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  margin-left: -25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: -25px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.glamor-13 {
-  margin-top: 0px;
-  margin-left: 25px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0px;
-  margin-left: 25px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.glamor-7 {
-  padding: 15px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 15px;
 }
 
 .glamor-1 {
-  height: 24px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
+.glamor-9 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 12px;
   width: 140px;
+}
+
+.glamor-16 {
+  position: relative;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -25px;
+}
+
+.glamor-6 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  margin-left: 25px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.glamor-3 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -262,9 +222,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   width: 140px;
 }
 
-.glamor-15 {
-  height: 24px;
-  width: 70px;
+.glamor-7 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -288,15 +246,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 }
 
 <div
-  className="glamor-0 glamor-33"
+  className="glamor-16"
   style={Object {}}
 >
-  .glamor-5 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  margin-top: -10px;
+  .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -316,94 +269,80 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -10px;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.glamor-3 {
-  margin-top: 10px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 10px;
-  margin-left: 0px;
-}
-
-.glamor-13 {
-  margin-top: 0px;
-  margin-left: 25px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0px;
-  margin-left: 25px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.glamor-7 {
-  padding: 15px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 15px;
 }
 
 .glamor-1 {
-  height: 24px;
-  width: 140px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
+.glamor-6 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  margin-left: 25px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.glamor-3 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -427,15 +366,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 }
 
 <div
-    className="glamor-0 glamor-13"
+    className="glamor-6"
     style={Object {}}
   >
-    .glamor-5 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  margin-top: -10px;
+    .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -455,63 +389,54 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -10px;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.glamor-3 {
-  margin-top: 10px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 10px;
-  margin-left: 0px;
-}
-
-.glamor-7 {
-  padding: 15px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 15px;
 }
 
 .glamor-1 {
-  height: 24px;
-  width: 140px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
+.glamor-3 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -535,15 +460,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 }
 
 <div
-      className="glamor-0 glamor-5"
+      className="glamor-2"
       style={Object {}}
     >
-      .glamor-5 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  margin-top: -10px;
+      .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -563,63 +483,54 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -10px;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.glamor-3 {
-  margin-top: 10px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 10px;
-  margin-left: 0px;
-}
-
-.glamor-7 {
-  padding: 15px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 15px;
 }
 
 .glamor-1 {
-  height: 24px;
-  width: 140px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
+.glamor-3 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -643,15 +554,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 }
 
 <div
-        className="glamor-0 glamor-3"
+        className="glamor-1"
         style={Object {}}
       >
-        .glamor-5 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  margin-top: -10px;
+        .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -671,63 +577,54 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -10px;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.glamor-3 {
-  margin-top: 10px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 10px;
-  margin-left: 0px;
-}
-
-.glamor-7 {
-  padding: 15px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 15px;
 }
 
 .glamor-1 {
-  height: 24px;
-  width: 140px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
+.glamor-3 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -751,15 +648,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 }
 
 <div
-          className="paper glamor-0 glamor-7"
+          className="paper glamor-3"
           style={Object {}}
         >
-          .glamor-5 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  margin-top: -10px;
+          .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -779,40 +671,32 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -10px;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.glamor-3 {
-  margin-top: 10px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 10px;
-  margin-left: 0px;
 }
 
 .glamor-1 {
-  height: 24px;
-  width: 140px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -836,12 +720,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 }
 
 <div
-            className="glamor-0 glamor-5"
+            className="glamor-2"
             style={Object {}}
           >
-            .glamor-3 {
-  margin-top: 10px;
-  margin-left: 0px;
+            .glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -864,9 +746,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   margin-left: 0px;
 }
 
-.glamor-1 {
-  height: 24px;
-  width: 140px;
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -890,12 +770,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 }
 
 <div
-              className="glamor-0 glamor-3"
+              className="glamor-1"
               style={Object {}}
             >
-              .glamor-1 {
-  height: 24px;
-  width: 140px;
+              .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -919,7 +797,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 }
 
 <div
-                className="shape glamor-0 glamor-1"
+                className="shape glamor-0"
                 style={Object {}}
               />
             </div>
@@ -928,12 +806,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
       </div>
     </div>
   </div>
-  .glamor-9 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  margin-top: -10px;
+  .glamor-4 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -953,119 +826,103 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -10px;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.glamor-3 {
-  margin-top: 10px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 10px;
-  margin-left: 0px;
-}
-
-.glamor-5 {
-  height: 12px;
-  width: 140px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 140px;
-}
-
-.glamor-17 {
-  margin-top: 0px;
-  margin-left: 25px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0px;
-  margin-left: 25px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.glamor-11 {
-  padding: 15px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 15px;
 }
 
 .glamor-1 {
-  height: 24px;
-  width: 70px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
+.glamor-2 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 12px;
+  width: 140px;
+}
+
+.glamor-8 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  margin-left: 25px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.glamor-5 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1089,15 +946,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 }
 
 <div
-    className="glamor-0 glamor-17"
+    className="glamor-8"
     style={Object {}}
   >
-    .glamor-9 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  margin-top: -10px;
+    .glamor-4 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1117,88 +969,77 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -10px;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.glamor-3 {
-  margin-top: 10px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 10px;
-  margin-left: 0px;
-}
-
-.glamor-5 {
-  height: 12px;
-  width: 140px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 140px;
-}
-
-.glamor-11 {
-  padding: 15px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 15px;
 }
 
 .glamor-1 {
-  height: 24px;
-  width: 70px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
+.glamor-2 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 12px;
+  width: 140px;
+}
+
+.glamor-5 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1222,15 +1063,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 }
 
 <div
-      className="glamor-0 glamor-9"
+      className="glamor-4"
       style={Object {}}
     >
-      .glamor-9 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  margin-top: -10px;
+      .glamor-4 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1250,88 +1086,77 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -10px;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.glamor-3 {
-  margin-top: 10px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 10px;
-  margin-left: 0px;
-}
-
-.glamor-5 {
-  height: 12px;
-  width: 140px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 140px;
-}
-
-.glamor-11 {
-  padding: 15px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 15px;
 }
 
 .glamor-1 {
-  height: 24px;
-  width: 70px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
+.glamor-2 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 12px;
+  width: 140px;
+}
+
+.glamor-5 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1355,15 +1180,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 }
 
 <div
-        className="glamor-0 glamor-3"
+        className="glamor-1"
         style={Object {}}
       >
-        .glamor-9 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  margin-top: -10px;
+        .glamor-4 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1383,88 +1203,77 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -10px;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.glamor-3 {
-  margin-top: 10px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 10px;
-  margin-left: 0px;
-}
-
-.glamor-5 {
-  height: 12px;
-  width: 140px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 140px;
-}
-
-.glamor-11 {
-  padding: 15px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 15px;
 }
 
 .glamor-1 {
-  height: 24px;
-  width: 70px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
+.glamor-2 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 12px;
+  width: 140px;
+}
+
+.glamor-5 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1488,15 +1297,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 }
 
 <div
-          className="paper glamor-0 glamor-11"
+          className="paper glamor-5"
           style={Object {}}
         >
-          .glamor-9 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  margin-top: -10px;
+          .glamor-4 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1516,65 +1320,55 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -10px;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.glamor-3 {
-  margin-top: 10px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 10px;
-  margin-left: 0px;
-}
-
-.glamor-5 {
-  height: 12px;
-  width: 140px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 140px;
 }
 
 .glamor-1 {
-  height: 24px;
-  width: 70px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
+.glamor-2 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 12px;
+  width: 140px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1598,12 +1392,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 }
 
 <div
-            className="glamor-0 glamor-9"
+            className="glamor-4"
             style={Object {}}
           >
-            .glamor-3 {
-  margin-top: 10px;
-  margin-left: 0px;
+            .glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1626,9 +1418,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   margin-left: 0px;
 }
 
-.glamor-1 {
-  height: 24px;
-  width: 70px;
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1652,12 +1442,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 }
 
 <div
-              className="glamor-0 glamor-3"
+              className="glamor-1"
               style={Object {}}
             >
-              .glamor-1 {
-  height: 24px;
-  width: 70px;
+              .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1681,13 +1469,11 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 }
 
 <div
-                className="shape glamor-0 glamor-1"
+                className="shape glamor-0"
                 style={Object {}}
               />
             </div>
-            .glamor-3 {
-  margin-top: 10px;
-  margin-left: 0px;
+            .glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1710,9 +1496,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   margin-left: 0px;
 }
 
-.glamor-1 {
-  height: 12px;
-  width: 140px;
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1736,12 +1520,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 }
 
 <div
-              className="glamor-0 glamor-3"
+              className="glamor-1"
               style={Object {}}
             >
-              .glamor-1 {
-  height: 12px;
-  width: 140px;
+              .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1765,7 +1547,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 }
 
 <div
-                className="shape glamor-0 glamor-1"
+                className="shape glamor-0"
                 style={Object {}}
               />
             </div>
@@ -1778,34 +1560,30 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 `;
 
 exports[`components/skeleton SkeletonGrid should render shallow component ok 2`] = `
-.glamor-3 {
-  height: 36px;
-  width: 36px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 36px;
-  width: 36px;
-}
-
 .glamor-1 {
-  height: 12px;
-  width: 70px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 36px;
+  width: 36px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1828,7 +1606,8 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 70px;
 }
 
-.glamor-81 {
+.glamor-40 {
+  position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1836,15 +1615,6 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: -25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -1856,18 +1626,9 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-left: -25px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
-.glamor-9 {
-  margin-top: 0px;
-  margin-left: 25px;
+.glamor-4 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1890,135 +1651,105 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   margin-left: 25px;
 }
 
-.glamor-35 {
+.glamor-17 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   height: 12px;
   width: 140px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 140px;
-}
-
-.glamor-43 {
-  margin-top: 0px;
-  margin-left: 25px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0px;
-  margin-left: 25px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.glamor-23 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.glamor-5 {
-  margin: 0px auto;
-  width: 1100px;
-  height: 80px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0px auto;
-  width: 1100px;
-  height: 80px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .glamor-21 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  margin-left: 25px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.glamor-11 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.glamor-2 {
+  position: relative;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0px auto;
   width: 1100px;
+  height: 80px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.glamor-10 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2041,7 +1772,8 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 1100px;
 }
 
-.glamor-19 {
+.glamor-9 {
+  position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2049,16 +1781,6 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: -25px;
-  height: 46px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -2070,44 +1792,33 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-left: -25px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   height: 46px;
-}
-
-.glamor-83 {
-  margin: 50px auto;
-  width: 1100px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 50px auto;
-  width: 1100px;
 }
 
 .glamor-41 {
-  padding-top: 75px;
-  padding-bottom: 150px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px auto;
+  width: 1100px;
+}
+
+.glamor-20 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2130,20 +1841,15 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   padding-bottom: 150px;
 }
 
-.glamor-39 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: -25px;
+.glamor-19 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -2155,15 +1861,9 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -25px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
-.glamor-29 {
-  margin-top: 25px;
-  margin-left: 0px;
+.glamor-14 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2186,9 +1886,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   margin-left: 0px;
 }
 
-.glamor-27 {
-  height: 80px;
-  width: 80px;
+.glamor-13 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2212,9 +1910,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div>
-  .glamor-3 {
-  height: 36px;
-  width: 36px;
+  .glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2237,9 +1933,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 36px;
 }
 
-.glamor-1 {
-  height: 12px;
-  width: 70px;
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2260,62 +1954,105 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: flex;
   height: 12px;
   width: 70px;
+}
+
+.glamor-4 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  margin-left: 25px;
+}
+
+.glamor-11 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.glamor-2 {
+  position: relative;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px auto;
+  width: 1100px;
+  height: 80px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.glamor-10 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px auto;
+  width: 1100px;
 }
 
 .glamor-9 {
-  margin-top: 0px;
-  margin-left: 25px;
   position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0px;
-  margin-left: 25px;
-}
-
-.glamor-23 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.glamor-5 {
-  margin: 0px auto;
-  width: 1100px;
-  height: 80px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2323,83 +2060,6 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0px auto;
-  width: 1100px;
-  height: 80px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-21 {
-  margin: 0px auto;
-  width: 1100px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0px auto;
-  width: 1100px;
-}
-
-.glamor-19 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: -25px;
-  height: 46px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -2411,23 +2071,14 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-left: -25px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   height: 46px;
 }
 
 <div
-    className="header glamor-0 glamor-23"
+    className="header glamor-11"
     style={Object {}}
   >
-    .glamor-3 {
-  height: 36px;
-  width: 36px;
+    .glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2450,9 +2101,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 36px;
 }
 
-.glamor-1 {
-  height: 12px;
-  width: 70px;
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2475,14 +2124,8 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 70px;
 }
 
-.glamor-5 {
-  margin: 0px auto;
-  width: 1100px;
-  height: 80px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+.glamor-2 {
+  position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2490,14 +2133,6 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -2515,22 +2150,13 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 <div
-      className="glamor-0 glamor-5"
+      className="glamor-2"
       style={Object {}}
     >
-      .glamor-1 {
-  height: 12px;
-  width: 70px;
+      .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2554,12 +2180,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-        className="shape glamor-0 glamor-1"
+        className="shape glamor-0"
         style={Object {}}
       />
-      .glamor-1 {
-  height: 36px;
-  width: 36px;
+      .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2583,13 +2207,11 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-        className="shape glamor-0 glamor-1"
+        className="shape glamor-0"
         style={Object {}}
       />
     </div>
-    .glamor-1 {
-  height: 12px;
-  width: 70px;
+    .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2612,9 +2234,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 70px;
 }
 
-.glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
+.glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2637,7 +2257,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   margin-left: 25px;
 }
 
-.glamor-17 {
+.glamor-8 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2658,9 +2278,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: flex;
 }
 
-.glamor-15 {
-  margin: 0px auto;
-  width: 1100px;
+.glamor-7 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2683,7 +2301,8 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 1100px;
 }
 
-.glamor-13 {
+.glamor-6 {
+  position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2691,16 +2310,6 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: -25px;
-  height: 46px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -2712,23 +2321,14 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-left: -25px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   height: 46px;
 }
 
 <div
-      className="toolbar glamor-0 glamor-17"
+      className="toolbar glamor-8"
       style={Object {}}
     >
-      .glamor-1 {
-  height: 12px;
-  width: 70px;
+      .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2751,9 +2351,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 70px;
 }
 
-.glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
+.glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2776,9 +2374,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   margin-left: 25px;
 }
 
-.glamor-15 {
-  margin: 0px auto;
-  width: 1100px;
+.glamor-7 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2801,7 +2397,8 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 1100px;
 }
 
-.glamor-13 {
+.glamor-6 {
+  position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2809,16 +2406,6 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: -25px;
-  height: 46px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -2830,23 +2417,14 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-left: -25px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   height: 46px;
 }
 
 <div
-        className="glamor-0 glamor-15"
+        className="glamor-7"
         style={Object {}}
       >
-        .glamor-1 {
-  height: 12px;
-  width: 70px;
+        .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2869,9 +2447,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 70px;
 }
 
-.glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
+.glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2894,7 +2470,8 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   margin-left: 25px;
 }
 
-.glamor-13 {
+.glamor-6 {
+  position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2902,16 +2479,6 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: -25px;
-  height: 46px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -2923,23 +2490,14 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-left: -25px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   height: 46px;
 }
 
 <div
-          className="glamor-0 glamor-13"
+          className="glamor-6"
           style={Object {}}
         >
-          .glamor-1 {
-  height: 12px;
-  width: 70px;
+          .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2962,9 +2520,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 70px;
 }
 
-.glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
+.glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -2988,12 +2544,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-            className="glamor-0 glamor-3"
+            className="glamor-1"
             style={Object {}}
           >
-            .glamor-1 {
-  height: 12px;
-  width: 70px;
+            .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3017,13 +2571,11 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-              className="shape glamor-0 glamor-1"
+              className="shape glamor-0"
               style={Object {}}
             />
           </div>
-          .glamor-1 {
-  height: 12px;
-  width: 70px;
+          .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3046,9 +2598,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 70px;
 }
 
-.glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
+.glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3072,12 +2622,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-            className="glamor-0 glamor-3"
+            className="glamor-1"
             style={Object {}}
           >
-            .glamor-1 {
-  height: 12px;
-  width: 70px;
+            .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3101,13 +2649,11 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-              className="shape glamor-0 glamor-1"
+              className="shape glamor-0"
               style={Object {}}
             />
           </div>
-          .glamor-1 {
-  height: 12px;
-  width: 70px;
+          .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3130,9 +2676,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 70px;
 }
 
-.glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
+.glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3156,12 +2700,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-            className="glamor-0 glamor-3"
+            className="glamor-1"
             style={Object {}}
           >
-            .glamor-1 {
-  height: 12px;
-  width: 70px;
+            .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3185,7 +2727,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-              className="shape glamor-0 glamor-1"
+              className="shape glamor-0"
               style={Object {}}
             />
           </div>
@@ -3193,9 +2735,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
       </div>
     </div>
   </div>
-  .glamor-5 {
-  height: 12px;
-  width: 70px;
+  .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3218,7 +2758,8 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 70px;
 }
 
-.glamor-55 {
+.glamor-27 {
+  position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3226,15 +2767,6 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: -25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -3246,18 +2778,9 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-left: -25px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
-.glamor-9 {
-  height: 12px;
-  width: 140px;
+.glamor-4 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3280,12 +2803,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 140px;
 }
 
-.glamor-17 {
-  margin-top: 0px;
-  margin-left: 25px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+.glamor-8 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3311,7 +2829,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   flex: 1;
 }
 
-.glamor-59 {
+.glamor-29 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3332,9 +2850,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: flex;
 }
 
-.glamor-57 {
-  margin: 50px auto;
-  width: 1100px;
+.glamor-28 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3357,9 +2873,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 1100px;
 }
 
-.glamor-15 {
-  padding-top: 75px;
-  padding-bottom: 150px;
+.glamor-7 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3382,20 +2896,15 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   padding-bottom: 150px;
 }
 
-.glamor-13 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: -25px;
+.glamor-6 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -3407,40 +2916,32 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -25px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 25px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 25px;
-  margin-left: 0px;
 }
 
 .glamor-1 {
-  height: 80px;
-  width: 80px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+  margin-left: 0px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3464,12 +2965,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-    className="glamor-0 glamor-59"
+    className="glamor-29"
     style={Object {}}
   >
-    .glamor-5 {
-  height: 12px;
-  width: 70px;
+    .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3492,7 +2991,8 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 70px;
 }
 
-.glamor-55 {
+.glamor-27 {
+  position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3500,15 +3000,6 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: -25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -3520,18 +3011,9 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-left: -25px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
-.glamor-9 {
-  height: 12px;
-  width: 140px;
+.glamor-4 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3554,12 +3036,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 140px;
 }
 
-.glamor-17 {
-  margin-top: 0px;
-  margin-left: 25px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+.glamor-8 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3585,9 +3062,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   flex: 1;
 }
 
-.glamor-57 {
-  margin: 50px auto;
-  width: 1100px;
+.glamor-28 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3610,9 +3085,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 1100px;
 }
 
-.glamor-15 {
-  padding-top: 75px;
-  padding-bottom: 150px;
+.glamor-7 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3635,20 +3108,15 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   padding-bottom: 150px;
 }
 
-.glamor-13 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: -25px;
+.glamor-6 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -3660,40 +3128,32 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -25px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 25px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 25px;
-  margin-left: 0px;
 }
 
 .glamor-1 {
-  height: 80px;
-  width: 80px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+  margin-left: 0px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3717,12 +3177,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-      className="glamor-0 glamor-57"
+      className="glamor-28"
       style={Object {}}
     >
-      .glamor-5 {
-  height: 12px;
-  width: 70px;
+      .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3745,7 +3203,8 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 70px;
 }
 
-.glamor-55 {
+.glamor-27 {
+  position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3753,15 +3212,6 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: -25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -3773,18 +3223,9 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-left: -25px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
-.glamor-9 {
-  height: 12px;
-  width: 140px;
+.glamor-4 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3807,12 +3248,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 140px;
 }
 
-.glamor-17 {
-  margin-top: 0px;
-  margin-left: 25px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+.glamor-8 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3838,9 +3274,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   flex: 1;
 }
 
-.glamor-15 {
-  padding-top: 75px;
-  padding-bottom: 150px;
+.glamor-7 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3863,20 +3297,15 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   padding-bottom: 150px;
 }
 
-.glamor-13 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: -25px;
+.glamor-6 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -3888,40 +3317,32 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -25px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 25px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 25px;
-  margin-left: 0px;
 }
 
 .glamor-1 {
-  height: 80px;
-  width: 80px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+  margin-left: 0px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3945,12 +3366,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-        className="glamor-0 glamor-55"
+        className="glamor-27"
         style={Object {}}
       >
-        .glamor-5 {
-  height: 12px;
-  width: 70px;
+        .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3973,9 +3392,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 70px;
 }
 
-.glamor-9 {
-  height: 12px;
-  width: 140px;
+.glamor-4 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -3998,12 +3415,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 140px;
 }
 
-.glamor-17 {
-  margin-top: 0px;
-  margin-left: 25px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+.glamor-8 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4029,9 +3441,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   flex: 1;
 }
 
-.glamor-15 {
-  padding-top: 75px;
-  padding-bottom: 150px;
+.glamor-7 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4054,20 +3464,15 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   padding-bottom: 150px;
 }
 
-.glamor-13 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: -25px;
+.glamor-6 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -4079,40 +3484,32 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -25px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 25px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 25px;
-  margin-left: 0px;
 }
 
 .glamor-1 {
-  height: 80px;
-  width: 80px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+  margin-left: 0px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4136,12 +3533,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-          className="glamor-0 glamor-17"
+          className="glamor-8"
           style={Object {}}
         >
-          .glamor-5 {
-  height: 12px;
-  width: 70px;
+          .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4164,9 +3559,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 70px;
 }
 
-.glamor-9 {
-  height: 12px;
-  width: 140px;
+.glamor-4 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4189,9 +3582,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 140px;
 }
 
-.glamor-15 {
-  padding-top: 75px;
-  padding-bottom: 150px;
+.glamor-7 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4214,20 +3605,15 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   padding-bottom: 150px;
 }
 
-.glamor-13 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: -25px;
+.glamor-6 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -4239,40 +3625,32 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -25px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 25px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 25px;
-  margin-left: 0px;
 }
 
 .glamor-1 {
-  height: 80px;
-  width: 80px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+  margin-left: 0px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4296,12 +3674,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-            className="paper glamor-0 glamor-15"
+            className="paper glamor-7"
             style={Object {}}
           >
-            .glamor-5 {
-  height: 12px;
-  width: 70px;
+            .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4324,9 +3700,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 70px;
 }
 
-.glamor-9 {
-  height: 12px;
-  width: 140px;
+.glamor-4 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4349,20 +3723,15 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 140px;
 }
 
-.glamor-13 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: -25px;
+.glamor-6 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -4374,40 +3743,32 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -25px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 25px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 25px;
-  margin-left: 0px;
 }
 
 .glamor-1 {
-  height: 80px;
-  width: 80px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+  margin-left: 0px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4431,12 +3792,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-              className="glamor-0 glamor-13"
+              className="glamor-6"
               style={Object {}}
             >
-              .glamor-3 {
-  margin-top: 25px;
-  margin-left: 0px;
+              .glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4457,11 +3816,87 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: flex;
   margin-top: 25px;
   margin-left: 0px;
+}
+
+.glamor-0 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  width: 80px;
+}
+
+<div
+                className="glamor-1"
+                style={Object {}}
+              >
+                .glamor-0 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  width: 80px;
+}
+
+<div
+                  className="circle shape glamor-0"
+                  style={Object {}}
+                />
+              </div>
+              .glamor-0 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 12px;
+  width: 70px;
 }
 
 .glamor-1 {
-  height: 80px;
-  width: 80px;
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4480,17 +3915,15 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 80px;
-  width: 80px;
+  margin-top: 25px;
+  margin-left: 0px;
 }
 
 <div
-                className="glamor-0 glamor-3"
+                className="glamor-1"
                 style={Object {}}
               >
-                .glamor-1 {
-  height: 80px;
-  width: 80px;
+                .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4509,18 +3942,16 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 80px;
-  width: 80px;
+  height: 12px;
+  width: 70px;
 }
 
 <div
-                  className="circle shape glamor-0 glamor-1"
+                  className="shape glamor-0"
                   style={Object {}}
                 />
               </div>
-              .glamor-1 {
-  height: 12px;
-  width: 70px;
+              .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4540,12 +3971,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   height: 12px;
-  width: 70px;
+  width: 140px;
 }
 
-.glamor-3 {
-  margin-top: 25px;
-  margin-left: 0px;
+.glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4569,96 +3998,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-                className="glamor-0 glamor-3"
+                className="glamor-1"
                 style={Object {}}
               >
-                .glamor-1 {
-  height: 12px;
-  width: 70px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 70px;
-}
-
-<div
-                  className="shape glamor-0 glamor-1"
-                  style={Object {}}
-                />
-              </div>
-              .glamor-1 {
-  height: 12px;
-  width: 140px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 140px;
-}
-
-.glamor-3 {
-  margin-top: 25px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 25px;
-  margin-left: 0px;
-}
-
-<div
-                className="glamor-0 glamor-3"
-                style={Object {}}
-              >
-                .glamor-1 {
-  height: 12px;
-  width: 140px;
+                .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4682,16 +4025,14 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-                  className="shape glamor-0 glamor-1"
+                  className="shape glamor-0"
                   style={Object {}}
                 />
               </div>
             </div>
           </div>
         </div>
-        .glamor-5 {
-  height: 12px;
-  width: 70px;
+        .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4714,9 +4055,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 70px;
 }
 
-.glamor-9 {
-  height: 12px;
-  width: 140px;
+.glamor-4 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4739,12 +4078,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 140px;
 }
 
-.glamor-17 {
-  margin-top: 0px;
-  margin-left: 25px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+.glamor-8 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4770,9 +4104,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   flex: 1;
 }
 
-.glamor-15 {
-  padding-top: 75px;
-  padding-bottom: 150px;
+.glamor-7 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4795,20 +4127,15 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   padding-bottom: 150px;
 }
 
-.glamor-13 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: -25px;
+.glamor-6 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -4820,40 +4147,32 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -25px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 25px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 25px;
-  margin-left: 0px;
 }
 
 .glamor-1 {
-  height: 80px;
-  width: 80px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+  margin-left: 0px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4877,12 +4196,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-          className="glamor-0 glamor-17"
+          className="glamor-8"
           style={Object {}}
         >
-          .glamor-5 {
-  height: 12px;
-  width: 70px;
+          .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4905,9 +4222,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 70px;
 }
 
-.glamor-9 {
-  height: 12px;
-  width: 140px;
+.glamor-4 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4930,9 +4245,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 140px;
 }
 
-.glamor-15 {
-  padding-top: 75px;
-  padding-bottom: 150px;
+.glamor-7 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -4955,20 +4268,15 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   padding-bottom: 150px;
 }
 
-.glamor-13 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: -25px;
+.glamor-6 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -4980,40 +4288,32 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -25px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 25px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 25px;
-  margin-left: 0px;
 }
 
 .glamor-1 {
-  height: 80px;
-  width: 80px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+  margin-left: 0px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5037,12 +4337,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-            className="paper glamor-0 glamor-15"
+            className="paper glamor-7"
             style={Object {}}
           >
-            .glamor-5 {
-  height: 12px;
-  width: 70px;
+            .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5065,9 +4363,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 70px;
 }
 
-.glamor-9 {
-  height: 12px;
-  width: 140px;
+.glamor-4 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5090,20 +4386,15 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 140px;
 }
 
-.glamor-13 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: -25px;
+.glamor-6 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -5115,40 +4406,32 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -25px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 25px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 25px;
-  margin-left: 0px;
 }
 
 .glamor-1 {
-  height: 80px;
-  width: 80px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+  margin-left: 0px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5172,12 +4455,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-              className="glamor-0 glamor-13"
+              className="glamor-6"
               style={Object {}}
             >
-              .glamor-3 {
-  margin-top: 25px;
-  margin-left: 0px;
+              .glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5198,11 +4479,87 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: flex;
   margin-top: 25px;
   margin-left: 0px;
+}
+
+.glamor-0 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  width: 80px;
+}
+
+<div
+                className="glamor-1"
+                style={Object {}}
+              >
+                .glamor-0 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  width: 80px;
+}
+
+<div
+                  className="circle shape glamor-0"
+                  style={Object {}}
+                />
+              </div>
+              .glamor-0 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 12px;
+  width: 70px;
 }
 
 .glamor-1 {
-  height: 80px;
-  width: 80px;
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5221,17 +4578,15 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 80px;
-  width: 80px;
+  margin-top: 25px;
+  margin-left: 0px;
 }
 
 <div
-                className="glamor-0 glamor-3"
+                className="glamor-1"
                 style={Object {}}
               >
-                .glamor-1 {
-  height: 80px;
-  width: 80px;
+                .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5250,18 +4605,16 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 80px;
-  width: 80px;
+  height: 12px;
+  width: 70px;
 }
 
 <div
-                  className="circle shape glamor-0 glamor-1"
+                  className="shape glamor-0"
                   style={Object {}}
                 />
               </div>
-              .glamor-1 {
-  height: 12px;
-  width: 70px;
+              .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5281,12 +4634,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   height: 12px;
-  width: 70px;
+  width: 140px;
 }
 
-.glamor-3 {
-  margin-top: 25px;
-  margin-left: 0px;
+.glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5310,96 +4661,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-                className="glamor-0 glamor-3"
+                className="glamor-1"
                 style={Object {}}
               >
-                .glamor-1 {
-  height: 12px;
-  width: 70px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 70px;
-}
-
-<div
-                  className="shape glamor-0 glamor-1"
-                  style={Object {}}
-                />
-              </div>
-              .glamor-1 {
-  height: 12px;
-  width: 140px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 140px;
-}
-
-.glamor-3 {
-  margin-top: 25px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 25px;
-  margin-left: 0px;
-}
-
-<div
-                className="glamor-0 glamor-3"
-                style={Object {}}
-              >
-                .glamor-1 {
-  height: 12px;
-  width: 140px;
+                .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5423,16 +4688,14 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-                  className="shape glamor-0 glamor-1"
+                  className="shape glamor-0"
                   style={Object {}}
                 />
               </div>
             </div>
           </div>
         </div>
-        .glamor-5 {
-  height: 12px;
-  width: 70px;
+        .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5455,9 +4718,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 70px;
 }
 
-.glamor-9 {
-  height: 12px;
-  width: 140px;
+.glamor-4 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5480,12 +4741,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 140px;
 }
 
-.glamor-17 {
-  margin-top: 0px;
-  margin-left: 25px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+.glamor-8 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5511,9 +4767,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   flex: 1;
 }
 
-.glamor-15 {
-  padding-top: 75px;
-  padding-bottom: 150px;
+.glamor-7 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5536,20 +4790,15 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   padding-bottom: 150px;
 }
 
-.glamor-13 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: -25px;
+.glamor-6 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -5561,40 +4810,32 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -25px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 25px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 25px;
-  margin-left: 0px;
 }
 
 .glamor-1 {
-  height: 80px;
-  width: 80px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+  margin-left: 0px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5618,12 +4859,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-          className="glamor-0 glamor-17"
+          className="glamor-8"
           style={Object {}}
         >
-          .glamor-5 {
-  height: 12px;
-  width: 70px;
+          .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5646,9 +4885,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 70px;
 }
 
-.glamor-9 {
-  height: 12px;
-  width: 140px;
+.glamor-4 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5671,9 +4908,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 140px;
 }
 
-.glamor-15 {
-  padding-top: 75px;
-  padding-bottom: 150px;
+.glamor-7 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5696,20 +4931,15 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   padding-bottom: 150px;
 }
 
-.glamor-13 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: -25px;
+.glamor-6 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -5721,40 +4951,32 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -25px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 25px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 25px;
-  margin-left: 0px;
 }
 
 .glamor-1 {
-  height: 80px;
-  width: 80px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+  margin-left: 0px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5778,12 +5000,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-            className="paper glamor-0 glamor-15"
+            className="paper glamor-7"
             style={Object {}}
           >
-            .glamor-5 {
-  height: 12px;
-  width: 70px;
+            .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5806,9 +5026,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 70px;
 }
 
-.glamor-9 {
-  height: 12px;
-  width: 140px;
+.glamor-4 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5831,20 +5049,15 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 140px;
 }
 
-.glamor-13 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: -25px;
+.glamor-6 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -5856,40 +5069,32 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   margin-top: -25px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 25px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 25px;
-  margin-left: 0px;
 }
 
 .glamor-1 {
-  height: 80px;
-  width: 80px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+  margin-left: 0px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5913,12 +5118,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-              className="glamor-0 glamor-13"
+              className="glamor-6"
               style={Object {}}
             >
-              .glamor-3 {
-  margin-top: 25px;
-  margin-left: 0px;
+              .glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5939,11 +5142,87 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: flex;
   margin-top: 25px;
   margin-left: 0px;
+}
+
+.glamor-0 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  width: 80px;
+}
+
+<div
+                className="glamor-1"
+                style={Object {}}
+              >
+                .glamor-0 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  width: 80px;
+}
+
+<div
+                  className="circle shape glamor-0"
+                  style={Object {}}
+                />
+              </div>
+              .glamor-0 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 12px;
+  width: 70px;
 }
 
 .glamor-1 {
-  height: 80px;
-  width: 80px;
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5962,17 +5241,15 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 80px;
-  width: 80px;
+  margin-top: 25px;
+  margin-left: 0px;
 }
 
 <div
-                className="glamor-0 glamor-3"
+                className="glamor-1"
                 style={Object {}}
               >
-                .glamor-1 {
-  height: 80px;
-  width: 80px;
+                .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -5991,18 +5268,16 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 80px;
-  width: 80px;
+  height: 12px;
+  width: 70px;
 }
 
 <div
-                  className="circle shape glamor-0 glamor-1"
+                  className="shape glamor-0"
                   style={Object {}}
                 />
               </div>
-              .glamor-1 {
-  height: 12px;
-  width: 70px;
+              .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6022,12 +5297,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   height: 12px;
-  width: 70px;
+  width: 140px;
 }
 
-.glamor-3 {
-  margin-top: 25px;
-  margin-left: 0px;
+.glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6051,96 +5324,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-                className="glamor-0 glamor-3"
+                className="glamor-1"
                 style={Object {}}
               >
-                .glamor-1 {
-  height: 12px;
-  width: 70px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 70px;
-}
-
-<div
-                  className="shape glamor-0 glamor-1"
-                  style={Object {}}
-                />
-              </div>
-              .glamor-1 {
-  height: 12px;
-  width: 140px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 140px;
-}
-
-.glamor-3 {
-  margin-top: 25px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 25px;
-  margin-left: 0px;
-}
-
-<div
-                className="glamor-0 glamor-3"
-                style={Object {}}
-              >
-                .glamor-1 {
-  height: 12px;
-  width: 140px;
+                .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6164,7 +5351,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 <div
-                  className="shape glamor-0 glamor-1"
+                  className="shape glamor-0"
                   style={Object {}}
                 />
               </div>
@@ -6178,89 +5365,75 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 `;
 
 exports[`components/skeleton SkeletonList should render shallow component ok 1`] = `
+.glamor-2 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 12px;
+  width: 70px;
+}
+
+.glamor-21 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -10px;
+}
+
+.glamor-6 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
 .glamor-5 {
-  height: 12px;
-  width: 70px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 70px;
-}
-
-.glamor-43 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  margin-top: -10px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: -10px;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.glamor-13 {
-  margin-top: 10px;
-  margin-left: 0px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 10px;
-  margin-left: 0px;
-}
-
-.glamor-11 {
-  padding: 25px;
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6282,7 +5455,8 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   padding: 25px;
 }
 
-.glamor-9 {
+.glamor-4 {
+  position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6290,15 +5464,6 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: -25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -6310,43 +5475,32 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   display: -ms-flexbox;
   display: flex;
   margin-left: -25px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0px;
-  margin-left: 25px;
 }
 
 .glamor-1 {
-  height: 12px;
-  width: 140px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  margin-left: 25px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6370,12 +5524,10 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-  className="glamor-0 glamor-43"
+  className="glamor-21"
   style={Object {}}
 >
-  .glamor-5 {
-  height: 12px;
-  width: 70px;
+  .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6398,9 +5550,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   width: 70px;
 }
 
-.glamor-13 {
-  margin-top: 10px;
-  margin-left: 0px;
+.glamor-6 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6423,8 +5573,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   margin-left: 0px;
 }
 
-.glamor-11 {
-  padding: 25px;
+.glamor-5 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6446,7 +5595,8 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   padding: 25px;
 }
 
-.glamor-9 {
+.glamor-4 {
+  position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6454,15 +5604,6 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: -25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -6474,43 +5615,32 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   display: -ms-flexbox;
   display: flex;
   margin-left: -25px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0px;
-  margin-left: 25px;
 }
 
 .glamor-1 {
-  height: 12px;
-  width: 140px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  margin-left: 25px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6534,12 +5664,10 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-    className="glamor-0 glamor-13"
+    className="glamor-6"
     style={Object {}}
   >
-    .glamor-5 {
-  height: 12px;
-  width: 70px;
+    .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6562,8 +5690,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   width: 70px;
 }
 
-.glamor-11 {
-  padding: 25px;
+.glamor-5 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6585,7 +5712,8 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   padding: 25px;
 }
 
-.glamor-9 {
+.glamor-4 {
+  position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6593,15 +5721,6 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: -25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -6613,43 +5732,32 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   display: -ms-flexbox;
   display: flex;
   margin-left: -25px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0px;
-  margin-left: 25px;
 }
 
 .glamor-1 {
-  height: 12px;
-  width: 140px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  margin-left: 25px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6673,12 +5781,10 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-      className="paper glamor-0 glamor-11"
+      className="paper glamor-5"
       style={Object {}}
     >
-      .glamor-5 {
-  height: 12px;
-  width: 70px;
+      .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6701,7 +5807,8 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   width: 70px;
 }
 
-.glamor-9 {
+.glamor-4 {
+  position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6709,15 +5816,6 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: -25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -6729,43 +5827,32 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   display: -ms-flexbox;
   display: flex;
   margin-left: -25px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0px;
-  margin-left: 25px;
 }
 
 .glamor-1 {
-  height: 12px;
-  width: 140px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  margin-left: 25px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6789,12 +5876,10 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-        className="glamor-0 glamor-9"
+        className="glamor-4"
         style={Object {}}
       >
-        .glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
+        .glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6817,9 +5902,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   margin-left: 25px;
 }
 
-.glamor-1 {
-  height: 12px;
-  width: 140px;
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6843,12 +5926,10 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-          className="glamor-0 glamor-3"
+          className="glamor-1"
           style={Object {}}
         >
-          .glamor-1 {
-  height: 12px;
-  width: 140px;
+          .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6872,13 +5953,11 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-            className="shape glamor-0 glamor-1"
+            className="shape glamor-0"
             style={Object {}}
           />
         </div>
-        .glamor-1 {
-  height: 12px;
-  width: 70px;
+        .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6901,9 +5980,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   width: 70px;
 }
 
-.glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
+.glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6927,12 +6004,10 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-          className="glamor-0 glamor-3"
+          className="glamor-1"
           style={Object {}}
         >
-          .glamor-1 {
-  height: 12px;
-  width: 70px;
+          .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6956,16 +6031,14 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-            className="shape glamor-0 glamor-1"
+            className="shape glamor-0"
             style={Object {}}
           />
         </div>
       </div>
     </div>
   </div>
-  .glamor-5 {
-  height: 12px;
-  width: 70px;
+  .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -6988,9 +6061,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   width: 70px;
 }
 
-.glamor-13 {
-  margin-top: 10px;
-  margin-left: 0px;
+.glamor-6 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7013,8 +6084,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   margin-left: 0px;
 }
 
-.glamor-11 {
-  padding: 25px;
+.glamor-5 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7036,7 +6106,8 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   padding: 25px;
 }
 
-.glamor-9 {
+.glamor-4 {
+  position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7044,15 +6115,6 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: -25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -7064,43 +6126,32 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   display: -ms-flexbox;
   display: flex;
   margin-left: -25px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0px;
-  margin-left: 25px;
 }
 
 .glamor-1 {
-  height: 12px;
-  width: 140px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  margin-left: 25px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7124,12 +6175,10 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-    className="glamor-0 glamor-13"
+    className="glamor-6"
     style={Object {}}
   >
-    .glamor-5 {
-  height: 12px;
-  width: 70px;
+    .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7152,8 +6201,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   width: 70px;
 }
 
-.glamor-11 {
-  padding: 25px;
+.glamor-5 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7175,7 +6223,8 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   padding: 25px;
 }
 
-.glamor-9 {
+.glamor-4 {
+  position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7183,15 +6232,6 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: -25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -7203,43 +6243,32 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   display: -ms-flexbox;
   display: flex;
   margin-left: -25px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0px;
-  margin-left: 25px;
 }
 
 .glamor-1 {
-  height: 12px;
-  width: 140px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  margin-left: 25px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7263,12 +6292,10 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-      className="paper glamor-0 glamor-11"
+      className="paper glamor-5"
       style={Object {}}
     >
-      .glamor-5 {
-  height: 12px;
-  width: 70px;
+      .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7291,7 +6318,8 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   width: 70px;
 }
 
-.glamor-9 {
+.glamor-4 {
+  position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7299,15 +6327,6 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: -25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -7319,43 +6338,32 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   display: -ms-flexbox;
   display: flex;
   margin-left: -25px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0px;
-  margin-left: 25px;
 }
 
 .glamor-1 {
-  height: 12px;
-  width: 140px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  margin-left: 25px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7379,12 +6387,10 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-        className="glamor-0 glamor-9"
+        className="glamor-4"
         style={Object {}}
       >
-        .glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
+        .glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7407,9 +6413,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   margin-left: 25px;
 }
 
-.glamor-1 {
-  height: 12px;
-  width: 140px;
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7433,12 +6437,10 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-          className="glamor-0 glamor-3"
+          className="glamor-1"
           style={Object {}}
         >
-          .glamor-1 {
-  height: 12px;
-  width: 140px;
+          .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7462,13 +6464,11 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-            className="shape glamor-0 glamor-1"
+            className="shape glamor-0"
             style={Object {}}
           />
         </div>
-        .glamor-1 {
-  height: 12px;
-  width: 70px;
+        .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7491,9 +6491,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   width: 70px;
 }
 
-.glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
+.glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7517,12 +6515,10 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-          className="glamor-0 glamor-3"
+          className="glamor-1"
           style={Object {}}
         >
-          .glamor-1 {
-  height: 12px;
-  width: 70px;
+          .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7546,16 +6542,14 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-            className="shape glamor-0 glamor-1"
+            className="shape glamor-0"
             style={Object {}}
           />
         </div>
       </div>
     </div>
   </div>
-  .glamor-5 {
-  height: 12px;
-  width: 70px;
+  .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7578,9 +6572,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   width: 70px;
 }
 
-.glamor-13 {
-  margin-top: 10px;
-  margin-left: 0px;
+.glamor-6 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7603,8 +6595,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   margin-left: 0px;
 }
 
-.glamor-11 {
-  padding: 25px;
+.glamor-5 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7626,7 +6617,8 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   padding: 25px;
 }
 
-.glamor-9 {
+.glamor-4 {
+  position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7634,15 +6626,6 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: -25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -7654,43 +6637,32 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   display: -ms-flexbox;
   display: flex;
   margin-left: -25px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0px;
-  margin-left: 25px;
 }
 
 .glamor-1 {
-  height: 12px;
-  width: 140px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  margin-left: 25px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7714,12 +6686,10 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-    className="glamor-0 glamor-13"
+    className="glamor-6"
     style={Object {}}
   >
-    .glamor-5 {
-  height: 12px;
-  width: 70px;
+    .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7742,8 +6712,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   width: 70px;
 }
 
-.glamor-11 {
-  padding: 25px;
+.glamor-5 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7765,7 +6734,8 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   padding: 25px;
 }
 
-.glamor-9 {
+.glamor-4 {
+  position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7773,15 +6743,6 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: -25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -7793,43 +6754,32 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   display: -ms-flexbox;
   display: flex;
   margin-left: -25px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0px;
-  margin-left: 25px;
 }
 
 .glamor-1 {
-  height: 12px;
-  width: 140px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  margin-left: 25px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7853,12 +6803,10 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-      className="paper glamor-0 glamor-11"
+      className="paper glamor-5"
       style={Object {}}
     >
-      .glamor-5 {
-  height: 12px;
-  width: 70px;
+      .glamor-2 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7881,7 +6829,8 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   width: 70px;
 }
 
-.glamor-9 {
+.glamor-4 {
+  position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7889,15 +6838,6 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: -25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -7909,43 +6849,32 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   display: -ms-flexbox;
   display: flex;
   margin-left: -25px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0px;
-  margin-left: 25px;
 }
 
 .glamor-1 {
-  height: 12px;
-  width: 140px;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  margin-left: 25px;
+}
+
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7969,12 +6898,10 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-        className="glamor-0 glamor-9"
+        className="glamor-4"
         style={Object {}}
       >
-        .glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
+        .glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -7997,9 +6924,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   margin-left: 25px;
 }
 
-.glamor-1 {
-  height: 12px;
-  width: 140px;
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -8023,12 +6948,10 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-          className="glamor-0 glamor-3"
+          className="glamor-1"
           style={Object {}}
         >
-          .glamor-1 {
-  height: 12px;
-  width: 140px;
+          .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -8052,13 +6975,11 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-            className="shape glamor-0 glamor-1"
+            className="shape glamor-0"
             style={Object {}}
           />
         </div>
-        .glamor-1 {
-  height: 12px;
-  width: 70px;
+        .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -8081,9 +7002,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   width: 70px;
 }
 
-.glamor-3 {
-  margin-top: 0px;
-  margin-left: 25px;
+.glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -8107,12 +7026,10 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-          className="glamor-0 glamor-3"
+          className="glamor-1"
           style={Object {}}
         >
-          .glamor-1 {
-  height: 12px;
-  width: 70px;
+          .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -8136,7 +7053,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-            className="shape glamor-0 glamor-1"
+            className="shape glamor-0"
             style={Object {}}
           />
         </div>
@@ -8147,9 +7064,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 `;
 
 exports[`components/skeleton SkeletonText should render shallow component ok 1`] = `
-.glamor-1 {
-  height: 12px;
-  width: 70px;
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -8173,7 +7088,7 @@ exports[`components/skeleton SkeletonText should render shallow component ok 1`]
 }
 
 <div
-  className="shape glamor-0 glamor-1"
+  className="shape glamor-0"
   style={Object {}}
 />
 `;

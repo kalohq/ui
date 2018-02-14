@@ -2,24 +2,24 @@
 
 exports[`Input should render shallow component ok 1`] = `
 <div
-  className="css-134evea0 css-1xa3xzo"
+  className="css-nxh66u"
   style={Object {}}
 >
   <div
-    className="css-134evea0 css-1uzqqyh"
+    className="css-1y7ze3x"
     onClick={undefined}
     style={Object {}}
   >
     <div
-      className="css-134evea0 css-16j9e65"
+      className="css-jbik9l"
       style={Object {}}
     >
       <div
-        className="css-134evea0 css-1x0f447"
+        className="css-1ertpse"
         style={Object {}}
       >
         <label
-          className="css-16ef8bd0 css-uci0iz"
+          className="css-16ef8bd0 css-1hye6w1"
           color="navy600"
           htmlFor={undefined}
           onClick={undefined}
@@ -31,7 +31,7 @@ exports[`Input should render shallow component ok 1`] = `
         </label>
       </div>
       <div
-        className="css-xnmmcr1 css-1p93vdy"
+        className="css-xnmmcr1 css-5uudc2"
         style={Object {}}
       >
         <input
@@ -56,20 +56,20 @@ exports[`Input should render shallow component ok 1`] = `
     </div>
   </div>
   <div
-    className="css-134evea0 css-1uzqqyh"
+    className="css-1y7ze3x"
     onClick={undefined}
     style={Object {}}
   >
     <div
-      className="css-134evea0 css-16j9e65"
+      className="css-jbik9l"
       style={Object {}}
     >
       <div
-        className="css-134evea0 css-1x0f447"
+        className="css-1ertpse"
         style={Object {}}
       >
         <label
-          className="css-16ef8bd0 css-uci0iz"
+          className="css-16ef8bd0 css-1hye6w1"
           color="navy600"
           htmlFor={undefined}
           onClick={undefined}
@@ -81,7 +81,7 @@ exports[`Input should render shallow component ok 1`] = `
         </label>
       </div>
       <div
-        className="css-xnmmcr1 css-1p93vdy"
+        className="css-xnmmcr1 css-5uudc2"
         style={Object {}}
       >
         <input

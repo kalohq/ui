@@ -2,20 +2,20 @@
 
 exports[`Field should render shallow component ok 1`] = `
 <div
-  className="css-134evea0 css-1lsspws"
+  className="css-1um3mzq"
   onClick={undefined}
   style={Object {}}
 >
   <div
-    className="css-134evea0 css-16j9e65"
+    className="css-jbik9l"
     style={Object {}}
   >
     <div
-      className="css-134evea0 css-1x0f447"
+      className="css-1ertpse"
       style={Object {}}
     >
       <label
-        className="css-16ef8bd0 css-uci0iz"
+        className="css-16ef8bd0 css-1hye6w1"
         color="navy600"
         htmlFor={undefined}
         onClick={undefined}
@@ -27,7 +27,7 @@ exports[`Field should render shallow component ok 1`] = `
       </label>
     </div>
     <div
-      className="css-xnmmcr1 css-1p93vdy"
+      className="css-xnmmcr1 css-5uudc2"
       style={Object {}}
     >
       <input
@@ -51,11 +51,11 @@ exports[`Field should render shallow component ok 1`] = `
     </div>
   </div>
   <span
-    className="css-134evea3 css-c43ebs"
+    className="css-5hnrki"
     style={Object {}}
   >
     <span
-      className="css-16ef8bd0 css-1u1iks6"
+      className="css-16ef8bd0 css-9387rp"
       color="navy600"
       onClick={undefined}
       size="extra-small"

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/paper Paper should render a component with an elevation of 3 1`] = `
-.glamor-1 {
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -23,7 +23,7 @@ exports[`components/paper Paper should render a component with an elevation of 3
 }
 
 <div
-  className="root level-3 hover-level-1 border rounded glamor-0 glamor-1"
+  className="root level-3 hover-level-1 border rounded glamor-0"
   onClick={undefined}
   style={Object {}}
 >
@@ -32,7 +32,7 @@ exports[`components/paper Paper should render a component with an elevation of 3
 `;
 
 exports[`components/paper Paper should render shallow component ok 1`] = `
-.glamor-1 {
+.glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -54,7 +54,7 @@ exports[`components/paper Paper should render shallow component ok 1`] = `
 }
 
 <div
-  className="root level-1 hover-level-1 border rounded glamor-0 glamor-1"
+  className="root level-1 hover-level-1 border rounded glamor-0"
   onClick={undefined}
   spacing={true}
   style={Object {}}
@@ -64,6 +64,27 @@ exports[`components/paper Paper should render shallow component ok 1`] = `
 `;
 
 exports[`components/paper PaperToolbar should render shallow component ok 1`] = `
+.glamor-0 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .glamor-1 {
   position: relative;
   -webkit-flex-direction: column;
@@ -83,36 +104,14 @@ exports[`components/paper PaperToolbar should render shallow component ok 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.glamor-3 {
-  padding: 0px 25px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   padding: 0px 25px;
 }
 
 <div
-  className="root glamor-0 glamor-3"
+  className="root glamor-1"
   style={Object {}}
 >
-  .glamor-1 {
+  .glamor-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -134,7 +133,7 @@ exports[`components/paper PaperToolbar should render shallow component ok 1`] = 
 }
 
 <div
-    className="root level-1 hover-level-1 border rounded glamor-0 glamor-1"
+    className="root level-1 hover-level-1 border rounded glamor-0"
     onClick={undefined}
     style={Object {}}
   >
