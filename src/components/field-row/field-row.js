@@ -12,7 +12,7 @@ export const DEFAULT_SPACING = 20;
 
 type TProps = {
   /** A set of one or more fields */
-  children?: React$Element<*>,
+  children?: React.Element<*>,
   /** Pixel value of spacing between field elements */
   gutter?: number,
   /** A class to pass down */
