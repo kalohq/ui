@@ -1,6 +1,5 @@
 /* @flow */
 import * as React from 'react';
-import {pickStyles} from '../../utils/style';
 import {List} from 'immutable';
 
 import {Box} from '../layout';
@@ -88,7 +87,7 @@ export default function Field(props: TProps) {
       position="relative"
       flexDirection="column"
       justifyContent={inline ? 'space-between' : 'inherit'}
-      {...pickStyles(otherProps)}
+      {...otherProps}
     >
       <Box
         flexDirection={inline ? 'row' : 'column'}
