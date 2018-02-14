@@ -1,11 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ButtonGroup should render shallow component ok 1`] = `
-.glamor-17 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.glamor-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,7 +12,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
   align-items: center;
 }
 
-.glamor-7 {
+.glamor-3 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -37,15 +33,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
   display: flex;
 }
 
-.glamor-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.glamor-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -61,10 +49,10 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
 }
 
 <div
-  className="wide glamor-0 glamor-17"
+  className="wide glamor-8"
   style={Object {}}
 >
-  .glamor-7 {
+  .glamor-3 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -85,15 +73,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
   display: flex;
 }
 
-.glamor-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.glamor-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -109,19 +89,11 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
 }
 
 <div
-    className="root spacing glamor-6 glamor-7"
+    className="root spacing glamor-3"
     onClick={[Function]}
     style={Object {}}
   >
-    .glamor-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+    .glamor-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -142,15 +114,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
       role="button"
       type={undefined}
     >
-      .glamor-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      .glamor-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -166,20 +130,12 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
 }
 
 <div
-        className="placeholder glamor-0 glamor-1"
+        className="placeholder glamor-0"
         style={Object {}}
       >
         Button One
       </div>
-      .glamor-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      .glamor-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -195,22 +151,14 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
 }
 
 <div
-        className="message glamor-0 glamor-1"
+        className="message glamor-0"
         name="message"
         style={Object {}}
         title={undefined}
       >
         Button One
       </div>
-      .glamor-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      .glamor-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -226,7 +174,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
 }
 
 <div
-        className="successMessage glamor-0 glamor-1"
+        className="successMessage glamor-0"
         style={Object {}}
       />
       <div
@@ -250,7 +198,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
       </div>
     </button>
   </div>
-  .glamor-7 {
+  .glamor-3 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -271,15 +219,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
   display: flex;
 }
 
-.glamor-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.glamor-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -295,19 +235,11 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
 }
 
 <div
-    className="root spacing glamor-6 glamor-7"
+    className="root spacing glamor-3"
     onClick={[Function]}
     style={Object {}}
   >
-    .glamor-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+    .glamor-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -328,15 +260,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
       role="button"
       type={undefined}
     >
-      .glamor-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      .glamor-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -352,20 +276,12 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
 }
 
 <div
-        className="placeholder glamor-0 glamor-1"
+        className="placeholder glamor-0"
         style={Object {}}
       >
         Button Two
       </div>
-      .glamor-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      .glamor-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -381,22 +297,14 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
 }
 
 <div
-        className="message glamor-0 glamor-1"
+        className="message glamor-0"
         name="message"
         style={Object {}}
         title={undefined}
       >
         Button Two
       </div>
-      .glamor-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      .glamor-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -412,7 +320,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
 }
 
 <div
-        className="successMessage glamor-0 glamor-1"
+        className="successMessage glamor-0"
         style={Object {}}
       />
       <div

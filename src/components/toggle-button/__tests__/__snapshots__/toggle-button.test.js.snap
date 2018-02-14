@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleButton should render shallow component ok 1`] = `
+<div
+  className="css-f9caso"
+  id="toggle-button"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <div
+    className="css-1mfdy6w css-18ye4kh0"
+    selected={false}
+  >
+    <div
+      className="css-1csuntb css-18ye4kh1"
+      selected={false}
+    />
+  </div>
+</div>
+`;

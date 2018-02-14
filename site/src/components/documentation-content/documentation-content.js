@@ -34,6 +34,13 @@ const StyledDocumentationContent = styled.article`
     color: ${props => props.theme.colors.navy700};
   }
 
+  p > code {
+    background-color: ${props => props.theme.colors.grey200};
+    font-size: 14px;
+    padding: 4px;
+    border-radius: 4px;
+  }
+
   table {
     width: 100%;
     position: relative;

@@ -4,6 +4,7 @@ imports:
   - ./font-size.yml
   - ./font-weight.yml
   - ./border-radius.yml
+  - ./input.yml
   - ./alerts.yml
   - ./grid.yml
   - ./layout.yml

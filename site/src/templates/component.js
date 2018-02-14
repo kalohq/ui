@@ -24,7 +24,7 @@ const StoryTitle = styled.h3`
 `;
 
 const StoryDescription = styled.span`
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   color: ${props => props.theme.colors.navy600};
 `;

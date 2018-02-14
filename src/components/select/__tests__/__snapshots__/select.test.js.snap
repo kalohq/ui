@@ -1,0 +1,292 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select should render a disabled select 1`] = `
+<div
+  className="css-tvxmfb0 css-1d5vtml"
+  disabled={true}
+  onSelect={[Function]}
+  open={false}
+  style={Object {}}
+>
+  <div
+    className="css-hvar41 css-tvxmfb5"
+    onClick={undefined}
+  >
+    <span
+      className="css-16ef8bd0 css-13lua4i"
+      color="navy500"
+      onClick={undefined}
+      size="small"
+      style={Object {}}
+    >
+      Select…
+    </span>
+    <div
+      className="css-elkfk7 css-tvxmfb1"
+      open={false}
+    >
+      <i
+        className="css-fj83eq0 css-3bw6sb"
+        color="grey500"
+        onClick={undefined}
+        size={24}
+        style={Object {}}
+        title={undefined}
+      >
+        <svg
+          aria-hidden="true"
+          height={24}
+          width={24}
+        >
+          <title>
+            chevron_right
+          </title>
+          <use
+            xlinkHref="#chevron_right"
+          />
+        </svg>
+      </i>
+    </div>
+  </div>
+  <div
+    className="css-17y3pak css-tvxmfb3"
+    onClick={[Function]}
+    open={false}
+  >
+    <div
+      className="css-14jjchb css-tvxmfb4"
+      name="Hertfordshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Hertfordshire
+      </div>
+    </div>
+    <div
+      className="css-14jjchb css-tvxmfb4"
+      name="Bedfordshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Bedfordshire
+      </div>
+    </div>
+    <div
+      className="css-14jjchb css-tvxmfb4"
+      name="Oxfordshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Oxfordshire
+      </div>
+    </div>
+    <div
+      className="css-14jjchb css-tvxmfb4"
+      name="Hampshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Hampshire
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Select should render a readonly select 1`] = `
+<div
+  className="css-tvxmfb0 css-n42w9q"
+  disabled={false}
+  onSelect={[Function]}
+  open={false}
+  style={Object {}}
+>
+  <div
+    className="css-hvar41 css-tvxmfb5"
+    onClick={undefined}
+  >
+    <span
+      className="css-16ef8bd0 css-13lua4i"
+      color="navy500"
+      onClick={undefined}
+      size="small"
+      style={Object {}}
+    >
+      Select…
+    </span>
+    <div
+      className="css-elkfk7 css-tvxmfb1"
+      open={false}
+    >
+      <i
+        className="css-fj83eq0 css-3bw6sb"
+        color="grey500"
+        onClick={undefined}
+        size={24}
+        style={Object {}}
+        title={undefined}
+      >
+        <svg
+          aria-hidden="true"
+          height={24}
+          width={24}
+        >
+          <title>
+            chevron_right
+          </title>
+          <use
+            xlinkHref="#chevron_right"
+          />
+        </svg>
+      </i>
+    </div>
+  </div>
+  <div
+    className="css-17y3pak css-tvxmfb3"
+    onClick={[Function]}
+    open={false}
+  >
+    <div
+      className="css-14jjchb css-tvxmfb4"
+      name="Hertfordshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Hertfordshire
+      </div>
+    </div>
+    <div
+      className="css-14jjchb css-tvxmfb4"
+      name="Bedfordshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Bedfordshire
+      </div>
+    </div>
+    <div
+      className="css-14jjchb css-tvxmfb4"
+      name="Oxfordshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Oxfordshire
+      </div>
+    </div>
+    <div
+      className="css-14jjchb css-tvxmfb4"
+      name="Hampshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Hampshire
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Select should render shallow component ok 1`] = `
+<div
+  className="css-tvxmfb0 css-13kzyja"
+  disabled={false}
+  onSelect={[Function]}
+  open={false}
+  style={Object {}}
+>
+  <div
+    className="css-hvar41 css-tvxmfb5"
+    onClick={[Function]}
+  >
+    <span
+      className="css-16ef8bd0 css-i7rnis"
+      color="navy700"
+      onClick={undefined}
+      size="small"
+      style={Object {}}
+    >
+      Select…
+    </span>
+    <div
+      className="css-elkfk7 css-tvxmfb1"
+      open={false}
+    >
+      <i
+        className="css-fj83eq0 css-nofld7"
+        color="navy700"
+        onClick={undefined}
+        size={24}
+        style={Object {}}
+        title={undefined}
+      >
+        <svg
+          aria-hidden="true"
+          height={24}
+          width={24}
+        >
+          <title>
+            chevron_right
+          </title>
+          <use
+            xlinkHref="#chevron_right"
+          />
+        </svg>
+      </i>
+    </div>
+  </div>
+  <div
+    className="css-17y3pak css-tvxmfb3"
+    onClick={[Function]}
+    open={false}
+  >
+    <div
+      className="css-14jjchb css-tvxmfb4"
+      name="Hertfordshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Hertfordshire
+      </div>
+    </div>
+    <div
+      className="css-14jjchb css-tvxmfb4"
+      name="Bedfordshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Bedfordshire
+      </div>
+    </div>
+    <div
+      className="css-14jjchb css-tvxmfb4"
+      name="Oxfordshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Oxfordshire
+      </div>
+    </div>
+    <div
+      className="css-14jjchb css-tvxmfb4"
+      name="Hampshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Hampshire
+      </div>
+    </div>
+  </div>
+</div>
+`;

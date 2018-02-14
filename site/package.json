@@ -16,6 +16,7 @@
     "gatsby-plugin-emotion": "^1.1.10",
     "gatsby-plugin-google-analytics": "^1.0.15",
     "gatsby-plugin-react-helmet": "^2.0.3",
+    "gatsby-remark-autolink-headers": "^1.4.11",
     "gatsby-remark-prismjs": "^1.2.11",
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-react-docgen": "^1.0.12",
