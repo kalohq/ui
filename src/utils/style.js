@@ -1,5 +1,5 @@
 /* @flow */
-import {isNumber, isString, pickBy, omitBy} from 'lodash';
+import {isNumber, isString, isBoolean, pickBy, omitBy} from 'lodash';
 import STYLE_WHITELIST from './style/style-whitelist';
 import PROP_WHITELIST_REGEX from './style/prop-whitelist';
 import {returnArray} from './array';
@@ -63,6 +63,7 @@ const VENDOR_STYLERS =
 
 /** Parse a specific style */
 export function parseStyle(name: string, value: string | number | Array<*>) {
+  if (isBoolean(value)) return false;
   if (SPACING_REGEX.test(name)) {
     return returnArray(value)
       .map(v => {
@@ -87,17 +88,18 @@ export function parseStyleProps(originalProps: Object): Object {
 
   for (const key in originalProps) {
     if ({}.hasOwnProperty.call(originalProps, key)) {
-      if (STYLE_WHITELIST[key]) {
-        const parsedStyleValue = parseStyle(key, originalProps[key]);
-        if (!!VENDOR_STYLERS[key]) {
-          const pair = VENDOR_STYLERS[key](key, parsedStyleValue);
-          style[pair.key] = pair.value;
-        } else {
-          style[key] = parsedStyleValue;
+      if (originalProps[key])
+        if (STYLE_WHITELIST[key]) {
+          const parsedStyleValue = parseStyle(key, originalProps[key]);
+          if (!!VENDOR_STYLERS[key]) {
+            const pair = VENDOR_STYLERS[key](key, parsedStyleValue);
+            style[pair.key] = pair.value;
+          } else {
+            style[key] = parsedStyleValue;
+          }
+        } else if (key !== 'style') {
+          props[key] = originalProps[key];
         }
-      } else if (key !== 'style') {
-        props[key] = originalProps[key];
-      }
     }
   }
 
