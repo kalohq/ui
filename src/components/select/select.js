@@ -239,6 +239,10 @@ export default class Select extends PureComponent {
         readonly={readonly}
         disabled={disabled}
         open={open}
+        data-test="ui-select"
+        role="menu"
+        aria-disabled={disabled}
+        aria-expanded={open}
         {...otherProps}
       >
         <StyledSelectSelected
@@ -284,6 +288,7 @@ export default class Select extends PureComponent {
         <StyledSelectOptions
           open={open}
           onClick={event => event.stopPropagation()}
+          data-test="ui-select__options"
         >
           {React.Children.map(
             children,
@@ -294,6 +299,7 @@ export default class Select extends PureComponent {
                   name={child.key}
                   selected={child.props.selected}
                   onClick={() => this.onSelect(child.props.value)}
+                  data-test="ui-select__options__option"
                 >
                   {child}
                 </StyledOption>

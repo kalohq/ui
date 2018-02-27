@@ -2,14 +2,18 @@
 
 exports[`Select should render a disabled select 1`] = `
 <div
-  className="css-tvxmfb0 css-1d5vtml"
+  aria-disabled={true}
+  aria-expanded={false}
+  className="css-1abkg230 css-119vncu"
+  data-test="ui-select"
   disabled={true}
   onSelect={[Function]}
   open={false}
+  role="menu"
   style={Object {}}
 >
   <div
-    className="css-hvar41 css-tvxmfb5"
+    className="css-d6226c css-1abkg235"
     onClick={undefined}
   >
     <span
@@ -22,7 +26,7 @@ exports[`Select should render a disabled select 1`] = `
       Select…
     </span>
     <div
-      className="css-elkfk7 css-tvxmfb1"
+      className="css-j8bbvv css-1abkg231"
       open={false}
     >
       <i
@@ -49,12 +53,14 @@ exports[`Select should render a disabled select 1`] = `
     </div>
   </div>
   <div
-    className="css-17y3pak css-tvxmfb3"
+    className="css-mekkd6 css-1abkg233"
+    data-test="ui-select__options"
     onClick={[Function]}
     open={false}
   >
     <div
-      className="css-14jjchb css-tvxmfb4"
+      className="css-176z692 css-1abkg234"
+      data-test="ui-select__options__option"
       name="Hertfordshire"
       onClick={[Function]}
       selected={undefined}
@@ -64,7 +70,8 @@ exports[`Select should render a disabled select 1`] = `
       </div>
     </div>
     <div
-      className="css-14jjchb css-tvxmfb4"
+      className="css-176z692 css-1abkg234"
+      data-test="ui-select__options__option"
       name="Bedfordshire"
       onClick={[Function]}
       selected={undefined}
@@ -74,7 +81,8 @@ exports[`Select should render a disabled select 1`] = `
       </div>
     </div>
     <div
-      className="css-14jjchb css-tvxmfb4"
+      className="css-176z692 css-1abkg234"
+      data-test="ui-select__options__option"
       name="Oxfordshire"
       onClick={[Function]}
       selected={undefined}
@@ -84,7 +92,8 @@ exports[`Select should render a disabled select 1`] = `
       </div>
     </div>
     <div
-      className="css-14jjchb css-tvxmfb4"
+      className="css-176z692 css-1abkg234"
+      data-test="ui-select__options__option"
       name="Hampshire"
       onClick={[Function]}
       selected={undefined}
@@ -99,14 +108,18 @@ exports[`Select should render a disabled select 1`] = `
 
 exports[`Select should render a readonly select 1`] = `
 <div
-  className="css-tvxmfb0 css-n42w9q"
+  aria-disabled={false}
+  aria-expanded={false}
+  className="css-1abkg230 css-93bca3"
+  data-test="ui-select"
   disabled={false}
   onSelect={[Function]}
   open={false}
+  role="menu"
   style={Object {}}
 >
   <div
-    className="css-hvar41 css-tvxmfb5"
+    className="css-d6226c css-1abkg235"
     onClick={undefined}
   >
     <span
@@ -119,7 +132,7 @@ exports[`Select should render a readonly select 1`] = `
       Select…
     </span>
     <div
-      className="css-elkfk7 css-tvxmfb1"
+      className="css-j8bbvv css-1abkg231"
       open={false}
     >
       <i
@@ -146,12 +159,14 @@ exports[`Select should render a readonly select 1`] = `
     </div>
   </div>
   <div
-    className="css-17y3pak css-tvxmfb3"
+    className="css-mekkd6 css-1abkg233"
+    data-test="ui-select__options"
     onClick={[Function]}
     open={false}
   >
     <div
-      className="css-14jjchb css-tvxmfb4"
+      className="css-176z692 css-1abkg234"
+      data-test="ui-select__options__option"
       name="Hertfordshire"
       onClick={[Function]}
       selected={undefined}
@@ -161,7 +176,8 @@ exports[`Select should render a readonly select 1`] = `
       </div>
     </div>
     <div
-      className="css-14jjchb css-tvxmfb4"
+      className="css-176z692 css-1abkg234"
+      data-test="ui-select__options__option"
       name="Bedfordshire"
       onClick={[Function]}
       selected={undefined}
@@ -171,7 +187,8 @@ exports[`Select should render a readonly select 1`] = `
       </div>
     </div>
     <div
-      className="css-14jjchb css-tvxmfb4"
+      className="css-176z692 css-1abkg234"
+      data-test="ui-select__options__option"
       name="Oxfordshire"
       onClick={[Function]}
       selected={undefined}
@@ -181,7 +198,8 @@ exports[`Select should render a readonly select 1`] = `
       </div>
     </div>
     <div
-      className="css-14jjchb css-tvxmfb4"
+      className="css-176z692 css-1abkg234"
+      data-test="ui-select__options__option"
       name="Hampshire"
       onClick={[Function]}
       selected={undefined}
@@ -196,14 +214,18 @@ exports[`Select should render a readonly select 1`] = `
 
 exports[`Select should render shallow component ok 1`] = `
 <div
-  className="css-tvxmfb0 css-13kzyja"
+  aria-disabled={false}
+  aria-expanded={false}
+  className="css-1abkg230 css-1q14eya"
+  data-test="ui-select"
   disabled={false}
   onSelect={[Function]}
   open={false}
+  role="menu"
   style={Object {}}
 >
   <div
-    className="css-hvar41 css-tvxmfb5"
+    className="css-d6226c css-1abkg235"
     onClick={[Function]}
   >
     <span
@@ -216,7 +238,7 @@ exports[`Select should render shallow component ok 1`] = `
       Select…
     </span>
     <div
-      className="css-elkfk7 css-tvxmfb1"
+      className="css-j8bbvv css-1abkg231"
       open={false}
     >
       <i
@@ -243,12 +265,14 @@ exports[`Select should render shallow component ok 1`] = `
     </div>
   </div>
   <div
-    className="css-17y3pak css-tvxmfb3"
+    className="css-mekkd6 css-1abkg233"
+    data-test="ui-select__options"
     onClick={[Function]}
     open={false}
   >
     <div
-      className="css-14jjchb css-tvxmfb4"
+      className="css-176z692 css-1abkg234"
+      data-test="ui-select__options__option"
       name="Hertfordshire"
       onClick={[Function]}
       selected={undefined}
@@ -258,7 +282,8 @@ exports[`Select should render shallow component ok 1`] = `
       </div>
     </div>
     <div
-      className="css-14jjchb css-tvxmfb4"
+      className="css-176z692 css-1abkg234"
+      data-test="ui-select__options__option"
       name="Bedfordshire"
       onClick={[Function]}
       selected={undefined}
@@ -268,7 +293,8 @@ exports[`Select should render shallow component ok 1`] = `
       </div>
     </div>
     <div
-      className="css-14jjchb css-tvxmfb4"
+      className="css-176z692 css-1abkg234"
+      data-test="ui-select__options__option"
       name="Oxfordshire"
       onClick={[Function]}
       selected={undefined}
@@ -278,7 +304,8 @@ exports[`Select should render shallow component ok 1`] = `
       </div>
     </div>
     <div
-      className="css-14jjchb css-tvxmfb4"
+      className="css-176z692 css-1abkg234"
+      data-test="ui-select__options__option"
       name="Hampshire"
       onClick={[Function]}
       selected={undefined}
