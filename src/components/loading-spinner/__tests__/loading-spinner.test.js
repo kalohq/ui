@@ -1,13 +1,13 @@
 /* @flow */
 /* eslint-env jest */
 import * as React from 'react';
-import {sheet} from 'emotion';
-import serializer from 'jest-glamor-react';
+import * as emotion from 'emotion';
+import {createSerializer} from 'jest-emotion';
 import renderer from 'react-test-renderer';
 
 import LoadingSpinner from 'components/loading-spinner';
 
-expect.addSnapshotSerializer(serializer(sheet));
+expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe('LoadingSpinner', () => {
   const defaultProps = {

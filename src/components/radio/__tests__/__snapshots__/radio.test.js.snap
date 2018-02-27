@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Radio should render shallow component ok 1`] = `
-.glamor-2 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,7 +16,7 @@ exports[`Radio should render shallow component ok 1`] = `
   justify-content: start;
 }
 
-.glamor-1 {
+.emotion-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -39,7 +39,7 @@ exports[`Radio should render shallow component ok 1`] = `
   height: 16px;
 }
 
-.glamor-0 {
+.emotion-0 {
   display: inline-block;
   vertical-align: bottom;
   position: absolute;
@@ -48,60 +48,19 @@ exports[`Radio should render shallow component ok 1`] = `
 <div
   aria-checked={true}
   aria-disabled={undefined}
-  className="root glamor-2"
+  className="root emotion-2"
   name={undefined}
   onClick={undefined}
   role="radio"
   style={Object {}}
 >
-  .glamor-1 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 16px;
-  height: 16px;
-}
-
-.glamor-0 {
-  display: inline-block;
-  vertical-align: bottom;
-  position: absolute;
-}
-
-<div
-    className="radio checked glamor-1"
+  <div
+    className="radio checked emotion-1"
     style={Object {}}
   >
-    .glamor-0 {
-  display: inline-block;
-  vertical-align: bottom;
-  position: absolute;
-}
-
-<span>
-      .glamor-0 {
-  display: inline-block;
-  vertical-align: bottom;
-  position: absolute;
-}
-
-<span
-        className="icon glamor-0"
+    <span>
+      <span
+        className="icon emotion-0"
         style={Object {}}
       />
     </span>

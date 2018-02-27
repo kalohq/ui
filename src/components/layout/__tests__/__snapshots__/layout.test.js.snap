@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Block should render correctly 1`] = `
-.glamor-0 {
+.emotion-0 {
   display: block;
   -webkit-flex: 0;
   -ms-flex: 0;
@@ -9,14 +9,14 @@ exports[`Block should render correctly 1`] = `
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
   onClick={null}
   style={Object {}}
 />
 `;
 
 exports[`Box should allow overriding of default styles 1`] = `
-.glamor-0 {
+.emotion-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -41,7 +41,7 @@ exports[`Box should allow overriding of default styles 1`] = `
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
   style={
     Object {
       "color": "red",
@@ -51,7 +51,7 @@ exports[`Box should allow overriding of default styles 1`] = `
 `;
 
 exports[`Box should allow passing spacing scales 1`] = `
-.glamor-0 {
+.emotion-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -75,13 +75,13 @@ exports[`Box should allow passing spacing scales 1`] = `
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
   style={Object {}}
 />
 `;
 
 exports[`Box should allow passing vector style values 1`] = `
-.glamor-0 {
+.emotion-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -105,13 +105,13 @@ exports[`Box should allow passing vector style values 1`] = `
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
   style={Object {}}
 />
 `;
 
 exports[`Box should render correctly 1`] = `
-.glamor-0 {
+.emotion-0 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -133,13 +133,13 @@ exports[`Box should render correctly 1`] = `
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
   style={Object {}}
 />
 `;
 
 exports[`Flex should render correctly 1`] = `
-.glamor-0 {
+.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -150,14 +150,14 @@ exports[`Flex should render correctly 1`] = `
 }
 
 <div
-  className="glamor-0"
+  className="emotion-0"
   onClick={null}
   style={Object {}}
 />
 `;
 
 exports[`Inline should render correctly 1`] = `
-.glamor-0 {
+.emotion-0 {
   display: inline-block;
   vertical-align: bottom;
   -webkit-flex: 0;
@@ -166,14 +166,14 @@ exports[`Inline should render correctly 1`] = `
 }
 
 <span
-  className="glamor-0"
+  className="emotion-0"
   onClick={null}
   style={Object {}}
 />
 `;
 
 exports[`InlineFlex should render correctly 1`] = `
-.glamor-0 {
+.emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -184,7 +184,7 @@ exports[`InlineFlex should render correctly 1`] = `
 }
 
 <span
-  className="glamor-0"
+  className="emotion-0"
   onClick={null}
   style={Object {}}
 />

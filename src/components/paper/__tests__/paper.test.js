@@ -1,14 +1,14 @@
 /* @flow */
 /* eslint-env jest */
 import * as React from 'react';
-import {sheet} from 'emotion';
-import serializer from 'jest-glamor-react';
+import * as emotion from 'emotion';
+import {createSerializer} from 'jest-emotion';
 import renderer from 'react-test-renderer';
 
 import Paper from 'components/paper';
 import {PaperToolbar} from '../components/paper-toolbar';
 
-expect.addSnapshotSerializer(serializer(sheet));
+expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe('components/paper', () => {
   describe('Paper', () => {
