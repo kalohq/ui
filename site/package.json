@@ -4,13 +4,8 @@
   "version": "1.0.0",
   "author": "Kalo Product",
   "dependencies": {
-    "apollo-cache-inmemory": "^1.1.1",
-    "apollo-client": "^2.0.3",
-    "apollo-link-http": "^1.2.0",
     "emotion": "^9.0.0",
     "emotion-server": "^9.0.0",
-    "express": "^4.16.2",
-    "express-graphql": "^0.6.11",
     "gatsby": "^1.9.149",
     "gatsby-link": "^1.6.34",
     "gatsby-plugin-emotion": "^1.1.13",
@@ -22,14 +17,8 @@
     "gatsby-transformer-react-docgen": "^1.0.12",
     "gatsby-transformer-remark": "^1.7.27",
     "glob": "^7.1.2",
-    "graphql": "^0.11.7",
-    "graphql-tag": "^2.5.0",
-    "isomorphic-fetch": "^2.2.1",
-    "react-apollo": "^2.0.1",
     "react-emotion": "^9.0.0",
     "react-helmet": "^5.2.0",
-    "recon-config": "0.0.7",
-    "recon-engine": "0.0.7",
     "slug": "^0.9.1"
   },
   "devDependencies": {
