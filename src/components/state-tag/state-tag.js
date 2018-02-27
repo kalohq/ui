@@ -10,7 +10,7 @@ const STATE_TAG_BACKGROUND_MAP = {
   blue: 'blue500',
   orange: 'orange500',
   green: 'green500',
-  red: 'red500',
+  red: 'pink500',
   purple: 'purple500',
   grey: 'grey700',
 };
@@ -43,7 +43,7 @@ type TProps = {
   /** An icon to display to the right of the tag */
   rightIcon?: string,
   /** A copy label to display */
-  label?: string,
+  label?: ?string,
   /** Is the StateTag editable? */
   editable?: boolean,
 };
