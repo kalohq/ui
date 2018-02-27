@@ -138,8 +138,10 @@ export default function Field(props: TProps) {
       </Box>
       {!!validations ? (
         <FieldValidations centered={centered} validations={validations} />
+      ) : permissions[0] ? (
+        <FieldHint hint={permissions[0].message} />
       ) : hintText ? (
-        <FieldHint hint={hintText} icon={hintIcon ? hintIcon : undefined} />
+        <FieldHint hint={hintText} icon={hintIcon ? hintIcon : null} />
       ) : null}
     </Box>
   );
