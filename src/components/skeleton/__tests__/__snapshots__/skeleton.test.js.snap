@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/skeleton SkeletonAvatar should render shallow component ok 1`] = `
-.emotion-0 {
+.emotion-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -25,13 +25,13 @@ exports[`components/skeleton SkeletonAvatar should render shallow component ok 1
 }
 
 <div
-  className="circle shape emotion-0"
+  className="circle shape emotion-0 emotion-1"
   style={Object {}}
 />
 `;
 
 exports[`components/skeleton SkeletonButton should render shallow component ok 1`] = `
-.emotion-0 {
+.emotion-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -55,13 +55,13 @@ exports[`components/skeleton SkeletonButton should render shallow component ok 1
 }
 
 <div
-  className="shape emotion-0"
+  className="shape emotion-0 emotion-1"
   style={Object {}}
 />
 `;
 
 exports[`components/skeleton SkeletonGrid should render shallow component ok 1`] = `
-.emotion-2 {
+.emotion-5 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -83,7 +83,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   margin-top: -10px;
 }
 
-.emotion-1 {
+.emotion-3 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -106,7 +106,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   margin-left: 0px;
 }
 
-.emotion-9 {
+.emotion-19 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -129,7 +129,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   width: 140px;
 }
 
-.emotion-16 {
+.emotion-33 {
   position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -151,7 +151,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   margin-left: -25px;
 }
 
-.emotion-6 {
+.emotion-13 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -177,7 +177,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   flex: 1;
 }
 
-.emotion-3 {
+.emotion-7 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -199,7 +199,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   padding: 15px;
 }
 
-.emotion-0 {
+.emotion-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -222,7 +222,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   width: 140px;
 }
 
-.emotion-7 {
+.emotion-15 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -246,35 +246,35 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 }
 
 <div
-  className="emotion-16"
+  className="emotion-0 emotion-33"
   style={Object {}}
 >
   <div
-    className="emotion-6"
+    className="emotion-0 emotion-13"
     style={Object {}}
   >
     <div
-      className="emotion-2"
+      className="emotion-0 emotion-5"
       style={Object {}}
     >
       <div
-        className="emotion-1"
+        className="emotion-0 emotion-3"
         style={Object {}}
       >
         <div
-          className="paper emotion-3"
+          className="paper emotion-0 emotion-7"
           style={Object {}}
         >
           <div
-            className="emotion-2"
+            className="emotion-0 emotion-5"
             style={Object {}}
           >
             <div
-              className="emotion-1"
+              className="emotion-0 emotion-3"
               style={Object {}}
             >
               <div
-                className="shape emotion-0"
+                className="shape emotion-0 emotion-1"
                 style={Object {}}
               />
             </div>
@@ -284,40 +284,40 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
     </div>
   </div>
   <div
-    className="emotion-6"
+    className="emotion-0 emotion-13"
     style={Object {}}
   >
     <div
-      className="emotion-2"
+      className="emotion-0 emotion-5"
       style={Object {}}
     >
       <div
-        className="emotion-1"
+        className="emotion-0 emotion-3"
         style={Object {}}
       >
         <div
-          className="paper emotion-3"
+          className="paper emotion-0 emotion-7"
           style={Object {}}
         >
           <div
-            className="emotion-2"
+            className="emotion-0 emotion-5"
             style={Object {}}
           >
             <div
-              className="emotion-1"
+              className="emotion-0 emotion-3"
               style={Object {}}
             >
               <div
-                className="shape emotion-7"
+                className="shape emotion-0 emotion-15"
                 style={Object {}}
               />
             </div>
             <div
-              className="emotion-1"
+              className="emotion-0 emotion-3"
               style={Object {}}
             >
               <div
-                className="shape emotion-9"
+                className="shape emotion-0 emotion-19"
                 style={Object {}}
               />
             </div>
@@ -330,7 +330,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 `;
 
 exports[`components/skeleton SkeletonGrid should render shallow component ok 2`] = `
-.emotion-1 {
+.emotion-3 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -353,7 +353,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 36px;
 }
 
-.emotion-0 {
+.emotion-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -376,7 +376,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 70px;
 }
 
-.emotion-40 {
+.emotion-81 {
   position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -398,7 +398,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   margin-left: -25px;
 }
 
-.emotion-4 {
+.emotion-9 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -421,7 +421,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   margin-left: 25px;
 }
 
-.emotion-17 {
+.emotion-35 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -444,7 +444,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 140px;
 }
 
-.emotion-21 {
+.emotion-43 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -470,7 +470,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   flex: 1;
 }
 
-.emotion-11 {
+.emotion-23 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -491,7 +491,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: flex;
 }
 
-.emotion-2 {
+.emotion-5 {
   position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -519,7 +519,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   justify-content: space-between;
 }
 
-.emotion-10 {
+.emotion-21 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -542,7 +542,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 1100px;
 }
 
-.emotion-9 {
+.emotion-19 {
   position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -565,7 +565,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   height: 46px;
 }
 
-.emotion-41 {
+.emotion-83 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -588,7 +588,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 1100px;
 }
 
-.emotion-20 {
+.emotion-41 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -611,7 +611,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   padding-bottom: 150px;
 }
 
-.emotion-19 {
+.emotion-39 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -633,7 +633,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   margin-top: -25px;
 }
 
-.emotion-14 {
+.emotion-29 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -656,7 +656,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   margin-left: 0px;
 }
 
-.emotion-13 {
+.emotion-27 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -681,58 +681,58 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 
 <div>
   <div
-    className="header emotion-11"
+    className="header emotion-0 emotion-23"
     style={Object {}}
   >
     <div
-      className="emotion-2"
+      className="emotion-0 emotion-5"
       style={Object {}}
     >
       <div
-        className="shape emotion-0"
+        className="shape emotion-0 emotion-1"
         style={Object {}}
       />
       <div
-        className="shape emotion-1"
+        className="shape emotion-0 emotion-3"
         style={Object {}}
       />
     </div>
     <div
-      className="toolbar emotion-11"
+      className="toolbar emotion-0 emotion-23"
       style={Object {}}
     >
       <div
-        className="emotion-10"
+        className="emotion-0 emotion-21"
         style={Object {}}
       >
         <div
-          className="emotion-9"
+          className="emotion-0 emotion-19"
           style={Object {}}
         >
           <div
-            className="emotion-4"
+            className="emotion-0 emotion-9"
             style={Object {}}
           >
             <div
-              className="shape emotion-0"
+              className="shape emotion-0 emotion-1"
               style={Object {}}
             />
           </div>
           <div
-            className="emotion-4"
+            className="emotion-0 emotion-9"
             style={Object {}}
           >
             <div
-              className="shape emotion-0"
+              className="shape emotion-0 emotion-1"
               style={Object {}}
             />
           </div>
           <div
-            className="emotion-4"
+            className="emotion-0 emotion-9"
             style={Object {}}
           >
             <div
-              className="shape emotion-0"
+              className="shape emotion-0 emotion-1"
               style={Object {}}
             />
           </div>
@@ -741,53 +741,53 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
     </div>
   </div>
   <div
-    className="emotion-11"
+    className="emotion-0 emotion-23"
     style={Object {}}
   >
     <div
-      className="emotion-41"
+      className="emotion-0 emotion-83"
       style={Object {}}
     >
       <div
-        className="emotion-40"
+        className="emotion-0 emotion-81"
         style={Object {}}
       >
         <div
-          className="emotion-21"
+          className="emotion-0 emotion-43"
           style={Object {}}
         >
           <div
-            className="paper emotion-20"
+            className="paper emotion-0 emotion-41"
             style={Object {}}
           >
             <div
-              className="emotion-19"
+              className="emotion-0 emotion-39"
               style={Object {}}
             >
               <div
-                className="emotion-14"
+                className="emotion-0 emotion-29"
                 style={Object {}}
               >
                 <div
-                  className="circle shape emotion-13"
+                  className="circle shape emotion-0 emotion-27"
                   style={Object {}}
                 />
               </div>
               <div
-                className="emotion-14"
+                className="emotion-0 emotion-29"
                 style={Object {}}
               >
                 <div
-                  className="shape emotion-0"
+                  className="shape emotion-0 emotion-1"
                   style={Object {}}
                 />
               </div>
               <div
-                className="emotion-14"
+                className="emotion-0 emotion-29"
                 style={Object {}}
               >
                 <div
-                  className="shape emotion-17"
+                  className="shape emotion-0 emotion-35"
                   style={Object {}}
                 />
               </div>
@@ -795,41 +795,41 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
           </div>
         </div>
         <div
-          className="emotion-21"
+          className="emotion-0 emotion-43"
           style={Object {}}
         >
           <div
-            className="paper emotion-20"
+            className="paper emotion-0 emotion-41"
             style={Object {}}
           >
             <div
-              className="emotion-19"
+              className="emotion-0 emotion-39"
               style={Object {}}
             >
               <div
-                className="emotion-14"
+                className="emotion-0 emotion-29"
                 style={Object {}}
               >
                 <div
-                  className="circle shape emotion-13"
+                  className="circle shape emotion-0 emotion-27"
                   style={Object {}}
                 />
               </div>
               <div
-                className="emotion-14"
+                className="emotion-0 emotion-29"
                 style={Object {}}
               >
                 <div
-                  className="shape emotion-0"
+                  className="shape emotion-0 emotion-1"
                   style={Object {}}
                 />
               </div>
               <div
-                className="emotion-14"
+                className="emotion-0 emotion-29"
                 style={Object {}}
               >
                 <div
-                  className="shape emotion-17"
+                  className="shape emotion-0 emotion-35"
                   style={Object {}}
                 />
               </div>
@@ -837,41 +837,41 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
           </div>
         </div>
         <div
-          className="emotion-21"
+          className="emotion-0 emotion-43"
           style={Object {}}
         >
           <div
-            className="paper emotion-20"
+            className="paper emotion-0 emotion-41"
             style={Object {}}
           >
             <div
-              className="emotion-19"
+              className="emotion-0 emotion-39"
               style={Object {}}
             >
               <div
-                className="emotion-14"
+                className="emotion-0 emotion-29"
                 style={Object {}}
               >
                 <div
-                  className="circle shape emotion-13"
+                  className="circle shape emotion-0 emotion-27"
                   style={Object {}}
                 />
               </div>
               <div
-                className="emotion-14"
+                className="emotion-0 emotion-29"
                 style={Object {}}
               >
                 <div
-                  className="shape emotion-0"
+                  className="shape emotion-0 emotion-1"
                   style={Object {}}
                 />
               </div>
               <div
-                className="emotion-14"
+                className="emotion-0 emotion-29"
                 style={Object {}}
               >
                 <div
-                  className="shape emotion-17"
+                  className="shape emotion-0 emotion-35"
                   style={Object {}}
                 />
               </div>
@@ -885,7 +885,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 `;
 
 exports[`components/skeleton SkeletonList should render shallow component ok 1`] = `
-.emotion-2 {
+.emotion-5 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -908,7 +908,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   width: 70px;
 }
 
-.emotion-21 {
+.emotion-43 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -930,7 +930,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   margin-top: -10px;
 }
 
-.emotion-6 {
+.emotion-13 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -953,7 +953,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   margin-left: 0px;
 }
 
-.emotion-5 {
+.emotion-11 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -975,7 +975,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   padding: 25px;
 }
 
-.emotion-4 {
+.emotion-9 {
   position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -997,7 +997,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   margin-left: -25px;
 }
 
-.emotion-1 {
+.emotion-3 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1020,7 +1020,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   margin-left: 25px;
 }
 
-.emotion-0 {
+.emotion-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1044,36 +1044,36 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 <div
-  className="emotion-21"
+  className="emotion-0 emotion-43"
   style={Object {}}
 >
   <div
-    className="emotion-6"
+    className="emotion-0 emotion-13"
     style={Object {}}
   >
     <div
-      className="paper emotion-5"
+      className="paper emotion-0 emotion-11"
       style={Object {}}
     >
       <div
-        className="emotion-4"
+        className="emotion-0 emotion-9"
         style={Object {}}
       >
         <div
-          className="emotion-1"
+          className="emotion-0 emotion-3"
           style={Object {}}
         >
           <div
-            className="shape emotion-0"
+            className="shape emotion-0 emotion-1"
             style={Object {}}
           />
         </div>
         <div
-          className="emotion-1"
+          className="emotion-0 emotion-3"
           style={Object {}}
         >
           <div
-            className="shape emotion-2"
+            className="shape emotion-0 emotion-5"
             style={Object {}}
           />
         </div>
@@ -1081,32 +1081,32 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
     </div>
   </div>
   <div
-    className="emotion-6"
+    className="emotion-0 emotion-13"
     style={Object {}}
   >
     <div
-      className="paper emotion-5"
+      className="paper emotion-0 emotion-11"
       style={Object {}}
     >
       <div
-        className="emotion-4"
+        className="emotion-0 emotion-9"
         style={Object {}}
       >
         <div
-          className="emotion-1"
+          className="emotion-0 emotion-3"
           style={Object {}}
         >
           <div
-            className="shape emotion-0"
+            className="shape emotion-0 emotion-1"
             style={Object {}}
           />
         </div>
         <div
-          className="emotion-1"
+          className="emotion-0 emotion-3"
           style={Object {}}
         >
           <div
-            className="shape emotion-2"
+            className="shape emotion-0 emotion-5"
             style={Object {}}
           />
         </div>
@@ -1114,32 +1114,32 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
     </div>
   </div>
   <div
-    className="emotion-6"
+    className="emotion-0 emotion-13"
     style={Object {}}
   >
     <div
-      className="paper emotion-5"
+      className="paper emotion-0 emotion-11"
       style={Object {}}
     >
       <div
-        className="emotion-4"
+        className="emotion-0 emotion-9"
         style={Object {}}
       >
         <div
-          className="emotion-1"
+          className="emotion-0 emotion-3"
           style={Object {}}
         >
           <div
-            className="shape emotion-0"
+            className="shape emotion-0 emotion-1"
             style={Object {}}
           />
         </div>
         <div
-          className="emotion-1"
+          className="emotion-0 emotion-3"
           style={Object {}}
         >
           <div
-            className="shape emotion-2"
+            className="shape emotion-0 emotion-5"
             style={Object {}}
           />
         </div>
@@ -1150,7 +1150,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 `;
 
 exports[`components/skeleton SkeletonText should render shallow component ok 1`] = `
-.emotion-0 {
+.emotion-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1174,7 +1174,7 @@ exports[`components/skeleton SkeletonText should render shallow component ok 1`]
 }
 
 <div
-  className="shape emotion-0"
+  className="shape emotion-0 emotion-1"
   style={Object {}}
 />
 `;

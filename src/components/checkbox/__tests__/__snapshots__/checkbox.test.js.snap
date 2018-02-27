@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox should render a checkbox partially checked 1`] = `
-.emotion-3 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,7 +16,7 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   justify-content: flex-start;
 }
 
-.emotion-0 {
+.emotion-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -39,7 +39,7 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   height: 14px;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: inline-block;
   vertical-align: bottom;
   margin-left: 10px;
@@ -60,28 +60,28 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   word-break: break-word;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   text-decoration: inherit;
 }
 
-.emotion-2 strong {
+.emotion-3 strong {
   font-weight: 500;
 }
 
 <div
   aria-checked="mixed"
-  className="root emotion-3"
+  className="root emotion-4 emotion-5"
   name={undefined}
   onClick={undefined}
   role="checkbox"
   style={Object {}}
 >
   <div
-    className="checkbox indeterminate emotion-0"
+    className="checkbox indeterminate emotion-0 emotion-1"
     style={Object {}}
   />
   <span
-    className="emotion-1 emotion-2"
+    className="emotion-2 emotion-3"
     color="navy600"
     onClick={undefined}
     size="small"
@@ -93,7 +93,7 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
 `;
 
 exports[`Checkbox should render a checkbox with label 1`] = `
-.emotion-3 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -108,7 +108,7 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   justify-content: flex-start;
 }
 
-.emotion-0 {
+.emotion-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -131,7 +131,7 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   height: 14px;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: inline-block;
   vertical-align: bottom;
   margin-left: 10px;
@@ -152,28 +152,28 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   word-break: break-word;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   text-decoration: inherit;
 }
 
-.emotion-2 strong {
+.emotion-3 strong {
   font-weight: 500;
 }
 
 <div
   aria-checked={true}
-  className="root emotion-3"
+  className="root emotion-4 emotion-5"
   name={undefined}
   onClick={undefined}
   role="checkbox"
   style={Object {}}
 >
   <div
-    className="checkbox checked emotion-0"
+    className="checkbox checked emotion-0 emotion-1"
     style={Object {}}
   />
   <span
-    className="emotion-1 emotion-2"
+    className="emotion-2 emotion-3"
     color="navy600"
     onClick={undefined}
     size="small"
@@ -185,7 +185,7 @@ exports[`Checkbox should render a checkbox with label 1`] = `
 `;
 
 exports[`Checkbox should render shallow component ok 1`] = `
-.emotion-1 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -200,7 +200,7 @@ exports[`Checkbox should render shallow component ok 1`] = `
   justify-content: flex-start;
 }
 
-.emotion-0 {
+.emotion-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -225,14 +225,14 @@ exports[`Checkbox should render shallow component ok 1`] = `
 
 <div
   aria-checked={true}
-  className="root emotion-1"
+  className="root emotion-2 emotion-3"
   name={undefined}
   onClick={undefined}
   role="checkbox"
   style={Object {}}
 >
   <div
-    className="checkbox checked emotion-0"
+    className="checkbox checked emotion-0 emotion-1"
     style={Object {}}
   />
 </div>

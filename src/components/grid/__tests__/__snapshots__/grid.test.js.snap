@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/grid should render shallow component ok 1`] = `
-.emotion-4 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15,7 +15,7 @@ exports[`components/grid should render shallow component ok 1`] = `
   margin-right: auto;
 }
 
-.emotion-2 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -28,7 +28,7 @@ exports[`components/grid should render shallow component ok 1`] = `
   padding-right: false;
 }
 
-.emotion-0 {
+.emotion-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -52,7 +52,7 @@ exports[`components/grid should render shallow component ok 1`] = `
   padding-right: 16px;
 }
 
-.emotion-1 {
+.emotion-3 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -77,19 +77,19 @@ exports[`components/grid should render shallow component ok 1`] = `
 }
 
 <div
-  className="emotion-3 emotion-4"
+  className="emotion-6 emotion-7"
   style={Object {}}
 >
   <div
-    className="emotion-2"
+    className="emotion-4 emotion-5"
     style={Object {}}
   >
     <div
-      className="emotion-0"
+      className="emotion-0 emotion-1"
       style={Object {}}
     />
     <div
-      className="emotion-1"
+      className="emotion-0 emotion-3"
       style={Object {}}
     />
   </div>

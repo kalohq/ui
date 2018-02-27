@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ButtonGroup should render shallow component ok 1`] = `
-.emotion-8 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12,7 +12,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
   align-items: center;
 }
 
-.emotion-3 {
+.emotion-7 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -33,7 +33,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
   display: flex;
 }
 
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -49,11 +49,11 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
 }
 
 <div
-  className="wide emotion-8"
+  className="wide emotion-0 emotion-17"
   style={Object {}}
 >
   <div
-    className="root spacing emotion-3"
+    className="root spacing emotion-6 emotion-7"
     onClick={[Function]}
     style={Object {}}
   >
@@ -64,13 +64,13 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
       type={undefined}
     >
       <div
-        className="placeholder emotion-0"
+        className="placeholder emotion-0 emotion-1"
         style={Object {}}
       >
         Button One
       </div>
       <div
-        className="message emotion-0"
+        className="message emotion-0 emotion-1"
         name="message"
         style={Object {}}
         title={undefined}
@@ -78,7 +78,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
         Button One
       </div>
       <div
-        className="successMessage emotion-0"
+        className="successMessage emotion-0 emotion-1"
         style={Object {}}
       />
       <div
@@ -103,7 +103,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
     </button>
   </div>
   <div
-    className="root spacing emotion-3"
+    className="root spacing emotion-6 emotion-7"
     onClick={[Function]}
     style={Object {}}
   >
@@ -114,13 +114,13 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
       type={undefined}
     >
       <div
-        className="placeholder emotion-0"
+        className="placeholder emotion-0 emotion-1"
         style={Object {}}
       >
         Button Two
       </div>
       <div
-        className="message emotion-0"
+        className="message emotion-0 emotion-1"
         name="message"
         style={Object {}}
         title={undefined}
@@ -128,7 +128,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
         Button Two
       </div>
       <div
-        className="successMessage emotion-0"
+        className="successMessage emotion-0 emotion-1"
         style={Object {}}
       />
       <div

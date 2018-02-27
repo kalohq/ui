@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/paper Paper should render a component with an elevation of 3 1`] = `
-.emotion-0 {
+.emotion-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -23,7 +23,7 @@ exports[`components/paper Paper should render a component with an elevation of 3
 }
 
 <div
-  className="root level-3 hover-level-1 border rounded emotion-0"
+  className="root level-3 hover-level-1 border rounded emotion-0 emotion-1"
   onClick={undefined}
   style={Object {}}
 >
@@ -32,7 +32,7 @@ exports[`components/paper Paper should render a component with an elevation of 3
 `;
 
 exports[`components/paper Paper should render shallow component ok 1`] = `
-.emotion-0 {
+.emotion-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -54,7 +54,7 @@ exports[`components/paper Paper should render shallow component ok 1`] = `
 }
 
 <div
-  className="root level-1 hover-level-1 border rounded emotion-0"
+  className="root level-1 hover-level-1 border rounded emotion-0 emotion-1"
   onClick={undefined}
   spacing={true}
   style={Object {}}
@@ -64,7 +64,7 @@ exports[`components/paper Paper should render shallow component ok 1`] = `
 `;
 
 exports[`components/paper PaperToolbar should render shallow component ok 1`] = `
-.emotion-0 {
+.emotion-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -85,7 +85,7 @@ exports[`components/paper PaperToolbar should render shallow component ok 1`] = 
   display: flex;
 }
 
-.emotion-1 {
+.emotion-3 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -108,11 +108,11 @@ exports[`components/paper PaperToolbar should render shallow component ok 1`] = 
 }
 
 <div
-  className="root emotion-1"
+  className="root emotion-0 emotion-3"
   style={Object {}}
 >
   <div
-    className="root level-1 hover-level-1 border rounded emotion-0"
+    className="root level-1 hover-level-1 border rounded emotion-0 emotion-1"
     onClick={undefined}
     style={Object {}}
   >
