@@ -1,7 +1,7 @@
 /* @flow */
 import * as React from 'react';
 import {List} from 'immutable';
-import {size} from 'utils/type';
+import {size} from '../../utils/type';
 
 import {Box} from '../layout';
 import FieldHint from '../field-hint';
