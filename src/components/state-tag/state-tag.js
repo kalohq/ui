@@ -36,30 +36,39 @@ const StyledStateTagIcon = styled(Icon)`
  */
 
 type TProps = {
-  children?: React$Node,
   /** Sets the color of the copy and icon */
   theme?: 'blue' | 'orange' | 'green' | 'red' | 'purple' | 'grey',
   /** An icon to display to the left of the tag */
   leftIcon?: string,
   /** An icon to display to the right of the tag */
   rightIcon?: string,
+  /** A copy label to display */
+  label?: string,
+  /** Is the StateTag editable? */
+  editable?: boolean,
 };
 
 export default function StateTag(props: TProps) {
-  const {children, theme, leftIcon, rightIcon, editable, ...otherProps} = props;
+  const {label, theme, leftIcon, rightIcon, editable, ...otherProps} = props;
 
   return (
     <StyledStateTag tagTheme={theme} interactive={editable} {...otherProps}>
       {leftIcon ? (
-        <StyledStateTagIcon marginRight={8}>{leftIcon}</StyledStateTagIcon>
+        <StyledStateTagIcon marginRight={label ? 8 : 0}>
+          {leftIcon}
+        </StyledStateTagIcon>
       ) : null}
 
-      <Text color="none" size="small" weight="medium">
-        {children}
-      </Text>
+      {label ? (
+        <Text color="none" size="small" weight="medium">
+          {label}
+        </Text>
+      ) : null}
 
       {rightIcon ? (
-        <StyledStateTagIcon marginLeft={8}>{rightIcon}</StyledStateTagIcon>
+        <StyledStateTagIcon marginLeft={label ? 8 : 0}>
+          {rightIcon}
+        </StyledStateTagIcon>
       ) : null}
     </StyledStateTag>
   );
