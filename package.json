@@ -68,7 +68,6 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "21.0.0",
     "jest-emotion": "^9.0.0",
-    "jest-glamor-react": "3.0.0",
     "lint-staged": "3.4.2",
     "lodash": "4.17.2",
     "postcss-cli": "3.2.0",
