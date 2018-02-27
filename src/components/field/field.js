@@ -1,6 +1,7 @@
 /* @flow */
 import * as React from 'react';
 import {List} from 'immutable';
+import {size} from 'utils/type';
 
 import {Box} from '../layout';
 import FieldHint from '../field-hint';
@@ -136,12 +137,11 @@ export default function Field(props: TProps) {
           )
         )}
       </Box>
-      {!!validations ? (
+
+      {!!size(validations) ? (
         <FieldValidations centered={centered} validations={validations} />
-      ) : permissions[0] ? (
-        <FieldHint hint={permissions[0].message} />
       ) : hintText ? (
-        <FieldHint hint={hintText} icon={hintIcon ? hintIcon : null} />
+        <FieldHint hint={hintText} icon={hintIcon ? hintIcon : undefined} />
       ) : null}
     </Box>
   );
