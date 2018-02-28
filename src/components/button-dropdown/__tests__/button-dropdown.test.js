@@ -1,8 +1,8 @@
 /* @flow */
 /* eslint-env jest */
 import * as React from 'react';
-import {sheet} from 'emotion';
-import serializer from 'jest-glamor-react';
+import * as emotion from 'emotion';
+import {createSerializer} from 'jest-emotion';
 import renderer from 'react-test-renderer';
 import {ThemeProvider} from 'emotion-theming';
 
@@ -14,7 +14,7 @@ jest.mock('react-dom', () => ({
   unstable_renderSubtreeIntoContainer: () => {},
 }));
 
-expect.addSnapshotSerializer(serializer(sheet));
+expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe('ButtonDropdown', () => {
   const defaultProps = {

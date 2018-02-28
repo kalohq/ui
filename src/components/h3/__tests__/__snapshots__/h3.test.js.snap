@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`H3 should allow weight to be overridden 1`] = `
-.glamor-1 {
+.emotion-1 {
   display: block;
   vertical-align: bottom;
   font-family: 'WebFaktSoftPro',sans-serif;
@@ -16,16 +16,16 @@ exports[`H3 should allow weight to be overridden 1`] = `
   color: rgb(55,69,97);
 }
 
-.glamor-1:hover {
+.emotion-1:hover {
   text-decoration: inherit;
 }
 
-.glamor-1 strong {
+.emotion-1 strong {
   font-weight: 500;
 }
 
 <h3
-  className="root glamor-0 glamor-1"
+  className="root emotion-0 emotion-1"
   color="navy700"
   onClick={undefined}
   size="small"
@@ -36,7 +36,7 @@ exports[`H3 should allow weight to be overridden 1`] = `
 `;
 
 exports[`H3 should render shallow component ok 1`] = `
-.glamor-1 {
+.emotion-1 {
   display: block;
   vertical-align: bottom;
   font-family: 'WebFaktSoftPro',sans-serif;
@@ -51,16 +51,16 @@ exports[`H3 should render shallow component ok 1`] = `
   color: rgb(55,69,97);
 }
 
-.glamor-1:hover {
+.emotion-1:hover {
   text-decoration: inherit;
 }
 
-.glamor-1 strong {
+.emotion-1 strong {
   font-weight: 500;
 }
 
 <h3
-  className="root glamor-0 glamor-1"
+  className="root emotion-0 emotion-1"
   color="navy700"
   onClick={undefined}
   size="small"

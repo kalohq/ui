@@ -1,14 +1,15 @@
 /* @flow */
 /* eslint-env jest */
 import * as React from 'react';
-import serializer from 'jest-glamor-react';
+import * as emotion from 'emotion';
+import {createSerializer} from 'jest-emotion';
 import renderer from 'react-test-renderer';
 import {ThemeProvider} from 'emotion-theming';
 
 import theme from 'components/theme';
 import Alert from 'components/alert';
 
-expect.addSnapshotSerializer(serializer);
+expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe('Alert', () => {
   const defaultProps = {
