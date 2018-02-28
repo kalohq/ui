@@ -79,6 +79,7 @@ export type TEXT_COLOR =
   | 'white'
   | 'black'
   | 'none'
+  | 'currentColor'
   /* DEPRECATED */
   | 'red'
   | 'snow' // deprecated
