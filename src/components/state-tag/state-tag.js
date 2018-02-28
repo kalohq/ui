@@ -2,7 +2,7 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-import {Box} from '../layout';
+import {InlineFlex} from '../layout';
 import Icon from '../icon';
 import Text from '../text';
 
@@ -15,13 +15,11 @@ const STATE_TAG_BACKGROUND_MAP = {
   grey: 'grey700',
 };
 
-const StyledStateTag = styled(Box)`
-  display: inline-flex;
+const StyledStateTag = styled(InlineFlex)`
   flex-direction: row;
   align-items: center;
-  transition: all 0.2s ease-in-out;
-  cursor: ${props => (props.interactive ? 'pointer' : 'default')};
   line-height: 1em;
+  padding: 4px 8px;
   color: ${props =>
     props.theme.colors[STATE_TAG_BACKGROUND_MAP[props.tagTheme]]};
 `;
@@ -44,22 +42,29 @@ type TProps = {
   rightIcon?: string,
   /** A copy label to display */
   label?: ?string,
-  /** Is the StateTag editable? */
-  editable?: boolean,
+  /** Should the label be displayed? */
+  showLabel?: boolean,
 };
 
 export default function StateTag(props: TProps) {
-  const {label, theme, leftIcon, rightIcon, editable, ...otherProps} = props;
+  const {
+    label,
+    showLabel = true,
+    theme,
+    leftIcon,
+    rightIcon,
+    ...otherProps
+  } = props;
 
   return (
-    <StyledStateTag tagTheme={theme} interactive={editable} {...otherProps}>
+    <StyledStateTag tagTheme={theme} {...otherProps}>
       {leftIcon ? (
         <StyledStateTagIcon marginRight={label ? 8 : 0}>
           {leftIcon}
         </StyledStateTagIcon>
       ) : null}
 
-      {label ? (
+      {showLabel && label ? (
         <Text color="none" size="small" weight="medium">
           {label}
         </Text>
