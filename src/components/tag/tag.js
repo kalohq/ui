@@ -57,13 +57,13 @@ const StyledRemove = styled.button`
   height: 28px;
   right: -17px;
   margin-left: -8px;
-  top: -1px;
   color: currentColor;
   border-radius: 0 16px 16px 0;
   cursor: pointer;
+  border-left: 1px solid currentColor;
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.04);
+    background-color: rgba(0, 0, 0, 0.03);
   }
 
   &:focus {
@@ -75,9 +75,13 @@ const StyledRemove = styled.button`
  */
 
 type TProps = {
+  /** Inner text to display in the tag */
   label?: string,
+  /** The general color theme of the tag */
   theme?: 'blue' | 'orange' | 'green' | 'red' | 'purple' | 'grey',
+  /** A function to call when a user clicks */
   onClick?: Function,
+  /** A function to call if the tag is removable */
   onRemove?: Function,
 };
 

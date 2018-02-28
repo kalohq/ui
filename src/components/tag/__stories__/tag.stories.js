@@ -22,6 +22,6 @@ export const examples = [
     title: 'Removable Tag',
     description:
       "Tags can be removed on-click by passing a function to onRemove. This will display an 'x' to the right of the tag",
-    render: () => <Tag theme="blue" label="Scuba Diving" onRemove={() => {}} />,
+    render: () => <Tag theme="red" label="Scuba Diving" onRemove={() => {}} />,
   },
 ];
