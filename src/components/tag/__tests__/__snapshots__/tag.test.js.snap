@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/tag should shallow render as expected 1`] = `
+.glamor-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+  -webkit-transition: color 0.5s ease-in;
+  transition: color 0.5s ease-in;
+  background: rgb(193,244,255);
+  border: 1px solid currentColor;
+  color: rgb(77,184,207);
+  border-radius: 16px;
+  padding: 0 16px;
+  vertical-align: middle;
+  max-width: 100%;
+  width: fit-content;
+  cursor: default;
+}
+
+.glamor-1 {
+  display: inline-block;
+  vertical-align: bottom;
+  font-family: 'WebFaktSoftPro',sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: inherit;
+  text-align: unset;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-size: 12px;
+  color: currentColor;
+}
+
+.glamor-1:hover {
+  text-decoration: inherit;
+}
+
+.glamor-1 strong {
+  font-weight: 500;
+}
+
+<span
+  className="glamor-2 glamor-3"
+  onClick={undefined}
+  style={Object {}}
+>
+  .glamor-1 {
+  display: inline-block;
+  vertical-align: bottom;
+  font-family: 'WebFaktSoftPro',sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: inherit;
+  text-align: unset;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-size: 12px;
+  color: currentColor;
+}
+
+.glamor-1:hover {
+  text-decoration: inherit;
+}
+
+.glamor-1 strong {
+  font-weight: 500;
+}
+
+<span
+    className="glamor-0 glamor-1"
+    color="currentColor"
+    onClick={undefined}
+    size="extra-small"
+    style={Object {}}
+  />
+</span>
+`;
