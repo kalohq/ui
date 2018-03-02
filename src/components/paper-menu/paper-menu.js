@@ -1,5 +1,6 @@
 /* @flow */
 import * as React from 'react';
+import styled from 'react-emotion';
 
 import PureComponent from 'react-pure-render/component';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
@@ -9,7 +10,33 @@ import Icon from '../icon';
 import Paper from '../paper';
 import Sticky from '../sticky';
 
-import styles from './paper-menu.css';
+const StyledPaperMenu = styled.div`
+  transform-origin: top;
+  transition: box-shadow 0.2s linear;
+  transition-duration: 0.2s !important;
+`;
+
+const StyledPaperMenuHeader = styled.div`
+  display: flex;
+  padding: 32px 32px 16px 32px;
+  justify-content: space-between;
+`;
+
+const StyledPaperMenuOption = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -6px;
+`;
+
+const StyledPaperMenuOptionClose = styled.button`
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+`;
 
 /**
  * Generic open/close popup paper styled menu
@@ -110,30 +137,28 @@ export default class PaperMenu extends PureComponent {
           transitionAppearTimeout={300}
         >
           {open ? (
-            <div
+            <StyledPaperMenu
               {...root}
-              className={styles.root}
               style={{transformOrigin: origin}}
               onClick={event => event.stopPropagation()}
             >
               <Paper {...paper}>
                 {heading && (
-                  <div className={styles.header}>
+                  <StyledPaperMenuHeader>
                     <H3>{heading}</H3>
-                    <div className={styles.options}>
+                    <StyledPaperMenuOption>
                       {optionIcons}
-                      <div
-                        className={styles.close}
+                      <StyledPaperMenuOptionClose
                         onClick={this.props.onRequestClose}
                       >
                         <Icon size={18}>clear</Icon>
-                      </div>
-                    </div>
-                  </div>
+                      </StyledPaperMenuOptionClose>
+                    </StyledPaperMenuOption>
+                  </StyledPaperMenuHeader>
                 )}
                 {children}
               </Paper>
-            </div>
+            </StyledPaperMenu>
           ) : null}
         </CSSTransitionGroup>
       </Sticky>
