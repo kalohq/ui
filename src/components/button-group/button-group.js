@@ -1,46 +1,41 @@
 /* @flow */
 import * as React from 'react';
-import cx from 'classnames';
+import styled, {css} from 'react-emotion';
 
-import {Flex} from '../layout';
+const StyledButtonGroup = styled.div`
+  display: flex;
+  align-items: center;
+  width: ${props => (props.wide ? '100%' : 'auto')};
 
-import styles from './button-group.css';
-
+  ${props =>
+    props.reverse &&
+    css`
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    `};
+`;
 /**
  * A basic container for grouped buttons
  * - Clones children to ensure Button components received a 'grouped' prop
  */
 
 type Props = {
+  /** One or more Buttons */
   children: React.Element<*>,
   flex?: boolean,
-  bordered?: boolean,
+  /** Should this span the full width of the parent? */
   wide?: boolean,
+  /** Should there be spacing between the child buttons? */
   spacing?: boolean,
+  /** Reverses the order of child buttons */
   reverse?: boolean,
 };
 
 export default function ButtonGroup(props: Props) {
-  const {
-    children,
-    wide = true,
-    bordered,
-    flex,
-    spacing,
-    reverse,
-    ...otherProps
-  } = props;
+  const {children, wide = true, flex, spacing, reverse, ...otherProps} = props;
 
   return (
-    <Flex
-      alignItems="center"
-      className={cx({
-        [styles.wide]: wide,
-        [styles.bordered]: bordered,
-        [styles.reverse]: reverse,
-      })}
-      {...otherProps}
-    >
+    <StyledButtonGroup reverse={reverse} wide={wide} {...otherProps}>
       {children ? (
         React.Children.map(
           children,
@@ -55,6 +50,6 @@ export default function ButtonGroup(props: Props) {
               : null
         )
       ) : null}
-    </Flex>
+    </StyledButtonGroup>
   );
 }
