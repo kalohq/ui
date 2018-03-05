@@ -1,12 +1,74 @@
 /* @flow */
 import * as React from 'react';
-import cx from 'classnames';
 import {isString} from 'lodash';
+import styled, {css} from 'react-emotion';
 
 import {Box} from '../../layout';
 import Icon from '../../icon';
 
-import styles from './paper-menu-item.css';
+const StyledPaperMenuItem = styled.div`
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  background-color: ${props => props.theme.colors.white};
+  cursor: ${props => (props.disabled ? 'default' : 'pointer')};
+  opacity: ${props => (props.disabled ? 0.5 : 1)};
+  border-bottom: 1px solid ${props => props.theme.colors.grey300};
+  transition: all 0.2s ease-in;
+  color: inherit;
+  padding: 4px 16px;
+  user-select: none;
+  text-decoration: none;
+  min-height: 52px;
+  min-width: ${props => props.minWidth};
+
+  &:hover {
+    ${props =>
+      !props.disabled && css`background-color: ${props.theme.colors.grey300};`};
+  }
+
+  ${props =>
+    !props.disabled &&
+    !props.static &&
+    css`
+      border-left: 2px solid transparent;
+    `} ${props =>
+      props.active &&
+      css`
+        background: ${props.theme.colors.blue500};
+        color: #fff;
+        padding-top: 0;
+      `};
+
+  ${props =>
+    props.highlighted &&
+    css`
+      background: ${props.theme.colors.grey200};
+      color: ${props.theme.colors.blue500};
+    `};
+`;
+
+const StyledPaperMenuItemContent = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: ${props => props.theme.colors.navy700};
+
+  > * {
+    margin-right: 10px !important;
+  }
+
+  > *:last-child {
+    margin-right: 0px !important;
+  }
+`;
 
 type Props = {
   icon?: React.Node | string,
@@ -23,8 +85,6 @@ type Props = {
   component?: any,
   minWidth?: number,
 };
-
-const DEFAULT_HEIGHT = 52;
 
 /**
  * Generic item container for use in paper menus
@@ -46,28 +106,17 @@ export default function PaperMenuItem(props: Props) {
     ...otherProps
   } = props;
 
-  const _classNames = cx(
-    {
-      [styles.root]: true,
-      [styles.highlighted]: highlighted,
-      [styles.active]: active,
-      [styles.success]: success,
-      [styles.disabled]: disabled,
-    },
-    className
-  );
-
   return (
-    <Box
-      className={_classNames}
-      flexDirection="row"
-      minHeight={DEFAULT_HEIGHT}
+    <StyledPaperMenuItem
       minWidth={minWidth ? minWidth : 'auto'}
-      alignItems="center"
-      alignContent="center"
       onClick={onClick}
       name={name}
       component={component}
+      className={className}
+      highlighted={highlighted}
+      active={active}
+      success={success}
+      disabled={disabled}
       {...otherProps}
     >
       {icon ? (
@@ -76,9 +125,7 @@ export default function PaperMenuItem(props: Props) {
         </Box>
       ) : null}
 
-      <Box flexDirection="row" className={styles.content}>
-        {children}
-      </Box>
+      <StyledPaperMenuItemContent>{children}</StyledPaperMenuItemContent>
 
       {iconAfter ? (
         <Box marginLeft={10}>
@@ -89,6 +136,6 @@ export default function PaperMenuItem(props: Props) {
           )}
         </Box>
       ) : null}
-    </Box>
+    </StyledPaperMenuItem>
   );
 }
