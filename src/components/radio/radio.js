@@ -3,11 +3,60 @@ import React from 'react';
 import {pickStyles} from '../../utils/style';
 import {isNull} from 'lodash';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import cx from 'classnames';
-import {Flex, Box, Inline} from '../layout';
+import styled, {css} from 'react-emotion';
+
 import Text from '../text';
-import {RADIO_SIZES} from './constants';
-import styles from './radio.css';
+
+const RADIO_SIZES = {
+  small: 14,
+  medium: 16,
+};
+
+const StyledRadioContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: ${props =>
+    props.readonly || props.disabled ? 'default' : 'pointer'};
+`;
+
+const StyledRadio = styled.div`
+  border-radius: 50%;
+  position: relative;
+  border: 1px solid
+    ${props =>
+      props.checked ? props.theme.colors.blue500 : props.theme.colors.grey500};
+  background-color: #fff;
+  background-position: center center;
+  background-size: 80%;
+  transition: all 200ms ease-in-out;
+  width: ${props => RADIO_SIZES[props.size]}px;
+  height: ${props => RADIO_SIZES[props.size]}px;
+
+  &:hover {
+    ${props =>
+      !props.disabled &&
+      !props.readonly &&
+      !props.checked &&
+      css`
+        border-color: ${props.theme.colors.grey600};
+      `};
+  }
+`;
+
+const StyledRadioIcon = styled.span`
+  display: inline-block;
+  transition-duration: 0.15s !important;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: ${props =>
+    props.disabled ? props.theme.colors.grey500 : props.theme.colors.blue500};
+  border: 3px solid #fff;
+`;
 
 type RadioProps = {
   /** Is the radio button checked */
@@ -39,28 +88,18 @@ export function Radio(props: RadioProps) {
   } = props;
 
   return (
-    <Flex
-      alignItems="center"
-      justifyContent="start"
+    <StyledRadioContainer
       onClick={readonly || disabled ? null : onClick}
       name={name}
       role="radio"
       aria-checked={checked}
       aria-disabled={disabled}
-      className={cx({
-        [styles.root]: true,
-        [styles.disabled]: disabled,
-        [styles.readonly]: readonly,
-      })}
     >
-      <Box
-        position="relative"
-        width={RADIO_SIZES.properties[size].size}
-        height={RADIO_SIZES.properties[size].size}
-        className={cx({
-          [styles.radio]: true,
-          [styles.checked]: checked,
-        })}
+      <StyledRadio
+        disabled={disabled}
+        readonly={readonly}
+        checked={checked}
+        size={size}
         {...pickStyles(otherProps)}
         {...otherProps}
       >
@@ -70,21 +109,16 @@ export function Radio(props: RadioProps) {
           transitionLeaveTimeout={300}
         >
           {checked || isNull(checked) ? (
-            <Inline
-              position="absolute"
-              className={cx({
-                [styles.icon]: true,
-              })}
-            />
+            <StyledRadioIcon disabled={disabled} />
           ) : null}
         </ReactCSSTransitionGroup>
-      </Box>
+      </StyledRadio>
       {label ? (
         <Text marginLeft={10} size="small" color="navy700" component="label">
           {label}
         </Text>
       ) : null}
-    </Flex>
+    </StyledRadioContainer>
   );
 }
 
