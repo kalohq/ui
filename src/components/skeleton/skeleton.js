@@ -1,8 +1,7 @@
 import React from 'react';
-import {Box} from '../layout';
-import cx from 'classnames';
+import styled from 'react-emotion';
 
-import styles from './skeleton.css';
+import {Box} from '../layout';
 
 /** Multiplier for textual content "size" */
 const TEXT_SIZE_MULTIPLIER = 10;
@@ -46,17 +45,12 @@ function SpacerBox({
 }
 
 /** Skeleton representation of any arbitrary rectangular or circular shape */
-export function SkeletonShape({shape = 'rect', ...styleProps}) {
-  return (
-    <Box
-      className={cx({
-        [styles.circle]: shape === 'circle',
-        [styles.shape]: true,
-      })}
-      {...styleProps}
-    />
-  );
-}
+export const SkeletonShape = styled(Box)`
+  border-radius: ${props => (props.shape === 'circle' ? '50%' : 0)};
+  background-color: ${props => props.theme.colors.grey300};
+  height: ${props => props.height}px;
+  width: ${props => props.width}px;
+`;
 
 /**
  * Skeleton representation of text content
@@ -81,18 +75,17 @@ export function SkeletonAvatar({size = 4}) {
 }
 
 /** Skeleton representation of paper container */
-export function SkeletonPaper({children, style}) {
-  return (
-    <Box className={styles.paper} padding={15} style={style}>
-      {children}
-    </Box>
-  );
-}
+export const SkeletonPaper = styled(Box)`
+  background-color: #fff;
+  border: 1px solid ${props => props.theme.colors.grey300};
+  border-radius: 3px;
+  padding: 16px;
+`;
 
 /** Skeleton representation of an avatar */
 export function SkeletonCard({children}) {
   return (
-    <Box className={styles.paper} paddingTop={75} paddingBottom={150}>
+    <SkeletonPaper paddingTop={75} paddingBottom={150}>
       <SpacerBox vertical={true}>
         {children ? (
           children
@@ -104,19 +97,14 @@ export function SkeletonCard({children}) {
           ]
         )}
       </SpacerBox>
-    </Box>
+    </SkeletonPaper>
   );
 }
 
 /** Skeleton representation of an avatar */
 export function SkeletonListItem({children}) {
   return (
-    <Box
-      className={cx({
-        [styles.paper]: true,
-      })}
-      padding={25}
-    >
+    <SkeletonPaper padding={25}>
       <SpacerBox>
         {children ? (
           children
@@ -124,7 +112,7 @@ export function SkeletonListItem({children}) {
           [<SkeletonText size={14} key={0} />, <SkeletonText key={1} />]
         )}
       </SpacerBox>
-    </Box>
+    </SkeletonPaper>
   );
 }
 
@@ -163,46 +151,33 @@ export function SkeletonPage({children, width = 1180}) {
 }
 
 /** Skeleton page header */
-export function SkeletonPageHeader({children}) {
-  return (
-    <Box
-      className={cx({
-        [styles.header]: true,
-      })}
-    >
-      {children}
-    </Box>
-  );
-}
+export const SkeletonPageHeader = styled(Box)`
+  background-color: #fff;
+  border-bottom: 1px solid ${props => props.theme.colors.grey300};
+`;
 
 /** Skeleton page header heading */
-export function SkeletonPageHeaderHeading({width = 1180, children}) {
-  return (
-    <Box
-      margin={[0, 'auto']}
-      width={width}
-      height={80}
-      justifyContent="space-between"
-      flexDirection="row"
-      alignItems="center"
-    >
-      {children}
-    </Box>
-  );
-}
+export const SkeletonPageHeaderHeading = styled(Box)`
+  margin: 0 auto;
+  width: ${props => (props.width ? props.width : 1180)}px;
+  height: 80px;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+`;
 
 /** Skeleton page header heading */
+export const StyledSkeletonPageHeaderToolbar = styled(Box)`
+  border-top: 1px solid var(--grey300);
+`;
+
 export function SkeletonPageHeaderToolbar({width = 1180, children}) {
   return (
-    <Box
-      className={cx({
-        [styles.toolbar]: true,
-      })}
-    >
+    <StyledSkeletonPageHeaderToolbar>
       <Box margin={[0, 'auto']} width={width}>
         <SpacerBox height={46}>{children}</SpacerBox>
       </Box>
-    </Box>
+    </StyledSkeletonPageHeaderToolbar>
   );
 }
 
