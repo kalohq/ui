@@ -1,8 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LoadingSpinner should render a large spinner 1`] = `
+.emotion-0 {
+  position: relative;
+  -webkit-transform-origin: 48% 50%;
+  -ms-transform-origin: 48% 50%;
+  transform-origin: 48% 50%;
+  -webkit-animation: animation-66ghwx 1600ms linear infinite;
+  animation: animation-66ghwx 1600ms linear infinite;
+  width: px;
+  height: px;
+}
+
+.emotion-0 svg {
+  fill: rgb(198,199,216);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 <div
-  className="root large"
+  className="emotion-0 emotion-1"
 >
   <svg
     height="50px"
@@ -19,8 +37,26 @@ exports[`LoadingSpinner should render a large spinner 1`] = `
 `;
 
 exports[`LoadingSpinner should render shallow component ok 1`] = `
+.emotion-0 {
+  position: relative;
+  -webkit-transform-origin: 48% 50%;
+  -ms-transform-origin: 48% 50%;
+  transform-origin: 48% 50%;
+  -webkit-animation: animation-66ghwx 1600ms linear infinite;
+  animation: animation-66ghwx 1600ms linear infinite;
+  width: px;
+  height: px;
+}
+
+.emotion-0 svg {
+  fill: rgb(198,199,216);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 <div
-  className="root medium"
+  className="emotion-0 emotion-1"
 >
   <svg
     height="30px"

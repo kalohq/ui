@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`H3 should allow weight to be overridden 1`] = `
-.emotion-1 {
+.emotion-2 {
   display: block;
   vertical-align: bottom;
   font-family: 'WebFaktSoftPro',sans-serif;
@@ -14,18 +14,25 @@ exports[`H3 should allow weight to be overridden 1`] = `
   font-weight: 300;
   font-size: 14px;
   color: rgb(55,69,97);
+  line-height: 1.25em !important;
 }
 
-.emotion-1:hover {
+.emotion-2:hover {
   text-decoration: inherit;
 }
 
-.emotion-1 strong {
+.emotion-2 strong {
   font-weight: 500;
 }
 
+.emotion-2 > i {
+  position: relative;
+  left: 2px;
+  vertical-align: top;
+}
+
 <h3
-  className="root emotion-0 emotion-1"
+  className="emotion-0 emotion-1 emotion-2"
   color="navy700"
   onClick={undefined}
   size="small"
@@ -36,7 +43,7 @@ exports[`H3 should allow weight to be overridden 1`] = `
 `;
 
 exports[`H3 should render shallow component ok 1`] = `
-.emotion-1 {
+.emotion-2 {
   display: block;
   vertical-align: bottom;
   font-family: 'WebFaktSoftPro',sans-serif;
@@ -49,18 +56,25 @@ exports[`H3 should render shallow component ok 1`] = `
   font-weight: 600;
   font-size: 14px;
   color: rgb(55,69,97);
+  line-height: 1.25em !important;
 }
 
-.emotion-1:hover {
+.emotion-2:hover {
   text-decoration: inherit;
 }
 
-.emotion-1 strong {
+.emotion-2 strong {
   font-weight: 500;
 }
 
+.emotion-2 > i {
+  position: relative;
+  left: 2px;
+  vertical-align: top;
+}
+
 <h3
-  className="root emotion-0 emotion-1"
+  className="emotion-0 emotion-1 emotion-2"
   color="navy700"
   onClick={undefined}
   size="small"
