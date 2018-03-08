@@ -42,7 +42,7 @@ export default function LoadingSpinner(props: TProps) {
   const {size = 'medium'} = props;
 
   return (
-    <StyledLoadingSpinner>
+    <StyledLoadingSpinner size={size}>
       <svg
         width={`${SPINNER_DIMENSIONS[size]}px`}
         height={`${SPINNER_DIMENSIONS[size]}px`}
