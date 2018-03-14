@@ -17,7 +17,7 @@ exports.onCreateNode = ({node, getNode, boundActionCreators}) => {
       node.parent &&
       node.parent.includes('../src/components') &&
       node.parent.includes('README') &&
-      !node.parent.includes('__stories__') &&
+      !node.parent.includes('__examples__') &&
       !node.parent.includes('__tests__')
     ) {
       const relativePath = createFilePath({
@@ -72,7 +72,7 @@ exports.onCreateNode = ({node, getNode, boundActionCreators}) => {
     if (
       node.parent &&
       node.parent.includes('../src/components') &&
-      !node.parent.includes('__stories__') &&
+      !node.parent.includes('__examples__') &&
       !node.parent.includes('__tests__')
     ) {
       createNodeField({
@@ -85,12 +85,12 @@ exports.onCreateNode = ({node, getNode, boundActionCreators}) => {
 };
 
 exports.onPreBootstrap = () => {
-  console.log('Start: Generate stories import bundle'); // eslint-disable-line no-console
+  console.log('Start: Generate examples import bundle'); // eslint-disable-line no-console
 
   const cwd = path.resolve(process.cwd(), '../');
 
   const storyPaths = glob
-    .sync('src/**/__stories__/*.stories.js', {cwd})
+    .sync('src/**/__examples__/*.examples.js', {cwd})
     .map(storyPath => {
       const fullStoryPath = path.resolve(cwd, storyPath);
       const name = upperFirst(
@@ -110,12 +110,12 @@ module.exports = {
 `;
 
   fs.writeFileSync(
-    path.resolve(__dirname, './src/data/stories.js'),
+    path.resolve(__dirname, './src/data/examples.js'),
     fileContents,
     'utf8'
   );
 
-  console.log('END: generating stories import bundle'); // eslint-disable-line no-console
+  console.log('END: generating examples import bundle'); // eslint-disable-line no-console
 };
 
 exports.createPages = ({boundActionCreators, graphql}) => {
