@@ -1,32 +1,46 @@
 {
   "plugins": [
-    ["emotion", {
-      "sourceMap": true
-    }],
+    [
+      "emotion",
+      {
+        "sourceMap": true
+      }
+    ],
     "lodash",
-    ["transform-runtime", {
-      "polyfill": false,
-      "regenerator": true
-    }],
-    ["babel-plugin-transform-builtin-extend", {
-      "globals": ["Error"],
-    }]
+    "add-react-displayname",
+    [
+      "transform-runtime",
+      {
+        "polyfill": false,
+        "regenerator": true
+      }
+    ],
+    [
+      "babel-plugin-transform-builtin-extend",
+      {
+        "globals": ["Error"]
+      }
+    ]
   ],
-  "presets": [
-    "es2015", "react", "stage-2"
-  ],
+  "presets": ["es2015", "react", "stage-2"],
   "env": {
     "test": {
       "plugins": [
-        ["transform-runtime", {
-          "polyfill": false,
-          "regenerator": true
-        }],
-        ["babel-plugin-transform-builtin-extend", {
-          "globals": ["Error"],
-        }],
+        [
+          "transform-runtime",
+          {
+            "polyfill": false,
+            "regenerator": true
+          }
+        ],
+        [
+          "babel-plugin-transform-builtin-extend",
+          {
+            "globals": ["Error"]
+          }
+        ],
         "babel-plugin-transform-es2015-modules-commonjs"
       ]
-    },
+    }
   }
 }
