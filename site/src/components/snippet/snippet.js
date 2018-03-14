@@ -84,10 +84,12 @@ function getData(element) {
   data.children = element.props.children;
   const type = element.type;
 
-  if (typeof type === 'string') {
+  if (type.displayName) {
+    data.name = type.displayName;
+  } else if (typeof type === 'string') {
     data.name = type;
   } else {
-    data.name = type.displayName || type.name || 'Unknown';
+    data.name = type.name || 'Unknown';
   }
 
   return data;
