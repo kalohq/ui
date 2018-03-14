@@ -9,5 +9,5 @@ design-tokens/*
 ##
 
 site/public
-site/src/data/stories.js
+site/src/data/examples.js
 site/.cache
