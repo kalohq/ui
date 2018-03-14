@@ -21,7 +21,7 @@ exports[`Input should render shallow component ok 1`] = `
         style={Object {}}
       >
         <label
-          className="em7k1990 css-1hye6w1"
+          className="em7k1990 css-1fy220i"
           color="navy600"
           htmlFor={undefined}
           onClick={undefined}
