@@ -23,7 +23,6 @@
   },
   "devDependencies": {
     "@kalo/eslint-config": "^6.0.0",
-    "babel-plugin-add-react-displayname": "0.0.5",
     "eslint": "3.19.0",
     "eslint-config-airbnb": "14.1.0",
     "eslint-config-prettier": "2.4.0",
