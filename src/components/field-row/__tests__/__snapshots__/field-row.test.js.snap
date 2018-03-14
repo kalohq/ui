@@ -6,7 +6,7 @@ exports[`Input should render shallow component ok 1`] = `
   style={Object {}}
 >
   <div
-    className="e1q9f2xp0 css-1y7ze3x"
+    className="e1q9f2xp0 css-az3w3z"
     onClick={undefined}
     style={Object {}}
   >
@@ -19,7 +19,7 @@ exports[`Input should render shallow component ok 1`] = `
         style={Object {}}
       >
         <label
-          className="em7k1990 css-1hye6w1"
+          className="em7k1990 css-1fy220i"
           color="navy600"
           htmlFor={undefined}
           onClick={undefined}
@@ -56,7 +56,7 @@ exports[`Input should render shallow component ok 1`] = `
     </div>
   </div>
   <div
-    className="e1q9f2xp0 css-1y7ze3x"
+    className="e1q9f2xp0 css-az3w3z"
     onClick={undefined}
     style={Object {}}
   >
@@ -69,7 +69,7 @@ exports[`Input should render shallow component ok 1`] = `
         style={Object {}}
       >
         <label
-          className="em7k1990 css-1hye6w1"
+          className="em7k1990 css-1fy220i"
           color="navy600"
           htmlFor={undefined}
           onClick={undefined}
