@@ -12,7 +12,7 @@
         "component/__tests__/component.test.js":
           "components/{{filenameSlug}}/__tests__/{{filenameSlug}}.test.js",
         "component/__examples__/component.examples.js":
-          "components/{{filenameSlug}}/__examples__/{{filenameSlug}}.stories.js",
+          "components/{{filenameSlug}}/__examples__/{{filenameSlug}}.examples.js",
         "component/README.md": "components/{{filenameSlug}}/{{readmeSlug}}.md"
       },
       "script": [
