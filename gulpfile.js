@@ -22,13 +22,13 @@ gulp.task('js', () =>
       'src/**/*.js',
       '!**/__tests__/*',
       '!src/design-tokens/*',
-      '!**/__stories__/*',
+      '!**/__examples__/*',
       '!src/utils/test/**/*',
     ])
     .pipe(
       babel({
         presets: ['es2015', 'react', 'stage-2'],
-        ignore: ['__tests__', '__stories__'],
+        ignore: ['__tests__', '__examples__'],
       })
     )
     .pipe(gulp.dest('lib'))

@@ -7,7 +7,7 @@ import PropTable from '../components/prop-table';
 import Snippet from '../components/snippet';
 import Wrapper from '../components/wrapper';
 
-import * as Stories from '../data/stories.js';
+import * as Stories from '../data/examples.js';
 
 const StoryContainer = styled.div`
   width: 100%;
