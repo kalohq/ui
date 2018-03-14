@@ -20,6 +20,8 @@ export default class LoadingSpinner extends PureComponent {
     size: 'medium',
   };
 
+  static displayName = 'LoadingSpinner';
+
   render() {
     const {size} = this.props;
 

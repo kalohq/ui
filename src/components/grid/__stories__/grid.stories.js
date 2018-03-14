@@ -5,6 +5,7 @@ import styled from 'react-emotion';
 import {Grid, Row, Column} from '../grid';
 import H3 from '../../h3';
 import Text from '../../text';
+import Input from '../../input';
 
 const DemoSlab = styled.div`
   width: 100%;
@@ -145,18 +146,10 @@ export const examples = [
       <Grid>
         <Row spacing="medium" alignItems="center">
           <Column columns={6}>
-            <input
-              placeholder="Your first name"
-              type="text"
-              style={{width: '100%'}}
-            />
+            <Input placeholder="Your name" />
           </Column>
           <Column columns={6}>
-            <input
-              placeholder="Your email"
-              type="text"
-              style={{width: '100%'}}
-            />
+            <Input placeholder="Your email" />
           </Column>
         </Row>
       </Grid>

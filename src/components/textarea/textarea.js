@@ -128,6 +128,8 @@ export default class Textarea extends PureComponent {
     onReturn: null,
   };
 
+  static displayName = 'Textarea';
+
   onKeyDown: Function;
   onKeyUp: Function;
   onScroll: Function;
