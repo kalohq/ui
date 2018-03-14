@@ -13,6 +13,8 @@ class ToggleButtonDemo extends React.Component {
     this.onToggle = this.onToggle.bind(this);
   }
 
+  static displayName = 'ToggleButtonDemo';
+
   onToggle() {
     this.setState({
       toggled: !this.state.toggled,

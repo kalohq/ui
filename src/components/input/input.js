@@ -236,6 +236,8 @@ export default class Input extends PureComponent {
     size: 'medium',
   };
 
+  static displayName = 'Input';
+
   onFocus: Function;
   onBlur: Function;
   onChange: Function;

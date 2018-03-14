@@ -88,6 +88,8 @@ export default class Button extends PureComponent {
     component: Box,
   };
 
+  static displayName = 'Button';
+
   constructor() {
     super();
 

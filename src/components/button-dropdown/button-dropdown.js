@@ -34,6 +34,8 @@ export default class ButtonDropdown extends PureComponent {
   onToggle: Function;
   onClose: Function;
 
+  static displayName = 'ButtonDropdown';
+
   constructor(props: Props) {
     super(props);
 

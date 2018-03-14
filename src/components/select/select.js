@@ -161,6 +161,8 @@ export default class Select extends PureComponent {
     disabled: false,
   };
 
+  static displayName = 'Select';
+
   onToggle: Function;
   onSelect: Function;
   onClose: Function;
