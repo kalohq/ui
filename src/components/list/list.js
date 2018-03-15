@@ -4,6 +4,8 @@ import styled, {css} from 'react-emotion';
 
 import TOKENS from '../../design-tokens/tokens';
 
+import {Flex, Block} from '../layout';
+
 const SPACING_MAP = {
   none: TOKENS.spacingNone,
   small: TOKENS.spacingSmall,
@@ -12,7 +14,7 @@ const SPACING_MAP = {
   'extra-large': TOKENS.spacingExtraLarge,
 };
 
-const StyledList = styled.ul`
+const StyledList = styled(Flex)`
   list-style: none;
   margin: 0;
   padding: 0;
@@ -21,21 +23,21 @@ const StyledList = styled.ul`
   flex-wrap: ${props => (props.wrap ? 'wrap' : 'initial')};
 
   ${props =>
-    props.type === 'vertical' &&
+    props.listType === 'vertical' &&
     css`
       flex-direction: column;
       max-width: 100%;
     `};
 
   ${props =>
-    props.type === 'horizontal' &&
+    props.listType === 'horizontal' &&
     css`
       flex-direction: row;
       max-width: 100%;
     `};
 
   ${props =>
-    props.type === 'grid' &&
+    props.listType === 'grid' &&
     css`
       flex-wrap: wrap;
       justify-content: flex-start;
@@ -44,11 +46,11 @@ const StyledList = styled.ul`
   @supports (display: grid) {
     display: grid;
     grid-template-columns: repeat(${props => props.columns}, 1fr);
-    grid-gap: ${props => SPACING_MAP[props.spacing]};
+    grid-gap: ${props => SPACING_MAP[props.itemSpacing]};
   }
 `;
 
-const StyledListItem = styled.li`
+const StyledListItem = styled(Block)`
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -58,16 +60,17 @@ const StyledListItem = styled.li`
   flex: 1 1 ${props => (100 / props.columns).toFixed(2)}%;
 
   ${props =>
-    props.type === 'grid' &&
+    props.listType === 'grid' &&
     css`
       display: block;
-      padding: ${SPACING_MAP[props.spacing]} 0 0 ${SPACING_MAP[props.spacing]};
+      padding: ${SPACING_MAP[props.itemSpacing]} 0 0
+        ${SPACING_MAP[props.itemSpacing]};
     `};
 
   ${props =>
-    props.type === 'vertical' &&
+    props.listType === 'vertical' &&
     css`
-      padding-bottom: ${SPACING_MAP[props.spacing]};
+      padding-bottom: ${SPACING_MAP[props.itemSpacing]};
     `};
 
   @supports (display: grid) {
@@ -98,7 +101,7 @@ export default function List(props: TProps) {
     type = 'vertical',
     children,
     wrap,
-    spaced = 'small',
+    spaced = 'none',
     columns = 1,
     justify,
   } = props;
@@ -106,10 +109,11 @@ export default function List(props: TProps) {
   return (
     <StyledList
       columns={columns}
-      spacing={spaced}
+      itemSpacing={spaced}
       justify={justify}
       wrap={wrap}
-      type={type}
+      listType={type}
+      component="ul"
     >
       {React.Children.map(
         children,
@@ -117,9 +121,10 @@ export default function List(props: TProps) {
           child ? (
             <StyledListItem
               key={child.key || index}
-              type={type}
-              spacing={spaced}
+              listType={type}
+              itemSpacing={spaced}
               columns={columns}
+              component="li"
             >
               {child}
             </StyledListItem>
