@@ -26,5 +26,5 @@ export function pluralize(
   plural: string = 's',
   singular: string = ''
 ): string {
-  return size > 1 ? `${str}${plural}` : `${str}${singular}`;
+  return Math.abs(size) === 1 ? `${str}${singular}` : `${str}${plural}`;
 }
