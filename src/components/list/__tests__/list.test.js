@@ -1,31 +1,38 @@
 /* @flow */
 /* eslint-env jest */
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import serializer from 'enzyme-to-json/serializer';
 
 import List from '../list';
+import Paper from '../../paper';
 
 expect.addSnapshotSerializer(serializer);
 
 describe('components/list', () => {
-  describe('List (default)', () => {
-    const create = (spread = {}) => {
-      const props = {
-        // (insert your default props here)
-        ...spread,
-      };
-      const element = <List {...props} />;
-      return {props, element};
-    };
+  const create = (spread = {}) => {
+    const props = {spaced: 'medium', ...spread};
+    const element = (
+      <List {...props}>
+        <Paper>List Item One</Paper>
+        <Paper>List Item Two</Paper>
+        <Paper>List Item Three</Paper>
+        <Paper>List Item Four</Paper>
+      </List>
+    );
 
-    it('should shallow render as expected', () => {
-      const {element} = create({
-        // (insert test specific props here)
-        children: 'Child',
-      });
-      const result = shallow(element);
-      expect(result).toMatchSnapshot();
-    });
+    return {props, element};
+  };
+
+  it('should shallow render as expected', () => {
+    const {element} = create();
+    const result = mount(element);
+    expect(result).toMatchSnapshot();
+  });
+
+  it('should render as a grid', () => {
+    const {element} = create();
+    const result = shallow(element);
+    expect(result).toMatchSnapshot();
   });
 });
