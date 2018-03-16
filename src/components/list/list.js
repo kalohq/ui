@@ -83,7 +83,7 @@ const StyledListItem = styled(Block)`
 
 type TProps = {
   /** List children */
-  children?: React.Element<*>,
+  children?: React.Element<*> | Array<React.Element<*>>,
   /** Direction/Layout of list  */
   type?: 'horizontal' | 'vertical' | 'grid',
   /** Should list items wrap on to new rows? */
