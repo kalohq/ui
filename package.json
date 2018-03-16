@@ -13,7 +13,7 @@
     "compile":
       "npm run generate:tokens && npm run generate:icons && gulp build-production",
     "test": "jest",
-    "release": "np --no-publish",
+    "release": "np",
     "typecheck": "flow",
     "lint": "eslint src",
     "precommit": "lint-staged",
