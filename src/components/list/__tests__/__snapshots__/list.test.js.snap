@@ -1,0 +1,230 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/list should render as a grid 1`] = `
+<Styled(PrimitiveFlex)
+  columns={1}
+  component="ul"
+  itemSpacing="medium"
+  listType="vertical"
+>
+  <Styled(PrimitiveBlock)
+    columns={1}
+    component="li"
+    itemSpacing="medium"
+    key="0/.0"
+    listType="vertical"
+  >
+    <Paper>
+      List Item One
+    </Paper>
+  </Styled(PrimitiveBlock)>
+  <Styled(PrimitiveBlock)
+    columns={1}
+    component="li"
+    itemSpacing="medium"
+    key="1/.1"
+    listType="vertical"
+  >
+    <Paper>
+      List Item Two
+    </Paper>
+  </Styled(PrimitiveBlock)>
+  <Styled(PrimitiveBlock)
+    columns={1}
+    component="li"
+    itemSpacing="medium"
+    key="2/.2"
+    listType="vertical"
+  >
+    <Paper>
+      List Item Three
+    </Paper>
+  </Styled(PrimitiveBlock)>
+  <Styled(PrimitiveBlock)
+    columns={1}
+    component="li"
+    itemSpacing="medium"
+    key="3/.3"
+    listType="vertical"
+  >
+    <Paper>
+      List Item Four
+    </Paper>
+  </Styled(PrimitiveBlock)>
+</Styled(PrimitiveFlex)>
+`;
+
+exports[`components/list should shallow render as expected 1`] = `
+<List
+  spaced="medium"
+>
+  <Styled(PrimitiveFlex)
+    columns={1}
+    component="ul"
+    itemSpacing="medium"
+    listType="vertical"
+  >
+    <PrimitiveFlex
+      className="css-1ng74r0 e13caurm0"
+      columns={1}
+      component="ul"
+      itemSpacing="medium"
+      listType="vertical"
+    >
+      <ul
+        className="e13caurm0 css-z4vh1z"
+        style={Object {}}
+      >
+        <Styled(PrimitiveBlock)
+          columns={1}
+          component="li"
+          itemSpacing="medium"
+          key="0/.0"
+          listType="vertical"
+        >
+          <PrimitiveBlock
+            className="css-iydod1 e13caurm1"
+            columns={1}
+            component="li"
+            itemSpacing="medium"
+            listType="vertical"
+          >
+            <li
+              className="e13caurm1 css-1snizm0"
+              style={Object {}}
+            >
+              <Paper>
+                <Box
+                  className="root level-1 hover-level-1 border rounded"
+                >
+                  <PrimitiveBox
+                    className="root level-1 hover-level-1 border rounded css-8d8y1f e1q9f2xp0"
+                  >
+                    <div
+                      className="root level-1 hover-level-1 border rounded e1q9f2xp0 css-1kerfkh"
+                      style={Object {}}
+                    >
+                      List Item One
+                    </div>
+                  </PrimitiveBox>
+                </Box>
+              </Paper>
+            </li>
+          </PrimitiveBlock>
+        </Styled(PrimitiveBlock)>
+        <Styled(PrimitiveBlock)
+          columns={1}
+          component="li"
+          itemSpacing="medium"
+          key="1/.1"
+          listType="vertical"
+        >
+          <PrimitiveBlock
+            className="css-iydod1 e13caurm1"
+            columns={1}
+            component="li"
+            itemSpacing="medium"
+            listType="vertical"
+          >
+            <li
+              className="e13caurm1 css-1snizm0"
+              style={Object {}}
+            >
+              <Paper>
+                <Box
+                  className="root level-1 hover-level-1 border rounded"
+                >
+                  <PrimitiveBox
+                    className="root level-1 hover-level-1 border rounded css-8d8y1f e1q9f2xp0"
+                  >
+                    <div
+                      className="root level-1 hover-level-1 border rounded e1q9f2xp0 css-1kerfkh"
+                      style={Object {}}
+                    >
+                      List Item Two
+                    </div>
+                  </PrimitiveBox>
+                </Box>
+              </Paper>
+            </li>
+          </PrimitiveBlock>
+        </Styled(PrimitiveBlock)>
+        <Styled(PrimitiveBlock)
+          columns={1}
+          component="li"
+          itemSpacing="medium"
+          key="2/.2"
+          listType="vertical"
+        >
+          <PrimitiveBlock
+            className="css-iydod1 e13caurm1"
+            columns={1}
+            component="li"
+            itemSpacing="medium"
+            listType="vertical"
+          >
+            <li
+              className="e13caurm1 css-1snizm0"
+              style={Object {}}
+            >
+              <Paper>
+                <Box
+                  className="root level-1 hover-level-1 border rounded"
+                >
+                  <PrimitiveBox
+                    className="root level-1 hover-level-1 border rounded css-8d8y1f e1q9f2xp0"
+                  >
+                    <div
+                      className="root level-1 hover-level-1 border rounded e1q9f2xp0 css-1kerfkh"
+                      style={Object {}}
+                    >
+                      List Item Three
+                    </div>
+                  </PrimitiveBox>
+                </Box>
+              </Paper>
+            </li>
+          </PrimitiveBlock>
+        </Styled(PrimitiveBlock)>
+        <Styled(PrimitiveBlock)
+          columns={1}
+          component="li"
+          itemSpacing="medium"
+          key="3/.3"
+          listType="vertical"
+        >
+          <PrimitiveBlock
+            className="css-iydod1 e13caurm1"
+            columns={1}
+            component="li"
+            itemSpacing="medium"
+            listType="vertical"
+          >
+            <li
+              className="e13caurm1 css-1snizm0"
+              style={Object {}}
+            >
+              <Paper>
+                <Box
+                  className="root level-1 hover-level-1 border rounded"
+                >
+                  <PrimitiveBox
+                    className="root level-1 hover-level-1 border rounded css-8d8y1f e1q9f2xp0"
+                  >
+                    <div
+                      className="root level-1 hover-level-1 border rounded e1q9f2xp0 css-1kerfkh"
+                      style={Object {}}
+                    >
+                      List Item Four
+                    </div>
+                  </PrimitiveBox>
+                </Box>
+              </Paper>
+            </li>
+          </PrimitiveBlock>
+        </Styled(PrimitiveBlock)>
+      </ul>
+    </PrimitiveFlex>
+  </Styled(PrimitiveFlex)>
+</List>
+`;
