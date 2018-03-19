@@ -6,19 +6,8 @@ import Wrapper from '../../components/wrapper';
 
 const colors = [
   {
-    swatch: 'Pink',
-    key: '#EA5F6E',
-    colors: {
-      pink300: '#FBDFE2',
-      pink400: '#FDB3C8',
-      pink500: '#EA5F6E',
-      pink600: '#E05867',
-      pink700: '#C34A57',
-    },
-  },
-  {
     swatch: 'Navy',
-    key: '#374561',
+    key: 'navy700',
     colors: {
       navy300: '#F9FAFC',
       navy400: '#C6C7D8',
@@ -28,8 +17,30 @@ const colors = [
     },
   },
   {
+    swatch: 'Pink',
+    key: 'pink500',
+    colors: {
+      pink300: '#FBDFE2',
+      pink400: '#FDB3C8',
+      pink500: '#EA5F6E',
+      pink600: '#E05867',
+      pink700: '#C34A57',
+    },
+  },
+  {
+    swatch: 'Orange',
+    key: 'orange500',
+    colors: {
+      orange300: '#FFEDB4',
+      orange400: '#FFCE5E',
+      orange500: '#FDB81C',
+      orange600: '#F6AF0D',
+      orange700: '#D89118',
+    },
+  },
+  {
     swatch: 'Blue',
-    key: '#54C3DB',
+    key: 'blue500',
     colors: {
       blue300: '#C1F4FF',
       blue400: '#65D2EA',
@@ -40,7 +51,7 @@ const colors = [
   },
   {
     swatch: 'Green',
-    key: '#3eb38a',
+    key: 'green500',
     colors: {
       green300: '#D8F0E8',
       green400: '#4FD2A4',
@@ -50,19 +61,19 @@ const colors = [
     },
   },
   {
-    swatch: 'Orange',
-    key: '#FDB81C',
+    swatch: 'Purple',
+    key: 'purple500',
     colors: {
-      orange300: '#FFEDB4',
-      orange400: '#FFCE5E',
-      orange500: '#FDB81C',
-      orange600: '#F6AF0D',
-      orange700: '#D89118',
+      purple300: '#e8e2f2',
+      purple400: '#9F81DA',
+      purple500: '#8A70BD',
+      purple600: '#775FA8',
+      purple700: '#604e83',
     },
   },
   {
     swatch: 'Grey',
-    key: '#B0BAC3',
+    key: 'grey500',
     colors: {
       grey200: '#F9FAFC',
       grey300: '#EEF4FA',
@@ -74,9 +85,28 @@ const colors = [
   },
 ];
 
+const HorizontalSwatchGroup = styled.div`
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-column-gap: 8px;
+  margin-bottom: 24px;
+`;
+
+const HorizontalSwatch = styled.div`
+  height: 48px;
+  background-color: ${props => props.theme.colors[props.color]};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+`;
+
 const Swatches = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 33%);
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 `;
@@ -84,9 +114,9 @@ const Swatches = styled.div`
 const StyledSwatchHeader = styled.div`
   width: 100%;
   padding: 32px 16px;
-  background-color: ${props => props.color};
+  background-color: ${props => props.theme.colors[props.color]};
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
 `;
 
@@ -144,7 +174,17 @@ const BrandColorsPage = () => (
         color name (seen below on the right). For example, to use pink in CSS,
         access it like so:
       </p>
-      <h2>Palette</h2>
+      <h2>Core Palette</h2>
+
+      <HorizontalSwatchGroup>
+        {colors.map(color => (
+          <HorizontalSwatch key={color.key} color={color.key}>
+            {color.key}
+          </HorizontalSwatch>
+        ))}
+      </HorizontalSwatchGroup>
+
+      <h2>Extended Palette</h2>
 
       <Swatches>
         {colors.map(swatch => (
