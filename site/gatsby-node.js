@@ -164,6 +164,7 @@ exports.modifyBabelrc = ({babelrc}) => {
     ...babelrc,
     plugins: babelrc.plugins.concat([
       'babel-plugin-transform-react-display-name',
+      'babel-plugin-react-pure-component',
     ]),
   };
 };

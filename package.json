@@ -40,6 +40,7 @@
     "babel-plugin-add-react-displayname": "0.0.5",
     "babel-plugin-emotion": "^9.0.0",
     "babel-plugin-lodash": "3.2.11",
+    "babel-plugin-react-pure-component": "^0.1.5",
     "babel-plugin-react-transform": "2.0.2",
     "babel-plugin-transform-builtin-extend": "1.1.0",
     "babel-plugin-transform-react-display-name": "^6.25.0",
