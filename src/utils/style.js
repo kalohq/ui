@@ -35,7 +35,7 @@ export function cleanProps(originalProps: Object) {
 
 /** Parse a specific style */
 export function parseStyle(name: string, value: string | number | Array<*>) {
-  if (SPACING_REGEX.test(name)) {
+  if (value && SPACING_REGEX.test(name)) {
     return returnArray(value)
       .map(v => {
         if (isNumber(v)) {

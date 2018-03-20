@@ -29,7 +29,7 @@ export function Row(props: TRowProps) {
   const {
     children,
     spacing = 'medium',
-    gutter = false,
+    gutter,
     collapse = false,
     ...otherProps
   } = props;

@@ -24,8 +24,6 @@ exports[`components/grid should render shallow component ok 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding-left: false;
-  padding-right: false;
 }
 
 .emotion-1 {

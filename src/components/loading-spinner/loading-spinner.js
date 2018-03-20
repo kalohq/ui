@@ -57,3 +57,5 @@ export default function LoadingSpinner(props: TProps) {
     </StyledLoadingSpinner>
   );
 }
+
+LoadingSpinner.displayName = 'LoadingSpinner';

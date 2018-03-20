@@ -16,6 +16,7 @@ export {Box, Flex, Block, Inline, InlineFlex, A} from './layout';
 export {default as Paper, PaperToolbar} from './paper';
 export {default as PaperMenu, PaperMenuItem} from './paper-menu';
 export {Grid, Row, Column} from './grid';
+export {default as List} from './list';
 
 /**
  * Form

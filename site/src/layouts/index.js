@@ -3,7 +3,7 @@ import {ThemeProvider} from 'emotion-theming';
 import styled, {injectGlobal} from 'react-emotion';
 import {groupBy, upperFirst, camelCase} from 'lodash';
 
-import Header from '../components/header';
+import Header from '../components/navigation';
 import SideNav from '../components/side-nav';
 
 import theme from '../../../src/components/theme';
