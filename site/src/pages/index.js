@@ -31,7 +31,7 @@ const IndexPage = ({data}) => {
     <div style={{width: '100%'}}>
       <IndexIntro>
         <Wrapper>
-          <h1>Kalo Design System</h1>
+          <h1>Kalo Design System on Netlify</h1>
           <p>
             Components, guidelines, and resources for building products at Kalo
           </p>
