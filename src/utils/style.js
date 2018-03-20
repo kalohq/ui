@@ -33,6 +33,34 @@ export function cleanProps(originalProps: Object) {
   return cleanedProps;
 }
 
+/** 
+ * Flexbox style overrides for Safari 8
+ * Safari 8 detection is performed in advance
+ */
+const VENDOR_STYLERS =
+  typeof window !== 'undefined' &&
+  window.navigator.userAgent.indexOf('Safari/') !== -1 &&
+  window.navigator.userAgent.indexOf('Version/8') !== -1
+    ? {
+        display: (key, value) => ({
+          key,
+          value: (value.indexOf('flex') > -1 ? '-webkit-' : '') + value,
+        }),
+        alignContent: (key, value) => ({key: 'WebkitAlignContent', value}),
+        alignItems: (key, value) => ({key: 'WebkitAlignItems', value}),
+        alignSelf: (key, value) => ({key: 'WebkitAlignSelf', value}),
+        justifyContent: (key, value) => ({key: 'WebkitJustifyContent', value}),
+        order: (key, value) => ({key: 'WebkitOrder', value}),
+        flexDirection: (key, value) => ({key: 'WebkitFlexDirection', value}),
+        flexWrap: (key, value) => ({key: 'WebkitFlexWrap', value}),
+        flexFlow: (key, value) => ({key: 'WebkitFlexFlow', value}),
+        flex: (key, value) => ({key: 'WebkitFlex', value}),
+        flexBasis: (key, value) => ({key: 'WebkitFlexBasis', value}),
+        flexShrink: (key, value) => ({key: 'WebkitFlexShrink', value}),
+        flexGrow: (key, value) => ({key: 'WebkitFlexGrow', value}),
+      }
+    : {};
+
 /** Parse a specific style */
 export function parseStyle(name: string, value: string | number | Array<*>) {
   if (value && SPACING_REGEX.test(name)) {
@@ -53,26 +81,25 @@ export function parseStyle(name: string, value: string | number | Array<*>) {
 }
 
 /** Pull out styles from props */
-export function parseStyleProps(
-  originalProps: Object,
-  enableSpacing: boolean
-): Object {
+export function parseStyleProps(originalProps: Object): Object {
   const props = {};
   const style = originalProps.style || {};
 
-  Object.keys(originalProps).map(prop => {
-    // $FlowFixMe
-    if (STYLE_WHITELIST[prop]) {
-      if (enableSpacing && SPACING_REGEX.test(prop)) {
-        const parsedStyleValue = parseStyle(prop, originalProps[prop]);
-
-        style[prop] = parsedStyleValue;
+  for (const key in originalProps) {
+    if ({}.hasOwnProperty.call(originalProps, key)) {
+      if (STYLE_WHITELIST[key]) {
+        const parsedStyleValue = parseStyle(key, originalProps[key]);
+        if (!!VENDOR_STYLERS[key]) {
+          const pair = VENDOR_STYLERS[key](key, parsedStyleValue);
+          style[pair.key] = pair.value;
+        } else {
+          style[key] = parsedStyleValue;
+        }
+      } else if (key !== 'style') {
+        props[key] = originalProps[key];
       }
-    } else if (prop !== 'style') {
-      props[prop] = originalProps[prop];
     }
-    return true;
-  });
+  }
 
   return {props, style};
 }

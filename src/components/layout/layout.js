@@ -2,30 +2,22 @@
 import React from 'react';
 import {parseStyleProps, cleanProps} from '../../utils/style';
 import PureComponent from 'react-pure-render/component';
-import {cx} from 'react-emotion';
+import styled, {cx} from 'react-emotion';
 
-const makePrimitive = ({
-  displayName,
-  defaultComponent,
-  defaultStyle,
-  enableSpacing = false,
-}) => {
+const makePrimitive = (name, DefaultComponent, defaultStyle) => {
   class Primitive extends PureComponent {
     render() {
       const {
-        element,
-        component,
+        component: Component = DefaultComponent,
         elRef,
         style: propStyle,
         className,
         ...otherProps
       } = this.props;
 
-      const {props, style} = parseStyleProps({...otherProps}, enableSpacing);
-
-      const Component = element
-        ? element
-        : component ? component : defaultComponent;
+      const {props, style} = parseStyleProps({
+        ...otherProps,
+      });
 
       const cleanedProps = cleanProps(props);
 
@@ -41,7 +33,7 @@ const makePrimitive = ({
     }
   }
 
-  Primitive.displayName = displayName;
+  Primitive.displayName = `Primitive${name}`;
   return Primitive;
 };
 
@@ -49,76 +41,43 @@ const makePrimitive = ({
  * Layout primitives
  */
 
-export const Box = makePrimitive({
-  displayName: 'Box',
-  enableSpacing: true,
-  defaultComponent: 'div',
-  defaultStyle: {
+export const Box = styled(
+  makePrimitive('Box', 'div', {
     position: 'relative',
     flexDirection: 'column',
     alignItems: 'stretch',
     flexShrink: 0,
     alignContent: 'flex-start',
     display: 'flex',
-  },
-});
+  })
+)();
+Box.displayName = 'Box';
 
-export const Flex = makePrimitive({
-  displayName: 'Flex',
-  enableSpacing: true,
-  defaultComponent: 'div',
-  defaultStyle: {
-    display: 'flex',
-  },
-});
+export const Flex = styled(makePrimitive('Flex', 'div', {display: 'flex'}))();
+Flex.displayName = 'Flex';
 
-export const Block = makePrimitive({
-  displayName: 'Block',
-  enableSpacing: true,
-  defaultComponent: 'div',
-  defaultStyle: {
-    display: 'block',
-  },
-});
+export const Block = styled(
+  makePrimitive('Block', 'div', {display: 'block'})
+)();
+Block.displayName = 'Block';
 
-export const Inline = makePrimitive({
-  displayName: 'Inline',
-  enableSpacing: true,
-  defaultComponent: 'span',
-  defaultStyle: {
+export const Inline = styled(
+  makePrimitive('Inline', 'span', {
     display: 'inline-block',
     verticalAlign: 'bottom',
-  },
-});
+  })
+)();
+Inline.displayName = 'Inline';
 
-export const InlineFlex = makePrimitive({
-  displayName: 'InlineFlex',
-  enableSpacing: true,
-  defaultComponent: 'span',
-  defaultStyle: {
-    display: 'inline-flex',
-  },
-});
+export const InlineFlex = styled(
+  makePrimitive('InlineFlex', 'span', {display: 'inline-flex'})
+)();
+InlineFlex.displayName = 'InlineFlex';
 
 /**
  * All of our html primitives should follow here so our api is consistent to the very root
  * Eg. Button, Input, Select, Table etc.
  */
 
-export const A = makePrimitive({
-  displayName: 'A',
-  enableSpacing: false,
-  defaultComponent: 'a',
-  defaultStyle: {
-    display: 'inline-flex',
-  },
-});
-
-export const Base = makePrimitive({
-  displayName: 'Base',
-  enableSpacing: false,
-  defaultComponent: 'div',
-  defaultStyle: {
-    display: 'flex',
-  },
-});
+export const A = styled(makePrimitive('A', 'a', {display: 'inline-flex'}))();
+A.displayName = 'A';
