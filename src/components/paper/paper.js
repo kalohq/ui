@@ -15,7 +15,6 @@ const SHADOW_LEVELS = [
 ];
 
 const StyledPaper = styled(Box)`
-  display: block;
   position: relative;
   background: white;
   box-sizing: content-box;
