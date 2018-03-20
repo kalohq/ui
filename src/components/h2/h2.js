@@ -1,17 +1,20 @@
 /* @flow */
 import * as React from 'react';
 import Heading from '../heading';
+import PureComponent from 'react-pure-render/component';
 
-type Props = {
+type TProps = {
   children: React.Node,
 };
 
-export default function H2(props: Props) {
-  const {children} = props;
+export default class H2 extends PureComponent<TProps> {
+  render() {
+    const {children} = this.props;
 
-  return (
-    <Heading component="h2" weight="semi-bold" size="large" {...props}>
-      {children}
-    </Heading>
-  );
+    return (
+      <Heading component="h2" weight="semi-bold" size="large" {...this.props}>
+        {children}
+      </Heading>
+    );
+  }
 }

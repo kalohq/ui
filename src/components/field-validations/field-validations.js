@@ -2,6 +2,7 @@
 import React from 'react';
 import {List} from 'immutable';
 import styled from 'react-emotion';
+import PureComponent from 'react-pure-render/component';
 
 import FieldValidation from '../field-validation';
 import type Validation from '../field-validation';
@@ -23,17 +24,18 @@ type TProps = {
   centered?: boolean,
 };
 
-export default function FieldValidations(props: TProps) {
-  const {validations, centered} = props;
+export default class FieldValidations extends PureComponent<TProps> {
+  render() {
+    const {validations, centered} = this.props;
 
-  return (
-    <StyledFieldValidation centered={centered}>
-      {validations ? (
-        validations.map(validation => (
-          // $FlowFixMe
-          <FieldValidation validation={validation} key={validation.message} />
-        ))
-      ) : null}
-    </StyledFieldValidation>
-  );
+    return (
+      <StyledFieldValidation centered={centered}>
+        {validations ? (
+          validations.map(validation => (
+            <FieldValidation validation={validation} key={validation.message} />
+          ))
+        ) : null}
+      </StyledFieldValidation>
+    );
+  }
 }

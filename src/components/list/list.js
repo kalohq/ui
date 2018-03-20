@@ -1,6 +1,7 @@
 /* @flow */
 import * as React from 'react';
 import styled, {css} from 'react-emotion';
+import PureComponent from 'react-pure-render/component';
 
 import TOKENS from '../../design-tokens/tokens';
 
@@ -96,40 +97,42 @@ type TProps = {
   justify?: string,
 };
 
-export default function List(props: TProps) {
-  const {
-    type = 'vertical',
-    children,
-    wrap,
-    spaced = 'none',
-    columns = 1,
-    justify,
-  } = props;
+export default class List extends PureComponent<TProps> {
+  render() {
+    const {
+      type = 'vertical',
+      children,
+      wrap,
+      spaced = 'none',
+      columns = 1,
+      justify,
+    } = this.props;
 
-  return (
-    <StyledList
-      columns={columns}
-      itemSpacing={spaced}
-      justify={justify}
-      wrap={wrap}
-      listType={type}
-      component="ul"
-    >
-      {React.Children.map(
-        children,
-        (child, index) =>
-          child ? (
-            <StyledListItem
-              key={child.key || index}
-              listType={type}
-              itemSpacing={spaced}
-              columns={columns}
-              component="li"
-            >
-              {child}
-            </StyledListItem>
-          ) : null
-      )}
-    </StyledList>
-  );
+    return (
+      <StyledList
+        columns={columns}
+        itemSpacing={spaced}
+        justify={justify}
+        wrap={wrap}
+        listType={type}
+        component="ul"
+      >
+        {React.Children.map(
+          children,
+          (child, index) =>
+            child ? (
+              <StyledListItem
+                key={child.key || index}
+                listType={type}
+                itemSpacing={spaced}
+                columns={columns}
+                component="li"
+              >
+                {child}
+              </StyledListItem>
+            ) : null
+        )}
+      </StyledList>
+    );
+  }
 }

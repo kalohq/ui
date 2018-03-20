@@ -1,6 +1,7 @@
 /* @flow */
 import * as React from 'react';
 import styled from 'react-emotion';
+import PureComponent from 'react-pure-render/component';
 import {pickStyles} from '../../utils/style';
 
 import {Box} from '../layout';
@@ -72,40 +73,42 @@ type TProps = {
   bordered?: boolean,
 };
 
-export default function Fieldset(props: TProps) {
-  const {
-    children,
-    inset = false,
-    legend,
-    description,
-    onClick,
-    legendMeta,
-    name,
-    className,
-    bordered = true,
-    ...otherProps
-  } = props;
+export default class Fieldset extends PureComponent<TProps> {
+  render() {
+    const {
+      children,
+      inset = false,
+      legend,
+      description,
+      onClick,
+      legendMeta,
+      name,
+      className,
+      bordered = true,
+      ...otherProps
+    } = this.props;
 
-  return (
-    <StyledFieldset
-      className={className}
-      bordered={bordered}
-      component="fieldset"
-      inset={inset}
-      interactive={!!onClick}
-      onClick={onClick}
-      padding={[20, 50, 40, 50]} // top -20 accounts forr vertical spacing
-      name={name}
-      {...pickStyles(otherProps)}
-    >
-      {legend ? (
-        <FieldsetHeader
-          meta={legendMeta}
-          legend={legend}
-          description={description}
-        />
-      ) : null}
-      {children}
-    </StyledFieldset>
-  );
+    return (
+      <StyledFieldset
+        className={className}
+        bordered={bordered}
+        component="fieldset"
+        inset={inset}
+        interactive={!!onClick}
+        onClick={onClick}
+        padding={[20, 50, 40, 50]} // top -20 accounts forr vertical spacing
+        name={name}
+        {...pickStyles(otherProps)}
+      >
+        {legend ? (
+          <FieldsetHeader
+            meta={legendMeta}
+            legend={legend}
+            description={description}
+          />
+        ) : null}
+        {children}
+      </StyledFieldset>
+    );
+  }
 }

@@ -1,6 +1,8 @@
 /* @flow */
 import * as React from 'react';
 import styled from 'react-emotion';
+import PureComponent from 'react-pure-render/component';
+
 import Icon from '../icon';
 import Text from '../text';
 
@@ -33,45 +35,47 @@ const StyledHeading = styled(Text)`
   }
 `;
 
-export default function Heading(props: TProps) {
-  const {
-    children,
-    color = 'navy700',
-    icon = false,
-    size = 'small',
-    iconAfter,
-    hover = false,
-    iconPadding = 10,
-    ...otherProps
-  } = props;
+export default class Heading extends PureComponent<TProps> {
+  render() {
+    const {
+      children,
+      color = 'navy700',
+      icon = false,
+      size = 'small',
+      iconAfter,
+      hover = false,
+      iconPadding = 10,
+      ...otherProps
+    } = this.props;
 
-  return (
-    <StyledHeading
-      size={size}
-      interactive={hover === 'interactive'}
-      display="block"
-      color={color}
-      {...otherProps}
-    >
-      {icon ? (
-        <Icon
-          size={size === 'extra-large' ? 24 : 14}
-          color={color}
-          paddingRight={iconPadding}
-        >
-          {icon}
-        </Icon>
-      ) : null}
-      {children}
-      {iconAfter ? (
-        <Icon
-          size={size === 'extra-large' ? 24 : 14}
-          color={color}
-          paddingLeft={iconPadding}
-        >
-          {iconAfter}
-        </Icon>
-      ) : null}
-    </StyledHeading>
-  );
+    return (
+      <StyledHeading
+        size={size}
+        interactive={hover === 'interactive'}
+        display="block"
+        color={color}
+        {...otherProps}
+      >
+        {icon ? (
+          <Icon
+            size={size === 'extra-large' ? 24 : 14}
+            color={color}
+            paddingRight={iconPadding}
+          >
+            {icon}
+          </Icon>
+        ) : null}
+        {children}
+        {iconAfter ? (
+          <Icon
+            size={size === 'extra-large' ? 24 : 14}
+            color={color}
+            paddingLeft={iconPadding}
+          >
+            {iconAfter}
+          </Icon>
+        ) : null}
+      </StyledHeading>
+    );
+  }
 }

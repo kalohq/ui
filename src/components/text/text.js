@@ -1,6 +1,7 @@
 /* @flow */
 import * as React from 'react';
 import styled, {css} from 'react-emotion';
+import PureComponent from 'react-pure-render/component';
 
 import {Inline} from '../layout';
 import DefaultTheme from '../theme';
@@ -74,35 +75,37 @@ const StyledText = styled(Inline)`
   }
 `;
 
-export default function Text(props: TProps) {
-  const {
-    weight = 'normal',
-    size = 'small',
-    align = 'unset',
-    color = 'navy600',
-    hoverColor = 'none',
-    interactive,
-    noUnderline,
-    onClick,
-    children,
-    theme = DefaultTheme,
-    ...otherProps
-  } = props;
+export default class Text extends PureComponent<TProps> {
+  render() {
+    const {
+      weight = 'normal',
+      size = 'small',
+      align = 'unset',
+      color = 'navy600',
+      hoverColor = 'none',
+      interactive,
+      noUnderline,
+      onClick,
+      children,
+      theme = DefaultTheme,
+      ...otherProps
+    } = this.props;
 
-  return (
-    <StyledText
-      onClick={onClick}
-      weight={weight}
-      color={color}
-      hoverColor={hoverColor}
-      align={align}
-      interactive={interactive || onClick}
-      noUnderline={noUnderline}
-      size={size}
-      theme={theme}
-      {...otherProps}
-    >
-      {children}
-    </StyledText>
-  );
+    return (
+      <StyledText
+        onClick={onClick}
+        weight={weight}
+        color={color}
+        hoverColor={hoverColor}
+        align={align}
+        interactive={interactive || onClick}
+        noUnderline={noUnderline}
+        size={size}
+        theme={theme}
+        {...otherProps}
+      >
+        {children}
+      </StyledText>
+    );
+  }
 }
