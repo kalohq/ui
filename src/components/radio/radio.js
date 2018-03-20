@@ -1,12 +1,14 @@
 /* @flow */
 import React from 'react';
-import {pickStyles} from '../../utils/style';
 import {isNull} from 'lodash';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import styled, {css} from 'react-emotion';
 import PureComponent from 'react-pure-render/component';
 
+import {pickStyles} from '../../utils/style';
+
 import Text from '../text';
+import {Box} from '../layout';
 
 const RADIO_SIZES = {
   small: 14,
@@ -21,7 +23,7 @@ const StyledRadioContainer = styled.div`
     props.readonly || props.disabled ? 'default' : 'pointer'};
 `;
 
-const StyledRadio = styled.div`
+const StyledRadio = styled(Box)`
   border-radius: 50%;
   position: relative;
   border: 1px solid

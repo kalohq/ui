@@ -4,6 +4,8 @@ import styled, {css} from 'react-emotion';
 import PureComponent from 'react-pure-render/component';
 
 import Text from '../text';
+import {Box} from '../layout';
+
 import CHECKED_ICON from './assets/checked.svg';
 import INDETERMINATE_ICON from './assets/indeterminate.svg';
 import CHECKED_DISABLED_ICON from './assets/checked-disabled.svg';
@@ -24,7 +26,7 @@ const StyledCheckboxContainer = styled.div`
     props.readonly || props.disabled ? 'default' : 'pointer'};
 `;
 
-const StyledCheckbox = styled.div`
+const StyledCheckbox = styled(Box)`
   position: relative;
   border-radius: 3px;
   border: 1px solid
