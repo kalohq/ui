@@ -159,6 +159,15 @@ exports.createPages = ({boundActionCreators, graphql}) => {
   });
 };
 
+exports.modifyBabelrc = ({babelrc}) => {
+  return {
+    ...babelrc,
+    plugins: babelrc.plugins.concat([
+      'babel-plugin-transform-react-display-name',
+    ]),
+  };
+};
+
 exports.modifyWebpackConfig = ({config, stage}) => {
   config.merge({
     resolve: {
