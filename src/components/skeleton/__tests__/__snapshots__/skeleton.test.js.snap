@@ -40,8 +40,8 @@ exports[`components/skeleton SkeletonAvatar should render shallow component ok 1
   height: 100%;
   position: absolute;
   z-index: 1;
-  -webkit-animation: animation-wri4wk 1s infinite 2s;
-  animation: animation-wri4wk 1s infinite 2s;
+  -webkit-animation: animation-r4rchm 1s infinite 2s;
+  animation: animation-r4rchm 1s infinite 2s;
   background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
@@ -92,8 +92,8 @@ exports[`components/skeleton SkeletonButton should render shallow component ok 1
   height: 100%;
   position: absolute;
   z-index: 1;
-  -webkit-animation: animation-wri4wk 1s infinite 2s;
-  animation: animation-wri4wk 1s infinite 2s;
+  -webkit-animation: animation-r4rchm 1s infinite 2s;
+  animation: animation-r4rchm 1s infinite 2s;
   background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
@@ -188,8 +188,8 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   height: 100%;
   position: absolute;
   z-index: 1;
-  -webkit-animation: animation-wri4wk 1s infinite 2s;
-  animation: animation-wri4wk 1s infinite 2s;
+  -webkit-animation: animation-r4rchm 1s infinite 2s;
+  animation: animation-r4rchm 1s infinite 2s;
   background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
@@ -260,10 +260,10 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding: 16px;
   background-color: #fff;
   border: 1px solid rgb(238,244,250);
   border-radius: 3px;
-  padding: 16px;
 }
 
 .emotion-1 {
@@ -305,8 +305,8 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   height: 100%;
   position: absolute;
   z-index: 1;
-  -webkit-animation: animation-wri4wk 1s infinite 2s;
-  animation: animation-wri4wk 1s infinite 2s;
+  -webkit-animation: animation-r4rchm 1s infinite 2s;
+  animation: animation-r4rchm 1s infinite 2s;
   background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
@@ -349,8 +349,8 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   height: 100%;
   position: absolute;
   z-index: 1;
-  -webkit-animation: animation-wri4wk 1s infinite 2s;
-  animation: animation-wri4wk 1s infinite 2s;
+  -webkit-animation: animation-r4rchm 1s infinite 2s;
+  animation: animation-r4rchm 1s infinite 2s;
   background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
@@ -478,8 +478,8 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   height: 100%;
   position: absolute;
   z-index: 1;
-  -webkit-animation: animation-wri4wk 1s infinite 2s;
-  animation: animation-wri4wk 1s infinite 2s;
+  -webkit-animation: animation-r4rchm 1s infinite 2s;
+  animation: animation-r4rchm 1s infinite 2s;
   background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
@@ -522,8 +522,8 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   height: 100%;
   position: absolute;
   z-index: 1;
-  -webkit-animation: animation-wri4wk 1s infinite 2s;
-  animation: animation-wri4wk 1s infinite 2s;
+  -webkit-animation: animation-r4rchm 1s infinite 2s;
+  animation: animation-r4rchm 1s infinite 2s;
   background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
@@ -611,8 +611,8 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   height: 100%;
   position: absolute;
   z-index: 1;
-  -webkit-animation: animation-wri4wk 1s infinite 2s;
-  animation: animation-wri4wk 1s infinite 2s;
+  -webkit-animation: animation-r4rchm 1s infinite 2s;
+  animation: animation-r4rchm 1s infinite 2s;
   background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
@@ -832,12 +832,12 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding: 16px;
   padding-top: 75px;
   padding-bottom: 150px;
   background-color: #fff;
   border: 1px solid rgb(238,244,250);
   border-radius: 3px;
-  padding: 16px;
 }
 
 .emotion-39 {
@@ -924,8 +924,8 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   height: 100%;
   position: absolute;
   z-index: 1;
-  -webkit-animation: animation-wri4wk 1s infinite 2s;
-  animation: animation-wri4wk 1s infinite 2s;
+  -webkit-animation: animation-r4rchm 1s infinite 2s;
+  animation: animation-r4rchm 1s infinite 2s;
   background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
@@ -1177,8 +1177,8 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   height: 100%;
   position: absolute;
   z-index: 1;
-  -webkit-animation: animation-wri4wk 1s infinite 2s;
-  animation: animation-wri4wk 1s infinite 2s;
+  -webkit-animation: animation-r4rchm 1s infinite 2s;
+  animation: animation-r4rchm 1s infinite 2s;
   background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
@@ -1250,7 +1250,6 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   background-color: #fff;
   border: 1px solid rgb(238,244,250);
   border-radius: 3px;
-  padding: 16px;
 }
 
 .emotion-9 {
@@ -1337,8 +1336,8 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   height: 100%;
   position: absolute;
   z-index: 1;
-  -webkit-animation: animation-wri4wk 1s infinite 2s;
-  animation: animation-wri4wk 1s infinite 2s;
+  -webkit-animation: animation-r4rchm 1s infinite 2s;
+  animation: animation-r4rchm 1s infinite 2s;
   background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
@@ -1488,8 +1487,8 @@ exports[`components/skeleton SkeletonText should render shallow component ok 1`]
   height: 100%;
   position: absolute;
   z-index: 1;
-  -webkit-animation: animation-wri4wk 1s infinite 2s;
-  animation: animation-wri4wk 1s infinite 2s;
+  -webkit-animation: animation-r4rchm 1s infinite 2s;
+  animation: animation-r4rchm 1s infinite 2s;
   background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
