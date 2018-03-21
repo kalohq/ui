@@ -69,14 +69,15 @@ const CoreButton = styled(Box)`
       &:last-of-type {
         border-top-right-radius: ${props.theme.layout.borderRadiusButton};
         border-bottom-right-radius: ${props.theme.layout.borderRadiusButton};
-        border-right-width: 2px !important;
+        border-right-width: 1px !important;
       }
+    `};
 
-      ${props.isSpaced &&
-        css`
-          margin-left: 2.5px;
-          margin-right: 2.5px;
-        `};
+  ${props =>
+    props.isSpaced &&
+    css`
+      margin-left: 2.5px;
+      margin-right: 2.5px;
     `};
 
   ${props =>
