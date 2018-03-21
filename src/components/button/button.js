@@ -43,7 +43,6 @@ const CoreButton = styled(Box)`
   border-radius: ${props => props.theme.layout.borderRadiusButton};
   cursor: pointer;
   font-weight: 500;
-  transition: background 0.2s ease, color 0.1s linear;
   align-items: center;
   font-size: ${props => BUTTON_SIZING[props.size].fontSize}px;
   height: ${props => BUTTON_SIZING[props.size].height}px;
@@ -51,6 +50,10 @@ const CoreButton = styled(Box)`
   vertical-align: middle;
   width: ${props =>
     props.loneIcon ? `${BUTTON_SIZING[props.size].height}px` : 'unset'};
+
+  &:focus {
+    outline: 0;
+  }
 
   ${props =>
     props.isGrouped &&
@@ -77,7 +80,7 @@ const CoreButton = styled(Box)`
     `};
 
   ${props =>
-    props.isDisabled &&
+    props.disabled &&
     css`
       background-color: ${props.theme.colors.grey300};
       color: ${props.theme.colors.grey400};
@@ -86,57 +89,99 @@ const CoreButton = styled(Box)`
 `;
 
 const PrimaryButton = styled(CoreButton)`
-  background-color: ${props => props.theme.colors.green500};
-  color: #fff;
+  ${props =>
+    !props.disabled &&
+    css`
+      background-color: ${props.theme.colors.green500};
+      color: #fff;
 
-  &:hover {
-    background-color: ${props => props.theme.colors.green600};
-  }
+      &:hover {
+        background-color: ${props.theme.colors.green400};
+      }
+
+      &:active {
+        background-color: ${props.theme.colors.green600};
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 3px ${props.theme.colors.green300};
+      }
+    `};
 `;
 
 const SecondaryButton = styled(CoreButton)`
-  background-color: ${props => props.theme.colors.blue500};
-  color: #fff;
+  ${props =>
+    !props.disabled &&
+    css`
+      background-color: ${props.theme.colors.blue500};
+      color: #fff;
 
-  &:hover {
-    background-color: ${props => props.theme.colors.blue600};
-  }
+      &:hover {
+        background-color: ${props.theme.colors.blue400};
+      }
+
+      &:active {
+        background-color: ${props.theme.colors.blue600};
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 3px ${props.theme.colors.blue300};
+      }
+    `};
 `;
 
 const TertiaryButton = styled(CoreButton)`
-  background-color: #fff;
-  border-color: ${props => props.theme.colors.grey300};
-  border-style: solid;
-  border-width: 2px;
-  color: ${props => props.theme.colors.navy700};
-
-  &:hover {
-    border-color: ${props => props.theme.colors.grey400};
-    background-color: ${props => props.theme.colors.grey200};
-  }
-
   ${props =>
-    props.isActive && css`background-color: ${props.theme.colors.grey300});`};
+    !props.disabled &&
+    css`
+      background-color: #fff;
+      border: 1px solid ${props.theme.colors.grey400};
+      color: ${props.theme.colors.navy700};
+
+      &:hover {
+        border-color: ${props.theme.colors.grey400};
+        background-color: ${props.theme.colors.grey200};
+      }
+
+      &:active {
+        background-color: ${props.theme.colors.grey200};
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 3px ${props.theme.colors.grey300};
+      }
+
+      ${props.isActive &&
+        css`background-color: ${props.theme.colors.grey300});`};
+    `};
 `;
 
 const DeleteButton = styled(CoreButton)`
-  border-style: solid;
-  border-width: 2px;
-  border-color: ${props => props.theme.colors.pink500};
-  background-color: #fff;
-  color: ${props => props.theme.colors.pink500};
+  ${props =>
+    !props.disabled &&
+    css`
+      border-style: solid;
+      border-width: 1px;
+      border-color: ${props.theme.colors.pink500};
+      background-color: #fff;
+      color: ${props.theme.colors.pink500};
 
-  &:hover {
-    background-color: ${props => props.theme.colors.pink500};
-    border-color: ${props => props.theme.colors.pink500};
-    color: #fff;
-  }
+      &:hover {
+        background-color: ${props.theme.colors.pink500};
+        border-color: ${props.theme.colors.pink500};
+        color: #fff;
+      }
 
-  &:active {
-    background-color: ${props => props.theme.colors.pink600};
-    border-color: ${props => props.theme.colors.pink600};
-    color: #fff;
-  }
+      &:focus {
+        box-shadow: 0 0 0 3px ${props.theme.colors.pink300};
+      }
+
+      &:active {
+        background-color: ${props.theme.colors.pink600};
+        border-color: ${props.theme.colors.pink600};
+        color: #fff;
+      }
+    `};
 `;
 
 const ButtonLoadingSpinner = styled.div`
