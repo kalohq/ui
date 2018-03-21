@@ -20,7 +20,6 @@ exports[`components/paper Paper should render a component with an elevation of 3
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  display: block;
   position: relative;
   background: white;
   box-sizing: content-box;
@@ -64,7 +63,6 @@ exports[`components/paper Paper should render shallow component ok 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  display: block;
   position: relative;
   background: white;
   box-sizing: content-box;
@@ -109,7 +107,6 @@ exports[`components/paper PaperToolbar should render shallow component ok 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  display: block;
   position: relative;
   background: white;
   box-sizing: content-box;
