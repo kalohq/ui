@@ -1,7 +1,6 @@
 /* @flow */
 import * as React from 'react';
 import styled from 'react-emotion';
-import PureComponent from 'react-pure-render/component';
 
 import Icon from '../icon';
 import Text from '../text';
@@ -33,35 +32,33 @@ const StyledAlert = styled(Box)`
   background-color: ${props => props.theme.alerts[props.type]};
 `;
 
-export default class Alert extends PureComponent<TProps> {
-  render() {
-    const {
-      children,
-      showIcon,
-      type = 'info',
-      justifyContent = 'center',
-      ...otherProps
-    } = this.props;
+export default function Alert(props: TProps) {
+  const {
+    children,
+    showIcon,
+    type = 'info',
+    justifyContent = 'center',
+    ...otherProps
+  } = props;
 
-    return (
-      <StyledAlert
-        padding={['small', 'medium']}
-        flexDirection="row"
-        alignItems="center"
-        justifyContent={justifyContent}
-        role="alert"
-        type={type}
-        {...otherProps}
-      >
-        {showIcon ? (
-          <Icon color={TYPE_COLOR_MAP[type]} marginRight={8}>
-            {TYPE_ICON_MAP[type]}
-          </Icon>
-        ) : null}
-        <Text color={TYPE_COLOR_MAP[type]} size="small" multiline={true}>
-          {children}
-        </Text>
-      </StyledAlert>
-    );
-  }
+  return (
+    <StyledAlert
+      padding={['small', 'medium']}
+      flexDirection="row"
+      alignItems="center"
+      justifyContent={justifyContent}
+      role="alert"
+      type={type}
+      {...otherProps}
+    >
+      {showIcon ? (
+        <Icon color={TYPE_COLOR_MAP[type]} marginRight={8}>
+          {TYPE_ICON_MAP[type]}
+        </Icon>
+      ) : null}
+      <Text color={TYPE_COLOR_MAP[type]} size="small" multiline={true}>
+        {children}
+      </Text>
+    </StyledAlert>
+  );
 }

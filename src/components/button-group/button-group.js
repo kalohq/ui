@@ -1,7 +1,6 @@
 /* @flow */
 import * as React from 'react';
 import styled, {css} from 'react-emotion';
-import PureComponent from 'react-pure-render/component';
 
 const StyledButtonGroup = styled.div`
   display: flex;
@@ -20,7 +19,7 @@ const StyledButtonGroup = styled.div`
  * - Clones children to ensure Button components received a 'grouped' prop
  */
 
-type TProps = {
+type Props = {
   /** One or more Buttons */
   children: React.Element<*>,
   flex?: boolean,
@@ -32,34 +31,25 @@ type TProps = {
   reverse?: boolean,
 };
 
-export default class ButtonGroup extends PureComponent<TProps> {
-  render() {
-    const {
-      children,
-      wide = true,
-      flex,
-      spacing,
-      reverse,
-      ...otherProps
-    } = this.props;
+export default function ButtonGroup(props: Props) {
+  const {children, wide = true, flex, spacing, reverse, ...otherProps} = props;
 
-    return (
-      <StyledButtonGroup reverse={reverse} wide={wide} {...otherProps}>
-        {children ? (
-          React.Children.map(
-            children,
-            child =>
-              child
-                ? React.cloneElement(child, {
-                    grouped: !spacing,
-                    spacing: !!spacing,
-                    reverse,
-                    flex,
-                  })
-                : null
-          )
-        ) : null}
-      </StyledButtonGroup>
-    );
-  }
+  return (
+    <StyledButtonGroup reverse={reverse} wide={wide} {...otherProps}>
+      {children ? (
+        React.Children.map(
+          children,
+          child =>
+            child
+              ? React.cloneElement(child, {
+                  grouped: !spacing,
+                  spacing: !!spacing,
+                  reverse,
+                  flex,
+                })
+              : null
+        )
+      ) : null}
+    </StyledButtonGroup>
+  );
 }

@@ -1,7 +1,6 @@
 /* @flow */
 import * as React from 'react';
 import styled, {css} from 'react-emotion';
-import PureComponent from 'react-pure-render/component';
 
 import {Box} from '../layout';
 
@@ -46,7 +45,7 @@ const StyledPaper = styled(Box)`
       box-shadow: none !important;
     `};
 `;
-type TProps = {
+type Props = {
   focused?: boolean,
   rounded?: boolean,
   padded?: boolean,
@@ -66,42 +65,39 @@ type TProps = {
  * our cards and the focus/blur animations.
  *
  */
+export default function Paper(props: Props) {
+  const {
+    focused,
+    padded,
+    border = true,
+    children,
+    elevation = 1,
+    hoverElevation = 1,
+    rounded = true,
+    opaque,
+    wireframe,
+    onClick,
+    ...otherProps
+  } = props;
 
-export default class Paper extends PureComponent<TProps> {
-  render() {
-    const {
-      focused,
-      padded,
-      border = true,
-      children,
-      elevation = 1,
-      hoverElevation = 1,
-      rounded = true,
-      opaque,
-      wireframe,
-      onClick,
-      ...otherProps
-    } = this.props;
+  const zDepth = Math.min(elevation, 5);
+  const hoverZDepth = Math.min(hoverElevation, 5);
 
-    const zDepth = Math.min(elevation, 5);
-    const hoverZDepth = Math.min(hoverElevation, 5);
-
-    return (
-      <StyledPaper
-        focused={focused}
-        border={border}
-        rounded={rounded}
-        padded={padded}
-        opaque={opaque}
-        wireframe={wireframe}
-        interactive={!!onClick}
-        level={zDepth}
-        hoverLevel={hoverZDepth}
-        onClick={onClick}
-        {...otherProps}
-      >
-        {children}
-      </StyledPaper>
-    );
-  }
+  return (
+    <StyledPaper
+      focused={focused}
+      border={border}
+      rounded={rounded}
+      padded={padded}
+      opaque={opaque}
+      wireframe={wireframe}
+      interactive={!!onClick}
+      level={zDepth}
+      hoverLevel={hoverZDepth}
+      onClick={onClick}
+      {...otherProps}
+    >
+      {children}
+    </StyledPaper>
+  );
 }

@@ -1,7 +1,6 @@
 /* @flow */
 import * as React from 'react';
 import styled, {css} from 'react-emotion';
-import PureComponent from 'react-pure-render/component';
 
 import {Box} from '../layout';
 import FieldLabel from '../field-label';
@@ -74,33 +73,31 @@ type TProps = {
   theme?: 'default' | 'orange' | 'green' | 'orangeToGreen',
 };
 
-export default class ToggleButton extends PureComponent<TProps> {
-  render() {
-    const {
-      value = false,
-      theme = 'default',
-      onChange,
-      label,
-      ...otherProps
-    } = this.props;
+export default function ToggleButton(props: TProps) {
+  const {
+    value = false,
+    theme = 'default',
+    onChange,
+    label,
+    ...otherProps
+  } = props;
 
-    return (
-      <Box
-        flexDirection="row"
-        alignItems="center"
-        id="toggle-button"
-        onClick={() => onChange(!value)}
-        {...otherProps}
-      >
-        <StyledToggleButton selected={value} toggleButtonTheme={theme}>
-          <StyledButton toggleButtonTheme={theme} selected={value} />
-        </StyledToggleButton>
-        {label ? (
-          <FieldLabel marginLeft="medium" marginBottom={0}>
-            {label}
-          </FieldLabel>
-        ) : null}
-      </Box>
-    );
-  }
+  return (
+    <Box
+      flexDirection="row"
+      alignItems="center"
+      id="toggle-button"
+      onClick={() => onChange(!value)}
+      {...otherProps}
+    >
+      <StyledToggleButton selected={value} toggleButtonTheme={theme}>
+        <StyledButton toggleButtonTheme={theme} selected={value} />
+      </StyledToggleButton>
+      {label ? (
+        <FieldLabel marginLeft="medium" marginBottom={0}>
+          {label}
+        </FieldLabel>
+      ) : null}
+    </Box>
+  );
 }

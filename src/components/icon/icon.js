@@ -1,8 +1,6 @@
 /* @flow */
 import * as React from 'react';
 import styled from 'react-emotion';
-import PureComponent from 'react-pure-render/component';
-
 import {Inline} from '../layout';
 import DefaultTheme from '../theme';
 
@@ -10,7 +8,7 @@ import type {ICON_SIZE, ICON_COLOR} from './constants';
 
 import {ICONS, DEFAULT_SIZE, DEFAULT_COLOR} from './constants';
 
-type TProps = {
+type Props = {
   children: $Keys<typeof ICONS>,
   size?: ICON_SIZE,
   color?: ICON_COLOR,
@@ -30,36 +28,34 @@ const StyledIcon = styled(Inline)`
   fill: ${props => props.theme.colors[props.color]};
 `;
 
-export default class Icon extends PureComponent<TProps> {
-  render() {
-    const {
-      children,
-      size = DEFAULT_SIZE,
-      color = DEFAULT_COLOR,
-      className,
-      onClick,
-      theme = DefaultTheme,
-      title,
-      ...otherProps
-    } = this.props;
+export default function Icon(props: Props) {
+  const {
+    children,
+    size = DEFAULT_SIZE,
+    color = DEFAULT_COLOR,
+    className,
+    onClick,
+    theme = DefaultTheme,
+    title,
+    ...otherProps
+  } = props;
 
-    return (
-      <StyledIcon
-        className={className}
-        component="i"
-        interactive={!!onClick}
-        onClick={onClick}
-        theme={theme}
-        size={size}
-        color={color}
-        title={title}
-        {...otherProps}
-      >
-        <svg width={size} height={size} aria-hidden="true">
-          <title>{title ? title : children}</title>
-          <use xlinkHref={`#${children}`} />
-        </svg>
-      </StyledIcon>
-    );
-  }
+  return (
+    <StyledIcon
+      className={className}
+      component="i"
+      interactive={!!onClick}
+      onClick={onClick}
+      theme={theme}
+      size={size}
+      color={color}
+      title={title}
+      {...otherProps}
+    >
+      <svg width={size} height={size} aria-hidden="true">
+        <title>{title ? title : children}</title>
+        <use xlinkHref={`#${children}`} />
+      </svg>
+    </StyledIcon>
+  );
 }

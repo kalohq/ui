@@ -2,7 +2,6 @@
 import * as React from 'react';
 import {List} from 'immutable';
 import {size} from '../../utils/type';
-import PureComponent from 'react-pure-render/component';
 
 import {Box} from '../layout';
 import FieldHint from '../field-hint';
@@ -54,98 +53,96 @@ export type TProps = {
 /**
  * Basic form field container component
  */
-export default class Field extends PureComponent<TProps> {
-  render() {
-    const {
-      children,
-      validations,
-      permissions = [],
-      label,
-      labelProps = {},
-      htmlFor,
-      required = false,
-      locked = false,
-      centered = false,
-      icon,
-      hint,
-      hintIcon,
-      onClick,
-      className,
-      labelAction,
-      inline = false,
-      labelWidth,
-      onBlur,
-      controlChildren = true,
-      ...otherProps
-    } = this.props;
+export default function Field(props: TProps) {
+  const {
+    children,
+    validations,
+    permissions = [],
+    label,
+    labelProps = {},
+    htmlFor,
+    required = false,
+    locked = false,
+    centered = false,
+    icon,
+    hint,
+    hintIcon,
+    onClick,
+    className,
+    labelAction,
+    inline = false,
+    labelWidth,
+    onBlur,
+    controlChildren = true,
+    ...otherProps
+  } = props;
 
-    const hintText = permissions.length > 0 ? permissions[0].message : hint;
+  const hintText = permissions.length > 0 ? permissions[0].message : hint;
 
-    const disabled = permissions.length > 0;
+  const disabled = permissions.length > 0;
 
-    return (
+  return (
+    <Box
+      className={className}
+      onClick={onClick}
+      position="relative"
+      flexDirection="column"
+      justifyContent={inline ? 'space-between' : 'inherit'}
+      {...otherProps}
+    >
       <Box
-        className={className}
-        onClick={onClick}
-        position="relative"
-        flexDirection="column"
-        justifyContent={inline ? 'space-between' : 'inherit'}
-        {...otherProps}
+        flexDirection={inline ? 'row' : 'column'}
+        justifyContent={labelWidth ? 'flex-start' : 'space-between'}
       >
-        <Box
-          flexDirection={inline ? 'row' : 'column'}
-          justifyContent={labelWidth ? 'flex-start' : 'space-between'}
-        >
-          {label ? (
-            <Box
-              flexDirection="row"
-              alignItems="center"
-              justifyContent={centered ? 'center' : 'space-between'}
+        {label ? (
+          <Box
+            flexDirection="row"
+            alignItems="center"
+            justifyContent={centered ? 'center' : 'space-between'}
+          >
+            <FieldLabel
+              htmlFor={htmlFor}
+              required={required}
+              locked={locked}
+              icon={icon}
+              labelProps={labelProps}
+              marginBottom={inline ? 0 : 4}
+              marginRight={inline ? 8 : 0}
+              width={labelWidth}
             >
-              <FieldLabel
-                htmlFor={htmlFor}
-                required={required}
-                locked={locked}
-                icon={icon}
-                labelProps={labelProps}
-                marginBottom={inline ? 0 : 4}
-                marginRight={inline ? 8 : 0}
-                width={labelWidth}
-              >
-                {label}
-              </FieldLabel>
-              {labelAction}
-            </Box>
-          ) : null}
-          {!controlChildren ? (
-            children
-          ) : (
-            React.Children.map(children, child =>
-              React.cloneElement(child, {
-                onBlur,
-                disabled:
-                  child.props.disabled === undefined
-                    ? disabled
-                    : child.props.disabled,
-                editable:
-                  child.props.editable === undefined
-                    ? !disabled
-                    : child.props.editable,
-                readonly:
-                  child.props.readonly === undefined
-                    ? disabled
-                    : child.props.readonly,
-              })
-            )
-          )}
-        </Box>
-
-        {!!size(validations) ? (
-          <FieldValidations centered={centered} validations={validations} />
-        ) : hintText ? (
-          <FieldHint hint={hintText} icon={hintIcon ? hintIcon : undefined} />
+              {label}
+            </FieldLabel>
+            {labelAction}
+          </Box>
         ) : null}
+        {!controlChildren ? (
+          children
+        ) : (
+          React.Children.map(children, child =>
+            React.cloneElement(child, {
+              onBlur,
+              disabled:
+                child.props.disabled === undefined
+                  ? disabled
+                  : child.props.disabled,
+              editable:
+                child.props.editable === undefined
+                  ? !disabled
+                  : child.props.editable,
+              readonly:
+                child.props.readonly === undefined
+                  ? disabled
+                  : child.props.readonly,
+            })
+          )
+        )}
       </Box>
-    );
-  }
+
+      {!!size(validations) ? (
+        <FieldValidations centered={centered} validations={validations} />
+      ) : hintText ? (
+        <FieldHint hint={hintText} icon={hintIcon ? hintIcon : undefined} />
+      ) : null}
+    </Box>
+  );
 }

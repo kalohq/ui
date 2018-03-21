@@ -3,7 +3,6 @@ import React from 'react';
 import {isNull} from 'lodash';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import styled, {css} from 'react-emotion';
-import PureComponent from 'react-pure-render/component';
 
 import {pickStyles} from '../../utils/style';
 
@@ -61,7 +60,7 @@ const StyledRadioIcon = styled.span`
   border: 3px solid #fff;
 `;
 
-type TProps = {
+type RadioProps = {
   /** Is the radio button checked */
   checked?: ?boolean,
   /** Disables user interaction although can still be checked */
@@ -78,51 +77,51 @@ type TProps = {
   name?: string,
 };
 
-export default class Radio extends PureComponent<TProps> {
-  render() {
-    const {
-      checked = false,
-      size = 'medium',
-      disabled,
-      readonly,
-      label,
-      onClick,
-      name,
-      ...otherProps
-    } = this.props;
+export function Radio(props: RadioProps) {
+  const {
+    checked = false,
+    size = 'medium',
+    disabled,
+    readonly,
+    label,
+    onClick,
+    name,
+    ...otherProps
+  } = props;
 
-    return (
-      <StyledRadioContainer
-        onClick={readonly || disabled ? null : onClick}
-        name={name}
-        role="radio"
-        aria-checked={checked}
-        aria-disabled={disabled}
+  return (
+    <StyledRadioContainer
+      onClick={readonly || disabled ? null : onClick}
+      name={name}
+      role="radio"
+      aria-checked={checked}
+      aria-disabled={disabled}
+    >
+      <StyledRadio
+        disabled={disabled}
+        readonly={readonly}
+        checked={checked}
+        size={size}
+        {...pickStyles(otherProps)}
+        {...otherProps}
       >
-        <StyledRadio
-          disabled={disabled}
-          readonly={readonly}
-          checked={checked}
-          size={size}
-          {...pickStyles(otherProps)}
-          {...otherProps}
+        <ReactCSSTransitionGroup
+          transitionName="t-scale"
+          transitionEnterTimeout={300}
+          transitionLeaveTimeout={300}
         >
-          <ReactCSSTransitionGroup
-            transitionName="t-scale"
-            transitionEnterTimeout={300}
-            transitionLeaveTimeout={300}
-          >
-            {checked || isNull(checked) ? (
-              <StyledRadioIcon disabled={disabled} />
-            ) : null}
-          </ReactCSSTransitionGroup>
-        </StyledRadio>
-        {label ? (
-          <Text marginLeft={10} size="small" color="navy700" component="label">
-            {label}
-          </Text>
-        ) : null}
-      </StyledRadioContainer>
-    );
-  }
+          {checked || isNull(checked) ? (
+            <StyledRadioIcon disabled={disabled} />
+          ) : null}
+        </ReactCSSTransitionGroup>
+      </StyledRadio>
+      {label ? (
+        <Text marginLeft={10} size="small" color="navy700" component="label">
+          {label}
+        </Text>
+      ) : null}
+    </StyledRadioContainer>
+  );
 }
+
+export default Radio;

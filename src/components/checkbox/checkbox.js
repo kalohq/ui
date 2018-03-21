@@ -1,7 +1,6 @@
 /* @flow */
 import React from 'react';
 import styled, {css} from 'react-emotion';
-import PureComponent from 'react-pure-render/component';
 
 import Text from '../text';
 import {Box} from '../layout';
@@ -77,7 +76,7 @@ const StyledCheckbox = styled(Box)`
 
 `;
 
-type TProps = {
+type CheckboxProps = {
   size?: 'small' | 'medium' | 'large',
   checked?: ?boolean,
   indeterminate?: ?boolean,
@@ -88,48 +87,46 @@ type TProps = {
   name?: string,
 };
 
-export default class Checkbox extends PureComponent<TProps> {
-  render() {
-    const {
-      checked = false,
-      disabled = false,
-      indeterminate = false,
-      size = 'medium',
-      readonly,
-      label,
-      onClick,
-      name,
-      ...otherProps
-    } = this.props;
+export default function Checkbox(props: CheckboxProps) {
+  const {
+    checked = false,
+    disabled = false,
+    indeterminate = false,
+    size = 'medium',
+    readonly,
+    label,
+    onClick,
+    name,
+    ...otherProps
+  } = props;
 
-    return (
-      <StyledCheckboxContainer
-        onClick={readonly || disabled ? null : onClick}
-        name={name}
-        role="checkbox"
-        aria-checked={indeterminate ? 'mixed' : checked}
+  return (
+    <StyledCheckboxContainer
+      onClick={readonly || disabled ? null : onClick}
+      name={name}
+      role="checkbox"
+      aria-checked={indeterminate ? 'mixed' : checked}
+      disabled={disabled}
+      rReadonly={readonly}
+    >
+      <StyledCheckbox
+        size={size}
+        checked={checked}
+        indeterminate={indeterminate}
         disabled={disabled}
-        rReadonly={readonly}
-      >
-        <StyledCheckbox
-          size={size}
-          checked={checked}
-          indeterminate={indeterminate}
-          disabled={disabled}
-          readonly={readonly}
-          {...otherProps}
-        />
-        {label ? (
-          <Text
-            marginLeft={10}
-            size={size === 'small' ? TEXT_SIZE.EXTRA_SMALL : TEXT_SIZE.SMALL}
-            color="navy600"
-            multiline={true}
-          >
-            {label}
-          </Text>
-        ) : null}
-      </StyledCheckboxContainer>
-    );
-  }
+        readonly={readonly}
+        {...otherProps}
+      />
+      {label ? (
+        <Text
+          marginLeft={10}
+          size={size === 'small' ? TEXT_SIZE.EXTRA_SMALL : TEXT_SIZE.SMALL}
+          color="navy600"
+          multiline={true}
+        >
+          {label}
+        </Text>
+      ) : null}
+    </StyledCheckboxContainer>
+  );
 }
