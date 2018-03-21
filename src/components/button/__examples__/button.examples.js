@@ -23,6 +23,11 @@ export const examples = [
     render: () => <Button theme="primary">Create Project</Button>,
   },
   {
+    title: 'Secondary Button',
+    description: 'Used for supporting actions.',
+    render: () => <Button theme="secondary">Save Changes</Button>,
+  },
+  {
     title: 'Delete Button',
     description: 'An action button for deleting/removing.',
     render: () => <Button theme="delete">Remove freelancer</Button>,
@@ -51,11 +56,6 @@ export const examples = [
         Get Started
       </Button>
     ),
-  },
-  {
-    title: 'Secondary Button',
-    description: 'Used for supporting actions.',
-    render: () => <Button theme="secondary">Save Changes</Button>,
   },
   {
     title: 'Button with icon',
