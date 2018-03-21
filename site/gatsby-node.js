@@ -159,16 +159,6 @@ exports.createPages = ({boundActionCreators, graphql}) => {
   });
 };
 
-exports.modifyBabelrc = ({babelrc}) => {
-  return {
-    ...babelrc,
-    plugins: babelrc.plugins.concat([
-      'babel-plugin-transform-react-display-name',
-      'babel-plugin-react-pure-component',
-    ]),
-  };
-};
-
 exports.modifyWebpackConfig = ({config, stage}) => {
   config.merge({
     resolve: {
