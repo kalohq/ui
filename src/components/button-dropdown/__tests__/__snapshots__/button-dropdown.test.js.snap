@@ -66,10 +66,10 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
   -webkit-transform-origin: 48% 50%;
   -ms-transform-origin: 48% 50%;
   transform-origin: 48% 50%;
-  -webkit-animation: animation-66ghwx 1600ms linear infinite;
-  animation: animation-66ghwx 1600ms linear infinite;
-  width: px;
-  height: px;
+  -webkit-animation: animation-bg5xxq 1600ms linear infinite;
+  animation: animation-bg5xxq 1600ms linear infinite;
+  width: 20px;
+  height: 20px;
 }
 
 .emotion-14 svg {
@@ -175,6 +175,7 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
     >
       <div
         className="emotion-14 emotion-15"
+        size="small"
       >
         <svg
           height="20px"
@@ -259,10 +260,10 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   -webkit-transform-origin: 48% 50%;
   -ms-transform-origin: 48% 50%;
   transform-origin: 48% 50%;
-  -webkit-animation: animation-66ghwx 1600ms linear infinite;
-  animation: animation-66ghwx 1600ms linear infinite;
-  width: px;
-  height: px;
+  -webkit-animation: animation-bg5xxq 1600ms linear infinite;
+  animation: animation-bg5xxq 1600ms linear infinite;
+  width: 20px;
+  height: 20px;
 }
 
 .emotion-22 svg {
@@ -288,7 +289,25 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   cursor: pointer;
 }
 
-.emotion-0 {
+.emotion-1 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   border-radius: 3px;
   border: 1px solid rgb(176,186,195);
@@ -302,7 +321,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   background-color: rgb(255,255,255);
 }
 
-.emotion-0:hover {
+.emotion-1:hover {
   background-color: rgb(249,250,252);
   border-color: rgb(84,103,137);
 }
@@ -335,6 +354,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
           className="emotion-0 emotion-1"
           disabled={false}
           size="large"
+          style={Object {}}
         />
       </div>
       <i
@@ -389,6 +409,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
           className="emotion-0 emotion-1"
           disabled={false}
           size="large"
+          style={Object {}}
         />
       </div>
       <i
@@ -433,6 +454,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
     >
       <div
         className="emotion-22 emotion-23"
+        size="small"
       >
         <svg
           height="20px"

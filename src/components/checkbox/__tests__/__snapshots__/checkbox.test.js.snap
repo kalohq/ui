@@ -46,7 +46,25 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   font-weight: 500;
 }
 
-.emotion-0 {
+.emotion-1 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   border-radius: 3px;
   border: 1px solid rgb(176,186,195);
@@ -76,6 +94,7 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
     className="emotion-0 emotion-1"
     disabled={false}
     size="medium"
+    style={Object {}}
   />
   <span
     className="emotion-2 emotion-3"
@@ -106,7 +125,25 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   cursor: pointer;
 }
 
-.emotion-0 {
+.emotion-1 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   border-radius: 3px;
   border: 1px solid rgb(176,186,195);
@@ -165,6 +202,7 @@ exports[`Checkbox should render a checkbox with label 1`] = `
     className="emotion-0 emotion-1"
     disabled={false}
     size="medium"
+    style={Object {}}
   />
   <span
     className="emotion-2 emotion-3"
@@ -195,7 +233,25 @@ exports[`Checkbox should render shallow component ok 1`] = `
   cursor: pointer;
 }
 
-.emotion-0 {
+.emotion-1 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   border-radius: 3px;
   border: 1px solid rgb(176,186,195);
@@ -225,6 +281,7 @@ exports[`Checkbox should render shallow component ok 1`] = `
     className="emotion-0 emotion-1"
     disabled={false}
     size="medium"
+    style={Object {}}
   />
 </div>
 `;

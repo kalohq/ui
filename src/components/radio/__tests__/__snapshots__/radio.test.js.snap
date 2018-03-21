@@ -17,7 +17,25 @@ exports[`Radio should render shallow component ok 1`] = `
   cursor: pointer;
 }
 
-.emotion-2 {
+.emotion-3 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   border-radius: 50%;
   position: relative;
   border: 1px solid rgb(84,195,219);
@@ -57,6 +75,7 @@ exports[`Radio should render shallow component ok 1`] = `
     className="emotion-2 emotion-3"
     disabled={undefined}
     size="medium"
+    style={Object {}}
   >
     <span>
       <span
