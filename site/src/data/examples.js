@@ -16,6 +16,7 @@ const Heading = require('/Users/ap/Projects/kalo/ui/src/components/heading/__exa
 const Icon = require('/Users/ap/Projects/kalo/ui/src/components/icon/__examples__/icon.examples.js');
 const Input = require('/Users/ap/Projects/kalo/ui/src/components/input/__examples__/input.examples.js');
 const Layout = require('/Users/ap/Projects/kalo/ui/src/components/layout/__examples__/layout.examples.js');
+const List = require('/Users/ap/Projects/kalo/ui/src/components/list/__examples__/list.examples.js');
 const LoadingSpinner = require('/Users/ap/Projects/kalo/ui/src/components/loading-spinner/__examples__/loading-spinner.examples.js');
 const PaperMenu = require('/Users/ap/Projects/kalo/ui/src/components/paper-menu/__examples__/paper-menu.examples.js');
 const Paper = require('/Users/ap/Projects/kalo/ui/src/components/paper/__examples__/paper.examples.js');
@@ -43,6 +44,7 @@ Heading,
 Icon,
 Input,
 Layout,
+List,
 LoadingSpinner,
 PaperMenu,
 Paper,

@@ -3,6 +3,9 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 import serializer from 'enzyme-to-json/serializer';
+import {ThemeProvider} from 'emotion-theming';
+
+import theme from 'components/theme';
 
 import List from '../list';
 import Paper from '../../paper';
@@ -13,12 +16,14 @@ describe('components/list', () => {
   const create = (spread = {}) => {
     const props = {spaced: 'medium', ...spread};
     const element = (
-      <List {...props}>
-        <Paper>List Item One</Paper>
-        <Paper>List Item Two</Paper>
-        <Paper>List Item Three</Paper>
-        <Paper>List Item Four</Paper>
-      </List>
+      <ThemeProvider theme={theme}>
+        <List {...props}>
+          <Paper>List Item One</Paper>
+          <Paper>List Item Two</Paper>
+          <Paper>List Item Three</Paper>
+          <Paper>List Item Four</Paper>
+        </List>
+      </ThemeProvider>
     );
 
     return {props, element};

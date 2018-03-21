@@ -1,11 +1,50 @@
 /* @flow */
 import * as React from 'react';
-import cx from 'classnames';
+import styled, {css} from 'react-emotion';
 
 import {Box} from '../layout';
 
-import styles from './paper.css';
+const SHADOW_LEVELS = [
+  'none',
+  'none',
+  '0 3px 6px rgba(140, 140, 140, 0.08)',
+  '0 10px 25px rgba(140, 140, 140, 0.14)',
+  '0 12px 25px rgba(140, 140, 140, 0.21)',
+  '0 14px 25px rgba(140, 140, 140, 0.27)',
+];
 
+const StyledPaper = styled(Box)`
+  position: relative;
+  background: white;
+  box-sizing: content-box;
+  transition: all 0.2s ease-in-out;
+  cursor: ${props => (props.interactive ? 'pointer' : null)};
+  margin: ${props => (props.focused ? '0 - 10px' : null)};
+
+  border: ${props =>
+    props.border ? `1px solid ${props.theme.colors.grey300}` : 0};
+  border-radius: ${props => (props.rounded ? '5px' : 0)};
+  box-shadow: ${props => SHADOW_LEVELS[props.level]};
+
+  &:hover {
+    box-shadow: ${props => SHADOW_LEVELS[props.hoverLevel]};
+  }
+
+  ${props =>
+    props.wireframe &&
+    css`
+      background: transparent;
+      border: 1px dashed ${props.theme.colors.grey500};
+    `};
+
+  ${props =>
+    props.opaque &&
+    css`
+      background: none;
+      border: 0;
+      box-shadow: none !important;
+    `};
+`;
 type Props = {
   focused?: boolean,
   rounded?: boolean,
@@ -19,6 +58,7 @@ type Props = {
   wireframe?: boolean,
   onClick?: Function,
 };
+
 /**
  * @summary This is the kalo paper component.
  * It is in charge of implementing the box-shadow around
@@ -33,7 +73,6 @@ export default function Paper(props: Props) {
     children,
     elevation = 1,
     hoverElevation = 1,
-    className,
     rounded = true,
     opaque,
     wireframe,
@@ -42,27 +81,23 @@ export default function Paper(props: Props) {
   } = props;
 
   const zDepth = Math.min(elevation, 5);
-  const hoverZDept = Math.min(hoverElevation, 5);
-
-  const _classNames = cx(
-    {
-      [styles.root]: true,
-      [styles.focused]: focused,
-      [styles[`level-${zDepth}`]]: true,
-      [styles[`hover-level-${hoverZDept}`]]: true,
-      [styles.border]: border,
-      [styles.rounded]: rounded,
-      [styles.padded]: padded,
-      [styles.opaque]: opaque,
-      [styles.wireframe]: wireframe,
-      [styles.interactive]: !!onClick,
-    },
-    className
-  );
+  const hoverZDepth = Math.min(hoverElevation, 5);
 
   return (
-    <Box className={_classNames} onClick={onClick} {...otherProps}>
+    <StyledPaper
+      focused={focused}
+      border={border}
+      rounded={rounded}
+      padded={padded}
+      opaque={opaque}
+      wireframe={wireframe}
+      interactive={!!onClick}
+      level={zDepth}
+      hoverLevel={hoverZDepth}
+      onClick={onClick}
+      {...otherProps}
+    >
       {children}
-    </Box>
+    </StyledPaper>
   );
 }

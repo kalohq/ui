@@ -20,10 +20,22 @@ exports[`components/paper Paper should render a component with an elevation of 3
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  background: white;
+  box-sizing: content-box;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid rgb(238,244,250);
+  border-radius: 5px;
+  box-shadow: 0 10px 25px rgba(140,140,140,0.14);
+}
+
+.emotion-1:hover {
+  box-shadow: none;
 }
 
 <div
-  className="root level-3 hover-level-1 border rounded emotion-0 emotion-1"
+  className="emotion-0 emotion-1"
   onClick={undefined}
   style={Object {}}
 >
@@ -51,10 +63,22 @@ exports[`components/paper Paper should render shallow component ok 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  background: white;
+  box-sizing: content-box;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid rgb(238,244,250);
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+.emotion-1:hover {
+  box-shadow: none;
 }
 
 <div
-  className="root level-1 hover-level-1 border rounded emotion-0 emotion-1"
+  className="emotion-0 emotion-1"
   onClick={undefined}
   spacing={true}
   style={Object {}}
@@ -83,6 +107,18 @@ exports[`components/paper PaperToolbar should render shallow component ok 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  background: white;
+  box-sizing: content-box;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid rgb(238,244,250);
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+.emotion-1:hover {
+  box-shadow: none;
 }
 
 .emotion-3 {
@@ -105,14 +141,15 @@ exports[`components/paper PaperToolbar should render shallow component ok 1`] = 
   display: -ms-flexbox;
   display: flex;
   padding: 0px 25px;
+  border-bottom: 1px solid rgb(238,244,250);
 }
 
 <div
-  className="root emotion-0 emotion-3"
+  className="emotion-2 emotion-3"
   style={Object {}}
 >
   <div
-    className="root level-1 hover-level-1 border rounded emotion-0 emotion-1"
+    className="emotion-0 emotion-1"
     onClick={undefined}
     style={Object {}}
   >
