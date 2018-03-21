@@ -1,81 +1,222 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cx from 'classnames';
-import {isBoolean, isString} from 'lodash';
-
+/* @flow */
+import * as React from 'react';
+import {isString} from 'lodash';
 import PureComponent from 'react-pure-render/component';
+import styled, {css} from 'react-emotion';
+
 import {Box, Flex} from '../layout';
 import Icon from '../icon';
 import LoadingSpinner from '../loading-spinner';
 
-import styles from './button.css';
-
-const ICON_SIZE = {
-  small: '14',
-  medium: '18',
-  large: '24',
+const BUTTON_SIZING = {
+  small: {
+    height: 30,
+    padding: 15,
+    fontSize: 12,
+    iconSize: 14,
+  },
+  medium: {
+    height: 36,
+    padding: 18,
+    fontSize: 14,
+    iconSize: 18,
+  },
+  large: {
+    height: 46,
+    padding: 23,
+    fontSize: 14,
+    iconSize: 24,
+  },
+  'extra-large': {
+    height: 56,
+    padding: 26,
+    fontSize: 14,
+    iconSize: 24,
+  },
 };
 
-function renderIcon(icon, border, size) {
-  if (!icon) return null;
+const CoreButton = styled(Box)`
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  border: none;
+  border-radius: ${props => props.theme.layout.borderRadiusButton};
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease, color 0.1s linear;
+  align-items: center;
+  font-size: ${props => BUTTON_SIZING[props.size].fontSize}px;
+  height: ${props => BUTTON_SIZING[props.size].height}px;
+  padding: 0 ${props => BUTTON_SIZING[props.size].padding}px;
+  vertical-align: middle;
+  width: ${props =>
+    props.loneIcon ? `${BUTTON_SIZING[props.size].height}px` : 'unset'};
 
-  return isString(icon) ? (
-    <span
-      className={cx({
-        [styles.icon]: true,
-        [styles.border]: border,
-      })}
-    >
-      <Icon size={!!size ? size : '18'}>{icon}</Icon>
-    </span>
-  ) : (
-    <span
-      className={cx({
-        [styles.icon]: true,
-        [styles.border]: border,
-      })}
-    >
-      {icon}
-    </span>
-  );
-}
+  ${props =>
+    props.isGrouped &&
+    css`
+      border-radius: 0;
+      border-right-width: 0 !important;
 
-export default class Button extends PureComponent {
-  static propTypes = {
-    children: PropTypes.any,
-    message: PropTypes.string,
-    role: PropTypes.string,
-    disabled: PropTypes.bool,
-    icon: PropTypes.any,
-    iconBorder: PropTypes.bool,
-    loneIcon: PropTypes.bool,
-    wide: PropTypes.bool,
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
-    theme: PropTypes.oneOf([
-      'primary',
-      'secondary',
-      'tertiary',
-      'disabled',
-      'delete',
-      'deny',
-      'confirm',
-    ]),
-    grouped: PropTypes.bool,
-    spacing: PropTypes.bool,
-    flex: PropTypes.bool,
-    active: PropTypes.bool,
-    loading: PropTypes.bool,
-    success: PropTypes.bool,
-    middle: PropTypes.bool,
-    onClick: PropTypes.func,
-    loadedTimeout: PropTypes.number,
-    component: PropTypes.any,
-    name: PropTypes.string,
-    type: PropTypes.string,
-    mayGetLong: PropTypes.bool,
-    subdued: PropTypes.bool,
-  };
+      &:first-of-type {
+        border-top-left-radius: ${props.theme.layout.borderRadiusButton};
+        border-bottom-left-radius: ${props.theme.layout.borderRadiusButton};
+      }
 
+      &:last-of-type {
+        border-top-right-radius: ${props.theme.layout.borderRadiusButton};
+        border-bottom-right-radius: ${props.theme.layout.borderRadiusButton};
+        border-right-width: 2px !important;
+      }
+
+      ${props.isSpaced &&
+        css`
+          margin-left: 2.5px;
+          margin-right: 2.5px;
+        `};
+    `};
+
+  ${props =>
+    props.isDisabled &&
+    css`
+      background-color: ${props.theme.colors.grey300};
+      color: ${props.theme.colors.grey400};
+      cursor: default;
+    `};
+`;
+
+const PrimaryButton = styled(CoreButton)`
+  background-color: ${props => props.theme.colors.green500};
+  color: #fff;
+
+  &:hover {
+    background-color: ${props => props.theme.colors.green600};
+  }
+`;
+
+const SecondaryButton = styled(CoreButton)`
+  background-color: ${props => props.theme.colors.blue500};
+  color: #fff;
+
+  &:hover {
+    background-color: ${props => props.theme.colors.blue600};
+  }
+`;
+
+const TertiaryButton = styled(CoreButton)`
+  background-color: #fff;
+  border-color: ${props => props.theme.colors.grey300};
+  border-style: solid;
+  border-width: 2px;
+  color: ${props => props.theme.colors.navy700};
+
+  &:hover {
+    border-color: ${props => props.theme.colors.grey400};
+    background-color: ${props => props.theme.colors.grey200};
+  }
+
+  ${props =>
+    props.isActive && css`background-color: ${props.theme.colors.grey300});`};
+`;
+
+const DeleteButton = styled(CoreButton)`
+  border-style: solid;
+  border-width: 2px;
+  border-color: ${props => props.theme.colors.pink500};
+  background-color: #fff;
+  color: ${props => props.theme.colors.pink500};
+
+  &:hover {
+    background-color: ${props => props.theme.colors.pink500};
+    border-color: ${props => props.theme.colors.pink500};
+    color: #fff;
+  }
+
+  &:active {
+    background-color: ${props => props.theme.colors.pink600};
+    border-color: ${props => props.theme.colors.pink600};
+    color: #fff;
+  }
+`;
+
+const ButtonLoadingSpinner = styled.div`
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: -150%;
+  transform: translate(-50%, -50%) rotate(0);
+  transition: 0.4s top cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: ${props => (props.isVisible ? 1 : 0)};
+  top: ${props => (props.isVisible ? '50%' : '-150%')};
+`;
+
+const ButtonMessage = styled(Flex)`
+  height: 100%;
+  left: 0;
+  opacity: ${props => (props.isHidden ? 0 : 1)};
+  top: ${props => (props.isHidden ? '100%' : 0)};
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+`;
+
+const ButtonPlaceholderMessage = styled(ButtonMessage)`
+  opacity: 0;
+  visibility: hidden;
+  position: relative;
+`;
+
+const ButtonSuccessMessage = styled(ButtonMessage)`
+  opacity: ${props => (props.isVisible ? 1 : 0)};
+  top: ${props => (props.isVisible ? 0 : '100%')};
+`;
+
+const getButtonType = type => {
+  switch (type) {
+    case 'primary':
+      return PrimaryButton;
+    case 'secondary':
+      return SecondaryButton;
+    case 'tertiary':
+      return TertiaryButton;
+    case 'delete':
+      return DeleteButton;
+    default:
+      return TertiaryButton;
+  }
+};
+
+type TProps = {
+  children?: any,
+  message?: string,
+  role?: string,
+  disabled?: boolean,
+  icon?: string,
+  iconBorder?: boolean, // deprecate
+  loneIcon?: boolean,
+  wide?: boolean,
+  size?: 'small' | 'medium' | 'large' | 'extra-large',
+  theme?: 'primary' | 'secondary' | 'tertiary' | 'delete',
+  grouped?: boolean,
+  spacing?: boolean,
+  flex?: boolean,
+  active?: boolean,
+  loading?: boolean,
+  success?: boolean,
+  middle?: boolean,
+  onClick?: Function,
+  loadedTimeout?: number,
+  component?: 'string' | React.Node,
+  name?: string,
+  type?: string,
+  mayGetLong?: boolean, // deprecate
+  subdued?: boolean,
+};
+
+export default class Button extends PureComponent<TProps> {
   static defaultProps = {
     role: 'button',
     size: 'large',
@@ -85,7 +226,6 @@ export default class Button extends PureComponent {
     loading: false,
     loneIcon: false,
     loadedTimeout: 600,
-    component: Box,
   };
 
   static displayName = 'Button';
@@ -104,7 +244,7 @@ export default class Button extends PureComponent {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps: TProps) {
     if (this.props.loading && !nextProps.loading) {
       this.setState({loaded: true});
       clearTimeout(this.__loadedTimeout__);
@@ -122,7 +262,6 @@ export default class Button extends PureComponent {
       disabled,
       icon,
       reverse,
-      iconBorder,
       loneIcon,
       theme,
       grouped,
@@ -138,7 +277,7 @@ export default class Button extends PureComponent {
       flex,
       type,
       role,
-      component: Component,
+      component,
       className,
       middle,
       style,
@@ -147,17 +286,18 @@ export default class Button extends PureComponent {
       loadedTimeout: _IGNORED,
       readonly: __IGNORED,
       editable: ___IGNORED,
+      iconBorder: ____IGNORED,
       ...otherProps
     } = this.props;
 
     const {loaded} = this.state;
 
-    const Tag = this.props.to || this.props.href ? 'span' : 'button';
+    const ButtonComponent = getButtonType(theme);
 
-    const iconElement = renderIcon(
-      icon,
-      isBoolean(iconBorder) ? iconBorder : !!icon && !!children,
-      ICON_SIZE[size]
+    const iconElement = isString(icon) ? (
+      <Icon size={!!size ? BUTTON_SIZING[size].iconSize : 18}>{icon}</Icon>
+    ) : (
+      icon
     );
 
     const handleClick = event => {
@@ -172,74 +312,51 @@ export default class Button extends PureComponent {
     };
 
     return (
-      <Component
+      <ButtonComponent
         style={style}
-        className={cx(
-          {
-            [styles.root]: true,
-            [styles.grouped]: !!grouped,
-            [styles.spacing]: !!spacing,
-            [styles.wide]: wide,
-            [styles.middle]: middle,
-            [styles.loading]: loading,
-            [styles.success]: success,
-            [styles.loaded]: loaded,
-            [styles.flex]: flex,
-            [styles.reverse]: reverse,
-          },
-          className
-        )}
+        component={component ? component : 'button'}
+        role={role}
+        name={name}
+        type={type}
+        size={size}
+        wide={wide}
+        success={success}
+        loading={loading}
+        loaded={loaded}
+        disabled={success ? false : disabled || loading}
+        active={!!active}
+        subdued={!!subdued}
+        loneIcon={loneIcon}
+        flex={flex}
+        className={className}
         onClick={handleClick}
+        // ButtonGroup props
+        isSpaced={!!spacing}
+        isGrouped={!!grouped}
+        isMiddle={middle}
+        isReversed={reverse}
         {...otherProps}
       >
-        <Tag
-          role={role}
-          name={name}
-          type={type}
-          className={cx({
-            [styles.button]: true,
-            [styles.disabled]: success ? false : disabled || loading,
-            [styles[theme]]: !!theme,
-            [styles.active]: !!active,
-            [styles.subdued]: !!subdued,
-            [styles[size]]: true,
-            [styles.loneIcon]: loneIcon,
-          })}
+        <ButtonPlaceholderMessage>
+          {iconElement}
+          {children}
+        </ButtonPlaceholderMessage>
+        <ButtonMessage
+          name="message"
+          isHidden={loading}
+          title={mayGetLong ? children : undefined}
         >
-          <Flex
-            alignItems="center"
-            justifyContent="center"
-            className={styles.placeholder}
-          >
-            {iconElement}
-            {children}
-          </Flex>
-          <Flex
-            alignItems="center"
-            justifyContent="center"
-            name="message"
-            className={cx({
-              [styles.message]: true,
-              [styles.mayGetLong]: mayGetLong,
-            })}
-            title={mayGetLong ? children : undefined}
-          >
-            {iconElement}
-            {children}
-          </Flex>
-          <Flex
-            alignItems="center"
-            justifyContent="center"
-            className={styles.successMessage}
-          >
-            {iconElement}
-            {message}
-          </Flex>
-          <div className={styles.loadingSpinner}>
-            <LoadingSpinner size="small" />
-          </div>
-        </Tag>
-      </Component>
+          {iconElement}
+          {children}
+        </ButtonMessage>
+        <ButtonSuccessMessage isVisible={success}>
+          {iconElement}
+          {message}
+        </ButtonSuccessMessage>
+        <ButtonLoadingSpinner isVisible={loading}>
+          <LoadingSpinner size="small" />
+        </ButtonLoadingSpinner>
+      </ButtonComponent>
     );
   }
 }
