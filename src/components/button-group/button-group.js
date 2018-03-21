@@ -1,9 +1,9 @@
 /* @flow */
 import * as React from 'react';
 import styled, {css} from 'react-emotion';
+import {Flex} from '../layout';
 
-const StyledButtonGroup = styled.div`
-  display: flex;
+const StyledButtonGroup = styled(Flex)`
   align-items: center;
   width: ${props => (props.wide ? '100%' : 'auto')};
 
