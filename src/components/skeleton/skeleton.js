@@ -104,12 +104,19 @@ export function SkeletonAvatar({size = 4}) {
 }
 
 /** Skeleton representation of paper container */
-export const SkeletonPaper = styled(Box)`
+export const StyledSkeletonPaper = styled(Box)`
   background-color: #fff;
   border: 1px solid ${props => props.theme.colors.grey300};
   border-radius: 3px;
-  padding: 16px;
 `;
+
+export function SkeletonPaper({children, ...otherProps}) {
+  return (
+    <StyledSkeletonPaper padding={16} {...otherProps}>
+      {children}
+    </StyledSkeletonPaper>
+  );
+}
 
 /** Skeleton representation of an avatar */
 export function SkeletonCard({children}) {
