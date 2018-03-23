@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render shallow component ok 1`] = `
+<div
+  className="e1q9f2xp0 css-nxh66u"
+  style={Object {}}
+>
+  <div
+    className="e1q9f2xp0 css-az3w3z"
+    onClick={undefined}
+    style={Object {}}
+  >
+    <div
+      className="e1q9f2xp0 css-jbik9l"
+      style={Object {}}
+    >
+      <div
+        className="e1q9f2xp0 css-1ertpse"
+        style={Object {}}
+      >
+        <label
+          className="em7k1990 css-1fy220i"
+          color="navy600"
+          htmlFor={undefined}
+          onClick={undefined}
+          size="small"
+          style={Object {}}
+          title={undefined}
+        >
+          Project name
+        </label>
+      </div>
+      <div
+        className="e6fqpax1 css-15tsz50"
+        style={Object {}}
+      >
+        <input
+          className="css-1nv6z25 e6fqpax2"
+          defaultValue={undefined}
+          disabled={false}
+          name="My first project"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="My first project"
+          readOnly={false}
+          size="medium"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+          value={undefined}
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="e1q9f2xp0 css-az3w3z"
+    onClick={undefined}
+    style={Object {}}
+  >
+    <div
+      className="e1q9f2xp0 css-jbik9l"
+      style={Object {}}
+    >
+      <div
+        className="e1q9f2xp0 css-1ertpse"
+        style={Object {}}
+      >
+        <label
+          className="em7k1990 css-1fy220i"
+          color="navy600"
+          htmlFor={undefined}
+          onClick={undefined}
+          size="small"
+          style={Object {}}
+          title={undefined}
+        >
+          Task name
+        </label>
+      </div>
+      <div
+        className="e6fqpax1 css-15tsz50"
+        style={Object {}}
+      >
+        <input
+          className="css-1nv6z25 e6fqpax2"
+          defaultValue={undefined}
+          disabled={false}
+          name="My first task"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="My first task"
+          readOnly={false}
+          size="medium"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+          value={undefined}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

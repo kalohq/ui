@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render shallow component ok 1`] = `
+<div
+  className="e6fqpax1 css-15tsz50"
+  style={Object {}}
+>
+  <input
+    className="css-1nv6z25 e6fqpax2"
+    defaultValue={undefined}
+    name={undefined}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    placeholder={undefined}
+    readOnly={undefined}
+    size="medium"
+    style={
+      Object {
+        "width": undefined,
+      }
+    }
+    value={undefined}
+  />
+</div>
+`;

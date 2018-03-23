@@ -1,26 +1,20 @@
 /* @flow */
 import * as React from 'react';
-import cx from 'classnames';
+import styled from 'react-emotion';
 import Icon from '../icon';
 import Text from '../text';
-
-import styles from './heading.css';
-
-import type {HEADING_HOVER} from './constants';
 
 import type {TEXT_COLOR, TEXT_SIZE} from '../text/constants';
 
 type TProps = {
   /** The heading content */
   children: React.Node,
-  /** A class to pass down */
-  className?: string,
   /** Sets the text color and fill color of any child icon */
   color?: TEXT_COLOR,
   /** Sets the size of the heading */
   size?: TEXT_SIZE,
   /** Sets interactive styles for the underlying text component - See Text component */
-  hover?: HEADING_HOVER,
+  hover?: 'underline' | 'none',
   /** Displays an icon before the heading */
   icon?: string,
   /** Displays an icon after the heading */
@@ -28,6 +22,16 @@ type TProps = {
   /** Adds padding between the icon and heading text */
   iconPadding?: number,
 };
+
+const StyledHeading = styled(Text)`
+  line-height: 1.25em !important;
+
+  > i {
+    position: relative;
+    left: 2px;
+    vertical-align: top;
+  }
+`;
 
 export default function Heading(props: TProps) {
   const {
@@ -38,17 +42,15 @@ export default function Heading(props: TProps) {
     iconAfter,
     hover = false,
     iconPadding = 10,
-    className,
     ...otherProps
   } = props;
 
   return (
-    <Text
+    <StyledHeading
       size={size}
       interactive={hover === 'interactive'}
       display="block"
       color={color}
-      className={cx(styles.root, className)}
       {...otherProps}
     >
       {icon ? (
@@ -70,6 +72,6 @@ export default function Heading(props: TProps) {
           {iconAfter}
         </Icon>
       ) : null}
-    </Text>
+    </StyledHeading>
   );
 }

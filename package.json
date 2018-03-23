@@ -1,6 +1,6 @@
 {
   "name": "@kalo/ui",
-  "version": "0.11.7",
+  "version": "0.14.0",
   "description": "A library of React components",
   "repository": {
     "type": "git",
@@ -11,9 +11,10 @@
     "lib"
   ],
   "scripts": {
+    "build": "rimraf lib && npm run compile",
     "compile": "npm run generate:tokens && npm run generate:icons && gulp build-production",
     "test": "jest",
-    "dist": "rimraf lib && npm run compile",
+    "release": "np",
     "typecheck": "flow",
     "lint": "eslint src",
     "precommit": "lint-staged",
@@ -34,9 +35,10 @@
     "babel-core": "6.24.1",
     "babel-eslint": "7.2.3",
     "babel-istanbul": "0.8.0",
-    "babel-jest": "21.0.2",
+    "babel-jest": "22.4.1",
     "babel-loader": "7.0.0",
-    "babel-plugin-emotion": "^8.0.10",
+    "babel-plugin-add-react-displayname": "0.0.5",
+    "babel-plugin-emotion": "^9.0.0",
     "babel-plugin-lodash": "3.2.11",
     "babel-plugin-react-transform": "2.0.2",
     "babel-plugin-transform-builtin-extend": "1.1.0",
@@ -46,8 +48,8 @@
     "babel-preset-stage-2": "6.24.1",
     "classnames": "2.2.5",
     "css-loader": "0.28.0",
-    "emotion": "^8.0.10",
-    "emotion-theming": "^8.0.10",
+    "emotion": "^9.0.0",
+    "emotion-theming": "^9.0.0",
     "enzyme": "2.7.1",
     "enzyme-to-json": "2.0.0",
     "eslint": "3.19.0",
@@ -66,8 +68,8 @@
     "gulp-postcss": "^7.0.0",
     "husky": "0.13.3",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "21.0.0",
-    "jest-glamor-react": "3.0.0",
+    "jest": "22.4.1",
+    "jest-emotion": "^9.0.0",
     "lint-staged": "3.4.2",
     "lodash": "4.17.2",
     "postcss-cli": "3.2.0",
@@ -82,29 +84,32 @@
     "react-addons-css-transition-group": "15.4.1",
     "react-addons-test-utils": "15.4.1",
     "react-dom": "15.4.1",
-    "react-emotion": "^8.0.10",
-    "react-hotkeys": "0.9.0",
+    "react-emotion": "^9.0.0",
+    "react-hotkeys": "^0.9.0",
     "react-intl": "2.1.5",
     "react-pure-render": "1.0.2",
     "react-test-renderer": "15.4.1",
+    "reactman": "2.1.0",
     "rimraf": "2.6.1",
     "style-loader": "0.16.1",
     "svg-sprite": "^1.3.7",
-    "theo": "^6.0.0-beta.9",
-    "webpack": "2.5.1",
-    "reactman": "2.1.0"
+    "theo": "^6.0.0",
+    "webpack": "2.5.1"
   },
   "peerDependencies": {
     "classnames": "^2.2.5",
+    "emotion-theming": "^9.0.0",
+    "emotion": "^9.0.0",
     "lodash": "^4.17.2",
     "prop-types": "^15.5.10",
     "qs": "^5.2.1",
-    "react": "^15.4.1",
     "react-addons-css-transition-group": "^15.4.1",
     "react-dom": "^15.4.1",
+    "react-emotion": "^9.0.0",
     "react-hotkeys": "^0.9.0",
     "react-intl": "^2.1.5",
-    "react-pure-render": "^1.0.2"
+    "react-pure-render": "^1.0.2",
+    "react": "^15.4.1"
   },
   "babel": {
     "presets": [
@@ -113,7 +118,7 @@
       "react"
     ],
     "ignore": [
-      "__stories__"
+      "__examples__"
     ]
   },
   "jest": {
@@ -137,7 +142,8 @@
     "collectCoverageFrom": [
       "src/**/*.js",
       "!src/**/*.test.js",
-      "!src/**/*.stories.js",
+      "!src/**/index.js",
+      "!src/**/*.examples.js",
       "!src/components/icon-symbols/**/*",
       "!src/design-tokens/**/*",
       "!src/icons/**/*"

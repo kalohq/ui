@@ -11,8 +11,8 @@
         "component/index.js": "components/{{filenameSlug}}/{{indexSlug}}.js",
         "component/__tests__/component.test.js":
           "components/{{filenameSlug}}/__tests__/{{filenameSlug}}.test.js",
-        "component/__stories__/component.stories.js":
-          "components/{{filenameSlug}}/__stories__/{{filenameSlug}}.stories.js",
+        "component/__examples__/component.examples.js":
+          "components/{{filenameSlug}}/__examples__/{{filenameSlug}}.examples.js",
         "component/README.md": "components/{{filenameSlug}}/{{readmeSlug}}.md"
       },
       "script": [

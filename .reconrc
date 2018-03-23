@@ -1,9 +1,0 @@
-{
-  "files": "src/**/!(*.test|*.manifest|*.stories).js*",
-  "resolve": {
-    "extensions": [
-      ".js",
-      ".jsx"
-    ]
-  }
-}

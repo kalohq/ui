@@ -83,6 +83,9 @@ export const ICONS = new Enum({
   COMMENT: {
     value: 'comment',
   },
+  CONTENT_PASTE: {
+    value: 'content_paste',
+  },
   CREATE: {
     value: 'create',
   },
@@ -169,6 +172,9 @@ export const ICONS = new Enum({
   },
   LINKEDIN: {
     value: 'linkedin',
+  },
+  LOCAL_ATM: {
+    value: 'local_atm',
   },
   LOCAL_OFFER: {
     value: 'local_offer',

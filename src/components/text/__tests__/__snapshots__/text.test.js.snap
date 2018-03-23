@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Text should render green text 1`] = `
-.glamor-1 {
+.emotion-1 {
   display: inline-block;
   vertical-align: bottom;
   font-family: 'WebFaktSoftPro',sans-serif;
@@ -16,16 +16,16 @@ exports[`Text should render green text 1`] = `
   color: rgb(62,179,138);
 }
 
-.glamor-1:hover {
+.emotion-1:hover {
   text-decoration: inherit;
 }
 
-.glamor-1 strong {
+.emotion-1 strong {
   font-weight: 500;
 }
 
 <span
-  className="glamor-0 glamor-1"
+  className="emotion-0 emotion-1"
   color="green"
   onClick={undefined}
   size="medium"
@@ -36,7 +36,7 @@ exports[`Text should render green text 1`] = `
 `;
 
 exports[`Text should render large text 1`] = `
-.glamor-1 {
+.emotion-1 {
   display: inline-block;
   vertical-align: bottom;
   font-family: 'WebFaktSoftPro',sans-serif;
@@ -51,16 +51,16 @@ exports[`Text should render large text 1`] = `
   color: rgb(55,69,97);
 }
 
-.glamor-1:hover {
+.emotion-1:hover {
   text-decoration: inherit;
 }
 
-.glamor-1 strong {
+.emotion-1 strong {
   font-weight: 500;
 }
 
 <span
-  className="glamor-0 glamor-1"
+  className="emotion-0 emotion-1"
   color="charcoal"
   onClick={undefined}
   size="large"
@@ -71,7 +71,7 @@ exports[`Text should render large text 1`] = `
 `;
 
 exports[`Text should render shallow component ok 1`] = `
-.glamor-1 {
+.emotion-1 {
   display: inline-block;
   vertical-align: bottom;
   font-family: 'WebFaktSoftPro',sans-serif;
@@ -86,16 +86,16 @@ exports[`Text should render shallow component ok 1`] = `
   color: rgb(55,69,97);
 }
 
-.glamor-1:hover {
+.emotion-1:hover {
   text-decoration: inherit;
 }
 
-.glamor-1 strong {
+.emotion-1 strong {
   font-weight: 500;
 }
 
 <span
-  className="glamor-0 glamor-1"
+  className="emotion-0 emotion-1"
   color="charcoal"
   onClick={undefined}
   size="medium"

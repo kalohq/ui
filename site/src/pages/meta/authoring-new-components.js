@@ -51,7 +51,7 @@ const MetaAuthoringNewComponentsPage = () => (
           <td>Any component tests</td>
         </tr>
         <tr>
-          <td>__stories__/component-name.stories.js</td>
+          <td>__examples__/component-name.examples.js</td>
           <td>
             Examples of the component. These are displayed in the documentation
             on kalo.design

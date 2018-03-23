@@ -7,7 +7,7 @@ import PropTable from '../components/prop-table';
 import Snippet from '../components/snippet';
 import Wrapper from '../components/wrapper';
 
-import * as Stories from '../data/stories.js';
+import * as Stories from '../data/examples.js';
 
 const StoryContainer = styled.div`
   width: 100%;
@@ -24,7 +24,7 @@ const StoryTitle = styled.h3`
 `;
 
 const StoryDescription = styled.span`
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   color: ${props => props.theme.colors.navy600};
 `;
@@ -33,6 +33,7 @@ const StoryMain = styled.div`
   width: 100%;
   padding: 32px 16px;
   margin-top: 16px;
+  overflow-x: auto;
   background-color: ${props => props.theme.colors.white};
   border: 1px solid ${props => props.theme.colors.grey300};
   border-radius: ${props => props.theme.layout.borderRadius}

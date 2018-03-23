@@ -1,0 +1,319 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select should render a disabled select 1`] = `
+<div
+  aria-disabled={true}
+  aria-expanded={false}
+  className="ev208790 css-prrzqu"
+  data-test="ui-select"
+  disabled={true}
+  onSelect={[Function]}
+  open={false}
+  role="menu"
+  style={Object {}}
+>
+  <div
+    className="css-1herq1w ev208795"
+    onClick={undefined}
+  >
+    <span
+      className="em7k1990 css-13lua4i"
+      color="navy500"
+      onClick={undefined}
+      size="small"
+      style={Object {}}
+    >
+      Select…
+    </span>
+    <div
+      className="css-ff18km ev208791"
+      open={false}
+    >
+      <i
+        className="e2anemp0 css-3bw6sb"
+        color="grey500"
+        onClick={undefined}
+        size={24}
+        style={Object {}}
+        title={undefined}
+      >
+        <svg
+          aria-hidden="true"
+          height={24}
+          width={24}
+        >
+          <title>
+            chevron_right
+          </title>
+          <use
+            xlinkHref="#chevron_right"
+          />
+        </svg>
+      </i>
+    </div>
+  </div>
+  <div
+    className="css-zww0pa ev208793"
+    data-test="ui-select__options"
+    onClick={[Function]}
+    open={false}
+  >
+    <div
+      className="css-c3lqn9 ev208794"
+      data-test="ui-select__options__option"
+      name="Hertfordshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Hertfordshire
+      </div>
+    </div>
+    <div
+      className="css-c3lqn9 ev208794"
+      data-test="ui-select__options__option"
+      name="Bedfordshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Bedfordshire
+      </div>
+    </div>
+    <div
+      className="css-c3lqn9 ev208794"
+      data-test="ui-select__options__option"
+      name="Oxfordshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Oxfordshire
+      </div>
+    </div>
+    <div
+      className="css-c3lqn9 ev208794"
+      data-test="ui-select__options__option"
+      name="Hampshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Hampshire
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Select should render a readonly select 1`] = `
+<div
+  aria-disabled={false}
+  aria-expanded={false}
+  className="ev208790 css-5abs7w"
+  data-test="ui-select"
+  disabled={false}
+  onSelect={[Function]}
+  open={false}
+  role="menu"
+  style={Object {}}
+>
+  <div
+    className="css-1herq1w ev208795"
+    onClick={undefined}
+  >
+    <span
+      className="em7k1990 css-13lua4i"
+      color="navy500"
+      onClick={undefined}
+      size="small"
+      style={Object {}}
+    >
+      Select…
+    </span>
+    <div
+      className="css-ff18km ev208791"
+      open={false}
+    >
+      <i
+        className="e2anemp0 css-3bw6sb"
+        color="grey500"
+        onClick={undefined}
+        size={24}
+        style={Object {}}
+        title={undefined}
+      >
+        <svg
+          aria-hidden="true"
+          height={24}
+          width={24}
+        >
+          <title>
+            chevron_right
+          </title>
+          <use
+            xlinkHref="#chevron_right"
+          />
+        </svg>
+      </i>
+    </div>
+  </div>
+  <div
+    className="css-zww0pa ev208793"
+    data-test="ui-select__options"
+    onClick={[Function]}
+    open={false}
+  >
+    <div
+      className="css-c3lqn9 ev208794"
+      data-test="ui-select__options__option"
+      name="Hertfordshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Hertfordshire
+      </div>
+    </div>
+    <div
+      className="css-c3lqn9 ev208794"
+      data-test="ui-select__options__option"
+      name="Bedfordshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Bedfordshire
+      </div>
+    </div>
+    <div
+      className="css-c3lqn9 ev208794"
+      data-test="ui-select__options__option"
+      name="Oxfordshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Oxfordshire
+      </div>
+    </div>
+    <div
+      className="css-c3lqn9 ev208794"
+      data-test="ui-select__options__option"
+      name="Hampshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Hampshire
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Select should render shallow component ok 1`] = `
+<div
+  aria-disabled={false}
+  aria-expanded={false}
+  className="ev208790 css-e2pduy"
+  data-test="ui-select"
+  disabled={false}
+  onSelect={[Function]}
+  open={false}
+  role="menu"
+  style={Object {}}
+>
+  <div
+    className="css-1herq1w ev208795"
+    onClick={[Function]}
+  >
+    <span
+      className="em7k1990 css-i7rnis"
+      color="navy700"
+      onClick={undefined}
+      size="small"
+      style={Object {}}
+    >
+      Select…
+    </span>
+    <div
+      className="css-ff18km ev208791"
+      open={false}
+    >
+      <i
+        className="e2anemp0 css-nofld7"
+        color="navy700"
+        onClick={undefined}
+        size={24}
+        style={Object {}}
+        title={undefined}
+      >
+        <svg
+          aria-hidden="true"
+          height={24}
+          width={24}
+        >
+          <title>
+            chevron_right
+          </title>
+          <use
+            xlinkHref="#chevron_right"
+          />
+        </svg>
+      </i>
+    </div>
+  </div>
+  <div
+    className="css-zww0pa ev208793"
+    data-test="ui-select__options"
+    onClick={[Function]}
+    open={false}
+  >
+    <div
+      className="css-c3lqn9 ev208794"
+      data-test="ui-select__options__option"
+      name="Hertfordshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Hertfordshire
+      </div>
+    </div>
+    <div
+      className="css-c3lqn9 ev208794"
+      data-test="ui-select__options__option"
+      name="Bedfordshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Bedfordshire
+      </div>
+    </div>
+    <div
+      className="css-c3lqn9 ev208794"
+      data-test="ui-select__options__option"
+      name="Oxfordshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Oxfordshire
+      </div>
+    </div>
+    <div
+      className="css-c3lqn9 ev208794"
+      data-test="ui-select__options__option"
+      name="Hampshire"
+      onClick={[Function]}
+      selected={undefined}
+    >
+      <div>
+        Hampshire
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -4,8 +4,6 @@ import {omit} from 'lodash';
 import PropTypes from 'prop-types';
 import {getFixedOffset} from '../../utils/dom';
 
-import styles from './sticky.css';
-
 function anchorTop({x, y, offset}, child) {
   return {
     x: x + offset.x,
@@ -266,7 +264,7 @@ export default class Sticky extends React.Component {
 
     return (
       <div
-        className={noPointerEvents ? styles.transparent : null}
+        style={noPointerEvents ? {pointerEvents: 'none'} : null}
         {...omit(otherProps, ['offset'])}
       >
         {children}
@@ -275,6 +273,6 @@ export default class Sticky extends React.Component {
   }
 
   render() {
-    return <div className={styles.root} ref="root" />;
+    return <div style={{display: 'none'}} ref="root" />;
   }
 }

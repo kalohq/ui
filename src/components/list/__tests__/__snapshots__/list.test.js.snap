@@ -1,0 +1,365 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/list should render as a grid 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <ul
+    className="e13caurm0 css-z4vh1z"
+    style={Object {}}
+    wrap={undefined}
+  >
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-11l6ekn"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item One
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-11l6ekn"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Two
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-11l6ekn"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Three
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-11l6ekn"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Four
+      </div>
+    </li>
+  </ul>,
+  "nodes": Array [
+    <ul
+      className="e13caurm0 css-z4vh1z"
+      style={Object {}}
+      wrap={undefined}
+    >
+      <li
+        className="e13caurm1 css-1snizm0"
+        style={Object {}}
+      >
+        <div
+          className="e4o9m4l0 css-11l6ekn"
+          onClick={undefined}
+          style={Object {}}
+        >
+          List Item One
+        </div>
+      </li>
+      <li
+        className="e13caurm1 css-1snizm0"
+        style={Object {}}
+      >
+        <div
+          className="e4o9m4l0 css-11l6ekn"
+          onClick={undefined}
+          style={Object {}}
+        >
+          List Item Two
+        </div>
+      </li>
+      <li
+        className="e13caurm1 css-1snizm0"
+        style={Object {}}
+      >
+        <div
+          className="e4o9m4l0 css-11l6ekn"
+          onClick={undefined}
+          style={Object {}}
+        >
+          List Item Three
+        </div>
+      </li>
+      <li
+        className="e13caurm1 css-1snizm0"
+        style={Object {}}
+      >
+        <div
+          className="e4o9m4l0 css-11l6ekn"
+          onClick={undefined}
+          style={Object {}}
+        >
+          List Item Four
+        </div>
+      </li>
+    </ul>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": null,
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <ul
+    className="e13caurm0 css-z4vh1z"
+    style={Object {}}
+    wrap={undefined}
+  >
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-11l6ekn"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item One
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-11l6ekn"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Two
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-11l6ekn"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Three
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-11l6ekn"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Four
+      </div>
+    </li>
+  </ul>,
+}
+`;
+
+exports[`components/list should shallow render as expected 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <ul
+    className="e13caurm0 css-z4vh1z"
+    style={Object {}}
+    wrap={undefined}
+  >
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-11l6ekn"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item One
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-11l6ekn"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Two
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-11l6ekn"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Three
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-11l6ekn"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Four
+      </div>
+    </li>
+  </ul>,
+  "nodes": Array [
+    <ul
+      className="e13caurm0 css-z4vh1z"
+      style={Object {}}
+      wrap={undefined}
+    >
+      <li
+        className="e13caurm1 css-1snizm0"
+        style={Object {}}
+      >
+        <div
+          className="e4o9m4l0 css-11l6ekn"
+          onClick={undefined}
+          style={Object {}}
+        >
+          List Item One
+        </div>
+      </li>
+      <li
+        className="e13caurm1 css-1snizm0"
+        style={Object {}}
+      >
+        <div
+          className="e4o9m4l0 css-11l6ekn"
+          onClick={undefined}
+          style={Object {}}
+        >
+          List Item Two
+        </div>
+      </li>
+      <li
+        className="e13caurm1 css-1snizm0"
+        style={Object {}}
+      >
+        <div
+          className="e4o9m4l0 css-11l6ekn"
+          onClick={undefined}
+          style={Object {}}
+        >
+          List Item Three
+        </div>
+      </li>
+      <li
+        className="e13caurm1 css-1snizm0"
+        style={Object {}}
+      >
+        <div
+          className="e4o9m4l0 css-11l6ekn"
+          onClick={undefined}
+          style={Object {}}
+        >
+          List Item Four
+        </div>
+      </li>
+    </ul>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": null,
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <ul
+    className="e13caurm0 css-z4vh1z"
+    style={Object {}}
+    wrap={undefined}
+  >
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-11l6ekn"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item One
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-11l6ekn"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Two
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-11l6ekn"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Three
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-11l6ekn"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Four
+      </div>
+    </li>
+  </ul>,
+}
+`;

@@ -1,15 +1,15 @@
 /* @flow */
 /* eslint-env jest */
 import * as React from 'react';
-import {sheet} from 'emotion';
-import serializer from 'jest-glamor-react';
+import * as emotion from 'emotion';
+import {createSerializer} from 'jest-emotion';
 import renderer from 'react-test-renderer';
 import {ThemeProvider} from 'emotion-theming';
 
 import theme from 'components/theme';
 import {Grid, Row, Column} from 'components/grid';
 
-expect.addSnapshotSerializer(serializer(sheet));
+expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe('components/grid', () => {
   const create = (props = {}) =>

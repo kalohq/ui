@@ -1,15 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox should render a checkbox partially checked 1`] = `
-.glamor-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,37 +14,10 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  cursor: pointer;
 }
 
-.glamor-1 {
-  position: relative;
-  width: 14px;
-  height: 14px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  width: 14px;
-  height: 14px;
-}
-
-.glamor-3 {
-  margin-left: 10px;
+.emotion-3 {
   display: inline-block;
   vertical-align: bottom;
   margin-left: 10px;
@@ -73,85 +38,66 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   word-break: break-word;
 }
 
-.glamor-3:hover {
+.emotion-3:hover {
   text-decoration: inherit;
 }
 
-.glamor-3 strong {
+.emotion-3 strong {
   font-weight: 500;
+}
+
+.emotion-1 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid rgb(176,186,195);
+  -webkit-transition: 100ms ease-in-out background-color,border-color;
+  transition: 100ms ease-in-out background-color,border-color;
+  height: 14px;
+  width: 14px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: rgb(255,255,255);
+  background-color: rgb(249,250,252);
+  background-image: url(path/to/file);
+  border: 1px solid rgb(84,195,219);
 }
 
 <div
   aria-checked="mixed"
-  className="root glamor-4 glamor-5"
+  className="emotion-4 emotion-5"
+  disabled={false}
   name={undefined}
   onClick={undefined}
   role="checkbox"
-  style={Object {}}
 >
-  .glamor-1 {
-  position: relative;
-  width: 14px;
-  height: 14px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  width: 14px;
-  height: 14px;
-}
-
-<div
-    className="checkbox indeterminate glamor-0 glamor-1"
+  <div
+    checked={false}
+    className="emotion-0 emotion-1"
+    disabled={false}
+    size="medium"
     style={Object {}}
   />
-  .glamor-1 {
-  margin-left: 10px;
-  display: inline-block;
-  vertical-align: bottom;
-  margin-left: 10px;
-  font-family: 'WebFaktSoftPro',sans-serif;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  cursor: inherit;
-  text-align: unset;
-  text-decoration: inherit;
-  font-weight: 400;
-  font-size: 14px;
-  color: rgb(84,103,137);
-  white-space: normal;
-  text-overflow: initial;
-  overflow: visible;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
-.glamor-1:hover {
-  text-decoration: inherit;
-}
-
-.glamor-1 strong {
-  font-weight: 500;
-}
-
-<span
-    className="glamor-0 glamor-1"
+  <span
+    className="emotion-2 emotion-3"
     color="navy600"
     onClick={undefined}
     size="small"
@@ -163,15 +109,7 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
 `;
 
 exports[`Checkbox should render a checkbox with label 1`] = `
-.glamor-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -184,12 +122,10 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  cursor: pointer;
 }
 
-.glamor-1 {
-  position: relative;
-  width: 14px;
-  height: 14px;
+.emotion-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -209,12 +145,22 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  width: 14px;
+  border-radius: 3px;
+  border: 1px solid rgb(176,186,195);
+  -webkit-transition: 100ms ease-in-out background-color,border-color;
+  transition: 100ms ease-in-out background-color,border-color;
   height: 14px;
+  width: 14px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: rgb(255,255,255);
+  background-color: rgb(249,250,252);
+  background-image: url(path/to/file);
+  border: 1px solid rgb(84,195,219);
 }
 
-.glamor-3 {
-  margin-left: 10px;
+.emotion-3 {
   display: inline-block;
   vertical-align: bottom;
   margin-left: 10px;
@@ -235,85 +181,31 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   word-break: break-word;
 }
 
-.glamor-3:hover {
+.emotion-3:hover {
   text-decoration: inherit;
 }
 
-.glamor-3 strong {
+.emotion-3 strong {
   font-weight: 500;
 }
 
 <div
   aria-checked={true}
-  className="root glamor-4 glamor-5"
+  className="emotion-4 emotion-5"
+  disabled={false}
   name={undefined}
   onClick={undefined}
   role="checkbox"
-  style={Object {}}
 >
-  .glamor-1 {
-  position: relative;
-  width: 14px;
-  height: 14px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  width: 14px;
-  height: 14px;
-}
-
-<div
-    className="checkbox checked glamor-0 glamor-1"
+  <div
+    checked={true}
+    className="emotion-0 emotion-1"
+    disabled={false}
+    size="medium"
     style={Object {}}
   />
-  .glamor-1 {
-  margin-left: 10px;
-  display: inline-block;
-  vertical-align: bottom;
-  margin-left: 10px;
-  font-family: 'WebFaktSoftPro',sans-serif;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  cursor: inherit;
-  text-align: unset;
-  text-decoration: inherit;
-  font-weight: 400;
-  font-size: 14px;
-  color: rgb(84,103,137);
-  white-space: normal;
-  text-overflow: initial;
-  overflow: visible;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
-.glamor-1:hover {
-  text-decoration: inherit;
-}
-
-.glamor-1 strong {
-  font-weight: 500;
-}
-
-<span
-    className="glamor-0 glamor-1"
+  <span
+    className="emotion-2 emotion-3"
     color="navy600"
     onClick={undefined}
     size="small"
@@ -325,15 +217,7 @@ exports[`Checkbox should render a checkbox with label 1`] = `
 `;
 
 exports[`Checkbox should render shallow component ok 1`] = `
-.glamor-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -346,12 +230,10 @@ exports[`Checkbox should render shallow component ok 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  cursor: pointer;
 }
 
-.glamor-1 {
-  position: relative;
-  width: 14px;
-  height: 14px;
+.emotion-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -371,47 +253,34 @@ exports[`Checkbox should render shallow component ok 1`] = `
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  width: 14px;
+  border-radius: 3px;
+  border: 1px solid rgb(176,186,195);
+  -webkit-transition: 100ms ease-in-out background-color,border-color;
+  transition: 100ms ease-in-out background-color,border-color;
   height: 14px;
+  width: 14px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: rgb(255,255,255);
+  background-color: rgb(249,250,252);
+  background-image: url(path/to/file);
+  border: 1px solid rgb(84,195,219);
 }
 
 <div
   aria-checked={true}
-  className="root glamor-2 glamor-3"
+  className="emotion-2 emotion-3"
+  disabled={false}
   name={undefined}
   onClick={undefined}
   role="checkbox"
-  style={Object {}}
 >
-  .glamor-1 {
-  position: relative;
-  width: 14px;
-  height: 14px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  width: 14px;
-  height: 14px;
-}
-
-<div
-    className="checkbox checked glamor-0 glamor-1"
+  <div
+    checked={true}
+    className="emotion-0 emotion-1"
+    disabled={false}
+    size="medium"
     style={Object {}}
   />
 </div>

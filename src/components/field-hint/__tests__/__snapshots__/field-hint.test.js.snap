@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FieldHint should render shallow component ok 1`] = `
+<span
+  className="e1q9f2xp3 css-5hnrki"
+  style={Object {}}
+>
+  <span
+    className="em7k1990 css-9387rp"
+    color="navy600"
+    onClick={undefined}
+    size="extra-small"
+    style={Object {}}
+  />
+</span>
+`;

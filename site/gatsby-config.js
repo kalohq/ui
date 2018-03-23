@@ -25,6 +25,9 @@ module.exports = {
               classPrefix: 'language-',
             },
           },
+          {
+            resolve: 'gatsby-remark-autolink-headers',
+          },
         ],
       },
     },

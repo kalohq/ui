@@ -3,11 +3,12 @@ import {ThemeProvider} from 'emotion-theming';
 import styled, {injectGlobal} from 'react-emotion';
 import {groupBy, upperFirst, camelCase} from 'lodash';
 
-import Header from '../components/header';
+import Header from '../components/navigation';
 import SideNav from '../components/side-nav';
 
 import theme from '../../../src/components/theme';
 import IconSymbols from '../../../src/components/icon-symbols';
+// import '../../../src/styles/transitions.css';
 
 import FSPBlond from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-Blond.woff';
 import FSPBlond2 from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-Blond.woff2';
@@ -65,7 +66,7 @@ injectGlobal`
 
   code[class*='language-'],
   pre[class*='language-'] {
-    font-family: Consolas, Menlo, Monaco, 'Andale Mono WT', 'Andale Mono',
+    font-family: 'Courier', Consolas, Menlo, Monaco, 'Andale Mono WT', 'Andale Mono',
       'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono',
       'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L',
       'Courier New', Courier, monospace;

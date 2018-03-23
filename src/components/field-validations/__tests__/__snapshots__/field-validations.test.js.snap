@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FieldValidations should render shallow component ok 1`] = `
+<div
+  className="css-80ji2w e6a1kn60"
+/>
+`;

@@ -1,13 +1,10 @@
 /* @flow */
 /* eslint-env jest */
-import serializer from 'jest-glamor-react';
 import renderer from 'react-test-renderer';
 
 import JSTokens from '../tokens.js';
 import CSSTokens from '../tokens.css.js';
 import ThemeTokens from '../tokens.theme.js';
-
-expect.addSnapshotSerializer(serializer);
 
 describe('Tokens', () => {
   test('should be present', () => {

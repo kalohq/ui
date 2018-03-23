@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/grid should render shallow component ok 1`] = `
-.glamor-7 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15,32 +15,18 @@ exports[`components/grid should render shallow component ok 1`] = `
   margin-right: auto;
 }
 
-.glamor-5 {
-  width: 100%;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding-left: false;
-  padding-right: false;
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding-left: false;
-  padding-right: false;
   width: 100%;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.glamor-1 {
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 16.666666666666668%;
-  padding-left: 16px;
-  padding-right: 16px;
+.emotion-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -59,21 +45,12 @@ exports[`components/grid should render shallow component ok 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 16.666666666666668%;
   padding-left: 16px;
   padding-right: 16px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 16.666666666666668%;
 }
 
-.glamor-3 {
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 83.33333333333334%;
-  padding-left: 16px;
-  padding-right: 16px;
+.emotion-3 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -92,179 +69,25 @@ exports[`components/grid should render shallow component ok 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 83.33333333333334%;
   padding-left: 16px;
   padding-right: 16px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 83.33333333333334%;
 }
 
 <div
-  className="glamor-6 glamor-7"
+  className="emotion-6 emotion-7"
   style={Object {}}
 >
-  .glamor-5 {
-  width: 100%;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding-left: false;
-  padding-right: false;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: false;
-  padding-right: false;
-  width: 100%;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.glamor-1 {
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 16.666666666666668%;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 16px;
-  padding-right: 16px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 16.666666666666668%;
-}
-
-.glamor-3 {
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 83.33333333333334%;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 16px;
-  padding-right: 16px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 83.33333333333334%;
-}
-
-<div
-    className="glamor-4 glamor-5"
+  <div
+    className="emotion-4 emotion-5"
     style={Object {}}
   >
-    .glamor-1 {
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 16.666666666666668%;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 16px;
-  padding-right: 16px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 16.666666666666668%;
-}
-
-<div
-      className="glamor-0 glamor-1"
+    <div
+      className="emotion-0 emotion-1"
       style={Object {}}
     />
-    .glamor-1 {
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 83.33333333333334%;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 16px;
-  padding-right: 16px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 83.33333333333334%;
-}
-
-<div
-      className="glamor-0 glamor-1"
+    <div
+      className="emotion-0 emotion-3"
       style={Object {}}
     />
   </div>
