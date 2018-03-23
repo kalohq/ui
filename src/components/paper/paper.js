@@ -4,14 +4,16 @@ import styled, {css} from 'react-emotion';
 
 import {Box} from '../layout';
 
-const SHADOW_LEVELS = [
-  'none',
-  'none',
-  '0 3px 6px rgba(140, 140, 140, 0.08)',
-  '0 10px 25px rgba(140, 140, 140, 0.14)',
-  '0 12px 25px rgba(140, 140, 140, 0.21)',
-  '0 14px 25px rgba(140, 140, 140, 0.27)',
-];
+import tokens from '../../design-tokens/tokens';
+
+const SHADOW_LEVELS_MAP = {
+  '0': tokens.boxShadowLevel0,
+  '1': tokens.boxShadowLevel0,
+  '2': tokens.boxShadowLevel1,
+  '3': tokens.boxShadowLevel2,
+  '4': tokens.boxShadowLevel3,
+  '5': tokens.boxShadowLevel4,
+};
 
 const StyledPaper = styled(Box)`
   position: relative;
@@ -24,10 +26,10 @@ const StyledPaper = styled(Box)`
   border: ${props =>
     props.border ? `1px solid ${props.theme.colors.grey300}` : 0};
   border-radius: ${props => (props.rounded ? '5px' : 0)};
-  box-shadow: ${props => SHADOW_LEVELS[props.level]};
+  box-shadow: ${props => SHADOW_LEVELS_MAP[props.level]};
 
   &:hover {
-    box-shadow: ${props => SHADOW_LEVELS[props.hoverLevel]};
+    box-shadow: ${props => SHADOW_LEVELS_MAP[props.hoverLevel]};
   }
 
   ${props =>
