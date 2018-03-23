@@ -12,7 +12,7 @@ Object {
   "borderRadius": "4px",
   "borderRadiusButton": "4px",
   "borderRadiusInput": "4px",
-  "boxShadowLevel0": "0",
+  "boxShadowLevel0": "none",
   "boxShadowLevel1": "0 3px 6px rgba(140, 140, 140, 0.08)",
   "boxShadowLevel2": "0 10px 25px rgba(140, 140, 140, 0.14)",
   "boxShadowLevel3": "0 12px 25px rgba(140, 140, 140, 0.21)",
