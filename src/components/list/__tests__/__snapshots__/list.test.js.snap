@@ -1,348 +1,365 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/list should render as a grid 1`] = `
-<List
-  spaced="medium"
->
-  <Paper>
-    List Item One
-  </Paper>
-  <Paper>
-    List Item Two
-  </Paper>
-  <Paper>
-    List Item Three
-  </Paper>
-  <Paper>
-    List Item Four
-  </Paper>
-</List>
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <ul
+    className="e13caurm0 css-z4vh1z"
+    style={Object {}}
+    wrap={undefined}
+  >
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-109qjel"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item One
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-109qjel"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Two
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-109qjel"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Three
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-109qjel"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Four
+      </div>
+    </li>
+  </ul>,
+  "nodes": Array [
+    <ul
+      className="e13caurm0 css-z4vh1z"
+      style={Object {}}
+      wrap={undefined}
+    >
+      <li
+        className="e13caurm1 css-1snizm0"
+        style={Object {}}
+      >
+        <div
+          className="e4o9m4l0 css-109qjel"
+          onClick={undefined}
+          style={Object {}}
+        >
+          List Item One
+        </div>
+      </li>
+      <li
+        className="e13caurm1 css-1snizm0"
+        style={Object {}}
+      >
+        <div
+          className="e4o9m4l0 css-109qjel"
+          onClick={undefined}
+          style={Object {}}
+        >
+          List Item Two
+        </div>
+      </li>
+      <li
+        className="e13caurm1 css-1snizm0"
+        style={Object {}}
+      >
+        <div
+          className="e4o9m4l0 css-109qjel"
+          onClick={undefined}
+          style={Object {}}
+        >
+          List Item Three
+        </div>
+      </li>
+      <li
+        className="e13caurm1 css-1snizm0"
+        style={Object {}}
+      >
+        <div
+          className="e4o9m4l0 css-109qjel"
+          onClick={undefined}
+          style={Object {}}
+        >
+          List Item Four
+        </div>
+      </li>
+    </ul>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": null,
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <ul
+    className="e13caurm0 css-z4vh1z"
+    style={Object {}}
+    wrap={undefined}
+  >
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-109qjel"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item One
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-109qjel"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Two
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-109qjel"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Three
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-109qjel"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Four
+      </div>
+    </li>
+  </ul>,
+}
 `;
 
 exports[`components/list should shallow render as expected 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "alerts": Object {
-        "confirmation": "rgb(229, 247, 241)",
-        "error": "rgb(255, 235, 238)",
-        "info": "rgb(232, 250, 252)",
-        "warning": "rgb(255, 246, 216)",
-      },
-      "breakpoints": Array [],
-      "colors": Object {
-        "black": "rgb(0, 0, 0)",
-        "blue": "rgb(84, 195, 219)",
-        "blue300": "rgb(193, 244, 255)",
-        "blue400": "rgb(101, 210, 234)",
-        "blue500": "rgb(84, 195, 219)",
-        "blue600": "rgb(77, 184, 207)",
-        "blue700": "rgb(43, 167, 194)",
-        "charcoal": "rgb(55, 69, 97)",
-        "currentColor": "currentColor",
-        "green": "rgb(62, 179, 138)",
-        "green300": "rgb(216, 240, 232)",
-        "green400": "rgb(79, 210, 164)",
-        "green500": "rgb(62, 179, 138)",
-        "green600": "rgb(56, 160, 124)",
-        "green700": "rgb(41, 134, 101)",
-        "grey": "rgb(137, 146, 155)",
-        "grey200": "rgb(249, 250, 252)",
-        "grey300": "rgb(238, 244, 250)",
-        "grey400": "rgb(208, 216, 223)",
-        "grey500": "rgb(176, 186, 195)",
-        "grey600": "rgb(137, 146, 155)",
-        "grey700": "rgb(112, 125, 138)",
-        "inherit": "inherit",
-        "navy": "rgb(147, 166, 193)",
-        "navy300": "rgb(249, 250, 252)",
-        "navy400": "rgb(198, 199, 216)",
-        "navy500": "rgb(147, 166, 193)",
-        "navy600": "rgb(84, 103, 137)",
-        "navy700": "rgb(55, 69, 97)",
-        "none": "",
-        "orange": "rgb(253, 184, 28)",
-        "orange300": "rgb(255, 237, 180)",
-        "orange400": "rgb(255, 206, 94)",
-        "orange500": "rgb(253, 184, 28)",
-        "orange600": "rgb(246, 175, 13)",
-        "orange700": "rgb(216, 145, 24)",
-        "pink": "rgb(234, 95, 110)",
-        "pink300": "rgb(251, 223, 226)",
-        "pink400": "rgb(253, 179, 200)",
-        "pink500": "rgb(234, 95, 110)",
-        "pink600": "rgb(224, 88, 103)",
-        "pink700": "rgb(195, 74, 87)",
-        "platinum": "rgb(238, 244, 250)",
-        "purple": "rgb(138, 112, 189)",
-        "purple300": "rgb(232, 226, 242)",
-        "purple400": "rgb(159, 129, 218)",
-        "purple500": "rgb(138, 112, 189)",
-        "purple600": "rgb(119, 95, 168)",
-        "purple700": "rgb(96, 78, 131)",
-        "red": "rgb(234, 95, 110)",
-        "silver": "rgb(176, 186, 195)",
-        "slate": "rgb(84, 103, 137)",
-        "snow": "rgb(249, 250, 252)",
-        "white": "rgb(255, 255, 255)",
-      },
-      "grid": Object {
-        "gridMaxWidth": 1200,
-      },
-      "input": Object {
-        "inputActiveBorder": "1px solid #54C3DB",
-        "inputBorderRadius": "4px",
-        "inputDefaultBorder": "1px solid #D0D8DF",
-        "inputDisabledBackground": "#F9FAFC",
-        "inputDisabledBorder": "1px solid #D0D8DF",
-        "inputDisabledColor": "#546789",
-        "inputHoverBorder": "1px solid #B0BAC3",
-        "inputReadonlyBackground": "#F9FAFC",
-        "inputReadonlyBorder": "1px dashed #D0D8DF",
-        "inputReadonlyColor": "#546789",
-      },
-      "layout": Object {
-        "borderRadius": "4px",
-        "borderRadiusButton": "4px",
-        "borderRadiusInput": "4px",
-        "spacingExtraLarge": "64px",
-        "spacingExtraSmall": "4px",
-        "spacingLarge": "32px",
-        "spacingMedium": "16px",
-        "spacingNone": "0px",
-        "spacingSmall": "8px",
-      },
-      "space": Array [
-        0,
-        8,
-        16,
-        32,
-        64,
-      ],
-      "typography": Object {
-        "fontSizeHeadingLarge": "32px",
-        "fontSizeHeadingMedium": "24px",
-        "fontSizeHeadingSmall": "16px",
-        "fontSizeHeadingXSmall": "12px",
-        "fontSizeTextLarge": "18px",
-        "fontSizeTextMedium": "16px",
-        "fontSizeTextSmall": "14px",
-        "fontSizeTextXSmall": "12px",
-        "fontWeightLight": "300",
-        "fontWeightMedium": "500",
-        "fontWeightNormal": "400",
-        "fontWeightSemibold": "600",
-      },
-    }
-  }
->
-  <List
-    spaced="medium"
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <ul
+    className="e13caurm0 css-z4vh1z"
+    style={Object {}}
+    wrap={undefined}
   >
-    <Styled(PrimitiveFlex)
-      columns={1}
-      component="ul"
-      itemSpacing="medium"
-      listType="vertical"
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
     >
-      <PrimitiveFlex
-        className="css-1ng74r0 e13caurm0"
-        columns={1}
-        component="ul"
-        itemSpacing="medium"
-        listType="vertical"
+      <div
+        className="e4o9m4l0 css-109qjel"
+        onClick={undefined}
+        style={Object {}}
       >
-        <ul
-          className="e13caurm0 css-z4vh1z"
+        List Item One
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-109qjel"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Two
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-109qjel"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Three
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-109qjel"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Four
+      </div>
+    </li>
+  </ul>,
+  "nodes": Array [
+    <ul
+      className="e13caurm0 css-z4vh1z"
+      style={Object {}}
+      wrap={undefined}
+    >
+      <li
+        className="e13caurm1 css-1snizm0"
+        style={Object {}}
+      >
+        <div
+          className="e4o9m4l0 css-109qjel"
+          onClick={undefined}
           style={Object {}}
         >
-          <Styled(PrimitiveBlock)
-            columns={1}
-            component="li"
-            itemSpacing="medium"
-            key="0/.0"
-            listType="vertical"
-          >
-            <PrimitiveBlock
-              className="css-iydod1 e13caurm1"
-              columns={1}
-              component="li"
-              itemSpacing="medium"
-              listType="vertical"
-            >
-              <li
-                className="e13caurm1 css-1snizm0"
-                style={Object {}}
-              >
-                <Paper>
-                  <Styled(PrimitiveBox)
-                    border={true}
-                    hoverLevel={1}
-                    interactive={false}
-                    level={1}
-                    rounded={true}
-                  >
-                    <PrimitiveBox
-                      border={true}
-                      className="css-19pb1iz e4o9m4l0"
-                      hoverLevel={1}
-                      interactive={false}
-                      level={1}
-                      rounded={true}
-                    >
-                      <div
-                        className="e4o9m4l0 css-109qjel"
-                        style={Object {}}
-                      >
-                        List Item One
-                      </div>
-                    </PrimitiveBox>
-                  </Styled(PrimitiveBox)>
-                </Paper>
-              </li>
-            </PrimitiveBlock>
-          </Styled(PrimitiveBlock)>
-          <Styled(PrimitiveBlock)
-            columns={1}
-            component="li"
-            itemSpacing="medium"
-            key="1/.1"
-            listType="vertical"
-          >
-            <PrimitiveBlock
-              className="css-iydod1 e13caurm1"
-              columns={1}
-              component="li"
-              itemSpacing="medium"
-              listType="vertical"
-            >
-              <li
-                className="e13caurm1 css-1snizm0"
-                style={Object {}}
-              >
-                <Paper>
-                  <Styled(PrimitiveBox)
-                    border={true}
-                    hoverLevel={1}
-                    interactive={false}
-                    level={1}
-                    rounded={true}
-                  >
-                    <PrimitiveBox
-                      border={true}
-                      className="css-19pb1iz e4o9m4l0"
-                      hoverLevel={1}
-                      interactive={false}
-                      level={1}
-                      rounded={true}
-                    >
-                      <div
-                        className="e4o9m4l0 css-109qjel"
-                        style={Object {}}
-                      >
-                        List Item Two
-                      </div>
-                    </PrimitiveBox>
-                  </Styled(PrimitiveBox)>
-                </Paper>
-              </li>
-            </PrimitiveBlock>
-          </Styled(PrimitiveBlock)>
-          <Styled(PrimitiveBlock)
-            columns={1}
-            component="li"
-            itemSpacing="medium"
-            key="2/.2"
-            listType="vertical"
-          >
-            <PrimitiveBlock
-              className="css-iydod1 e13caurm1"
-              columns={1}
-              component="li"
-              itemSpacing="medium"
-              listType="vertical"
-            >
-              <li
-                className="e13caurm1 css-1snizm0"
-                style={Object {}}
-              >
-                <Paper>
-                  <Styled(PrimitiveBox)
-                    border={true}
-                    hoverLevel={1}
-                    interactive={false}
-                    level={1}
-                    rounded={true}
-                  >
-                    <PrimitiveBox
-                      border={true}
-                      className="css-19pb1iz e4o9m4l0"
-                      hoverLevel={1}
-                      interactive={false}
-                      level={1}
-                      rounded={true}
-                    >
-                      <div
-                        className="e4o9m4l0 css-109qjel"
-                        style={Object {}}
-                      >
-                        List Item Three
-                      </div>
-                    </PrimitiveBox>
-                  </Styled(PrimitiveBox)>
-                </Paper>
-              </li>
-            </PrimitiveBlock>
-          </Styled(PrimitiveBlock)>
-          <Styled(PrimitiveBlock)
-            columns={1}
-            component="li"
-            itemSpacing="medium"
-            key="3/.3"
-            listType="vertical"
-          >
-            <PrimitiveBlock
-              className="css-iydod1 e13caurm1"
-              columns={1}
-              component="li"
-              itemSpacing="medium"
-              listType="vertical"
-            >
-              <li
-                className="e13caurm1 css-1snizm0"
-                style={Object {}}
-              >
-                <Paper>
-                  <Styled(PrimitiveBox)
-                    border={true}
-                    hoverLevel={1}
-                    interactive={false}
-                    level={1}
-                    rounded={true}
-                  >
-                    <PrimitiveBox
-                      border={true}
-                      className="css-19pb1iz e4o9m4l0"
-                      hoverLevel={1}
-                      interactive={false}
-                      level={1}
-                      rounded={true}
-                    >
-                      <div
-                        className="e4o9m4l0 css-109qjel"
-                        style={Object {}}
-                      >
-                        List Item Four
-                      </div>
-                    </PrimitiveBox>
-                  </Styled(PrimitiveBox)>
-                </Paper>
-              </li>
-            </PrimitiveBlock>
-          </Styled(PrimitiveBlock)>
-        </ul>
-      </PrimitiveFlex>
-    </Styled(PrimitiveFlex)>
-  </List>
-</ThemeProvider>
+          List Item One
+        </div>
+      </li>
+      <li
+        className="e13caurm1 css-1snizm0"
+        style={Object {}}
+      >
+        <div
+          className="e4o9m4l0 css-109qjel"
+          onClick={undefined}
+          style={Object {}}
+        >
+          List Item Two
+        </div>
+      </li>
+      <li
+        className="e13caurm1 css-1snizm0"
+        style={Object {}}
+      >
+        <div
+          className="e4o9m4l0 css-109qjel"
+          onClick={undefined}
+          style={Object {}}
+        >
+          List Item Three
+        </div>
+      </li>
+      <li
+        className="e13caurm1 css-1snizm0"
+        style={Object {}}
+      >
+        <div
+          className="e4o9m4l0 css-109qjel"
+          onClick={undefined}
+          style={Object {}}
+        >
+          List Item Four
+        </div>
+      </li>
+    </ul>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": null,
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <ul
+    className="e13caurm0 css-z4vh1z"
+    style={Object {}}
+    wrap={undefined}
+  >
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-109qjel"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item One
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-109qjel"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Two
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-109qjel"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Three
+      </div>
+    </li>
+    <li
+      className="e13caurm1 css-1snizm0"
+      style={Object {}}
+    >
+      <div
+        className="e4o9m4l0 css-109qjel"
+        onClick={undefined}
+        style={Object {}}
+      >
+        List Item Four
+      </div>
+    </li>
+  </ul>,
+}
 `;
