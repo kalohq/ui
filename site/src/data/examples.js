@@ -18,6 +18,7 @@ const Input = require('/Users/ap/Projects/kalo/ui/src/components/input/__example
 const Layout = require('/Users/ap/Projects/kalo/ui/src/components/layout/__examples__/layout.examples.js');
 const List = require('/Users/ap/Projects/kalo/ui/src/components/list/__examples__/list.examples.js');
 const LoadingSpinner = require('/Users/ap/Projects/kalo/ui/src/components/loading-spinner/__examples__/loading-spinner.examples.js');
+const Modal = require('/Users/ap/Projects/kalo/ui/src/components/modal/__examples__/modal.examples.js');
 const PaperMenu = require('/Users/ap/Projects/kalo/ui/src/components/paper-menu/__examples__/paper-menu.examples.js');
 const Paper = require('/Users/ap/Projects/kalo/ui/src/components/paper/__examples__/paper.examples.js');
 const Radio = require('/Users/ap/Projects/kalo/ui/src/components/radio/__examples__/radio.examples.js');
@@ -46,6 +47,7 @@ Input,
 Layout,
 List,
 LoadingSpinner,
+Modal,
 PaperMenu,
 Paper,
 Radio,

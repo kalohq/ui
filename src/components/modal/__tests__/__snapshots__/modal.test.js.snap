@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/modal Modal should shallow render as expected 1`] = `
+<Portal
+  static={false}
+>
+  <HotKeys
+    handlers={
+      Object {
+        "esc": undefined,
+      }
+    }
+  >
+    <Styled(PrimitiveBox)
+      style={
+        Object {
+          "zIndex": "200",
+        }
+      }
+    >
+      <ReactCSSTransitionGroup
+        transitionAppear={true}
+        transitionAppearTimeout={300}
+        transitionEnter={true}
+        transitionEnterTimeout={300}
+        transitionLeave={true}
+        transitionLeaveTimeout={300}
+        transitionName="t-slide"
+      >
+        <Styled(PrimitiveBox)
+          aria-labelledby="modalTitle"
+          onClick={[Function]}
+          role="dialog"
+          zIndex="200"
+        >
+          <Styled(PrimitiveBox)
+            alignItems="center"
+            flexDirection="row"
+            justifyContent="center"
+            open={true}
+            title="Remove freelancer"
+          >
+            <H2
+              id="modalTitle"
+            >
+              Remove freelancer
+            </H2>
+          </Styled(PrimitiveBox)>
+        </Styled(PrimitiveBox)>
+      </ReactCSSTransitionGroup>
+    </Styled(PrimitiveBox)>
+  </HotKeys>
+</Portal>
+`;

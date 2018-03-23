@@ -1,6 +1,6 @@
 global:
-  type: 'number'
-  category: 'grid'
+  type: number
+  category: grid
 props:
   GRID_MAX_WIDTH:
-    value: 1200
+    value: "1200"

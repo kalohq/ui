@@ -1,3 +1,5 @@
+/* @flow */
+
 /**
  * Typography
  */
@@ -48,6 +50,7 @@ export {default as Icon} from './icon';
 export {default as IconSymbols} from './icon-symbols';
 export {default as LoadingSpinner} from './loading-spinner';
 export {default as Sticky} from './sticky';
+export {default as Modal, ModalBody, ModalActions} from './modal';
 
 /**
  * Theme

@@ -95,4 +95,12 @@
   --spacing-medium: 16px;
   --spacing-large: 32px;
   --spacing-extra-large: 64px;
+  --z-index-sea-level: 0;
+  --z-index-above-following-dom: 1;
+  --z-index-contextual-menu: 100;
+  --z-index-dialog: 200;
+  --z-index-auto-complete-menu: 300;
+  --z-index-modal: 400;
+  --z-index-higher-than-anything: 9999;
+  --z-index-top-of-the-world: 999999;
 }

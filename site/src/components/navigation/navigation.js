@@ -10,7 +10,7 @@ const StyledBar = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 99;
+  z-index: 40;
 `;
 
 const StyledLogo = styled.div`

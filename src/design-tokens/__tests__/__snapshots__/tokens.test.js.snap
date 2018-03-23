@@ -46,7 +46,7 @@ Object {
   "grey500": "rgb(176, 186, 195)",
   "grey600": "rgb(137, 146, 155)",
   "grey700": "rgb(112, 125, 138)",
-  "gridMaxWidth": "",
+  "gridMaxWidth": "1200",
   "info": "rgb(232, 250, 252)",
   "inherit": "inherit",
   "inputActiveBorder": "1px solid #54C3DB",
@@ -97,5 +97,13 @@ Object {
   "spacingSmall": "8px",
   "warning": "rgb(255, 246, 216)",
   "white": "rgb(255, 255, 255)",
+  "zIndexAboveFollowingDom": "1",
+  "zIndexAutoCompleteMenu": "300",
+  "zIndexContextualMenu": "100",
+  "zIndexDialog": "200",
+  "zIndexHigherThanAnything": "9999",
+  "zIndexModal": "400",
+  "zIndexSeaLevel": "0",
+  "zIndexTopOfTheWorld": "999999",
 }
 `;

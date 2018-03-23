@@ -1,0 +1,20 @@
+global:
+  type: number
+  category: layout
+props:
+  Z_INDEX_SEA_LEVEL: 
+    value: "0"
+  Z_INDEX_ABOVE_FOLLOWING_DOM: 
+    value: "1"
+  Z_INDEX_CONTEXTUAL_MENU: 
+    value: "100"
+  Z_INDEX_DIALOG: 
+    value: "200"
+  Z_INDEX_AUTO_COMPLETE_MENU: 
+    value: "300"
+  Z_INDEX_MODAL: 
+    value: "400"
+  Z_INDEX_HIGHER_THAN_ANYTHING: 
+    value: "9999"
+  Z_INDEX_TOP_OF_THE_WORLD: 
+    value: "999999"
