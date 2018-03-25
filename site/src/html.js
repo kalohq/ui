@@ -28,6 +28,10 @@ export default function Html({headComponents, body, postBodyComponents}) {
         <meta name="referrer" content="origin" />
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+          name="google-site-verification"
+          content="1y4iC3OGeUJux6b_jjWF__YZxL4qUAc14lDv7wr7Wbg"
+        />
         <link rel="shortcut icon" href={favicon} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {headComponents}
