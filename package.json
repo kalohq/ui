@@ -20,7 +20,8 @@
     "precommit": "lint-staged",
     "generate:tokens": "node scripts/tokens.js",
     "generate:icons": "node scripts/icons.js",
-    "generate:component": "reactman --config ./config/code-templates/reactman-config.json"
+    "generate:component": "reactman --config ./config/code-templates/reactman-config.json",
+    "version": "npm run build"
   },
   "lint-staged": {
     "*.js": [
