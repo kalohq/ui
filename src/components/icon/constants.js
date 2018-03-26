@@ -98,6 +98,9 @@ export const ICONS = new Enum({
   DELETE: {
     value: 'delete',
   },
+  DOMAIN: {
+    value: 'domain',
+  },
   DONE: {
     value: 'done',
   },
@@ -178,6 +181,9 @@ export const ICONS = new Enum({
   },
   LOCAL_OFFER: {
     value: 'local_offer',
+  },
+  LOCATION_CITY: {
+    value: 'location_city',
   },
   LOCATION_ON: {
     value: 'location_on',
