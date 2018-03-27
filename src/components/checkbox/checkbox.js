@@ -106,6 +106,7 @@ export default function Checkbox(props: CheckboxProps) {
       name={name}
       role="checkbox"
       aria-checked={indeterminate ? 'mixed' : checked}
+      data-test="ui-checkbox"
       disabled={disabled}
       readonly={readonly}
     >
