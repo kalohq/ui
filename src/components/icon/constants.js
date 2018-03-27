@@ -41,6 +41,9 @@ export const ICONS = new Enum({
   ASSIGNMENT: {
     value: 'assignment',
   },
+  ASSIGNMENT_IND: {
+    value: 'assignment_ind',
+  },
   ATTACH_FILE: {
     value: 'attach_file',
   },
