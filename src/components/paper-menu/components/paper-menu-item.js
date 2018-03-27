@@ -117,6 +117,7 @@ export default function PaperMenuItem(props: Props) {
       active={active}
       success={success}
       disabled={disabled}
+      data-test="ui-paper-menu-item"
       {...otherProps}
     >
       {icon ? (
