@@ -107,7 +107,7 @@ export default function Checkbox(props: CheckboxProps) {
       role="checkbox"
       aria-checked={indeterminate ? 'mixed' : checked}
       disabled={disabled}
-      rReadonly={readonly}
+      readonly={readonly}
     >
       <StyledCheckbox
         size={size}
