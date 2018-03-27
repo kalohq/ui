@@ -86,6 +86,7 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
 <div
   aria-checked="mixed"
   className="emotion-4 emotion-5"
+  data-test="ui-checkbox"
   disabled={false}
   name={undefined}
   onClick={undefined}
@@ -196,6 +197,7 @@ exports[`Checkbox should render a checkbox with label 1`] = `
 <div
   aria-checked={true}
   className="emotion-4 emotion-5"
+  data-test="ui-checkbox"
   disabled={false}
   name={undefined}
   onClick={undefined}
@@ -275,6 +277,7 @@ exports[`Checkbox should render shallow component ok 1`] = `
 <div
   aria-checked={true}
   className="emotion-2 emotion-3"
+  data-test="ui-checkbox"
   disabled={false}
   name={undefined}
   onClick={undefined}

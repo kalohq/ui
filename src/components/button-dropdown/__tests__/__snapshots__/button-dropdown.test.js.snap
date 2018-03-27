@@ -344,6 +344,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
       <div
         aria-checked={false}
         className="emotion-2 emotion-3"
+        data-test="ui-checkbox"
         disabled={false}
         name={undefined}
         onClick={[Function]}
@@ -399,6 +400,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
       <div
         aria-checked={false}
         className="emotion-2 emotion-3"
+        data-test="ui-checkbox"
         disabled={false}
         name={undefined}
         onClick={[Function]}

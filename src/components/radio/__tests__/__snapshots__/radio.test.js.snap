@@ -66,6 +66,7 @@ exports[`Radio should render shallow component ok 1`] = `
   aria-checked={true}
   aria-disabled={undefined}
   className="emotion-4 emotion-5"
+  data-test="ui-radio"
   name={undefined}
   onClick={undefined}
   role="radio"
