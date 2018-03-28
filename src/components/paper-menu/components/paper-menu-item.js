@@ -6,7 +6,7 @@ import styled, {css} from 'react-emotion';
 import {Box} from '../../layout';
 import Icon from '../../icon';
 
-const StyledPaperMenuItem = styled.div`
+const StyledPaperMenuItem = styled(Box)`
   display: flex;
   align-items: center;
   align-content: center;
