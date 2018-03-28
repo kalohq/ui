@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PaperMenu, {PaperMenuItem} from '../paper-menu';
+import PaperMenu, {PaperMenuItem} from '../';
 import {Flex, Box} from '../../layout';
 import Text from '../../text';
 import Button from '../../button';
