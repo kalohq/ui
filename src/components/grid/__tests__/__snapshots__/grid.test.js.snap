@@ -39,7 +39,7 @@ exports[`components/grid should render shallow component ok 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
+  -ms-flex-line-pack: flex-start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -63,7 +63,7 @@ exports[`components/grid should render shallow component ok 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
+  -ms-flex-line-pack: flex-start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
