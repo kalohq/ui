@@ -204,7 +204,7 @@ export const SkeletonPageHeaderHeading = styled(Box)`
 
 /** Skeleton page header heading */
 export const StyledSkeletonPageHeaderToolbar = styled(Box)`
-  border-top: 1px solid var(--grey300);
+  border-top: 1px solid ${props => props.theme.colors.grey300};
 `;
 
 export function SkeletonPageHeaderToolbar({width = 1180, children}) {
