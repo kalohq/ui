@@ -21,7 +21,10 @@ export default function SkeletonListItem(props: TProps) {
         {children ? (
           children
         ) : (
-          [<SkeletonText size={14} key={0} />, <SkeletonText key={1} />]
+          [
+            <SkeletonText width="20%" key={0} />,
+            <SkeletonText key={1} width="10%" />,
+          ]
         )}
       </SpacerBox>
     </SkeletonPaper>

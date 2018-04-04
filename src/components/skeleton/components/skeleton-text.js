@@ -2,7 +2,7 @@
 import * as React from 'react';
 
 import SkeletonShape from './skeleton-shape';
-import {TEXT_SIZE_MULTIPLIER, TEXT_HEIGHT} from '../skeleton';
+import {TEXT_HEIGHT} from '../skeleton';
 
 /**
  * Text Skeleton
@@ -10,13 +10,12 @@ import {TEXT_SIZE_MULTIPLIER, TEXT_HEIGHT} from '../skeleton';
  */
 
 type TProps = {
-  size?: number,
+  width?: number,
   heading?: boolean,
 };
 
 export default function SkeletonText(props: TProps) {
-  const {size = 7, heading, ...otherProps} = props;
-  const width = size * TEXT_SIZE_MULTIPLIER;
+  const {heading, width = '50%', ...otherProps} = props;
   const height = heading ? TEXT_HEIGHT * 2 : TEXT_HEIGHT;
   return <SkeletonShape height={height} width={width} {...otherProps} />;
 }

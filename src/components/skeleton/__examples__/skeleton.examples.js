@@ -48,13 +48,13 @@ export const examples = [
       <Page width={PAGE_SIZE + 100}>
         <SkeletonPageHeader>
           <SkeletonPageHeaderHeading width={PAGE_SIZE}>
-            <SkeletonText />
+            <SkeletonText width="8%" />
             <SkeletonButton square={true} />
           </SkeletonPageHeaderHeading>
           <SkeletonPageHeaderToolbar width={PAGE_SIZE}>
-            <SkeletonText />
-            <SkeletonText />
-            <SkeletonText />
+            <SkeletonText width="4%" />
+            <SkeletonText width="4%" />
+            <SkeletonText width="4%" />
           </SkeletonPageHeaderToolbar>
         </SkeletonPageHeader>
         <SkeletonPage width={PAGE_SIZE}>
@@ -74,13 +74,13 @@ export const examples = [
       <Page width={PAGE_SIZE + 100}>
         <SkeletonPageHeader>
           <SkeletonPageHeaderHeading width={PAGE_SIZE}>
-            <SkeletonText />
+            <SkeletonText width="10%" />
             <SkeletonAvatar size={2} />
           </SkeletonPageHeaderHeading>
           <SkeletonPageHeaderToolbar width={PAGE_SIZE}>
-            <SkeletonText />
-            <SkeletonText />
-            <SkeletonText />
+            <SkeletonText width="4%" />
+            <SkeletonText width="4%" />
+            <SkeletonText width="4%" />
           </SkeletonPageHeaderToolbar>
         </SkeletonPageHeader>
         <SkeletonPage width={PAGE_SIZE}>
@@ -100,13 +100,13 @@ export const examples = [
       <Page width={PAGE_SIZE + 100}>
         <SkeletonPageHeader>
           <SkeletonPageHeaderHeading width={PAGE_SIZE}>
-            <SkeletonText heading={true} size={14} />
+            <SkeletonText heading={true} width="20%" />
             <SkeletonButton square={true} />
           </SkeletonPageHeaderHeading>
           <SkeletonPageHeaderTabs width={PAGE_SIZE}>
-            <SkeletonText />
-            <SkeletonText />
-            <SkeletonText />
+            <SkeletonText width="8%" />
+            <SkeletonText width="8%" />
+            <SkeletonText width="8%" />
           </SkeletonPageHeaderTabs>
         </SkeletonPageHeader>
         <SkeletonPage width={PAGE_SIZE} />
@@ -119,11 +119,11 @@ export const examples = [
     render: () => (
       <Page width={380} padding={30}>
         <SkeletonCard>
-          <SkeletonText size={14} />
+          <SkeletonText width="30%" />
           <SkeletonText />
-          <SkeletonText size={14} />
+          <SkeletonText width="20%" />
           <SkeletonText />
-          <SkeletonText size={21} />
+          <SkeletonText width="40%" />
           <SkeletonButton size={18} />
         </SkeletonCard>
       </Page>
@@ -136,11 +136,11 @@ export const examples = [
     render: () => (
       <Page padding={30}>
         <SkeletonListItem>
-          <SkeletonText size={14} />
+          <SkeletonText width="20%" />
           <SkeletonText />
-          <SkeletonText size={14} />
+          <SkeletonText width="10%" />
           <SkeletonText />
-          <SkeletonText size={21} />
+          <SkeletonText width="20%" />
           <SkeletonButton size={18} />
         </SkeletonListItem>
       </Page>

@@ -8,7 +8,7 @@ type TProps = {
   vertical?: boolean,
   center?: boolean,
   childFlex?: string,
-  children?: React.Node | string,
+  children?: React.Element<*>,
 };
 
 export default function SpacerBox(props: TProps) {
@@ -21,23 +21,21 @@ export default function SpacerBox(props: TProps) {
     ...otherProps
   } = props;
 
-  const alignItems = center ? 'center' : 'stretch';
-  const style = vertical
-    ? {alignItems, marginTop: -spacing}
-    : {flexDirection: 'row', alignItems, marginLeft: -spacing};
-
   return (
-    <Box {...style} {...otherProps}>
-      {React.Children.map(children, child => (
-        <Box
-          marginTop={vertical ? spacing : 0}
-          marginLeft={!vertical ? spacing : 0}
-          flex={childFlex}
-          width="100%"
-        >
-          {child}
-        </Box>
-      ))}
+    <Box
+      alignItems={center ? 'center' : 'stretch'}
+      marginTop={vertical ? -spacing : null}
+      flexDirection={vertical ? 'column' : 'row'}
+      marginLeft={vertical ? null : -spacing}
+      {...otherProps}
+    >
+      {React.Children.map(children, child =>
+        React.cloneElement(child, {
+          marginTop: vertical ? spacing : 0,
+          marginLeft: !vertical ? spacing : 0,
+          flex: childFlex,
+        })
+      )}
     </Box>
   );
 }
