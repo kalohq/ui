@@ -137,10 +137,9 @@ export const examples = [
       <Page padding={30}>
         <SkeletonListItem>
           <SkeletonText width="20%" />
-          <SkeletonText />
           <SkeletonText width="10%" />
-          <SkeletonText />
-          <SkeletonText width="20%" />
+          <SkeletonText width="40%" />
+          <SkeletonText width="10%" />
           <SkeletonButton size={18} />
         </SkeletonListItem>
       </Page>
