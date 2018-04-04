@@ -65,7 +65,9 @@ const StyledTextarea = styled.textarea`
       }
 
       &:not(:read-only):not(:disabled):focus {
+        outline: 0;
         border: ${props.theme.input.inputActiveBorder};
+        box-shadow: 0 0 0 3px rgb(238, 244, 250);
       }
     `};
 
