@@ -1,6 +1,6 @@
 /* @flow */
 import * as React from 'react';
-import {pure} from 'recompose';
+
 import SkeletonPaper from './skeleton-paper';
 import SkeletonText from './skeleton-text';
 import SkeletonAvatar from './skeleton-avatar';
@@ -13,7 +13,7 @@ type TProps = {
 /**
  * A freelancer card skeleton
  */
-function SkeletonCard(props: TProps) {
+export default function SkeletonCard(props: TProps) {
   const {children, ...otherProps} = props;
   return (
     <SkeletonPaper paddingTop={75} paddingBottom={150} {...otherProps}>
@@ -31,5 +31,3 @@ function SkeletonCard(props: TProps) {
     </SkeletonPaper>
   );
 }
-
-export default pure(SkeletonCard);

@@ -1,6 +1,5 @@
 /* @flow */
 import * as React from 'react';
-import {pure} from 'recompose';
 
 import {Box} from '../../layout';
 
@@ -10,7 +9,7 @@ type TProps = {
   children: React.Node,
 };
 
-function SkeletonContent(props: TProps) {
+export default function SkeletonContent(props: TProps) {
   const {children, ...otherProps} = props;
   return (
     <Box padding={16} {...otherProps}>
@@ -18,5 +17,3 @@ function SkeletonContent(props: TProps) {
     </Box>
   );
 }
-
-export default pure(SkeletonContent);

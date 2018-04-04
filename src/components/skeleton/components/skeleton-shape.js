@@ -1,6 +1,5 @@
 /* @flow */
 import styled, {keyframes} from 'react-emotion';
-import {pure} from 'recompose';
 import {Box} from '../../layout';
 
 const SkeletonSheen = keyframes`
@@ -41,4 +40,4 @@ const SkeletonShape = styled(Box)`
   }
 `;
 
-export default pure(SkeletonShape);
+export default SkeletonShape;

@@ -1,6 +1,5 @@
 /* @flow */
 import * as React from 'react';
-import {pure} from 'recompose';
 
 import {Box} from '../../layout';
 import SpacerBox from './skeleton-spacer-box';
@@ -12,7 +11,7 @@ type TProps = {
   children: React.Node,
 };
 
-export function SkeletonPageHeaderTabs(props: TProps) {
+export default function SkeletonPageHeaderTabs(props: TProps) {
   const {width = 1180, children, ...otherProps} = props;
   return (
     <Box margin={[0, 'auto']} width={width} {...otherProps}>
@@ -20,5 +19,3 @@ export function SkeletonPageHeaderTabs(props: TProps) {
     </Box>
   );
 }
-
-export default pure(SkeletonPageHeaderTabs);

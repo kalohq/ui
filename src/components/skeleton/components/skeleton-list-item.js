@@ -1,6 +1,5 @@
 /* @flow */
 import * as React from 'react';
-import {pure} from 'recompose';
 
 import SkeletonPaper from './skeleton-paper';
 import SkeletonText from './skeleton-text';
@@ -14,7 +13,7 @@ type TProps = {
   children: React.Node,
 };
 
-function SkeletonListItem(props: TProps) {
+export default function SkeletonListItem(props: TProps) {
   const {children, ...otherProps} = props;
   return (
     <SkeletonPaper padding={25} {...otherProps}>
@@ -28,5 +27,3 @@ function SkeletonListItem(props: TProps) {
     </SkeletonPaper>
   );
 }
-
-export default pure(SkeletonListItem);

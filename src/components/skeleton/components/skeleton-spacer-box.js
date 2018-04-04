@@ -1,6 +1,5 @@
 /* @flow */
 import * as React from 'react';
-import {pure} from 'recompose';
 
 import {Box} from '../../layout';
 
@@ -12,7 +11,7 @@ type TProps = {
   children?: React.Node | string,
 };
 
-function SpacerBox(props: TProps) {
+export default function SpacerBox(props: TProps) {
   const {
     spacing = 25,
     vertical,
@@ -42,5 +41,3 @@ function SpacerBox(props: TProps) {
     </Box>
   );
 }
-
-export default pure(SpacerBox);

@@ -1,6 +1,5 @@
 /* @flow */
 import * as React from 'react';
-import {pure} from 'recompose';
 
 import SpacerBox from './skeleton-spacer-box';
 
@@ -13,7 +12,7 @@ type TProps = {
   center: string,
 };
 
-function SkeletonList(props: TProps) {
+export default function SkeletonList(props: TProps) {
   const {children, center, ...otherProps} = props;
   return (
     <SpacerBox
@@ -27,5 +26,3 @@ function SkeletonList(props: TProps) {
     </SpacerBox>
   );
 }
-
-export default pure(SkeletonList);

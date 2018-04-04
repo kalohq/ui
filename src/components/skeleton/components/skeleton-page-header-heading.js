@@ -1,10 +1,11 @@
 import styled from 'react-emotion';
+
 import {Box} from '../../layout';
 
 /**
  * Skeleton page header heading
  */
-export const SkeletonPageHeaderHeading = styled(Box)`
+const SkeletonPageHeaderHeading = styled(Box)`
   margin: 0 auto;
   width: ${props => (props.width ? props.width : 1180)}px;
   height: 80px;
@@ -12,3 +13,5 @@ export const SkeletonPageHeaderHeading = styled(Box)`
   flex-direction: row;
   align-items: center;
 `;
+
+export default SkeletonPageHeaderHeading;

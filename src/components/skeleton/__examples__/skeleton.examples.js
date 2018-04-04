@@ -17,7 +17,7 @@ import {
   SkeletonPage,
   SkeletonPaper,
   SkeletonPageHeaderTabs,
-} from '../skeleton';
+} from '../';
 
 /** Dummy page size */
 const PAGE_SIZE = 1080;

@@ -1,6 +1,5 @@
 /* @flow */
 import * as React from 'react';
-import {pure} from 'recompose';
 
 import {Box} from '../../layout';
 
@@ -11,7 +10,7 @@ type TProps = {
   children: React.Node,
 };
 
-function SkeletonPage(props: TProps) {
+export default function SkeletonPage(props: TProps) {
   const {width = 1180, children, ...otherProps} = props;
   return (
     <Box>
@@ -21,5 +20,3 @@ function SkeletonPage(props: TProps) {
     </Box>
   );
 }
-
-export default pure(SkeletonPage);

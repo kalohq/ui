@@ -1,7 +1,6 @@
 /* @flow */
 import * as React from 'react';
 import styled from 'react-emotion';
-import {pure} from 'recompose';
 
 import SpacerBox from './skeleton-spacer-box';
 
@@ -18,7 +17,7 @@ type TProps = {
   children: React.Node,
 };
 
-function SkeletonPageHeaderToolbar(props: TProps) {
+export default function SkeletonPageHeaderToolbar(props: TProps) {
   const {width = 1180, children} = props;
   return (
     <StyledSkeletonPageHeaderToolbar>
@@ -28,5 +27,3 @@ function SkeletonPageHeaderToolbar(props: TProps) {
     </StyledSkeletonPageHeaderToolbar>
   );
 }
-
-export default pure(SkeletonPageHeaderToolbar);

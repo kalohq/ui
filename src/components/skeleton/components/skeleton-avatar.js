@@ -1,13 +1,12 @@
 /* @flow */
 import * as React from 'react';
-import {pure} from 'recompose';
 import SkeletonShape from './skeleton-shape';
 
 import {AVATAR_SIZE_MULTIPLIER} from '../skeleton';
 /**
  * Avatar Skeleton
  */
-function SkeletonAvatar(props: {size?: number}) {
+export default function SkeletonAvatar(props: {size?: number}) {
   const {size = 4, ...otherProps} = props;
   const width = size * AVATAR_SIZE_MULTIPLIER;
   return (
@@ -19,5 +18,3 @@ function SkeletonAvatar(props: {size?: number}) {
     />
   );
 }
-
-export default pure(SkeletonAvatar);
