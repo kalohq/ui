@@ -37,6 +37,11 @@ function Page({children, ...styleProps}) {
 
 export const examples = [
   {
+    title: 'Skeleton Button',
+    description: 'A skeleton button',
+    render: () => <SkeletonButton size={10} />,
+  },
+  {
     title: 'Skeleton Card Index',
     description: 'A complete skeleton layout with card grid',
     render: () => (
@@ -150,12 +155,12 @@ export const examples = [
           <SkeletonList center={false}>
             <SkeletonPaper>
               <SkeletonList center={false}>
-                <SkeletonText size={14} heading={true} />
-                <SkeletonText size={7} />
-                <SkeletonText size={49} />
-                <SkeletonText size={35} />
-                <SkeletonText size={42} />
-                <SkeletonText size={7} />
+                <SkeletonText width="50%" heading={true} />
+                <SkeletonText width="15%" />
+                <SkeletonText width="80%" />
+                <SkeletonText width="70%" />
+                <SkeletonText width="80%" />
+                <SkeletonText width="20%" />
               </SkeletonList>
             </SkeletonPaper>
           </SkeletonList>
@@ -163,7 +168,7 @@ export const examples = [
             <SkeletonPaper>
               <SkeletonList center={false}>
                 <SkeletonText heading={true} />
-                <SkeletonText size={14} />
+                <SkeletonText width="10%" />
               </SkeletonList>
             </SkeletonPaper>
           </SkeletonList>
