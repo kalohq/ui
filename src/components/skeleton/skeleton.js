@@ -1,4 +1,5 @@
-import React from 'react';
+/* @flow */
+import * as React from 'react';
 import styled, {keyframes} from 'react-emotion';
 
 import {Box} from '../layout';
@@ -16,21 +17,29 @@ const TEXT_HEIGHT = 12;
 const BUTTON_HEIGHT = 36;
 
 /** A box which can space it's children */
-function SpacerBox({
-  spacing = 25,
-  vertical = false,
-  center = true,
-  childFlex,
-  children,
-  ...styleProps
+function SpacerBox(props: {
+  spacing?: number,
+  vertical?: boolean,
+  center?: boolean,
+  childFlex?: string,
+  children?: React.Node | string,
 }) {
+  const {
+    spacing = 25,
+    vertical,
+    center = true,
+    childFlex,
+    children,
+    ...otherProps
+  } = props;
+
   const alignItems = center ? 'center' : 'stretch';
   const style = vertical
     ? {alignItems, marginTop: -spacing}
     : {flexDirection: 'row', alignItems, marginLeft: -spacing};
 
   return (
-    <Box {...style} {...styleProps}>
+    <Box {...style} {...otherProps}>
       {React.Children.map(children, child => (
         <Box
           marginTop={vertical ? spacing : 0}
@@ -85,22 +94,32 @@ export const SkeletonShape = styled(Box)`
  * Skeleton representation of text content
  * TODO: Allow multiline (with appropriate line spacing)
  */
-export function SkeletonText({size = 7, heading = false}) {
+export function SkeletonText(props: {size?: number, heading?: boolean}) {
+  const {size = 7, heading, ...otherProps} = props;
   const width = size * TEXT_SIZE_MULTIPLIER;
   const height = heading ? TEXT_HEIGHT * 2 : TEXT_HEIGHT;
-  return <SkeletonShape height={height} width={width} />;
+  return <SkeletonShape height={height} width={width} {...otherProps} />;
 }
 
 /** Skeleton representation of a button */
-export function SkeletonButton({size = 7, square}) {
+export function SkeletonButton(props: {size?: number, square?: boolean}) {
+  const {size = 7, square, ...otherProps} = props;
   const width = square ? BUTTON_HEIGHT : size * TEXT_SIZE_MULTIPLIER;
-  return <SkeletonShape height={BUTTON_HEIGHT} width={width} />;
+  return <SkeletonShape height={BUTTON_HEIGHT} width={width} {...otherProps} />;
 }
 
 /** Skeleton representation of an avatar */
-export function SkeletonAvatar({size = 4}) {
+export function SkeletonAvatar(props: {size?: number}) {
+  const {size = 4, ...otherProps} = props;
   const width = size * AVATAR_SIZE_MULTIPLIER;
-  return <SkeletonShape shape="circle" height={width} width={width} />;
+  return (
+    <SkeletonShape
+      shape="circle"
+      height={width}
+      width={width}
+      {...otherProps}
+    />
+  );
 }
 
 /** Skeleton representation of paper container */
@@ -110,7 +129,8 @@ export const StyledSkeletonPaper = styled(Box)`
   border-radius: 3px;
 `;
 
-export function SkeletonPaper({children, ...otherProps}) {
+export function SkeletonPaper(props: {children: React.Node}) {
+  const {children, ...otherProps} = props;
   return (
     <StyledSkeletonPaper padding={16} {...otherProps}>
       {children}
@@ -119,9 +139,10 @@ export function SkeletonPaper({children, ...otherProps}) {
 }
 
 /** Skeleton representation of an avatar */
-export function SkeletonCard({children}) {
+export function SkeletonCard(props: {children: React.Node}) {
+  const {children, ...otherProps} = props;
   return (
-    <SkeletonPaper paddingTop={75} paddingBottom={150}>
+    <SkeletonPaper paddingTop={75} paddingBottom={150} {...otherProps}>
       <SpacerBox vertical={true}>
         {children ? (
           children
@@ -138,9 +159,10 @@ export function SkeletonCard({children}) {
 }
 
 /** Skeleton representation of an avatar */
-export function SkeletonListItem({children}) {
+export function SkeletonListItem(props: {children: React.Node}) {
+  const {children, ...otherProps} = props;
   return (
-    <SkeletonPaper padding={25}>
+    <SkeletonPaper padding={25} {...otherProps}>
       <SpacerBox>
         {children ? (
           children
@@ -153,22 +175,25 @@ export function SkeletonListItem({children}) {
 }
 
 /** Single row horizontal grid skeleton component */
-export function SkeletonGrid({children, center}) {
+export function SkeletonGrid(props: {children: React.Node, center: string}) {
+  const {children, center, ...otherProps} = props;
   return (
-    <SpacerBox childFlex={1} center={center}>
+    <SpacerBox childFlex={1} center={center} {...otherProps}>
       {children}
     </SpacerBox>
   );
 }
 
 /** Vertical list layout skeleton component */
-export function SkeletonList({children, center}) {
+export function SkeletonList(props: {children: React.Node, center: string}) {
+  const {children, center, ...otherProps} = props;
   return (
     <SpacerBox
       vertical={true}
       spacing={10}
       alignItems="stretch"
       center={center}
+      {...otherProps}
     >
       {children}
     </SpacerBox>
@@ -176,10 +201,11 @@ export function SkeletonList({children, center}) {
 }
 
 /** Skeleton page */
-export function SkeletonPage({children, width = 1180}) {
+export function SkeletonPage(props: {width?: number, children: React.Node}) {
+  const {width = 1180, children, ...otherProps} = props;
   return (
     <Box>
-      <Box margin={[50, 'auto']} width={width}>
+      <Box margin={[50, 'auto']} width={width} {...otherProps}>
         {children}
       </Box>
     </Box>
@@ -207,7 +233,11 @@ export const StyledSkeletonPageHeaderToolbar = styled(Box)`
   border-top: 1px solid ${props => props.theme.colors.grey300};
 `;
 
-export function SkeletonPageHeaderToolbar({width = 1180, children}) {
+export function SkeletonPageHeaderToolbar(props: {
+  width?: number,
+  children: React.Node,
+}) {
+  const {width = 1180, children} = props;
   return (
     <StyledSkeletonPageHeaderToolbar>
       <Box margin={[0, 'auto']} width={width}>
@@ -218,15 +248,24 @@ export function SkeletonPageHeaderToolbar({width = 1180, children}) {
 }
 
 /** Skeleton page header heading */
-export function SkeletonPageHeaderTabs({width = 1180, children}) {
+export function SkeletonPageHeaderTabs(props: {
+  width?: number,
+  children: React.Node,
+}) {
+  const {width = 1180, children, ...otherProps} = props;
   return (
-    <Box margin={[0, 'auto']} width={width}>
+    <Box margin={[0, 'auto']} width={width} {...otherProps}>
       <SpacerBox height={46}>{children}</SpacerBox>
     </Box>
   );
 }
 
 /** Generic content */
-export function SkeletonContent({children}) {
-  return <Box padding={15}>{children}</Box>;
+export function SkeletonContent(props: {children: React.Node}) {
+  const {children, ...otherProps} = props;
+  return (
+    <Box padding={16} {...otherProps}>
+      {children}
+    </Box>
+  );
 }
