@@ -17,7 +17,7 @@ export default function SkeletonListItem(props: TProps) {
   const {children, ...otherProps} = props;
   return (
     <SkeletonPaper padding={25} {...otherProps}>
-      <SpacerBox>
+      <SpacerBox overflow="hidden">
         {children ? (
           children
         ) : (
