@@ -7,8 +7,8 @@ type TProps = {
   spacing?: number,
   vertical?: boolean,
   center?: boolean,
-  childFlex?: string,
-  children?: React.Element<*>,
+  childFlex?: string | number,
+  children?: React.Element<*> | Array<*>,
 };
 
 export default function SpacerBox(props: TProps) {

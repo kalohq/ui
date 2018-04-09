@@ -10,7 +10,7 @@ import {TEXT_HEIGHT} from '../skeleton';
  */
 
 type TProps = {
-  width?: number,
+  width?: string | number,
   heading?: boolean,
 };
 

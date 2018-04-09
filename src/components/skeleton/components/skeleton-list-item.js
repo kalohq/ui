@@ -10,7 +10,7 @@ import SpacerBox from './skeleton-spacer-box';
  */
 
 type TProps = {
-  children: React.Node,
+  children: React.Element<*>,
 };
 
 export default function SkeletonListItem(props: TProps) {

@@ -8,7 +8,7 @@ import SpacerBox from './skeleton-spacer-box';
 
 type TProps = {
   width?: number,
-  children: React.Node,
+  children: React.Element<*>,
 };
 
 export default function SkeletonPageHeaderTabs(props: TProps) {

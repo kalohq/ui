@@ -7,7 +7,7 @@ import SkeletonAvatar from './skeleton-avatar';
 import SpacerBox from './skeleton-spacer-box';
 
 type TProps = {
-  children: React.Node,
+  children: React.Element<*>,
 };
 
 /**

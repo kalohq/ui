@@ -14,7 +14,7 @@ const StyledSkeletonPageHeaderToolbar = styled(Box)`
 
 type TProps = {
   width?: number,
-  children: React.Node,
+  children: React.Element<*>,
 };
 
 export default function SkeletonPageHeaderToolbar(props: TProps) {

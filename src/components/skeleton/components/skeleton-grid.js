@@ -8,8 +8,8 @@ import SpacerBox from './skeleton-spacer-box';
  */
 
 type TProps = {
-  children: React.Node,
-  center: string,
+  children: React.Element<*>,
+  center: boolean,
 };
 
 export default function SkeletonGrid(props: TProps) {
