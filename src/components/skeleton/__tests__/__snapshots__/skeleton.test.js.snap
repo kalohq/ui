@@ -14,7 +14,7 @@ exports[`components/skeleton SkeletonAvatar should render shallow component ok 1
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -64,7 +64,7 @@ exports[`components/skeleton SkeletonButton should render shallow component ok 1
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -113,7 +113,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -135,7 +135,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -157,7 +157,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -183,7 +183,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -219,7 +219,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -263,7 +263,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -361,7 +361,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -403,7 +403,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -445,7 +445,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -468,7 +468,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -504,7 +504,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -526,7 +526,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -549,7 +549,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -572,7 +572,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -616,7 +616,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -637,7 +637,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -660,7 +660,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -682,7 +682,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -723,7 +723,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -745,7 +745,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -789,7 +789,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -833,7 +833,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1014,7 +1014,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1036,7 +1036,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1072,7 +1072,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1095,7 +1095,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1139,7 +1139,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1248,7 +1248,7 @@ exports[`components/skeleton SkeletonText should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
