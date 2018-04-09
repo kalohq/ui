@@ -29,7 +29,7 @@ exports[`Box should allow overriding of default styles 1`] = `
   -ms-flex-negative: 1;
   flex-shrink: 1;
   -webkit-align-content: flex-end;
-  -ms-flex-line-pack: end;
+  -ms-flex-line-pack: flex-end;
   align-content: flex-end;
   display: -webkit-box;
   display: -webkit-flex;
@@ -64,7 +64,7 @@ exports[`Box should allow passing spacing scales 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
+  -ms-flex-line-pack: flex-start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -94,7 +94,7 @@ exports[`Box should allow passing vector style values 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
+  -ms-flex-line-pack: flex-start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -124,7 +124,7 @@ exports[`Box should render correctly 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
+  -ms-flex-line-pack: flex-start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
