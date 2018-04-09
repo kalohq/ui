@@ -14,7 +14,7 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
+  -ms-flex-line-pack: flex-start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -54,7 +54,6 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
   overflow: hidden;
   cursor: inherit;
   text-align: unset;
-  -webkit-text-decoration: inherit;
   text-decoration: inherit;
   font-weight: 400;
   font-size: 14px;
@@ -67,7 +66,6 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
 }
 
 .emotion-3:hover {
-  -webkit-text-decoration: inherit;
   text-decoration: inherit;
 }
 
@@ -128,7 +126,7 @@ exports[`Alert should render a warning alert 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
+  -ms-flex-line-pack: flex-start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -152,7 +150,6 @@ exports[`Alert should render a warning alert 1`] = `
   overflow: hidden;
   cursor: inherit;
   text-align: unset;
-  -webkit-text-decoration: inherit;
   text-decoration: inherit;
   font-weight: 400;
   font-size: 14px;
@@ -165,7 +162,6 @@ exports[`Alert should render a warning alert 1`] = `
 }
 
 .emotion-1:hover {
-  -webkit-text-decoration: inherit;
   text-decoration: inherit;
 }
 
@@ -205,7 +201,7 @@ exports[`Alert should render shallow component ok 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
+  -ms-flex-line-pack: flex-start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -229,7 +225,6 @@ exports[`Alert should render shallow component ok 1`] = `
   overflow: hidden;
   cursor: inherit;
   text-align: unset;
-  -webkit-text-decoration: inherit;
   text-decoration: inherit;
   font-weight: 400;
   font-size: 14px;
@@ -242,7 +237,6 @@ exports[`Alert should render shallow component ok 1`] = `
 }
 
 .emotion-1:hover {
-  -webkit-text-decoration: inherit;
   text-decoration: inherit;
 }
 

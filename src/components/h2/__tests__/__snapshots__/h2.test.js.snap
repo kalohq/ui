@@ -10,7 +10,6 @@ exports[`H2 should allow weight to be overridden 1`] = `
   overflow: hidden;
   cursor: inherit;
   text-align: unset;
-  -webkit-text-decoration: inherit;
   text-decoration: inherit;
   font-weight: 300;
   font-size: 18px;
@@ -19,7 +18,6 @@ exports[`H2 should allow weight to be overridden 1`] = `
 }
 
 .emotion-2:hover {
-  -webkit-text-decoration: inherit;
   text-decoration: inherit;
 }
 
@@ -54,7 +52,6 @@ exports[`H2 should render shallow component ok 1`] = `
   overflow: hidden;
   cursor: inherit;
   text-align: unset;
-  -webkit-text-decoration: inherit;
   text-decoration: inherit;
   font-weight: 600;
   font-size: 18px;
@@ -63,7 +60,6 @@ exports[`H2 should render shallow component ok 1`] = `
 }
 
 .emotion-2:hover {
-  -webkit-text-decoration: inherit;
   text-decoration: inherit;
 }
 

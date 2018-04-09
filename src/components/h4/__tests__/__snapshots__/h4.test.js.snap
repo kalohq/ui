@@ -10,7 +10,6 @@ exports[`H4 should allow size to be overridden 1`] = `
   overflow: hidden;
   cursor: inherit;
   text-align: unset;
-  -webkit-text-decoration: inherit;
   text-decoration: inherit;
   font-weight: 400;
   font-size: 18px;
@@ -19,7 +18,6 @@ exports[`H4 should allow size to be overridden 1`] = `
 }
 
 .emotion-2:hover {
-  -webkit-text-decoration: inherit;
   text-decoration: inherit;
 }
 
@@ -54,7 +52,6 @@ exports[`H4 should render shallow component ok 1`] = `
   overflow: hidden;
   cursor: inherit;
   text-align: unset;
-  -webkit-text-decoration: inherit;
   text-decoration: inherit;
   font-weight: 400;
   font-size: 14px;
@@ -63,7 +60,6 @@ exports[`H4 should render shallow component ok 1`] = `
 }
 
 .emotion-2:hover {
-  -webkit-text-decoration: inherit;
   text-decoration: inherit;
 }
 
