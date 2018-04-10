@@ -193,7 +193,9 @@ export default class Sticky extends React.Component {
       noPointerEvents,
     } = this.props;
     const {root} = this.refs;
-    const parent = ReactDOM.findDOMNode(root).parentNode;
+    const parent = ReactDOM.findDOMNode(root)
+      ? ReactDOM.findDOMNode(root).parentNode
+      : null;
     if (!parent) return;
     const position = getFixedOffset(parent);
     const child = this.el.children[0];
