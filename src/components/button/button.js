@@ -197,7 +197,7 @@ const DeleteButton = styled(CoreButton)`
     `};
 `;
 
-const ButtonLoadingSpinner = styled.div`
+export const ButtonLoadingSpinner = styled.div`
   left: 50%;
   pointer-events: none;
   position: absolute;
@@ -227,7 +227,7 @@ const ButtonPlaceholderMessage = styled(ButtonMessage)`
   position: relative;
 `;
 
-const ButtonSuccessMessage = styled(ButtonMessage)`
+export const ButtonSuccessMessage = styled(ButtonMessage)`
   transition: 0.4s top cubic-bezier(0.175, 0.885, 0.32, 1.275);
   opacity: ${props => (props.isVisible ? 1 : 0)};
   top: ${props => (props.isVisible ? 0 : '100%')};
