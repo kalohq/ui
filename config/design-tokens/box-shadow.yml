@@ -1,0 +1,15 @@
+global:
+  type: 'string'
+  category: 'layout'
+props: &BOX_SHADOW
+  BOX_SHADOW_LEVEL_0:
+    value: "none"
+  BOX_SHADOW_LEVEL_1:
+    value: "0 3px 6px rgba(140, 140, 140, 0.08)"
+  BOX_SHADOW_LEVEL_2:
+    value: "0 10px 25px rgba(140, 140, 140, 0.14)"
+  BOX_SHADOW_LEVEL_3:
+    value: "0 12px 25px rgba(140, 140, 140, 0.21)"
+  BOX_SHADOW_LEVEL_4:
+    value: "0 14px 25px rgba(140, 140, 140, 0.27)"
+aliases: *BOX_SHADOW

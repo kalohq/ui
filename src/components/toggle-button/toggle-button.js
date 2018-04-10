@@ -86,7 +86,7 @@ export default function ToggleButton(props: TProps) {
     <Box
       flexDirection="row"
       alignItems="center"
-      id="toggle-button"
+      data-test="ui-toggle-button"
       onClick={() => onChange(!value)}
       {...otherProps}
     >

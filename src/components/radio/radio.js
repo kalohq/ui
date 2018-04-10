@@ -94,6 +94,7 @@ export function Radio(props: RadioProps) {
       onClick={readonly || disabled ? null : onClick}
       name={name}
       role="radio"
+      data-test="ui-radio"
       aria-checked={checked}
       aria-disabled={disabled}
     >

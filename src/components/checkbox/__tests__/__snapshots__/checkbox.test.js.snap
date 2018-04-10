@@ -27,6 +27,7 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   overflow: hidden;
   cursor: inherit;
   text-align: unset;
+  -webkit-text-decoration: inherit;
   text-decoration: inherit;
   font-weight: 400;
   font-size: 14px;
@@ -39,6 +40,7 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
 }
 
 .emotion-3:hover {
+  -webkit-text-decoration: inherit;
   text-decoration: inherit;
 }
 
@@ -59,7 +61,7 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -84,6 +86,7 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
 <div
   aria-checked="mixed"
   className="emotion-4 emotion-5"
+  data-test="ui-checkbox"
   disabled={false}
   name={undefined}
   onClick={undefined}
@@ -138,7 +141,7 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -170,6 +173,7 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   overflow: hidden;
   cursor: inherit;
   text-align: unset;
+  -webkit-text-decoration: inherit;
   text-decoration: inherit;
   font-weight: 400;
   font-size: 14px;
@@ -182,6 +186,7 @@ exports[`Checkbox should render a checkbox with label 1`] = `
 }
 
 .emotion-3:hover {
+  -webkit-text-decoration: inherit;
   text-decoration: inherit;
 }
 
@@ -192,6 +197,7 @@ exports[`Checkbox should render a checkbox with label 1`] = `
 <div
   aria-checked={true}
   className="emotion-4 emotion-5"
+  data-test="ui-checkbox"
   disabled={false}
   name={undefined}
   onClick={undefined}
@@ -246,7 +252,7 @@ exports[`Checkbox should render shallow component ok 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -271,6 +277,7 @@ exports[`Checkbox should render shallow component ok 1`] = `
 <div
   aria-checked={true}
   className="emotion-2 emotion-3"
+  data-test="ui-checkbox"
   disabled={false}
   name={undefined}
   onClick={undefined}

@@ -14,7 +14,7 @@ exports[`components/skeleton SkeletonAvatar should render shallow component ok 1
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -24,8 +24,6 @@ exports[`components/skeleton SkeletonAvatar should render shallow component ok 1
   width: 40px;
   border-radius: 50%;
   background-color: rgb(238,244,250);
-  height: 40px;
-  width: 40px;
   position: relative;
   overflow: hidden;
 }
@@ -40,8 +38,8 @@ exports[`components/skeleton SkeletonAvatar should render shallow component ok 1
   height: 100%;
   position: absolute;
   z-index: 1;
-  -webkit-animation: animation-r4rchm 1s infinite 2s;
-  animation: animation-r4rchm 1s infinite 2s;
+  -webkit-animation: animation-1xksri5 1s infinite 2s;
+  animation: animation-1xksri5 1s infinite 2s;
   background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
@@ -66,7 +64,7 @@ exports[`components/skeleton SkeletonButton should render shallow component ok 1
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -76,8 +74,6 @@ exports[`components/skeleton SkeletonButton should render shallow component ok 1
   width: 36px;
   border-radius: 0;
   background-color: rgb(238,244,250);
-  height: 36px;
-  width: 36px;
   position: relative;
   overflow: hidden;
 }
@@ -92,8 +88,8 @@ exports[`components/skeleton SkeletonButton should render shallow component ok 1
   height: 100%;
   position: absolute;
   z-index: 1;
-  -webkit-animation: animation-r4rchm 1s infinite 2s;
-  animation: animation-r4rchm 1s infinite 2s;
+  -webkit-animation: animation-1xksri5 1s infinite 2s;
+  animation: animation-1xksri5 1s infinite 2s;
   background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
@@ -104,28 +100,6 @@ exports[`components/skeleton SkeletonButton should render shallow component ok 1
 `;
 
 exports[`components/skeleton SkeletonGrid should render shallow component ok 1`] = `
-.emotion-5 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: -10px;
-}
-
 .emotion-3 {
   position: relative;
   -webkit-flex-direction: column;
@@ -139,61 +113,16 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 10px;
-  margin-left: 0;
+  margin-top: -10px;
 }
 
 .emotion-19 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 140px;
-  border-radius: 0;
-  background-color: rgb(238,244,250);
-  height: 12px;
-  width: 140px;
-  position: relative;
-  overflow: hidden;
-}
-
-.emotion-19:after {
-  content: '';
-  top: 0;
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  -webkit-animation: animation-r4rchm 1s infinite 2s;
-  animation: animation-r4rchm 1s infinite 2s;
-  background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
-}
-
-.emotion-33 {
   position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -206,39 +135,13 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin-left: -25px;
-}
-
-.emotion-13 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0;
-  margin-left: 25px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
 }
 
 .emotion-7 {
@@ -254,16 +157,53 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0;
+  margin-left: 25px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-5 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   padding: 16px;
-  background-color: #fff;
+  margin-top: 10px;
+  margin-left: 0;
+  position: relative;
+  background: white;
+  box-sizing: content-box;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   border: 1px solid rgb(238,244,250);
-  border-radius: 3px;
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+.emotion-5:hover {
+  box-shadow: none;
 }
 
 .emotion-1 {
@@ -279,18 +219,18 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   height: 24px;
-  width: 140px;
+  width: 50%;
+  margin-top: 10px;
+  margin-left: 0;
   border-radius: 0;
   background-color: rgb(238,244,250);
-  height: 24px;
-  width: 140px;
   position: relative;
   overflow: hidden;
 }
@@ -305,12 +245,12 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   height: 100%;
   position: absolute;
   z-index: 1;
-  -webkit-animation: animation-r4rchm 1s infinite 2s;
-  animation: animation-r4rchm 1s infinite 2s;
+  -webkit-animation: animation-1xksri5 1s infinite 2s;
+  animation: animation-1xksri5 1s infinite 2s;
   background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
-.emotion-15 {
+.emotion-11 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -323,23 +263,23 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 24px;
-  width: 70px;
+  height: 12px;
+  width: 50%;
+  margin-top: 10px;
+  margin-left: 0;
   border-radius: 0;
   background-color: rgb(238,244,250);
-  height: 24px;
-  width: 70px;
   position: relative;
   overflow: hidden;
 }
 
-.emotion-15:after {
+.emotion-11:after {
   content: '';
   top: 0;
   -webkit-transform: translateX(100%);
@@ -349,21 +289,22 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   height: 100%;
   position: absolute;
   z-index: 1;
-  -webkit-animation: animation-r4rchm 1s infinite 2s;
-  animation: animation-r4rchm 1s infinite 2s;
+  -webkit-animation: animation-1xksri5 1s infinite 2s;
+  animation: animation-1xksri5 1s infinite 2s;
   background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
 <div
-  className="emotion-2 emotion-33"
+  className="emotion-2 emotion-19"
   style={Object {}}
 >
   <div
-    className="emotion-2 emotion-13"
+    className="emotion-2 emotion-7"
     style={Object {}}
   >
     <div
-      className="emotion-2 emotion-5"
+      className="emotion-4 emotion-5"
+      onClick={undefined}
       style={Object {}}
     >
       <div
@@ -371,33 +312,20 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
         style={Object {}}
       >
         <div
-          className="emotion-6 emotion-7"
+          className="emotion-0 emotion-1"
+          size={14}
           style={Object {}}
-        >
-          <div
-            className="emotion-2 emotion-5"
-            style={Object {}}
-          >
-            <div
-              className="emotion-2 emotion-3"
-              style={Object {}}
-            >
-              <div
-                className="emotion-0 emotion-1"
-                style={Object {}}
-              />
-            </div>
-          </div>
-        </div>
+        />
       </div>
     </div>
   </div>
   <div
-    className="emotion-2 emotion-13"
+    className="emotion-2 emotion-7"
     style={Object {}}
   >
     <div
-      className="emotion-2 emotion-5"
+      className="emotion-4 emotion-5"
+      onClick={undefined}
       style={Object {}}
     >
       <div
@@ -405,33 +333,14 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
         style={Object {}}
       >
         <div
-          className="emotion-6 emotion-7"
+          className="emotion-0 emotion-1"
           style={Object {}}
-        >
-          <div
-            className="emotion-2 emotion-5"
-            style={Object {}}
-          >
-            <div
-              className="emotion-2 emotion-3"
-              style={Object {}}
-            >
-              <div
-                className="emotion-0 emotion-15"
-                style={Object {}}
-              />
-            </div>
-            <div
-              className="emotion-2 emotion-3"
-              style={Object {}}
-            >
-              <div
-                className="emotion-0 emotion-19"
-                style={Object {}}
-              />
-            </div>
-          </div>
-        </div>
+        />
+        <div
+          className="emotion-0 emotion-11"
+          size={14}
+          style={Object {}}
+        />
       </div>
     </div>
   </div>
@@ -452,7 +361,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -462,8 +371,6 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 36px;
   border-radius: 0;
   background-color: rgb(238,244,250);
-  height: 36px;
-  width: 36px;
   position: relative;
   overflow: hidden;
 }
@@ -478,8 +385,8 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   height: 100%;
   position: absolute;
   z-index: 1;
-  -webkit-animation: animation-r4rchm 1s infinite 2s;
-  animation: animation-r4rchm 1s infinite 2s;
+  -webkit-animation: animation-1xksri5 1s infinite 2s;
+  animation: animation-1xksri5 1s infinite 2s;
   background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
@@ -496,18 +403,16 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   height: 12px;
-  width: 70px;
+  width: 50%;
   border-radius: 0;
   background-color: rgb(238,244,250);
-  height: 12px;
-  width: 70px;
   position: relative;
   overflow: hidden;
 }
@@ -522,34 +427,12 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   height: 100%;
   position: absolute;
   z-index: 1;
-  -webkit-animation: animation-r4rchm 1s infinite 2s;
-  animation: animation-r4rchm 1s infinite 2s;
+  -webkit-animation: animation-1xksri5 1s infinite 2s;
+  animation: animation-1xksri5 1s infinite 2s;
   background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
-.emotion-81 {
-  position: relative;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: -25px;
-}
-
-.emotion-9 {
+.emotion-19 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -562,100 +445,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0;
-  margin-left: 25px;
-}
-
-.emotion-35 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 140px;
-  border-radius: 0;
-  background-color: rgb(238,244,250);
-  height: 12px;
-  width: 140px;
-  position: relative;
-  overflow: hidden;
-}
-
-.emotion-35:after {
-  content: '';
-  top: 0;
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  -webkit-animation: animation-r4rchm 1s infinite 2s;
-  animation: animation-r4rchm 1s infinite 2s;
-  background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
-}
-
-.emotion-43 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0;
-  margin-left: 25px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-25 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -678,7 +468,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -701,7 +491,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   align-items: center;
 }
 
-.emotion-23 {
+.emotion-17 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -714,16 +504,16 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  border-top: 1px solid var(--grey300);
+  border-top: 1px solid rgb(238,244,250);
 }
 
-.emotion-21 {
+.emotion-15 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -736,7 +526,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -746,7 +536,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 1100px;
 }
 
-.emotion-19 {
+.emotion-13 {
   position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -759,7 +549,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -769,7 +559,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   height: 46px;
 }
 
-.emotion-85 {
+.emotion-7 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -782,7 +572,51 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 12px;
+  width: 50%;
+  margin-top: 0;
+  margin-left: 25px;
+  border-radius: 0;
+  background-color: rgb(238,244,250);
+  position: relative;
+  overflow: hidden;
+}
+
+.emotion-7:after {
+  content: '';
+  top: 0;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  -webkit-animation: animation-1xksri5 1s infinite 2s;
+  animation: animation-1xksri5 1s infinite 2s;
+  background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
+}
+
+.emotion-55 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -790,7 +624,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: flex;
 }
 
-.emotion-83 {
+.emotion-53 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -803,7 +637,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -813,38 +647,11 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   width: 1100px;
 }
 
-.emotion-41 {
+.emotion-51 {
   position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 16px;
-  padding-top: 75px;
-  padding-bottom: 150px;
-  background-color: #fff;
-  border: 1px solid rgb(238,244,250);
-  border-radius: 3px;
-}
-
-.emotion-39 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -853,13 +660,13 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: -25px;
+  margin-left: -25px;
 }
 
 .emotion-29 {
@@ -875,17 +682,57 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 25px;
-  margin-left: 0;
+  padding: 16px;
+  padding-top: 75px;
+  padding-bottom: 150px;
+  margin-top: 0;
+  margin-left: 25px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  background: white;
+  box-sizing: content-box;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid rgb(238,244,250);
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+.emotion-29:hover {
+  box-shadow: none;
 }
 
 .emotion-27 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -25px;
+}
+
+.emotion-21 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -898,7 +745,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -906,15 +753,15 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: flex;
   height: 80px;
   width: 80px;
+  margin-top: 25px;
+  margin-left: 0;
   border-radius: 50%;
   background-color: rgb(238,244,250);
-  height: 80px;
-  width: 80px;
   position: relative;
   overflow: hidden;
 }
 
-.emotion-27:after {
+.emotion-21:after {
   content: '';
   top: 0;
   -webkit-transform: translateX(100%);
@@ -924,14 +771,102 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   height: 100%;
   position: absolute;
   z-index: 1;
-  -webkit-animation: animation-r4rchm 1s infinite 2s;
-  animation: animation-r4rchm 1s infinite 2s;
+  -webkit-animation: animation-1xksri5 1s infinite 2s;
+  animation: animation-1xksri5 1s infinite 2s;
+  background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
+}
+
+.emotion-23 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 12px;
+  width: 14%;
+  margin-top: 25px;
+  margin-left: 0;
+  border-radius: 0;
+  background-color: rgb(238,244,250);
+  position: relative;
+  overflow: hidden;
+}
+
+.emotion-23:after {
+  content: '';
+  top: 0;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  -webkit-animation: animation-1xksri5 1s infinite 2s;
+  animation: animation-1xksri5 1s infinite 2s;
+  background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
+}
+
+.emotion-25 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 12px;
+  width: 20%;
+  margin-top: 25px;
+  margin-left: 0;
+  border-radius: 0;
+  background-color: rgb(238,244,250);
+  position: relative;
+  overflow: hidden;
+}
+
+.emotion-25:after {
+  content: '';
+  top: 0;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  -webkit-animation: animation-1xksri5 1s infinite 2s;
+  animation: animation-1xksri5 1s infinite 2s;
   background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
 <div>
   <div
-    className="emotion-24 emotion-25"
+    className="emotion-18 emotion-19"
     style={Object {}}
   >
     <div
@@ -948,187 +883,115 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
       />
     </div>
     <div
-      className="emotion-22 emotion-23"
+      className="emotion-16 emotion-17"
       style={Object {}}
     >
       <div
-        className="emotion-8 emotion-21"
+        className="emotion-12 emotion-15"
         style={Object {}}
       >
         <div
-          className="emotion-8 emotion-19"
+          className="emotion-12 emotion-13"
           style={Object {}}
         >
           <div
-            className="emotion-8 emotion-9"
+            className="emotion-0 emotion-7"
             style={Object {}}
-          >
-            <div
-              className="emotion-0 emotion-1"
-              style={Object {}}
-            />
-          </div>
+          />
           <div
-            className="emotion-8 emotion-9"
+            className="emotion-0 emotion-7"
             style={Object {}}
-          >
-            <div
-              className="emotion-0 emotion-1"
-              style={Object {}}
-            />
-          </div>
+          />
           <div
-            className="emotion-8 emotion-9"
+            className="emotion-0 emotion-7"
             style={Object {}}
-          >
-            <div
-              className="emotion-0 emotion-1"
-              style={Object {}}
-            />
-          </div>
+          />
         </div>
       </div>
     </div>
   </div>
   <div
-    className="emotion-8 emotion-85"
+    className="emotion-12 emotion-55"
     style={Object {}}
   >
     <div
-      className="emotion-8 emotion-83"
+      className="emotion-12 emotion-53"
       style={Object {}}
     >
       <div
-        className="emotion-8 emotion-81"
+        className="emotion-12 emotion-51"
         style={Object {}}
       >
         <div
-          className="emotion-8 emotion-43"
+          className="emotion-28 emotion-29"
+          onClick={undefined}
           style={Object {}}
         >
           <div
-            className="emotion-40 emotion-41"
+            className="emotion-12 emotion-27"
             style={Object {}}
           >
             <div
-              className="emotion-8 emotion-39"
+              className="emotion-0 emotion-21"
+              shape="circle"
               style={Object {}}
-            >
-              <div
-                className="emotion-8 emotion-29"
-                style={Object {}}
-              >
-                <div
-                  className="emotion-0 emotion-27"
-                  shape="circle"
-                  style={Object {}}
-                />
-              </div>
-              <div
-                className="emotion-8 emotion-29"
-                style={Object {}}
-              >
-                <div
-                  className="emotion-0 emotion-1"
-                  style={Object {}}
-                />
-              </div>
-              <div
-                className="emotion-8 emotion-29"
-                style={Object {}}
-              >
-                <div
-                  className="emotion-0 emotion-35"
-                  style={Object {}}
-                />
-              </div>
-            </div>
+            />
+            <div
+              className="emotion-0 emotion-23"
+              style={Object {}}
+            />
+            <div
+              className="emotion-0 emotion-25"
+              style={Object {}}
+            />
           </div>
         </div>
         <div
-          className="emotion-8 emotion-43"
+          className="emotion-28 emotion-29"
+          onClick={undefined}
           style={Object {}}
         >
           <div
-            className="emotion-40 emotion-41"
+            className="emotion-12 emotion-27"
             style={Object {}}
           >
             <div
-              className="emotion-8 emotion-39"
+              className="emotion-0 emotion-21"
+              shape="circle"
               style={Object {}}
-            >
-              <div
-                className="emotion-8 emotion-29"
-                style={Object {}}
-              >
-                <div
-                  className="emotion-0 emotion-27"
-                  shape="circle"
-                  style={Object {}}
-                />
-              </div>
-              <div
-                className="emotion-8 emotion-29"
-                style={Object {}}
-              >
-                <div
-                  className="emotion-0 emotion-1"
-                  style={Object {}}
-                />
-              </div>
-              <div
-                className="emotion-8 emotion-29"
-                style={Object {}}
-              >
-                <div
-                  className="emotion-0 emotion-35"
-                  style={Object {}}
-                />
-              </div>
-            </div>
+            />
+            <div
+              className="emotion-0 emotion-23"
+              style={Object {}}
+            />
+            <div
+              className="emotion-0 emotion-25"
+              style={Object {}}
+            />
           </div>
         </div>
         <div
-          className="emotion-8 emotion-43"
+          className="emotion-28 emotion-29"
+          onClick={undefined}
           style={Object {}}
         >
           <div
-            className="emotion-40 emotion-41"
+            className="emotion-12 emotion-27"
             style={Object {}}
           >
             <div
-              className="emotion-8 emotion-39"
+              className="emotion-0 emotion-21"
+              shape="circle"
               style={Object {}}
-            >
-              <div
-                className="emotion-8 emotion-29"
-                style={Object {}}
-              >
-                <div
-                  className="emotion-0 emotion-27"
-                  shape="circle"
-                  style={Object {}}
-                />
-              </div>
-              <div
-                className="emotion-8 emotion-29"
-                style={Object {}}
-              >
-                <div
-                  className="emotion-0 emotion-1"
-                  style={Object {}}
-                />
-              </div>
-              <div
-                className="emotion-8 emotion-29"
-                style={Object {}}
-              >
-                <div
-                  className="emotion-0 emotion-35"
-                  style={Object {}}
-                />
-              </div>
-            </div>
+            />
+            <div
+              className="emotion-0 emotion-23"
+              style={Object {}}
+            />
+            <div
+              className="emotion-0 emotion-25"
+              style={Object {}}
+            />
           </div>
         </div>
       </div>
@@ -1138,7 +1001,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 `;
 
 exports[`components/skeleton SkeletonList should render shallow component ok 1`] = `
-.emotion-5 {
+.emotion-25 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1151,51 +1014,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 70px;
-  border-radius: 0;
-  background-color: rgb(238,244,250);
-  height: 12px;
-  width: 70px;
-  position: relative;
-  overflow: hidden;
-}
-
-.emotion-5:after {
-  content: '';
-  top: 0;
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  -webkit-animation: animation-r4rchm 1s infinite 2s;
-  animation: animation-r4rchm 1s infinite 2s;
-  background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
-}
-
-.emotion-43 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1204,7 +1023,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   margin-top: -10px;
 }
 
-.emotion-13 {
+.emotion-7 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1217,42 +1036,30 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 10px;
-  margin-left: 0;
-}
-
-.emotion-11 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   padding: 25px;
-  background-color: #fff;
+  margin-top: 10px;
+  margin-left: 0;
+  position: relative;
+  background: white;
+  box-sizing: content-box;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   border: 1px solid rgb(238,244,250);
-  border-radius: 3px;
+  border-radius: 5px;
+  box-shadow: none;
 }
 
-.emotion-9 {
+.emotion-7:hover {
+  box-shadow: none;
+}
+
+.emotion-5 {
   position: relative;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -1265,36 +1072,14 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin-left: -25px;
-}
-
-.emotion-3 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0;
-  margin-left: 25px;
+  overflow: hidden;
 }
 
 .emotion-1 {
@@ -1310,18 +1095,18 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   height: 12px;
-  width: 140px;
+  width: 20%;
+  margin-top: 0;
+  margin-left: 25px;
   border-radius: 0;
   background-color: rgb(238,244,250);
-  height: 12px;
-  width: 140px;
   position: relative;
   overflow: hidden;
 }
@@ -1336,112 +1121,114 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   height: 100%;
   position: absolute;
   z-index: 1;
-  -webkit-animation: animation-r4rchm 1s infinite 2s;
-  animation: animation-r4rchm 1s infinite 2s;
+  -webkit-animation: animation-1xksri5 1s infinite 2s;
+  animation: animation-1xksri5 1s infinite 2s;
+  background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
+}
+
+.emotion-3 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 12px;
+  width: 10%;
+  margin-top: 0;
+  margin-left: 25px;
+  border-radius: 0;
+  background-color: rgb(238,244,250);
+  position: relative;
+  overflow: hidden;
+}
+
+.emotion-3:after {
+  content: '';
+  top: 0;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  -webkit-animation: animation-1xksri5 1s infinite 2s;
+  animation: animation-1xksri5 1s infinite 2s;
   background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
 <div
-  className="emotion-2 emotion-43"
+  className="emotion-4 emotion-25"
   style={Object {}}
 >
   <div
-    className="emotion-2 emotion-13"
+    className="emotion-6 emotion-7"
+    onClick={undefined}
     style={Object {}}
   >
     <div
-      className="emotion-10 emotion-11"
+      className="emotion-4 emotion-5"
       style={Object {}}
     >
       <div
-        className="emotion-2 emotion-9"
+        className="emotion-0 emotion-1"
         style={Object {}}
-      >
-        <div
-          className="emotion-2 emotion-3"
-          style={Object {}}
-        >
-          <div
-            className="emotion-0 emotion-1"
-            style={Object {}}
-          />
-        </div>
-        <div
-          className="emotion-2 emotion-3"
-          style={Object {}}
-        >
-          <div
-            className="emotion-0 emotion-5"
-            style={Object {}}
-          />
-        </div>
-      </div>
+      />
+      <div
+        className="emotion-0 emotion-3"
+        style={Object {}}
+      />
     </div>
   </div>
   <div
-    className="emotion-2 emotion-13"
+    className="emotion-6 emotion-7"
+    onClick={undefined}
     style={Object {}}
   >
     <div
-      className="emotion-10 emotion-11"
+      className="emotion-4 emotion-5"
       style={Object {}}
     >
       <div
-        className="emotion-2 emotion-9"
+        className="emotion-0 emotion-1"
         style={Object {}}
-      >
-        <div
-          className="emotion-2 emotion-3"
-          style={Object {}}
-        >
-          <div
-            className="emotion-0 emotion-1"
-            style={Object {}}
-          />
-        </div>
-        <div
-          className="emotion-2 emotion-3"
-          style={Object {}}
-        >
-          <div
-            className="emotion-0 emotion-5"
-            style={Object {}}
-          />
-        </div>
-      </div>
+      />
+      <div
+        className="emotion-0 emotion-3"
+        style={Object {}}
+      />
     </div>
   </div>
   <div
-    className="emotion-2 emotion-13"
+    className="emotion-6 emotion-7"
+    onClick={undefined}
     style={Object {}}
   >
     <div
-      className="emotion-10 emotion-11"
+      className="emotion-4 emotion-5"
       style={Object {}}
     >
       <div
-        className="emotion-2 emotion-9"
+        className="emotion-0 emotion-1"
         style={Object {}}
-      >
-        <div
-          className="emotion-2 emotion-3"
-          style={Object {}}
-        >
-          <div
-            className="emotion-0 emotion-1"
-            style={Object {}}
-          />
-        </div>
-        <div
-          className="emotion-2 emotion-3"
-          style={Object {}}
-        >
-          <div
-            className="emotion-0 emotion-5"
-            style={Object {}}
-          />
-        </div>
-      </div>
+      />
+      <div
+        className="emotion-0 emotion-3"
+        style={Object {}}
+      />
     </div>
   </div>
 </div>
@@ -1461,18 +1248,16 @@ exports[`components/skeleton SkeletonText should render shallow component ok 1`]
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   height: 12px;
-  width: 70px;
+  width: 50%;
   border-radius: 0;
   background-color: rgb(238,244,250);
-  height: 12px;
-  width: 70px;
   position: relative;
   overflow: hidden;
 }
@@ -1487,8 +1272,8 @@ exports[`components/skeleton SkeletonText should render shallow component ok 1`]
   height: 100%;
   position: absolute;
   z-index: 1;
-  -webkit-animation: animation-r4rchm 1s infinite 2s;
-  animation: animation-r4rchm 1s infinite 2s;
+  -webkit-animation: animation-1xksri5 1s infinite 2s;
+  animation: animation-1xksri5 1s infinite 2s;
   background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
