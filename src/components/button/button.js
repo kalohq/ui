@@ -37,9 +37,8 @@ const BUTTON_SIZING = {
 
 const CoreButton = styled(Box)`
   overflow: hidden;
-  position: relative;
-  align-items: center;
   border: none;
+  flex: ${props => (props.flex ? 1 : 'initial')};
   border-radius: ${props => props.theme.layout.borderRadiusButton};
   cursor: pointer;
   font-weight: 500;
@@ -49,7 +48,9 @@ const CoreButton = styled(Box)`
   padding: 0 ${props => BUTTON_SIZING[props.size].padding}px;
   vertical-align: middle;
   width: ${props =>
-    props.loneIcon ? `${BUTTON_SIZING[props.size].height}px` : 'unset'};
+    props.loneIcon
+      ? `${BUTTON_SIZING[props.size].height}px`
+      : props.wide ? '100%' : 'unset'};
 
   &:focus {
     outline: 0;
@@ -85,6 +86,7 @@ const CoreButton = styled(Box)`
     props.loaded &&
     css`
       background-color: ${props.theme.colors.green500} !important;
+      color: ${props.theme.colors.white} !important;
     `};
 
   ${props =>
@@ -252,7 +254,6 @@ type TProps = {
   role?: string,
   disabled?: boolean,
   icon?: string,
-  iconBorder?: boolean, // deprecate
   loneIcon?: boolean,
   wide?: boolean,
   size?: 'small' | 'medium' | 'large' | 'extra-large',
@@ -278,7 +279,6 @@ export default class Button extends PureComponent<TProps> {
     role: 'button',
     size: 'large',
     theme: 'primary',
-    iconBorder: false,
     wide: false,
     loading: false,
     loneIcon: false,
@@ -342,7 +342,6 @@ export default class Button extends PureComponent<TProps> {
       loadedTimeout: _IGNORED,
       readonly: __IGNORED,
       editable: ___IGNORED,
-      iconBorder: ____IGNORED,
       ...otherProps
     } = this.props;
 
@@ -404,13 +403,13 @@ export default class Button extends PureComponent<TProps> {
         </ButtonPlaceholderMessage>
         <ButtonMessage
           name="message"
-          isHidden={loading || loaded}
+          isHidden={loading || (loaded && success)}
           title={mayGetLong ? children : undefined}
         >
           {iconElement}
           {children}
         </ButtonMessage>
-        <ButtonSuccessMessage isVisible={loaded}>
+        <ButtonSuccessMessage isVisible={loaded && success}>
           {iconElement}
           {message}
         </ButtonSuccessMessage>
