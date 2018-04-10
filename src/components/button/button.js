@@ -25,7 +25,7 @@ const BUTTON_SIZING = {
     height: 46,
     padding: 23,
     fontSize: 14,
-    iconSize: 24,
+    iconSize: 20,
   },
   'extra-large': {
     height: 56,
@@ -81,6 +81,13 @@ const CoreButton = styled(Box)`
     `};
 
   ${props =>
+    props.success &&
+    props.loaded &&
+    css`
+      background-color: ${props.theme.colors.green500} !important;
+    `};
+
+  ${props =>
     props.disabled &&
     css`
       background-color: ${props.theme.colors.grey300};
@@ -133,28 +140,31 @@ const SecondaryButton = styled(CoreButton)`
 
 const TertiaryButton = styled(CoreButton)`
   ${props =>
-    !props.disabled &&
-    css`
-      background-color: #fff;
-      border: 1px solid ${props.theme.colors.grey400};
-      color: ${props.theme.colors.navy700};
+    props.subdued || props.active
+      ? css`
+          background-color: ${props.theme.colors.grey300};
+          border: 1px solid ${props.theme.colors.grey400};
+          color: ${props.theme.colors.navy700};
+        `
+      : !props.disabled &&
+        css`
+          background-color: #fff;
+          border: 1px solid ${props.theme.colors.grey400};
+          color: ${props.theme.colors.navy700};
 
-      &:hover {
-        border-color: ${props.theme.colors.grey400};
-        background-color: ${props.theme.colors.grey200};
-      }
+          &:hover {
+            border-color: ${props.theme.colors.grey400};
+            background-color: ${props.theme.colors.grey200};
+          }
 
-      &:active {
-        background-color: ${props.theme.colors.grey200};
-      }
+          &:active {
+            background-color: ${props.theme.colors.grey200};
+          }
 
-      &:focus {
-        box-shadow: 0 0 0 3px ${props.theme.colors.grey300};
-      }
-
-      ${props.isActive &&
-        css`background-color: ${props.theme.colors.grey300});`};
-    `};
+          &:focus {
+            box-shadow: 0 0 0 3px ${props.theme.colors.grey300};
+          }
+        `};
 `;
 
 const DeleteButton = styled(CoreButton)`
@@ -216,6 +226,7 @@ const ButtonPlaceholderMessage = styled(ButtonMessage)`
 `;
 
 const ButtonSuccessMessage = styled(ButtonMessage)`
+  transition: 0.4s top cubic-bezier(0.175, 0.885, 0.32, 1.275);
   opacity: ${props => (props.isVisible ? 1 : 0)};
   top: ${props => (props.isVisible ? 0 : '100%')};
 `;
@@ -307,7 +318,6 @@ export default class Button extends PureComponent<TProps> {
       children,
       disabled,
       icon,
-      reverse,
       loneIcon,
       theme,
       grouped,
@@ -341,7 +351,13 @@ export default class Button extends PureComponent<TProps> {
     const ButtonComponent = getButtonType(theme);
 
     const iconElement = isString(icon) ? (
-      <Icon size={!!size ? BUTTON_SIZING[size].iconSize : 18}>{icon}</Icon>
+      <Icon
+        marginRight={loneIcon ? 0 : 8}
+        marginLeft={loneIcon ? 0 : -8}
+        size={!!size ? BUTTON_SIZING[size].iconSize : 18}
+      >
+        {icon}
+      </Icon>
     ) : (
       icon
     );
@@ -380,7 +396,6 @@ export default class Button extends PureComponent<TProps> {
         isSpaced={!!spacing}
         isGrouped={!!grouped}
         isMiddle={middle}
-        isReversed={reverse}
         {...otherProps}
       >
         <ButtonPlaceholderMessage>
@@ -389,13 +404,13 @@ export default class Button extends PureComponent<TProps> {
         </ButtonPlaceholderMessage>
         <ButtonMessage
           name="message"
-          isHidden={loading}
+          isHidden={loading || loaded}
           title={mayGetLong ? children : undefined}
         >
           {iconElement}
           {children}
         </ButtonMessage>
-        <ButtonSuccessMessage isVisible={success}>
+        <ButtonSuccessMessage isVisible={loaded}>
           {iconElement}
           {message}
         </ButtonSuccessMessage>
