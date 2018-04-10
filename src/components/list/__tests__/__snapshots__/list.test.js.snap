@@ -2,13 +2,9 @@
 
 exports[`components/list should render as a grid 1`] = `
 ShallowWrapper {
-  "complexSelector": ComplexSelector {
-    "buildPredicate": [Function],
-    "childrenOfNode": [Function],
-    "findWhereUnwrapped": [Function],
-  },
   "length": 1,
-  "node": <ul
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ul
     className="e13caurm0 css-z4vh1z"
     style={Object {}}
     wrap={undefined}
@@ -62,135 +58,56 @@ ShallowWrapper {
       </div>
     </li>
   </ul>,
-  "nodes": Array [
-    <ul
-      className="e13caurm0 css-z4vh1z"
-      style={Object {}}
-      wrap={undefined}
-    >
-      <li
-        className="e13caurm1 css-1snizm0"
-        style={Object {}}
-      >
-        <div
-          className="e4o9m4l0 css-11l6ekn"
-          onClick={undefined}
-          style={Object {}}
-        >
-          List Item One
-        </div>
-      </li>
-      <li
-        className="e13caurm1 css-1snizm0"
-        style={Object {}}
-      >
-        <div
-          className="e4o9m4l0 css-11l6ekn"
-          onClick={undefined}
-          style={Object {}}
-        >
-          List Item Two
-        </div>
-      </li>
-      <li
-        className="e13caurm1 css-1snizm0"
-        style={Object {}}
-      >
-        <div
-          className="e4o9m4l0 css-11l6ekn"
-          onClick={undefined}
-          style={Object {}}
-        >
-          List Item Three
-        </div>
-      </li>
-      <li
-        className="e13caurm1 css-1snizm0"
-        style={Object {}}
-      >
-        <div
-          className="e4o9m4l0 css-11l6ekn"
-          onClick={undefined}
-          style={Object {}}
-        >
-          List Item Four
-        </div>
-      </li>
-    </ul>,
-  ],
-  "options": Object {},
-  "renderer": ReactShallowRenderer {
-    "_instance": null,
-    "getRenderOutput": [Function],
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
     "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
   },
-  "root": [Circular],
-  "unrendered": <ul
-    className="e13caurm0 css-z4vh1z"
-    style={Object {}}
-    wrap={undefined}
-  >
-    <li
-      className="e13caurm1 css-1snizm0"
-      style={Object {}}
-    >
-      <div
-        className="e4o9m4l0 css-11l6ekn"
-        onClick={undefined}
-        style={Object {}}
-      >
-        List Item One
-      </div>
-    </li>
-    <li
-      className="e13caurm1 css-1snizm0"
-      style={Object {}}
-    >
-      <div
-        className="e4o9m4l0 css-11l6ekn"
-        onClick={undefined}
-        style={Object {}}
-      >
-        List Item Two
-      </div>
-    </li>
-    <li
-      className="e13caurm1 css-1snizm0"
-      style={Object {}}
-    >
-      <div
-        className="e4o9m4l0 css-11l6ekn"
-        onClick={undefined}
-        style={Object {}}
-      >
-        List Item Three
-      </div>
-    </li>
-    <li
-      className="e13caurm1 css-1snizm0"
-      style={Object {}}
-    >
-      <div
-        className="e4o9m4l0 css-11l6ekn"
-        onClick={undefined}
-        style={Object {}}
-      >
-        List Item Four
-      </div>
-    </li>
-  </ul>,
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "className": "e13caurm0 css-z4vh1z",
+      "style": Object {},
+      "wrap": undefined,
+    },
+    "ref": undefined,
+    "rendered": null,
+    "type": "ul",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "className": "e13caurm0 css-z4vh1z",
+        "style": Object {},
+        "wrap": undefined,
+      },
+      "ref": undefined,
+      "rendered": null,
+      "type": "ul",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
 }
 `;
 
 exports[`components/list should shallow render as expected 1`] = `
 ShallowWrapper {
-  "complexSelector": ComplexSelector {
-    "buildPredicate": [Function],
-    "childrenOfNode": [Function],
-    "findWhereUnwrapped": [Function],
-  },
   "length": 1,
-  "node": <ul
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ul
     className="e13caurm0 css-z4vh1z"
     style={Object {}}
     wrap={undefined}
@@ -244,122 +161,47 @@ ShallowWrapper {
       </div>
     </li>
   </ul>,
-  "nodes": Array [
-    <ul
-      className="e13caurm0 css-z4vh1z"
-      style={Object {}}
-      wrap={undefined}
-    >
-      <li
-        className="e13caurm1 css-1snizm0"
-        style={Object {}}
-      >
-        <div
-          className="e4o9m4l0 css-11l6ekn"
-          onClick={undefined}
-          style={Object {}}
-        >
-          List Item One
-        </div>
-      </li>
-      <li
-        className="e13caurm1 css-1snizm0"
-        style={Object {}}
-      >
-        <div
-          className="e4o9m4l0 css-11l6ekn"
-          onClick={undefined}
-          style={Object {}}
-        >
-          List Item Two
-        </div>
-      </li>
-      <li
-        className="e13caurm1 css-1snizm0"
-        style={Object {}}
-      >
-        <div
-          className="e4o9m4l0 css-11l6ekn"
-          onClick={undefined}
-          style={Object {}}
-        >
-          List Item Three
-        </div>
-      </li>
-      <li
-        className="e13caurm1 css-1snizm0"
-        style={Object {}}
-      >
-        <div
-          className="e4o9m4l0 css-11l6ekn"
-          onClick={undefined}
-          style={Object {}}
-        >
-          List Item Four
-        </div>
-      </li>
-    </ul>,
-  ],
-  "options": Object {},
-  "renderer": ReactShallowRenderer {
-    "_instance": null,
-    "getRenderOutput": [Function],
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
     "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
   },
-  "root": [Circular],
-  "unrendered": <ul
-    className="e13caurm0 css-z4vh1z"
-    style={Object {}}
-    wrap={undefined}
-  >
-    <li
-      className="e13caurm1 css-1snizm0"
-      style={Object {}}
-    >
-      <div
-        className="e4o9m4l0 css-11l6ekn"
-        onClick={undefined}
-        style={Object {}}
-      >
-        List Item One
-      </div>
-    </li>
-    <li
-      className="e13caurm1 css-1snizm0"
-      style={Object {}}
-    >
-      <div
-        className="e4o9m4l0 css-11l6ekn"
-        onClick={undefined}
-        style={Object {}}
-      >
-        List Item Two
-      </div>
-    </li>
-    <li
-      className="e13caurm1 css-1snizm0"
-      style={Object {}}
-    >
-      <div
-        className="e4o9m4l0 css-11l6ekn"
-        onClick={undefined}
-        style={Object {}}
-      >
-        List Item Three
-      </div>
-    </li>
-    <li
-      className="e13caurm1 css-1snizm0"
-      style={Object {}}
-    >
-      <div
-        className="e4o9m4l0 css-11l6ekn"
-        onClick={undefined}
-        style={Object {}}
-      >
-        List Item Four
-      </div>
-    </li>
-  </ul>,
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "className": "e13caurm0 css-z4vh1z",
+      "style": Object {},
+      "wrap": undefined,
+    },
+    "ref": undefined,
+    "rendered": null,
+    "type": "ul",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "className": "e13caurm0 css-z4vh1z",
+        "style": Object {},
+        "wrap": undefined,
+      },
+      "ref": undefined,
+      "rendered": null,
+      "type": "ul",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
 }
 `;
