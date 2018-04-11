@@ -113,6 +113,7 @@ const PrimaryButton = styled(CoreButton)`
         background-color: ${props.theme.colors.green600};
       }
 
+      &:active,
       &:focus {
         box-shadow: 0 0 0 3px ${props.theme.colors.green300};
       }
@@ -134,6 +135,7 @@ const SecondaryButton = styled(CoreButton)`
         background-color: ${props.theme.colors.blue600};
       }
 
+      &:active,
       &:focus {
         box-shadow: 0 0 0 3px ${props.theme.colors.blue300};
       }
@@ -163,6 +165,7 @@ const TertiaryButton = styled(CoreButton)`
             background-color: ${props.theme.colors.grey200};
           }
 
+          &:active,
           &:focus {
             box-shadow: 0 0 0 3px ${props.theme.colors.grey300};
           }
@@ -185,6 +188,7 @@ const DeleteButton = styled(CoreButton)`
         color: #fff;
       }
 
+      &:active,
       &:focus {
         box-shadow: 0 0 0 3px ${props.theme.colors.pink300};
       }
