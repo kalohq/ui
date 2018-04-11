@@ -20,7 +20,6 @@ describe('ButtonGroup', () => {
     renderer
       .create(
         <ThemeProvider theme={theme}>
-          {/* $FlowFixMe */}
           <ButtonGroup {...defaultProps} {...props}>
             <Button>One</Button>
             <Button>Two</Button>

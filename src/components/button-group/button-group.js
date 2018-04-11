@@ -1,6 +1,7 @@
 /* @flow */
 import * as React from 'react';
 import styled, {css} from 'react-emotion';
+import {isArray} from 'lodash';
 import {Flex} from '../layout';
 
 const StyledButtonGroup = styled(Flex)`
@@ -21,7 +22,7 @@ const StyledButtonGroup = styled(Flex)`
 
 type Props = {
   /** One or more Buttons */
-  children: React.Element<*>,
+  children: Iterable<React.Element<*>>,
   flex?: boolean,
   /** Should this span the full width of the parent? */
   wide?: boolean,
@@ -34,13 +35,16 @@ type Props = {
 export default function ButtonGroup(props: Props) {
   const {children, wide = true, flex, spacing, reverse, ...otherProps} = props;
 
+  const childrenInOrder =
+    reverse && isArray(children) ? [...children].reverse() : children;
+
   return (
-    <StyledButtonGroup reverse={reverse} wide={wide} {...otherProps}>
-      {children ? (
+    <StyledButtonGroup wide={wide} {...otherProps}>
+      {childrenInOrder ? (
         React.Children.map(
-          children,
+          childrenInOrder,
           child =>
-            child
+            child // $FlowFixMe
               ? React.cloneElement(child, {
                   grouped: !spacing,
                   spacing: !!spacing,
