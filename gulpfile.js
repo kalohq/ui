@@ -1,17 +1,5 @@
 const gulp = require('gulp');
-const postcss = require('gulp-postcss');
 const babel = require('gulp-babel');
-
-/**
- * Compile component CSS. We also convert variables here
- * to make the published package more consumable.
- */
-gulp.task('css', () => {
-  return gulp
-    .src('./src/components/**/*.css')
-    .pipe(postcss())
-    .pipe(gulp.dest('lib/components'));
-});
 
 /**
  * Compile component JS from ES6/JSX down to ES5
@@ -57,9 +45,4 @@ gulp.task('copy-design-tokens', () =>
 /**
  * General tasks
  */
-gulp.task('build-production', [
-  'css',
-  'js',
-  'copy-files',
-  'copy-design-tokens',
-]);
+gulp.task('build-production', ['js', 'copy-files', 'copy-design-tokens']);
