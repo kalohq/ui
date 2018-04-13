@@ -253,29 +253,51 @@ const getButtonType = type => {
 };
 
 type TProps = {
+  /** Button contents */
   children?: any,
+  /** A message to display after loading */
   message?: string,
+  /** An ARIA role to pass down */
   role?: string,
+  /** Is the button disabled? */
   disabled?: boolean,
+  /** An icon from our icon set to display */
   icon?: string,
+  /** Is the icon the only child? The button will be displayed as a square if true */
   loneIcon?: boolean,
+  /** Should the button expand to 100% of the parent? */
   wide?: boolean,
+  /** The visual size */
   size?: 'small' | 'medium' | 'large' | 'extra-large',
+  /** The visual theme */
   theme?: 'primary' | 'secondary' | 'tertiary' | 'delete',
+  /** Ignore - Set by ButtonGroup */
   grouped?: boolean,
+  /** Ignore - Set by ButtonGroup */
   spacing?: boolean,
-  flex?: boolean,
-  active?: boolean,
-  loading?: boolean,
-  success?: boolean,
+  /** Ignore - Set by ButtonGroup */
   middle?: boolean,
+  /** Expand the button using flex */
+  flex?: boolean,
+  /** Is the button active? - Useful for when a button is used as a nav pill */
+  active?: boolean,
+  /** Is the button loading? - This will replace the content with a spinner */
+  loading?: boolean,
+  /** Displays the callback message if the loading was successful */
+  success?: boolean,
+  /** A function to call on user interaction */
   onClick?: Function,
+  /** After a successful load, how long should the UI wait before continuing? */
   loadedTimeout?: number,
+  /** Override the component - Use with caution */
   component?: 'string' | React.Node,
+  /** A name to pass down to the DOM */
   name?: string,
+  /** A type to pass down to the DOM */
   type?: string,
-  mayGetLong?: boolean, // deprecate
+  /** Places the button in a visually subdued state */
   subdued?: boolean,
+  /** Children that should not be double rendered - See ButtonDropdown */
   singleRenderChildren?: any,
 };
 
