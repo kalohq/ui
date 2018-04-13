@@ -276,6 +276,7 @@ type TProps = {
   type?: string,
   mayGetLong?: boolean, // deprecate
   subdued?: boolean,
+  singleRenderChildren?: any,
 };
 
 export default class Button extends PureComponent<TProps> {
@@ -343,6 +344,7 @@ export default class Button extends PureComponent<TProps> {
       style,
       mayGetLong,
       subdued,
+      singleRenderChildren,
       loadedTimeout: _IGNORED,
       readonly: __IGNORED,
       editable: ___IGNORED,
@@ -412,6 +414,7 @@ export default class Button extends PureComponent<TProps> {
         >
           {iconElement}
           {children}
+          {singleRenderChildren}
         </ButtonMessage>
         <ButtonSuccessMessage isVisible={loaded && success}>
           {iconElement}

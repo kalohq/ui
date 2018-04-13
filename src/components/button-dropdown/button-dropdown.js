@@ -1,6 +1,7 @@
 /* @flow */
 import * as React from 'react';
 import type {List} from 'immutable';
+import {random} from 'lodash';
 import PureComponent from 'react-pure-render/component';
 import styled from 'react-emotion';
 
@@ -89,11 +90,42 @@ export default class ButtonDropdown extends PureComponent {
       ...otherProps
     } = this.props;
 
+    // We pass in the PaperMenu via this prop to ensure that it
+    // is not rendered twice in the Button (See Button - it
+    // renders childern twice).
+
+    const _singleRenderChildren = selectItems.length ? (
+      <StyledButtonDropdownMenu>
+        <PaperMenu open={this.state.open} origin="top" width="100%">
+          {selectItems.map(item => (
+            <PaperMenuItem
+              disabled={item.disabled}
+              key={random(20)}
+              component={item.component}
+              minWidth={item.minWidth}
+              {...item.componentProps}
+              onClick={
+                !item.disabled ? (
+                  () => {
+                    if (item.onClick) item.onClick();
+                    this.onToggle();
+                  }
+                ) : null
+              }
+            >
+              {item.title}
+            </PaperMenuItem>
+          ))}
+        </PaperMenu>
+      </StyledButtonDropdownMenu>
+    ) : null;
+
     return (
       <Button
         active={this.state.open}
         onClick={!disabled ? this.onToggle : null}
         disabled={disabled}
+        singleRenderChildren={_singleRenderChildren}
         {...otherProps}
       >
         {checkboxProps ? (
@@ -106,31 +138,6 @@ export default class ButtonDropdown extends PureComponent {
           <Icon marginLeft={8} marginRight={-8} size={20}>
             keyboard_arrow_down
           </Icon>
-        ) : null}
-        {selectItems.length ? (
-          <StyledButtonDropdownMenu>
-            <PaperMenu open={this.state.open} origin="top" width="100%">
-              {selectItems.map(item => (
-                <PaperMenuItem
-                  disabled={item.disabled}
-                  key={item.title}
-                  component={item.component}
-                  minWidth={item.minWidth}
-                  {...item.componentProps}
-                  onClick={
-                    !item.disabled ? (
-                      () => {
-                        if (item.onClick) item.onClick();
-                        this.onToggle();
-                      }
-                    ) : null
-                  }
-                >
-                  {item.title}
-                </PaperMenuItem>
-              ))}
-            </PaperMenu>
-          </StyledButtonDropdownMenu>
         ) : null}
       </Button>
     );
