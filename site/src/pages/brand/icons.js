@@ -12,24 +12,27 @@ import {ICONS} from '../../../../src/components/icon/constants';
 const IconGridContainer = styled('div')`
   display: grid;
   grid-gap: 1px;
-  grid-template-columns: repeat(3, 33.33%);
+  grid-template-columns: repeat(4, 25%);
+  padding: 0 3px 0 0;
   background-color: ${props => props.theme.colors.grey300};
+  border: 1px solid ${props => props.theme.colors.grey300};
 `;
 
 const IconBlock = styled('div')`
   display: flex;
-  min-width: 210px;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   padding: 8px;
-  background-color: ${props => props.theme.colors.grey200};
+  min-height: 120px;
+  background-color: ${props => props.theme.colors.white};
 `;
 
 const IconTitle = styled.span`
   font-size: 14px;
   margin-top: 8px;
   font-weight: 400;
-  color: ${props => props.theme.colors.navy500};
+  color: ${props => props.theme.colors.navy600};
 `;
 
 const StyledInput = styled.input`
@@ -76,7 +79,7 @@ class IconSetWithSearch extends React.Component {
         <IconGridContainer>
           {this.state.icons.map(icon => (
             <IconBlock key={icon}>
-              <Icon color="pink500" size={36}>
+              <Icon color="navy700" size={26}>
                 {icon}
               </Icon>
               <IconTitle>{icon}</IconTitle>
