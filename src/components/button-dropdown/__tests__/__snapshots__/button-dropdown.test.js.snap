@@ -51,13 +51,13 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
   background-color: rgb(249,250,252);
 }
 
-.emotion-17:active {
-  background-color: rgb(249,250,252);
-}
-
-.emotion-17:active,
 .emotion-17:focus {
   box-shadow: 0 0 0 3px rgb(238,244,250);
+}
+
+.emotion-17:active {
+  background-color: rgb(238,244,250);
+  box-shadow: none;
 }
 
 .emotion-3 {
@@ -346,13 +346,13 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   background-color: rgb(249,250,252);
 }
 
-.emotion-25:active {
-  background-color: rgb(249,250,252);
-}
-
-.emotion-25:active,
 .emotion-25:focus {
   box-shadow: 0 0 0 3px rgb(238,244,250);
+}
+
+.emotion-25:active {
+  background-color: rgb(238,244,250);
+  box-shadow: none;
 }
 
 .emotion-7 {

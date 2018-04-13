@@ -51,13 +51,13 @@ exports[`Button should render shallow component ok 1`] = `
   background-color: rgb(249,250,252);
 }
 
-.emotion-11:active {
-  background-color: rgb(249,250,252);
-}
-
-.emotion-11:active,
 .emotion-11:focus {
   box-shadow: 0 0 0 3px rgb(238,244,250);
+}
+
+.emotion-11:active {
+  background-color: rgb(238,244,250);
+  box-shadow: none;
 }
 
 .emotion-1 {
