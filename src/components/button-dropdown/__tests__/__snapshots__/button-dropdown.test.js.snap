@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ButtonDropdown should render shallow component ok 1`] = `
-.emotion-19 {
+.emotion-17 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -42,25 +42,25 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
   color: rgb(55,69,97);
 }
 
-.emotion-19:focus {
+.emotion-17:focus {
   outline: 0;
 }
 
-.emotion-19:hover {
+.emotion-17:hover {
   border-color: rgb(208,216,223);
   background-color: rgb(249,250,252);
 }
 
-.emotion-19:active {
+.emotion-17:active {
   background-color: rgb(249,250,252);
 }
 
-.emotion-19:active,
-.emotion-19:focus {
+.emotion-17:active,
+.emotion-17:focus {
   box-shadow: 0 0 0 3px rgb(238,244,250);
 }
 
-.emotion-5 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -103,7 +103,30 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
   fill: currentColor;
 }
 
-.emotion-2 {
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  top: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-6 {
   position: absolute;
   top: calc(100% + 2px);
   min-width: calc(100% + 4px);
@@ -131,36 +154,13 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-.emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  left: 0;
-  opacity: 1;
-  top: 0;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-transition: 0.4s top cubic-bezier(0.175,0.885,0.32,1.275);
   transition: 0.4s top cubic-bezier(0.175,0.885,0.32,1.275);
   opacity: 0;
   top: 100%;
 }
 
-.emotion-16 {
+.emotion-14 {
   left: 50%;
   pointer-events: none;
   position: absolute;
@@ -174,7 +174,7 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
   top: -150%;
 }
 
-.emotion-14 {
+.emotion-12 {
   position: relative;
   -webkit-transform-origin: 48% 50%;
   -ms-transform-origin: 48% 50%;
@@ -185,7 +185,7 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
   height: 20px;
 }
 
-.emotion-14 svg {
+.emotion-12 svg {
   fill: rgb(198,199,216);
   position: absolute;
   top: 0;
@@ -193,7 +193,7 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
 }
 
 <button
-  className="emotion-18 emotion-19"
+  className="emotion-16 emotion-17"
   disabled={false}
   name={undefined}
   onClick={[Function]}
@@ -203,7 +203,7 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
   type={undefined}
 >
   <div
-    className="emotion-4 emotion-5"
+    className="emotion-2 emotion-3"
     style={Object {}}
   >
     <i
@@ -227,20 +227,9 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
         />
       </svg>
     </i>
-    <div
-      className="emotion-2 emotion-3"
-    >
-      <div
-        style={
-          Object {
-            "display": "none",
-          }
-        }
-      />
-    </div>
   </div>
   <div
-    className="emotion-10 emotion-11"
+    className="emotion-8 emotion-9"
     name="message"
     style={Object {}}
     title={undefined}
@@ -267,7 +256,7 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
       </svg>
     </i>
     <div
-      className="emotion-2 emotion-3"
+      className="emotion-6 emotion-7"
     >
       <div
         style={
@@ -279,14 +268,14 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
     </div>
   </div>
   <div
-    className="emotion-12 emotion-13"
+    className="emotion-10 emotion-11"
     style={Object {}}
   />
   <div
-    className="emotion-16 emotion-17"
+    className="emotion-14 emotion-15"
   >
     <div
-      className="emotion-14 emotion-15"
+      className="emotion-12 emotion-13"
       size="small"
     >
       <svg
@@ -306,7 +295,7 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
 `;
 
 exports[`ButtonDropdown should render with a checkbox 1`] = `
-.emotion-27 {
+.emotion-25 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -347,25 +336,25 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   color: rgb(55,69,97);
 }
 
-.emotion-27:focus {
+.emotion-25:focus {
   outline: 0;
 }
 
-.emotion-27:hover {
+.emotion-25:hover {
   border-color: rgb(208,216,223);
   background-color: rgb(249,250,252);
 }
 
-.emotion-27:active {
+.emotion-25:active {
   background-color: rgb(249,250,252);
 }
 
-.emotion-27:active,
-.emotion-27:focus {
+.emotion-25:active,
+.emotion-25:focus {
   box-shadow: 0 0 0 3px rgb(238,244,250);
 }
 
-.emotion-9 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -408,7 +397,30 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   fill: currentColor;
 }
 
-.emotion-6 {
+.emotion-17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  top: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-14 {
   position: absolute;
   top: calc(100% + 2px);
   min-width: calc(100% + 4px);
@@ -436,36 +448,13 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-.emotion-21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  left: 0;
-  opacity: 1;
-  top: 0;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-transition: 0.4s top cubic-bezier(0.175,0.885,0.32,1.275);
   transition: 0.4s top cubic-bezier(0.175,0.885,0.32,1.275);
   opacity: 0;
   top: 100%;
 }
 
-.emotion-24 {
+.emotion-22 {
   left: 50%;
   pointer-events: none;
   position: absolute;
@@ -479,7 +468,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   top: -150%;
 }
 
-.emotion-22 {
+.emotion-20 {
   position: relative;
   -webkit-transform-origin: 48% 50%;
   -ms-transform-origin: 48% 50%;
@@ -490,7 +479,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   height: 20px;
 }
 
-.emotion-22 svg {
+.emotion-20 svg {
   fill: rgb(198,199,216);
   position: absolute;
   top: 0;
@@ -551,7 +540,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
 }
 
 <button
-  className="emotion-26 emotion-27"
+  className="emotion-24 emotion-25"
   disabled={false}
   name={undefined}
   onClick={[Function]}
@@ -561,7 +550,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   type={undefined}
 >
   <div
-    className="emotion-8 emotion-9"
+    className="emotion-6 emotion-7"
     style={Object {}}
   >
     <div
@@ -602,20 +591,9 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
         />
       </svg>
     </i>
-    <div
-      className="emotion-6 emotion-7"
-    >
-      <div
-        style={
-          Object {
-            "display": "none",
-          }
-        }
-      />
-    </div>
   </div>
   <div
-    className="emotion-18 emotion-19"
+    className="emotion-16 emotion-17"
     name="message"
     style={Object {}}
     title={undefined}
@@ -659,7 +637,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
       </svg>
     </i>
     <div
-      className="emotion-6 emotion-7"
+      className="emotion-14 emotion-15"
     >
       <div
         style={
@@ -671,14 +649,14 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
     </div>
   </div>
   <div
-    className="emotion-20 emotion-21"
+    className="emotion-18 emotion-19"
     style={Object {}}
   />
   <div
-    className="emotion-24 emotion-25"
+    className="emotion-22 emotion-23"
   >
     <div
-      className="emotion-22 emotion-23"
+      className="emotion-20 emotion-21"
       size="small"
     >
       <svg
