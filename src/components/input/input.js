@@ -173,11 +173,13 @@ const StyledInput = styled.input`
     css`
       border: 1px solid ${props.theme.colors.grey500};
       padding: 7px 10px;
-    `} ${props =>
-      props.valid &&
-      css`
-        border-color: ${props.theme.colors.green500}!important;
-      `};
+    `};
+
+  ${props =>
+    props.valid &&
+    css`
+      border-color: ${props.theme.colors.green500}!important;
+    `};
 
   ${props =>
     props.invalid &&
