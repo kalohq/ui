@@ -22,7 +22,7 @@ const StyledIcon = styled(Inline)`
   user-select: none;
   line-height: 1em;
   vertical-align: middle;
-  cursor: ${props => (props.interactive ? 'cursor' : 'inherit')};
+  cursor: ${props => (props.interactive ? 'pointer' : 'inherit')};
   font-size: ${props => `${props.size}px`};
   height: ${props => `${props.size}px`};
   fill: ${props => props.theme.colors[props.color]};

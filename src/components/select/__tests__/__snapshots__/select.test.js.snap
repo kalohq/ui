@@ -30,7 +30,7 @@ exports[`Select should render a disabled select 1`] = `
       open={false}
     >
       <i
-        className="e2anemp0 css-3bw6sb"
+        className="e2anemp0 css-1ne211c"
         color="grey500"
         onClick={undefined}
         size={24}
@@ -136,7 +136,7 @@ exports[`Select should render a readonly select 1`] = `
       open={false}
     >
       <i
-        className="e2anemp0 css-3bw6sb"
+        className="e2anemp0 css-1ne211c"
         color="grey500"
         onClick={undefined}
         size={24}
@@ -242,7 +242,7 @@ exports[`Select should render shallow component ok 1`] = `
       open={false}
     >
       <i
-        className="e2anemp0 css-nofld7"
+        className="e2anemp0 css-1hk3d0l"
         color="navy700"
         onClick={undefined}
         size={24}

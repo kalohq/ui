@@ -19,7 +19,7 @@ import {
   SkeletonPageHeaderHeading,
   SkeletonPage,
   SkeletonPaper,
-} from '../skeleton';
+} from '../';
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 

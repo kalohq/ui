@@ -9,11 +9,6 @@ import {ThemeProvider} from 'emotion-theming';
 import theme from 'components/theme';
 import ButtonDropdown from 'components/button-dropdown';
 
-jest.mock('react-dom', () => ({
-  findDOMNode: () => {},
-  unstable_renderSubtreeIntoContainer: () => {},
-}));
-
 expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe('ButtonDropdown', () => {

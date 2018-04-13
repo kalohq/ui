@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render shallow component ok 1`] = `
+.emotion-11 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  border: none;
+  -webkit-flex: initial;
+  -ms-flex: initial;
+  flex: initial;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 14px;
+  height: 36px;
+  padding: 0 18px;
+  vertical-align: middle;
+  width: unset;
+  background-color: #fff;
+  border: 1px solid rgb(208,216,223);
+  color: rgb(55,69,97);
+}
+
+.emotion-11:focus {
+  outline: 0;
+}
+
+.emotion-11:hover {
+  border-color: rgb(208,216,223);
+  background-color: rgb(249,250,252);
+}
+
+.emotion-11:active {
+  background-color: rgb(249,250,252);
+}
+
+.emotion-11:active,
+.emotion-11:focus {
+  box-shadow: 0 0 0 3px rgb(238,244,250);
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  top: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  position: relative;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  top: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  top: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 0.4s top cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: 0.4s top cubic-bezier(0.175,0.885,0.32,1.275);
+  opacity: 0;
+  top: 100%;
+}
+
+.emotion-8 {
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: -150%;
+  -webkit-transform: translate(-50%,-50%) rotate(0);
+  -ms-transform: translate(-50%,-50%) rotate(0);
+  transform: translate(-50%,-50%) rotate(0);
+  -webkit-transition: 0.4s top cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: 0.4s top cubic-bezier(0.175,0.885,0.32,1.275);
+  opacity: 0;
+  top: -150%;
+}
+
+.emotion-6 {
+  position: relative;
+  -webkit-transform-origin: 48% 50%;
+  -ms-transform-origin: 48% 50%;
+  transform-origin: 48% 50%;
+  -webkit-animation: animation-bg5xxq 1600ms linear infinite;
+  animation: animation-bg5xxq 1600ms linear infinite;
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-6 svg {
+  fill: rgb(198,199,216);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+<button
+  className="emotion-10 emotion-11"
+  data-test="ui-button"
+  disabled={false}
+  name={undefined}
+  onClick={[Function]}
+  role="button"
+  size="medium"
+  style={Object {}}
+  type={undefined}
+>
+  <div
+    className="emotion-0 emotion-1"
+    style={Object {}}
+  >
+    A tertiary button
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+    name="message"
+    style={Object {}}
+    title={undefined}
+  >
+    A tertiary button
+  </div>
+  <div
+    className="emotion-4 emotion-5"
+    style={Object {}}
+  />
+  <div
+    className="emotion-8 emotion-9"
+  >
+    <div
+      className="emotion-6 emotion-7"
+      size="small"
+    >
+      <svg
+        height="20px"
+        viewBox="0 0 20 20"
+        width="20px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7.33335912,2.33334154 C7.33335912,3.62501275 8.37502945,4.66668308 9.66670066,4.66668308 C10.9583719,4.66668308 12.0000422,3.62501275 12.0000422,2.33334154 C12.0000422,1.04167033 10.9583719,0 9.66670066,0 C8.37502945,0 7.33335912,1.04167033 7.33335912,2.33334154 L7.33335912,2.33334154 Z M14.8542189,6.81252396 C16.1458901,6.81252396 17.1875604,5.77085363 17.1875604,4.47918242 C17.1875604,3.18751121 16.1458901,2.14584088 14.8542189,2.14584088 C13.5625477,2.14584088 12.5208774,3.18751121 12.5208774,4.47918242 C12.5208774,5.77085363 13.5625477,6.81252396 14.8542189,6.81252396 L14.8542189,6.81252396 Z M4.47918242,6.81252396 C5.77085363,6.81252396 6.81252396,5.77085363 6.81252396,4.47918242 C6.81252396,3.18751121 5.77085363,2.14584088 4.47918242,2.14584088 C3.18751121,2.14584088 2.14584088,3.18751121 2.14584088,4.47918242 C2.14584088,5.77085363 3.18751121,6.81252396 4.47918242,6.81252396 L4.47918242,6.81252396 Z M17.0000598,12.0000422 C18.291731,12.0000422 19.3334013,10.9583719 19.3334013,9.66670066 C19.3334013,8.37502945 18.291731,7.33335912 17.0000598,7.33335912 C15.7083886,7.33335912 14.6667182,8.37502945 14.6667182,9.66670066 C14.6667182,10.9583719 15.7083886,12.0000422 17.0000598,12.0000422 L17.0000598,12.0000422 Z M2.33334154,12.0000422 C3.62501275,12.0000422 4.66668308,10.9583719 4.66668308,9.66670066 C4.66668308,8.37502945 3.62501275,7.33335912 2.33334154,7.33335912 C1.04167033,7.33335912 0,8.37502945 0,9.66670066 C0,10.9583719 1.04167033,12.0000422 2.33334154,12.0000422 L2.33334154,12.0000422 Z M4.47918242,17.1875604 C5.77085363,17.1875604 6.81252396,16.1458901 6.81252396,14.8542189 C6.81252396,13.5625477 5.77085363,12.5208774 4.47918242,12.5208774 C3.18751121,12.5208774 2.14584088,13.5625477 2.14584088,14.8542189 C2.14584088,16.1458901 3.18751121,17.1875604 4.47918242,17.1875604 L4.47918242,17.1875604 Z M14.8542189,17.1875604 C16.1458901,17.1875604 17.1875604,16.1458901 17.1875604,14.8542189 C17.1875604,13.5625477 16.1458901,12.5208774 14.8542189,12.5208774 C13.5625477,12.5208774 12.5208774,13.5625477 12.5208774,14.8542189 C12.5208774,16.1458901 13.5625477,17.1875604 14.8542189,17.1875604 L14.8542189,17.1875604 Z M9.66670066,19.3334013 C10.9583719,19.3334013 12.0000422,18.291731 12.0000422,17.0000598 C12.0000422,15.7083886 10.9583719,14.6667182 9.66670066,14.6667182 C8.37502945,14.6667182 7.33335912,15.7083886 7.33335912,17.0000598 C7.33335912,18.291731 8.37502945,19.3334013 9.66670066,19.3334013 L9.66670066,19.3334013 Z"
+          stroke="none"
+        />
+      </svg>
+    </div>
+  </div>
+</button>
+`;

@@ -9,6 +9,42 @@ const myClickFunction = () => {
   /* eslint-enable no-alert */
 };
 
+class DemoButton extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loading: false,
+      success: false,
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState({
+      loading: true,
+    });
+
+    setTimeout(
+      () =>
+        this.setState({
+          loading: false,
+          success: true,
+        }),
+      2000
+    );
+  }
+
+  render() {
+    return React.cloneElement(this.props.children, {
+      loading: this.state.loading,
+      success: this.state.success,
+      onClick: this.handleClick,
+    });
+  }
+}
+
 export const examples = [
   {
     title: 'Tertiary Button',
@@ -21,6 +57,11 @@ export const examples = [
     description:
       'The primary action of a view. It should be used no more than once per view.',
     render: () => <Button theme="primary">Create Project</Button>,
+  },
+  {
+    title: 'Secondary Button',
+    description: 'Used for supporting actions.',
+    render: () => <Button theme="secondary">Save Changes</Button>,
   },
   {
     title: 'Delete Button',
@@ -53,16 +94,28 @@ export const examples = [
     ),
   },
   {
-    title: 'Secondary Button',
-    description: 'Used for supporting actions.',
-    render: () => <Button theme="secondary">Save Changes</Button>,
+    title: 'Loading button',
+    description: 'A button in a loading state',
+    render: () => <Button loading={true}>Loading Button</Button>,
+  },
+  {
+    title: 'Loading button with success',
+    description:
+      'Buttons can have callback states that display a message on success',
+    render: () => (
+      <DemoButton>
+        <Button theme="primary" message="Yey it worked!" loadedTimeout={2000}>
+          Click me to see the demo
+        </Button>
+      </DemoButton>
+    ),
   },
   {
     title: 'Button with icon',
     description:
       'To provide more context to an action, an icon (see the Icon component) can be floated next the button copy.',
     render: () => (
-      <Button theme="tertiary" icon="file_download">
+      <Button theme="tertiary" icon="mode_edit">
         Generate Invoice
       </Button>
     ),

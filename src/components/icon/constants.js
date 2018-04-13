@@ -20,6 +20,12 @@ export const ICONS = new Enum({
   ACCOUNT_BALANCE_WALLET: {
     value: 'account_balance_wallet',
   },
+  ACCOUNT_BOX: {
+    value: 'account_box',
+  },
+  ACCOUNT_CIRCLE: {
+    value: 'account_circle',
+  },
   ADD: {
     value: 'add',
   },
