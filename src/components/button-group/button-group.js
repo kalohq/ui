@@ -39,7 +39,7 @@ export default function ButtonGroup(props: Props) {
     reverse && isArray(children) ? [...children].reverse() : children;
 
   return (
-    <StyledButtonGroup wide={wide} {...otherProps}>
+    <StyledButtonGroup wide={wide} data-test="ui-button-group" {...otherProps}>
       {childrenInOrder ? (
         React.Children.map(
           childrenInOrder,

@@ -401,6 +401,7 @@ export default class Button extends PureComponent<TProps> {
         isSpaced={!!spacing}
         isGrouped={!!grouped}
         isMiddle={middle}
+        data-test="ui-button"
         {...otherProps}
       >
         <ButtonPlaceholderMessage>
