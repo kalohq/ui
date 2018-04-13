@@ -182,10 +182,12 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
 
 <div
   className="emotion-24 emotion-25"
+  data-test="ui-button-group"
   style={Object {}}
 >
   <button
     className="emotion-10 emotion-11"
+    data-test="ui-button"
     disabled={false}
     name={undefined}
     onClick={[Function]}
@@ -235,6 +237,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
   </button>
   <button
     className="emotion-10 emotion-11"
+    data-test="ui-button"
     disabled={false}
     name={undefined}
     onClick={[Function]}

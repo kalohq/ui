@@ -170,6 +170,7 @@ exports[`Button should render shallow component ok 1`] = `
 
 <button
   className="emotion-10 emotion-11"
+  data-test="ui-button"
   disabled={false}
   name={undefined}
   onClick={[Function]}
