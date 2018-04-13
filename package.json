@@ -14,7 +14,7 @@
     "build": "rimraf lib && npm run compile",
     "compile": "npm run generate:tokens && npm run generate:icons && gulp build-production",
     "test": "jest",
-    "release": "np",
+    "release": "np --no-yarn",
     "typecheck": "flow",
     "lint": "eslint src",
     "precommit": "lint-staged",
