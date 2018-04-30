@@ -48,7 +48,6 @@ const StyledInputAddon = styled(Flex)`
           border-radius: ${props.theme.layout.borderRadiusInput} 0 0
             ${props.theme.layout.borderRadiusInput};
         `};
-
       ${props.addonType === 'suffix' &&
         css`
           border-left: 0;
@@ -135,7 +134,6 @@ const StyledInput = styled.input`
 
       &:not(:read-only):not(:disabled):focus {
         border: ${props.theme.input.inputActiveBorder};
-        box-shadow: 0 0 0 3px rgb(238, 244, 250);
       }
 
       ${props.withAddonPrefix &&
@@ -173,13 +171,11 @@ const StyledInput = styled.input`
     css`
       border: 1px solid ${props.theme.colors.grey500};
       padding: 7px 10px;
-    `};
-
-  ${props =>
-    props.valid &&
-    css`
-      border-color: ${props.theme.colors.green500}!important;
-    `};
+    `} ${props =>
+      props.valid &&
+      css`
+        border-color: ${props.theme.colors.green500}!important;
+      `};
 
   ${props =>
     props.invalid &&
