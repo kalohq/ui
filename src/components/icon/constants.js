@@ -242,6 +242,9 @@ export const ICONS = new Enum({
   PERSON: {
     value: 'person',
   },
+  PERSON_ADD: {
+    value: 'person_add',
+  },
   PERSON_OUTLINE: {
     value: 'person_outline',
   },
