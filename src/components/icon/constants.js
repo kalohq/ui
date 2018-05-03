@@ -59,6 +59,9 @@ export const ICONS = new Enum({
   AUTORENEW: {
     value: 'autorenew',
   },
+  BOOK: {
+    value: 'book',
+  },
   BORDER_COLOR: {
     value: 'border_color',
   },
@@ -274,6 +277,9 @@ export const ICONS = new Enum({
   },
   SEARCH: {
     value: 'search',
+  },
+  SECURITY: {
+    value: 'security',
   },
   SEND: {
     value: 'send',
