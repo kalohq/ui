@@ -51,6 +51,7 @@ const CoreButton = styled(Box)`
     props.loneIcon
       ? `${BUTTON_SIZING[props.size].height}px`
       : props.wide ? '100%' : 'unset'};
+  transition: background 0.3s ease-in, color 0.2s ease-in;
 
   &:focus {
     outline: 0;
