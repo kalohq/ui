@@ -2,7 +2,7 @@
 
 exports[`ToggleButton should render shallow component ok 1`] = `
 <div
-  className="e1q9f2xp0 css-f9caso"
+  className="e1q9f2xp0 css-gfpqnh"
   data-test="ui-toggle-button"
   onClick={[Function]}
   style={Object {}}
