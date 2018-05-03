@@ -1,7 +1,6 @@
 /* @flow */
-import * as React from 'react';
+import React, {PureComponent} from 'react';
 import styled, {css} from 'react-emotion';
-import PureComponent from 'react-pure-render/component';
 
 import {Block} from '../layout';
 import Text from '../text';

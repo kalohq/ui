@@ -1,7 +1,6 @@
 /* @flow */
-import * as React from 'react';
+import React, {PureComponent} from 'react';
 import {focusOnMount as _focusOnMount} from '../../utils/react';
-import PureComponent from 'react-pure-render/component';
 import {isBoolean, isString} from 'lodash';
 import styled, {css} from 'react-emotion';
 

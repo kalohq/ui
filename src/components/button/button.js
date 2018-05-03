@@ -1,7 +1,6 @@
 /* @flow */
-import * as React from 'react';
+import React, {PureComponent} from 'react';
 import {isString} from 'lodash';
-import PureComponent from 'react-pure-render/component';
 import styled, {css} from 'react-emotion';
 
 import {Box, Flex} from '../layout';

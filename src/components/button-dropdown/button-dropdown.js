@@ -1,8 +1,7 @@
 /* @flow */
-import * as React from 'react';
+import React, {PureComponent} from 'react';
 import type {List} from 'immutable';
 import {random} from 'lodash';
-import PureComponent from 'react-pure-render/component';
 import styled from 'react-emotion';
 
 import Icon from '../icon';

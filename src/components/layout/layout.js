@@ -1,7 +1,6 @@
 /* @flow */
-import React from 'react';
+import React, {PureComponent} from 'react';
 import {parseStyleProps, cleanProps} from '../../utils/style';
-import PureComponent from 'react-pure-render/component';
 import styled, {cx} from 'react-emotion';
 
 const makePrimitive = (name, DefaultComponent, defaultStyle) => {

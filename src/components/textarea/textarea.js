@@ -1,10 +1,9 @@
 /* @flow */
-import React from 'react';
+import React, {PureComponent} from 'react';
 import ReactDOM from 'react-dom';
 import {omit} from 'lodash';
 import styled, {css} from 'react-emotion';
 
-import PureComponent from 'react-pure-render/component';
 import {removeNode} from '../../utils/dom';
 import {parseStyleProps} from '../../utils/style';
 

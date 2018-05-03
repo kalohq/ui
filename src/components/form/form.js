@@ -1,7 +1,6 @@
 /* @flow */
-import * as React from 'react';
+import React, {PureComponent} from 'react';
 import {HotKeys} from 'react-hotkeys';
-import PureComponent from 'react-pure-render/component';
 
 /**
  * A generic (and mostly semantic) form component.
