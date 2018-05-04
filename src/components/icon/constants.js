@@ -29,6 +29,9 @@ export const ICONS = new Enum({
   ADD: {
     value: 'add',
   },
+  ADD_A_PHOTO: {
+    value: 'add_a_photo',
+  },
   ARCHIVE: {
     value: 'archive',
   },
