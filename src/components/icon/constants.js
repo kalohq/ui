@@ -278,6 +278,9 @@ export const ICONS = new Enum({
   REMOVE_CIRCLE: {
     value: 'remove_circle',
   },
+  REMOVE_RED_EYE: {
+    value: 'remove_red_eye',
+  },
   SEARCH: {
     value: 'search',
   },
