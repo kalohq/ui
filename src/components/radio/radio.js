@@ -1,6 +1,6 @@
 /* @flow */
-import React from 'react';
-import {isNull} from 'lodash';
+import * as React from 'react';
+import {isNull, isString} from 'lodash';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import styled, {css} from 'react-emotion';
 
@@ -70,7 +70,7 @@ type RadioProps = {
   /** Disables user interaction */
   disabled?: boolean,
   /** A label to display to the right of the radio button */
-  label?: string,
+  label?: string | React.Node,
   /** A function to call when a user clicks */
   onClick?: Function,
   /** A name to pass down to the DOM - useful for testing */
@@ -116,10 +116,12 @@ export function Radio(props: RadioProps) {
           ) : null}
         </ReactCSSTransitionGroup>
       </StyledRadio>
-      {label ? (
+      {label && isString(label) ? (
         <Text marginLeft={10} size="small" color="navy700" component="label">
           {label}
         </Text>
+      ) : label ? (
+        label
       ) : null}
     </StyledRadioContainer>
   );

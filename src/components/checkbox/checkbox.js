@@ -1,6 +1,7 @@
 /* @flow */
-import React from 'react';
+import * as React from 'react';
 import styled, {css} from 'react-emotion';
+import {isString} from 'lodash';
 
 import Text from '../text';
 import {Box} from '../layout';
@@ -82,7 +83,7 @@ type CheckboxProps = {
   indeterminate?: ?boolean,
   readonly?: boolean,
   disabled?: boolean,
-  label?: string,
+  label?: string | React.Node,
   onClick?: Function,
   name?: string,
 };
@@ -118,7 +119,7 @@ export default function Checkbox(props: CheckboxProps) {
         readonly={readonly}
         {...otherProps}
       />
-      {label ? (
+      {label && isString(label) ? (
         <Text
           marginLeft={10}
           size={size === 'small' ? TEXT_SIZE.EXTRA_SMALL : TEXT_SIZE.SMALL}
@@ -127,6 +128,8 @@ export default function Checkbox(props: CheckboxProps) {
         >
           {label}
         </Text>
+      ) : label ? (
+        label
       ) : null}
     </StyledCheckboxContainer>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Checkbox from '../checkbox';
+import Text from '../../text';
 
 const myClickFunction = () => {
   //eslint-disable-next-line
@@ -63,6 +64,20 @@ export const examples = [
     description: 'Checkboxes can be indeterminate checked',
     render: () => (
       <Checkbox label="Freelancer invoices" size="large" indeterminate={true} />
+    ),
+  },
+  {
+    title: 'With a custom label',
+    description: 'Checkboxes can also have custom labels',
+    render: () => (
+      <Checkbox
+        label={
+          <Text marginLeft={8} size="extra-large" color="pink500">
+            A custom label
+          </Text>
+        }
+        size="medium"
+      />
     ),
   },
 ];
