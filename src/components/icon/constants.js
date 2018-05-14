@@ -122,6 +122,9 @@ export const ICONS = new Enum({
   DONE_ALL: {
     value: 'done_all',
   },
+  DRIBBBLE: {
+    value: 'dribbble',
+  },
   EDIT: {
     value: 'edit',
   },
