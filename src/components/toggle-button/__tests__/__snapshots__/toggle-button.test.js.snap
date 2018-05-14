@@ -8,11 +8,11 @@ exports[`ToggleButton should render shallow component ok 1`] = `
   style={Object {}}
 >
   <div
-    className="css-pgeyey e1mw9c3b0"
+    className="css-16rnmi7 e1mw9c3b0"
     selected={false}
   >
     <div
-      className="css-kb857k e1mw9c3b1"
+      className="css-1uesguo e1mw9c3b1"
       selected={false}
     />
   </div>
