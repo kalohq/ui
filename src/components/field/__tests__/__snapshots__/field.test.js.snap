@@ -2,20 +2,20 @@
 
 exports[`Field should render shallow component ok 1`] = `
 <div
-  className="e1q9f2xp0 css-1vbsqqa"
+  className="e1q9f2xp0 css-r1eve9"
   onClick={undefined}
   style={Object {}}
 >
   <div
-    className="e1q9f2xp0 css-r48vgy"
+    className="e1q9f2xp0 css-1ck8io7"
     style={Object {}}
   >
     <div
-      className="e1q9f2xp0 css-1o95wo4"
+      className="e1q9f2xp0 css-148rs6r"
       style={Object {}}
     >
       <label
-        className="em7k1990 css-fyza2f"
+        className="em7k1990 css-ed5dec"
         color="navy600"
         htmlFor={undefined}
         onClick={undefined}
@@ -27,11 +27,11 @@ exports[`Field should render shallow component ok 1`] = `
       </label>
     </div>
     <div
-      className="e6fqpax1 css-1o5tdq2"
+      className="e6fqpax1 css-125ej1c"
       style={Object {}}
     >
       <input
-        className="css-1yu0r67 e6fqpax2"
+        className="css-1g2xbp5 e6fqpax2"
         defaultValue={undefined}
         disabled={false}
         name={undefined}
@@ -51,11 +51,11 @@ exports[`Field should render shallow component ok 1`] = `
     </div>
   </div>
   <span
-    className="e1q9f2xp3 css-am2uhg"
+    className="e1q9f2xp3 css-11vmvox"
     style={Object {}}
   >
     <span
-      className="em7k1990 css-1lyp9a7"
+      className="em7k1990 css-1s1skwd"
       color="navy600"
       onClick={undefined}
       size="extra-small"
