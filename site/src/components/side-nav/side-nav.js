@@ -4,6 +4,7 @@ import styled from 'react-emotion';
 import {upperFirst} from 'lodash';
 
 const MENU_WIDTH = '280px';
+export const NAV_IN_FOOTER_BREAKPOINT = '1100px';
 
 const AsideContainer = styled.aside`
   width: auto;
@@ -18,14 +19,16 @@ const AsideContainer = styled.aside`
 `;
 
 const FixedContainer = styled.div`
-  position: fixed;
-  left: 0;
-  width: ${MENU_WIDTH};
-  height: 100%;
-  overflow-y: auto;
-  margin-top: 56px;
-  padding-bottom: 70px;
-  top: 0;
+  @media (min-width: ${NAV_IN_FOOTER_BREAKPOINT}) {
+    position: fixed;
+    left: 0;
+    width: ${MENU_WIDTH};
+    height: 100%;
+    overflow-y: auto;
+    margin-top: 56px;
+    padding-bottom: 70px;
+    top: 0;
+  }
 `;
 
 const Title = styled.h1`

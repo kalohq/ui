@@ -4,7 +4,7 @@ import styled, {injectGlobal} from 'react-emotion';
 import {groupBy, upperFirst, camelCase} from 'lodash';
 
 import Header from '../components/navigation';
-import SideNav from '../components/side-nav';
+import SideNav, {NAV_IN_FOOTER_BREAKPOINT} from '../components/side-nav';
 
 import theme from '../../../src/components/theme';
 import IconSymbols from '../../../src/components/icon-symbols';
@@ -56,7 +56,7 @@ injectGlobal`
   * {
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
-  } 
+  }
   body,
   html {
     margin: 0;
@@ -196,6 +196,11 @@ const Container = styled.div`
 const FlexWrapper = styled.div`
   display: flex;
   width: 100%;
+  flex-direction: column-reverse;
+
+  @media (min-width: ${NAV_IN_FOOTER_BREAKPOINT}) {
+    flex-direction: row;
+  }
 `;
 
 export default function Page({data, children, location}) {
