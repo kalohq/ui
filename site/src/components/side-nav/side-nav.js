@@ -4,7 +4,7 @@ import styled from 'react-emotion';
 import {upperFirst} from 'lodash';
 
 const MENU_WIDTH = '280px';
-export const NAV_IN_FOOTER_BREAKPOINT = '800px';
+export const NAV_IN_FOOTER_BREAKPOINT = '1100px';
 
 const AsideContainer = styled.aside`
   width: auto;
