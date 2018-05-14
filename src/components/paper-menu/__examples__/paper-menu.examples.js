@@ -13,10 +13,10 @@ export const examples = [
   },
 ];
 
-const InnerLayoutForDemo = props => (
-  <Flex flexDirection="column">
-    <Text size="medium" color="slate">
-      {props.children}
+const InnerLayoutForDemo = ({children, ...textProps}) => (
+  <Flex flexDirection="column" padding={[8, 0]}>
+    <Text size="medium" color="slate" {...textProps}>
+      {children}
     </Text>
   </Flex>
 );
@@ -50,6 +50,12 @@ export class Example extends React.Component {
           sticky={{width: '300px'}}
           open={this.state.open}
         >
+          <PaperMenuItem static={true}>
+            <InnerLayoutForDemo size="extra-small">
+              Options can be buttons, links, or just static labels like this
+              one.
+            </InnerLayoutForDemo>
+          </PaperMenuItem>
           <PaperMenuItem
             minWidth={300}
             title="Switch teams"
@@ -64,6 +70,7 @@ export class Example extends React.Component {
           <PaperMenuItem
             component="a"
             href="http://kalohq.com"
+            target="_blank"
             title="As a link"
           >
             <InnerLayoutForDemo>This is actually a link</InnerLayoutForDemo>
