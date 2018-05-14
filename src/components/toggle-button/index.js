@@ -1,2 +1,2 @@
 /* @flow */
-export {default} from './toggle-button';
+export {default, HEIGHT} from './toggle-button';
