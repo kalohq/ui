@@ -115,10 +115,13 @@ type TProps = {
   /** The overall theme for the component */
   theme?: 'default' | 'transparent',
   /** A function to call when a user hits the return key */
-  onReturn?: boolean,
+  onReturn?: Function,
+  /** Is is disabled? */
+  disabled?: boolean,
+  style?: Object,
 };
 
-export default class Textarea extends PureComponent {
+export default class Textarea extends PureComponent<TProps> {
   static defaultProps = {
     minRows: 2,
     lineBuffer: 2,
@@ -133,8 +136,8 @@ export default class Textarea extends PureComponent {
   onKeyUp: Function;
   onScroll: Function;
 
-  constructor(props: TProps) {
-    super(props);
+  constructor() {
+    super();
 
     this.onKeyDown = this.onKeyDown.bind(this);
     this.onKeyUp = this.onKeyUp.bind(this);
@@ -151,6 +154,7 @@ export default class Textarea extends PureComponent {
   }
 
   componentWillUnmount() {
+    // $FlowFixMe
     removeNode(this.mirror);
   }
 
@@ -161,7 +165,9 @@ export default class Textarea extends PureComponent {
       event.shiftKey === false
     ) {
       event.preventDefault();
-      this.props.onReturn(event);
+      if (this.props.onReturn) {
+        this.props.onReturn(event);
+      }
     }
   }
 
@@ -206,11 +212,13 @@ export default class Textarea extends PureComponent {
         return false;
       }
 
+      // $FlowFixMe
       const mirror = this.mirror;
       let html = '';
 
       mirror.style.display = 'block';
 
+      // $FlowFixMe
       for (let i = 0; i < this.props.minRows; i++) {
         html += '<br/>';
       }
@@ -220,6 +228,7 @@ export default class Textarea extends PureComponent {
 
       html = escapeTags(String(value));
 
+      // $FlowFixMe
       for (let i = 0; i < this.props.lineBuffer; i++) {
         html += '<br/>';
       }
@@ -230,9 +239,11 @@ export default class Textarea extends PureComponent {
       mirror.style.display = 'none';
 
       if (!this.state || this.state.height !== mirrorHeight) {
+        // $FlowFixMe
         this.setState({height: mirrorHeight});
       }
 
+      // $FlowFixMe
       this.__lastUpdatedValue__ = value;
     }
     return true;
@@ -246,12 +257,14 @@ export default class Textarea extends PureComponent {
     if (this.props.expand) {
       // Create a new mirror if we do not have one
       if (!this.mirror) {
+        // $FlowFixMe
         this.mirror = document.createElement('div');
         // $FlowFixMe
         document.body.appendChild(this.mirror);
       }
 
       const textarea = ReactDOM.findDOMNode(this);
+      // $FlowFixMe
       const mirror = this.mirror;
       const style = window.getComputedStyle(textarea);
 

@@ -290,7 +290,7 @@ type TProps = {
   /** After a successful load, how long should the UI wait before continuing? */
   loadedTimeout?: number,
   /** Override the component - Use with caution */
-  component?: 'string' | React.Node,
+  component?: 'string' | React$Node,
   /** A name to pass down to the DOM */
   name?: string,
   /** A type to pass down to the DOM */
@@ -299,9 +299,17 @@ type TProps = {
   subdued?: boolean,
   /** Children that should not be double rendered - See ButtonDropdown */
   singleRenderChildren?: any,
+  /** Class to pass down */
+  className?: string | Object,
+  /** Style to pass down */
+  style?: Object,
 };
 
-export default class Button extends PureComponent<TProps> {
+type TState = {
+  loaded: boolean,
+};
+
+export default class Button extends PureComponent<TProps, TState> {
   static defaultProps = {
     role: 'button',
     size: 'large',
@@ -331,7 +339,9 @@ export default class Button extends PureComponent<TProps> {
   componentWillReceiveProps(nextProps: TProps) {
     if (this.props.loading && !nextProps.loading) {
       this.setState({loaded: true});
+      // $FlowFixMe
       clearTimeout(this.__loadedTimeout__);
+      // $FlowFixMe
       this.__loadedTimeout__ = setTimeout(() => {
         if (this.state.loaded) {
           this.setState({loaded: false});
@@ -364,12 +374,9 @@ export default class Button extends PureComponent<TProps> {
       className,
       middle,
       style,
-      mayGetLong,
       subdued,
       singleRenderChildren,
       loadedTimeout: _IGNORED,
-      readonly: __IGNORED,
-      editable: ___IGNORED,
       ...otherProps
     } = this.props;
 
@@ -433,7 +440,7 @@ export default class Button extends PureComponent<TProps> {
         <ButtonMessage
           name="message"
           isHidden={loading || (loaded && success)}
-          title={mayGetLong ? children : undefined}
+          title={isString(children) ? children : undefined}
         >
           {iconElement}
           {children}

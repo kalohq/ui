@@ -17,7 +17,7 @@ const StyledButtonDropdownMenu = styled.div`
   left: -2px;
 `;
 
-type Props = {
+type TProps = {
   children?: string,
   selectItems: List<{
     title: string,
@@ -25,6 +25,7 @@ type Props = {
     disabled?: boolean,
     component?: any,
     componentProps?: any,
+    minWidth?: number | string,
   }>,
   open?: boolean,
   onClick?: Function,
@@ -36,13 +37,17 @@ type Props = {
   disabled?: boolean,
 };
 
-export default class ButtonDropdown extends PureComponent {
+type TState = {
+  open: boolean,
+};
+
+export default class ButtonDropdown extends PureComponent<TProps, TState> {
   onToggle: Function;
   onClose: Function;
 
   static displayName = 'ButtonDropdown';
 
-  constructor(props: Props) {
+  constructor(props: TProps) {
     super(props);
 
     this.state = {
@@ -50,7 +55,6 @@ export default class ButtonDropdown extends PureComponent {
     };
 
     this.onToggle = this.onToggle.bind(this);
-    this.wrapperRef = this.onToggle.bind(this);
     this.onClose = this.onClose.bind(this);
   }
 

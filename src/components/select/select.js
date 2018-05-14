@@ -133,11 +133,11 @@ const StyledSelectSelected = styled.div`
  */
 
 type TProps = {
-  children: React.Node,
+  children: React$Element<*>,
   selection?: any,
   onSelect?: Function,
   /** Placeholder copy to show before a selection has been made */
-  placeholder?: React.Node,
+  placeholder?: React$Node,
   nullable?: boolean,
   formatSelection?: Function,
   onBlur?: Function,
@@ -148,7 +148,11 @@ type TProps = {
   empty?: string,
 };
 
-export default class Select extends PureComponent {
+type TState = {
+  open: boolean,
+};
+
+export default class Select extends PureComponent<TProps, TState> {
   static defaultProps = {
     onSelect: () => {},
     center: false,
@@ -167,8 +171,8 @@ export default class Select extends PureComponent {
   onClose: Function;
   onClear: Function;
 
-  constructor(props: TProps) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       open: false,
@@ -209,13 +213,13 @@ export default class Select extends PureComponent {
   }
 
   onClear(event: SyntheticEvent<*>) {
-    this.props.onSelect(undefined);
+    if (this.props.onSelect) this.props.onSelect(undefined);
     this.close();
     event.stopPropagation();
   }
 
   onSelect(value: SyntheticEvent<*>) {
-    this.props.onSelect(value);
+    if (this.props.onSelect) this.props.onSelect(value);
     this.close();
   }
 
@@ -229,7 +233,6 @@ export default class Select extends PureComponent {
       readonly,
       empty,
       disabled,
-      editable: _IGNORED,
       ...otherProps
     } = this.props;
 
@@ -249,7 +252,7 @@ export default class Select extends PureComponent {
         <StyledSelectSelected
           onClick={readonly || disabled ? undefined : this.onToggle}
         >
-          {!!selection ? (
+          {!!selection && formatSelection ? (
             <Text
               color={readonly || disabled ? 'navy500' : 'navy700'}
               weight="normal"

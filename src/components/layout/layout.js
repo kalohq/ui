@@ -1,4 +1,3 @@
-/* @flow */
 import React, {PureComponent} from 'react';
 import {parseStyleProps, cleanProps} from '../../utils/style';
 import styled, {cx} from 'react-emotion';
