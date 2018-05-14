@@ -208,7 +208,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
       className="emotion-2 emotion-3"
       name="message"
       style={Object {}}
-      title={undefined}
+      title="One"
     >
       One
     </div>
@@ -258,7 +258,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
       className="emotion-2 emotion-3"
       name="message"
       style={Object {}}
-      title={undefined}
+      title="Two"
     >
       Two
     </div>

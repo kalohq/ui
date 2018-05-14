@@ -1,8 +1,7 @@
 /* @flow */
-import * as React from 'react';
+import React, {PureComponent} from 'react';
 import styled from 'react-emotion';
 
-import PureComponent from 'react-pure-render/component';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 import H3 from '../h3';
@@ -42,26 +41,27 @@ const StyledPaperMenuOptionClose = styled.button`
  * Generic open/close popup paper styled menu
  */
 
-type Props = {
+type TProps = {
   offset?: {
     x?: number,
     y?: number,
   },
-  children?: React.Node,
+  children?: React$Node,
   open?: boolean,
   origin?: string,
   root?: Object,
   paper?: Object,
   onRequestClose?: Function,
   heading?: string,
-  optionsIcon?: React.Node,
+  optionsIcon?: React$Node,
   closeOnOutsideClick?: boolean,
   sticky?: Object,
   zIndex?: number,
   anchor?: string,
+  optionIcons?: Object,
 };
 
-export default class PaperMenu extends PureComponent {
+export default class PaperMenu extends PureComponent<TProps> {
   onWindowClick: Function;
 
   static defaultProps = {
@@ -78,7 +78,7 @@ export default class PaperMenu extends PureComponent {
     closeOnOutsideClick: true,
   };
 
-  constructor(props: Props) {
+  constructor(props: TProps) {
     super();
 
     this.onWindowClick = this.onWindowClick.bind(this);
@@ -88,7 +88,7 @@ export default class PaperMenu extends PureComponent {
     }
   }
 
-  componentWillReceiveProps(newProps: Props) {
+  componentWillReceiveProps(newProps: TProps) {
     // We only bind a window click event handler while the menu is open.
     // We also wait for the animation to finish. This means that multiple
     // paper menu’s will not stay open at the same time.

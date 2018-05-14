@@ -1,7 +1,6 @@
 /* @flow */
-import * as React from 'react';
+import React, {PureComponent} from 'react';
 import {HotKeys} from 'react-hotkeys';
-import PureComponent from 'react-pure-render/component';
 
 /**
  * A generic (and mostly semantic) form component.
@@ -9,15 +8,16 @@ import PureComponent from 'react-pure-render/component';
 
 type TProps = {
   /** Children form components */
-  children?: React.Node,
+  children?: React$Node,
   /** A function to call when the form is submitted */
   onSubmit?: Function,
 };
 
-export default class Form extends PureComponent {
+export default class Form extends PureComponent<TProps> {
   constructor(props: TProps) {
     super(props);
 
+    // $FlowFixMe
     this.__handlers__ = {
       'meta+return': this.onSubmitHotkey.bind(this),
     };
@@ -33,6 +33,7 @@ export default class Form extends PureComponent {
     const {children, ...otherProps} = this.props;
 
     return (
+      // $FlowFixMe
       <HotKeys component="form" handlers={this.__handlers__} {...otherProps}>
         {children}
       </HotKeys>
