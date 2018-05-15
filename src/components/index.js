@@ -38,7 +38,10 @@ export {Option as SelectOption} from './select';
 export {default as Radio} from './radio';
 export {default as Select} from './select';
 export {default as Textarea} from './textarea';
-export {default as ToggleButton} from './toggle-button';
+export {
+  default as ToggleButton,
+  HEIGHT as TOGGLE_BUTTON_HEIGHT,
+} from './toggle-button';
 
 /**
  * Other

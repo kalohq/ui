@@ -5,6 +5,8 @@ import styled, {css} from 'react-emotion';
 import {Box} from '../layout';
 import FieldLabel from '../field-label';
 
+export const HEIGHT = 26;
+
 /**
  * ToggleButton
  *
@@ -15,7 +17,7 @@ const StyledToggleButton = styled.div`
   border-radius: 20px;
   transition: all 0.25s ease-out;
   width: 56px;
-  height: 26px;
+  height: ${HEIGHT}px;
   cursor: pointer;
   padding: 3px 0 3px ${props => (props.selected ? '32px' : '3px')};
   background-color: transparent;
