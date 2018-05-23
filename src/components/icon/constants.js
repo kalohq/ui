@@ -49,6 +49,7 @@ export const ICONS = new Enum({
   },
   ADD_A_PHOTO: {
     value: 'add_a_photo',
+    category: CATEGORIES.misc,
   },
   ARCHIVE: {
     value: 'archive',
@@ -92,6 +93,7 @@ export const ICONS = new Enum({
   },
   BOOK: {
     value: 'book',
+    category: CATEGORIES.misc,
   },
   BORDER_COLOR: {
     value: 'border_color',
@@ -171,6 +173,7 @@ export const ICONS = new Enum({
   },
   DRIBBBLE: {
     value: 'dribbble',
+    category: CATEGORIES.social,
   },
   EDIT: {
     value: 'edit',
@@ -342,6 +345,7 @@ export const ICONS = new Enum({
   },
   PERSON_ADD: {
     value: 'person_add',
+    category: CATEGORIES.misc,
   },
   PERSON_OUTLINE: {
     value: 'person_outline',
@@ -381,6 +385,7 @@ export const ICONS = new Enum({
   },
   REMOVE_RED_EYE: {
     value: 'remove_red_eye',
+    category: CATEGORIES.misc,
   },
   SEARCH: {
     value: 'search',
@@ -388,6 +393,7 @@ export const ICONS = new Enum({
   },
   SECURITY: {
     value: 'security',
+    category: CATEGORIES.misc,
   },
   SEND: {
     value: 'send',
