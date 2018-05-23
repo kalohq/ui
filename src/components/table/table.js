@@ -10,7 +10,7 @@ const StyledTable = styled('table')`
   border-spacing: 0;
 `;
 
-export class Table extends React.Component {
+export class Table extends React.Component<{children: React$Node}> {
   static propTypes = {
     children: PropTypes.node.isRequired,
   };

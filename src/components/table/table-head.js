@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const StyledTableHead = styled('thead')`display: table-header-group;`;
 
-export class TableHead extends React.Component {
+export class TableHead extends React.Component<{children: React$Node}> {
   static propTypes = {
     children: PropTypes.node.isRequired,
   };
