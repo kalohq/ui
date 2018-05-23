@@ -84,6 +84,7 @@
     "react-intl": "2.1.5",
     "react-test-renderer": "15.6.2",
     "reactman": "2.1.0",
+    "recompose": "0.20.2",
     "rimraf": "2.6.1",
     "sinon": "^4.5.0",
     "style-loader": "0.16.1",
@@ -103,7 +104,8 @@
     "react-emotion": "^9.0.0",
     "react-hotkeys": "^0.9.0",
     "react-intl": "^2.1.5",
-    "react": "^15.4.1"
+    "react": "^15.4.1",
+    "recompose": "0.20.2"
   },
   "babel": {
     "presets": [
@@ -145,6 +147,5 @@
       "!src/design-tokens/**/*",
       "!src/icons/**/*"
     ]
-  },
-  "dependencies": {}
+  }
 }
