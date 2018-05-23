@@ -94,7 +94,11 @@ class IconSetWithSearch extends React.Component {
 const StatusIconSet = () => (
   <IconGridContainer>
     {Object.keys(ICONS.properties)
-      .filter(icon => ICONS.properties[icon].category.value === 'status')
+      .filter(
+        icon =>
+          ICONS.properties[icon].category &&
+          ICONS.properties[icon].category.value === 'status'
+      )
       .map(icon => (
         <IconBlock key={icon}>
           <Icon color="navy700" size={26}>
@@ -109,7 +113,11 @@ const StatusIconSet = () => (
 const SocialIconSet = () => (
   <IconGridContainer>
     {Object.keys(ICONS.properties)
-      .filter(icon => ICONS.properties[icon].category.value === 'social')
+      .filter(
+        icon =>
+          ICONS.properties[icon].category &&
+          ICONS.properties[icon].category.value === 'social'
+      )
       .map(icon => (
         <IconBlock key={icon}>
           <Icon color="navy700" size={26}>
