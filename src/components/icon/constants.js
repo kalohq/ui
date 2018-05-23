@@ -10,9 +10,19 @@ export type ICON_COLOR = TEXT_COLOR;
 export const DEFAULT_SIZE = 16;
 export const DEFAULT_COLOR = 'currentColor';
 
+const CATEGORIES = {
+  status: {
+    value: 'status',
+  },
+  social: {
+    value: 'social',
+  },
+};
+
 export const ICONS = new Enum({
   ACCESS_TIME: {
     value: 'access_time',
+    category: CATEGORIES.status,
   },
   ACCOUNT_BALANCE: {
     value: 'account_balance',
@@ -100,6 +110,7 @@ export const ICONS = new Enum({
   },
   CONTENT_PASTE: {
     value: 'content_paste',
+    category: CATEGORIES.status,
   },
   CREATE: {
     value: 'create',
@@ -121,9 +132,11 @@ export const ICONS = new Enum({
   },
   DONE_ALL: {
     value: 'done_all',
+    category: CATEGORIES.status,
   },
   DRIBBBLE: {
     value: 'dribbble',
+    category: CATEGORIES.social,
   },
   EDIT: {
     value: 'edit',
@@ -133,6 +146,7 @@ export const ICONS = new Enum({
   },
   ERROR_OUTLINE: {
     value: 'error_outline',
+    category: CATEGORIES.status,
   },
   EXIT_TO_APP: {
     value: 'exit_to_app',
@@ -169,6 +183,7 @@ export const ICONS = new Enum({
   },
   INSTAGRAM: {
     value: 'instagram',
+    category: CATEGORIES.social,
   },
   KEYBOARD_ARROW_DOWN: {
     value: 'keyboard_arrow_down',
@@ -193,9 +208,11 @@ export const ICONS = new Enum({
   },
   LINKEDIN: {
     value: 'linkedin',
+    category: CATEGORIES.social,
   },
   LOCAL_ATM: {
     value: 'local_atm',
+    category: CATEGORIES.status,
   },
   LOCAL_OFFER: {
     value: 'local_offer',
@@ -211,6 +228,7 @@ export const ICONS = new Enum({
   },
   LOOP: {
     value: 'loop',
+    category: CATEGORIES.status,
   },
   MAIL: {
     value: 'mail',
@@ -292,6 +310,7 @@ export const ICONS = new Enum({
   },
   SEND: {
     value: 'send',
+    category: CATEGORIES.status,
   },
   SETTINGS: {
     value: 'settings',
@@ -310,6 +329,7 @@ export const ICONS = new Enum({
   },
   TWITTER: {
     value: 'twitter',
+    category: CATEGORIES.social,
   },
   VERIFIED_USER: {
     value: 'verified_user',
@@ -331,5 +351,6 @@ export const ICONS = new Enum({
   },
   YOUTUBE: {
     value: 'youtube',
+    category: CATEGORIES.social,
   },
 });

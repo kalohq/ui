@@ -91,6 +91,44 @@ class IconSetWithSearch extends React.Component {
   }
 }
 
+const StatusIconSet = () => (
+  <IconGridContainer>
+    {Object.keys(ICONS.properties)
+      .filter(
+        icon =>
+          ICONS.properties[icon].category &&
+          ICONS.properties[icon].category.value === 'status'
+      )
+      .map(icon => (
+        <IconBlock key={icon}>
+          <Icon color="navy700" size={26}>
+            {icon}
+          </Icon>
+          <IconTitle>{icon}</IconTitle>
+        </IconBlock>
+      ))}
+  </IconGridContainer>
+);
+
+const SocialIconSet = () => (
+  <IconGridContainer>
+    {Object.keys(ICONS.properties)
+      .filter(
+        icon =>
+          ICONS.properties[icon].category &&
+          ICONS.properties[icon].category.value === 'social'
+      )
+      .map(icon => (
+        <IconBlock key={icon}>
+          <Icon color="navy700" size={26}>
+            {icon}
+          </Icon>
+          <IconTitle>{icon}</IconTitle>
+        </IconBlock>
+      ))}
+  </IconGridContainer>
+);
+
 const BrandIconsPage = () => (
   <DocumentationContent
     pageTitle="Iconography"
@@ -111,6 +149,15 @@ const BrandIconsPage = () => (
         on this component.
       </p>
 
+      <h2>Status Icons</h2>
+      <p>
+        These icons are used to display the status of resources across Kalo,
+        such as Projects, Tasks, and Invoices
+      </p>
+      <StatusIconSet />
+
+      <h2>Social Icons</h2>
+      <SocialIconSet />
       <h2>Full set</h2>
       <IconSetWithSearch />
     </Wrapper>
