@@ -185,6 +185,27 @@ export const ICONS = new Enum({
     value: 'instagram',
     category: CATEGORIES.social,
   },
+  KALO_ADMIN: {
+    value: 'kalo_admin',
+  },
+  KALO_CATEGORIES: {
+    value: 'kalo_categories',
+  },
+  KALO_FINANCE: {
+    value: 'kalo_finance',
+  },
+  KALO_MESSAGES: {
+    value: 'kalo_messages',
+  },
+  KALO_PROJECTS: {
+    value: 'kalo_projects',
+  },
+  KALO_REPORTING: {
+    value: 'kalo_reporting',
+  },
+  KALO_TASKS: {
+    value: 'kalo_tasks',
+  },
   KEYBOARD_ARROW_DOWN: {
     value: 'keyboard_arrow_down',
   },
