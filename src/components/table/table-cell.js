@@ -7,10 +7,10 @@ import Icon from '../icon';
 
 const StyledTableCell = styled('td')`
   display: table-cell;
-  color: ${({theme}) => theme.colors.navy700};
-  font-weight: lighter;
+  color: ${props => props.theme.colors.navy700};
+  font-weight: 300;
   text-align: left;
-  padding: ${({theme}) => theme.layout.spacingSmall};
+  padding: ${props => props.theme.layout.spacingSmall};
   font-size: 14px;
   min-height: 40px;
   background-color: ${props => props.theme.colors.white};
@@ -47,17 +47,17 @@ const StyledTableCell = styled('td')`
 
 const StyledTableHeaderCell = styled('th')`
   display: table-cell;
-  color: ${({theme}) => theme.colors.navy700};
-  font-weight: lighter;
+  color: ${props => props.theme.colors.navy700};
+  font-weight: 300;
   text-align: left;
-  padding: ${({theme}) => theme.layout.spacingSmall};
+  padding: ${props => props.theme.layout.spacingSmall};
   font-size: 14px;
   min-height: 40px;
   color: ${props => props.theme.colors.grey500};
 
-  ${({sortable}) => sortable && css`cursor: pointer;`};
+  ${props => props.sortable && css`cursor: pointer;`};
 
-  ${({active}) => active && css`font-weight: normal !important;`};
+  ${props => props.active && css`font-weight: 400 !important;`};
 `;
 
 type TTableCellProps = {
