@@ -1,6 +1,4 @@
-/* @flow */
 import React from 'react';
-
 import Textarea from '../textarea';
 
 export const examples = [

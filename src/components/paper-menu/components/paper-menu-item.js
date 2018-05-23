@@ -12,7 +12,7 @@ const StyledPaperMenuItem = styled(Box)`
   align-content: center;
   flex-direction: row;
   background-color: ${props => props.theme.colors.white};
-  cursor: ${props => (props.disabled ? 'default' : 'pointer')};
+  cursor: ${props => (props.disabled || props.static ? 'default' : 'pointer')};
   opacity: ${props => (props.disabled ? 0.5 : 1)};
   border-bottom: 1px solid ${props => props.theme.colors.grey300};
   transition: all 0.2s ease-in;
@@ -25,7 +25,11 @@ const StyledPaperMenuItem = styled(Box)`
 
   &:hover {
     ${props =>
-      !props.disabled && css`background-color: ${props.theme.colors.grey300};`};
+      !props.disabled &&
+      !props.static &&
+      css`
+        background-color: ${props.theme.colors.grey300};
+      `};
   }
 
   ${props =>

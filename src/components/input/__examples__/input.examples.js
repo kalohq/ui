@@ -56,9 +56,4 @@ export const examples = [
     description: 'Displays an input with an invalid status',
     render: () => <Input valid={false} placeholder="hello@kalohq.com" />,
   },
-  {
-    title: 'Transparent inputs',
-    description: 'Inputs can be displayed without any chrome',
-    render: () => <Input theme="transparent" placeholder="Freelancer name" />,
-  },
 ];

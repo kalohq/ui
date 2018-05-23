@@ -1,7 +1,6 @@
 /* @flow */
-import * as React from 'react';
+import React, {PureComponent} from 'react';
 import {focusOnMount as _focusOnMount} from '../../utils/react';
-import PureComponent from 'react-pure-render/component';
 import {isBoolean, isString} from 'lodash';
 import styled, {css} from 'react-emotion';
 
@@ -23,10 +22,14 @@ const INPUT_SIZE_MAP = {
     fontSize: 16,
     size: 48,
   },
+  'extra-large': {
+    fontSize: 16,
+    size: 52,
+  },
 };
 
 const getInputFont = size =>
-  `normal ${INPUT_SIZE_MAP[size].fontSize}px WebFaktSoftPro`;
+  size && `normal ${INPUT_SIZE_MAP[size].fontSize}px WebFaktSoftPro`;
 
 const StyledInputAddon = styled(Flex)`
   min-width: 40px;
@@ -48,7 +51,6 @@ const StyledInputAddon = styled(Flex)`
           border-radius: ${props.theme.layout.borderRadiusInput} 0 0
             ${props.theme.layout.borderRadiusInput};
         `};
-
       ${props.addonType === 'suffix' &&
         css`
           border-left: 0;
@@ -59,9 +61,9 @@ const StyledInputAddon = styled(Flex)`
 `;
 
 export const InputAddon = (props: {
-  content: string | React.Node,
+  content: string | React$Node,
   type: string,
-  inputTheme: 'default' | 'transparent' | 'well',
+  inputTheme?: 'default' | 'transparent' | 'well',
 }) => {
   return (
     <StyledInputAddon
@@ -135,7 +137,6 @@ const StyledInput = styled.input`
 
       &:not(:read-only):not(:disabled):focus {
         border: ${props.theme.input.inputActiveBorder};
-        box-shadow: 0 0 0 3px rgb(238, 244, 250);
       }
 
       ${props.withAddonPrefix &&
@@ -173,13 +174,11 @@ const StyledInput = styled.input`
     css`
       border: 1px solid ${props.theme.colors.grey500};
       padding: 7px 10px;
-    `};
-
-  ${props =>
-    props.valid &&
-    css`
-      border-color: ${props.theme.colors.green500}!important;
-    `};
+    `} ${props =>
+      props.valid &&
+      css`
+        border-color: ${props.theme.colors.green500}!important;
+      `};
 
   ${props =>
     props.invalid &&
@@ -224,20 +223,24 @@ type TProps = {
   /** A React 'ref' */
   inputRef?: Function,
   /** A value to display before (to the left) of the input */
-  addonPrefix: string | React.Node,
+  addonPrefix: string | React$Node,
   /** A value to display after (to the right) the input */
-  addonSuffix: string | React.Node,
+  addonSuffix: string | React$Node,
+  fullWidth?: boolean,
 };
 
-export default class Input extends PureComponent {
+type TState = {
+  focused: boolean,
+  changed: boolean,
+};
+
+// $FlowFixMe
+export default class Input extends PureComponent<TProps, TState> {
   static defaultProps = {
     onFocus: () => {},
     onBlur: () => {},
     onChange: () => {},
     onEdited: () => {},
-    theme: 'default',
-    margin: 'none',
-    size: 'medium',
   };
 
   static displayName = 'Input';
@@ -246,8 +249,8 @@ export default class Input extends PureComponent {
   onBlur: Function;
   onChange: Function;
 
-  constructor(props: TProps) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {focused: false, changed: false};
 
@@ -298,7 +301,9 @@ export default class Input extends PureComponent {
    * entered as well as the font. We use canvas to measure this value.
    */
   getTextWidth(text: string, font: string): number {
+    // $FlowFixMe
     this.canvas = this.canvas ? this.canvas : document.createElement('canvas');
+    // $FlowFixMe
     const context = this.canvas.getContext('2d');
     if (context) {
       context.font = font;
@@ -309,9 +314,9 @@ export default class Input extends PureComponent {
 
   render() {
     const {
-      theme,
-      margin,
-      size,
+      theme = 'default',
+      margin = 'none',
+      size = 'medium',
       fullWidth,
       defaultValue,
       value,
@@ -320,7 +325,6 @@ export default class Input extends PureComponent {
       expands,
       focusOnMount,
       onEdited: _IGNORED,
-      editable: __IGNORED,
       placeholder,
       valid,
       readonly,
@@ -335,12 +339,14 @@ export default class Input extends PureComponent {
 
     const _styles = {
       ...style,
-      width: expands
-        ? Math.max(
-            this.getTextWidth(value, getInputFont(size)) + EXPANDS_BUFFER,
-            this.getTextWidth(placeholder, getInputFont(size)) + EXPANDS_BUFFER
-          )
-        : undefined,
+      width:
+        expands && value && placeholder
+          ? Math.max(
+              this.getTextWidth(value, getInputFont(size)) + EXPANDS_BUFFER,
+              this.getTextWidth(placeholder, getInputFont(size)) +
+                EXPANDS_BUFFER
+            )
+          : undefined,
     };
 
     return (
