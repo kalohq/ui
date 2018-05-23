@@ -44,6 +44,17 @@ export {
 } from './toggle-button';
 
 /**
+ * Table
+ */
+export {
+  default as Table,
+  TableHead,
+  TableBody,
+  TableRow,
+  TableCell,
+} from './table';
+
+/**
  * Other
  */
 export {default as Alert, AlertPopover} from './alert';
