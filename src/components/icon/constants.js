@@ -197,6 +197,9 @@ export const ICONS = new Enum({
   KALO_FINANCE: {
     value: 'kalo_finance',
   },
+  KALO_INDEX: {
+    value: 'kalo_index',
+  },
   KALO_MESSAGES: {
     value: 'kalo_messages',
   },
