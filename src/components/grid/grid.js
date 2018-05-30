@@ -20,7 +20,13 @@ Grid.displayName = 'Grid';
 
 type TRowProps = {
   children?: any,
-  gutters?: 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large',
+  gutters?:
+    | 'extra-small'
+    | 'small'
+    | 'medium'
+    | 'large'
+    | 'extra-large'
+    | 'none',
   collapse?: boolean,
 };
 
@@ -47,7 +53,6 @@ export function Row(props: TRowProps) {
 type TColumnProps = {
   columns?: number,
   children?: any,
-  spacing?: 'small',
 };
 
 export function Column(props: TColumnProps) {
