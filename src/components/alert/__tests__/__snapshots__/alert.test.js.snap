@@ -92,9 +92,6 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
       height={16}
       width={16}
     >
-      <title>
-        check_circle
-      </title>
       <use
         xlinkHref="#check_circle"
       />

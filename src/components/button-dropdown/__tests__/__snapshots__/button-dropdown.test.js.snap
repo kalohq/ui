@@ -222,9 +222,6 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
         height={20}
         width={20}
       >
-        <title>
-          keyboard_arrow_down
-        </title>
         <use
           xlinkHref="#keyboard_arrow_down"
         />
@@ -250,9 +247,6 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
         height={20}
         width={20}
       >
-        <title>
-          keyboard_arrow_down
-        </title>
         <use
           xlinkHref="#keyboard_arrow_down"
         />
@@ -589,9 +583,6 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
         height={20}
         width={20}
       >
-        <title>
-          keyboard_arrow_down
-        </title>
         <use
           xlinkHref="#keyboard_arrow_down"
         />
@@ -634,9 +625,6 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
         height={20}
         width={20}
       >
-        <title>
-          keyboard_arrow_down
-        </title>
         <use
           xlinkHref="#keyboard_arrow_down"
         />
