@@ -160,6 +160,9 @@ export const ICONS = new Enum({
   FOLDER_SHARED: {
     value: 'folder_shared',
   },
+  FORMAT_COLOR_FILL: {
+    value: 'format_color_fill',
+  },
   GLOBE: {
     value: 'globe',
   },
