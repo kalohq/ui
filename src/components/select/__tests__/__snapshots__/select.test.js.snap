@@ -30,7 +30,7 @@ exports[`Select should render a disabled select 1`] = `
       open={false}
     >
       <i
-        className="e2anemp0 css-2469hx"
+        className="e2anemp0 css-b0kj97"
         color="grey500"
         onClick={undefined}
         size={24}
@@ -42,9 +42,6 @@ exports[`Select should render a disabled select 1`] = `
           height={24}
           width={24}
         >
-          <title>
-            chevron_right
-          </title>
           <use
             xlinkHref="#chevron_right"
           />
@@ -136,7 +133,7 @@ exports[`Select should render a readonly select 1`] = `
       open={false}
     >
       <i
-        className="e2anemp0 css-2469hx"
+        className="e2anemp0 css-b0kj97"
         color="grey500"
         onClick={undefined}
         size={24}
@@ -148,9 +145,6 @@ exports[`Select should render a readonly select 1`] = `
           height={24}
           width={24}
         >
-          <title>
-            chevron_right
-          </title>
           <use
             xlinkHref="#chevron_right"
           />
@@ -242,7 +236,7 @@ exports[`Select should render shallow component ok 1`] = `
       open={false}
     >
       <i
-        className="e2anemp0 css-luyknb"
+        className="e2anemp0 css-q4r2vh"
         color="navy700"
         onClick={undefined}
         size={24}
@@ -254,9 +248,6 @@ exports[`Select should render shallow component ok 1`] = `
           height={24}
           width={24}
         >
-          <title>
-            chevron_right
-          </title>
           <use
             xlinkHref="#chevron_right"
           />
