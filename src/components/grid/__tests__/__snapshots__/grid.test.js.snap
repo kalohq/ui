@@ -46,7 +46,6 @@ exports[`components/grid should render shallow component ok 1`] = `
   display: -ms-flexbox;
   display: flex;
   width: 16.666666666666668%;
-  padding-left: 16px;
   padding-right: 16px;
 }
 
@@ -71,7 +70,6 @@ exports[`components/grid should render shallow component ok 1`] = `
   display: flex;
   width: 83.33333333333334%;
   padding-left: 16px;
-  padding-right: 16px;
 }
 
 <div

@@ -20,38 +20,32 @@ Grid.displayName = 'Grid';
 
 type TRowProps = {
   children?: any,
-  gutter?: 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large',
+  gutters?:
+    | 'extra-small'
+    | 'small'
+    | 'medium'
+    | 'large'
+    | 'extra-large'
+    | 'none',
   collapse?: boolean,
-  spacing?: 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large',
 };
 
 export function Row(props: TRowProps) {
-  const {
-    children,
-    spacing = 'medium',
-    gutter,
-    collapse = false,
-    ...otherProps
-  } = props;
+  const {children, gutters = 'medium', collapse = false, ...otherProps} = props;
 
   return (
-    <Flex
-      width="100%"
-      flexWrap="wrap"
-      paddingLeft={gutter}
-      paddingRight={gutter}
-      {...otherProps}
-    >
-      {React.Children.map(
-        children,
-        child =>
-          child
-            ? React.cloneElement(child, {
-                paddingLeft: !collapse ? spacing : null,
-                paddingRight: !collapse ? spacing : null,
-              })
-            : null
-      )}
+    <Flex width="100%" flexWrap="wrap" {...otherProps}>
+      {React.Children.map(children, (child, i) => {
+        const isLast = React.Children.count(children) === i + 1;
+        const isFirst = i === 0;
+
+        return child
+          ? React.cloneElement(child, {
+              paddingLeft: collapse || isFirst ? null : gutters,
+              paddingRight: collapse || isLast ? null : gutters,
+            })
+          : null;
+      })}
     </Flex>
   );
 }
@@ -59,7 +53,6 @@ export function Row(props: TRowProps) {
 type TColumnProps = {
   columns?: number,
   children?: any,
-  spacing?: 'small',
 };
 
 export function Column(props: TColumnProps) {
