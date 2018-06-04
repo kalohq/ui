@@ -70,6 +70,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
 }
 
 .emotion-11:active {
+  background-color: rgb(56,160,124);
   box-shadow: none;
 }
 
