@@ -97,7 +97,7 @@ module.exports = {
     'spacing-extra-large': '64px',
     'button-primary-default-background-color': 'rgb(62, 179, 138)',
     'button-primary-hover-background-color': 'rgb(79, 210, 164)',
-    'button-primary-focus-background-color': 'rgb(56, 160, 124)',
+    'button-primary-active-background-color': 'rgb(56, 160, 124)',
     'button-primary-focus-shadow': 'rgb(216, 240, 232)',
     'button-secondary-default-background-color': 'rgb(55, 69, 97)',
     'button-secondary-hover-background-color': 'rgb(84, 103, 137)',
