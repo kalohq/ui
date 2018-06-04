@@ -95,4 +95,12 @@ module.exports = {
   spacingMedium: "16px",
   spacingLarge: "32px",
   spacingExtraLarge: "64px",
+  buttonPrimaryDefaultBackgroundColor: "rgb(62, 179, 138)",
+  buttonPrimaryHoverBackgroundColor: "rgb(79, 210, 164)",
+  buttonPrimaryFocusBackgroundColor: "rgb(56, 160, 124)",
+  buttonPrimaryFocusShadow: "rgb(216, 240, 232)",
+  buttonSecondaryDefaultBackgroundColor: "rgb(55, 69, 97)",
+  buttonSecondaryHoverBackgroundColor: "rgb(84, 103, 137)",
+  buttonSecondaryActiveBackgroundColor: "rgb(55, 69, 97)",
+  buttonSecondaryFocusShadow: "rgb(208, 216, 223)",
 };

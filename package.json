@@ -1,6 +1,6 @@
 {
   "name": "@kalo/ui",
-  "version": "1.10.0",
+  "version": "1.11.0-0",
   "description": "A library of React components",
   "repository": {
     "type": "git",
@@ -14,7 +14,7 @@
     "build": "rimraf lib && npm run compile",
     "compile": "npm run generate:tokens && npm run generate:icons && gulp build-production",
     "test": "jest",
-    "release": "np --no-yarn --no-cleanup",
+    "release": "np --no-yarn --no-cleanup --any-branch",
     "typecheck": "flow",
     "lint": "eslint src",
     "precommit": "lint-staged",

@@ -102,19 +102,22 @@ const PrimaryButton = styled(CoreButton)`
   ${props =>
     !props.disabled &&
     css`
-      background-color: ${props.theme.colors.green500};
+      background-color: ${props.theme.button
+        .buttonPrimaryDefaultBackgroundColor};
       color: #fff;
 
       &:hover {
-        background-color: ${props.theme.colors.green400};
+        background-color: ${props.theme.button
+          .buttonPrimaryHoverBackgroundColor};
       }
 
       &:focus {
-        box-shadow: 0 0 0 3px ${props.theme.colors.green300};
+        box-shadow: 0 0 0 3px ${props.theme.button.buttonPrimaryFocusShadow};
       }
 
       &:active {
-        background-color: ${props.theme.colors.green600};
+        background-color: ${props.theme.button
+          .buttonPrimaryActiveBackgroundColor};
         box-shadow: none;
       }
     `};
@@ -124,19 +127,22 @@ const SecondaryButton = styled(CoreButton)`
   ${props =>
     !props.disabled &&
     css`
-      background-color: ${props.theme.colors.blue500};
+      background-color: ${props.theme.button
+        .buttonSecondaryDefaultBackgroundColor};
       color: #fff;
 
       &:hover {
-        background-color: ${props.theme.colors.blue400};
+        background-color: ${props.theme.button
+          .buttonSecondaryHoverBackgroundColor};
       }
 
       &:focus {
-        box-shadow: 0 0 0 3px ${props.theme.colors.blue300};
+        box-shadow: 0 0 0 3px ${props.theme.button.buttonSecondaryFocusShadow};
       }
 
       &:active {
-        background-color: ${props.theme.colors.blue600};
+        background-color: ${props.theme.button
+          .buttonSecondaryActiveBackgroundColor};
         box-shadow: none;
       }
     `};
