@@ -18,7 +18,7 @@ describe('<TableCell />', () => {
 
   describe('when a descendant of <TableHead />', () => {
     describe('and order is `desc`', () => {
-      it('should render an up arrow icon', () => {
+      it('should render a down arrow icon', () => {
         const result = shallow(
           <TableCell id="greetings" order="desc" orderBy="greetings">
             Greetings
@@ -28,12 +28,12 @@ describe('<TableCell />', () => {
           }
         );
         const icon = result.find(Icon);
-        expect(icon.props().children).toEqual('keyboard_arrow_up');
+        expect(icon.props().children).toEqual('keyboard_arrow_down');
       });
     });
 
     describe('and order is `asc`', () => {
-      it('should render a down arrow icon', () => {
+      it('should render an up arrow icon', () => {
         const result = shallow(
           <TableCell id="greetings" order="asc" orderBy="greetings">
             Greetings
@@ -43,7 +43,7 @@ describe('<TableCell />', () => {
           }
         );
         const icon = result.find(Icon);
-        expect(icon.props().children).toEqual('keyboard_arrow_down');
+        expect(icon.props().children).toEqual('keyboard_arrow_up');
       });
     });
   });
