@@ -79,7 +79,7 @@ type TTableCellProps = {
 
 export function TableCell(props: TTableCellProps) {
   const {active, children, header, order} = props;
-  const icon = `keyboard_arrow_${order === 'desc' ? 'up' : 'down'}`;
+  const icon = `keyboard_arrow_${order === 'desc' ? 'down' : 'up'}`;
   const Component = header ? StyledTableHeaderCell : StyledTableCell;
 
   return (
