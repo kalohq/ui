@@ -14,18 +14,18 @@ const StyledTableCell = styled('td')`
   font-size: 14px;
   min-height: 40px;
   background-color: ${props => props.theme.colors.white};
-  border-bottom: ${props => props.theme.input.inputDefaultBorder};
+  border-bottom: ${props => props.theme.colors.grey300};
 
   &:first-child {
-    border-left: ${props => props.theme.input.inputDefaultBorder};
+    border-left: ${props => props.theme.colors.grey300};
   }
 
   &:last-child {
-    border-right: ${props => props.theme.input.inputDefaultBorder};
+    border-right: ${props => props.theme.colors.grey300};
   }
 
   tbody > tr:first-child & {
-    border-top: ${props => props.theme.input.inputDefaultBorder};
+    border-top: ${props => props.theme.colors.grey300};
   }
 
   tbody > tr:first-child &:first-child {
