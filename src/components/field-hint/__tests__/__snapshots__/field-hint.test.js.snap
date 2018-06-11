@@ -2,11 +2,11 @@
 
 exports[`FieldHint should render shallow component ok 1`] = `
 <span
-  className="e1q9f2xp3 css-11vmvox"
+  className="e1q9f2xp3 css-1onqzxr"
   style={Object {}}
 >
   <span
-    className="em7k1990 css-1s1skwd"
+    className="em7k1990 css-kxwt0l"
     color="navy600"
     onClick={undefined}
     size="extra-small"

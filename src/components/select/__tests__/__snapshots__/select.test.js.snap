@@ -4,7 +4,7 @@ exports[`Select should render a disabled select 1`] = `
 <div
   aria-disabled={true}
   aria-expanded={false}
-  className="ev208790 css-1m2abdp"
+  className="ev208790 css-16jqp53"
   data-test="ui-select"
   disabled={true}
   onSelect={[Function]}
@@ -17,7 +17,7 @@ exports[`Select should render a disabled select 1`] = `
     onClick={undefined}
   >
     <span
-      className="em7k1990 css-fjdzb"
+      className="em7k1990 css-1k9eemz"
       color="navy500"
       onClick={undefined}
       size="small"
@@ -30,7 +30,7 @@ exports[`Select should render a disabled select 1`] = `
       open={false}
     >
       <i
-        className="e2anemp0 css-b0kj97"
+        className="e2anemp0 css-qxx9w6"
         color="grey500"
         onClick={undefined}
         size={24}
@@ -107,7 +107,7 @@ exports[`Select should render a readonly select 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  className="ev208790 css-81a5bf"
+  className="ev208790 css-aa2a06"
   data-test="ui-select"
   disabled={false}
   onSelect={[Function]}
@@ -120,7 +120,7 @@ exports[`Select should render a readonly select 1`] = `
     onClick={undefined}
   >
     <span
-      className="em7k1990 css-fjdzb"
+      className="em7k1990 css-1k9eemz"
       color="navy500"
       onClick={undefined}
       size="small"
@@ -133,7 +133,7 @@ exports[`Select should render a readonly select 1`] = `
       open={false}
     >
       <i
-        className="e2anemp0 css-b0kj97"
+        className="e2anemp0 css-qxx9w6"
         color="grey500"
         onClick={undefined}
         size={24}
@@ -210,7 +210,7 @@ exports[`Select should render shallow component ok 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  className="ev208790 css-9ujcl8"
+  className="ev208790 css-1ifaktg"
   data-test="ui-select"
   disabled={false}
   onSelect={[Function]}
@@ -223,7 +223,7 @@ exports[`Select should render shallow component ok 1`] = `
     onClick={[Function]}
   >
     <span
-      className="em7k1990 css-1c6spqq"
+      className="em7k1990 css-1evaecv"
       color="navy700"
       onClick={undefined}
       size="small"
@@ -236,7 +236,7 @@ exports[`Select should render shallow component ok 1`] = `
       open={false}
     >
       <i
-        className="e2anemp0 css-q4r2vh"
+        className="e2anemp0 css-btmkqo"
         color="navy700"
         onClick={undefined}
         size={24}
