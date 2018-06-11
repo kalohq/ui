@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 import styled from 'react-emotion';
-import {compose, getContext, withProps} from 'recompose';
+import {compose, getContext, withProps, setDisplayName} from 'recompose';
 import PropTypes from 'prop-types';
 
 const StyledTableRow = styled('tr')`display: table-row;`;
@@ -21,6 +21,7 @@ export function TableRow(props: TTableRowProps) {
 }
 
 export default compose(
+  setDisplayName('TableRow'),
   getContext({
     table: PropTypes.shape({
       head: PropTypes.bool,

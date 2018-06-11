@@ -101,6 +101,7 @@ export function TableCell(props: TTableCellProps) {
 }
 
 export default compose(
+  setDisplayName('TableCell'),
   getContext({
     table: PropTypes.shape({
       head: PropTypes.bool,

@@ -8,7 +8,9 @@ import {Box, Text, SkeletonAvatar, Icon} from '../..';
 const AVATAR_SIZE = 32;
 const ICON_BUTTON_SIZE = 24;
 
-const ExampleUserRow = ({name, email, level, position}) => (
+// NOTE This is not a component so that the insides of it render inline the
+// example source code
+const exampleUserRow = ({name, email, level, position}) => (
   <TableRow>
     <TableCell paddingRight={0}>
       <SkeletonAvatar height={AVATAR_SIZE} width={AVATAR_SIZE} />
@@ -61,18 +63,18 @@ export const examples = [
           </TableRow>
         </TableHead>
         <TableBody>
-          <ExampleUserRow
-            name="Mike Jablonski"
-            email="mike@acme.com"
-            level="Standard User"
-            position="Editor"
-          />
-          <ExampleUserRow
-            name="Emily Davies"
-            email="emily.has.a.very.long.email.address@acme.com"
-            level="Team Owner"
-            position="HR Manager"
-          />
+          {exampleUserRow({
+            name: 'Mike Jablonski',
+            email: 'mike@acme.com',
+            level: 'Standard User',
+            position: 'Editor',
+          })}
+          {exampleUserRow({
+            name: 'Emily Davies',
+            email: 'emily.has.a.very.long.email.address@acme.com',
+            level: 'Team Owner',
+            position: 'HR Manager',
+          })}
         </TableBody>
       </Table>
     ),
