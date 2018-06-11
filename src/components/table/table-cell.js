@@ -1,64 +1,73 @@
 /* @flow */
 import React from 'react';
 import styled, {css} from 'react-emotion';
-import {compose, getContext, withProps} from 'recompose';
+import {compose, getContext, setDisplayName, withProps} from 'recompose';
 import PropTypes from 'prop-types';
 import Icon from '../icon';
+import {makePrimitive} from '../layout/utils';
 
-const StyledTableCell = styled('td')`
-  display: table-cell;
-  color: ${props => props.theme.colors.navy700};
-  font-weight: 300;
-  text-align: left;
-  padding: ${props => props.theme.layout.spacingSmall};
-  font-size: 14px;
-  min-height: 40px;
-  background-color: ${props => props.theme.colors.white};
-  border-bottom: ${props => props.theme.colors.grey300};
+const StyledTableCell = makePrimitive(
+  'StyledTableCell',
+  styled('td')`
+    display: table-cell;
+    color: ${props => props.theme.colors.navy700};
+    font-weight: 300;
+    text-align: left;
+    padding: ${props => props.theme.layout.spacingSmall};
+    font-size: 14px;
+    min-height: 40px;
+    background-color: ${props => props.theme.colors.white};
+    border-bottom: ${props => props.theme.colors.grey300};
 
-  &:first-child {
-    border-left: ${props => props.theme.colors.grey300};
-  }
+    &:first-child {
+      border-left: ${props => props.theme.colors.grey300};
+    }
 
-  &:last-child {
-    border-right: ${props => props.theme.colors.grey300};
-  }
+    &:last-child {
+      border-right: ${props => props.theme.colors.grey300};
+    }
 
-  tbody > tr:first-child & {
-    border-top: ${props => props.theme.colors.grey300};
-  }
+    tbody > tr:first-child & {
+      border-top: ${props => props.theme.colors.grey300};
+    }
 
-  tbody > tr:first-child &:first-child {
-    border-top-left-radius: ${props => props.theme.input.inputBorderRadius};
-  }
+    tbody > tr:first-child &:first-child {
+      border-top-left-radius: ${props => props.theme.input.inputBorderRadius};
+    }
 
-  tbody > tr:first-child &:last-child {
-    border-top-right-radius: ${props => props.theme.input.inputBorderRadius};
-  }
+    tbody > tr:first-child &:last-child {
+      border-top-right-radius: ${props => props.theme.input.inputBorderRadius};
+    }
 
-  tbody > tr:last-child &:first-child {
-    border-bottom-left-radius: ${props => props.theme.input.inputBorderRadius};
-  }
+    tbody > tr:last-child &:first-child {
+      border-bottom-left-radius: ${props =>
+        props.theme.input.inputBorderRadius};
+    }
 
-  tbody > tr:last-child &:last-child {
-    border-bottom-right-radius: ${props => props.theme.input.inputBorderRadius};
-  }
-`;
+    tbody > tr:last-child &:last-child {
+      border-bottom-right-radius: ${props =>
+        props.theme.input.inputBorderRadius};
+    }
+  `
+);
 
-const StyledTableHeaderCell = styled('th')`
-  display: table-cell;
-  color: ${props => props.theme.colors.navy700};
-  font-weight: 300;
-  text-align: left;
-  padding: ${props => props.theme.layout.spacingSmall};
-  font-size: 14px;
-  min-height: 40px;
-  color: ${props => props.theme.colors.grey500};
+const StyledTableHeaderCell = makePrimitive(
+  'TableHeaderCell',
+  styled('th')`
+    display: table-cell;
+    color: ${props => props.theme.colors.navy700};
+    font-weight: 300;
+    text-align: left;
+    padding: ${props => props.theme.layout.spacingSmall};
+    font-size: 14px;
+    min-height: 40px;
+    color: ${props => props.theme.colors.grey500};
 
-  ${props => props.sortable && css`cursor: pointer;`};
+    ${props => props.sortable && css`cursor: pointer;`};
 
-  ${props => props.active && css`font-weight: 400 !important;`};
-`;
+    ${props => props.active && css`font-weight: 400 !important;`};
+  `
+);
 
 type TTableCellProps = {
   children: any,
