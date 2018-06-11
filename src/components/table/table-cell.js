@@ -5,6 +5,7 @@ import {compose, getContext, setDisplayName, withProps} from 'recompose';
 import PropTypes from 'prop-types';
 import Icon from '../icon';
 import {makePrimitive} from '../layout/utils';
+import {CELL_PADDING} from './constants';
 
 const StyledTableCell = makePrimitive(
   'StyledTableCell',
@@ -13,7 +14,7 @@ const StyledTableCell = makePrimitive(
     color: ${props => props.theme.colors.navy700};
     font-weight: 300;
     text-align: left;
-    padding: ${props => props.theme.layout.spacingSmall};
+    padding: ${CELL_PADDING};
     font-size: 14px;
     min-height: 40px;
     background-color: ${props => props.theme.colors.white};
@@ -58,7 +59,7 @@ const StyledTableHeaderCell = makePrimitive(
     color: ${props => props.theme.colors.navy700};
     font-weight: 300;
     text-align: left;
-    padding: ${props => props.theme.layout.spacingSmall};
+    padding: ${CELL_PADDING};
     font-size: 14px;
     min-height: 40px;
     color: ${props => props.theme.colors.grey500};
