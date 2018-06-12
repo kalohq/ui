@@ -103,4 +103,5 @@
   --button-secondary-hover-background-color: rgb(84, 103, 137);
   --button-secondary-active-background-color: rgb(55, 69, 97);
   --button-secondary-focus-shadow: rgb(208, 216, 223);
+  --table-default-border: "1px solid #EEF4FA";
 }
