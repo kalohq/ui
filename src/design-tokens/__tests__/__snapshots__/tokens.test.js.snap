@@ -67,6 +67,7 @@ Object {
   "inputReadonlyBackground": "#F9FAFC",
   "inputReadonlyBorder": "1px dashed #D0D8DF",
   "inputReadonlyColor": "#546789",
+  "inputTableBorder": "1px solid #EEF4FA",
   "navy": "rgb(147, 166, 193)",
   "navy300": "rgb(249, 250, 252)",
   "navy400": "rgb(198, 199, 216)",
