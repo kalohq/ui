@@ -60,6 +60,7 @@ Object {
   "inputActiveBorder": "1px solid #54C3DB",
   "inputBorderRadius": "4px",
   "inputDefaultBorder": "1px solid #D0D8DF",
+  "inputTableBorder": "1px solid #EEF4FA",
   "inputDisabledBackground": "#F9FAFC",
   "inputDisabledBorder": "1px solid #D0D8DF",
   "inputDisabledColor": "#546789",
