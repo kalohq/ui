@@ -18,18 +18,18 @@ const StyledTableCell = makePrimitive(
     font-size: 14px;
     min-height: 40px;
     background-color: ${props => props.theme.colors.white};
-    border-bottom: ${props => props.theme.colors.grey300};
+    border-bottom: ${props => props.theme.input.inputTableBorder};
 
     &:first-child {
-      border-left: ${props => props.theme.colors.grey300};
+      border-left: ${props => props.theme.input.inputTableBorder};
     }
 
     &:last-child {
-      border-right: ${props => props.theme.colors.grey300};
+      border-right: ${props => props.theme.input.inputTableBorder};
     }
 
     tbody > tr:first-child & {
-      border-top: ${props => props.theme.colors.grey300};
+      border-top: ${props => props.theme.input.inputTableBorder};
     }
 
     tbody > tr:first-child &:first-child {
