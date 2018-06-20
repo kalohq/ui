@@ -102,3 +102,4 @@ export const buttonSecondaryDefaultBackgroundColor = "rgb(55, 69, 97)";
 export const buttonSecondaryHoverBackgroundColor = "rgb(84, 103, 137)";
 export const buttonSecondaryActiveBackgroundColor = "rgb(55, 69, 97)";
 export const buttonSecondaryFocusShadow = "rgb(208, 216, 223)";
+export const tableDefaultBorder = "1px solid #EEF4FA";

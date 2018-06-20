@@ -10,3 +10,4 @@ imports:
   - ./grid.yml
   - ./layout.yml
   - ./button.yml
+  - ./table.yml

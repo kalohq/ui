@@ -103,4 +103,5 @@ module.exports = {
   buttonSecondaryHoverBackgroundColor: "rgb(84, 103, 137)",
   buttonSecondaryActiveBackgroundColor: "rgb(55, 69, 97)",
   buttonSecondaryFocusShadow: "rgb(208, 216, 223)",
+  tableDefaultBorder: "1px solid #EEF4FA",
 };
