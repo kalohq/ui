@@ -178,6 +178,33 @@ const TertiaryButton = styled(CoreButton)`
         `};
 `;
 
+const ActionButton = styled(CoreButton)`
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.13), 0 6px 6px rgba(0, 0, 0, 0);
+  ${props =>
+    !props.disabled &&
+    css`
+      background-color: ${props.theme.button
+        .buttonPrimaryDefaultBackgroundColor};
+      color: #fff;
+
+      &:hover {
+        background-color: ${props.theme.button
+          .buttonPrimaryHoverBackgroundColor};
+      }
+
+      &:focus {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.13), 0 6px 6px rgba(0, 0, 0, 0),
+          0 0 0 3px ${props.theme.button.buttonPrimaryFocusShadow};
+      }
+
+      &:active {
+        background-color: ${props.theme.button
+          .buttonPrimaryActiveBackgroundColor};
+      }
+    `};
+`;
+
 const DeleteButton = styled(CoreButton)`
   ${props =>
     !props.disabled &&
@@ -253,6 +280,8 @@ const getButtonType = type => {
       return TertiaryButton;
     case 'delete':
       return DeleteButton;
+    case 'action':
+      return ActionButton;
     default:
       return TertiaryButton;
   }
@@ -276,7 +305,7 @@ type TProps = {
   /** The visual size */
   size?: 'small' | 'medium' | 'large' | 'extra-large',
   /** The visual theme */
-  theme?: 'primary' | 'secondary' | 'tertiary' | 'delete',
+  theme?: 'primary' | 'secondary' | 'tertiary' | 'delete' | 'action',
   /** Ignore - Set by ButtonGroup */
   grouped?: boolean,
   /** Ignore - Set by ButtonGroup */

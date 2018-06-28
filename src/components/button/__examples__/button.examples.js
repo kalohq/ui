@@ -69,6 +69,14 @@ export const examples = [
     render: () => <Button theme="delete">Remove freelancer</Button>,
   },
   {
+    title: 'Action Button',
+    description:
+      'A primary button used for actions - Only ever used once per view',
+    render: () => (
+      <Button theme="action" icon="add" loneIcon={true} size="extra-large" />
+    ),
+  },
+  {
     title: 'Disabled Button',
     description:
       'Buttons can be disabled by toggling the disabled state. This will prevent any user interaction with the button (onClick will also be disabled).',
