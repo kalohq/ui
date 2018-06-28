@@ -4,71 +4,73 @@ import styled, {css} from 'react-emotion';
 import {compose, getContext, setDisplayName, withProps} from 'recompose';
 import PropTypes from 'prop-types';
 import Icon from '../icon';
-import {makePrimitive} from '../layout/utils';
+import {pickStyles} from '../../utils/style';
 import {CELL_PADDING} from './constants';
 
-const StyledTableCell = makePrimitive(
-  'StyledTableCell',
-  styled('td')`
-    display: table-cell;
-    color: ${props => props.theme.colors.navy700};
-    font-weight: 300;
-    text-align: left;
-    padding: ${CELL_PADDING};
-    font-size: 14px;
-    min-height: 40px;
-    background-color: ${props => props.theme.colors.white};
+const outerBorder = props =>
+  props.tableBorder ? props.theme.table.tableDefaultBorder : 'none';
+
+const StyledTableCell = styled('td')`
+  display: table-cell;
+  color: ${props => props.theme.colors.navy700};
+  font-weight: 300;
+  text-align: left;
+  padding: ${CELL_PADDING};
+  font-size: 14px;
+  min-height: 40px;
+  background-color: ${props => props.theme.colors.white};
+
+  tbody > tr:not(:last-child) > & {
     border-bottom: ${props => props.theme.table.tableDefaultBorder};
+  }
 
-    &:first-child {
-      border-left: ${props => props.theme.table.tableDefaultBorder};
-    }
+  tbody > tr:last-child > & {
+    border-bottom: ${outerBorder};
+  }
 
-    &:last-child {
-      border-right: ${props => props.theme.table.tableDefaultBorder};
-    }
+  &:first-child {
+    border-left: ${outerBorder};
+  }
 
-    tbody > tr:first-child & {
-      border-top: ${props => props.theme.table.tableDefaultBorder};
-    }
+  &:last-child {
+    border-right: ${outerBorder};
+  }
 
-    tbody > tr:first-child &:first-child {
-      border-top-left-radius: ${props => props.theme.input.inputBorderRadius};
-    }
+  tbody > tr:first-child & {
+    border-top: ${outerBorder};
+  }
 
-    tbody > tr:first-child &:last-child {
-      border-top-right-radius: ${props => props.theme.input.inputBorderRadius};
-    }
+  tbody > tr:first-child &:first-child {
+    border-top-left-radius: ${props => props.theme.input.inputBorderRadius};
+  }
 
-    tbody > tr:last-child &:first-child {
-      border-bottom-left-radius: ${props =>
-        props.theme.input.inputBorderRadius};
-    }
+  tbody > tr:first-child &:last-child {
+    border-top-right-radius: ${props => props.theme.input.inputBorderRadius};
+  }
 
-    tbody > tr:last-child &:last-child {
-      border-bottom-right-radius: ${props =>
-        props.theme.input.inputBorderRadius};
-    }
-  `
-);
+  tbody > tr:last-child &:first-child {
+    border-bottom-left-radius: ${props => props.theme.input.inputBorderRadius};
+  }
 
-const StyledTableHeaderCell = makePrimitive(
-  'TableHeaderCell',
-  styled('th')`
-    display: table-cell;
-    color: ${props => props.theme.colors.navy700};
-    font-weight: 300;
-    text-align: left;
-    padding: ${CELL_PADDING};
-    font-size: 14px;
-    min-height: 40px;
-    color: ${props => props.theme.colors.grey500};
+  tbody > tr:last-child &:last-child {
+    border-bottom-right-radius: ${props => props.theme.input.inputBorderRadius};
+  }
+`;
 
-    ${props => props.sortable && css`cursor: pointer;`};
+const StyledTableHeaderCell = styled('th')`
+  display: table-cell;
+  color: ${props => props.theme.colors.navy700};
+  font-weight: 300;
+  text-align: left;
+  padding: ${CELL_PADDING};
+  font-size: 14px;
+  min-height: 40px;
+  color: ${props => props.theme.colors.grey500};
 
-    ${props => props.active && css`font-weight: 400 !important;`};
-  `
-);
+  ${props => props.sortable && css`cursor: pointer;`};
+
+  ${props => props.active && css`font-weight: 400 !important;`};
+`;
 
 type TTableCellProps = {
   children: any,
@@ -80,20 +82,23 @@ type TTableCellProps = {
     head?: boolean,
     body?: boolean,
     footer?: boolean,
+    border?: boolean,
   },
   // Derived from props
   header: boolean,
   active: boolean,
   sortable: boolean,
+  outerBorder: boolean,
 };
 
 export function TableCell(props: TTableCellProps) {
-  const {active, children, header, order} = props;
+  const {active, children, header, order, ...otherProps} = props;
+  const style = pickStyles(otherProps);
   const icon = `keyboard_arrow_${order === 'desc' ? 'down' : 'up'}`;
   const Component = header ? StyledTableHeaderCell : StyledTableCell;
 
   return (
-    <Component {...props}>
+    <Component {...props} style={style}>
       {children}
       {active && <Icon>{icon}</Icon>}
     </Component>
@@ -107,6 +112,7 @@ export default compose(
       head: PropTypes.bool,
       body: PropTypes.bool,
       footer: PropTypes.bool,
+      border: PropTypes.bool,
     }),
   }),
   withProps(props => {
@@ -114,10 +120,7 @@ export default compose(
     const active =
       header && !!props.id && !!props.orderBy && props.id === props.orderBy;
     const sortable = !!props.orderBy;
-    return {
-      header,
-      active,
-      sortable,
-    };
+    const tableBorder = !!props.table.border;
+    return {header, active, sortable, tableBorder};
   })
 )(TableCell);

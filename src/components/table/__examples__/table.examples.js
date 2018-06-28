@@ -35,7 +35,7 @@ const exampleUserRow = ({name, email, level, position}) => (
         {position}
       </Text>
     </TableCell>
-    <TableCell paddingLeft={0} paddingRight={0}>
+    <TableCell>
       <Box cursor="pointer">
         <Icon size={ICON_BUTTON_SIZE} color="navy600">
           more_vert
@@ -45,38 +45,47 @@ const exampleUserRow = ({name, email, level, position}) => (
   </TableRow>
 );
 
+const renderExample = ({border} = {}) => () => (
+  <Table>
+    <TableHead>
+      <TableRow>
+        <TableCell width={`calc(${AVATAR_SIZE}px + ${CELL_PADDING})`}>
+          Name
+        </TableCell>
+        <TableCell />
+        <TableCell>User Level</TableCell>
+        <TableCell>Position</TableCell>
+        <TableCell
+          width={`calc(${ICON_BUTTON_SIZE}px + 2 * ${CELL_PADDING})`}
+        />
+      </TableRow>
+    </TableHead>
+    <TableBody border={border}>
+      {exampleUserRow({
+        name: 'Mike Jablonski',
+        email: 'mike@acme.com',
+        level: 'Standard User',
+        position: 'Editor',
+      })}
+      {exampleUserRow({
+        name: 'Emily Davies',
+        email: 'emily.has.a.very.long.email.address@acme.com',
+        level: 'Team Owner',
+        position: 'HR Manager',
+      })}
+    </TableBody>
+  </Table>
+);
+
 export const examples = [
   {
     title: 'Table',
-    description: 'A lightweight table with basic styling',
-    render: () => (
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableCell width={`calc(${AVATAR_SIZE}px + ${CELL_PADDING})`}>
-              Name
-            </TableCell>
-            <TableCell />
-            <TableCell>User Level</TableCell>
-            <TableCell>Position</TableCell>
-            <TableCell width={ICON_BUTTON_SIZE} />
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {exampleUserRow({
-            name: 'Mike Jablonski',
-            email: 'mike@acme.com',
-            level: 'Standard User',
-            position: 'Editor',
-          })}
-          {exampleUserRow({
-            name: 'Emily Davies',
-            email: 'emily.has.a.very.long.email.address@acme.com',
-            level: 'Team Owner',
-            position: 'HR Manager',
-          })}
-        </TableBody>
-      </Table>
-    ),
+    description: 'A lightweight table with basic styling ✨',
+    render: renderExample(),
+  },
+  {
+    title: 'Borderless table',
+    description: 'Sure, borders are optional ✌️',
+    render: renderExample({border: false}),
   },
 ];

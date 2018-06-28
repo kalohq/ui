@@ -15,9 +15,11 @@ export class TableBody extends React.Component<{children: React$Node}> {
   };
 
   getChildContext() {
+    const {border = true} = this.props;
     return {
       table: {
         body: true,
+        border,
       },
     };
   }
