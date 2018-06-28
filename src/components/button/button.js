@@ -27,7 +27,7 @@ const BUTTON_SIZING = {
     iconSize: 20,
   },
   'extra-large': {
-    height: 56,
+    height: 52,
     padding: 26,
     fontSize: 14,
     iconSize: 24,
