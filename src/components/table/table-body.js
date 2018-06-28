@@ -5,8 +5,12 @@ import PropTypes from 'prop-types';
 
 const StyledTableBody = styled('tbody')`display: table-row-group;`;
 
-export class TableBody extends React.Component<{children: React$Node}> {
+export class TableBody extends React.Component<{
+  border?: boolean,
+  children: React$Node,
+}> {
   static propTypes = {
+    border: PropTypes.boolean,
     children: PropTypes.node.isRequired,
   };
 

@@ -1,5 +1,6 @@
 /* @flow */
 import React from 'react';
+import {get} from 'lodash';
 import styled, {css} from 'react-emotion';
 import {compose, getContext, setDisplayName, withProps} from 'recompose';
 import PropTypes from 'prop-types';
@@ -120,7 +121,7 @@ export default compose(
     const active =
       header && !!props.id && !!props.orderBy && props.id === props.orderBy;
     const sortable = !!props.orderBy;
-    const tableBorder = !!props.table.border;
+    const tableBorder = !!get(props, ['table', 'border']);
     return {header, active, sortable, tableBorder};
   })
 )(TableCell);
