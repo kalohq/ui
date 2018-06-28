@@ -10,7 +10,7 @@ export class TableBody extends React.Component<{
   children: React$Node,
 }> {
   static propTypes = {
-    border: PropTypes.boolean,
+    border: PropTypes.bool,
     children: PropTypes.node.isRequired,
   };
 
