@@ -5,6 +5,7 @@ import {isBoolean, isString} from 'lodash';
 import styled, {css} from 'react-emotion';
 
 import Text from '../text';
+import Icon from '../icon';
 import {Flex} from '../layout';
 
 const EXPANDS_BUFFER = 5;
@@ -89,6 +90,19 @@ const StyledInputContainer = styled(Flex)`
   transition: background-color, border-color 160ms linear;
   user-select: text;
   width: 100%;
+  position: relative;
+`;
+
+const InputIcon = styled(Flex)`
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: ${props => INPUT_SIZE_MAP[props.size].size}px;
+  width: ${props => INPUT_SIZE_MAP[props.size].size}px;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
 `;
 
 const StyledInput = styled.input`
@@ -97,6 +111,7 @@ const StyledInput = styled.input`
   color: ${props => props.theme.colors.navy700};
   font-size: ${props => INPUT_SIZE_MAP[props.size].fontSize}px;
   height: ${props => INPUT_SIZE_MAP[props.size].size}px;
+  padding-left: ${props => props.withIcon && '40px'}!important;
 
   &:focus {
     outline: 0;
@@ -172,13 +187,21 @@ const StyledInput = styled.input`
   ${props =>
     props.inputTheme === 'well' &&
     css`
-      border: 1px solid ${props.theme.colors.grey500};
-      padding: 7px 10px;
-    `} ${props =>
-      props.valid &&
-      css`
-        border-color: ${props.theme.colors.green500}!important;
-      `};
+      border-radius: ${props.theme.input.inputBorderRadius};
+      background-color: ${props.theme.colors.grey200};
+      border: 0;
+      padding: 4px 8px 4px 16px;
+
+      &::placeholder {
+        color: ${props.theme.colors.navy500};
+      }
+    `};
+
+  ${props =>
+    props.valid &&
+    css`
+      border-color: ${props.theme.colors.green500}!important;
+    `};
 
   ${props =>
     props.invalid &&
@@ -227,6 +250,8 @@ type TProps = {
   /** A value to display after (to the right) the input */
   addonSuffix: string | React$Node,
   fullWidth?: boolean,
+  /** An icon to displau to the left of the input */
+  icon?: string,
 };
 
 type TState = {
@@ -332,6 +357,7 @@ export default class Input extends PureComponent<TProps, TState> {
       inputRef,
       addonPrefix,
       addonSuffix,
+      icon,
       ...otherProps
     } = this.props;
 
@@ -351,9 +377,16 @@ export default class Input extends PureComponent<TProps, TState> {
 
     return (
       <StyledInputContainer marginBottom={margin} className={className}>
-        {addonPrefix ? (
+        {addonPrefix && (
           <InputAddon inputTheme={theme} content={addonPrefix} type="prefix" />
-        ) : null}
+        )}
+        {icon && (
+          <InputIcon size={size}>
+            <Icon size={18} color="navy600">
+              {icon}
+            </Icon>
+          </InputIcon>
+        )}
         <StyledInput
           {...otherProps}
           /** Emotion Props */
@@ -367,6 +400,7 @@ export default class Input extends PureComponent<TProps, TState> {
           size={size}
           withAddonPrefix={!!addonPrefix}
           withAddonSuffix={!!addonSuffix}
+          withIcon={!!icon}
           /** Other Props */
           ref={focusOnMount ? _focusOnMount : inputRef}
           style={_styles}
