@@ -10,6 +10,11 @@ export const examples = [
     render: () => <Input placeholder="Your first name" />,
   },
   {
+    title: 'Well input',
+    description: 'A highlighted input that turns into a normal input on focus',
+    render: () => <Input placeholder="Location" theme="well" icon="search" />,
+  },
+  {
     title: 'Disabled Input',
     description:
       "An input that is disabled and doesn't allow user manipulation",
