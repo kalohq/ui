@@ -36,11 +36,11 @@ export const examples = [
     description: 'A standard Grid',
     render: () => (
       <Grid>
-        <Row marginBottom="large" alignItems="center">
-          <Column columns={2}>
+        <Row is="section" marginBottom="large">
+          <Column xs={12} sm={2}>
             <DemoSlab>2</DemoSlab>
           </Column>
-          <Column columns={10}>
+          <Column xs={12} sm={10}>
             <DemoSlab>10</DemoSlab>
           </Column>
         </Row>
