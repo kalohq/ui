@@ -75,14 +75,43 @@ type TRowProps = {
     | 'none',
   collapse?: boolean,
   reverse?: boolean,
+  alignItems?: Array<*> | string,
+  justifyContent?: Array<*> | string,
 };
 
 export function Row(props: TRowProps) {
-  const {children, reverse, ...otherProps} = props;
+  const {
+    children,
+    reverse,
+    alignItems = [],
+    justifyContent = [],
+    ...otherProps
+  } = props;
+
+  const [alignItemsXS, alignItemsSM, alignItemsMD, alignItemsLG] = [
+    ...alignItems,
+  ].map(val => val.replace('flex-', ''));
+
+  const [
+    justifyContentXS,
+    justifyContentSM,
+    justifyContentMD,
+    justifyContentLG,
+  ] = [...justifyContent].map(val =>
+    val.replace('flex-', '').replace('space-', '')
+  );
 
   const _classNames = cx({
     [styles.row]: true,
     [styles.reverse]: reverse,
+    [styles[`align-xs-${alignItemsXS}`]]: alignItemsXS,
+    [styles[`align-sm-${alignItemsSM}`]]: alignItemsSM,
+    [styles[`align-md-${alignItemsMD}`]]: alignItemsMD,
+    [styles[`align-lg-${alignItemsLG}`]]: alignItemsLG,
+    [styles[`justify-xs-${justifyContentXS}`]]: justifyContentXS,
+    [styles[`justify-sm-${justifyContentSM}`]]: justifyContentSM,
+    [styles[`justify-md-${justifyContentMD}`]]: justifyContentMD,
+    [styles[`justify-lg-${justifyContentLG}`]]: justifyContentLG,
   });
 
   return (
@@ -97,28 +126,23 @@ export function Row(props: TRowProps) {
  */
 
 type TColumnProps = {
-  columns?: number,
+  columns: Array<*> | number,
   children?: any,
-  xs?: number,
-  sm?: number,
-  md?: number,
-  lg?: number,
-  reverse?: boolean,
   largeColumn?: number,
 };
 
 export function Column(props: TColumnProps) {
-  const {columns, xs, sm, md, lg, reverse, children, ...otherProps} = props;
+  const {columns = [], children, ...otherProps} = props;
 
-  /* Backwards compat to support legacy columns props */
-  const xsColumn = columns && !xs && !sm && !md && !lg ? columns : xs ? xs : 12;
+  const [columnXS, columnSM, columnMD, columnLG] = Array.isArray(columns)
+    ? columns
+    : [columns];
 
   const _classNames = cx({
-    [styles[`col-xs-${String(xsColumn)}`]]: xsColumn,
-    [styles[`col-sm-${String(sm)}`]]: sm,
-    [styles[`col-md-${String(md)}`]]: md,
-    [styles[`col-lg-${String(lg)}`]]: lg,
-    [styles.reverse]: reverse,
+    [styles[`col-xs-${String(columnXS)}`]]: columnXS,
+    [styles[`col-sm-${String(columnSM)}`]]: columnSM,
+    [styles[`col-md-${String(columnMD)}`]]: columnMD,
+    [styles[`col-lg-${String(columnLG)}`]]: columnLG,
   });
 
   return (

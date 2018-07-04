@@ -16,10 +16,6 @@
   --container-lg: calc(var(--lg-min) + var(--gutter-width));
 }
 
-@custom-media --sm-viewport only screen and (min-width: 48em);
-@custom-media --md-viewport only screen and (min-width: 64em);
-@custom-media --lg-viewport only screen and (min-width: 75em);
-
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -195,50 +191,42 @@
   margin-left: 91.66666667%;
 }
 
-.start-xs {
+.justify-xs-start {
   justify-content: flex-start;
   text-align: start;
 }
 
-.center-xs {
+.justify-xs-center {
   justify-content: center;
   text-align: center;
 }
 
-.end-xs {
+.justify-xs-end {
   justify-content: flex-end;
   text-align: end;
 }
 
-.top-xs {
-  align-items: flex-start;
-}
-
-.middle-xs {
-  align-items: center;
-}
-
-.bottom-xs {
-  align-items: flex-end;
-}
-
-.around-xs {
+.justify-xs-around {
   justify-content: space-around;
 }
 
-.between-xs {
+.justify-xs-between {
   justify-content: space-between;
 }
 
-.first-xs {
-  order: -1;
+.align-xs-start {
+  align-items: flex-start;
 }
 
-.last-xs {
-  order: 1;
+.align-xs-center {
+  align-items: center;
 }
 
-@media (--sm-viewport) {
+.align-xs-end {
+  align-items: flex-end;
+}
+
+@media screen and (min-width: 768px) {
   .container {
     max-width: var(--container-sm, 46rem);
   }
@@ -389,51 +377,43 @@
     margin-left: 91.66666667%;
   }
 
-  .start-sm {
+  .justify-sm-start {
     justify-content: flex-start;
     text-align: start;
   }
 
-  .center-sm {
+  .justify-sm-center {
     justify-content: center;
     text-align: center;
   }
 
-  .end-sm {
+  .justify-sm-end {
     justify-content: flex-end;
     text-align: end;
   }
 
-  .top-sm {
-    align-items: flex-start;
-  }
-
-  .middle-sm {
-    align-items: center;
-  }
-
-  .bottom-sm {
-    align-items: flex-end;
-  }
-
-  .around-sm {
+  .justify-sm-around {
     justify-content: space-around;
   }
 
-  .between-sm {
+  .justify-sm-between {
     justify-content: space-between;
   }
 
-  .first-sm {
-    order: -1;
+  .align-sm-start {
+    align-items: flex-start;
   }
 
-  .last-sm {
-    order: 1;
+  .align-sm-center {
+    align-items: center;
+  }
+
+  .align-sm-end {
+    align-items: flex-end;
   }
 }
 
-@media (--md-viewport) {
+@media screen and (min-width: 1024px) {
   .container {
     max-width: var(--container-md, 61rem);
   }
@@ -584,51 +564,43 @@
     margin-left: 91.66666667%;
   }
 
-  .start-md {
+  .justify-md-start {
     justify-content: flex-start;
     text-align: start;
   }
 
-  .center-md {
+  .justify-md-center {
     justify-content: center;
     text-align: center;
   }
 
-  .end-md {
+  .justify-md-end {
     justify-content: flex-end;
     text-align: end;
   }
 
-  .top-md {
-    align-items: flex-start;
-  }
-
-  .middle-md {
-    align-items: center;
-  }
-
-  .bottom-md {
-    align-items: flex-end;
-  }
-
-  .around-md {
+  .justify-md-around {
     justify-content: space-around;
   }
 
-  .between-md {
+  .justify-md-between {
     justify-content: space-between;
   }
 
-  .first-md {
-    order: -1;
+  .align-md-start {
+    align-items: flex-start;
   }
 
-  .last-md {
-    order: 1;
+  .align-md-center {
+    align-items: center;
+  }
+
+  .align-md-end {
+    align-items: flex-end;
   }
 }
 
-@media (--lg-viewport) {
+@media screen and (min-width: 1424px) {
   .container {
     max-width: var(--container-lg, 71rem);
   }
@@ -779,46 +751,38 @@
     margin-left: 91.66666667%;
   }
 
-  .start-lg {
+  .justify-lg-start {
     justify-content: flex-start;
     text-align: start;
   }
 
-  .center-lg {
+  .justify-lg-center {
     justify-content: center;
     text-align: center;
   }
 
-  .end-lg {
+  .justify-lg-end {
     justify-content: flex-end;
     text-align: end;
   }
 
-  .top-lg {
-    align-items: flex-start;
-  }
-
-  .middle-lg {
-    align-items: center;
-  }
-
-  .bottom-lg {
-    align-items: flex-end;
-  }
-
-  .around-lg {
+  .justify-lg-around {
     justify-content: space-around;
   }
 
-  .between-lg {
+  .justify-lg-between {
     justify-content: space-between;
   }
 
-  .first-lg {
-    order: -1;
+  .align-lg-start {
+    align-items: flex-start;
   }
 
-  .last-lg {
-    order: 1;
+  .align-lg-center {
+    align-items: center;
+  }
+
+  .align-lg-end {
+    align-items: flex-end;
   }
 }
