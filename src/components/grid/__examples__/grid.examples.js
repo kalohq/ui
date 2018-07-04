@@ -36,8 +36,8 @@ export const examples = [
     description: 'A standard Grid',
     render: () => (
       <Grid>
-        <Row is="section" marginBottom="large">
-          <Column columns={[12, 12, 2]} justifyContent={['flex-end']}>
+        <Row is="section" marginBottom="large" justifyContent="space-between">
+          <Column columns={[12, 12, 2]}>
             <DemoSlab>2</DemoSlab>
           </Column>
           <Column columns={[12, 12, 10]}>

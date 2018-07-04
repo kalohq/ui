@@ -20,6 +20,7 @@
   margin-right: auto;
   margin-left: auto;
   width: 100%;
+  max-width: 1600px;
 }
 
 .container.fluid {
@@ -227,10 +228,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: var(--container-sm, 46rem);
-  }
-
   .col-sm,
   .col-sm-1,
   .col-sm-2,
@@ -414,10 +411,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .container {
-    max-width: var(--container-md, 61rem);
-  }
-
   .col-md,
   .col-md-1,
   .col-md-2,
@@ -601,10 +594,6 @@
 }
 
 @media screen and (min-width: 1424px) {
-  .container {
-    max-width: var(--container-lg, 71rem);
-  }
-
   .col-lg,
   .col-lg-1,
   .col-lg-2,

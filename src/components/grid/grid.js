@@ -88,16 +88,23 @@ export function Row(props: TRowProps) {
     ...otherProps
   } = props;
 
-  const [alignItemsXS, alignItemsSM, alignItemsMD, alignItemsLG] = [
-    ...alignItems,
-  ].map(val => val.replace('flex-', ''));
+  const [
+    alignItemsXS,
+    alignItemsSM,
+    alignItemsMD,
+    alignItemsLG,
+  ] = (Array.isArray(alignItems) ? alignItems : [alignItems]).map(val =>
+    val.replace('flex-', '')
+  );
 
   const [
     justifyContentXS,
     justifyContentSM,
     justifyContentMD,
     justifyContentLG,
-  ] = [...justifyContent].map(val =>
+  ] = (Array.isArray(justifyContent)
+    ? justifyContent
+    : [justifyContent]).map(val =>
     val.replace('flex-', '').replace('space-', '')
   );
 
