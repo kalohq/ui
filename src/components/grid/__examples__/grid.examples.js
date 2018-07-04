@@ -38,7 +38,6 @@ export const examples = [
       <Grid>
         <Row is="section" marginBottom="large">
           <Column columns={[12, 12, 2]} justifyContent={['flex-end']}>
-            sg
             <DemoSlab>2</DemoSlab>
           </Column>
           <Column columns={[12, 12, 10]}>
