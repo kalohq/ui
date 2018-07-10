@@ -8,7 +8,7 @@ import SideNav, {NAV_IN_FOOTER_BREAKPOINT} from '../components/side-nav';
 
 import theme from '../../../src/components/theme';
 import IconSymbols from '../../../src/components/icon-symbols';
-import '../../../src/styles/transitions.css';
+// import '../../../src/styles/transitions.css';
 
 import FSPBlond from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-Blond.woff';
 import FSPBlond2 from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-Blond.woff2';

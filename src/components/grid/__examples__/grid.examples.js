@@ -36,20 +36,20 @@ export const examples = [
     description: 'A standard Grid',
     render: () => (
       <Grid>
-        <Row marginBottom="large" alignItems="center">
-          <Column columns={2}>
+        <Row is="section" marginBottom="large" justifyContent="space-between">
+          <Column columns={[12, 12, 2]}>
             <DemoSlab>2</DemoSlab>
           </Column>
-          <Column columns={10}>
+          <Column columns={[12, 12, 10]}>
             <DemoSlab>10</DemoSlab>
           </Column>
         </Row>
 
         <Row marginBottom="large">
-          <Column columns={3}>
+          <Column columns={[12, 12, 3]}>
             <DemoSlab>3</DemoSlab>
           </Column>
-          <Column columns={9}>
+          <Column columns={[12, 12, 9]}>
             <DemoSlab>9</DemoSlab>
           </Column>
         </Row>
@@ -128,10 +128,10 @@ export const examples = [
       <Grid>
         <DemoCard>
           <Row spacing="small" alignItems="center">
-            <Column columns={4}>
+            <Column columns={[12, 6, 4]}>
               <H3 margin="none">A longer project title</H3>
             </Column>
-            <Column columns={2}>
+            <Column columns={[12, 6, 4]}>
               <Text>Project Ongoing</Text>
             </Column>
           </Row>
@@ -144,11 +144,11 @@ export const examples = [
     description: 'An example of how to use the grid with form elements',
     render: () => (
       <Grid>
-        <Row spacing="medium" alignItems="center">
-          <Column columns={6}>
+        <Row alignItems={['center', 'flex-start']}>
+          <Column columns={[12, 6]}>
             <Input placeholder="Your name" />
           </Column>
-          <Column columns={6}>
+          <Column columns={[12, 6]}>
             <Input placeholder="Your email" />
           </Column>
         </Row>
