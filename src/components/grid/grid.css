@@ -36,6 +36,7 @@
   flex-wrap: wrap;
   margin-right: var(--gutter-compensation, -0.5rem);
   margin-left: var(--gutter-compensation, -0.5rem);
+  width: 100%;
 }
 
 .row.reverse {
