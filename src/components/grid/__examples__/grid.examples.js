@@ -32,8 +32,8 @@ DemoCard.displayName = 'DemoCard';
 
 export const examples = [
   {
-    title: 'Grid',
-    description: 'A standard Grid',
+    title: 'Responsive Grid',
+    description: 'A grid with responsive columns',
     render: () => (
       <Grid>
         <Row is="section" marginBottom="large" justifyContent="space-between">
@@ -55,16 +55,16 @@ export const examples = [
         </Row>
 
         <Row marginBottom="large">
-          <Column columns={4}>
+          <Column columns={[12, 12, 4]}>
             <DemoSlab>4</DemoSlab>
           </Column>
-          <Column columns={8}>
+          <Column columns={[12, 12, 8]}>
             <DemoSlab>8</DemoSlab>
           </Column>
         </Row>
 
         <Row>
-          <Column columns={12}>
+          <Column>
             <DemoSlab>12</DemoSlab>
           </Column>
         </Row>
