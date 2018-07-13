@@ -1,6 +1,6 @@
 :root {
-  --gutter-width: 1rem;
-  --outer-margin: 2rem;
+  --gutter-width: 16px;
+  --outer-margin: 32px;
   --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
   --half-gutter-width: calc((var(--gutter-width) * 0.5));
   --xs-min: 30;
@@ -36,7 +36,6 @@
   flex-wrap: wrap;
   margin-right: var(--gutter-compensation, -0.5rem);
   margin-left: var(--gutter-compensation, -0.5rem);
-  width: 100%;
 }
 
 .row.reverse {
