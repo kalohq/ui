@@ -14,9 +14,7 @@ const DemoSlab = styled.div`
   color: ${props => props.theme.colors.navy500};
   border: 1px solid ${props => props.theme.colors.grey400};
   font-size: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
 `;
 
 DemoSlab.displayName = 'DemoSlab';
