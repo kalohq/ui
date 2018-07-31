@@ -175,6 +175,9 @@ export const ICONS = new Enum({
   HIGHLIGHT_OFF: {
     value: 'highlight_off',
   },
+  HOW_TO_REG: {
+    value: 'how_to_reg',
+  },
   INFO: {
     value: 'info',
   },
