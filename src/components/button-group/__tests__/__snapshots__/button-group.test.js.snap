@@ -53,7 +53,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
   transition: background 0.3s ease-out,color 0.2s ease-out;
   margin-left: 2.5px;
   margin-right: 2.5px;
-  background-color: rgb(62,179,138);
+  background-color: rgb(234,95,110);
   color: #fff;
 }
 
@@ -62,15 +62,15 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
 }
 
 .emotion-11:hover {
-  background-color: rgb(79,210,164);
+  background-color: rgb(247,134,146);
 }
 
 .emotion-11:focus {
-  box-shadow: 0 0 0 3px rgb(216,240,232);
+  box-shadow: 0 0 0 3px rgb(251,223,226);
 }
 
 .emotion-11:active {
-  background-color: rgb(56,160,124);
+  background-color: rgb(224,88,103);
   box-shadow: none;
 }
 
