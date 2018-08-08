@@ -6,8 +6,8 @@ import cx from 'classnames';
 import Icon from '../icon';
 import LoadingSpinner from '../loading-spinner';
 
-import coreStyles from './button-core.css';
-import reactStyles from './button-react.css';
+import coreStyles from './button.core.css';
+import reactStyles from './button.react.css';
 
 const ICON_SIZE = {
   small: 14,
