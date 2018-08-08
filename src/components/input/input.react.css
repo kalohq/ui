@@ -1,0 +1,79 @@
+.ui-input-container {
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+  transition: background-color, border-color 160ms linear;
+  user-select: text;
+  width: 100%;
+  position: relative;
+}
+
+.ui-input-container--margin-none {
+  margin-bottom: 0px;
+}
+
+.ui-input-container--margin-small {
+  margin-bottom: 8px;
+}
+
+.ui-input-container--margin-medium {
+  margin-bottom: 16px;
+}
+
+.ui-input-container--margin-large {
+  margin-bottom: 32px;
+}
+
+.ui-input-addon {
+  min-width: 40px;
+  height: 40px;
+  flex-flow: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grey300);
+  color: var(--navy600);
+  border: 1px solid #dfe2e4;
+  padding: 0 16px;
+  display: flex;
+  border-radius: 4px;
+}
+
+.ui-input-addon--prefix {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 0;
+}
+
+.ui-input-addon--suffix {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 0;
+}
+
+.ui-input--with-addon-suffix {
+  border-right: 1px solid #dfe2e4;
+  border-radius: 4px 0 0 4px;
+}
+
+.ui-input--with-addon-prefix {
+  border-left: 1px solid #dfe2e4;
+  border-radius: 0 4px 4px 0;
+}
+
+.ui-input-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.ui-input--with-icon {
+  padding-left: 40px;
+}
