@@ -1,52 +1,9 @@
 /* @flow */
 import * as React from 'react';
-import styled, {css} from 'react-emotion';
+import cx from 'classnames';
 
-import {Box} from '../layout';
+import coreStyles from './paper.core.css';
 
-import tokens from '../../design-tokens/tokens';
-
-const SHADOW_LEVELS_MAP = {
-  '0': tokens.boxShadowLevel0,
-  '1': tokens.boxShadowLevel0,
-  '2': tokens.boxShadowLevel1,
-  '3': tokens.boxShadowLevel2,
-  '4': tokens.boxShadowLevel3,
-  '5': tokens.boxShadowLevel4,
-};
-
-const StyledPaper = styled(Box)`
-  position: relative;
-  background: white;
-  box-sizing: content-box;
-  transition: all 0.2s ease-in-out;
-  cursor: ${props => (props.interactive ? 'pointer' : null)};
-  margin: ${props => (props.focused ? '0 - 10px' : null)};
-
-  border: ${props =>
-    props.border ? `1px solid ${props.theme.colors.grey300}` : 0};
-  border-radius: ${props => (props.rounded ? '5px' : 0)};
-  box-shadow: ${props => SHADOW_LEVELS_MAP[props.level]};
-
-  &:hover {
-    box-shadow: ${props => SHADOW_LEVELS_MAP[props.hoverLevel]};
-  }
-
-  ${props =>
-    props.wireframe &&
-    css`
-      background: transparent;
-      border: 1px dashed ${props.theme.colors.grey500};
-    `};
-
-  ${props =>
-    props.opaque &&
-    css`
-      background: none;
-      border: 0;
-      box-shadow: none !important;
-    `};
-`;
 type Props = {
   focused?: boolean,
   rounded?: boolean,
@@ -69,37 +26,42 @@ type Props = {
  */
 export default function Paper(props: Props) {
   const {
-    focused,
-    padded,
     border = true,
     children,
     elevation = 1,
     hoverElevation = 1,
-    rounded = true,
     opaque,
     wireframe,
     onClick,
+    component: Component = 'div',
+    className,
     ...otherProps
   } = props;
 
   const zDepth = Math.min(elevation, 5);
   const hoverZDepth = Math.min(hoverElevation, 5);
 
+  const _classNames = cx(
+    {
+      [coreStyles['ui-paper']]: true,
+      [coreStyles[`ui-paper--level-${zDepth}`]]: true,
+      [coreStyles[`ui-paper--hover-level-${hoverZDepth}`]]: true,
+      [coreStyles['ui-paper--opaque']]: opaque,
+      [coreStyles['ui-paper--wireframe']]: wireframe,
+      [coreStyles['ui-paper--no-border']]: !border,
+      [coreStyles['ui-paper--interactive']]: !!onClick,
+    },
+    className
+  );
+
   return (
-    <StyledPaper
-      focused={focused}
-      border={border}
-      rounded={rounded}
-      padded={padded}
-      opaque={opaque}
-      wireframe={wireframe}
+    <Component
       interactive={!!onClick}
-      level={zDepth}
-      hoverLevel={hoverZDepth}
       onClick={onClick}
+      classNames={_classNames}
       {...otherProps}
     >
       {children}
-    </StyledPaper>
+    </Component>
   );
 }
