@@ -61,7 +61,11 @@ gulp.task('react:copy-design-tokens', () =>
  */
 gulp.task('css:build-css', () => {
   return gulp
-    .src(['./src/components/**/*.css', '!./src/components/**/*.react.css'])
+    .src([
+      './src/components/**/*.css',
+      '!./src/components/**/*.react.css',
+      '!./src/components/grid/grid.css',
+    ])
     .pipe(concat('ui-bundle.css'))
     .pipe(postcss())
     .pipe(gulp.dest('css-package-lib'));
