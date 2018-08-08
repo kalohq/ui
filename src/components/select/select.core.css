@@ -1,0 +1,49 @@
+.ui-select {
+  display: block;
+  width: 100%;
+  position: relative;
+  border: 1px solid var(--grey400);
+  border-radius: 4px;
+  background-color: var(--white);
+  height: 40px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    border: 1px solid var(--grey500);
+  }
+
+  &:focus {
+    outline: 0;
+    border: 1px solid var(--blue500);
+  }
+}
+
+.ui-select:disabled,
+.ui-select--disabled {
+  background-color: var(--navy300);
+  border: 1px solid var(--grey400);
+  cursor: not-allowed;
+  color: var(--navy600);
+
+  &:hover {
+    border: 1px solid var(--grey400);
+  }
+}
+
+.ui-select--read-only {
+  background-color: var(--navy300);
+  border: 1px solid var(--grey400);
+  cursor: default;
+  color: var(--navy600);
+
+  &:hover {
+    border: 1px solid var(--grey400);
+  }
+}
+
+.ui-select--open {
+  border-color: var(--grey500);
+  background-color: var(--grey200);
+}
