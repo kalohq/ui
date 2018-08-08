@@ -32,10 +32,6 @@
   box-shadow: var(--box-shadow-level-4);
 }
 
-.ui-paper--level-5 {
-  box-shadow: var(--box-shadow-level-5);
-}
-
 .ui-paper--hover-level-0:hover {
   box-shadow: var(--box-shadow-level-0);
 }
@@ -54,10 +50,6 @@
 
 .ui-paper--hover-level-4:hover {
   box-shadow: var(--box-shadow-level-4);
-}
-
-.ui-paper--hover-level-5:hover {
-  box-shadow: var(--box-shadow-level-5);
 }
 
 .ui-paper--opaque {

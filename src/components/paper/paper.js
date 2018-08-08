@@ -58,7 +58,7 @@ export default function Paper(props: Props) {
     <Component
       interactive={!!onClick}
       onClick={onClick}
-      classNames={_classNames}
+      className={_classNames}
       {...otherProps}
     >
       {children}
