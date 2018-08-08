@@ -1,9 +1,11 @@
 /* @flow */
 import * as React from 'react';
-import styled, {css} from 'react-emotion';
+import cx from 'classnames';
+import {uniqueId} from 'lodash';
 
-import {Box} from '../layout';
 import FieldLabel from '../field-label';
+
+import coreStyles from './toggle-button.core.css';
 
 export const HEIGHT = 26;
 
@@ -12,56 +14,6 @@ export const HEIGHT = 26;
  *
  * A standard toggle button for toggling between two states
  */
-
-const StyledToggleButton = styled.div`
-  border-radius: 20px;
-  transition: all 0.25s ease-out;
-  width: 56px;
-  height: ${HEIGHT}px;
-  cursor: pointer;
-  padding: 3px 0 3px ${props => (props.selected ? '32px' : '3px')};
-  background-color: transparent;
-  border: 2px solid ${props => props.theme.colors.grey300};
-
-  ${props =>
-    props.toggleButtonTheme === 'default' &&
-    props.selected &&
-    css`
-      background-color: ${props.theme.colors.blue500};
-    `};
-
-  ${props =>
-    props.toggleButtonTheme === 'green' &&
-    props.selected &&
-    css`
-      background-color: ${props.theme.colors.green500};
-    `};
-
-  ${props =>
-    props.toggleButtonTheme === 'orangeToGreen' &&
-    css`
-      background-color: ${props.selected
-        ? props.theme.colors.green500
-        : props.theme.colors.orange500};
-    `};
-
-  ${props =>
-    props.toggleButtonTheme === 'orange' &&
-    props.selected &&
-    css`
-      background-color: ${props.theme.colors.orange500};
-    `};
-`;
-
-const StyledButton = styled.div`
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  background-color: ${props =>
-    props.toggleButtonTheme === 'orangeToGreen'
-      ? props.theme.colors.white
-      : props.selected ? props.theme.colors.white : props.theme.colors.grey500};
-`;
 
 type TProps = {
   /** Is the toggle toggled? */
@@ -81,25 +33,31 @@ export default function ToggleButton(props: TProps) {
     theme = 'default',
     onChange,
     label,
+    className,
     ...otherProps
   } = props;
 
+  const id = uniqueId('toggleButton');
+
+  const _classNames = cx(
+    {
+      [coreStyles['ui-toggle-button']]: true,
+      [coreStyles[`ui-toggle-button--${theme}`]]: theme && theme !== 'default',
+    },
+    className
+  );
+
   return (
-    <Box
-      flexDirection="row"
-      alignItems="center"
-      data-test="ui-toggle-button"
-      onClick={() => onChange(!value)}
-      {...otherProps}
-    >
-      <StyledToggleButton selected={value} toggleButtonTheme={theme}>
-        <StyledButton toggleButtonTheme={theme} selected={value} />
-      </StyledToggleButton>
-      {label ? (
-        <FieldLabel marginLeft="medium" marginBottom={0}>
-          {label}
-        </FieldLabel>
-      ) : null}
-    </Box>
+    <div className={_classNames} data-test="ui-toggle-button" {...otherProps}>
+      <input id={id} value={value} checked={value} type="checkbox" />
+      <label htmlFor={id} onClick={() => onChange(!value)}>
+        <div className="toggle" />
+        {label ? (
+          <FieldLabel marginLeft="medium" marginBottom={0}>
+            {label}
+          </FieldLabel>
+        ) : null}
+      </label>
+    </div>
   );
 }
