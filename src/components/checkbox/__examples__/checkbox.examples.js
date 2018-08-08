@@ -3,10 +3,33 @@ import React from 'react';
 import Checkbox from '../checkbox';
 import Text from '../../text';
 
-const myClickFunction = () => {
-  //eslint-disable-next-line
-  window.alert('Hello from an onClick event');
-};
+class DemoCheckbox extends React.PureComponent {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      checked: props.checked,
+    };
+
+    this.toggleCheck = this.toggleCheck.bind(this);
+  }
+
+  toggleCheck() {
+    this.setState({
+      checked: !this.state.checked,
+    });
+  }
+
+  render() {
+    return (
+      <Checkbox
+        {...this.props}
+        onClick={this.toggleCheck}
+        checked={this.state.checked}
+      />
+    );
+  }
+}
 
 export const examples = [
   {
@@ -14,37 +37,18 @@ export const examples = [
     description:
       'A standard checkbox. Pass a label using the prop to ensure that interaction happens on both the checkbox and the label',
     render: () => (
-      <Checkbox
-        label="Onboarding freelancers"
-        checked={false}
-        onClick={myClickFunction}
-      />
-    ),
-  },
-  {
-    title: 'readonly',
-    description:
-      ' non-interactive checkbox. Can still displayed a checked state',
-    render: () => (
-      <Checkbox
-        label="Onboarding freelancers"
-        size="medium"
-        checked={true}
-        readonly={true}
-        onClick={myClickFunction}
-      />
+      <DemoCheckbox label="Onboarding freelancers" checked={false} />
     ),
   },
   {
     title: 'Disabled',
     description: 'A disabled checkbox. Can still displayed a checked state',
     render: () => (
-      <Checkbox
+      <DemoCheckbox
         label="Onboarding freelancers"
         size="medium"
         checked={true}
         disabled={true}
-        onClick={myClickFunction}
       />
     ),
   },
@@ -53,9 +57,9 @@ export const examples = [
     description: 'Checkboxes can be in three sizes. Small, medium, and large',
     render: () => (
       <span>
-        <Checkbox label="Onboarding freelancers" size="small" />
-        <Checkbox label="Onboarding freelancers" size="medium" />
-        <Checkbox label="Freelancer invoices" size="large" />
+        <DemoCheckbox label="Onboarding freelancers" size="small" />
+        <DemoCheckbox label="Onboarding freelancers" size="medium" />
+        <DemoCheckbox label="Freelancer invoices" size="large" />
       </span>
     ),
   },
@@ -63,14 +67,18 @@ export const examples = [
     title: 'Indeterminate',
     description: 'Checkboxes can be indeterminate checked',
     render: () => (
-      <Checkbox label="Freelancer invoices" size="large" indeterminate={true} />
+      <DemoCheckbox
+        label="Freelancer invoices"
+        size="large"
+        indeterminate={true}
+      />
     ),
   },
   {
     title: 'With a custom label',
     description: 'Checkboxes can also have custom labels',
     render: () => (
-      <Checkbox
+      <DemoCheckbox
         label={
           <Text marginLeft={8} size="extra-large" color="pink500">
             A custom label
