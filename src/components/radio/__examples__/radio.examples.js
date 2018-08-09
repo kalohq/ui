@@ -3,10 +3,33 @@ import React from 'react';
 
 import Radio from '../radio';
 
-const myClickFunction = () => {
-  //eslint-disable-next-line
-  window.alert('Hello from an onClick event');
-};
+class DemoRadio extends React.PureComponent {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      checked: props.checked,
+    };
+
+    this.toggleRadio = this.toggleRadio.bind(this);
+  }
+
+  toggleRadio() {
+    this.setState({
+      checked: !this.state.checked,
+    });
+  }
+
+  render() {
+    return (
+      <Radio
+        {...this.props}
+        onClick={this.toggleRadio}
+        checked={this.state.checked}
+      />
+    );
+  }
+}
 
 export const examples = [
   {
@@ -14,16 +37,9 @@ export const examples = [
     description: 'A standard radio button',
     render: () => (
       <span>
-        <Radio
-          label="Turn off notifications"
-          checked={true}
-          onClick={myClickFunction}
-        />
-        <Radio
-          label="Enable email notifications"
-          checked={false}
-          onClick={myClickFunction}
-        />
+        <DemoRadio label="Turn off notifications" checked={true} />
+        <br />
+        <DemoRadio label="Enable email notifications" checked={false} />
       </span>
     ),
   },
@@ -32,37 +48,29 @@ export const examples = [
     description: 'A disabled radio button',
     render: () => (
       <span>
-        <Radio
+        <DemoRadio
           label="Turn off notifications"
           checked={true}
-          onClick={myClickFunction}
           disabled={true}
         />
-        <Radio
+        <DemoRadio
           label="Enable email notifications"
           checked={false}
-          onClick={myClickFunction}
           disabled={true}
         />
       </span>
     ),
   },
   {
-    title: 'Readonly',
-    description: 'A readonly radio button',
+    title: 'Sizing',
+    description: 'Radio buttons can some in two sizes: small, and medium.',
     render: () => (
       <span>
-        <Radio
-          label="Turn off notifications"
-          checked={true}
-          onClick={myClickFunction}
-          readonly={true}
-        />
-        <Radio
+        <DemoRadio label="Turn off notifications" checked={true} size="small" />
+        <DemoRadio
           label="Enable email notifications"
           checked={false}
-          onClick={myClickFunction}
-          readonly={true}
+          size="medium"
         />
       </span>
     ),
