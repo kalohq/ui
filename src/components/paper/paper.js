@@ -2,6 +2,8 @@
 import * as React from 'react';
 import cx from 'classnames';
 
+import {Box} from '../layout';
+
 import coreStyles from './paper.core.css';
 
 type Props = {
@@ -33,7 +35,7 @@ export default function Paper(props: Props) {
     opaque,
     wireframe,
     onClick,
-    component: Component = 'div',
+    component = 'div',
     className,
     ...otherProps
   } = props;
@@ -55,13 +57,14 @@ export default function Paper(props: Props) {
   );
 
   return (
-    <Component
+    <Box
       interactive={!!onClick}
       onClick={onClick}
       className={_classNames}
+      component={component}
       {...otherProps}
     >
       {children}
-    </Component>
+    </Box>
   );
 }

@@ -4,8 +4,9 @@ import {isString, uniqueId} from 'lodash';
 import cx from 'classnames';
 
 import Text from '../text';
-
+import {Box} from '../layout';
 import {TEXT_SIZE} from '../text/constants';
+import {pickStyles} from '../../utils/style';
 
 import coreStyles from './checkbox.core.css';
 
@@ -67,11 +68,11 @@ export default class Checkbox extends PureComponent {
     });
 
     return (
-      <div
+      <Box
         className={_classNames}
         data-test="ui-checkbox"
         name={name}
-        {...otherProps}
+        {...pickStyles(otherProps)}
       >
         <input
           type="checkbox"
@@ -94,7 +95,7 @@ export default class Checkbox extends PureComponent {
             label && label
           )}
         </label>
-      </div>
+      </Box>
     );
   }
 }

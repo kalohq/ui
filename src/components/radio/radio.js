@@ -5,6 +5,8 @@ import cx from 'classnames';
 
 import {TEXT_SIZE} from '../text/constants';
 import Text from '../text';
+import {Box} from '../layout';
+import {pickStyles} from '../../utils/style';
 
 import coreStyles from './radio.core.css';
 
@@ -42,19 +44,13 @@ export default function Radio(props: RadioProps) {
   });
 
   return (
-    <div
+    <Box
       className={_classNames}
       data-test="ui-radio"
       name={name}
-      {...otherProps}
+      {...pickStyles(otherProps)}
     >
-      <input
-        type="radio"
-        id={id}
-        checked={checked}
-        disabled={disabled}
-        ref={this.setCheckboxRef}
-      />
+      <input type="radio" id={id} checked={checked} disabled={disabled} />
       <label htmlFor={id} onClick={!disabled && onClick}>
         {label && isString(label) ? (
           <Text
@@ -69,6 +65,6 @@ export default function Radio(props: RadioProps) {
           label && label
         )}
       </label>
-    </div>
+    </Box>
   );
 }

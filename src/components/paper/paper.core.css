@@ -3,7 +3,7 @@
   background: white;
   box-sizing: content-box;
   transition: all 0.2s ease-in-out;
-  border: var(--grey300);
+  border: 1px solid var(--grey300);
   border-radius: 4px;
   display: flex;
   flex-direction: column;
