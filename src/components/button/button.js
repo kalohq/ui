@@ -3,6 +3,7 @@ import React, {PureComponent} from 'react';
 import {isString} from 'lodash';
 import cx from 'classnames';
 
+import {Box} from '../layout';
 import Icon from '../icon';
 import LoadingSpinner from '../loading-spinner';
 
@@ -186,10 +187,8 @@ export default class Button extends PureComponent<TProps, TState> {
       }
     };
 
-    const Component = component ? component : 'button';
-
     return (
-      <Component
+      <Box
         style={style}
         role={role}
         name={name}
@@ -199,6 +198,7 @@ export default class Button extends PureComponent<TProps, TState> {
         className={_classNames}
         onClick={handleClick}
         data-test="ui-button"
+        component={component ? component : 'button'}
         {...otherProps}
       >
         <div className={reactStyles['ui-btn__react-placeholder-message']}>
@@ -221,7 +221,7 @@ export default class Button extends PureComponent<TProps, TState> {
         <div className={reactStyles['ui-btn__react-loading-spinner']}>
           <LoadingSpinner size="small" />
         </div>
-      </Component>
+      </Box>
     );
   }
 }
