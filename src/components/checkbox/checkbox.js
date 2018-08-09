@@ -26,9 +26,7 @@ export default class Checkbox extends PureComponent {
     this.checkboxElement = null;
     this.setIndeterminateState = this.setIndeterminateState.bind(this);
 
-    this.setCheckboxRef = element => {
-      this.checkboxElement = element;
-    };
+    this.setCheckboxRef = this.setCheckboxRef.bind(this);
   }
 
   componentDidMount() {
@@ -37,6 +35,10 @@ export default class Checkbox extends PureComponent {
 
   componentWillReceiveProps(newProps) {
     this.setIndeterminateState(newProps);
+  }
+
+  setCheckboxRef(element) {
+    this.checkboxElement = element;
   }
 
   setIndeterminateState(props) {
