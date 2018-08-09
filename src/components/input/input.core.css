@@ -1,5 +1,6 @@
 .ui-input {
   min-width: 0;
+  width: 100%;
   color: var(--navy700);
 
   background-color: #fff;
