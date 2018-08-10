@@ -11,11 +11,11 @@ export const examples = [
       'A wrapping component to manage spacing and border radius between child buttons',
     render: () => (
       <ButtonGroup>
-        <Button theme="tertiary" subdued={true}>
+        <Button variant="tertiary" subdued={true}>
           <Checkbox />
         </Button>
-        <Button theme="tertiary">Freelancers</Button>
-        <Button theme="tertiary">Tasks</Button>
+        <Button variant="tertiary">Freelancers</Button>
+        <Button variant="tertiary">Tasks</Button>
       </ButtonGroup>
     ),
   },
@@ -24,11 +24,11 @@ export const examples = [
     description: 'Child buttons can have their order reversed',
     render: () => (
       <ButtonGroup reverse={true}>
-        <Button theme="tertiary" subdued={true}>
+        <Button variant="tertiary" subdued={true}>
           <Checkbox />
         </Button>
-        <Button theme="tertiary">Freelancers</Button>
-        <Button theme="tertiary">Tasks</Button>
+        <Button variant="tertiary">Freelancers</Button>
+        <Button variant="tertiary">Tasks</Button>
       </ButtonGroup>
     ),
   },

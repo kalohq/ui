@@ -15,7 +15,7 @@ expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe('Button', () => {
   const defaultProps = {
-    theme: 'tertiary',
+    variant: 'tertiary',
     size: 'medium',
   };
 
@@ -29,7 +29,7 @@ describe('Button', () => {
     const element = renderer
       .create(
         <ThemeProvider theme={theme}>
-          <Button theme="tertiary" size="medium">
+          <Button variant="tertiary" size="medium">
             A tertiary button
           </Button>
         </ThemeProvider>

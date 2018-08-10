@@ -18,7 +18,7 @@ export const examples = [
       <ButtonGroup>
         <ButtonDropdown
           size="large"
-          theme="tertiary"
+          variant="tertiary"
           subdued={true}
           selectItems={[
             {
@@ -41,7 +41,7 @@ export const examples = [
         />
         <ButtonDropdown
           size="large"
-          theme="tertiary"
+          variant="tertiary"
           selectItems={[
             {
               title: 'Pending',
@@ -57,7 +57,7 @@ export const examples = [
         </ButtonDropdown>
         <ButtonDropdown
           size="large"
-          theme="tertiary"
+          variant="tertiary"
           selectItems={[
             {
               title: 'Pending',
@@ -71,7 +71,7 @@ export const examples = [
         >
           1
         </ButtonDropdown>
-        <Button size="large" theme="tertiary">
+        <Button size="large" variant="tertiary">
           Hello World
         </Button>
       </ButtonGroup>
@@ -85,7 +85,7 @@ export const examples = [
       <ButtonGroup>
         <ButtonDropdown
           size="large"
-          theme="tertiary"
+          variant="tertiary"
           disabled={true}
           checkboxProps={{
             onClick: () => {},
@@ -93,7 +93,7 @@ export const examples = [
         />
         <ButtonDropdown
           size="large"
-          theme="tertiary"
+          variant="tertiary"
           selectItems={[
             {
               title: 'Pending',
@@ -110,7 +110,7 @@ export const examples = [
         </ButtonDropdown>
         <ButtonDropdown
           size="large"
-          theme="tertiary"
+          variant="tertiary"
           selectItems={[
             {
               title: 'Pending',
