@@ -45,3 +45,12 @@ InlineFlex.displayName = 'InlineFlex';
 
 export const A = styled(makePrimitive('A', 'a', {display: 'inline-flex'}))();
 A.displayName = 'A';
+
+/**
+ * This is an empty component that provides backwards compatibility as we phase out the 
+ * layout primivites above. Its sole purpose is is to convert inline styles props in to
+ * actual CSS. 
+ */
+
+export const UIBase = styled(makePrimitive('UIBase', 'div'))();
+UIBase.displayName = 'UIBase';

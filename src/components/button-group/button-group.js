@@ -2,6 +2,7 @@
 import * as React from 'react';
 import cx from 'classnames';
 import {isArray} from 'lodash';
+import {UIBase} from '../layout';
 
 import coreStyles from './button-group.core.css';
 
@@ -34,7 +35,7 @@ export default function ButtonGroup(props: Props) {
   });
 
   return (
-    <div className={_classNames} data-test="ui-button-group" {...otherProps}>
+    <UIBase className={_classNames} data-test="ui-button-group" {...otherProps}>
       {childrenInOrder &&
         React.Children.map(
           childrenInOrder,
@@ -47,6 +48,6 @@ export default function ButtonGroup(props: Props) {
               flex,
             })
         )}
-    </div>
+    </UIBase>
   );
 }

@@ -2,7 +2,7 @@
 import * as React from 'react';
 import cx from 'classnames';
 
-import {Box} from '../layout';
+import {UIBase} from '../layout';
 
 import coreStyles from './paper.core.css';
 
@@ -57,7 +57,7 @@ export default function Paper(props: Props) {
   );
 
   return (
-    <Box
+    <UIBase
       interactive={!!onClick}
       onClick={onClick}
       className={_classNames}
@@ -65,6 +65,6 @@ export default function Paper(props: Props) {
       {...otherProps}
     >
       {children}
-    </Box>
+    </UIBase>
   );
 }
