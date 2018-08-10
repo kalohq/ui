@@ -53,12 +53,12 @@
 
 .ui-input--with-addon-suffix {
   border-right: 1px solid #dfe2e4;
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px !important;
 }
 
 .ui-input--with-addon-prefix {
   border-left: 1px solid #dfe2e4;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0 !important;
 }
 
 .ui-input-icon {

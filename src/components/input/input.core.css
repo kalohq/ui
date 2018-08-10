@@ -52,6 +52,11 @@
     background-color: transparent;
     border: 0;
   }
+
+  &:not(:read-only):not(:disabled):hover,
+  &:not(:read-only):not(:disabled):focus {
+    border: 1px solid transparent;
+  }
 }
 
 .ui-input--theme-well {
@@ -60,6 +65,11 @@
 
   &::placeholder {
     color: var(--navy500);
+  }
+
+  &:not(:read-only):not(:disabled):hover,
+  &:not(:read-only):not(:disabled):focus {
+    border: 1px solid transparent;
   }
 }
 
