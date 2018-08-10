@@ -13,7 +13,7 @@ expect.addSnapshotSerializer(createSerializer(emotion));
 describe('ButtonDropdown', () => {
   const defaultProps = {
     size: 'medium',
-    theme: 'tertiary',
+    variant: 'tertiary',
     selectItems: [
       {
         title: 'Pending',

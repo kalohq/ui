@@ -35,7 +35,7 @@ type TProps = {
   /** The visual size */
   size?: 'small' | 'medium' | 'large' | 'extra-large',
   /** The visual theme */
-  theme?: 'primary' | 'secondary' | 'tertiary' | 'delete' | 'action',
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'delete' | 'action',
   /** Ignore - Set by ButtonGroup */
   grouped?: boolean,
   /** Ignore - Set by ButtonGroup */
@@ -76,7 +76,7 @@ export default class Button extends PureComponent<TProps, TState> {
   static defaultProps = {
     role: 'button',
     size: 'large',
-    theme: 'primary',
+    variant: 'primary',
     wide: false,
     loading: false,
     loneIcon: false,
@@ -119,7 +119,7 @@ export default class Button extends PureComponent<TProps, TState> {
       disabled,
       icon,
       loneIcon,
-      theme,
+      variant,
       grouped,
       spacing,
       size,
@@ -148,8 +148,8 @@ export default class Button extends PureComponent<TProps, TState> {
       {
         [coreStyles['ui-btn']]: true,
         [coreStyles[`ui-btn--${size}`]]: true,
-        [coreStyles[`ui-btn--${theme}`]]: true,
-        [coreStyles[`ui-btn--subdued`]]: subdued && theme === 'tertiary',
+        [coreStyles[`ui-btn--${variant}`]]: true,
+        [coreStyles[`ui-btn--subdued`]]: subdued && variant === 'tertiary',
         [coreStyles[`ui-btn--lone-icon`]]: loneIcon,
         [coreStyles[`ui-btn--grouped`]]: grouped,
         [coreStyles[`ui-btn--grouped-with-spacing`]]: spacing,

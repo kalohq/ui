@@ -50,30 +50,30 @@ export const examples = [
     title: 'Tertiary Button',
     description:
       "The default style. Unless the action you're building is primary, this is the button you should use",
-    render: () => <Button theme="tertiary">Export Freelancers</Button>,
+    render: () => <Button variant="tertiary">Export Freelancers</Button>,
   },
   {
     title: 'Primary Button',
     description:
       'The primary action of a view. It should be used no more than once per view.',
-    render: () => <Button theme="primary">Create Project</Button>,
+    render: () => <Button variant="primary">Create Project</Button>,
   },
   {
     title: 'Secondary Button',
     description: 'Used for supporting actions.',
-    render: () => <Button theme="secondary">Save Changes</Button>,
+    render: () => <Button variant="secondary">Save Changes</Button>,
   },
   {
     title: 'Delete Button',
     description: 'An action button for deleting/removing.',
-    render: () => <Button theme="delete">Remove freelancer</Button>,
+    render: () => <Button variant="delete">Remove freelancer</Button>,
   },
   {
     title: 'Action Button',
     description:
       'A primary button used for actions - Only ever used once per view',
     render: () => (
-      <Button theme="action" icon="add" loneIcon={true} size="extra-large" />
+      <Button variant="action" icon="add" loneIcon={true} size="extra-large" />
     ),
   },
   {
@@ -81,7 +81,7 @@ export const examples = [
     description:
       'Buttons can be disabled by toggling the disabled state. This will prevent any user interaction with the button (onClick will also be disabled).',
     render: () => (
-      <Button theme="tertiary" disabled={true} onClick={myClickFunction}>
+      <Button variant="tertiary" disabled={true} onClick={myClickFunction}>
         Get Started
       </Button>
     ),
@@ -92,7 +92,7 @@ export const examples = [
       'Sometimes you want to trigger the success animation while keeping the button disabled/unclickable.',
     render: () => (
       <Button
-        theme="tertiary"
+        variant="tertiary"
         disabled={true}
         success={true}
         onClick={myClickFunction}
@@ -112,7 +112,7 @@ export const examples = [
       'Buttons can have callback states that display a message on success',
     render: () => (
       <DemoButton>
-        <Button theme="primary" message="Yey it worked!" loadedTimeout={2000}>
+        <Button variant="primary" message="Yey it worked!" loadedTimeout={2000}>
           Click me to see the demo
         </Button>
       </DemoButton>
@@ -123,7 +123,7 @@ export const examples = [
     description:
       'To provide more context to an action, an icon (see the Icon component) can be floated next the button copy.',
     render: () => (
-      <Button theme="tertiary" icon="mode_edit">
+      <Button variant="tertiary" icon="mode_edit">
         Generate Invoice
       </Button>
     ),
@@ -132,7 +132,12 @@ export const examples = [
     title: 'Button with lone icon',
     description: 'A button can also be used with a standalone icon',
     render: () => (
-      <Button theme="tertiary" size="medium" icon="mode_edit" loneIcon={true} />
+      <Button
+        variant="tertiary"
+        size="medium"
+        icon="mode_edit"
+        loneIcon={true}
+      />
     ),
   },
   {
@@ -141,13 +146,13 @@ export const examples = [
       'Buttons come in three different sizes: small, medium, and large',
     render: () => (
       <ButtonGroup spacing={true}>
-        <Button theme="tertiary" size="small">
+        <Button variant="tertiary" size="small">
           Small
         </Button>
-        <Button theme="tertiary" size="medium">
+        <Button variant="tertiary" size="medium">
           Medium
         </Button>
-        <Button theme="tertiary" size="large">
+        <Button variant="tertiary" size="large">
           Large
         </Button>
       </ButtonGroup>
