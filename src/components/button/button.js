@@ -305,7 +305,7 @@ type TProps = {
   /** The visual size */
   size?: 'small' | 'medium' | 'large' | 'extra-large',
   /** The visual theme */
-  theme?: 'primary' | 'secondary' | 'tertiary' | 'delete' | 'action',
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'delete' | 'action',
   /** Ignore - Set by ButtonGroup */
   grouped?: boolean,
   /** Ignore - Set by ButtonGroup */
@@ -348,7 +348,7 @@ export default class Button extends PureComponent<TProps, TState> {
   static defaultProps = {
     role: 'button',
     size: 'large',
-    theme: 'primary',
+    variant: 'primary',
     wide: false,
     loading: false,
     loneIcon: false,
@@ -391,7 +391,7 @@ export default class Button extends PureComponent<TProps, TState> {
       disabled,
       icon,
       loneIcon,
-      theme,
+      variant,
       grouped,
       spacing,
       size,
@@ -417,7 +417,7 @@ export default class Button extends PureComponent<TProps, TState> {
 
     const {loaded} = this.state;
 
-    const ButtonComponent = getButtonType(theme);
+    const ButtonComponent = getButtonType(variant);
 
     const iconElement = isString(icon) ? (
       <Icon
