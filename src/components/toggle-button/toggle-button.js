@@ -25,6 +25,8 @@ type TProps = {
   label?: string,
   /** The overall visual theme of the button */
   theme?: 'default' | 'orange' | 'green' | 'orangeToGreen',
+  /** A className to pass down */
+  className?: string,
 };
 
 export default function ToggleButton(props: TProps) {

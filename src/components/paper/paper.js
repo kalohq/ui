@@ -18,6 +18,7 @@ type Props = {
   opaque?: boolean,
   wireframe?: boolean,
   onClick?: Function,
+  component?: string | React.Node,
 };
 
 /**

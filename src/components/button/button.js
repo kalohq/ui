@@ -147,8 +147,8 @@ export default class Button extends PureComponent<TProps, TState> {
     const _classNames = cx(
       {
         [coreStyles['ui-btn']]: true,
-        [coreStyles[`ui-btn--${size}`]]: true,
-        [coreStyles[`ui-btn--${variant}`]]: true,
+        [coreStyles[`ui-btn--${String(size)}`]]: true,
+        [coreStyles[`ui-btn--${String(variant)}`]]: true,
         [coreStyles[`ui-btn--subdued`]]: subdued && variant === 'tertiary',
         [coreStyles[`ui-btn--lone-icon`]]: loneIcon,
         [coreStyles[`ui-btn--grouped`]]: grouped,
