@@ -1,41 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/paper Paper should render a component with an elevation of 3 1`] = `
-.emotion-1 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  background: white;
-  box-sizing: content-box;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  border: 1px solid rgb(238,244,250);
-  border-radius: 5px;
-  box-shadow: 0 10px 25px rgba(140,140,140,0.14);
-}
-
-.emotion-1:hover {
-  box-shadow: none;
-}
-
 <div
-  className="emotion-0 emotion-1"
+  className="ui-paper ui-paper--level-3 ui-paper--hover-level-1 emotion-0 emotion-1"
   onClick={undefined}
   style={Object {}}
 >
@@ -44,41 +11,8 @@ exports[`components/paper Paper should render a component with an elevation of 3
 `;
 
 exports[`components/paper Paper should render shallow component ok 1`] = `
-.emotion-1 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  background: white;
-  box-sizing: content-box;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  border: 1px solid rgb(238,244,250);
-  border-radius: 5px;
-  box-shadow: none;
-}
-
-.emotion-1:hover {
-  box-shadow: none;
-}
-
 <div
-  className="emotion-0 emotion-1"
+  className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-0 emotion-1"
   onClick={undefined}
   spacing={true}
   style={Object {}}
@@ -88,39 +22,6 @@ exports[`components/paper Paper should render shallow component ok 1`] = `
 `;
 
 exports[`components/paper PaperToolbar should render shallow component ok 1`] = `
-.emotion-1 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  background: white;
-  box-sizing: content-box;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  border: 1px solid rgb(238,244,250);
-  border-radius: 5px;
-  box-shadow: none;
-}
-
-.emotion-1:hover {
-  box-shadow: none;
-}
-
 .emotion-3 {
   position: relative;
   -webkit-flex-direction: column;
@@ -149,7 +50,7 @@ exports[`components/paper PaperToolbar should render shallow component ok 1`] = 
   style={Object {}}
 >
   <div
-    className="emotion-0 emotion-1"
+    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-0 emotion-1"
     onClick={undefined}
     style={Object {}}
   >

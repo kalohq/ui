@@ -1,23 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox should render a checkbox partially checked 1`] = `
-.emotion-4 {
+.emotion-3 {
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  cursor: pointer;
 }
 
-.emotion-3 {
+.emotion-1 {
   display: inline-block;
   vertical-align: bottom;
   margin-left: 10px;
@@ -38,95 +43,45 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   word-break: break-word;
 }
 
-.emotion-3:hover {
+.emotion-1:hover {
   text-decoration: inherit;
 }
 
-.emotion-3 strong {
+.emotion-1 strong {
   font-weight: 500;
 }
 
-.emotion-1 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  border-radius: 3px;
-  border: 1px solid rgb(176,186,195);
-  -webkit-transition: 100ms ease-in-out background-color,border-color;
-  transition: 100ms ease-in-out background-color,border-color;
-  height: 14px;
-  width: 14px;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-color: rgb(255,255,255);
-  background-color: rgb(249,250,252);
-  background-image: url(path/to/file);
-  border: 1px solid rgb(84,195,219);
-}
-
 <div
-  aria-checked="mixed"
-  className="emotion-4 emotion-5"
+  className="ui-checkbox ui-checkbox--medium emotion-2 emotion-3"
   data-test="ui-checkbox"
-  disabled={false}
   name={undefined}
-  onClick={undefined}
-  role="checkbox"
+  style={Object {}}
 >
-  <div
+  <input
     checked={false}
-    className="emotion-0 emotion-1"
     disabled={false}
-    size="medium"
-    style={Object {}}
+    id="toggleButton3"
+    type="checkbox"
   />
-  <span
-    className="emotion-2 emotion-3"
-    color="navy600"
+  <label
+    htmlFor="toggleButton3"
     onClick={undefined}
-    size="small"
-    style={Object {}}
   >
-    A checkbox label
-  </span>
+    <span
+      className="emotion-0 emotion-1"
+      color="navy600"
+      onClick={undefined}
+      size="small"
+      style={Object {}}
+    >
+      A checkbox label
+    </span>
+  </label>
 </div>
 `;
 
 exports[`Checkbox should render a checkbox with label 1`] = `
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  cursor: pointer;
-}
-
-.emotion-1 {
+.emotion-3 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -145,23 +100,9 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  border-radius: 3px;
-  border: 1px solid rgb(176,186,195);
-  -webkit-transition: 100ms ease-in-out background-color,border-color;
-  transition: 100ms ease-in-out background-color,border-color;
-  height: 14px;
-  width: 14px;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-color: rgb(255,255,255);
-  background-color: rgb(249,250,252);
-  background-image: url(path/to/file);
-  border: 1px solid rgb(84,195,219);
 }
 
-.emotion-3 {
+.emotion-1 {
   display: inline-block;
   vertical-align: bottom;
   margin-left: 10px;
@@ -182,59 +123,44 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   word-break: break-word;
 }
 
-.emotion-3:hover {
+.emotion-1:hover {
   text-decoration: inherit;
 }
 
-.emotion-3 strong {
+.emotion-1 strong {
   font-weight: 500;
 }
 
 <div
-  aria-checked={true}
-  className="emotion-4 emotion-5"
+  className="ui-checkbox ui-checkbox--medium emotion-2 emotion-3"
   data-test="ui-checkbox"
-  disabled={false}
   name={undefined}
-  onClick={undefined}
-  role="checkbox"
+  style={Object {}}
 >
-  <div
+  <input
     checked={true}
-    className="emotion-0 emotion-1"
     disabled={false}
-    size="medium"
-    style={Object {}}
+    id="toggleButton2"
+    type="checkbox"
   />
-  <span
-    className="emotion-2 emotion-3"
-    color="navy600"
+  <label
+    htmlFor="toggleButton2"
     onClick={undefined}
-    size="small"
-    style={Object {}}
   >
-    A checkbox label
-  </span>
+    <span
+      className="emotion-0 emotion-1"
+      color="navy600"
+      onClick={undefined}
+      size="small"
+      style={Object {}}
+    >
+      A checkbox label
+    </span>
+  </label>
 </div>
 `;
 
 exports[`Checkbox should render shallow component ok 1`] = `
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  cursor: pointer;
-}
-
 .emotion-1 {
   position: relative;
   -webkit-flex-direction: column;
@@ -254,37 +180,23 @@ exports[`Checkbox should render shallow component ok 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  border-radius: 3px;
-  border: 1px solid rgb(176,186,195);
-  -webkit-transition: 100ms ease-in-out background-color,border-color;
-  transition: 100ms ease-in-out background-color,border-color;
-  height: 14px;
-  width: 14px;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-color: rgb(255,255,255);
-  background-color: rgb(249,250,252);
-  background-image: url(path/to/file);
-  border: 1px solid rgb(84,195,219);
 }
 
 <div
-  aria-checked={true}
-  className="emotion-2 emotion-3"
+  className="ui-checkbox ui-checkbox--medium emotion-0 emotion-1"
   data-test="ui-checkbox"
-  disabled={false}
   name={undefined}
-  onClick={undefined}
-  role="checkbox"
+  style={Object {}}
 >
-  <div
+  <input
     checked={true}
-    className="emotion-0 emotion-1"
     disabled={false}
-    size="medium"
-    style={Object {}}
+    id="toggleButton1"
+    type="checkbox"
+  />
+  <label
+    htmlFor="toggleButton1"
+    onClick={undefined}
   />
 </div>
 `;

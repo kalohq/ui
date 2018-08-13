@@ -2,19 +2,18 @@
 
 exports[`Input should render shallow component ok 1`] = `
 <div
-  className="e6fqpax1 css-ycayz3"
-  style={Object {}}
+  className="ui-input-container ui-input-container--margin-none"
 >
   <input
-    className="css-1n82uzj e6fqpax3"
+    className="ui-input ui-input--medium"
     defaultValue={undefined}
+    margin="none"
     name={undefined}
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
     placeholder={undefined}
     readOnly={undefined}
-    size="medium"
     style={
       Object {
         "width": undefined,
