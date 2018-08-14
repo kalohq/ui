@@ -36,7 +36,7 @@ module KaloUI
 
     def rails?
       defined?(::Rails)
-      autoload 'VERSION', 'kalo-ui/version'
+      autoload 'VERSION', '0.0.1'
     end
 
     private

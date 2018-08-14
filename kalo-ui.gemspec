@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'kalo-ui'
-  s.version     = KaloUI::VERSION
+  s.version     = '0.0.1'
   s.licenses    = ['MIT']
   s.summary     = "MOB Testing Kalo UI"
   s.description = "MOOOBBB Testing Kalo UI"
