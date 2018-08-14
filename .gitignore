@@ -3,7 +3,6 @@ lib
 coverage
 npm-debug*
 design-tokens/*
-css-package-lib
 
 ##
 # Documentation site
