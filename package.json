@@ -22,7 +22,7 @@
     "generate:icons": "node scripts/icons.js",
     "generate:component": "reactman --config ./config/code-templates/reactman-config.json",
     "version": "npm run build",
-    "build:css": "gulp build-css-package"
+    "build:gem": "npm run generate:tokens && gulp build-gem-package"
   },
   "lint-staged": {
     "*.js": [

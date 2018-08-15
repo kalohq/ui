@@ -56,10 +56,18 @@ gulp.task('react:copy-design-tokens', () =>
 );
 
 /**
+ * Copy design tokens to lib
+ */
+gulp.task('react:copy-design-tokens', () =>
+  gulp
+    .src(['src/design-tokens/*(*.js|*.json|*.css)'])
+    .pipe(gulp.dest('lib/design-tokens'))
+);
+/**
  * Bundle CSS. We also convert variables here
  * to make the published package more consumable.
  */
-gulp.task('css:build-css', () => {
+gulp.task('gem:build-css', () => {
   return gulp
     .src([
       './src/components/**/*.css',
@@ -68,8 +76,24 @@ gulp.task('css:build-css', () => {
     ])
     .pipe(concat('ui-bundle.css'))
     .pipe(postcss())
-    .pipe(gulp.dest('css-package-lib'));
+    .pipe(gulp.dest('lib-gem/stylesheets'));
 });
+
+gulp.task('gem:copy-design-tokens', () =>
+  gulp
+    .src(['src/design-tokens/tokens.scss'])
+    .pipe(gulp.dest('lib-gem/stylesheets'))
+);
+
+gulp.task('gem:copy-icons', () =>
+  gulp.src(['src/icons/**/*']).pipe(gulp.dest('lib-gem/icons'))
+);
+
+/**
+ * ===========
+ * Core Tasks
+ * ===========
+ */
 
 gulp.task('build-react-package', [
   'react:css',
@@ -78,4 +102,8 @@ gulp.task('build-react-package', [
   'react:copy-design-tokens',
 ]);
 
-gulp.task('build-css-package', ['css:build-css']);
+gulp.task('build-gem-package', [
+  'gem:build-css',
+  'gem:copy-design-tokens',
+  'gem:copy-icons',
+]);

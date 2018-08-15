@@ -31,6 +31,10 @@ const formatsRequired = [
     format: 'theme.js',
     fileName: 'tokens.theme.js',
   },
+  {
+    format: 'scss',
+    fileName: 'tokens.scss',
+  },
 ];
 
 const writeToNewFile = (name, contents) => {
