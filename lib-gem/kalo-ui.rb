@@ -18,11 +18,11 @@ module KaloUI
     end
 
     def stylesheets_path
-      File.join assets_path, 'css-package-lib'
+      File.join assets_path, 'lib-gem/stylesheets'
     end
 
     def images_path
-      File.join assets_path, 'images'
+      File.join assets_path, 'lib-gem/images'
     end
 
     def assets_path
@@ -36,7 +36,7 @@ module KaloUI
 
     def rails?
       defined?(::Rails)
-      autoload 'VERSION', '0.0.1'
+      autoload 'VERSION', 'kalo-ui/version'
     end
 
     private
