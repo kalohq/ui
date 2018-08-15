@@ -31,10 +31,6 @@ const formatsRequired = [
     format: 'theme.js',
     fileName: 'tokens.theme.js',
   },
-  {
-    format: 'sketch',
-    fileName: 'kalo-ui.sketchpalette',
-  },
 ];
 
 const writeToNewFile = (name, contents) => {
