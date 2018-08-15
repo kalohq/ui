@@ -134,7 +134,7 @@ export default class ComponentDocumentation extends React.PureComponent {
               isActive={this.state.currentTab === 'css'}
               onClick={() => this.toggleTab('css')}
             >
-              CSS Classes
+              Vanilla HTML/CSS
             </Tab>
           </Tabs>
         </Wrapper>
