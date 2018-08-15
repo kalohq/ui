@@ -1,10 +1,11 @@
 import * as React from 'react';
 import {upperFirst, camelCase} from 'lodash';
 import styled from 'react-emotion';
+import Prism from 'prismjs';
+import reactElementToJSXString from 'react-element-to-jsx-string';
 
 import DocumentationContent from '../components/documentation-content';
 import PropTable from '../components/prop-table';
-import Snippet from '../components/snippet';
 import Wrapper from '../components/wrapper';
 
 import * as Stories from '../data/examples.js';
@@ -151,6 +152,7 @@ export default class ComponentDocumentation extends React.PureComponent {
               <Wrapper>
                 {stories.map(story => {
                   const Story = story.render;
+                  const grammar = Prism.languages.html;
                   return (
                     <StoryContainer key={story.title}>
                       <StoryTitle>{story.title}</StoryTitle>
@@ -159,7 +161,18 @@ export default class ComponentDocumentation extends React.PureComponent {
                         <Story />
                       </StoryMain>
                       <StorySnippet>
-                        <Snippet depth={0} node={story.render()} />
+                        <span
+                          dangerouslySetInnerHTML={{
+                            __html: Prism.highlight(
+                              reactElementToJSXString(story.render(), {
+                                showDefaultProps: false,
+                                useBooleanShorthandSyntax: false,
+                              }),
+                              grammar,
+                              'html'
+                            ),
+                          }}
+                        />
                       </StorySnippet>
                     </StoryContainer>
                   );
@@ -171,14 +184,17 @@ export default class ComponentDocumentation extends React.PureComponent {
           <section>
             <Wrapper>
               {stories.filter(story => story.html).map(story => {
+                const grammar = Prism.languages.html;
                 return (
                   <StoryContainer key={story.title}>
                     <StoryTitle>{story.title}</StoryTitle>
                     <StoryDescription>{story.description}</StoryDescription>
-                    <StoryMain>{story.html}</StoryMain>
-                    <StorySnippet>
-                      <div dangerouslySetInnerHTML={{__html: story.html}} />
-                    </StorySnippet>
+                    <StoryMain dangerouslySetInnerHTML={{__html: story.html}} />
+                    <StorySnippet
+                      dangerouslySetInnerHTML={{
+                        __html: Prism.highlight(story.html, grammar, 'html'),
+                      }}
+                    />
                   </StoryContainer>
                 );
               })}
