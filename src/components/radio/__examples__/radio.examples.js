@@ -41,6 +41,12 @@ export const examples = [
         <DemoRadio label="Enable email notifications" checked={false} />
       </span>
     ),
+    html: () => (
+      <div className="ui-radio ui-radio--small">
+        <input type="radio" id="4" />
+        <label htmlFor="4" />
+      </div>
+    ),
   },
   {
     title: 'Disabled',
