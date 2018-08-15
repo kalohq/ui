@@ -101,13 +101,7 @@ const BrandLogo = () => (
 );
 
 export default function GlobalNavigation({projectMeta}) {
-  const {
-    title,
-    version,
-    sketchKitLink,
-    sketchPaletteLink,
-    githubRepoLink,
-  } = projectMeta;
+  const {title, version, sketchKitLink, githubRepoLink} = projectMeta;
   return (
     <StyledBar>
       <Inner>
@@ -119,9 +113,6 @@ export default function GlobalNavigation({projectMeta}) {
         </StyledLogo>
         <StyledNav>
           <NavItem href={sketchKitLink}>Sketch Kit</NavItem>
-          <NavItem href={sketchPaletteLink} download={true}>
-            Sketch Palette
-          </NavItem>
           <NavItem href={githubRepoLink}>GitHub Repo</NavItem>
         </StyledNav>
       </Inner>

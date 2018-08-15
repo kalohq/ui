@@ -51,17 +51,20 @@ export const examples = [
     description:
       "The default style. Unless the action you're building is primary, this is the button you should use",
     render: () => <Button variant="tertiary">Export Freelancers</Button>,
+    html: '<button class="ui-btn ui-btn--tertiary">Tertiary Button</button>',
   },
   {
     title: 'Primary Button',
     description:
       'The primary action of a view. It should be used no more than once per view.',
     render: () => <Button variant="primary">Create Project</Button>,
+    html: '<button class="ui-btn ui-btn--primary">Primary button</button>',
   },
   {
     title: 'Secondary Button',
     description: 'Used for supporting actions.',
     render: () => <Button variant="secondary">Save Changes</Button>,
+    html: '<button class="ui-btn ui-btn--tertiary">Secondary button</button>',
   },
   {
     title: 'Delete Button',
