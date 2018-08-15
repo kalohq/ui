@@ -8,22 +8,13 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Kalo Team"]
   spec.email         = ["tech@kalohq.com"]
 
-  spec.summary       = %q{Blah.}
-  spec.description   = %q{Blah.}
-  spec.homepage      = "http://kalohq.com"
-
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
+  spec.summary       = "Kalo UI Library"
+  spec.description   = "Kalo UI Library"
+  spec.homepage      = "https://kalo.design"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
   end
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["ruby-lib"]
 
   spec.add_development_dependency "bundler", "~> 1.16"
