@@ -39,6 +39,12 @@ export const examples = [
     render: () => (
       <DemoCheckbox label="Onboarding freelancers" checked={false} />
     ),
+    html: () => (
+      <div className="ui-checkbox ui-checkbox--small">
+        <input type="checkbox" id="2" />
+        <label htmlFor="2" />
+      </div>
+    ),
   },
   {
     title: 'Disabled',

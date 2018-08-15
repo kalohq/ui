@@ -39,6 +39,14 @@ export const examples = [
     title: 'ToggleButton',
     description: 'A standard ToggleButton',
     render: () => <ToggleButtonDemo />,
+    html: () => (
+      <div className="ui-toggle-button">
+        <input id="1" value="hello" type="checkbox" />
+        <label htmlFor="1">
+          <div />
+        </label>
+      </div>
+    ),
   },
   {
     title: 'With orange theme',
