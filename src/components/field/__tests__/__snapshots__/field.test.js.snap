@@ -2,20 +2,20 @@
 
 exports[`Field should render shallow component ok 1`] = `
 <div
-  className="e1q9f2xp0 css-jmx7dk"
+  className="e1q9f2xp0 css-2xcesa"
   onClick={undefined}
   style={Object {}}
 >
   <div
-    className="e1q9f2xp0 css-wm73vr"
+    className="e1q9f2xp0 css-1yjta7p"
     style={Object {}}
   >
     <div
-      className="e1q9f2xp0 css-pgnee9"
+      className="e1q9f2xp0 css-ou6tiu"
       style={Object {}}
     >
       <label
-        className="em7k1990 css-vddmo1"
+        className="em7k1990 css-1clhzyw"
         color="navy600"
         htmlFor={undefined}
         onClick={undefined}
@@ -27,20 +27,20 @@ exports[`Field should render shallow component ok 1`] = `
       </label>
     </div>
     <div
-      className="e6fqpax1 css-ycayz3"
-      style={Object {}}
+      className="ui-input-container ui-input-container--margin-none"
     >
       <input
-        className="css-1n82uzj e6fqpax3"
+        className="ui-input ui-input--medium"
         defaultValue={undefined}
         disabled={false}
+        editable={true}
+        margin="none"
         name={undefined}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         placeholder={undefined}
         readOnly={false}
-        size="medium"
         style={
           Object {
             "width": undefined,
@@ -51,11 +51,11 @@ exports[`Field should render shallow component ok 1`] = `
     </div>
   </div>
   <span
-    className="e1q9f2xp3 css-1onqzxr"
+    className="e1q9f2xp3 css-1gxvvc0"
     style={Object {}}
   >
     <span
-      className="em7k1990 css-kxwt0l"
+      className="em7k1990 css-15i38vd"
       color="navy600"
       onClick={undefined}
       size="extra-small"

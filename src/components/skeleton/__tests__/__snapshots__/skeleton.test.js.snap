@@ -171,39 +171,9 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 }
 
 .emotion-5 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   padding: 16px;
   margin-top: 10px;
   margin-left: 0;
-  position: relative;
-  background: white;
-  box-sizing: content-box;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  border: 1px solid rgb(238,244,250);
-  border-radius: 5px;
-  box-shadow: none;
-}
-
-.emotion-5:hover {
-  box-shadow: none;
 }
 
 .emotion-1 {
@@ -303,7 +273,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
     style={Object {}}
   >
     <div
-      className="emotion-4 emotion-5"
+      className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-4 emotion-5"
       onClick={undefined}
       style={Object {}}
     >
@@ -324,7 +294,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
     style={Object {}}
   >
     <div
-      className="emotion-4 emotion-5"
+      className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-4 emotion-5"
       onClick={undefined}
       style={Object {}}
     >
@@ -670,24 +640,6 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 .emotion-29 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   padding: 16px;
   padding-top: 75px;
   padding-bottom: 150px;
@@ -696,18 +648,6 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  position: relative;
-  background: white;
-  box-sizing: content-box;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  border: 1px solid rgb(238,244,250);
-  border-radius: 5px;
-  box-shadow: none;
-}
-
-.emotion-29:hover {
-  box-shadow: none;
 }
 
 .emotion-27 {
@@ -923,7 +863,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
         style={Object {}}
       >
         <div
-          className="emotion-28 emotion-29"
+          className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-28 emotion-29"
           onClick={undefined}
           style={Object {}}
         >
@@ -947,7 +887,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
           </div>
         </div>
         <div
-          className="emotion-28 emotion-29"
+          className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-28 emotion-29"
           onClick={undefined}
           style={Object {}}
         >
@@ -971,7 +911,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
           </div>
         </div>
         <div
-          className="emotion-28 emotion-29"
+          className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-28 emotion-29"
           onClick={undefined}
           style={Object {}}
         >
@@ -1024,39 +964,9 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 .emotion-7 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   padding: 25px;
   margin-top: 10px;
   margin-left: 0;
-  position: relative;
-  background: white;
-  box-sizing: content-box;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  border: 1px solid rgb(238,244,250);
-  border-radius: 5px;
-  box-shadow: none;
-}
-
-.emotion-7:hover {
-  box-shadow: none;
 }
 
 .emotion-5 {
@@ -1175,7 +1085,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   style={Object {}}
 >
   <div
-    className="emotion-6 emotion-7"
+    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-6 emotion-7"
     onClick={undefined}
     style={Object {}}
   >
@@ -1194,7 +1104,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
     </div>
   </div>
   <div
-    className="emotion-6 emotion-7"
+    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-6 emotion-7"
     onClick={undefined}
     style={Object {}}
   >
@@ -1213,7 +1123,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
     </div>
   </div>
   <div
-    className="emotion-6 emotion-7"
+    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-6 emotion-7"
     onClick={undefined}
     style={Object {}}
   >

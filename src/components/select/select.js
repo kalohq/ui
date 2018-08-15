@@ -1,133 +1,13 @@
 /* @flow */
 import React, {PureComponent} from 'react';
-import styled, {css} from 'react-emotion';
+import cx from 'classnames';
 
-import {Block} from '../layout';
 import Text from '../text';
 import Icon from '../icon';
 
-const StyledSelect = styled(Block)`
-  width: 100%;
-  position: relative;
-  border: ${props => props.theme.input.inputDefaultBorder};
-  border-radius: ${props => props.theme.input.inputBorderRadius};
-  background-color: ${props => props.theme.colors.white};
-  height: 40px;
-  text-align: ${props => (props.center ? 'center' : 'left')};
-  cursor: pointer;
+import coreStyles from './select.core.css';
+import reactStyles from './select.react.css';
 
-  &:hover {
-    border: ${props => props.theme.input.inputHoverBorder};
-  }
-
-  ${props =>
-    props.open &&
-    css`
-      border-color: ${props.theme.colors.grey500};
-      background-color: ${props.theme.colors.grey200};
-    `};
-
-  ${props =>
-    props.readonly &&
-    css`
-      background-color: ${props.theme.input.inputReadonlyBackground};
-      border: ${props.theme.input.inputReadonlyBorder};
-      cursor: default;
-      color: ${props.theme.input.inputReadonlyColor};
-
-      &:hover {
-        border: ${props.theme.input.inputReadonlyBorder};
-      }
-    `};
-
-  ${props =>
-    props.disabled &&
-    css`
-      background-color: ${props.theme.input.inputDisabledBackground};
-      border: ${props.theme.input.inputDisabledBorder};
-      cursor: not-allowed;
-      color: ${props.theme.input.inputDisabledColor};
-
-      &:hover {
-        border: ${props.theme.input.inputDisabledBorder};
-      }
-    `};
-`;
-
-const StyledIconChevron = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  width: 30px;
-  transform: rotate(90deg);
-
-  ${props => props.open && css`transform: rotate(-90deg);`};
-`;
-
-const StyledIconClear = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 28px;
-  width: 28px;
-  background-color: ${props => props.theme.colors.grey300};
-  border-radius: ${props => props.theme.layout.borderRadius};
-`;
-
-const StyledSelectOptions = styled.div`
-  border-radius: 4px;
-  background: ${props => props.theme.colors.white};
-  width: 100%;
-  display: none;
-  position: absolute;
-  overflow-y: auto;
-  overflow-x: hidden;
-  height: 0px;
-  z-index: 300;
-  border: 1px solid ${props => props.theme.colors.grey400};
-  box-shadow: 0 3px 6px rgba(140, 140, 140, 0.08);
-
-  ${props =>
-    props.open &&
-    css`
-      display: block;
-      width: calc(100% + 2px);
-      left: -1px;
-      top: calc(100% + 4px);
-      min-height: 200px;
-    `};
-`;
-
-const StyledOption = styled.div`
-  padding: 8px 16px;
-  cursor: pointer;
-
-  &:hover {
-    color: ${props => props.theme.colors.navy700};
-    background: ${props => props.theme.colors.grey300};
-    border-radius: 0;
-    border: none;
-  }
-
-  ${props =>
-    props.selected &&
-    css`
-      color: ${props.theme.colors.navy700};
-      background: ${props.theme.colors.grey300};
-      border-radius: 0;
-      border: none;
-    `};
-`;
-
-const StyledSelectSelected = styled.div`
-  transition: all 0.15s linear;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2px 10px;
-  height: 40px;
-`;
 /**
  * The kalo generic select component
  */
@@ -238,10 +118,17 @@ export default class Select extends PureComponent<TProps, TState> {
 
     const {open} = this.state;
 
+    const _classNames = cx({
+      [coreStyles['ui-select']]: true,
+      [coreStyles['ui-select--open']]: open,
+      [reactStyles['ui-select--open']]: open,
+      [coreStyles['ui-select--disabled']]: disabled,
+      [coreStyles['ui-select--read-only']]: readonly,
+    });
+
     return (
-      <StyledSelect
-        readonly={readonly}
-        disabled={disabled}
+      <div
+        className={_classNames}
         open={open}
         data-test="ui-select"
         role="menu"
@@ -249,7 +136,8 @@ export default class Select extends PureComponent<TProps, TState> {
         aria-expanded={open}
         {...otherProps}
       >
-        <StyledSelectSelected
+        <div
+          className={reactStyles['ui-select__inner']}
           onClick={readonly || disabled ? undefined : this.onToggle}
         >
           {!!selection && formatSelection ? (
@@ -267,8 +155,9 @@ export default class Select extends PureComponent<TProps, TState> {
               {placeholder}
             </Text>
           )}
-          {(!readonly || !disabled) && (!!selection && nullable) ? (
-            <StyledIconClear>
+          {(!readonly || !disabled) &&
+          (!!selection && nullable) && (
+            <div className={reactStyles['ui-select__clear']}>
               <Icon
                 size={18}
                 onClick={this.onClear}
@@ -276,20 +165,22 @@ export default class Select extends PureComponent<TProps, TState> {
               >
                 clear
               </Icon>
-            </StyledIconClear>
-          ) : null}
-          {(!readonly || !disabled) && (!selection || !nullable) ? (
-            <StyledIconChevron open={open}>
+            </div>
+          )}
+          {(!readonly || !disabled) &&
+          (!selection || !nullable) && (
+            <div className={reactStyles['ui-select__chevron']}>
               <Icon
                 color={readonly || disabled ? 'grey500' : 'navy700'}
                 size={24}
               >
                 chevron_right
               </Icon>
-            </StyledIconChevron>
-          ) : null}
-        </StyledSelectSelected>
-        <StyledSelectOptions
+            </div>
+          )}
+        </div>
+        <div
+          className={reactStyles['ui-select__option-group']}
           open={open}
           onClick={event => event.stopPropagation()}
           data-test="ui-select__options"
@@ -297,8 +188,9 @@ export default class Select extends PureComponent<TProps, TState> {
           {React.Children.map(
             children,
             child =>
-              child ? (
-                <StyledOption
+              child && (
+                <div
+                  className={reactStyles['ui-select__option']}
                   key={child.key}
                   name={child.key}
                   selected={child.props.selected}
@@ -306,12 +198,12 @@ export default class Select extends PureComponent<TProps, TState> {
                   data-test="ui-select__options__option"
                 >
                   {child}
-                </StyledOption>
-              ) : null
+                </div>
+              )
           )}
-          {!React.Children.count(children) ? <Text>{empty}</Text> : null}
-        </StyledSelectOptions>
-      </StyledSelect>
+          {!React.Children.count(children) && <Text>{empty}</Text>}
+        </div>
+      </div>
     );
   }
 }

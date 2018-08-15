@@ -1,0 +1,72 @@
+.ui-paper {
+  position: relative;
+  background: white;
+  box-sizing: content-box;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid var(--grey300);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-shrink: 0;
+  align-content: flex-start;
+}
+
+.ui-paper--level-1 {
+  box-shadow: var(--box-shadow-level-0);
+}
+
+.ui-paper--level-2 {
+  box-shadow: var(--box-shadow-level-1);
+}
+
+.ui-paper--level-3 {
+  box-shadow: var(--box-shadow-level-2);
+}
+
+.ui-paper--level-4 {
+  box-shadow: var(--box-shadow-level-3);
+}
+
+.ui-paper--level-5 {
+  box-shadow: var(--box-shadow-level-4);
+}
+
+.ui-paper--hover-level-1:hover {
+  box-shadow: var(--box-shadow-level-0);
+}
+
+.ui-paper--hover-level-2:hover {
+  box-shadow: var(--box-shadow-level-1);
+}
+
+.ui-paper--hover-level-3:hover {
+  box-shadow: var(--box-shadow-level-2);
+}
+
+.ui-paper--hover-level-4:hover {
+  box-shadow: var(--box-shadow-level-3);
+}
+
+.ui-paper--hover-level-5:hover {
+  box-shadow: var(--box-shadow-level-4);
+}
+
+.ui-paper--opaque {
+  background: none;
+  border: 0;
+  box-shadow: none !important;
+}
+
+.ui-paper--wireframe {
+  background: transparent;
+  border: 1px dashed var(--grey500);
+}
+
+.ui-paper--no-border {
+  border: 0;
+}
+
+.ui-paper--interactive {
+  cursor: pointer;
+}

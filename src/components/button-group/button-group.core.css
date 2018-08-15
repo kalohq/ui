@@ -1,0 +1,9 @@
+.ui-button-group {
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+
+.ui-button-group--wide {
+  width: 100%;
+}

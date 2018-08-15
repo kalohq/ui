@@ -1,20 +1,11 @@
 /* @flow */
 import * as React from 'react';
-import styled, {css} from 'react-emotion';
+import cx from 'classnames';
 import {isArray} from 'lodash';
-import {Flex} from '../layout';
+import {UIBase} from '../layout';
 
-const StyledButtonGroup = styled(Flex)`
-  align-items: center;
-  width: ${props => (props.wide ? '100%' : 'auto')};
+import coreStyles from './button-group.core.css';
 
-  ${props =>
-    props.reverse &&
-    css`
-      flex-direction: row-reverse;
-      justify-content: flex-end;
-    `};
-`;
 /**
  * A basic container for grouped buttons
  * - Clones children to ensure Button components received a 'grouped' prop
@@ -38,22 +29,25 @@ export default function ButtonGroup(props: Props) {
   const childrenInOrder =
     reverse && isArray(children) ? [...children].reverse() : children;
 
+  const _classNames = cx({
+    [coreStyles['ui-button-group']]: true,
+    [coreStyles['ui-button-group--wide']]: wide,
+  });
+
   return (
-    <StyledButtonGroup wide={wide} data-test="ui-button-group" {...otherProps}>
-      {childrenInOrder ? (
+    <UIBase className={_classNames} data-test="ui-button-group" {...otherProps}>
+      {childrenInOrder &&
         React.Children.map(
           childrenInOrder,
           child =>
-            child // $FlowFixMe
-              ? React.cloneElement(child, {
-                  grouped: !spacing,
-                  spacing: !!spacing,
-                  reverse,
-                  flex,
-                })
-              : null
-        )
-      ) : null}
-    </StyledButtonGroup>
+            child && // $FlowFixMe
+            React.cloneElement(child, {
+              grouped: !spacing,
+              spacing: !!spacing,
+              reverse,
+              flex,
+            })
+        )}
+    </UIBase>
   );
 }

@@ -2,76 +2,44 @@
 import React, {PureComponent} from 'react';
 import {focusOnMount as _focusOnMount} from '../../utils/react';
 import {isBoolean, isString} from 'lodash';
-import styled, {css} from 'react-emotion';
+import cx from 'classnames';
 
 import Text from '../text';
 import Icon from '../icon';
-import {Flex} from '../layout';
+
+import coreStyles from './input.core.css';
+import reactStyles from './input.react.css';
 
 const EXPANDS_BUFFER = 5;
 
 const INPUT_SIZE_MAP = {
   small: {
     fontSize: 14,
-    size: 32,
   },
   medium: {
     fontSize: 14,
-    size: 40,
   },
   large: {
     fontSize: 16,
-    size: 48,
   },
   'extra-large': {
     fontSize: 16,
-    size: 52,
   },
 };
 
 const getInputFont = size =>
   size && `normal ${INPUT_SIZE_MAP[size].fontSize}px WebFaktSoftPro`;
 
-const StyledInputAddon = styled(Flex)`
-  min-width: 40px;
-  height: 40px;
-  flex-flow: column;
-  text-align: center;
-
-  ${props =>
-    props.inputTheme === 'default' &&
-    css`
-      background-color: ${props.theme.colors.grey300};
-      color: ${props.theme.colors.navy600};
-      border: 1px solid #dfe2e4;
-      padding: 0 16px;
-
-      ${props.addonType === 'prefix' &&
-        css`
-          border-right: 0;
-          border-radius: ${props.theme.layout.borderRadiusInput} 0 0
-            ${props.theme.layout.borderRadiusInput};
-        `};
-      ${props.addonType === 'suffix' &&
-        css`
-          border-left: 0;
-          border-radius: 0 ${props.theme.layout.borderRadiusInput}
-            ${props.theme.layout.borderRadiusInput} 0;
-        `};
-    `};
-`;
-
 export const InputAddon = (props: {
   content: string | React$Node,
   type: string,
-  inputTheme?: 'default' | 'transparent' | 'well',
 }) => {
   return (
-    <StyledInputAddon
-      justifyContent="center"
-      alignItems="center"
-      addonType={props.type}
-      inputTheme={props.inputTheme}
+    <div
+      className={cx({
+        [reactStyles['ui-input-addon']]: true,
+        [reactStyles[`ui-input-addon--${props.type}`]]: true,
+      })}
     >
       {isString(props.content) ? (
         <Text size="small" color="slate" weight="semi-bold">
@@ -80,135 +48,9 @@ export const InputAddon = (props: {
       ) : (
         props.content
       )}
-    </StyledInputAddon>
+    </div>
   );
 };
-
-const StyledInputContainer = styled(Flex)`
-  font-size: 16px;
-  font-weight: ${props => props.theme.typography.fontWeightNormal};
-  transition: background-color, border-color 160ms linear;
-  user-select: text;
-  width: 100%;
-  position: relative;
-`;
-
-const InputIcon = styled(Flex)`
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: ${props => INPUT_SIZE_MAP[props.size].size}px;
-  width: ${props => INPUT_SIZE_MAP[props.size].size}px;
-  z-index: 2;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-`;
-
-const StyledInput = styled.input`
-  width: 100%;
-  min-width: 0;
-  color: ${props => props.theme.colors.navy700};
-  font-size: ${props => INPUT_SIZE_MAP[props.size].fontSize}px;
-  height: ${props => INPUT_SIZE_MAP[props.size].size}px;
-  padding-left: ${props => props.withIcon && '40px'}!important;
-
-  &:focus {
-    outline: 0;
-  }
-
-  &:-webkit-autofill {
-    background-color: transparent;
-  }
-
-  &:disabled {
-    background-color: ${props => props.theme.input.inputDisabledBackground};
-    border: ${props => props.theme.input.inputDisabledBorder};
-    cursor: not-allowed;
-    color: ${props => props.theme.input.inputDisabledColor};
-  }
-
-  &:read-only {
-    background-color: ${props => props.theme.input.inputReadonlyBackground};
-    border: ${props => props.theme.input.inputReadonlyBorder};
-    color: ${props => props.theme.input.inputReadonlyColor};
-  }
-
-  ${props =>
-    props.inputTheme === 'default' &&
-    css`
-      background-color: #fff;
-      border-radius: ${props.theme.input.inputBorderRadius};
-      border: ${props.theme.input.inputDefaultBorder};
-      padding: 4px 8px 4px 16px;
-
-      &::placeholder {
-        color: ${props.theme.colors.grey500};
-      }
-
-      &:not(:read-only):not(:disabled):hover {
-        border: ${props.theme.input.inputHoverBorder};
-      }
-
-      &:not(:read-only):not(:disabled):focus {
-        border: ${props.theme.input.inputActiveBorder};
-      }
-
-      ${props.withAddonPrefix &&
-        css`
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
-        `};
-      ${props.withAddonSuffix &&
-        css`
-          border-top-right-radius: 0;
-          border-bottom-right-radius: 0;
-        `};
-    `};
-
-  ${props =>
-    props.inputTheme === 'transparent' &&
-    css`
-      background: transparent;
-      border: 0;
-      padding: 4px 0;
-
-      &::placeholder {
-        color: ${props.theme.colors.navy500};
-      }
-
-      &:disabled,
-      &:read-only {
-        background-color: transparent;
-        border: 0;
-      }
-    `};
-
-  ${props =>
-    props.inputTheme === 'well' &&
-    css`
-      border-radius: ${props.theme.input.inputBorderRadius};
-      background-color: ${props.theme.colors.grey200};
-      border: 0;
-      padding: 4px 8px 4px 16px;
-
-      &::placeholder {
-        color: ${props.theme.colors.navy500};
-      }
-    `};
-
-  ${props =>
-    props.valid &&
-    css`
-      border-color: ${props.theme.colors.green500}!important;
-    `};
-
-  ${props =>
-    props.invalid &&
-    css`
-      border-color: ${props.theme.colors.pink500}!important;
-    `};
-`;
 
 type TProps = {
   /** The visual theme of the input */
@@ -342,7 +184,6 @@ export default class Input extends PureComponent<TProps, TState> {
       theme = 'default',
       margin = 'none',
       size = 'medium',
-      fullWidth,
       defaultValue,
       value,
       style,
@@ -361,8 +202,6 @@ export default class Input extends PureComponent<TProps, TState> {
       ...otherProps
     } = this.props;
 
-    const {focused} = this.state;
-
     const _styles = {
       ...style,
       width:
@@ -375,36 +214,47 @@ export default class Input extends PureComponent<TProps, TState> {
           : undefined,
     };
 
+    const _classNames = cx(
+      {
+        [coreStyles['ui-input']]: true,
+        [coreStyles[`ui-input--theme-${theme}`]]: theme && theme !== 'default',
+        [coreStyles[`ui-input--${size}`]]: size,
+        [coreStyles[`ui-input--valid`]]: isBoolean(valid) && valid,
+        [coreStyles[`ui-input--invalid`]]: isBoolean(valid) && !valid,
+        [reactStyles[`ui-input--with-addon-prefix`]]: !!addonPrefix,
+        [reactStyles[`ui-input--with-addon-suffix`]]: !!addonSuffix,
+        [reactStyles[`ui-input--with-icon`]]: !!icon,
+      },
+      className
+    );
+
     return (
-      <StyledInputContainer marginBottom={margin} className={className}>
+      <div
+        className={cx(
+          {
+            [reactStyles['ui-input-container']]: true,
+            [reactStyles[`ui-input-container--margin-${margin}`]]: margin,
+          },
+          className
+        )}
+      >
         {addonPrefix && (
           <InputAddon inputTheme={theme} content={addonPrefix} type="prefix" />
         )}
         {icon && (
-          <InputIcon size={size}>
+          <div className={cx(reactStyles['ui-input-icon'])}>
             <Icon size={18} color="navy600">
               {icon}
             </Icon>
-          </InputIcon>
+          </div>
         )}
-        <StyledInput
+        <input
           {...otherProps}
-          /** Emotion Props */
-          inputTheme={theme}
-          expands={expands}
-          valid={isBoolean(valid) && valid}
-          invalid={isBoolean(valid) && !valid}
-          focused={focused}
           margin={margin}
-          fullWidth={fullWidth}
-          size={size}
-          withAddonPrefix={!!addonPrefix}
-          withAddonSuffix={!!addonSuffix}
-          withIcon={!!icon}
           /** Other Props */
           ref={focusOnMount ? _focusOnMount : inputRef}
           style={_styles}
-          className={className}
+          className={_classNames}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChange={readonly ? undefined : this.onChange}
@@ -417,7 +267,7 @@ export default class Input extends PureComponent<TProps, TState> {
         {addonSuffix ? (
           <InputAddon inputTheme={theme} content={addonSuffix} type="suffix" />
         ) : null}
-      </StyledInputContainer>
+      </div>
     );
   }
 }

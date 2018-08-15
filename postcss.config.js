@@ -12,6 +12,7 @@ module.exports = {
     cssnano: {
       normalizeUrl: false,
       discardEmpty: false,
+      core: false,
     },
   },
 };

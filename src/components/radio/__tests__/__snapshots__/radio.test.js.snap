@@ -1,23 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Radio should render shallow component ok 1`] = `
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  cursor: pointer;
-}
-
-.emotion-3 {
+.emotion-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -36,54 +20,23 @@ exports[`Radio should render shallow component ok 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 50%;
-  position: relative;
-  border: 1px solid rgb(84,195,219);
-  background-color: #fff;
-  background-position: center center;
-  background-size: 80%;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-  width: 16px;
-  height: 16px;
-}
-
-.emotion-0 {
-  display: inline-block;
-  -webkit-transition-duration: 0.15s !important;
-  transition-duration: 0.15s !important;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: rgb(84,195,219);
-  border: 3px solid #fff;
 }
 
 <div
-  aria-checked={true}
-  aria-disabled={undefined}
-  className="emotion-4 emotion-5"
+  className="ui-radio ui-radio--medium emotion-0 emotion-1"
   data-test="ui-radio"
   name={undefined}
-  onClick={undefined}
-  role="radio"
+  style={Object {}}
 >
-  <div
+  <input
     checked={true}
-    className="emotion-2 emotion-3"
     disabled={undefined}
-    size="medium"
-    style={Object {}}
-  >
-    <span>
-      <span
-        className="emotion-0 emotion-1"
-        disabled={undefined}
-      />
-    </span>
-  </div>
+    id="toggleButton1"
+    type="radio"
+  />
+  <label
+    htmlFor="toggleButton1"
+    onClick={undefined}
+  />
 </div>
 `;

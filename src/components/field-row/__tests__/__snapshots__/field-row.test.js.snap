@@ -2,24 +2,24 @@
 
 exports[`Input should render shallow component ok 1`] = `
 <div
-  className="e1q9f2xp0 css-15ll966"
+  className="e1q9f2xp0 css-1d2va5m"
   style={Object {}}
 >
   <div
-    className="e1q9f2xp0 css-15m9v65"
+    className="e1q9f2xp0 css-1dhnhir"
     onClick={undefined}
     style={Object {}}
   >
     <div
-      className="e1q9f2xp0 css-wm73vr"
+      className="e1q9f2xp0 css-1yjta7p"
       style={Object {}}
     >
       <div
-        className="e1q9f2xp0 css-pgnee9"
+        className="e1q9f2xp0 css-ou6tiu"
         style={Object {}}
       >
         <label
-          className="em7k1990 css-vddmo1"
+          className="em7k1990 css-1clhzyw"
           color="navy600"
           htmlFor={undefined}
           onClick={undefined}
@@ -31,20 +31,20 @@ exports[`Input should render shallow component ok 1`] = `
         </label>
       </div>
       <div
-        className="e6fqpax1 css-ycayz3"
-        style={Object {}}
+        className="ui-input-container ui-input-container--margin-none"
       >
         <input
-          className="css-1n82uzj e6fqpax3"
+          className="ui-input ui-input--medium"
           defaultValue={undefined}
           disabled={false}
+          editable={true}
+          margin="none"
           name="My first project"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
           placeholder="My first project"
           readOnly={false}
-          size="medium"
           style={
             Object {
               "width": undefined,
@@ -56,20 +56,20 @@ exports[`Input should render shallow component ok 1`] = `
     </div>
   </div>
   <div
-    className="e1q9f2xp0 css-15m9v65"
+    className="e1q9f2xp0 css-1dhnhir"
     onClick={undefined}
     style={Object {}}
   >
     <div
-      className="e1q9f2xp0 css-wm73vr"
+      className="e1q9f2xp0 css-1yjta7p"
       style={Object {}}
     >
       <div
-        className="e1q9f2xp0 css-pgnee9"
+        className="e1q9f2xp0 css-ou6tiu"
         style={Object {}}
       >
         <label
-          className="em7k1990 css-vddmo1"
+          className="em7k1990 css-1clhzyw"
           color="navy600"
           htmlFor={undefined}
           onClick={undefined}
@@ -81,20 +81,20 @@ exports[`Input should render shallow component ok 1`] = `
         </label>
       </div>
       <div
-        className="e6fqpax1 css-ycayz3"
-        style={Object {}}
+        className="ui-input-container ui-input-container--margin-none"
       >
         <input
-          className="css-1n82uzj e6fqpax3"
+          className="ui-input ui-input--medium"
           defaultValue={undefined}
           disabled={false}
+          editable={true}
+          margin="none"
           name="My first task"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
           placeholder="My first task"
           readOnly={false}
-          size="medium"
           style={
             Object {
               "width": undefined,

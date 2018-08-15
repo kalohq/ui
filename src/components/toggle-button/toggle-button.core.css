@@ -1,0 +1,73 @@
+.ui-toggle-button {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.ui-toggle-button input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ui-toggle-button label {
+  display: flex;
+  align-items: center;
+}
+
+.ui-toggle-button label > div {
+  border-radius: 20px;
+  transition: all 0.25s ease-out;
+  width: 56px;
+  height: 26px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid var(--grey200);
+  position: relative;
+
+  &:after {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: var(--grey500);
+    left: 3px;
+    top: 3px;
+    transition: all 0.25s ease-out;
+  }
+}
+
+.ui-toggle-button input:checked ~ label > div {
+  background-color: var(--blue500);
+}
+
+.ui-toggle-button--green input:checked ~ label > div {
+  background-color: var(--green500);
+}
+
+.ui-toggle-button--orange input:checked ~ label > div {
+  background-color: var(--orange500);
+}
+
+.ui-toggle-button--orangeToGreen input ~ label > div {
+  background-color: var(--orange500);
+}
+
+.ui-toggle-button--orangeToGreen input ~ label > div:after {
+  background-color: #fff;
+}
+
+.ui-toggle-button--orangeToGreen input:checked ~ label > div {
+  background-color: var(--green500);
+}
+
+.ui-toggle-button input:checked ~ label > div:after {
+  background-color: var(--white);
+  left: 32px;
+}
+
+/* .ui-toggle-button--orange-to-green .ui-toggle-button label > div:after */

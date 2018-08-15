@@ -1,0 +1,77 @@
+/**
+  React specific button styles
+*/
+
+.ui-btn--state.loaded.ui-btn--state-success {
+  background-color: var(--green500) !important;
+  color: var(--white) !important;
+}
+
+.ui-btn__react-loading-spinner {
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: -150%;
+  transform: translate(-50%, -50%) rotate(0);
+  transition: 0.4s top cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
+  top: -150%;
+}
+
+.ui-btn--state-loading .ui-btn__react-loading-spinner {
+  opacity: 1;
+  top: 50%;
+}
+
+.ui-btn__react-placeholder-message,
+.ui-btn__react-visible-message {
+  height: 100%;
+  left: 0;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  position: absolute;
+}
+
+.ui-btn--state-loading .ui-btn__react-visible-message,
+.ui-btn--state-loaded .ui-btn__react-visible-message {
+  opacity: 0;
+  top: 100%;
+}
+
+.ui-btn__react-placeholder-message {
+  opacity: 0;
+  visibility: hidden;
+  position: relative;
+}
+
+.ui-btn__react-success-message {
+  display: flex;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  top: 100%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-btn--state-loaded.ui-btn--state-success .ui-btn__react-success-message {
+  opacity: 1;
+  top: 0;
+  transition: 0.4s top cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ui-btn--react-wide {
+  width: 100%;
+}
+
+.ui-btn--react-flex {
+  flex: 1;
+}

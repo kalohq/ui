@@ -9,7 +9,9 @@ import sinon from 'sinon';
 
 import theme from 'components/theme';
 import {shallow} from 'enzyme';
-import Button, {ButtonSuccessMessage, ButtonLoadingSpinner} from '../button';
+import Button from '../button';
+
+import reactStyles from '../button.react.css';
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 
@@ -44,7 +46,10 @@ describe('Button', () => {
     });
 
     const result = shallow(element);
-    expect(result.find(ButtonSuccessMessage).length).toBe(1);
+    expect(
+      result.find({className: reactStyles['ui-btn__react-success-message']})
+        .length
+    ).toBe(1);
   });
 
   test('should display with a loadingSpinner', () => {
@@ -53,8 +58,10 @@ describe('Button', () => {
     });
 
     const result = shallow(element);
-    expect(result.find(ButtonLoadingSpinner).length).toBe(1);
-    expect(result.find(ButtonLoadingSpinner).props().isVisible).toBe(true);
+    expect(
+      result.find({className: reactStyles['ui-btn__react-loading-spinner']})
+        .length
+    ).toBe(1);
   });
 
   test('should call a given onClick event on click', () => {

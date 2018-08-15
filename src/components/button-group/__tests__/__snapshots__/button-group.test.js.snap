@@ -1,170 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ButtonGroup should render shallow component ok 1`] = `
-.emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-}
-
-.emotion-11 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
-  border: none;
-  -webkit-flex: initial;
-  -ms-flex: initial;
-  flex: initial;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 500;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 14px;
-  height: 46px;
-  padding: 0 23px;
-  vertical-align: middle;
-  width: unset;
-  -webkit-transition: background 0.3s ease-out,color 0.2s ease-out;
-  transition: background 0.3s ease-out,color 0.2s ease-out;
-  margin-left: 2.5px;
-  margin-right: 2.5px;
-  background-color: rgb(234,95,110);
-  color: #fff;
-}
-
-.emotion-11:focus {
-  outline: 0;
-}
-
-.emotion-11:hover {
-  background-color: rgb(247,134,146);
-}
-
-.emotion-11:focus {
-  box-shadow: 0 0 0 3px rgb(251,223,226);
-}
-
-.emotion-11:active {
-  background-color: rgb(224,88,103);
-  box-shadow: none;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  left: 0;
-  opacity: 1;
-  top: 0;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  position: relative;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  left: 0;
-  opacity: 1;
-  top: 0;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  left: 0;
-  opacity: 1;
-  top: 0;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-transition: 0.4s top cubic-bezier(0.175,0.885,0.32,1.275);
-  transition: 0.4s top cubic-bezier(0.175,0.885,0.32,1.275);
-  opacity: 0;
-  top: 100%;
-}
-
-.emotion-8 {
-  left: 50%;
-  pointer-events: none;
-  position: absolute;
-  top: -150%;
-  -webkit-transform: translate(-50%,-50%) rotate(0);
-  -ms-transform: translate(-50%,-50%) rotate(0);
-  transform: translate(-50%,-50%) rotate(0);
-  -webkit-transition: 0.4s top cubic-bezier(0.175,0.885,0.32,1.275);
-  transition: 0.4s top cubic-bezier(0.175,0.885,0.32,1.275);
-  opacity: 0;
-  top: -150%;
-}
-
-.emotion-6 {
+.emotion-0 {
   position: relative;
   -webkit-transform-origin: 48% 50%;
   -ms-transform-origin: 48% 50%;
@@ -175,7 +12,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
   height: 20px;
 }
 
-.emotion-6 svg {
+.emotion-0 svg {
   fill: rgb(198,199,216);
   position: absolute;
   top: 0;
@@ -183,44 +20,40 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
 }
 
 <div
-  className="emotion-24 emotion-25"
+  className="ui-button-group ui-button-group--wide emotion-2 emotion-3"
   data-test="ui-button-group"
   style={Object {}}
 >
   <button
-    className="emotion-10 emotion-11"
+    className="ui-btn ui-btn--large ui-btn--primary ui-btn--grouped-with-spacing emotion-2 emotion-3"
     data-test="ui-button"
     disabled={false}
     name={undefined}
     onClick={[Function]}
     role="button"
-    size="large"
     style={Object {}}
     type={undefined}
   >
     <div
-      className="emotion-0 emotion-1"
-      style={Object {}}
+      className="ui-btn__react-placeholder-message"
     >
       One
     </div>
     <div
-      className="emotion-2 emotion-3"
+      className="ui-btn__react-visible-message"
       name="message"
-      style={Object {}}
       title="One"
     >
       One
     </div>
     <div
-      className="emotion-4 emotion-5"
-      style={Object {}}
+      className="ui-btn__react-success-message"
     />
     <div
-      className="emotion-8 emotion-9"
+      className="ui-btn__react-loading-spinner"
     >
       <div
-        className="emotion-6 emotion-7"
+        className="emotion-0 emotion-1"
         size="small"
       >
         <svg
@@ -238,39 +71,35 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
     </div>
   </button>
   <button
-    className="emotion-10 emotion-11"
+    className="ui-btn ui-btn--large ui-btn--primary ui-btn--grouped-with-spacing emotion-2 emotion-3"
     data-test="ui-button"
     disabled={false}
     name={undefined}
     onClick={[Function]}
     role="button"
-    size="large"
     style={Object {}}
     type={undefined}
   >
     <div
-      className="emotion-0 emotion-1"
-      style={Object {}}
+      className="ui-btn__react-placeholder-message"
     >
       Two
     </div>
     <div
-      className="emotion-2 emotion-3"
+      className="ui-btn__react-visible-message"
       name="message"
-      style={Object {}}
       title="Two"
     >
       Two
     </div>
     <div
-      className="emotion-4 emotion-5"
-      style={Object {}}
+      className="ui-btn__react-success-message"
     />
     <div
-      className="emotion-8 emotion-9"
+      className="ui-btn__react-loading-spinner"
     >
       <div
-        className="emotion-6 emotion-7"
+        className="emotion-0 emotion-1"
         size="small"
       >
         <svg
