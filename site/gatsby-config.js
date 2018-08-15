@@ -7,8 +7,6 @@ module.exports = {
     version: uiVersion,
     sketchKitLink:
       'https://drive.google.com/file/d/0B--bXeGhrriocHkwWHVoajh2VGs/view?usp=sharing',
-    sketchPaletteLink:
-      'https://github.com/kalohq/ui/raw/master/src/design-tokens/kalo-ui.sketchpalette',
     githubRepoLink: 'https://github.com/kalohq/ui',
   },
   plugins: [
