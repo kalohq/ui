@@ -60,55 +60,134 @@ const StyledTitle = styled.h2`
   color: ${props => props.theme.colors.navy700};
 `;
 
-export default function ComponentDocumentation(props) {
-  const {data} = props;
-  const {markdownRemark: component, allComponentMetadata, site} = data;
+const Tabs = styled.div`
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid ${props => props.theme.colors.grey300};
+`;
 
-  const componentProps = allComponentMetadata
-    ? allComponentMetadata.edges[0].node.props
-    : false;
-  const componentName = upperFirst(camelCase(component.fields.componentName));
-  const stories = Stories[componentName]
-    ? Stories[componentName].examples
-    : false;
-  return (
-    <div style={{width: '100%'}}>
-      <Wrapper>
-        <DocumentationContent
-          pageTitle={`${componentName} - ${site.siteMetadata.title}`}
-          pageDescription={component.excerpt}
-          raw={component.html}
-        />
-      </Wrapper>
-      <Wrapper>
-        {componentProps ? (
-          <section>
-            <StyledTitle id="props">Props</StyledTitle>
-            <PropTable data={componentProps} />
-          </section>
-        ) : null}
-      </Wrapper>
-      {stories ? (
+const Tab = styled.button`
+  font-size: 12px;
+  color: ${props => props.theme.colors.navy700};
+  font-weight: 600;
+  border: 1px solid transparent;
+  width: 50%;
+  height: 40px;
+  cursor: pointer;
+  background-color: transparent;
+  border-bottom: ${props =>
+    props.isActive && `2px solid ${props.theme.colors.pink500}`};
+
+  &:focus {
+    outline: 0;
+  }
+`;
+
+export default class ComponentDocumentation extends React.PureComponent {
+  constructor(props) {
+    super(props);
+
+    this.toggleTab = this.toggleTab.bind(this);
+
+    this.state = {
+      currentTab: 'react',
+    };
+  }
+
+  toggleTab(tab) {
+    this.setState({
+      currentTab: tab,
+    });
+  }
+
+  render() {
+    const {data} = this.props;
+    const {markdownRemark: component, allComponentMetadata, site} = data;
+
+    const componentProps = allComponentMetadata
+      ? allComponentMetadata.edges[0].node.props
+      : false;
+    const componentName = upperFirst(camelCase(component.fields.componentName));
+    const stories = Stories[componentName]
+      ? Stories[componentName].examples
+      : false;
+    return (
+      <div style={{width: '100%'}}>
         <Wrapper>
-          {stories.map(story => {
-            const Story = story.render;
-            return (
-              <StoryContainer key={story.title}>
-                <StoryTitle>{story.title}</StoryTitle>
-                <StoryDescription>{story.description}</StoryDescription>
-                <StoryMain>
-                  <Story />
-                </StoryMain>
-                <StorySnippet>
-                  <Snippet depth={0} node={story.render()} />
-                </StorySnippet>
-              </StoryContainer>
-            );
-          })}
+          <DocumentationContent
+            pageTitle={`${componentName} - ${site.siteMetadata.title}`}
+            pageDescription={component.excerpt}
+            raw={component.html}
+          />
         </Wrapper>
-      ) : null}
-    </div>
-  );
+
+        <Wrapper>
+          <Tabs>
+            <Tab
+              isActive={this.state.currentTab === 'react'}
+              onClick={() => this.toggleTab('react')}
+            >
+              React Components
+            </Tab>
+            <Tab
+              isActive={this.state.currentTab === 'css'}
+              onClick={() => this.toggleTab('css')}
+            >
+              CSS Classes
+            </Tab>
+          </Tabs>
+        </Wrapper>
+        {this.state.currentTab === 'react' ? (
+          <section>
+            <Wrapper>
+              {componentProps && (
+                <section>
+                  <StyledTitle id="props">Props</StyledTitle>
+                  <PropTable data={componentProps} />
+                </section>
+              )}
+            </Wrapper>
+            {stories ? (
+              <Wrapper>
+                {stories.map(story => {
+                  const Story = story.render;
+                  return (
+                    <StoryContainer key={story.title}>
+                      <StoryTitle>{story.title}</StoryTitle>
+                      <StoryDescription>{story.description}</StoryDescription>
+                      <StoryMain>
+                        <Story />
+                      </StoryMain>
+                      <StorySnippet>
+                        <Snippet depth={0} node={story.render()} />
+                      </StorySnippet>
+                    </StoryContainer>
+                  );
+                })}
+              </Wrapper>
+            ) : null}
+          </section>
+        ) : (
+          <section>
+            <Wrapper>
+              {stories.filter(story => story.html).map(story => {
+                return (
+                  <StoryContainer key={story.title}>
+                    <StoryTitle>{story.title}</StoryTitle>
+                    <StoryDescription>{story.description}</StoryDescription>
+                    <StoryMain>{story.html}</StoryMain>
+                    <StorySnippet>
+                      <div dangerouslySetInnerHTML={{__html: story.html}} />
+                    </StorySnippet>
+                  </StoryContainer>
+                );
+              })}
+            </Wrapper>
+          </section>
+        )}
+      </div>
+    );
+  }
 }
 
 export const pageQuery = graphql`
