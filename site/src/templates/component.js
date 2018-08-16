@@ -1,13 +1,188 @@
 import * as React from 'react';
 import {upperFirst, camelCase} from 'lodash';
 import styled from 'react-emotion';
+import Prism from 'prismjs';
+import reactElementToJSXString from 'react-element-to-jsx-string';
 
 import DocumentationContent from '../components/documentation-content';
 import PropTable from '../components/prop-table';
-import Snippet from '../components/snippet';
 import Wrapper from '../components/wrapper';
 
 import * as Stories from '../data/examples.js';
+
+export default class ComponentDocumentation extends React.PureComponent {
+  constructor(props) {
+    super(props);
+
+    this.toggleTab = this.toggleTab.bind(this);
+
+    this.state = {
+      currentTab: 'react',
+    };
+  }
+
+  toggleTab(tab) {
+    this.setState({
+      currentTab: tab,
+    });
+  }
+
+  render() {
+    const {data} = this.props;
+    const {markdownRemark: component, allComponentMetadata, site} = data;
+
+    const componentProps = allComponentMetadata
+      ? allComponentMetadata.edges[0].node.props
+      : false;
+    const componentName = upperFirst(camelCase(component.fields.componentName));
+    const stories = Stories[componentName]
+      ? Stories[componentName].examples
+      : false;
+    return (
+      <div style={{width: '100%'}}>
+        <Wrapper>
+          <DocumentationContent
+            pageTitle={`${componentName} - ${site.siteMetadata.title}`}
+            pageDescription={component.excerpt}
+            raw={component.html}
+          />
+        </Wrapper>
+
+        <Wrapper>
+          <Tabs>
+            <Tab
+              isActive={this.state.currentTab === 'react'}
+              onClick={() => this.toggleTab('react')}
+            >
+              React Components
+            </Tab>
+            <Tab
+              isActive={this.state.currentTab === 'css'}
+              onClick={() => this.toggleTab('css')}
+            >
+              Vanilla HTML/CSS
+            </Tab>
+          </Tabs>
+        </Wrapper>
+        {this.state.currentTab === 'react' ? (
+          <section>
+            <Wrapper>
+              {componentProps && (
+                <section>
+                  <StyledTitle id="props">Props</StyledTitle>
+                  <PropTable data={componentProps} />
+                </section>
+              )}
+            </Wrapper>
+            {stories ? (
+              <Wrapper>
+                {stories.map(story => {
+                  const ReactStory = story.render;
+                  const grammar = Prism.languages.html;
+                  return (
+                    <StoryContainer key={story.title}>
+                      <StoryTitle>{story.title}</StoryTitle>
+                      <StoryDescription>{story.description}</StoryDescription>
+                      <StoryMain>
+                        <ReactStory />
+                      </StoryMain>
+                      <StorySnippet>
+                        <span
+                          dangerouslySetInnerHTML={{
+                            __html: Prism.highlight(
+                              reactElementToJSXString(story.render(), {
+                                showDefaultProps: false,
+                                useBooleanShorthandSyntax: false,
+                              }),
+                              grammar,
+                              'html'
+                            ),
+                          }}
+                        />
+                      </StorySnippet>
+                    </StoryContainer>
+                  );
+                })}
+              </Wrapper>
+            ) : null}
+          </section>
+        ) : (
+          <section>
+            <Wrapper>
+              {stories.filter(story => story.html).map(story => {
+                const grammar = Prism.languages.html;
+                const HTMLStory = story.html;
+                return (
+                  <StoryContainer key={story.title}>
+                    <StoryTitle>{story.title}</StoryTitle>
+                    <StoryDescription>{story.description}</StoryDescription>
+                    <StoryMain>
+                      <HTMLStory />
+                    </StoryMain>
+                    <StorySnippet
+                      dangerouslySetInnerHTML={{
+                        __html: Prism.highlight(
+                          reactElementToJSXString(story.html(), {
+                            showDefaultProps: false,
+                            useBooleanShorthandSyntax: false,
+                          })
+                            .replace('className', 'class')
+                            .replace('htmlFor', 'for'),
+                          grammar,
+                          'html'
+                        ),
+                      }}
+                    />
+                  </StoryContainer>
+                );
+              })}
+            </Wrapper>
+          </section>
+        )}
+      </div>
+    );
+  }
+}
+
+export const pageQuery = graphql`
+  query ComponentByPath($componentName: String!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allComponentMetadata(filter: {displayName: {eq: $componentName}}) {
+      edges {
+        node {
+          displayName
+          props {
+            required
+            docblock
+            name
+            type {
+              name
+              raw
+            }
+            flowType {
+              name
+              raw
+              nullable
+            }
+          }
+        }
+      }
+    }
+    markdownRemark(fields: {componentName: {eq: $componentName}}) {
+      tableOfContents
+      html
+      excerpt
+      timeToRead
+      fields {
+        componentName
+      }
+    }
+  }
+`;
 
 const StoryContainer = styled.div`
   width: 100%;
@@ -80,152 +255,5 @@ const Tab = styled.button`
 
   &:focus {
     outline: 0;
-  }
-`;
-
-export default class ComponentDocumentation extends React.PureComponent {
-  constructor(props) {
-    super(props);
-
-    this.toggleTab = this.toggleTab.bind(this);
-
-    this.state = {
-      currentTab: 'react',
-    };
-  }
-
-  toggleTab(tab) {
-    this.setState({
-      currentTab: tab,
-    });
-  }
-
-  render() {
-    const {data} = this.props;
-    const {markdownRemark: component, allComponentMetadata, site} = data;
-
-    const componentProps = allComponentMetadata
-      ? allComponentMetadata.edges[0].node.props
-      : false;
-    const componentName = upperFirst(camelCase(component.fields.componentName));
-    const stories = Stories[componentName]
-      ? Stories[componentName].examples
-      : false;
-    return (
-      <div style={{width: '100%'}}>
-        <Wrapper>
-          <DocumentationContent
-            pageTitle={`${componentName} - ${site.siteMetadata.title}`}
-            pageDescription={component.excerpt}
-            raw={component.html}
-          />
-        </Wrapper>
-
-        <Wrapper>
-          <Tabs>
-            <Tab
-              isActive={this.state.currentTab === 'react'}
-              onClick={() => this.toggleTab('react')}
-            >
-              React Components
-            </Tab>
-            <Tab
-              isActive={this.state.currentTab === 'css'}
-              onClick={() => this.toggleTab('css')}
-            >
-              CSS Classes
-            </Tab>
-          </Tabs>
-        </Wrapper>
-        {this.state.currentTab === 'react' ? (
-          <section>
-            <Wrapper>
-              {componentProps && (
-                <section>
-                  <StyledTitle id="props">Props</StyledTitle>
-                  <PropTable data={componentProps} />
-                </section>
-              )}
-            </Wrapper>
-            {stories ? (
-              <Wrapper>
-                {stories.map(story => {
-                  const Story = story.render;
-                  return (
-                    <StoryContainer key={story.title}>
-                      <StoryTitle>{story.title}</StoryTitle>
-                      <StoryDescription>{story.description}</StoryDescription>
-                      <StoryMain>
-                        <Story />
-                      </StoryMain>
-                      <StorySnippet>
-                        <Snippet depth={0} node={story.render()} />
-                      </StorySnippet>
-                    </StoryContainer>
-                  );
-                })}
-              </Wrapper>
-            ) : null}
-          </section>
-        ) : (
-          <section>
-            <Wrapper>
-              {stories.filter(story => story.html).map(story => {
-                return (
-                  <StoryContainer key={story.title}>
-                    <StoryTitle>{story.title}</StoryTitle>
-                    <StoryDescription>{story.description}</StoryDescription>
-                    <StoryMain>{story.html}</StoryMain>
-                    <StorySnippet>
-                      <div dangerouslySetInnerHTML={{__html: story.html}} />
-                    </StorySnippet>
-                  </StoryContainer>
-                );
-              })}
-            </Wrapper>
-          </section>
-        )}
-      </div>
-    );
-  }
-}
-
-export const pageQuery = graphql`
-  query ComponentByPath($componentName: String!) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allComponentMetadata(filter: {displayName: {eq: $componentName}}) {
-      edges {
-        node {
-          displayName
-          props {
-            required
-            docblock
-            name
-            type {
-              name
-              raw
-            }
-            flowType {
-              name
-              raw
-              nullable
-            }
-          }
-        }
-      }
-    }
-    markdownRemark(fields: {componentName: {eq: $componentName}}) {
-      tableOfContents
-      html
-      excerpt
-      timeToRead
-      fields {
-        componentName
-      }
-    }
   }
 `;

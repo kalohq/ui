@@ -4,8 +4,13 @@ const fs = require('fs');
 const glob = require('glob');
 const {upperFirst, camelCase} = require('lodash');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const {cssModulesConfig} = require('gatsby-1-config-css-modules');
 const {createFilePath} = require('gatsby-source-filesystem');
+
+const cssModulesConfig = stage => {
+  const LOCAL_IDENT_NAME = `[local]`;
+  const loader = `css?modules&minimize&importLoaders=1&localIdentName=${LOCAL_IDENT_NAME}`;
+  return stage.startsWith(`build`) ? loader : `${loader}&sourceMap`;
+};
 
 const cssVariables = require('../src/design-tokens/tokens.css.js');
 

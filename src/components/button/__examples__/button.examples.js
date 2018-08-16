@@ -51,25 +51,42 @@ export const examples = [
     description:
       "The default style. Unless the action you're building is primary, this is the button you should use",
     render: () => <Button variant="tertiary">Export Freelancers</Button>,
-    html: '<button class="ui-btn ui-btn--tertiary">Tertiary Button</button>',
+    html: () => (
+      <button className="ui-btn ui-btn--tertiary ui-btn--medium">
+        Tertiary Button
+      </button>
+    ),
   },
   {
     title: 'Primary Button',
     description:
       'The primary action of a view. It should be used no more than once per view.',
     render: () => <Button variant="primary">Create Project</Button>,
-    html: '<button class="ui-btn ui-btn--primary">Primary button</button>',
+    html: () => (
+      <button className="ui-btn ui-btn--primary ui-btn--medium">
+        Primary button
+      </button>
+    ),
   },
   {
     title: 'Secondary Button',
     description: 'Used for supporting actions.',
     render: () => <Button variant="secondary">Save Changes</Button>,
-    html: '<button class="ui-btn ui-btn--tertiary">Secondary button</button>',
+    html: () => (
+      <button className="ui-btn ui-btn--secondary ui-btn--medium">
+        Secondary button
+      </button>
+    ),
   },
   {
     title: 'Delete Button',
     description: 'An action button for deleting/removing.',
     render: () => <Button variant="delete">Remove freelancer</Button>,
+    html: () => (
+      <button className="ui-btn ui-btn--delete ui-btn--medium">
+        Delete button
+      </button>
+    ),
   },
   {
     title: 'Action Button',
@@ -87,6 +104,11 @@ export const examples = [
       <Button variant="tertiary" disabled={true} onClick={myClickFunction}>
         Get Started
       </Button>
+    ),
+    html: () => (
+      <button className="ui-btn ui-btn--primary ui-btn--medium" disabled={true}>
+        Disabled button
+      </button>
     ),
   },
   {
@@ -159,6 +181,15 @@ export const examples = [
           Large
         </Button>
       </ButtonGroup>
+    ),
+    html: () => (
+      <div className="ui-button-group">
+        <button className="ui-btn ui-btn--tertiary ui-btn--small">Small</button>
+        <button className="ui-btn ui-btn--tertiary ui-btn--medium">
+          medium
+        </button>
+        <button className="ui-btn ui-btn--tertiary ui-btn--large">large</button>
+      </div>
     ),
   },
 ];

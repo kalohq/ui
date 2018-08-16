@@ -8,11 +8,25 @@ export const examples = [
     title: 'Input',
     description: 'A basic input',
     render: () => <Input placeholder="Your first name" />,
+    html: () => (
+      <input
+        type="text"
+        className="ui-input ui-input--medium"
+        placeholder="Your first name"
+      />
+    ),
   },
   {
     title: 'Well input',
     description: 'A highlighted input that turns into a normal input on focus',
     render: () => <Input placeholder="Location" theme="well" icon="search" />,
+    html: () => (
+      <input
+        type="text"
+        className="ui-input ui-input--theme-well ui-input--medium"
+        placeholder="Location"
+      />
+    ),
   },
   {
     title: 'Disabled Input',
