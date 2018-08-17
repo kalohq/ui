@@ -23,7 +23,7 @@ type TProps = {
 export default class Checkbox extends PureComponent<TProps> {
   setIndeterminateState: Function;
   setCheckboxRef: Function;
-  checkboxElement: HTMLElement;
+  checkboxElement: HTMLInputElement;
 
   constructor(props: TProps) {
     super(props);
@@ -43,17 +43,17 @@ export default class Checkbox extends PureComponent<TProps> {
     this.setIndeterminateState(newProps);
   }
 
-  setCheckboxRef(element: HTMLElement) {
+  setCheckboxRef(element: HTMLInputElement) {
     this.checkboxElement = element;
   }
 
   setIndeterminateState(props: TProps) {
-    if (this.checkboxElement && props.indeterminate && !props.checked) {
-      // $FlowFixMe
-      this.checkboxElement.indeterminate = true;
-    } else {
-      // $FlowFixMe
-      this.checkboxElement.indeterminate = false;
+    if (this.checkboxElement) {
+      if (props.indeterminate && !props.checked) {
+        this.checkboxElement.indeterminate = true;
+      } else {
+        this.checkboxElement.indeterminate = false;
+      }
     }
   }
 

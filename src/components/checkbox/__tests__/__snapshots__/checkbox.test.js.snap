@@ -61,6 +61,7 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
     checked={false}
     disabled={false}
     id="toggleButton3"
+    onChange={[Function]}
     type="checkbox"
   />
   <label
@@ -141,6 +142,7 @@ exports[`Checkbox should render a checkbox with label 1`] = `
     checked={true}
     disabled={false}
     id="toggleButton2"
+    onChange={[Function]}
     type="checkbox"
   />
   <label
@@ -192,6 +194,7 @@ exports[`Checkbox should render shallow component ok 1`] = `
     checked={true}
     disabled={false}
     id="toggleButton1"
+    onChange={[Function]}
     type="checkbox"
   />
   <label
