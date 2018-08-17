@@ -86,6 +86,7 @@ export default class Checkbox extends PureComponent<TProps> {
           checked={checked}
           disabled={disabled}
           ref={this.setCheckboxRef}
+          defaultChecked={checked}
         />
         <label htmlFor={id} onClick={!disabled && onClick}>
           {label && isString(label) ? (
