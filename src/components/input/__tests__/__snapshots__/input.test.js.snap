@@ -7,7 +7,6 @@ exports[`Input should render shallow component ok 1`] = `
   <input
     className="ui-input ui-input--medium"
     defaultValue={undefined}
-    margin="none"
     name={undefined}
     onBlur={[Function]}
     onChange={[Function]}
