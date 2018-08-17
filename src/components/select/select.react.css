@@ -54,18 +54,11 @@
 .ui-select__option {
   padding: 8px 16px;
   cursor: pointer;
+  color: var(--navy700);
 
   &:hover {
-    color: var(--navy700);
     background: var(--grey300);
     border-radius: 0;
     border: none;
   }
-}
-
-.ui-select--open .ui-select__option {
-  color: var(--navy700);
-  background: var(--grey300);
-  border-radius: 0;
-  border: none;
 }
