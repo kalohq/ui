@@ -1,11 +1,13 @@
 /* @flow */
 import React, {PureComponent} from 'react';
-import {focusOnMount as _focusOnMount} from '../../utils/react';
 import {isBoolean, isString} from 'lodash';
 import cx from 'classnames';
 
 import Text from '../text';
 import Icon from '../icon';
+
+import {focusOnMount as _focusOnMount} from '../../utils/react';
+import {cleanProps} from '../../utils/style';
 
 import coreStyles from './input.core.css';
 import reactStyles from './input.react.css';
@@ -249,8 +251,7 @@ export default class Input extends PureComponent<TProps, TState> {
           </div>
         )}
         <input
-          {...otherProps}
-          margin={margin}
+          {...cleanProps(otherProps)}
           /** Other Props */
           ref={focusOnMount ? _focusOnMount : inputRef}
           style={_styles}
