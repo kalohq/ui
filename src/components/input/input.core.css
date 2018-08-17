@@ -40,7 +40,7 @@
 
 .ui-input--theme-transparent {
   background: transparent;
-  border: 0;
+  border: 1px solid transparent;
   padding: 4px 0;
 
   &::placeholder {
