@@ -32,4 +32,15 @@ export const examples = [
       </ButtonGroup>
     ),
   },
+  {
+    title: 'Alignment',
+    description:
+      'Buttons can be aligned left, center, or right. Most button groups should be aligned right',
+    render: () => (
+      <ButtonGroup spacing={true} align="right">
+        <Button variant="tertiary">Cancel</Button>
+        <Button variant="primary">Create Project</Button>
+      </ButtonGroup>
+    ),
+  },
 ];

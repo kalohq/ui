@@ -7,3 +7,15 @@
 .ui-button-group--wide {
   width: 100%;
 }
+
+.ui-button-group--align-left {
+  justify-content: flex-start;
+}
+
+.ui-button-group--align-center {
+  justify-content: center;
+}
+
+.ui-button-group--align-right {
+  justify-content: flex-end;
+}

@@ -21,10 +21,20 @@ type Props = {
   spacing?: boolean,
   /** Reverses the order of child buttons */
   reverse?: boolean,
+  /** X Alignment of the buttons */
+  align?: 'left' | 'center' | 'right',
 };
 
 export default function ButtonGroup(props: Props) {
-  const {children, wide = true, flex, spacing, reverse, ...otherProps} = props;
+  const {
+    children,
+    wide = true,
+    flex,
+    spacing,
+    reverse,
+    align,
+    ...otherProps
+  } = props;
 
   const childrenInOrder =
     reverse && isArray(children) ? [...children].reverse() : children;
@@ -32,6 +42,7 @@ export default function ButtonGroup(props: Props) {
   const _classNames = cx({
     [coreStyles['ui-button-group']]: true,
     [coreStyles['ui-button-group--wide']]: wide,
+    [coreStyles[`ui-button-group--align-${String(align)}`]]: align,
   });
 
   return (
