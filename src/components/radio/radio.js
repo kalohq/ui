@@ -53,8 +53,9 @@ export default function Radio(props: RadioProps) {
       <input
         type="radio"
         id={id}
-        defaultChecked={checked}
+        checked={checked}
         disabled={disabled}
+        onChange={() => {}}
       />
       <label htmlFor={id} onClick={!disabled && onClick}>
         {label && isString(label) ? (

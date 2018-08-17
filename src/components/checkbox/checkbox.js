@@ -48,9 +48,12 @@ export default class Checkbox extends PureComponent<TProps> {
   }
 
   setIndeterminateState(props: TProps) {
-    if (this.checkboxElement && props.indeterminate) {
+    if (this.checkboxElement && props.indeterminate && !props.checked) {
       // $FlowFixMe
       this.checkboxElement.indeterminate = true;
+    } else {
+      // $FlowFixMe
+      this.checkboxElement.indeterminate = false;
     }
   }
 
@@ -85,7 +88,8 @@ export default class Checkbox extends PureComponent<TProps> {
           id={id}
           disabled={disabled}
           ref={this.setCheckboxRef}
-          defaultChecked={checked}
+          checked={checked}
+          onChange={() => {}}
         />
         <label htmlFor={id} onClick={!disabled && onClick}>
           {label && isString(label) ? (
