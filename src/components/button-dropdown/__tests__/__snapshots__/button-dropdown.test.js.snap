@@ -223,6 +223,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
         checked={false}
         disabled={false}
         id="toggleButton1"
+        onChange={[Function]}
         type="checkbox"
       />
       <label
@@ -264,6 +265,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
         checked={false}
         disabled={false}
         id="toggleButton2"
+        onChange={[Function]}
         type="checkbox"
       />
       <label

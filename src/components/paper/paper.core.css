@@ -12,6 +12,7 @@
   align-content: flex-start;
 }
 
+.ui-paper--level-0,
 .ui-paper--level-1 {
   box-shadow: var(--box-shadow-level-0);
 }
@@ -32,6 +33,7 @@
   box-shadow: var(--box-shadow-level-4);
 }
 
+.ui-paper--hover-level-0:hover,
 .ui-paper--hover-level-1:hover {
   box-shadow: var(--box-shadow-level-0);
 }

@@ -4,7 +4,6 @@ exports[`Select should render a disabled select 1`] = `
 <div
   aria-disabled={true}
   aria-expanded={false}
-  center={false}
   className="ui-select ui-select--disabled"
   data-test="ui-select"
   onSelect={[Function]}
@@ -51,14 +50,12 @@ exports[`Select should render a disabled select 1`] = `
     className="ui-select__option-group"
     data-test="ui-select__options"
     onClick={[Function]}
-    open={false}
   >
     <div
       className="ui-select__option"
       data-test="ui-select__options__option"
       name="Hertfordshire"
       onClick={[Function]}
-      selected={undefined}
     >
       <div>
         Hertfordshire
@@ -69,7 +66,6 @@ exports[`Select should render a disabled select 1`] = `
       data-test="ui-select__options__option"
       name="Bedfordshire"
       onClick={[Function]}
-      selected={undefined}
     >
       <div>
         Bedfordshire
@@ -80,7 +76,6 @@ exports[`Select should render a disabled select 1`] = `
       data-test="ui-select__options__option"
       name="Oxfordshire"
       onClick={[Function]}
-      selected={undefined}
     >
       <div>
         Oxfordshire
@@ -91,7 +86,6 @@ exports[`Select should render a disabled select 1`] = `
       data-test="ui-select__options__option"
       name="Hampshire"
       onClick={[Function]}
-      selected={undefined}
     >
       <div>
         Hampshire
@@ -105,7 +99,6 @@ exports[`Select should render a readonly select 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  center={false}
   className="ui-select ui-select--read-only"
   data-test="ui-select"
   onSelect={[Function]}
@@ -152,14 +145,12 @@ exports[`Select should render a readonly select 1`] = `
     className="ui-select__option-group"
     data-test="ui-select__options"
     onClick={[Function]}
-    open={false}
   >
     <div
       className="ui-select__option"
       data-test="ui-select__options__option"
       name="Hertfordshire"
       onClick={[Function]}
-      selected={undefined}
     >
       <div>
         Hertfordshire
@@ -170,7 +161,6 @@ exports[`Select should render a readonly select 1`] = `
       data-test="ui-select__options__option"
       name="Bedfordshire"
       onClick={[Function]}
-      selected={undefined}
     >
       <div>
         Bedfordshire
@@ -181,7 +171,6 @@ exports[`Select should render a readonly select 1`] = `
       data-test="ui-select__options__option"
       name="Oxfordshire"
       onClick={[Function]}
-      selected={undefined}
     >
       <div>
         Oxfordshire
@@ -192,7 +181,6 @@ exports[`Select should render a readonly select 1`] = `
       data-test="ui-select__options__option"
       name="Hampshire"
       onClick={[Function]}
-      selected={undefined}
     >
       <div>
         Hampshire
@@ -206,7 +194,6 @@ exports[`Select should render shallow component ok 1`] = `
 <div
   aria-disabled={false}
   aria-expanded={false}
-  center={false}
   className="ui-select"
   data-test="ui-select"
   onSelect={[Function]}
@@ -253,14 +240,12 @@ exports[`Select should render shallow component ok 1`] = `
     className="ui-select__option-group"
     data-test="ui-select__options"
     onClick={[Function]}
-    open={false}
   >
     <div
       className="ui-select__option"
       data-test="ui-select__options__option"
       name="Hertfordshire"
       onClick={[Function]}
-      selected={undefined}
     >
       <div>
         Hertfordshire
@@ -271,7 +256,6 @@ exports[`Select should render shallow component ok 1`] = `
       data-test="ui-select__options__option"
       name="Bedfordshire"
       onClick={[Function]}
-      selected={undefined}
     >
       <div>
         Bedfordshire
@@ -282,7 +266,6 @@ exports[`Select should render shallow component ok 1`] = `
       data-test="ui-select__options__option"
       name="Oxfordshire"
       onClick={[Function]}
-      selected={undefined}
     >
       <div>
         Oxfordshire
@@ -293,7 +276,6 @@ exports[`Select should render shallow component ok 1`] = `
       data-test="ui-select__options__option"
       name="Hampshire"
       onClick={[Function]}
-      selected={undefined}
     >
       <div>
         Hampshire

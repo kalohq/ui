@@ -5,6 +5,8 @@ import {uniqueId} from 'lodash';
 
 import FieldLabel from '../field-label';
 
+import {cleanProps} from '../../utils/style';
+
 import coreStyles from './toggle-button.core.css';
 
 export const HEIGHT = 26;
@@ -50,8 +52,18 @@ export default function ToggleButton(props: TProps) {
   );
 
   return (
-    <div className={_classNames} data-test="ui-toggle-button" {...otherProps}>
-      <input id={id} value={value} checked={value} type="checkbox" />
+    <div
+      className={_classNames}
+      data-test="ui-toggle-button"
+      {...cleanProps(otherProps)}
+    >
+      <input
+        id={id}
+        value={value}
+        type="checkbox"
+        checked={value}
+        onChange={() => {}}
+      />
       <label htmlFor={id} onClick={() => onChange(!value)}>
         <div className="toggle" />
         {label ? (

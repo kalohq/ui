@@ -7,6 +7,7 @@ import Icon from '../icon';
 
 import coreStyles from './select.core.css';
 import reactStyles from './select.react.css';
+import {cleanProps} from '../../utils/style';
 
 /**
  * The kalo generic select component
@@ -134,7 +135,7 @@ export default class Select extends PureComponent<TProps, TState> {
         role="menu"
         aria-disabled={disabled}
         aria-expanded={open}
-        {...otherProps}
+        {...cleanProps(otherProps)}
       >
         <div
           className={reactStyles['ui-select__inner']}
@@ -181,7 +182,6 @@ export default class Select extends PureComponent<TProps, TState> {
         </div>
         <div
           className={reactStyles['ui-select__option-group']}
-          open={open}
           onClick={event => event.stopPropagation()}
           data-test="ui-select__options"
         >
@@ -193,7 +193,6 @@ export default class Select extends PureComponent<TProps, TState> {
                   className={reactStyles['ui-select__option']}
                   key={child.key}
                   name={child.key}
-                  selected={child.props.selected}
                   onClick={() => this.onSelect(child.props.value)}
                   data-test="ui-select__options__option"
                 >

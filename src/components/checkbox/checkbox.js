@@ -23,7 +23,7 @@ type TProps = {
 export default class Checkbox extends PureComponent<TProps> {
   setIndeterminateState: Function;
   setCheckboxRef: Function;
-  checkboxElement: HTMLElement;
+  checkboxElement: HTMLInputElement;
 
   constructor(props: TProps) {
     super(props);
@@ -43,14 +43,17 @@ export default class Checkbox extends PureComponent<TProps> {
     this.setIndeterminateState(newProps);
   }
 
-  setCheckboxRef(element: HTMLElement) {
+  setCheckboxRef(element: HTMLInputElement) {
     this.checkboxElement = element;
   }
 
   setIndeterminateState(props: TProps) {
-    if (this.checkboxElement && props.indeterminate) {
-      // $FlowFixMe
-      this.checkboxElement.indeterminate = true;
+    if (this.checkboxElement) {
+      if (props.indeterminate && !props.checked) {
+        this.checkboxElement.indeterminate = true;
+      } else {
+        this.checkboxElement.indeterminate = false;
+      }
     }
   }
 
@@ -83,9 +86,10 @@ export default class Checkbox extends PureComponent<TProps> {
         <input
           type="checkbox"
           id={id}
-          checked={checked}
           disabled={disabled}
           ref={this.setCheckboxRef}
+          checked={checked}
+          onChange={() => {}}
         />
         <label htmlFor={id} onClick={!disabled && onClick}>
           {label && isString(label) ? (
