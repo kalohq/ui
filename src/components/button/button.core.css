@@ -71,7 +71,8 @@
     background-color: var(--pink400);
   }
 
-  &:active {
+  &:active,
+  &.ui-btn--active {
     background-color: var(--pink600);
     box-shadow: none;
   }
@@ -89,7 +90,8 @@
     background-color: var(--navy600);
   }
 
-  &:active {
+  &:active,
+  &.ui-btn--active {
     background-color: var(--navy700);
     box-shadow: none;
   }
@@ -113,7 +115,8 @@
     box-shadow: 0 0 0 3px var(--grey300);
   }
 
-  &:active {
+  &:active,
+  &.ui-btn--active {
     background-color: var(--grey300);
     box-shadow: none;
   }

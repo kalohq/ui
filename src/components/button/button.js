@@ -150,6 +150,7 @@ export default class Button extends PureComponent<TProps, TState> {
         [coreStyles[`ui-btn--${String(size)}`]]: true,
         [coreStyles[`ui-btn--${String(variant)}`]]: true,
         [coreStyles[`ui-btn--subdued`]]: subdued && variant === 'tertiary',
+        [coreStyles[`ui-btn--active`]]: active,
         [coreStyles[`ui-btn--lone-icon`]]: loneIcon,
         [coreStyles[`ui-btn--grouped`]]: grouped,
         [coreStyles[`ui-btn--grouped-with-spacing`]]: spacing,

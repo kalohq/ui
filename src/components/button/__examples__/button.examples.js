@@ -50,7 +50,11 @@ export const examples = [
     title: 'Tertiary Button',
     description:
       "The default style. Unless the action you're building is primary, this is the button you should use",
-    render: () => <Button variant="tertiary">Export Freelancers</Button>,
+    render: () => (
+      <Button active={true} variant="tertiary">
+        Export Freelancers
+      </Button>
+    ),
     html: () => (
       <button className="ui-btn ui-btn--tertiary ui-btn--medium">
         Tertiary Button
