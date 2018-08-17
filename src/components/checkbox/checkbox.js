@@ -83,7 +83,6 @@ export default class Checkbox extends PureComponent<TProps> {
         <input
           type="checkbox"
           id={id}
-          checked={checked}
           disabled={disabled}
           ref={this.setCheckboxRef}
           defaultChecked={checked}

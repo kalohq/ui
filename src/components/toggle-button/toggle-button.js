@@ -57,13 +57,7 @@ export default function ToggleButton(props: TProps) {
       data-test="ui-toggle-button"
       {...cleanProps(otherProps)}
     >
-      <input
-        id={id}
-        value={value}
-        checked={value}
-        type="checkbox"
-        defaultChecked={value}
-      />
+      <input id={id} value={value} type="checkbox" defaultChecked={value} />
       <label htmlFor={id} onClick={() => onChange(!value)}>
         <div className="toggle" />
         {label ? (

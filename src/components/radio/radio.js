@@ -53,7 +53,6 @@ export default function Radio(props: RadioProps) {
       <input
         type="radio"
         id={id}
-        checked={checked}
         defaultChecked={checked}
         disabled={disabled}
       />
