@@ -208,7 +208,6 @@ const StoryMain = styled.div`
   width: 100%;
   padding: 32px 16px;
   margin-top: 16px;
-  overflow-x: auto;
   background-color: ${props => props.theme.colors.white};
   border: 1px solid ${props => props.theme.colors.grey300};
   border-radius: ${props => props.theme.layout.borderRadius}
