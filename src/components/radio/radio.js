@@ -50,7 +50,13 @@ export default function Radio(props: RadioProps) {
       name={name}
       {...pickStyles(otherProps)}
     >
-      <input type="radio" id={id} checked={checked} disabled={disabled} />
+      <input
+        type="radio"
+        id={id}
+        checked={checked}
+        defaultChecked={checked}
+        disabled={disabled}
+      />
       <label htmlFor={id} onClick={!disabled && onClick}>
         {label && isString(label) ? (
           <Text
