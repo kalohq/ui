@@ -34,16 +34,11 @@
     "eslint-plugin-react": "7.0.0",
     "prettier": "1.6.1"
   },
-  "keywords": [
-    "gatsby",
-    "design system",
-    "kalo"
-  ],
+  "keywords": ["gatsby", "design system", "kalo"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "start": "gatsby develop",
-    "deploy": "npm run build && touch public/Staticfile && cf push"
+    "start": "gatsby develop"
   }
 }
