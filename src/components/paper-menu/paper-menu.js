@@ -113,6 +113,10 @@ export default class PaperMenu extends PureComponent<TProps> {
     }
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('click', this.onWindowClick);
+  }
+
   render() {
     const {
       open,
