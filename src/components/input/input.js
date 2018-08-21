@@ -96,6 +96,8 @@ type TProps = {
   fullWidth?: boolean,
   /** An icon to displau to the left of the input */
   icon?: string,
+  /** Native DOM properties to pass to the input element */
+  properties?: Object,
 };
 
 type TState = {
@@ -201,6 +203,7 @@ export default class Input extends PureComponent<TProps, TState> {
       addonPrefix,
       addonSuffix,
       icon,
+      properties,
       ...otherProps
     } = this.props;
 
@@ -252,6 +255,7 @@ export default class Input extends PureComponent<TProps, TState> {
         )}
         <input
           {...cleanProps(otherProps)}
+          {...properties}
           /** Other Props */
           ref={focusOnMount ? _focusOnMount : inputRef}
           style={_styles}
