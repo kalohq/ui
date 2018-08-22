@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {ThemeProvider} from 'emotion-theming';
 import Button from '../button';
 import ButtonGroup from '../../button-group';
 
@@ -94,6 +94,21 @@ export const examples = [
       'A primary button used for actions - Only ever used once per view',
     render: () => (
       <Button variant="action" icon="add" loneIcon={true} size="extra-large" />
+    ),
+  },
+  {
+    title: 'Branded Button',
+    description: 'Buttons can be branded if the user prop is set on the theme',
+    render: () => (
+      <ThemeProvider
+        theme={{
+          user: {
+            primary: '#ea4c89',
+          },
+        }}
+      >
+        <Button variant="secondary">A branded button</Button>
+      </ThemeProvider>
     ),
   },
   {
