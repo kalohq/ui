@@ -157,5 +157,8 @@
       "!src/design-tokens/**/*",
       "!src/icons/**/*"
     ]
+  },
+  "dependencies": {
+    "polished": "^2.0.0"
   }
 }
