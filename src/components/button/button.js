@@ -68,7 +68,13 @@ type TProps = {
   className?: string | Object,
   /** Style to pass down */
   style?: Object,
-  theme?: Object,
+  theme: {
+    user: {
+      primary: string,
+      secondary: string,
+    },
+    colors: Object,
+  },
 };
 
 type TState = {
