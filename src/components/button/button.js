@@ -2,10 +2,12 @@
 import React, {PureComponent} from 'react';
 import {isString} from 'lodash';
 import cx from 'classnames';
+import {lighten, darken} from 'polished';
 
 import {UIBase} from '../layout';
 import Icon from '../icon';
 import LoadingSpinner from '../loading-spinner';
+import {withTheme} from 'emotion-theming';
 
 import coreStyles from './button.core.css';
 import reactStyles from './button.react.css';
@@ -66,13 +68,20 @@ type TProps = {
   className?: string | Object,
   /** Style to pass down */
   style?: Object,
+  theme: {
+    user: {
+      primary: string,
+      secondary: string,
+    },
+    colors: Object,
+  },
 };
 
 type TState = {
   loaded: boolean,
 };
 
-export default class Button extends PureComponent<TProps, TState> {
+class Button extends PureComponent<TProps, TState> {
   static defaultProps = {
     role: 'button',
     size: 'large',
@@ -139,16 +148,37 @@ export default class Button extends PureComponent<TProps, TState> {
       subdued,
       singleRenderChildren,
       loadedTimeout: _IGNORED,
+      theme,
       ...otherProps
     } = this.props;
 
     const {loaded} = this.state;
 
+    const isBrandColorSet = theme && theme.user && theme.user.primary;
+
+    const brandedStyles = isBrandColorSet
+      ? {
+          backgroundColor: theme.user.primary,
+          color: '#fff',
+          ':hover': {
+            backgroundColor: lighten(0.05, theme.user.primary),
+          },
+          ':active': {
+            backgroundColor: darken(0.05, theme.user.primary),
+          },
+          ':focus': {
+            boxShadow: `0 0 0 3px ${lighten(0.2, theme.user.primary)}`,
+          },
+        }
+      : {};
+
     const _classNames = cx(
       {
         [coreStyles['ui-btn']]: true,
         [coreStyles[`ui-btn--${String(size)}`]]: true,
-        [coreStyles[`ui-btn--${String(variant)}`]]: true,
+        [coreStyles[`ui-btn--${String(variant)}`]]: !(
+          variant === 'primary' && isBrandColorSet
+        ),
         [coreStyles[`ui-btn--subdued`]]: subdued && variant === 'tertiary',
         [coreStyles[`ui-btn--active`]]: active,
         [coreStyles[`ui-btn--lone-icon`]]: loneIcon,
@@ -200,6 +230,7 @@ export default class Button extends PureComponent<TProps, TState> {
         onClick={handleClick}
         data-test="ui-button"
         component={component ? component : 'button'}
+        css={brandedStyles}
         {...otherProps}
       >
         <div className={reactStyles['ui-btn__react-placeholder-message']}>
@@ -226,3 +257,5 @@ export default class Button extends PureComponent<TProps, TState> {
     );
   }
 }
+
+export default withTheme(Button);
