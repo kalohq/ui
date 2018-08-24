@@ -81,7 +81,7 @@ type TState = {
   loaded: boolean,
 };
 
-class Button extends PureComponent<TProps, TState> {
+export class Button extends PureComponent<TProps, TState> {
   static defaultProps = {
     role: 'button',
     size: 'large',
@@ -90,6 +90,7 @@ class Button extends PureComponent<TProps, TState> {
     loading: false,
     loneIcon: false,
     loadedTimeout: 600,
+    theme: false,
   };
 
   static displayName = 'Button';

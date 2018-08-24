@@ -9,7 +9,7 @@ import sinon from 'sinon';
 
 import theme from 'components/theme';
 import {shallow} from 'enzyme';
-import Button from '../button';
+import {Button} from '../button';
 
 import reactStyles from '../button.react.css';
 
