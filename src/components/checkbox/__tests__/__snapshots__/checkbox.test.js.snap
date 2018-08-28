@@ -60,12 +60,12 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   <input
     checked={false}
     disabled={false}
-    id="toggleButton3"
+    id="checkbox3"
     onChange={[Function]}
     type="checkbox"
   />
   <label
-    htmlFor="toggleButton3"
+    htmlFor="checkbox3"
     onClick={undefined}
   >
     <span
@@ -141,12 +141,12 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   <input
     checked={true}
     disabled={false}
-    id="toggleButton2"
+    id="checkbox2"
     onChange={[Function]}
     type="checkbox"
   />
   <label
-    htmlFor="toggleButton2"
+    htmlFor="checkbox2"
     onClick={undefined}
   >
     <span
@@ -193,12 +193,12 @@ exports[`Checkbox should render shallow component ok 1`] = `
   <input
     checked={true}
     disabled={false}
-    id="toggleButton1"
+    id="checkbox1"
     onChange={[Function]}
     type="checkbox"
   />
   <label
-    htmlFor="toggleButton1"
+    htmlFor="checkbox1"
     onClick={undefined}
   />
 </div>

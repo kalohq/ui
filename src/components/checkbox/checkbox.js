@@ -69,7 +69,7 @@ export default class Checkbox extends PureComponent<TProps> {
       ...otherProps
     } = this.props;
 
-    const id = uniqueId('toggleButton');
+    const id = uniqueId('checkbox');
 
     const _classNames = cx({
       [coreStyles['ui-checkbox']]: true,
