@@ -36,7 +36,7 @@ export default function Radio(props: RadioProps) {
     ...otherProps
   } = props;
 
-  const id = uniqueId('toggleButton');
+  const id = uniqueId('radio');
 
   const _classNames = cx({
     [coreStyles['ui-radio']]: true,
