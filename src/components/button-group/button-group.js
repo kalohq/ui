@@ -40,9 +40,9 @@ export default function ButtonGroup(props: Props) {
     reverse && isArray(children) ? [...children].reverse() : children;
 
   const _classNames = cx({
-    [coreStyles['ui-button-group']]: true,
-    [coreStyles['ui-button-group--wide']]: wide,
-    [coreStyles[`ui-button-group--align-${String(align)}`]]: align,
+    [coreStyles['ui-btn-group']]: true,
+    [coreStyles['ui-btn-group--wide']]: wide,
+    [coreStyles[`ui-btn-group--align-${String(align)}`]]: align,
   });
 
   return (
