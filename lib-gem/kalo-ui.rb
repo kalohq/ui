@@ -25,6 +25,10 @@ module KaloUI
       File.join assets_path, 'lib-gem/images'
     end
 
+    def fonts_path
+      File.join assets_path, 'lib-gem/fonts'
+    end
+
     def assets_path
       @assets_path ||= File.join gem_path, ''
     end
