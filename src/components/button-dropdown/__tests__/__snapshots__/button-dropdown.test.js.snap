@@ -222,12 +222,12 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
       <input
         checked={false}
         disabled={false}
-        id="toggleButton1"
+        id="checkbox1"
         onChange={[Function]}
         type="checkbox"
       />
       <label
-        htmlFor="toggleButton1"
+        htmlFor="checkbox1"
         onClick={[Function]}
       />
     </div>
@@ -264,12 +264,12 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
       <input
         checked={false}
         disabled={false}
-        id="toggleButton2"
+        id="checkbox2"
         onChange={[Function]}
         type="checkbox"
       />
       <label
-        htmlFor="toggleButton2"
+        htmlFor="checkbox2"
         onClick={[Function]}
       />
     </div>

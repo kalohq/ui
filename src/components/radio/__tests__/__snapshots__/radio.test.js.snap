@@ -31,12 +31,12 @@ exports[`Radio should render shallow component ok 1`] = `
   <input
     checked={true}
     disabled={undefined}
-    id="toggleButton1"
+    id="radio1"
     onChange={[Function]}
     type="radio"
   />
   <label
-    htmlFor="toggleButton1"
+    htmlFor="radio1"
     onClick={undefined}
   />
 </div>
