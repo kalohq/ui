@@ -25,6 +25,10 @@ module KaloUI
       File.join assets_path, 'lib-gem/images'
     end
 
+    def fonts_path
+      File.join assets_path, 'lib-gem/fonts'
+    end
+
     def assets_path
       @assets_path ||= File.join gem_path, ''
     end
@@ -45,6 +49,7 @@ module KaloUI
       require 'sass'
 
       ::Sass.load_paths << stylesheets_path
+      ::Sass.load_paths << fonts_path
 
       # bootstrap requires minimum precision of 8, see https://github.com/twbs/bootstrap-sass/issues/409
       ::Sass::Script::Number.precision = [8, ::Sass::Script::Number.precision].max
@@ -58,6 +63,7 @@ module KaloUI
 
     def register_sprockets
       Sprockets.append_path(stylesheets_path)
+      Sprockets.append_path(fonts_path)
       Sprockets.append_path(images_path)
     end
   end

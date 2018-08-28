@@ -85,6 +85,10 @@ gulp.task('gem:copy-design-tokens', () =>
     .pipe(gulp.dest('lib-gem/stylesheets'))
 );
 
+gulp.task('gem:copy-fonts', () =>
+  gulp.src(['src/styles/fonts/**/*']).pipe(gulp.dest('lib-gem/fonts'))
+);
+
 gulp.task('gem:copy-icons', () =>
   gulp.src(['src/icons/**/*']).pipe(gulp.dest('lib-gem/icons'))
 );
@@ -106,4 +110,5 @@ gulp.task('build-gem-package', [
   'gem:build-css',
   'gem:copy-design-tokens',
   'gem:copy-icons',
+  'gem:copy-fonts',
 ]);

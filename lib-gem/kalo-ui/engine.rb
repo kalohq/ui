@@ -3,7 +3,7 @@ module KaloUI
     class Engine < ::Rails::Engine
 
       initializer 'kalo-ui.assets.precompile' do |app|
-        %w(stylesheets images).each do |sub|
+        %w(stylesheets images fonts).each do |sub|
           app.config.assets.paths << root.join(sub).to_s
         end
       end
