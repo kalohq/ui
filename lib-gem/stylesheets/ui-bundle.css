@@ -55,7 +55,7 @@
 
 .ui-btn--primary:hover{background-color:#fdb3c8;}
 
-.ui-btn--primary:active{background-color:#e05867;
+.ui-btn--primary.ui-btn--active,.ui-btn--primary:active{background-color:#e05867;
   -webkit-box-shadow:none;
           box-shadow:none;}
 
@@ -70,7 +70,7 @@
 
 .ui-btn--secondary:hover{background-color:#546789;}
 
-.ui-btn--secondary:active{background-color:#374561;
+.ui-btn--secondary.ui-btn--active,.ui-btn--secondary:active{background-color:#374561;
   -webkit-box-shadow:none;
           box-shadow:none;}
 
@@ -90,7 +90,7 @@
   -webkit-box-shadow:0 0 0 3px #eef4fa;
           box-shadow:0 0 0 3px #eef4fa;}
 
-.ui-btn--tertiary:active{background-color:#eef4fa;
+.ui-btn--tertiary.ui-btn--active,.ui-btn--tertiary:active{background-color:#eef4fa;
   -webkit-box-shadow:none;
           box-shadow:none;}
 
@@ -156,6 +156,24 @@
 
 .ui-button-group--wide{
   width:100%;
+}
+
+.ui-button-group--align-left{
+  -webkit-box-pack:start;
+      -ms-flex-pack:start;
+          justify-content:flex-start;
+}
+
+.ui-button-group--align-center{
+  -webkit-box-pack:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+}
+
+.ui-button-group--align-right{
+  -webkit-box-pack:end;
+      -ms-flex-pack:end;
+          justify-content:flex-end;
 }
 
 .ui-checkbox{
@@ -255,7 +273,7 @@
 
 .ui-input--theme-transparent{
   background:transparent;
-  border:0;
+  border:1px solid transparent;
   padding:4px 0
 }
 
@@ -314,101 +332,6 @@
 .ui-input--extra-large{
   height:52px;
   font-size:16px;
-}
-
-.ui-paper{
-  position:relative;
-  background:#fff;
-  -webkit-box-sizing:content-box;
-          box-sizing:content-box;
-  -webkit-transition:all .2s ease-in-out;
-  transition:all .2s ease-in-out;
-  border:1px solid #eef4fa;
-  border-radius:4px;
-  display:-webkit-box;
-  display:-ms-flexbox;
-  display:flex;
-  -webkit-box-orient:vertical;
-  -webkit-box-direction:normal;
-      -ms-flex-direction:column;
-          flex-direction:column;
-  -webkit-box-align:stretch;
-      -ms-flex-align:stretch;
-          align-items:stretch;
-  -ms-flex-negative:0;
-      flex-shrink:0;
-  -ms-flex-line-pack:start;
-      align-content:flex-start;
-}
-
-.ui-paper--level-1{
-  -webkit-box-shadow:none;
-          box-shadow:none;
-}
-
-.ui-paper--level-2{
-  -webkit-box-shadow:0 3px 6px hsla(0,0%,55%,.08);
-          box-shadow:0 3px 6px hsla(0,0%,55%,.08);
-}
-
-.ui-paper--level-3{
-  -webkit-box-shadow:0 10px 25px hsla(0,0%,55%,.14);
-          box-shadow:0 10px 25px hsla(0,0%,55%,.14);
-}
-
-.ui-paper--level-4{
-  -webkit-box-shadow:0 12px 25px hsla(0,0%,55%,.21);
-          box-shadow:0 12px 25px hsla(0,0%,55%,.21);
-}
-
-.ui-paper--level-5{
-  -webkit-box-shadow:0 14px 25px hsla(0,0%,55%,.27);
-          box-shadow:0 14px 25px hsla(0,0%,55%,.27);
-}
-
-.ui-paper--hover-level-1:hover{
-  -webkit-box-shadow:none;
-          box-shadow:none;
-}
-
-.ui-paper--hover-level-2:hover{
-  -webkit-box-shadow:0 3px 6px hsla(0,0%,55%,.08);
-          box-shadow:0 3px 6px hsla(0,0%,55%,.08);
-}
-
-.ui-paper--hover-level-3:hover{
-  -webkit-box-shadow:0 10px 25px hsla(0,0%,55%,.14);
-          box-shadow:0 10px 25px hsla(0,0%,55%,.14);
-}
-
-.ui-paper--hover-level-4:hover{
-  -webkit-box-shadow:0 12px 25px hsla(0,0%,55%,.21);
-          box-shadow:0 12px 25px hsla(0,0%,55%,.21);
-}
-
-.ui-paper--hover-level-5:hover{
-  -webkit-box-shadow:0 14px 25px hsla(0,0%,55%,.27);
-          box-shadow:0 14px 25px hsla(0,0%,55%,.27);
-}
-
-.ui-paper--opaque{
-  background:none;
-  border:0;
-  -webkit-box-shadow:none !important;
-          box-shadow:none !important;
-}
-
-.ui-paper--wireframe{
-  background:transparent;
-  border:1px dashed #b0bac3;
-}
-
-.ui-paper--no-border{
-  border:0;
-}
-
-.ui-paper--interactive{
-  cursor:pointer;
 }
 
 .ui-radio{
@@ -597,4 +520,99 @@
 .ui-toggle-button input:checked~label>div:after{
   background-color:#fff;
   left:32px;
+}
+
+.ui-paper{
+  position:relative;
+  background:#fff;
+  -webkit-box-sizing:content-box;
+          box-sizing:content-box;
+  -webkit-transition:all .2s ease-in-out;
+  transition:all .2s ease-in-out;
+  border:1px solid #eef4fa;
+  border-radius:4px;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+      -ms-flex-direction:column;
+          flex-direction:column;
+  -webkit-box-align:stretch;
+      -ms-flex-align:stretch;
+          align-items:stretch;
+  -ms-flex-negative:0;
+      flex-shrink:0;
+  -ms-flex-line-pack:start;
+      align-content:flex-start;
+}
+
+.ui-paper--level-0,.ui-paper--level-1{
+  -webkit-box-shadow:none;
+          box-shadow:none;
+}
+
+.ui-paper--level-2{
+  -webkit-box-shadow:0 3px 6px hsla(0,0%,55%,.08);
+          box-shadow:0 3px 6px hsla(0,0%,55%,.08);
+}
+
+.ui-paper--level-3{
+  -webkit-box-shadow:0 10px 25px hsla(0,0%,55%,.14);
+          box-shadow:0 10px 25px hsla(0,0%,55%,.14);
+}
+
+.ui-paper--level-4{
+  -webkit-box-shadow:0 12px 25px hsla(0,0%,55%,.21);
+          box-shadow:0 12px 25px hsla(0,0%,55%,.21);
+}
+
+.ui-paper--level-5{
+  -webkit-box-shadow:0 14px 25px hsla(0,0%,55%,.27);
+          box-shadow:0 14px 25px hsla(0,0%,55%,.27);
+}
+
+.ui-paper--hover-level-0:hover,.ui-paper--hover-level-1:hover{
+  -webkit-box-shadow:none;
+          box-shadow:none;
+}
+
+.ui-paper--hover-level-2:hover{
+  -webkit-box-shadow:0 3px 6px hsla(0,0%,55%,.08);
+          box-shadow:0 3px 6px hsla(0,0%,55%,.08);
+}
+
+.ui-paper--hover-level-3:hover{
+  -webkit-box-shadow:0 10px 25px hsla(0,0%,55%,.14);
+          box-shadow:0 10px 25px hsla(0,0%,55%,.14);
+}
+
+.ui-paper--hover-level-4:hover{
+  -webkit-box-shadow:0 12px 25px hsla(0,0%,55%,.21);
+          box-shadow:0 12px 25px hsla(0,0%,55%,.21);
+}
+
+.ui-paper--hover-level-5:hover{
+  -webkit-box-shadow:0 14px 25px hsla(0,0%,55%,.27);
+          box-shadow:0 14px 25px hsla(0,0%,55%,.27);
+}
+
+.ui-paper--opaque{
+  background:none;
+  border:0;
+  -webkit-box-shadow:none !important;
+          box-shadow:none !important;
+}
+
+.ui-paper--wireframe{
+  background:transparent;
+  border:1px dashed #b0bac3;
+}
+
+.ui-paper--no-border{
+  border:0;
+}
+
+.ui-paper--interactive{
+  cursor:pointer;
 }
