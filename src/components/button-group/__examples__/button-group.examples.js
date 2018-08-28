@@ -18,6 +18,14 @@ export const examples = [
         <Button variant="tertiary">Tasks</Button>
       </ButtonGroup>
     ),
+    html: () => (
+      <div className="ui-btn-group">
+        <button className="ui-btn ui-btn--tertiary ui-btn--large">
+          Freelancers
+        </button>
+        <button className="ui-btn ui-btn--tertiary ui-btn--large">Tasks</button>
+      </div>
+    ),
   },
   {
     title: 'In reversed order',

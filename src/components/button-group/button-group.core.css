@@ -1,21 +1,21 @@
-.ui-button-group {
+.ui-btn-group {
   display: flex;
   align-items: center;
   width: auto;
 }
 
-.ui-button-group--wide {
+.ui-btn-group--wide {
   width: 100%;
 }
 
-.ui-button-group--align-left {
+.ui-btn-group--align-left {
   justify-content: flex-start;
 }
 
-.ui-button-group--align-center {
+.ui-btn-group--align-center {
   justify-content: center;
 }
 
-.ui-button-group--align-right {
+.ui-btn-group--align-right {
   justify-content: flex-end;
 }
