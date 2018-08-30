@@ -7,6 +7,7 @@
   border-radius: 4px;
   border: 1px solid var(--grey400);
   padding: 4px 8px 4px 16px;
+  -webkit-appearance: none;
 
   &:focus {
     outline: 0;
