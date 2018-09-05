@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {upperFirst, camelCase} from 'lodash';
-import styled from 'react-emotion';
+import styled, {css} from 'react-emotion';
 import Prism from 'prismjs';
 import reactElementToJSXString from 'react-element-to-jsx-string';
 
@@ -38,6 +38,7 @@ export default class ComponentDocumentation extends React.PureComponent {
     const stories = Stories[componentName]
       ? Stories[componentName].examples
       : false;
+
     return (
       <div style={{width: '100%'}}>
         <Wrapper>
@@ -58,7 +59,10 @@ export default class ComponentDocumentation extends React.PureComponent {
             </Tab>
             <Tab
               isActive={this.state.currentTab === 'css'}
-              onClick={() => this.toggleTab('css')}
+              onClick={() =>
+                stories.filter(story => story.html).length !== 0 &&
+                this.toggleTab('css')}
+              isDisabled={stories.filter(story => story.html).length === 0}
             >
               Vanilla HTML/CSS
             </Tab>
@@ -251,6 +255,13 @@ const Tab = styled.button`
   background-color: transparent;
   border-bottom: ${props =>
     props.isActive && `2px solid ${props.theme.colors.pink500}`};
+
+  ${props =>
+    props.isDisabled &&
+    css`
+      color: ${props.theme.colors.grey500};
+      cursor: default;
+    `};
 
   &:focus {
     outline: 0;
