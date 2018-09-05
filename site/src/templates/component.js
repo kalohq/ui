@@ -56,7 +56,8 @@ export default class ComponentDocumentation extends React.PureComponent {
               onClick={() => this.toggleTab('react')}
             >
               React Components ({`
-                ${stories.filter(story => story.render).length} examples`})
+                ${stories &&
+                  stories.filter(story => story.render).length} examples`})
             </Tab>
             <Tab
               isActive={this.state.currentTab === 'css'}
@@ -66,7 +67,8 @@ export default class ComponentDocumentation extends React.PureComponent {
               isDisabled={stories.filter(story => story.html).length === 0}
             >
               Vanilla HTML/CSS ({`
-                ${stories.filter(story => story.html).length} examples`})
+                ${stories &&
+                  stories.filter(story => story.html).length} examples`})
             </Tab>
           </Tabs>
         </Wrapper>
