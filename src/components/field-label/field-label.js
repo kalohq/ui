@@ -3,9 +3,10 @@ import React from 'react';
 import {isString} from 'lodash';
 import {pickStyles} from '../../utils/style';
 
-import Text from '../text';
 import Icon from '../icon';
-import {Inline} from '../layout';
+import {Inline, UIBase} from '../layout';
+
+import coreStyles from './field-label.core.css';
 
 export type TProps = {
   htmlFor?: string,
@@ -29,28 +30,22 @@ export default function FieldLabel(props: TProps) {
     ...otherProps
   } = props;
   return (
-    <Text
+    <UIBase
       component="label"
-      weight="semi-bold"
-      size="small"
+      className={coreStyles['ui-field-label']}
       htmlFor={htmlFor}
       title={title}
-      multiline={true}
       width={width ? width : null}
       marginBottom={width ? null : 4}
       {...pickStyles(otherProps)}
     >
       {children}
-      {required ? (
-        <Inline paddingLeft={5} marginTop={-1}>
-          *
-        </Inline>
-      ) : null}
-      {locked ? (
-        <Inline paddingLeft={5} marginTop={-1}>
+      {required && ' *'}
+      {locked && (
+        <UIBase component="span" paddingLeft={5} top={-2} position="relative">
           <Icon size={12}>lock</Icon>
-        </Inline>
-      ) : null}
+        </UIBase>
+      )}
       {icon ? (
         <Inline paddingLeft={5} marginTop={-1} verticalAlign="text-bottom">
           {isString(icon) ? (
@@ -62,6 +57,6 @@ export default function FieldLabel(props: TProps) {
           )}
         </Inline>
       ) : null}
-    </Text>
+    </UIBase>
   );
 }

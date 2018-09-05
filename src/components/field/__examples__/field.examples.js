@@ -20,6 +20,18 @@ export const examples = [
         <Input placeholder="hello@kalohq.com" />
       </Field>
     ),
+    html: () => (
+      <div className="ui-field">
+        <label htmlFor="email" className="ui-field-label">
+          Your email
+        </label>
+        <input
+          id="email"
+          className="ui-input ui-input--medium"
+          placeholder="hello@kalohq.com"
+        />
+      </div>
+    ),
   },
   {
     title: 'Field with validation',
@@ -32,6 +44,19 @@ export const examples = [
       >
         <Input placeholder="hello@kalohq.com" />
       </Field>
+    ),
+    html: () => (
+      <div className="ui-field">
+        <label htmlFor="email" className="ui-field-label">
+          Your email
+        </label>
+        <input
+          id="email"
+          className="ui-input ui-input--medium"
+          placeholder="hello@kalohq.com"
+        />
+        <span className="ui-field-validation">Your email was not valid</span>
+      </div>
     ),
   },
   {
@@ -74,6 +99,21 @@ export const examples = [
         <Input placeholder="hello@kalohq.com" />
       </Field>
     ),
+    html: () => (
+      <div className="ui-field">
+        <label htmlFor="email" className="ui-field-label">
+          Your email
+        </label>
+        <input
+          id="email"
+          className="ui-input ui-input--medium"
+          placeholder="hello@kalohq.com"
+        />
+        <span className="ui-field-hint">
+          This will become your login username
+        </span>
+      </div>
+    ),
   },
   {
     title: 'Inline field',
@@ -82,6 +122,18 @@ export const examples = [
       <Field label="Your email" inline={true} labelWidth={100}>
         <Input placeholder="hello@kalohq.com" />
       </Field>
+    ),
+    html: () => (
+      <div className="ui-field ui-field--inline">
+        <label htmlFor="email" className="ui-field-label">
+          Your email
+        </label>
+        <input
+          id="email"
+          className="ui-input ui-input--medium"
+          placeholder="hello@kalohq.com"
+        />
+      </div>
     ),
   },
 ];

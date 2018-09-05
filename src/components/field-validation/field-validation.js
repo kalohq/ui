@@ -1,6 +1,7 @@
 /* @flow */
 import React from 'react';
-import Text from '../text';
+
+import coreStyles from './field-validation.core.css';
 
 export type Validation = {
   message: string,
@@ -14,8 +15,8 @@ export default function FieldValidation(props: TProps) {
   const {validation} = props;
 
   return (
-    <Text color="red" size="extra-small" weight="semi-bold" multiline={true}>
+    <span className={coreStyles['ui-field-validation']}>
       {validation.message}
-    </Text>
+    </span>
   );
 }
