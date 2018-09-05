@@ -134,8 +134,9 @@ export default class ComponentDocumentation extends React.PureComponent {
                             showDefaultProps: false,
                             useBooleanShorthandSyntax: false,
                           })
-                            .replace('className', 'class')
-                            .replace('htmlFor', 'for'),
+                            .replace(/className/g, 'class')
+                            .replace(/xlinkHref/g, 'xlink:href')
+                            .replace(/htmlFor/g, 'for'),
                           grammar,
                           'html'
                         ),
