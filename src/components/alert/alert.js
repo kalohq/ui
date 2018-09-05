@@ -1,17 +1,11 @@
 /* @flow */
 import * as React from 'react';
-import styled from 'react-emotion';
+import cx from 'classnames';
 
 import Icon from '../icon';
-import Text from '../text';
-import {Box} from '../layout';
+import {UIBase} from '../layout';
 
-const TYPE_COLOR_MAP = {
-  info: 'blue',
-  error: 'pink',
-  warning: 'orange',
-  confirmation: 'green',
-};
+import coreStyles from './alert.core.css';
 
 const TYPE_ICON_MAP = {
   info: 'info_outline',
@@ -22,15 +16,11 @@ const TYPE_ICON_MAP = {
 
 type TProps = {
   children: React.Node,
-  type: $Keys<typeof TYPE_COLOR_MAP>,
+  type: $Keys<typeof TYPE_ICON_MAP>,
   showIcon?: boolean,
   justifyContent?: 'left' | 'center',
+  className?: string | Object,
 };
-
-const StyledAlert = styled(Box)`
-  border-radius: ${props => props.theme.layout.borderRadius};
-  background-color: ${props => props.theme.alerts[props.type]};
-`;
 
 export default function Alert(props: TProps) {
   const {
@@ -38,27 +28,30 @@ export default function Alert(props: TProps) {
     showIcon,
     type = 'info',
     justifyContent = 'center',
+    className,
     ...otherProps
   } = props;
 
   return (
-    <StyledAlert
-      padding={['small', 'medium']}
-      flexDirection="row"
-      alignItems="center"
+    <UIBase
       justifyContent={justifyContent}
       role="alert"
       type={type}
+      className={cx(
+        {
+          [coreStyles['ui-alert']]: true,
+          [coreStyles[`ui-alert--${type}`]]: true,
+        },
+        className
+      )}
       {...otherProps}
     >
-      {showIcon ? (
-        <Icon color={TYPE_COLOR_MAP[type]} marginRight={8}>
+      {showIcon && (
+        <Icon color="currentColor" marginRight={8}>
           {TYPE_ICON_MAP[type]}
         </Icon>
-      ) : null}
-      <Text color={TYPE_COLOR_MAP[type]} size="small" multiline={true}>
-        {children}
-      </Text>
-    </StyledAlert>
+      )}
+      {children}
+    </UIBase>
   );
 }

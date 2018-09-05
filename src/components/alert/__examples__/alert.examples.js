@@ -8,6 +8,9 @@ export const examples = [
     title: 'Info Alert',
     description: 'An alert to display information',
     render: () => <Alert type="info">Information Alert</Alert>,
+    html: () => (
+      <div className="ui-alert ui-alert--info">Information Alert</div>
+    ),
   },
   {
     title: 'Info Alert (with icon)',
@@ -17,11 +20,20 @@ export const examples = [
         Information Alert
       </Alert>
     ),
+    html: () => (
+      <div className="ui-alert ui-alert--info">
+        <svg width={16} height={16} aria-hidden="true" fill="currentColor">
+          <use xlinkHref="#info_outline" />
+        </svg>
+        Information Alert
+      </div>
+    ),
   },
   {
     title: 'Warning Alert',
     description: 'An alert to display a warning',
     render: () => <Alert type="warning">Warning Alert</Alert>,
+    html: () => <div className="ui-alert ui-alert--warning">Warning Alert</div>,
   },
   {
     title: 'Warning Alert (with icon)',
@@ -36,6 +48,7 @@ export const examples = [
     title: 'Error Alert',
     description: 'An alert to display an error',
     render: () => <Alert type="error">Error Alert</Alert>,
+    html: () => <div className="ui-alert ui-alert--error">Error Alert</div>,
   },
   {
     title: 'Error Alert (with icon)',
@@ -50,6 +63,9 @@ export const examples = [
     title: 'Confirmation Alert',
     description: 'An alert to display a confirmation',
     render: () => <Alert type="confirmation">Confirmation Alert</Alert>,
+    html: () => (
+      <div className="ui-alert ui-alert--confirmation">Confirmation Alert</div>
+    ),
   },
   {
     title: 'Confirmation Alert (with icon)',
