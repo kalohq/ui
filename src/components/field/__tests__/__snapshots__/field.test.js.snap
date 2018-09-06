@@ -2,65 +2,49 @@
 
 exports[`Field should render shallow component ok 1`] = `
 <div
-  className="e1q9f2xp0 css-2xcesa"
+  className="ui-field e1q9f2xp6 css-gr8tir"
   onClick={undefined}
   style={Object {}}
 >
   <div
-    className="e1q9f2xp0 css-1yjta7p"
+    className="e1q9f2xp0 css-ou6tiu"
     style={Object {}}
   >
-    <div
-      className="e1q9f2xp0 css-ou6tiu"
+    <label
+      className="ui-field-label e1q9f2xp6 css-vwv6c7"
+      htmlFor={undefined}
       style={Object {}}
+      title={undefined}
     >
-      <label
-        className="em7k1990 css-1clhzyw"
-        color="navy600"
-        htmlFor={undefined}
-        onClick={undefined}
-        size="small"
-        style={Object {}}
-        title={undefined}
-      >
-        My Label
-      </label>
-    </div>
-    <div
-      className="ui-input-container ui-input-container--margin-none"
-    >
-      <input
-        className="ui-input ui-input--medium"
-        defaultValue={undefined}
-        disabled={false}
-        name={undefined}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        placeholder={undefined}
-        readOnly={false}
-        style={
-          Object {
-            "width": undefined,
-          }
+      My Label
+    </label>
+  </div>
+  <div
+    className="ui-input-container ui-input-container--margin-none"
+  >
+    <input
+      className="ui-input ui-input--medium"
+      defaultValue={undefined}
+      disabled={false}
+      name={undefined}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder={undefined}
+      readOnly={false}
+      style={
+        Object {
+          "width": undefined,
         }
-        value="My Input Value"
-      />
-    </div>
+      }
+      value="My Input Value"
+    />
   </div>
   <span
-    className="e1q9f2xp3 css-1gxvvc0"
+    className="ui-field-hint e1q9f2xp6 css-gr8tir"
     style={Object {}}
   >
-    <span
-      className="em7k1990 css-15i38vd"
-      color="navy600"
-      onClick={undefined}
-      size="extra-small"
-      style={Object {}}
-    >
-      My Hint
-    </span>
+    My Hint
   </span>
 </div>
 `;

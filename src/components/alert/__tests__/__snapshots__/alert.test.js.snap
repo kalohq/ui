@@ -1,32 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Alert should render a confirmation alert with an icon 1`] = `
-.emotion-5 {
-  position: relative;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 8px 16px;
+.emotion-3 {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  border-radius: 4px;
-  background-color: rgb(229,247,241);
 }
 
 .emotion-1 {
@@ -42,46 +21,18 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
   cursor: inherit;
   font-size: 16px;
   height: 16px;
-  fill: rgb(62,179,138);
-}
-
-.emotion-3 {
-  display: inline-block;
-  vertical-align: bottom;
-  font-family: 'WebFaktSoftPro',sans-serif;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  cursor: inherit;
-  text-align: unset;
-  text-decoration: inherit;
-  font-weight: 400;
-  font-size: 14px;
-  color: rgb(62,179,138);
-  white-space: normal;
-  text-overflow: initial;
-  overflow: visible;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
-.emotion-3:hover {
-  text-decoration: inherit;
-}
-
-.emotion-3 strong {
-  font-weight: 500;
+  fill: currentColor;
 }
 
 <div
-  className="emotion-4 emotion-5"
+  className="ui-alert ui-alert--confirmation emotion-2 emotion-3"
   role="alert"
   style={Object {}}
   type="confirmation"
 >
   <i
     className="emotion-0 emotion-1"
-    color="green"
+    color="currentColor"
     onClick={undefined}
     size={16}
     style={Object {}}
@@ -97,164 +48,42 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
       />
     </svg>
   </i>
-  <span
-    className="emotion-2 emotion-3"
-    color="green"
-    onClick={undefined}
-    size="small"
-    style={Object {}}
-  >
-    A confirmation alert
-  </span>
+  A confirmation alert
 </div>
 `;
 
 exports[`Alert should render a warning alert 1`] = `
-.emotion-3 {
-  position: relative;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 8px 16px;
+.emotion-1 {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  border-radius: 4px;
-  background-color: rgb(255,246,216);
-}
-
-.emotion-1 {
-  display: inline-block;
-  vertical-align: bottom;
-  font-family: 'WebFaktSoftPro',sans-serif;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  cursor: inherit;
-  text-align: unset;
-  text-decoration: inherit;
-  font-weight: 400;
-  font-size: 14px;
-  color: rgb(253,184,28);
-  white-space: normal;
-  text-overflow: initial;
-  overflow: visible;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
-.emotion-1:hover {
-  text-decoration: inherit;
-}
-
-.emotion-1 strong {
-  font-weight: 500;
 }
 
 <div
-  className="emotion-2 emotion-3"
+  className="ui-alert ui-alert--warning emotion-0 emotion-1"
   role="alert"
   style={Object {}}
   type="warning"
 >
-  <span
-    className="emotion-0 emotion-1"
-    color="orange"
-    onClick={undefined}
-    size="small"
-    style={Object {}}
-  >
-    A warning alert
-  </span>
+  A warning alert
 </div>
 `;
 
 exports[`Alert should render shallow component ok 1`] = `
-.emotion-3 {
-  position: relative;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 8px 16px;
+.emotion-1 {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  border-radius: 4px;
-  background-color: rgb(232,250,252);
-}
-
-.emotion-1 {
-  display: inline-block;
-  vertical-align: bottom;
-  font-family: 'WebFaktSoftPro',sans-serif;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  cursor: inherit;
-  text-align: unset;
-  text-decoration: inherit;
-  font-weight: 400;
-  font-size: 14px;
-  color: rgb(84,195,219);
-  white-space: normal;
-  text-overflow: initial;
-  overflow: visible;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
-.emotion-1:hover {
-  text-decoration: inherit;
-}
-
-.emotion-1 strong {
-  font-weight: 500;
 }
 
 <div
-  className="emotion-2 emotion-3"
+  className="ui-alert ui-alert--info emotion-0 emotion-1"
   role="alert"
   style={Object {}}
   type="info"
 >
-  <span
-    className="emotion-0 emotion-1"
-    color="blue"
-    onClick={undefined}
-    size="small"
-    style={Object {}}
-  >
-    A info alert
-  </span>
+  A info alert
 </div>
 `;
