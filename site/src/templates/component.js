@@ -64,7 +64,9 @@ export default class ComponentDocumentation extends React.PureComponent {
               onClick={() =>
                 stories.filter(story => story.html).length !== 0 &&
                 this.toggleTab('css')}
-              isDisabled={stories.filter(story => story.html).length === 0}
+              isDisabled={
+                stories && stories.filter(story => story.html).length === 0
+              }
             >
               Vanilla HTML/CSS ({`
                 ${stories &&
