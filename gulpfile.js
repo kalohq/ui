@@ -63,6 +63,22 @@ gulp.task('react:copy-design-tokens', () =>
     .src(['src/design-tokens/*(*.js|*.json|*.css)'])
     .pipe(gulp.dest('lib/design-tokens'))
 );
+
+/**
+ * Copy compiled CSS to NPM lib
+ */
+
+gulp.task('react:build-bundled-css', () =>
+  gulp
+    .src([
+      './src/components/**/*.css',
+      '!./src/components/**/*.react.css',
+      '!./src/components/grid/grid.css',
+    ])
+    .pipe(concat('ui-bundle.css'))
+    .pipe(postcss())
+    .pipe(gulp.dest('lib'))
+);
 /**
  * Bundle CSS. We also convert variables here
  * to make the published package more consumable.
@@ -104,6 +120,7 @@ gulp.task('build-react-package', [
   'react:js',
   'react:copy-files',
   'react:copy-design-tokens',
+  'react:build-bundled-css',
 ]);
 
 gulp.task('build-gem-package', [
