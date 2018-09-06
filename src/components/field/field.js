@@ -1,15 +1,18 @@
 /* @flow */
 import * as React from 'react';
 import {List} from 'immutable';
+import cx from 'classnames';
 import {size} from '../../utils/type';
 
-import {Box} from '../layout';
+import {Box, UIBase} from '../layout';
 import FieldHint from '../field-hint';
 import FieldLabel from '../field-label';
 import FieldValidations from '../field-validations';
 
 import type Validation from '../field-validation';
 import type LabelProps from '../field-label';
+
+import coreStyles from './field.core.css';
 
 export type TProps = {
   children?: React$Element<*>,
@@ -82,67 +85,59 @@ export default function Field(props: TProps) {
   const disabled = permissions.length > 0;
 
   return (
-    <Box
-      className={className}
+    <UIBase
+      className={cx(coreStyles['ui-field'], className)}
       onClick={onClick}
-      position="relative"
-      flexDirection="column"
-      justifyContent={inline ? 'space-between' : 'inherit'}
       {...otherProps}
     >
-      <Box
-        flexDirection={inline ? 'row' : 'column'}
-        justifyContent={labelWidth ? 'flex-start' : 'space-between'}
-      >
-        {label ? (
-          <Box
-            flexDirection="row"
-            alignItems="center"
-            justifyContent={centered ? 'center' : 'space-between'}
+      {label && (
+        <Box
+          flexDirection="row"
+          alignItems="center"
+          justifyContent={centered ? 'center' : 'space-between'}
+        >
+          <FieldLabel
+            htmlFor={htmlFor}
+            required={required}
+            locked={locked}
+            icon={icon}
+            labelProps={labelProps}
+            marginBottom={inline ? 0 : 4}
+            marginRight={inline ? 8 : 0}
+            width={labelWidth}
           >
-            <FieldLabel
-              htmlFor={htmlFor}
-              required={required}
-              locked={locked}
-              icon={icon}
-              labelProps={labelProps}
-              marginBottom={inline ? 0 : 4}
-              marginRight={inline ? 8 : 0}
-              width={labelWidth}
-            >
-              {label}
-            </FieldLabel>
-            {labelAction}
-          </Box>
-        ) : null}
-        {!controlChildren ? (
-          children
-        ) : (
-          React.Children.map(children, child =>
-            React.cloneElement(child, {
-              onBlur,
-              disabled:
-                child.props.disabled === undefined
-                  ? disabled
-                  : child.props.disabled,
-              editable:
-                child.props.editable === undefined
-                  ? !disabled
-                  : child.props.editable,
-              readonly:
-                child.props.readonly === undefined
-                  ? disabled
-                  : child.props.readonly,
-            })
-          )
-        )}
-      </Box>
+            {label}
+          </FieldLabel>
+          {labelAction}
+        </Box>
+      )}
+      {!controlChildren ? (
+        children
+      ) : (
+        React.Children.map(children, child =>
+          React.cloneElement(child, {
+            onBlur,
+            disabled:
+              child.props.disabled === undefined
+                ? disabled
+                : child.props.disabled,
+            editable:
+              child.props.editable === undefined
+                ? !disabled
+                : child.props.editable,
+            readonly:
+              child.props.readonly === undefined
+                ? disabled
+                : child.props.readonly,
+          })
+        )
+      )}
 
       {!!size(validations) ? (
         <FieldValidations centered={centered} validations={validations} />
       ) : hintText ? (
         <FieldHint hint={hintText} icon={hintIcon ? hintIcon : undefined} />
       ) : null}
-    </Box>
+    </UIBase>
   );
 }

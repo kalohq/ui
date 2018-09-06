@@ -1,13 +1,11 @@
 /* @flow */
 /* eslint-env jest */
 import React from 'react';
-import {textMatch} from 'utils/test/enzyme';
 import {shallow} from 'enzyme';
 import renderer from 'react-test-renderer';
 import {ThemeProvider} from 'emotion-theming';
 
 import FieldLabel from '../field-label';
-import Text from '../../text';
 import Icon from '../../icon';
 import theme from '../../theme';
 
@@ -34,8 +32,8 @@ describe('FieldLabel', () => {
       required: true,
     });
     const result = shallow(element);
-    const label = result.find(Text);
-    expect(textMatch(label, 'Your email *')).toBe(true);
+    const label = result.render().text();
+    expect(label).toBe('Your email *');
   });
 
   test('should render with a locked icon', () => {

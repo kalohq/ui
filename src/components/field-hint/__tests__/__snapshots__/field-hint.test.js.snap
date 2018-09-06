@@ -2,15 +2,7 @@
 
 exports[`FieldHint should render shallow component ok 1`] = `
 <span
-  className="e1q9f2xp3 css-1gxvvc0"
+  className="ui-field-hint e1q9f2xp6 css-gr8tir"
   style={Object {}}
->
-  <span
-    className="em7k1990 css-15i38vd"
-    color="navy600"
-    onClick={undefined}
-    size="extra-small"
-    style={Object {}}
-  />
-</span>
+/>
 `;

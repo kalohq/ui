@@ -1,0 +1,17 @@
+.ui-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: inherit;
+}
+
+.ui-field--inline {
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ui-field .ui-field-label {
+  flex-shrink: 0;
+  margin-right: 24px;
+}

@@ -8,57 +8,44 @@ exports[`Input should render shallow component ok 1`] = `
   style={Object {}}
 >
   <div
-    className="e1q9f2xp0 css-2xcesa"
+    className="ui-field e1q9f2xp6 css-gr8tir"
     onClick={undefined}
     style={Object {}}
   >
     <div
-      className="e1q9f2xp0 css-1yjta7p"
+      className="e1q9f2xp0 css-ou6tiu"
       style={Object {}}
     >
-      <div
-        className="e1q9f2xp0 css-ou6tiu"
+      <label
+        className="ui-field-label e1q9f2xp6 css-vwv6c7"
+        htmlFor={undefined}
         style={Object {}}
+        title={undefined}
       >
-        <label
-          className="em7k1990 css-1clhzyw"
-          color="navy600"
-          htmlFor={undefined}
-          onClick={undefined}
-          size="small"
-          style={Object {}}
-          title={undefined}
-        >
-          Your name
-          <span
-            className="e1q9f2xp3 css-2yaguv"
-            style={Object {}}
-          >
-            *
-          </span>
-        </label>
-      </div>
-      <div
-        className="ui-input-container ui-input-container--margin-none"
-      >
-        <input
-          className="ui-input ui-input--medium"
-          defaultValue={undefined}
-          disabled={false}
-          name="Alex"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          placeholder="Alex"
-          readOnly={false}
-          style={
-            Object {
-              "width": undefined,
-            }
+        Your name
+         *
+      </label>
+    </div>
+    <div
+      className="ui-input-container ui-input-container--margin-none"
+    >
+      <input
+        className="ui-input ui-input--medium"
+        defaultValue={undefined}
+        disabled={false}
+        name="Alex"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="Alex"
+        readOnly={false}
+        style={
+          Object {
+            "width": undefined,
           }
-          value={undefined}
-        />
-      </div>
+        }
+        value={undefined}
+      />
     </div>
   </div>
 </fieldset>
