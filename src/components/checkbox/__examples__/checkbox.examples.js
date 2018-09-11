@@ -36,13 +36,18 @@ export const examples = [
     title: 'Checkbox',
     description:
       'A standard checkbox. Pass a label using the prop to ensure that interaction happens on both the checkbox and the label',
-    render: () => (
-      <DemoCheckbox label="Onboarding freelancers" checked={false} />
-    ),
+    render: () => <DemoCheckbox label="Stay up to date" checked={false} />,
     html: () => (
-      <div className="ui-checkbox ui-checkbox--small">
+      <div className="ui-checkbox ui-checkbox--large">
         <input type="checkbox" id="2" />
-        <label htmlFor="2" />
+        <label htmlFor="2">
+          <div className="ui-checkbox__label-group">
+            <span className="ui-checkbox__label">Stay up to date</span>
+            <span className="ui-checkbox__secondary-label">
+              We'll occasionally send you emails with updates
+            </span>
+          </div>
+        </label>
       </div>
     ),
   },
@@ -91,6 +96,17 @@ export const examples = [
           </Text>
         }
         size="medium"
+      />
+    ),
+  },
+  {
+    title: 'With a secondary label',
+    description: '',
+    render: () => (
+      <DemoCheckbox
+        label="Stay up to date"
+        secondaryLabel="We'll occasionally send you emails with updates"
+        size="large"
       />
     ),
   },

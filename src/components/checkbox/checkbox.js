@@ -3,9 +3,7 @@ import React, {PureComponent} from 'react';
 import {isString, uniqueId} from 'lodash';
 import cx from 'classnames';
 
-import Text from '../text';
 import {Box} from '../layout';
-import {TEXT_SIZE} from '../text/constants';
 import {pickStyles} from '../../utils/style';
 
 import coreStyles from './checkbox.core.css';
@@ -16,6 +14,7 @@ type TProps = {
   indeterminate?: ?boolean,
   disabled?: boolean,
   label?: string | React$Node,
+  secondaryLabel?: string,
   onClick?: Function,
   name?: string,
 };
@@ -63,6 +62,7 @@ export default class Checkbox extends PureComponent<TProps> {
       disabled = false,
       size = 'medium',
       label,
+      secondaryLabel,
       onClick,
       name,
       indeterminate: _IGNORED,
@@ -93,14 +93,16 @@ export default class Checkbox extends PureComponent<TProps> {
         />
         <label htmlFor={id} onClick={!disabled && onClick}>
           {label && isString(label) ? (
-            <Text
-              marginLeft={10}
-              size={size === 'small' ? TEXT_SIZE.EXTRA_SMALL : TEXT_SIZE.SMALL}
-              color="navy600"
-              multiline={true}
-            >
-              {label}
-            </Text>
+            <div className={coreStyles['ui-checkbox__label-group']}>
+              <span className={coreStyles['ui-checkbox__label']}>
+                Stay up to date
+              </span>
+              {secondaryLabel && (
+                <span className={coreStyles['ui-checkbox__secondary-label']}>
+                  {secondaryLabel}
+                </span>
+              )}
+            </div>
           ) : (
             label && label
           )}

@@ -17,6 +17,7 @@
   &:before {
     content: '';
     display: block;
+    flex-shrink: 0;
     border-radius: 3px;
     border: 1px solid var(--grey500);
     transition: 100ms ease-in-out background-color, border-color;
@@ -67,4 +68,22 @@
 .ui-checkbox--large label:before {
   height: 16px;
   width: 16px;
+}
+
+.ui-checkbox__label-group {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+.ui-checkbox__label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--navy700);
+}
+
+.ui-checkbox__secondary-label {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--navy600);
 }
