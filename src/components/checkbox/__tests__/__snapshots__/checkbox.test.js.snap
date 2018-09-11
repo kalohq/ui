@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox should render a checkbox partially checked 1`] = `
-.emotion-3 {
+.emotion-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -22,37 +22,8 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
   display: flex;
 }
 
-.emotion-1 {
-  display: inline-block;
-  vertical-align: bottom;
-  margin-left: 10px;
-  font-family: 'WebFaktSoftPro',sans-serif;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  cursor: inherit;
-  text-align: unset;
-  text-decoration: inherit;
-  font-weight: 400;
-  font-size: 14px;
-  color: rgb(84,103,137);
-  white-space: normal;
-  text-overflow: initial;
-  overflow: visible;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
-.emotion-1:hover {
-  text-decoration: inherit;
-}
-
-.emotion-1 strong {
-  font-weight: 500;
-}
-
 <div
-  className="ui-checkbox ui-checkbox--medium emotion-2 emotion-3"
+  className="ui-checkbox ui-checkbox--medium emotion-0 emotion-1"
   data-test="ui-checkbox"
   name={undefined}
   style={Object {}}
@@ -68,21 +39,21 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
     htmlFor="checkbox3"
     onClick={undefined}
   >
-    <span
-      className="emotion-0 emotion-1"
-      color="navy600"
-      onClick={undefined}
-      size="small"
-      style={Object {}}
+    <div
+      className="ui-checkbox__label-group"
     >
-      A checkbox label
-    </span>
+      <span
+        className="ui-checkbox__label"
+      >
+        Stay up to date
+      </span>
+    </div>
   </label>
 </div>
 `;
 
 exports[`Checkbox should render a checkbox with label 1`] = `
-.emotion-3 {
+.emotion-1 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -103,37 +74,8 @@ exports[`Checkbox should render a checkbox with label 1`] = `
   display: flex;
 }
 
-.emotion-1 {
-  display: inline-block;
-  vertical-align: bottom;
-  margin-left: 10px;
-  font-family: 'WebFaktSoftPro',sans-serif;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  cursor: inherit;
-  text-align: unset;
-  text-decoration: inherit;
-  font-weight: 400;
-  font-size: 14px;
-  color: rgb(84,103,137);
-  white-space: normal;
-  text-overflow: initial;
-  overflow: visible;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
-.emotion-1:hover {
-  text-decoration: inherit;
-}
-
-.emotion-1 strong {
-  font-weight: 500;
-}
-
 <div
-  className="ui-checkbox ui-checkbox--medium emotion-2 emotion-3"
+  className="ui-checkbox ui-checkbox--medium emotion-0 emotion-1"
   data-test="ui-checkbox"
   name={undefined}
   style={Object {}}
@@ -149,15 +91,15 @@ exports[`Checkbox should render a checkbox with label 1`] = `
     htmlFor="checkbox2"
     onClick={undefined}
   >
-    <span
-      className="emotion-0 emotion-1"
-      color="navy600"
-      onClick={undefined}
-      size="small"
-      style={Object {}}
+    <div
+      className="ui-checkbox__label-group"
     >
-      A checkbox label
-    </span>
+      <span
+        className="ui-checkbox__label"
+      >
+        Stay up to date
+      </span>
+    </div>
   </label>
 </div>
 `;
