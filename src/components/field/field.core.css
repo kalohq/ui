@@ -5,6 +5,14 @@
   justify-content: inherit;
 }
 
+.ui-field:not(.ui-field--legacy) {
+  flex: 1 1 200px;
+  margin-top: 16px;
+  margin-left: 16px;
+  min-width: 200px;
+  max-width: calc(100% - 16px);
+}
+
 .ui-field--inline {
   justify-content: space-between;
   flex-direction: row;

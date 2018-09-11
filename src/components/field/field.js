@@ -86,7 +86,11 @@ export default function Field(props: TProps) {
 
   return (
     <UIBase
-      className={cx(coreStyles['ui-field'], className)}
+      className={cx(
+        coreStyles['ui-field'],
+        coreStyles['ui-field--legacy'],
+        className
+      )}
       onClick={onClick}
       {...otherProps}
     >
