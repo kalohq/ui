@@ -107,6 +107,7 @@ export const examples = [
         label="Stay up to date"
         hint="We'll occasionally send you emails with updates"
         size="large"
+        disabled={true}
       />
     ),
   },

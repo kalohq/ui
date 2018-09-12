@@ -33,6 +33,11 @@
   }
 }
 
+.ui-checkbox input:disabled ~ label:hover:before {
+  background-color: var(--white);
+  border: 1px solid var(--grey500);
+}
+
 .ui-checkbox input:checked ~ label:before {
   background-image: url('data:image/svg+xml;charset=utf-8,<svg fill="#54C3DB" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>');
   background-color: var(--grey200);
@@ -82,8 +87,16 @@
   color: var(--navy700);
 }
 
+.ui-checkbox input:disabled ~ label .ui-checkbox__label {
+  color: var(--grey600);
+}
+
 .ui-checkbox__hint {
   font-size: 12px;
   font-weight: 400;
   color: var(--navy600);
+}
+
+.ui-checkbox input:disabled ~ label .ui-checkbox__hint {
+  color: var(--grey500);
 }
