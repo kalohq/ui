@@ -43,7 +43,7 @@ export const examples = [
         <label htmlFor="2">
           <div className="ui-checkbox__label-group">
             <span className="ui-checkbox__label">Stay up to date</span>
-            <span className="ui-checkbox__secondary-label">
+            <span className="ui-checkbox__hint">
               We'll occasionally send you emails with updates
             </span>
           </div>
@@ -100,12 +100,12 @@ export const examples = [
     ),
   },
   {
-    title: 'With a secondary label',
-    description: '',
+    title: 'With a label and hint',
+    description: 'Note, that in order to set a hint, a label must also be set',
     render: () => (
       <DemoCheckbox
         label="Stay up to date"
-        secondaryLabel="We'll occasionally send you emails with updates"
+        hint="We'll occasionally send you emails with updates"
         size="large"
       />
     ),

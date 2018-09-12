@@ -82,7 +82,7 @@
   color: var(--navy700);
 }
 
-.ui-checkbox__secondary-label {
+.ui-checkbox__hint {
   font-size: 12px;
   font-weight: 400;
   color: var(--navy600);

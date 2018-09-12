@@ -14,7 +14,7 @@ type TProps = {
   indeterminate?: ?boolean,
   disabled?: boolean,
   label?: string | React$Node,
-  secondaryLabel?: string,
+  hint?: string,
   onClick?: Function,
   name?: string,
 };
@@ -62,7 +62,7 @@ export default class Checkbox extends PureComponent<TProps> {
       disabled = false,
       size = 'medium',
       label,
-      secondaryLabel,
+      hint,
       onClick,
       name,
       indeterminate: _IGNORED,
@@ -97,10 +97,8 @@ export default class Checkbox extends PureComponent<TProps> {
               <span className={coreStyles['ui-checkbox__label']}>
                 Stay up to date
               </span>
-              {secondaryLabel && (
-                <span className={coreStyles['ui-checkbox__secondary-label']}>
-                  {secondaryLabel}
-                </span>
+              {hint && (
+                <span className={coreStyles['ui-checkbox__hint']}>{hint}</span>
               )}
             </div>
           ) : (
