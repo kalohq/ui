@@ -6,7 +6,7 @@ exports[`Input should render shallow component ok 1`] = `
   style={Object {}}
 >
   <div
-    className="ui-field e1q9f2xp6 css-v4cvqe"
+    className="ui-field ui-field--legacy e1q9f2xp6 css-v4cvqe"
     onClick={undefined}
     style={Object {}}
   >
@@ -46,7 +46,7 @@ exports[`Input should render shallow component ok 1`] = `
     </div>
   </div>
   <div
-    className="ui-field e1q9f2xp6 css-v4cvqe"
+    className="ui-field ui-field--legacy e1q9f2xp6 css-v4cvqe"
     onClick={undefined}
     style={Object {}}
   >
