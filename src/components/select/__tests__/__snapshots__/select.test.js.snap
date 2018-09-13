@@ -23,28 +23,6 @@ exports[`Select should render a disabled select 1`] = `
     >
       Select…
     </span>
-    <div
-      className="ui-select__chevron"
-    >
-      <i
-        className="e2anemp0 css-1kj0oyh"
-        color="grey500"
-        onClick={undefined}
-        size={24}
-        style={Object {}}
-        title={undefined}
-      >
-        <svg
-          aria-hidden="true"
-          height={24}
-          width={24}
-        >
-          <use
-            xlinkHref="#chevron_right"
-          />
-        </svg>
-      </i>
-    </div>
   </div>
   <div
     className="ui-select__option-group"
@@ -118,28 +96,6 @@ exports[`Select should render a readonly select 1`] = `
     >
       Select…
     </span>
-    <div
-      className="ui-select__chevron"
-    >
-      <i
-        className="e2anemp0 css-1kj0oyh"
-        color="grey500"
-        onClick={undefined}
-        size={24}
-        style={Object {}}
-        title={undefined}
-      >
-        <svg
-          aria-hidden="true"
-          height={24}
-          width={24}
-        >
-          <use
-            xlinkHref="#chevron_right"
-          />
-        </svg>
-      </i>
-    </div>
   </div>
   <div
     className="ui-select__option-group"
@@ -213,28 +169,6 @@ exports[`Select should render shallow component ok 1`] = `
     >
       Select…
     </span>
-    <div
-      className="ui-select__chevron"
-    >
-      <i
-        className="e2anemp0 css-84m9du"
-        color="navy700"
-        onClick={undefined}
-        size={24}
-        style={Object {}}
-        title={undefined}
-      >
-        <svg
-          aria-hidden="true"
-          height={24}
-          width={24}
-        >
-          <use
-            xlinkHref="#chevron_right"
-          />
-        </svg>
-      </i>
-    </div>
   </div>
   <div
     className="ui-select__option-group"

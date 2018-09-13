@@ -168,17 +168,6 @@ export default class Select extends PureComponent<TProps, TState> {
               </Icon>
             </div>
           )}
-          {(!readonly || !disabled) &&
-          (!selection || !nullable) && (
-            <div className={reactStyles['ui-select__chevron']}>
-              <Icon
-                color={readonly || disabled ? 'grey500' : 'navy700'}
-                size={24}
-              >
-                chevron_right
-              </Icon>
-            </div>
-          )}
         </div>
         <div
           className={reactStyles['ui-select__option-group']}

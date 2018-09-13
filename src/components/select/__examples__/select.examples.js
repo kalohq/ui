@@ -52,6 +52,15 @@ export const examples = [
     title: 'Select',
     description: 'A standard Select',
     render: () => <SelectDemo />,
+    html: () => (
+      <select className="ui-select">
+        {COUNTRIES.map(country => (
+          <option key={country.name} value={country.name}>
+            {country.name}
+          </option>
+        ))}
+      </select>
+    ),
   },
   {
     title: 'Disabled select',
@@ -66,6 +75,15 @@ export const examples = [
           <Option key={country.name}>{country.name}</Option>
         ))}
       </Select>
+    ),
+    html: () => (
+      <select className="ui-select" disabled={true}>
+        {COUNTRIES.map(country => (
+          <option key={country.name} value={country.name}>
+            {country.name}
+          </option>
+        ))}
+      </select>
     ),
   },
   {
