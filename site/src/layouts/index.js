@@ -57,12 +57,23 @@ injectGlobal`
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
   }
+
   body,
   html {
     margin: 0;
     padding: 0;
+  }
+
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    font-size: 1.6rem;
+    font-weight: 400;
     font-family: 'WebFaktSoftPro', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   }
+
 
   code[class*='language-'],
   pre[class*='language-'] {
