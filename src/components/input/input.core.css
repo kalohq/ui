@@ -84,20 +84,28 @@
 
 .ui-input--small {
   height: 32px;
-  font-size: 14px;
+  font-size: 1.6rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.4rem;
+  }
 }
 
 .ui-input--medium {
   height: 40px;
-  font-size: 14px;
+  font-size: 1.6rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.4rem;
+  }
 }
 
 .ui-input--large {
   height: 48px;
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 .ui-input--extra-large {
   height: 52px;
-  font-size: 16px;
+  font-size: 1.6rem;
 }

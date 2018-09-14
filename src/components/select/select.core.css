@@ -11,7 +11,7 @@
   height: 40px;
   text-align: left;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 1.6rem;
   appearance: none;
   padding: 2px 16px;
   color: var(--navy700);
@@ -23,6 +23,10 @@
   &:focus {
     outline: 0;
     border: 1px solid var(--blue500);
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.4rem;
   }
 }
 
