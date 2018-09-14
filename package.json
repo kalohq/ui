@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "build": "rimraf lib && npm run compile",
-    "compile": "npm run generate:tokens && npm run generate:icons && gulp build-react-package",
+    "compile": "npm run generate:tokens && npm run generate:icons && gulp build-npm-package",
     "test": "jest",
     "release": "np --no-yarn --no-cleanup --any-branch",
     "typecheck": "flow",
@@ -21,8 +21,7 @@
     "generate:tokens": "node scripts/tokens.js",
     "generate:icons": "node scripts/icons.js",
     "generate:component": "reactman --config ./config/code-templates/reactman-config.json",
-    "version": "npm run build",
-    "build:gem": "npm run generate:tokens && gulp build-gem-package"
+    "version": "npm run build"
   },
   "lint-staged": {
     "*.js": [
