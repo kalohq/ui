@@ -54,3 +54,7 @@
   border-color: var(--grey500);
   background-color: var(--grey200);
 }
+
+.ui-select--invalid {
+  border-color: var(--pink500);
+}
