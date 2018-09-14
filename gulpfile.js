@@ -7,7 +7,7 @@ const concat = require('gulp-concat');
  * Compile component CSS. We also convert variables here
  * to make the published package more consumable.
  */
-gulp.task('react:css', () => {
+gulp.task('npm:css', () => {
   return gulp
     .src('./src/components/**/*.css')
     .pipe(postcss())
@@ -17,7 +17,7 @@ gulp.task('react:css', () => {
 /**
  * Compile component JS from ES6/JSX down to ES5
  */
-gulp.task('react:js', () =>
+gulp.task('npm:js', () =>
   gulp
     .src([
       'src/**/*.js',
@@ -38,7 +38,7 @@ gulp.task('react:js', () =>
 /**
  * Copy component assets (font files, images)
  */
-gulp.task('react:copy-files', () =>
+gulp.task('npm:copy-files', () =>
   gulp
     .src(
       'src/components/**/*(*.woff|*.woff2|*.ttf|*.jpg|*.jpeg|*.png|*.gif|*.svg)'
@@ -49,7 +49,7 @@ gulp.task('react:copy-files', () =>
 /**
  * Copy design tokens to lib
  */
-gulp.task('react:copy-design-tokens', () =>
+gulp.task('npm:copy-design-tokens', () =>
   gulp
     .src(['src/design-tokens/*(*.js|*.json|*.css)'])
     .pipe(gulp.dest('lib/design-tokens'))
@@ -58,17 +58,24 @@ gulp.task('react:copy-design-tokens', () =>
 /**
  * Copy design tokens to lib
  */
-gulp.task('react:copy-design-tokens', () =>
+gulp.task('npm:copy-design-tokens', () =>
   gulp
     .src(['src/design-tokens/*(*.js|*.json|*.css)'])
     .pipe(gulp.dest('lib/design-tokens'))
 );
 
 /**
+ * Copy icons to lib
+ */
+gulp.task('npm:copy-icons', () =>
+  gulp.src(['src/icons/**/*']).pipe(gulp.dest('lib/icons'))
+);
+
+/**
  * Copy compiled CSS to NPM lib
  */
 
-gulp.task('react:build-bundled-css', () =>
+gulp.task('npm:build-bundled-css', () =>
   gulp
     .src([
       './src/components/**/*.css',
@@ -79,35 +86,6 @@ gulp.task('react:build-bundled-css', () =>
     .pipe(postcss())
     .pipe(gulp.dest('lib'))
 );
-/**
- * Bundle CSS. We also convert variables here
- * to make the published package more consumable.
- */
-gulp.task('gem:build-css', () => {
-  return gulp
-    .src([
-      './src/components/**/*.css',
-      '!./src/components/**/*.react.css',
-      '!./src/components/grid/grid.css',
-    ])
-    .pipe(concat('ui-bundle.css'))
-    .pipe(postcss())
-    .pipe(gulp.dest('lib-gem/stylesheets'));
-});
-
-gulp.task('gem:copy-design-tokens', () =>
-  gulp
-    .src(['src/design-tokens/tokens.scss'])
-    .pipe(gulp.dest('lib-gem/stylesheets'))
-);
-
-gulp.task('gem:copy-fonts', () =>
-  gulp.src(['src/styles/fonts/**/*']).pipe(gulp.dest('lib-gem/fonts'))
-);
-
-gulp.task('gem:copy-icons', () =>
-  gulp.src(['src/icons/**/*']).pipe(gulp.dest('lib-gem/icons'))
-);
 
 /**
  * ===========
@@ -115,17 +93,11 @@ gulp.task('gem:copy-icons', () =>
  * ===========
  */
 
-gulp.task('build-react-package', [
-  'react:css',
-  'react:js',
-  'react:copy-files',
-  'react:copy-design-tokens',
-  'react:build-bundled-css',
-]);
-
-gulp.task('build-gem-package', [
-  'gem:build-css',
-  'gem:copy-design-tokens',
-  'gem:copy-icons',
-  'gem:copy-fonts',
+gulp.task('build-npm-package', [
+  'npm:css',
+  'npm:js',
+  'npm:copy-files',
+  'npm:copy-design-tokens',
+  'npm:copy-icons',
+  'npm:build-bundled-css',
 ]);
