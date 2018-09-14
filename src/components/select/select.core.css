@@ -24,10 +24,6 @@
     outline: 0;
     border: 1px solid var(--blue500);
   }
-
-  &:invalid {
-    border: 1px solid var(--pink500);
-  }
 }
 
 .ui-select:disabled,
