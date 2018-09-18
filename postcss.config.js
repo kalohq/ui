@@ -13,6 +13,8 @@ module.exports = {
       normalizeUrl: false,
       discardEmpty: false,
       core: false,
+      minifyFontValues: false,
+      discardUnused: false,
     },
   },
 };
