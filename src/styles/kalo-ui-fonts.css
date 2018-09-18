@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'WebFaktSoftPro';
+  font-weight: 300;
+  font-style: normal;
+  src: url('./fonts/fakt-soft-pro/FaktSoftPro-Blond.woff') format('woff'),
+    url('./fonts/fakt-soft-pro/FaktSoftPro-Blond.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'WebFaktSoftPro';
+  font-weight: 400;
+  font-style: normal;
+  src: url('./fonts/fakt-soft-pro/FaktSoftPro-Normal.woff') format('woff'),
+    url('./fonts/fakt-soft-pro/FaktSoftPro-Normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'WebFaktSoftPro';
+  font-weight: 500;
+  font-style: normal;
+  src: url('./fonts/fakt-soft-pro/FaktSoftPro-Medium.woff') format('woff'),
+    url('./fonts/fakt-soft-pro/FaktSoftPro-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'WebFaktSoftPro';
+  font-weight: 600;
+  font-style: normal;
+  src: url('./fonts/fakt-soft-pro/FaktSoftPro-SemiBold.woff') format('woff'),
+    url('./fonts/fakt-soft-pro/FaktSoftPro-SemiBold.woff2') format('woff2');
+}
