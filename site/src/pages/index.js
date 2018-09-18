@@ -18,11 +18,14 @@ const IndexIntro = styled.div`
   color: #fff;
 
   p {
-    font-size: 1.2em;
+    font-size: 1.8rem;
+    margin: 0;
   }
 
   h1 {
     font-weight: 600;
+    font-size: 3.2rem;
+    margin: 0 0 8px 0;
   }
 `;
 
