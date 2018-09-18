@@ -187,14 +187,20 @@ exports.modifyWebpackConfig = ({config, stage}) => {
     case 'develop':
       config.loader(`css`, {
         test: /\.css$/,
-        exclude: [path.resolve(__dirname, '../src/components/')],
+        exclude: [
+          path.resolve(__dirname, '../src/components/'),
+          path.resolve(__dirname, '../src/styles/'),
+        ],
         include: [path.resolve(__dirname)],
         loaders: [`style`, `css`, `postcss`],
       });
 
       config.loader('customCSSModules', {
         test: /\.css$/,
-        include: [path.resolve(__dirname, '../src/components/')],
+        include: [
+          path.resolve(__dirname, '../src/components/'),
+          path.resolve(__dirname, '../src/styles/'),
+        ],
         exclude: [path.resolve(__dirname)],
         loaders: ['style', cssModulesConfig(stage), 'postcss'],
       });
@@ -204,7 +210,10 @@ exports.modifyWebpackConfig = ({config, stage}) => {
     case 'develop-html':
       config.loader('customCSSModules', {
         test: /\.css$/,
-        include: [path.resolve(__dirname, '../src/components/')],
+        include: [
+          path.resolve(__dirname, '../src/components/'),
+          path.resolve(__dirname, '../src/styles/'),
+        ],
         exclude: [path.resolve(__dirname)],
         loader: ExtractTextPlugin.extract('style', [
           cssModulesConfig(stage),
@@ -214,7 +223,10 @@ exports.modifyWebpackConfig = ({config, stage}) => {
 
       config.loader(`css`, {
         test: /\.css$/,
-        exclude: [path.resolve(__dirname, '../src/components/')],
+        exclude: [
+          path.resolve(__dirname, '../src/components/'),
+          path.resolve(__dirname, '../src/styles/'),
+        ],
         loader: `null`,
       });
 
@@ -223,7 +235,10 @@ exports.modifyWebpackConfig = ({config, stage}) => {
     case 'build-css':
       config.loader('customCSSModules', {
         test: /\.css$/,
-        include: [path.resolve(__dirname, '../src/components/')],
+        include: [
+          path.resolve(__dirname, '../src/components/'),
+          path.resolve(__dirname, '../src/styles/'),
+        ],
         exclude: [path.resolve(__dirname)],
         loader: ExtractTextPlugin.extract('style', [
           cssModulesConfig(stage),
@@ -233,7 +248,10 @@ exports.modifyWebpackConfig = ({config, stage}) => {
 
       config.loader(`css`, {
         test: /\.css$/,
-        exclude: [path.resolve(__dirname, '../src/components/')],
+        exclude: [
+          path.resolve(__dirname, '../src/components/'),
+          path.resolve(__dirname, '../src/styles/'),
+        ],
         loader: ExtractTextPlugin.extract([`css?minimize`, `postcss`]),
       });
       return config;
@@ -241,7 +259,10 @@ exports.modifyWebpackConfig = ({config, stage}) => {
     case 'build-javascript':
       config.loader('customCSSModules', {
         test: /\.css$/,
-        include: [path.resolve(__dirname, '../src/components/')],
+        include: [
+          path.resolve(__dirname, '../src/components/'),
+          path.resolve(__dirname, '../src/styles/'),
+        ],
         loader: ExtractTextPlugin.extract('style', [
           cssModulesConfig(stage),
           'postcss',
@@ -250,7 +271,10 @@ exports.modifyWebpackConfig = ({config, stage}) => {
 
       config.loader(`css`, {
         test: /\.css$/,
-        exclude: [path.resolve(__dirname, '../src/components/')],
+        exclude: [
+          path.resolve(__dirname, '../src/components/'),
+          path.resolve(__dirname, '../src/styles/'),
+        ],
         // loader: `null`,
         loader: ExtractTextPlugin.extract([`css`]),
       });
