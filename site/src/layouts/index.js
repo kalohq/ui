@@ -8,62 +8,13 @@ import SideNav, {NAV_IN_FOOTER_BREAKPOINT} from '../components/side-nav';
 
 import theme from '../../../src/components/theme';
 import IconSymbols from '../../../src/components/icon-symbols';
-// import '../../../src/styles/transitions.css';
 
-import FSPBlond from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-Blond.woff';
-import FSPBlond2 from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-Blond.woff2';
-import FSPNormal from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-Normal.woff';
-import FSPNormal2 from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-Normal.woff2';
-import FSPMedium from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-Medium.woff';
-import FSPMedium2 from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-Medium.woff2';
-import FSPSemiBold from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-SemiBold.woff';
-import FSPSemiBold2 from '../../../src/styles/fonts/fakt-soft-pro/FaktSoftPro-SemiBold.woff2';
+import '../../../src/styles/kalo-ui-base.css';
+import '../../../src/styles/kalo-ui-fonts.css';
+import '../../../src/styles/kalo-ui-transitions.css';
 
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
-  @font-face {
-    font-family: 'WebFaktSoftPro';
-    font-weight: 300;
-    font-style: normal;
-    src: url(${FSPBlond}) format('woff'),
-      url(${FSPBlond2}) format('woff2');
-  }
-
-  @font-face {
-    font-family: 'WebFaktSoftPro';
-    font-weight: 400;
-    font-style: normal;
-    src: url(${FSPNormal}) format('woff'),
-    url(${FSPNormal2}) format('woff2');
-  }
-
-  @font-face {
-    font-family: 'WebFaktSoftPro';
-    font-weight: 500;
-    font-style: normal;
-    src: url(${FSPMedium}) format('woff'),
-    url(${FSPMedium2}) format('woff2');
-  }
-
-  @font-face {
-    font-family: 'WebFaktSoftPro';
-    font-weight: 600;
-    font-style: normal;
-    src: url(${FSPSemiBold}) format('woff'),
-    url(${FSPSemiBold2}) format('woff2');
-  }
-
-  * {
-    -webkit-font-smoothing: antialiased;
-    box-sizing: border-box;
-  }
-  body,
-  html {
-    margin: 0;
-    padding: 0;
-    font-family: 'WebFaktSoftPro', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  }
-
   code[class*='language-'],
   pre[class*='language-'] {
     font-family: 'Courier', Consolas, Menlo, Monaco, 'Andale Mono WT', 'Andale Mono',

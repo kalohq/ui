@@ -74,7 +74,6 @@ gulp.task('npm:copy-icons', () =>
 /**
  * Copy compiled CSS to NPM lib
  */
-
 gulp.task('npm:build-bundled-css', () =>
   gulp
     .src([
@@ -85,6 +84,24 @@ gulp.task('npm:build-bundled-css', () =>
     .pipe(concat('ui-bundle.css'))
     .pipe(postcss())
     .pipe(gulp.dest('lib'))
+);
+
+/**
+ * Copy and compile core stylesheets
+ */
+gulp.task('npm:build-core-css', () =>
+  gulp
+    .src(['./src/styles/kalo-ui-*.css'])
+    .pipe(postcss())
+    .pipe(gulp.dest('lib/styles'))
+);
+
+/**
+ * Copy fonts
+ */
+
+gulp.task('npm:copy-font-files', () =>
+  gulp.src('src/styles/fonts/**/*').pipe(gulp.dest('lib/styles/fonts'))
 );
 
 /**
@@ -100,4 +117,6 @@ gulp.task('build-npm-package', [
   'npm:copy-design-tokens',
   'npm:copy-icons',
   'npm:build-bundled-css',
+  'npm:build-core-css',
+  'npm:copy-font-files',
 ]);

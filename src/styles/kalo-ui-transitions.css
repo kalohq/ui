@@ -1,3 +1,8 @@
+/**
+ * COMMONLY USED TRANSITIONS
+ * This is mainly used in conjunction with ReactTransitionGroup
+ */
+
 .t-scale-enter {
   opacity: 0.01;
   transform: scale(0);
