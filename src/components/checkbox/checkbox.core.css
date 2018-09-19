@@ -83,8 +83,8 @@
 
 .ui-checkbox__label {
   font-size: 14px;
-  font-weight: 500;
-  color: var(--navy700);
+  font-weight: 400;
+  color: var(--navy600);
 }
 
 .ui-checkbox input:disabled ~ label .ui-checkbox__label {
