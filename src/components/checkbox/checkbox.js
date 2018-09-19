@@ -94,9 +94,7 @@ export default class Checkbox extends PureComponent<TProps> {
         <label htmlFor={id} onClick={!disabled && onClick}>
           {label && isString(label) ? (
             <div className={coreStyles['ui-checkbox__label-group']}>
-              <span className={coreStyles['ui-checkbox__label']}>
-                Stay up to date
-              </span>
+              <span className={coreStyles['ui-checkbox__label']}>{label}</span>
               {hint && (
                 <span className={coreStyles['ui-checkbox__hint']}>{hint}</span>
               )}
