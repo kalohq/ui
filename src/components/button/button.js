@@ -184,7 +184,7 @@ export class Button extends PureComponent<TProps, TState> {
         [reactStyles[`ui-btn--react-wide`]]: wide,
         [reactStyles[`ui-btn--react-flex`]]: flex,
       },
-      variant === 'primary' &&
+      (variant === 'primary' || variant === 'action') &&
         this.props.theme &&
         this.props.theme.user &&
         this.props.theme.user.primary &&
