@@ -1,5 +1,5 @@
-// flow-typed signature: cd54ebd9cef0bce96a268ad51fc9df0b
-// flow-typed version: da30fe6876/lodash_v4.x.x/flow_>=v0.47.x <=v0.54.x
+// flow-typed signature: b265f3c871580d37c28967e687b4d9c2
+// flow-typed version: dea0770be9/lodash_v4.x.x/flow_>=v0.47.x <=v0.54.x
 
 declare module "lodash" {
   declare type __CurriedFunction1<A, R, AA: A> = (...r: [AA]) => R;
@@ -608,11 +608,11 @@ declare module "lodash" {
     keyBy<T, V>(
       array: ?Array<T>,
       iteratee?: ValueOnlyIteratee<T>
-    ): { [key: V]: ?T };
+    ): { [key: V]: T };
     keyBy<V, A, I, T: { [id: I]: A }>(
       object: T,
       iteratee?: ValueOnlyIteratee<A>
-    ): { [key: V]: ?A };
+    ): { [key: V]: A };
     map<T, U>(array: ?Array<T>, iteratee?: MapIterator<T, U>): Array<U>;
     map<V, T: Object, U>(
       object: ?T,
