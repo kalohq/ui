@@ -15,7 +15,7 @@ exports[`Select should render a disabled select 1`] = `
     onClick={undefined}
   >
     <span
-      className="em7k1990 css-11q5r6a"
+      className="em7k1990 css-19949j6"
       color="navy500"
       onClick={undefined}
       size="small"
@@ -88,7 +88,7 @@ exports[`Select should render a readonly select 1`] = `
     onClick={undefined}
   >
     <span
-      className="em7k1990 css-11q5r6a"
+      className="em7k1990 css-19949j6"
       color="navy500"
       onClick={undefined}
       size="small"
@@ -161,7 +161,7 @@ exports[`Select should render shallow component ok 1`] = `
     onClick={[Function]}
   >
     <span
-      className="em7k1990 css-13hvkxd"
+      className="em7k1990 css-yfv3j4"
       color="navy700"
       onClick={undefined}
       size="small"

@@ -10,6 +10,7 @@ exports[`Text should render green text 1`] = `
   overflow: hidden;
   cursor: inherit;
   text-align: unset;
+  -webkit-text-decoration: inherit;
   text-decoration: inherit;
   font-weight: 400;
   font-size: 16px;
@@ -17,6 +18,7 @@ exports[`Text should render green text 1`] = `
 }
 
 .emotion-1:hover {
+  -webkit-text-decoration: inherit;
   text-decoration: inherit;
 }
 
@@ -45,6 +47,7 @@ exports[`Text should render large text 1`] = `
   overflow: hidden;
   cursor: inherit;
   text-align: unset;
+  -webkit-text-decoration: inherit;
   text-decoration: inherit;
   font-weight: 400;
   font-size: 18px;
@@ -52,6 +55,7 @@ exports[`Text should render large text 1`] = `
 }
 
 .emotion-1:hover {
+  -webkit-text-decoration: inherit;
   text-decoration: inherit;
 }
 
@@ -80,6 +84,7 @@ exports[`Text should render shallow component ok 1`] = `
   overflow: hidden;
   cursor: inherit;
   text-align: unset;
+  -webkit-text-decoration: inherit;
   text-decoration: inherit;
   font-weight: 400;
   font-size: 16px;
@@ -87,6 +92,7 @@ exports[`Text should render shallow component ok 1`] = `
 }
 
 .emotion-1:hover {
+  -webkit-text-decoration: inherit;
   text-decoration: inherit;
 }
 

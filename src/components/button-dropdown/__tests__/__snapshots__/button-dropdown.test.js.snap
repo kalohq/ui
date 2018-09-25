@@ -30,8 +30,8 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
   -webkit-transform-origin: 48% 50%;
   -ms-transform-origin: 48% 50%;
   transform-origin: 48% 50%;
-  -webkit-animation: animation-bg5xxq 1600ms linear infinite;
-  animation: animation-bg5xxq 1600ms linear infinite;
+  -webkit-animation: animation-1q8eu9e 1600ms linear infinite;
+  animation: animation-1q8eu9e 1600ms linear infinite;
   width: 20px;
   height: 20px;
 }
@@ -166,8 +166,8 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   -webkit-transform-origin: 48% 50%;
   -ms-transform-origin: 48% 50%;
   transform-origin: 48% 50%;
-  -webkit-animation: animation-bg5xxq 1600ms linear infinite;
-  animation: animation-bg5xxq 1600ms linear infinite;
+  -webkit-animation: animation-1q8eu9e 1600ms linear infinite;
+  animation: animation-1q8eu9e 1600ms linear infinite;
   width: 20px;
   height: 20px;
 }
@@ -192,7 +192,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-content: flex-start;
-  -ms-flex-line-pack: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   display: -webkit-box;
   display: -webkit-flex;
