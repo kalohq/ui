@@ -4,6 +4,7 @@ import {isString} from 'lodash';
 import cx from 'classnames';
 import {css} from 'react-emotion';
 import {withTheme} from 'emotion-theming';
+// $FlowFixMe
 import {darken, lighten} from 'polished';
 
 import {UIBase} from '../layout';
