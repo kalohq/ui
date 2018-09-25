@@ -2,6 +2,9 @@
 import React, {PureComponent} from 'react';
 import {isString} from 'lodash';
 import cx from 'classnames';
+import {css} from 'react-emotion';
+import {withTheme} from 'emotion-theming';
+import {darken, lighten} from 'polished';
 
 import {UIBase} from '../layout';
 import Icon from '../icon';
@@ -66,13 +69,15 @@ type TProps = {
   className?: string | Object,
   /** Style to pass down */
   style?: Object,
+  /** A theme - set via context by Emotion */
+  theme?: Object,
 };
 
 type TState = {
   loaded: boolean,
 };
 
-export default class Button extends PureComponent<TProps, TState> {
+export class Button extends PureComponent<TProps, TState> {
   static defaultProps = {
     role: 'button',
     size: 'large',
@@ -144,6 +149,23 @@ export default class Button extends PureComponent<TProps, TState> {
 
     const {loaded} = this.state;
 
+    // Allows teams to use their brand color for buttons
+    const customBrandStyles = (theme: Object) => css`
+      background-color: ${theme.user.primary};
+
+      &:hover {
+        background-color: ${lighten(0.1, theme.user.primary)};
+      }
+
+      &:active {
+        background-color: ${darken(0.1, theme.user.primary)};
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 3px ${lighten(0.3, theme.user.primary)};
+      }
+    `;
+
     const _classNames = cx(
       {
         [coreStyles['ui-btn']]: true,
@@ -162,6 +184,11 @@ export default class Button extends PureComponent<TProps, TState> {
         [reactStyles[`ui-btn--react-wide`]]: wide,
         [reactStyles[`ui-btn--react-flex`]]: flex,
       },
+      variant === 'primary' &&
+        this.props.theme &&
+        this.props.theme.user &&
+        this.props.theme.user.primary &&
+        customBrandStyles(this.props.theme),
       className
     );
 
@@ -226,3 +253,5 @@ export default class Button extends PureComponent<TProps, TState> {
     );
   }
 }
+
+export default withTheme(Button);

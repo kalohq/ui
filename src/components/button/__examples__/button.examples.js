@@ -2,6 +2,7 @@ import React from 'react';
 
 import Button from '../button';
 import ButtonGroup from '../../button-group';
+import {ThemeProvider} from 'emotion-theming';
 
 const myClickFunction = () => {
   /* eslint-disable no-alert */
@@ -190,6 +191,24 @@ export const examples = [
         </button>
         <button className="ui-btn ui-btn--tertiary ui-btn--large">large</button>
       </div>
+    ),
+  },
+  {
+    title: 'Themed button',
+    description:
+      'When used in the platform, primary buttons can inherit their colors from the theme (React only)',
+    render: () => (
+      <ThemeProvider
+        theme={{
+          user: {
+            primary: '#4885ed',
+          },
+        }}
+      >
+        <Button variant="primary" size="large">
+          A themed button
+        </Button>
+      </ThemeProvider>
     ),
   },
 ];
