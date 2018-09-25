@@ -6,6 +6,8 @@
 .*/node_modules/.*/src/.*
 .*/node_modules/jss/.*
 .*/node_modules/findup/.*
+.*/node_modules/@emotion/.*
+.*/node_modules/polished/.*
 .*/config/.*
 .*/site
 
