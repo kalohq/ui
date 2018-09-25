@@ -7,8 +7,9 @@ import renderer from 'react-test-renderer';
 import {ThemeProvider} from 'emotion-theming';
 import sinon from 'sinon';
 
+import {shallow} from '../../../utils/test/enzyme';
+
 import theme from 'components/theme';
-import {shallow} from 'enzyme';
 import Button from '../button';
 
 import reactStyles from '../button.react.css';
@@ -47,8 +48,9 @@ describe('Button', () => {
 
     const result = shallow(element);
     expect(
-      result.find({className: reactStyles['ui-btn__react-success-message']})
-        .length
+      result
+        .dive()
+        .find({className: reactStyles['ui-btn__react-success-message']}).length
     ).toBe(1);
   });
 
@@ -59,8 +61,9 @@ describe('Button', () => {
 
     const result = shallow(element);
     expect(
-      result.find({className: reactStyles['ui-btn__react-loading-spinner']})
-        .length
+      result
+        .dive()
+        .find({className: reactStyles['ui-btn__react-loading-spinner']}).length
     ).toBe(1);
   });
 
@@ -90,7 +93,7 @@ describe('Button', () => {
 
     const result = shallow(element);
 
-    result.simulate('click', {
+    result.dive().simulate('click', {
       preventDefault: () => {},
     });
 

@@ -6,8 +6,8 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
   -webkit-transform-origin: 48% 50%;
   -ms-transform-origin: 48% 50%;
   transform-origin: 48% 50%;
-  -webkit-animation: animation-bg5xxq 1600ms linear infinite;
-  animation: animation-bg5xxq 1600ms linear infinite;
+  -webkit-animation: animation-1q8eu9e 1600ms linear infinite;
+  animation: animation-1q8eu9e 1600ms linear infinite;
   width: 20px;
   height: 20px;
 }

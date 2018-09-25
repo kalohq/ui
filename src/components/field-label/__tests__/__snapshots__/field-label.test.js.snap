@@ -2,7 +2,7 @@
 
 exports[`FieldLabel should render shallow component ok 1`] = `
 <label
-  className="ui-field-label e1q9f2xp6 css-umeiiu"
+  className="ui-field-label e1q9f2xp6 css-1agie1c"
   htmlFor="user-email"
   style={Object {}}
   title={undefined}

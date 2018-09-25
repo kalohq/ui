@@ -1,4 +1,4 @@
-// flow-typed signature: e3e3b06a149b7e16b13387368bfc11ed
+// flow-typed signature: c60f77d12e6a788ad0a8fc3fe8530bee
 // flow-typed version: <<STUB>>/emotion-theming_v^9.0.0/flow_v0.53.0
 
 /**
@@ -30,7 +30,7 @@ declare module 'emotion-theming/dist/index.cjs' {
   declare module.exports: any;
 }
 
-declare module 'emotion-theming/dist/index.es' {
+declare module 'emotion-theming/dist/index.esm' {
   declare module.exports: any;
 }
 
@@ -65,8 +65,8 @@ declare module 'emotion-theming/dist/emotion.umd.min.js' {
 declare module 'emotion-theming/dist/index.cjs.js' {
   declare module.exports: $Exports<'emotion-theming/dist/index.cjs'>;
 }
-declare module 'emotion-theming/dist/index.es.js' {
-  declare module.exports: $Exports<'emotion-theming/dist/index.es'>;
+declare module 'emotion-theming/dist/index.esm.js' {
+  declare module.exports: $Exports<'emotion-theming/dist/index.esm'>;
 }
 declare module 'emotion-theming/src/channel.js' {
   declare module.exports: $Exports<'emotion-theming/src/channel'>;

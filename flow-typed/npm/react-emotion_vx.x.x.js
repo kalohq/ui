@@ -1,4 +1,4 @@
-// flow-typed signature: 4787c36ffdb3f243c84eca105e8855d5
+// flow-typed signature: abd84dd56c741fff3ef45916e6157efb
 // flow-typed version: <<STUB>>/react-emotion_v^9.0.0/flow_v0.53.0
 
 /**
@@ -30,7 +30,7 @@ declare module 'react-emotion/dist/index.cjs' {
   declare module.exports: any;
 }
 
-declare module 'react-emotion/dist/index.es' {
+declare module 'react-emotion/dist/index.esm' {
   declare module.exports: any;
 }
 
@@ -49,8 +49,8 @@ declare module 'react-emotion/dist/emotion.umd.min.js' {
 declare module 'react-emotion/dist/index.cjs.js' {
   declare module.exports: $Exports<'react-emotion/dist/index.cjs'>;
 }
-declare module 'react-emotion/dist/index.es.js' {
-  declare module.exports: $Exports<'react-emotion/dist/index.es'>;
+declare module 'react-emotion/dist/index.esm.js' {
+  declare module.exports: $Exports<'react-emotion/dist/index.esm'>;
 }
 declare module 'react-emotion/macro.js' {
   declare module.exports: $Exports<'react-emotion/macro'>;

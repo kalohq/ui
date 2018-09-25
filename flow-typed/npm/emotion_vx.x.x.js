@@ -1,4 +1,4 @@
-// flow-typed signature: ed4e4ec156d2ba208309c83f6d2c432b
+// flow-typed signature: 8dbd6a90117e2a3fa5a6f98a1c687383
 // flow-typed version: <<STUB>>/emotion_v^9.0.0/flow_v0.53.0
 
 /**
@@ -30,7 +30,7 @@ declare module 'emotion/dist/index.cjs' {
   declare module.exports: any;
 }
 
-declare module 'emotion/dist/index.es' {
+declare module 'emotion/dist/index.esm' {
   declare module.exports: any;
 }
 
@@ -49,8 +49,8 @@ declare module 'emotion/dist/emotion.umd.min.js' {
 declare module 'emotion/dist/index.cjs.js' {
   declare module.exports: $Exports<'emotion/dist/index.cjs'>;
 }
-declare module 'emotion/dist/index.es.js' {
-  declare module.exports: $Exports<'emotion/dist/index.es'>;
+declare module 'emotion/dist/index.esm.js' {
+  declare module.exports: $Exports<'emotion/dist/index.esm'>;
 }
 declare module 'emotion/macro.js' {
   declare module.exports: $Exports<'emotion/macro'>;
