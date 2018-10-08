@@ -105,7 +105,7 @@ props: &COLORS
   SNOW:
     value: '{!GREY200}'
   NONE:
-    value: ''
+    value: 'none'
     type: unit
   INHERIT:
     value: 'inherit'
