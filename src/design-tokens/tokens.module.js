@@ -1,4 +1,3 @@
-
 export const navy600 = "rgb(84, 103, 137)";
 export const pink600 = "rgb(224, 88, 103)";
 export const navy700 = "rgb(55, 69, 97)";
@@ -77,17 +76,17 @@ export const inputHoverBorder = "1px solid #B0BAC3";
 export const inputBorderRadius = "4px";
 export const inputActiveBorder = "1px solid #54C3DB";
 export const inputReadonlyBorder = "1px dashed #D0D8DF";
-export const inputDisabledColor = "#546789";
-export const inputReadonlyBackground = "#F9FAFC";
+export const inputDisabledColor = "rgb(84, 103, 137)";
+export const inputReadonlyBackground = "rgb(249, 250, 252)";
 export const inputDisabledBorder = "1px solid #D0D8DF";
-export const inputReadonlyColor = "#546789";
-export const inputDisabledBackground = "#F9FAFC";
+export const inputReadonlyColor = "rgb(84, 103, 137)";
+export const inputDisabledBackground = "rgb(249, 250, 252)";
 export const inputDefaultBorder = "1px solid #D0D8DF";
 export const info = "rgb(232, 250, 252)";
 export const confirmation = "rgb(229, 247, 241)";
 export const error = "rgb(255, 235, 238)";
 export const warning = "rgb(255, 246, 216)";
-export const gridMaxWidth = "";
+export const gridMaxWidth = 1200;
 export const spacingNone = "0px";
 export const spacingExtraSmall = "4px";
 export const spacingSmall = "8px";
