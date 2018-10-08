@@ -1,6 +1,6 @@
 global:
-  type: 'unit'
-  category: 'layout'
+  type: unit
+  category: layout
 props: &BORDER_RADIUS
   BORDER_RADIUS:
     value: 4px

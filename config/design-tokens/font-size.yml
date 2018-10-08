@@ -1,6 +1,6 @@
 global:
-  type: 'font-size'
-  category: 'typography'
+  type: font-size
+  category: typography
 props:
   FONT_SIZE_HEADING_LARGE:
     value: 32px

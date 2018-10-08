@@ -1,6 +1,6 @@
 global:
   type: box-shadow
-  category: 'layout'
+  category: layout
 props: &BOX_SHADOW
   BOX_SHADOW_LEVEL_0:
     value: none

@@ -1,6 +1,6 @@
 global:
-  type: 'color'
-  category: 'alerts'
+  type: color
+  category: alerts
 imports:
   - ./color.yml
 props:

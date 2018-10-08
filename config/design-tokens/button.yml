@@ -1,6 +1,6 @@
 global:
-  type: 'color'
-  category: 'button'
+  type: color
+  category: button
 imports:
   - ./color.yml
 props:
