@@ -1,6 +1,6 @@
 global:
-  type: 'unit'
-  category: 'layout'
+  type: unit
+  category: layout
 props:
   SPACING_NONE:
     value: 0px
@@ -14,4 +14,3 @@ props:
     value: 32px
   SPACING_EXTRA_LARGE:
     value: 64px
-  

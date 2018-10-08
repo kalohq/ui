@@ -79,38 +79,38 @@ props: &COLORS
   GREY700:
     value: '#707D8A'
   RED:
-    value: "{!PINK500}"
+    value: '{!PINK500}'
   PINK:
-    value: "{!PINK500}"
+    value: '{!PINK500}'
   BLUE:
-    value: "{!BLUE500}"
+    value: '{!BLUE500}'
   PURPLE:
-    value: "{!PURPLE500}"
+    value: '{!PURPLE500}'
   ORANGE:
-    value: "{!ORANGE500}"
+    value: '{!ORANGE500}'
   GREEN:
-    value: "{!GREEN500}"
+    value: '{!GREEN500}'
   NAVY:
-    value: "{!NAVY500}"
-  GREY: 
-    value: "{!GREY600}"
+    value: '{!NAVY500}'
+  GREY:
+    value: '{!GREY600}'
   CHARCOAL:
-    value: "{!NAVY700}"
+    value: '{!NAVY700}'
   SLATE:
-    value: "{!NAVY600}"
+    value: '{!NAVY600}'
   SILVER:
-    value: "{!GREY500}"
+    value: '{!GREY500}'
   PLATINUM:
-    value: "{!GREY300}"
+    value: '{!GREY300}'
   SNOW:
-    value: "{!GREY200}"
+    value: '{!GREY200}'
   NONE:
-    value: ""
-    type: "string"
+    value: ''
+    type: string
   INHERIT:
-    value: "inherit"
-    type: "string"
+    value: 'inherit'
+    type: unit
   CURRENT_COLOR:
-    value: "currentColor"
-    type: "string"
+    value: 'currentColor'
+    type: unit
 aliases: *COLORS

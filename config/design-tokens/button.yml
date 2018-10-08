@@ -1,22 +1,22 @@
 global:
-  type: 'color'
-  category: 'button'
+  type: color
+  category: button
 imports:
   - ./color.yml
 props:
   BUTTON_PRIMARY_DEFAULT_BACKGROUND_COLOR:
-    value: "{!PINK500}"
+    value: '{!PINK500}'
   BUTTON_PRIMARY_HOVER_BACKGROUND_COLOR:
-    value: "#f78692" 
+    value: '#f78692'
   BUTTON_PRIMARY_ACTIVE_BACKGROUND_COLOR:
-    value: "{!PINK600}"
+    value: '{!PINK600}'
   BUTTON_PRIMARY_FOCUS_SHADOW:
-    value: "{!PINK300}"
+    value: '{!PINK300}'
   BUTTON_SECONDARY_DEFAULT_BACKGROUND_COLOR:
-    value: "{!NAVY700}"
+    value: '{!NAVY700}'
   BUTTON_SECONDARY_HOVER_BACKGROUND_COLOR:
-    value: "{!NAVY600}"
+    value: '{!NAVY600}'
   BUTTON_SECONDARY_ACTIVE_BACKGROUND_COLOR:
-    value: "{!NAVY700}"
+    value: '{!NAVY700}'
   BUTTON_SECONDARY_FOCUS_SHADOW:
-    value: "{!GREY400}"
+    value: '{!GREY400}'

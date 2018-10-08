@@ -1,12 +1,12 @@
 global:
-  type: 'font-weight'
-  category: 'typography'
+  type: font-weight
+  category: typography
 props:
   FONT_WEIGHT_LIGHT:
-    value: '300'
+    value: 300
   FONT_WEIGHT_NORMAL:
-    value: '400'
+    value: 400
   FONT_WEIGHT_MEDIUM:
-    value: '500'
+    value: 500
   FONT_WEIGHT_SEMIBOLD:
-    value: '600'
+    value: 600

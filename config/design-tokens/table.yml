@@ -1,8 +1,8 @@
 global:
-  type: 'string'
+  type: 'border'
   category: 'table'
 imports:
-  - color.yml
+  - ./color.yml
 props:
   TABLE_DEFAULT_BORDER:
-    value: "1px solid {!GREY300}"
+    value: 1px solid {!GREY300}

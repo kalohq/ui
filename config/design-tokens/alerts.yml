@@ -1,14 +1,14 @@
 global:
-  type: 'color'
-  category: 'alerts'
+  type: color
+  category: alerts
 imports:
   - ./color.yml
 props:
   INFO:
-    value: "#E8FAFC"
+    value: '#E8FAFC'
   CONFIRMATION:
-    value: "#E5F7F1"
+    value: '#E5F7F1'
   ERROR:
-    value: "#FFEBEE"
+    value: '#FFEBEE'
   WARNING:
-    value: "#FFF6D8"
+    value: '#FFF6D8'
