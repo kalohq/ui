@@ -31,7 +31,7 @@ module.exports = {
     'purple300': 'rgb(232, 226, 242)',
     'grey600': 'rgb(137, 146, 155)',
     'grey700': 'rgb(112, 125, 138)',
-    'none': '',
+    'none': 'none',
     'purple400': 'rgb(159, 129, 218)',
     'slate': 'rgb(84, 103, 137)',
     'blue300': 'rgb(193, 244, 255)',
