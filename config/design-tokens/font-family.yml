@@ -1,0 +1,6 @@
+global:
+  type: font-family
+  category: typography
+props:
+  FONT_FAMILY_TEXT:
+    value: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Fira Sans, Droid Sans, Helvetica Neue, sans-serif

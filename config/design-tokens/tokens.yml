@@ -3,6 +3,7 @@ imports:
   - ./color.yml
   - ./font-size.yml
   - ./font-weight.yml
+  - ./font-family.yml
   - ./border-radius.yml
   - ./box-shadow.yml
   - ./input.yml

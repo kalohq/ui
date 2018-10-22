@@ -64,6 +64,7 @@ export const fontWeightLight = 300;
 export const fontWeightNormal = 400;
 export const fontWeightMedium = 500;
 export const fontWeightSemibold = 600;
+export const fontFamilyText = "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Fira Sans, Droid Sans, Helvetica Neue, sans-serif";
 export const borderRadius = "4px";
 export const borderRadiusInput = "4px";
 export const borderRadiusButton = "4px";

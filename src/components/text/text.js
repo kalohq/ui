@@ -39,7 +39,6 @@ type TProps = {
 };
 
 const StyledText = styled(Inline)`
-  font-family: 'WebFaktSoftPro', sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;

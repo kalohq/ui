@@ -65,6 +65,7 @@ module.exports = {
   fontWeightNormal: 400,
   fontWeightMedium: 500,
   fontWeightSemibold: 600,
+  fontFamilyText: "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
   borderRadius: "4px",
   borderRadiusInput: "4px",
   borderRadiusButton: "4px",
