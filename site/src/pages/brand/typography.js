@@ -1,86 +1,114 @@
 import React from 'react';
+import styled from 'react-emotion';
 
 import DocumentationContent from '../../components/documentation-content';
 import Wrapper from '../../components/wrapper';
 
+const TypographyTable = styled.table`
+  p {
+    margin-bottom: 0;
+  }
+`;
 const BrandTypographyPage = () => (
   <DocumentationContent pageTitle="Typography">
     <Wrapper>
       <h1>Typography</h1>
       <p>
-        Our primary typeface is Fakt Soft Pro. This is used everywhere, from
-        marketing materials to the platform itself.
+        In our applications, we use a sans-serif system font stack. This means
+        that we have no single typeface, but rather use the default sans-serif
+        font that is installed on a users device. These are the fonts that are
+        typically rendered per device:
       </p>
 
-      <h2>Font weights</h2>
+      <TypographyTable>
+        <tr>
+          <th>Platform/Device</th>
+          <th>Default font</th>
+        </tr>
+        <tr>
+          <td>
+            <p>macOS and iOS</p>
+          </td>
+          <td>
+            <p>
+              SF Pro Display (Font sizes 19px and above)<br />
+              SF Pro Text (18px and below)
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Android</p>
+          </td>
+          <td>
+            <p>Roboto</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Windows</p>
+          </td>
+          <td>
+            <p>Segoe UI</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Firefox OS</p>
+          </td>
+          <td>
+            <p>Fira Sans</p>
+          </td>
+        </tr>
+      </TypographyTable>
 
-      <table>
-        <tr>
-          <th>CSS weight</th>
-          <th>Named weight</th>
-        </tr>
-        <tr>
-          <td>300</td>
-          <td>light</td>
-        </tr>
-        <tr>
-          <td>400</td>
-          <td>normal</td>
-        </tr>
-        <tr>
-          <td>500</td>
-          <td>medium</td>
-        </tr>
-        <tr>
-          <td>600</td>
-          <td>semi-bold</td>
-        </tr>
-      </table>
-
-      <h2>Font scale</h2>
-
-      <table>
+      <TypographyTable>
         <tr>
           <th>Scale</th>
-          <th>Font size</th>
-          <th>Line height (1.6)</th>
+          <th>Used for</th>
         </tr>
         <tr>
-          <td>extra-extra-small</td>
-          <td>10px</td>
-          <td>16px</td>
+          <td>
+            <span className="heading--800">Heading800</span>
+          </td>
         </tr>
         <tr>
-          <td>extra-small</td>
-          <td>12px</td>
-          <td>19.2px</td>
+          <td>
+            <span className="heading--700">Heading700</span>
+          </td>
+          <td />
         </tr>
         <tr>
-          <td>small</td>
-          <td>14px</td>
-          <td>22.4px</td>
+          <td>
+            <span className="heading--600">Heading600</span>
+          </td>
+          <td />
         </tr>
         <tr>
-          <td>medium</td>
-          <td>16px</td>
-          <td>25.6px</td>
+          <td>
+            <span className="heading--500">Heading500</span>
+          </td>
+          <td />
         </tr>
         <tr>
-          <td>large</td>
-          <td>18px</td>
-          <td>28.8px</td>
+          <td>
+            <span className="heading--400">Heading400</span>
+          </td>
+          <td />
         </tr>
         <tr>
-          <td>extra-large</td>
-          <td>24px</td>
-          <td>38.4px</td>
+          <td>
+            <p>Body</p>
+          </td>
+          <td />
         </tr>
         <tr>
-          <td>extra-extra-large</td>
-          <td>32px</td>
-          <td>51.2px</td>
+          <td>
+            <a>Link</a>
+          </td>
+          <td />
         </tr>
-      </table>
+      </TypographyTable>
     </Wrapper>
   </DocumentationContent>
 );

@@ -15,8 +15,8 @@ const StyledDocumentationContent = styled.article`
 
   h1 {
     font-size: 32px;
-    font-weight: 400;
-    color: ${props => props.theme.colors.navy700};
+    font-weight: 500;
+    color: #302c50;
     margin: 0 0 16px 0;
     padding: 0;
   }

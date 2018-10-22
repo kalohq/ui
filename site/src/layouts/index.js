@@ -10,6 +10,7 @@ import theme from '../../../src/components/theme';
 import IconSymbols from '../../../src/components/icon-symbols';
 
 import '../../../src/styles/kalo-ui-base.css';
+import '../../../src/styles/kalo-ui-typography.css';
 import '../../../src/styles/kalo-ui-transitions.css';
 
 // eslint-disable-next-line no-unused-expressions
