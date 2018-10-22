@@ -43,6 +43,12 @@ em {
   font-style: italic;
 }
 
+p,
+li,
+ol {
+  font-size: 1.4rem;
+}
+
 p {
   margin-top: 2.4rem;
 }

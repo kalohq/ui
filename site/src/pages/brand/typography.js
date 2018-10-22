@@ -8,7 +8,13 @@ const TypographyTable = styled.table`
   p {
     margin-bottom: 0;
   }
+
+  tr td:first-of-type {
+    text-align: right;
+    padding-right: 16px;
+  }
 `;
+
 const BrandTypographyPage = () => (
   <DocumentationContent pageTitle="Typography">
     <Wrapper>
@@ -62,14 +68,27 @@ const BrandTypographyPage = () => (
         </tr>
       </TypographyTable>
 
+      <h2>Font scale</h2>
+
+      <p>
+        Our font measurements are based on the line-height of the text, spacing
+        is measured from the edge of the text box.
+      </p>
+
       <TypographyTable>
         <tr>
           <th>Scale</th>
           <th>Used for</th>
         </tr>
         <tr>
-          <td>
+          <td align="right">
             <span className="heading--800">Heading800</span>
+          </td>
+          <td>
+            <p>
+              Main titles, used for things like a page title. Use only once per
+              page or per modal.
+            </p>
           </td>
         </tr>
         <tr>
@@ -82,13 +101,23 @@ const BrandTypographyPage = () => (
           <td>
             <span className="heading--600">Heading600</span>
           </td>
-          <td />
+          <td>
+            <p>
+              Highlight secondary titles on a page, these should be used
+              sparingly.
+            </p>
+          </td>
         </tr>
         <tr>
           <td>
             <span className="heading--500">Heading500</span>
           </td>
-          <td />
+          <td>
+            <p>
+              Deep headings and for highlighting important pieces of
+              information.
+            </p>
+          </td>
         </tr>
         <tr>
           <td>
@@ -100,7 +129,12 @@ const BrandTypographyPage = () => (
           <td>
             <p>Body</p>
           </td>
-          <td />
+          <td>
+            <p>
+              Use for the body copy this can we be anything from a couple of
+              words to a paragraph
+            </p>
+          </td>
         </tr>
         <tr>
           <td>

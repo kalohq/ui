@@ -9,13 +9,13 @@ props: &COLORS
   PINK300:
     value: '#FBDFE2'
   PINK400:
-    value: '#FDB3C8'
+    value: '#FCB3C8'
   PINK500:
-    value: '#EA5F6E'
+    value: '#F7707F'
   PINK600:
-    value: '#E05867'
+    value: '#E55565'
   PINK700:
-    value: '#C34A57'
+    value: '#C83243'
   ORANGE300:
     value: '#FFEDB4'
   ORANGE400:
@@ -29,13 +29,13 @@ props: &COLORS
   PURPLE300:
     value: '#e8e2f2'
   PURPLE400:
-    value: '#9F81DA'
+    value: '#D0B8FF'
   PURPLE500:
-    value: '#8A70BD'
+    value: '#9F81DA'
   PURPLE600:
-    value: '#775FA8'
+    value: '#604E83'
   PURPLE700:
-    value: '#604e83'
+    value: '#443364'
   GREEN300:
     value: '#D8F0E8'
   GREEN400:
@@ -63,9 +63,9 @@ props: &COLORS
   NAVY500:
     value: '#93A6C1'
   NAVY600:
-    value: '#546789'
+    value: '#515277'
   NAVY700:
-    value: '#374561'
+    value: '#302C50'
   GREY200:
     value: '#F9FAFC'
   GREY300:
