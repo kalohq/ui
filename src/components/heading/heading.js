@@ -1,10 +1,12 @@
 /* @flow */
 import * as React from 'react';
-import styled from 'react-emotion';
+import cx from 'classnames';
 import Icon from '../icon';
-import Text from '../text';
+import {UIBase} from '../layout';
 
 import type {TEXT_COLOR, TEXT_SIZE} from '../text/constants';
+
+import styles from './heading.core.css';
 
 type TProps = {
   /** The heading content */
@@ -21,17 +23,19 @@ type TProps = {
   iconAfter?: string,
   /** Adds padding between the icon and heading text */
   iconPadding?: number,
+  /** The underlying component */
+  component?: string,
 };
 
-const StyledHeading = styled(Text)`
-  line-height: 1.25em !important;
+// const StyledHeading = styled(Text)`
+//   line-height: 1.25em !important;
 
-  > i {
-    position: relative;
-    left: 2px;
-    vertical-align: top;
-  }
-`;
+//   > i {
+//     position: relative;
+//     left: 2px;
+//     vertical-align: top;
+//   }
+// `;
 
 export default function Heading(props: TProps) {
   const {
@@ -42,15 +46,23 @@ export default function Heading(props: TProps) {
     iconAfter,
     hover = false,
     iconPadding = 10,
+    component = 'span',
+    className,
     ...otherProps
   } = props;
 
+  const _classNames = cx(
+    {
+      [styles[`heading--${size}`]]: true,
+    },
+    className
+  );
+
   return (
-    <StyledHeading
-      size={size}
+    <UIBase
       interactive={hover === 'interactive'}
-      display="block"
-      color={color}
+      className={_classNames}
+      component={component}
       {...otherProps}
     >
       {icon ? (
@@ -72,6 +84,6 @@ export default function Heading(props: TProps) {
           {iconAfter}
         </Icon>
       ) : null}
-    </StyledHeading>
+    </UIBase>
   );
 }

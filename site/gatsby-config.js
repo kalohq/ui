@@ -3,7 +3,7 @@ const uiVersion = uiPackage.version;
 
 module.exports = {
   siteMetadata: {
-    title: 'KDS',
+    title: 'Kalo UI Kit',
     version: uiVersion,
     sketchKitLink:
       'https://drive.google.com/file/d/0B--bXeGhrriocHkwWHVoajh2VGs/view?usp=sharing',

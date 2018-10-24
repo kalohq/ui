@@ -1,0 +1,75 @@
+.heading--800 {
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+  /* margin-top: 2.6rem; */
+}
+
+.heading--700 {
+  font-size: 2rem;
+  line-height: 2.2rem;
+  font-weight: 500;
+  /* margin-top: 2.2rem; */
+}
+
+.heading--600 {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  font-weight: 600;
+  /* margin-top: 2.8rem; */
+}
+
+.heading--500 {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  font-weight: 500;
+  /* margin-top: 1.6rem; */
+}
+
+.heading--400 {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+  margin-top: 1.2rem;
+  text-transform: uppercase;
+}
+
+.color-white {
+  color: var(--white);
+}
+
+.color-black {
+  color: var(--black);
+}
+
+.color-grey200 {
+  color: var(--grey200);
+}
+
+.color-grey300 {
+  color: var(--grey300);
+}
+
+.color-grey400 {
+  color: var(--grey400);
+}
+
+.color-grey500 {
+  color: var(--grey500);
+}
+
+.color-grey600 {
+  color: var(--grey600);
+}
+
+.color-grey700 {
+  color: var(--grey700);
+}
+
+.color-blue300 {
+  color: var(--blue300);
+}
+
+.color-blue400 {
+  color: var(--blue400);
+}

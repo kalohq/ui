@@ -162,7 +162,9 @@ export default function Page({data, children, location}) {
   const currentCategory = location.pathname.split(/[\\\/]/)[1];
 
   const stripPageNameFromPath = val =>
-    val.replace(/\/(product|components|brand|meta)\//, '').replace(/\//, '');
+    val
+      .replace(/\/(product|components|brand|test pages)\//, '')
+      .replace(/\//, '');
 
   pages.map(page =>
     sitePages.push({
@@ -197,7 +199,12 @@ export default function Page({data, children, location}) {
       <Container>
         <Header projectMeta={projectMeta} />
         <FlexWrapper>
-          <SideNav currentCategory={currentCategory} links={groupedSitePages} />
+          {currentCategory !== 'test-pages' && (
+            <SideNav
+              currentCategory={currentCategory}
+              links={groupedSitePages}
+            />
+          )}
           <div style={{paddingTop: 58, width: '100%'}}>{children()}</div>
         </FlexWrapper>
         <IconSymbols />
@@ -227,7 +234,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allSitePage(filter: {path: {regex: "/(brand|product|meta)/"}}) {
+    allSitePage(filter: {path: {regex: "/(brand|product|test-pages)/"}}) {
       edges {
         node {
           path

@@ -12,7 +12,7 @@ export {default as Text} from './text';
  * Layout
  */
 export * from './skeleton';
-export {Box, Flex, Block, Inline, InlineFlex, A} from './layout';
+export {Box, Flex, Block, Inline, InlineFlex, A, UIBase} from './layout';
 export {default as Paper, PaperToolbar} from './paper';
 export {default as PaperMenu, PaperMenuItem} from './paper-menu';
 export {Grid, Row, Column} from './grid';
@@ -62,6 +62,7 @@ export {default as Icon} from './icon';
 export {default as IconSymbols} from './icon-symbols';
 export {default as LoadingSpinner} from './loading-spinner';
 export {default as Sticky} from './sticky';
+export {default as StarRating} from './star-rating';
 
 /**
  * Theme

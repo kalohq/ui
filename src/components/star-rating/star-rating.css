@@ -1,0 +1,33 @@
+.root {
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  position: relative;
+  padding-right: 5px;
+  overflow: hidden;
+}
+
+.icon {
+  transition: all 0.2s linear;
+  position: absolute;
+}
+
+.background {
+  display: flex;
+  color: var(--grey400);
+}
+
+.foreground {
+  display: flex;
+  color: var(--grey400);
+}
+
+.foreground.highlight {
+  color: var(--green500);
+}
+.half {
+  width: 50%;
+  overflow: hidden;
+}
