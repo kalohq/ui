@@ -197,7 +197,9 @@ export default function Page({data, children, location}) {
   return (
     <ThemeProvider theme={theme}>
       <Container>
-        <Header projectMeta={projectMeta} />
+        {currentCategory !== 'test-pages' && (
+          <Header projectMeta={projectMeta} />
+        )}
         <FlexWrapper>
           {currentCategory !== 'test-pages' && (
             <SideNav
@@ -205,7 +207,14 @@ export default function Page({data, children, location}) {
               links={groupedSitePages}
             />
           )}
-          <div style={{paddingTop: 58, width: '100%'}}>{children()}</div>
+          <div
+            style={{
+              paddingTop: currentCategory !== 'test-pages' && 58,
+              width: '100%',
+            }}
+          >
+            {children()}
+          </div>
         </FlexWrapper>
         <IconSymbols />
       </Container>

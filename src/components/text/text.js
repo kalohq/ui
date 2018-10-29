@@ -48,6 +48,7 @@ const StyledText = styled(Inline)`
       : props.notInteractive ? 'default' : 'inherit'};
   text-align: ${props => props.align};
   text-decoration: ${props => (props.noUnderline ? 'none' : 'inherit')};
+  line-height: 1.4;
   font-weight: ${props => WEIGHT_MAP[props.weight]};
   font-size: ${props => SIZE_MAP[props.size]}px;
   color: ${props => props.theme.colors[props.color]};

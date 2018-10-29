@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, {css} from 'react-emotion';
+import styled from 'react-emotion';
 
 import {
   Button,
@@ -9,7 +9,6 @@ import {
   Grid,
   Row,
   Column,
-  UIBase,
   Flex,
   Box,
   ButtonGroup,
@@ -17,16 +16,31 @@ import {
   Text,
 } from '../../../../src/components';
 
+import {
+  PageLayout,
+  Avatar,
+  NewLozenge,
+  AvailableLozenge,
+  TagGroup,
+  SkillTag,
+  TabNavigation,
+  TabNavigationTab,
+  Hr,
+  Entity,
+  Tag,
+} from './_shared-components';
+
 export default () => (
-  <div>
-    <MockedSideNavigation />
+  <PageLayout>
     <div css={{paddingBottom: 120}}>
       <ProfileHeader>
         <Grid padding={[0, 32]}>
           <Row>
             <Column columns={12}>
               <Flex justifyContent="flex-end">
-                <Button variant="tertiary">Change image</Button>
+                <Button variant="tertiary" size="medium">
+                  Change image
+                </Button>
               </Flex>
             </Column>
           </Row>
@@ -41,7 +55,7 @@ export default () => (
               src="https://randomuser.me/api/portraits/men/46.jpg"
             />
             <Box paddingLeft={32} paddingTop={40} flex={1}>
-              <Row marginBottom={16}>
+              <Row marginBottom="medium">
                 <Column columns={12}>
                   <Flex flex={1} justifyContent="space-between">
                     <Flex>
@@ -62,20 +76,36 @@ export default () => (
                   </Flex>
                 </Column>
               </Row>
-              <Row marginBottom={16}>
+              <Row marginBottom="medium">
                 <Column columns={12}>
-                  <span>London, UK</span>
-                  <span>quinten.kortum@example.com</span>
+                  <Text marginRight="medium">
+                    <Icon>location_on</Icon>London, UK
+                  </Text>
+                  <Text marginRight="medium">quinten.kortum@example.com</Text>
+                  <Text marginRight="medium">Add rates</Text>
                 </Column>
               </Row>
               <Row>
                 <Column columns={12}>
-                  <SkillTag>Skill one</SkillTag>
-                  <SkillTag>Skill one</SkillTag>
-                  <SkillTag>Skill one</SkillTag>
-                  <SkillTag>A longer skill</SkillTag>
-                  <SkillTag>Yet another skill</SkillTag>
-                  <StarRating score={3} marginTop={24} />
+                  <TagGroup>
+                    <SkillTag>Skill one</SkillTag>
+                    <SkillTag>Skill one</SkillTag>
+                    <SkillTag>Skill one</SkillTag>
+                    <SkillTag>A longer skill</SkillTag>
+                    <SkillTag>Yet another skill</SkillTag>
+                  </TagGroup>
+                </Column>
+              </Row>
+              <Row>
+                <Column columns={12}>
+                  <Flex justifyContent="space-between">
+                    <StarRating score={3} marginTop="large" />
+                    <Flex>
+                      <Icon size={20}>notifications</Icon>
+                      <Icon size={20}>notifications</Icon>
+                      <Icon size={20}>notifications</Icon>
+                    </Flex>
+                  </Flex>
                 </Column>
               </Row>
             </Box>
@@ -85,7 +115,7 @@ export default () => (
         <Grid padding={[0, 32]}>
           <Row>
             <Column columns={12}>
-              <TabNavigation marginBottom={32} marginTop={16}>
+              <TabNavigation marginBottom="extra-large" marginTop="medium">
                 <TabNavigationTab isSelected={true}>Profile</TabNavigationTab>
                 <TabNavigationTab>Onboarding information</TabNavigationTab>
                 <TabNavigationTab>Messages</TabNavigationTab>
@@ -98,17 +128,26 @@ export default () => (
         <Grid padding={[0, 32]}>
           <Row>
             <Column columns={[12, 9]}>
-              <Paper padding={24} marginBottom={16}>
-                <Flex justifyContent="space-between" marginBottom={16}>
+              <Paper padding={24} marginBottom="medium">
+                <Flex justifyContent="space-between" marginBottom="medium">
                   <Heading size="600">Netflix tags</Heading>
                   <Button variant="tertiary" size="medium">
                     Edit tags
                   </Button>
                 </Flex>
+                <Flex>
+                  <TagGroup>
+                    <Tag>Tag</Tag>
+                    <Tag>Tagymctagface</Tag>
+                    <Tag>Tagymctagface</Tag>
+                    <Tag>Tag</Tag>
+                    <Tag>Tag</Tag>
+                  </TagGroup>
+                </Flex>
               </Paper>
 
-              <Paper padding={24} marginBottom={16}>
-                <Flex justifyContent="space-between" marginBottom={16}>
+              <Paper padding={24} marginBottom="medium">
+                <Flex justifyContent="space-between" marginBottom="large">
                   <Heading size="600">Feedback on Quinten</Heading>
                   <Button variant="tertiary" size="medium">
                     Add feedback
@@ -126,10 +165,12 @@ export default () => (
                   />
                 </GridLayout>
 
+                <Hr margin={[24, 0]} />
+
                 <Box>
-                  <Flex justifyContent="space-between">
+                  <Flex justifyContent="space-between" marginBottom="medium">
                     <Entity name="Ava Gregoraci" secondary="Netflix" />
-                    <span>Added 12th June</span>
+                    <Text size="extra-small">Added 12th June</Text>
                   </Flex>
 
                   <FeedbackHighlightRow title="Performance" rating={3} />
@@ -142,7 +183,7 @@ export default () => (
                 </Box>
               </Paper>
               <Paper padding={[24, 24, 40]}>
-                <Flex justifyContent="space-between" marginBottom={16}>
+                <Flex justifyContent="space-between" marginBottom="medium">
                   <Heading size="600" icon="lock">
                     Netflix connections
                   </Heading>
@@ -193,15 +234,15 @@ export default () => (
             <Column columns={[12, 3]}>
               <Paper padding={24} marginBottom={16}>
                 <Heading size="600">About Quinten</Heading>
-                <Text>
+                <Text multiline={true}>
                   Some general information that Quinten has written about how
                   great she is MAX characters. Can go onto three lines but no
                   more copy copy.
                 </Text>
-                <Text>
+                <Text marginTop={16}>
                   <Icon size={18}>phone</Icon>01324 434 4343
                 </Text>
-                <Text>
+                <Text marginTop={16}>
                   <Icon size={18}>location_on</Icon>112 Street Name, Southwark,
                   London, SE2 5NN
                 </Text>
@@ -259,23 +300,14 @@ export default () => (
         </Grid>
       </ProfileMain>
     </div>
-  </div>
+  </PageLayout>
 );
-
-const MockedSideNavigation = styled.div`
-  width: 62px;
-  height: 100vh;
-  background-color: ${props => props.theme.colors.navy700};
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: none;
-`;
 
 const ProfileHeader = styled.div`
   width: 100%;
   height: 240px;
   background-color: ${props => props.theme.colors.grey500};
+  background-image: linear-gradient(to bottom, #2123ff, #4d399c);
   padding: 32px 0;
 `;
 
@@ -284,84 +316,10 @@ const ProfileMain = styled.div`
   background-color: #fff;
 `;
 
-const Avatar = styled.div`
-  width: ${props => props.size}px;
-  height: ${props => props.size}px;
-  background-color: ${props => props.theme.colors.purple400};
-  background-image: url(${props => props.src});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  border-radius: 50%;
-`;
-
 const ProfileAvatar = styled(Avatar)`
   top: -36px;
   position: relative;
   border: 4px solid #fff;
-`;
-
-const TabNavigation = styled(UIBase)`
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 52px;
-  border-bottom: 1px solid ${props => props.theme.colors.grey300};
-`;
-
-const TabNavigationTab = styled.a`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 400;
-  color: ${props => props.theme.colors.navy600};
-  padding: 16px 8px;
-
-  ${props =>
-    props.isSelected &&
-    css`
-      border-bottom: 2px solid ${props.theme.colors.purple500};
-    `};
-`;
-
-const SkillTag = styled.span`
-  display: inline-flex;
-  border: 1px solid ${props => props.theme.colors.grey400};
-  color: ${props => props.theme.colors.navy600};
-  align-items: center;
-  justify-content: center;
-  padding: 4px 8px;
-  border-radius: 30px;
-  font-size: 12px;
-`;
-
-const Lozenge = styled.span`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 3px;
-  font-size: 12px;
-  font-weight: 500;
-  padding: 0 8px;
-  height: 24px;
-`;
-
-const NewLozenge = styled(Lozenge)`
-  border: 1px solid ${props => props.theme.colors.grey300};
-  background-color: ${props => props.theme.colors.grey200};
-  color: ${props => props.theme.colors.grey600};
-`;
-
-const AvailableLozenge = styled(Lozenge)`
-  background-color: ${props => props.theme.colors.green300};
-  color: ${props => props.theme.colors.green600};
-`;
-
-const StyledEntity = styled.div`
-  display: flex;
-  align-items: center;
 `;
 
 const StyledExperienceItem = styled.article`
@@ -390,18 +348,8 @@ const ExperienceItem = ({entity, skills, title}) => (
   </StyledExperienceItem>
 );
 
-const Entity = ({name, secondary, avatarSrc}) => (
-  <StyledEntity>
-    <Avatar size={36} src={avatarSrc} />
-    <Box marginLeft={8}>
-      <span className="heading--500">{name}</span>
-      <span className="text--helper">{secondary}</span>
-    </Box>
-  </StyledEntity>
-);
-
-const FeedbackHighlightRow = ({title, rating}) => (
-  <Flex justifyContent="space-between">
+const FeedbackHighlightRow = ({title, rating, ...otherProps}) => (
+  <Flex justifyContent="space-between" {...otherProps}>
     <span className="heading--500">{title}</span>
     <StarRating score={rating} />
   </Flex>

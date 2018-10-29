@@ -389,4 +389,7 @@ export const ICONS = new Enum({
     value: 'youtube',
     category: CATEGORIES.social,
   },
+  RATES: {
+    value: 'rates',
+  },
 });

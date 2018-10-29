@@ -21,6 +21,7 @@ const StyledList = styled(Flex)`
   display: flex;
   justify-content: ${props => props.justify};
   flex-wrap: ${props => (props.wrap ? 'wrap' : 'initial')};
+  flex: 1;
 
   ${props =>
     props.listType === 'vertical' &&

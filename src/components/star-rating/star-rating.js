@@ -4,6 +4,7 @@ import {range} from 'lodash';
 import cx from 'classnames';
 
 import Icon from '../icon';
+import {UIBase} from '../layout';
 
 import styles from './star-rating.css';
 
@@ -14,13 +15,18 @@ type TProps = {
 
 export default class StarRating extends PureComponent<TProps> {
   render() {
-    const {component: Component = 'div', score = null} = this.props;
+    const {
+      component: Component = 'div',
+      score = null,
+      ...otherProps
+    } = this.props;
 
     return (
-      <Component
+      <UIBase
         className={cx({
           [styles.root]: true,
         })}
+        {...otherProps}
       >
         {range(1, 6).map(star => {
           const isLit = score >= star;
@@ -52,7 +58,7 @@ export default class StarRating extends PureComponent<TProps> {
             </div>
           );
         })}
-      </Component>
+      </UIBase>
     );
   }
 }

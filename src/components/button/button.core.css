@@ -64,21 +64,21 @@
   */
 
 .ui-btn--primary {
-  background-color: var(--pink500);
+  background-color: var(--purple500);
   color: var(--white);
 
   &:hover {
-    background-color: var(--pink400);
+    background-color: var(--purple400);
   }
 
   &:active,
   &.ui-btn--active {
-    background-color: var(--pink600);
+    background-color: var(--purple600);
     box-shadow: none;
   }
 
   &:focus {
-    box-shadow: 0 0 0 3px var(--pink300);
+    box-shadow: 0 0 0 3px var(--purple300);
   }
 }
 

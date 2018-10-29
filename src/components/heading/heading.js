@@ -54,6 +54,7 @@ export default function Heading(props: TProps) {
   const _classNames = cx(
     {
       [styles[`heading--${size}`]]: true,
+      [styles[`color-${color}`]]: true,
     },
     className
   );
