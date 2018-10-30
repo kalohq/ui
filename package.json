@@ -81,7 +81,7 @@
     "postcss-css-variables": "0.7.0",
     "postcss-cssnext": "^3.0.2",
     "postcss-import": "9.1.0",
-    "postcss-loader": "1.3.3",
+    "postcss-loader": "3.0.0",
     "prettier": "1.6.1",
     "prop-types": "15.5.10",
     "qs": "5.2.1",
@@ -99,8 +99,7 @@
     "sinon": "^4.5.0",
     "style-loader": "0.16.1",
     "svg-sprite": "^1.3.7",
-    "theo": "^8.0.0-beta.2",
-    "webpack": "2.5.1"
+    "theo": "^8.0.0-beta.2"
   },
   "peerDependencies": {
     "classnames": "^2.2.5",
@@ -158,5 +157,6 @@
       "!src/design-tokens/**/*",
       "!src/icons/**/*"
     ]
-  }
+  },
+  "dependencies": {}
 }
