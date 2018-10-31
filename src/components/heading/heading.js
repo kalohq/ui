@@ -7,6 +7,7 @@ import {UIBase} from '../layout';
 import type {TEXT_COLOR, TEXT_SIZE} from '../text/constants';
 
 import styles from './heading.core.css';
+import colors from '../../styles/colors.css';
 
 type TProps = {
   /** The heading content */
@@ -25,17 +26,9 @@ type TProps = {
   iconPadding?: number,
   /** The underlying component */
   component?: string,
+  /** Class to pass down */
+  className?: string,
 };
-
-// const StyledHeading = styled(Text)`
-//   line-height: 1.25em !important;
-
-//   > i {
-//     position: relative;
-//     left: 2px;
-//     vertical-align: top;
-//   }
-// `;
 
 export default function Heading(props: TProps) {
   const {
@@ -53,8 +46,9 @@ export default function Heading(props: TProps) {
 
   const _classNames = cx(
     {
+      [styles.heading]: true,
       [styles[`heading--${size}`]]: true,
-      [styles[`color-${color}`]]: true,
+      [colors[`color-${color}`]]: true,
     },
     className
   );

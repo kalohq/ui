@@ -1,3 +1,10 @@
+.heading > i {
+  position: relative;
+  left: 2px;
+  top: 6px;
+  vertical-align: top;
+}
+
 .heading--800 {
   font-size: 2.4rem;
   line-height: 2.6rem;
@@ -32,44 +39,4 @@
   line-height: 1.2rem;
   margin-top: 1.2rem;
   text-transform: uppercase;
-}
-
-.color-white {
-  color: var(--white);
-}
-
-.color-black {
-  color: var(--black);
-}
-
-.color-grey200 {
-  color: var(--grey200);
-}
-
-.color-grey300 {
-  color: var(--grey300);
-}
-
-.color-grey400 {
-  color: var(--grey400);
-}
-
-.color-grey500 {
-  color: var(--grey500);
-}
-
-.color-grey600 {
-  color: var(--grey600);
-}
-
-.color-grey700 {
-  color: var(--grey700);
-}
-
-.color-blue300 {
-  color: var(--blue300);
-}
-
-.color-blue400 {
-  color: var(--blue400);
 }
