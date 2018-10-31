@@ -15,11 +15,7 @@ type TProps = {
 
 export default class StarRating extends PureComponent<TProps> {
   render() {
-    const {
-      component: Component = 'div',
-      score = null,
-      ...otherProps
-    } = this.props;
+    const {score = null, ...otherProps} = this.props;
 
     return (
       <UIBase
