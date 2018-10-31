@@ -8,8 +8,8 @@
   align-content: flex-start;
   border-radius: 4px;
   padding: var(--spacing-small) var(--spacing-medium);
-  font-size: var(--font-size-text-small);
-  font-weight: var(--font-weight-normal);
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 
 .ui-alert--info {

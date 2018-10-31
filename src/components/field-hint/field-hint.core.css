@@ -1,6 +1,6 @@
 .ui-field-hint {
-  font-size: var(--font-size-text-x-small);
-  font-weight: var(--font-weight-normal);
+  font-size: 1.2rem;
+  font-weight: 400;
   color: var(--navy600);
-  margin-top: 8px;
+  margin-top: 0.8rem;
 }
