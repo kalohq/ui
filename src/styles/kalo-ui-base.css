@@ -39,7 +39,7 @@ html {
 body {
   background-color: #fff;
   height: 100%;
-  font-family: var(--font-family-text);
+  font-family: system-ui;
   font-size: 1.6rem;
   font-weight: 400;
   color: var(--navy600);

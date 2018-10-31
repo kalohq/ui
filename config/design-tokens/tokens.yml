@@ -2,7 +2,6 @@ props: {}
 imports:
   - ./color.yml
   - ./font-weight.yml
-  - ./font-family.yml
   - ./border-radius.yml
   - ./box-shadow.yml
   - ./input.yml
