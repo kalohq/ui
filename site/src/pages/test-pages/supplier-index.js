@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import styled from 'react-emotion';
 
 import {
@@ -24,6 +24,7 @@ import {
   SkillTag,
   NewLozenge,
   PageLayout,
+  Card,
 } from './_shared-components';
 
 const suppliers = [
@@ -89,53 +90,90 @@ const suppliers = [
   },
 ];
 
-export default () => (
-  <PageLayout>
-    <Grid>
-      <SupplierIndexHeader marginBottom="extra-large">
-        <Row>
-          <Column columns={12}>
+export default class SupplierIndexPage extends PureComponent {
+  constructor() {
+    super();
+
+    this.state = {
+      displayType: 'CARDS',
+    };
+
+    this.toggleDisplayType = this.toggleDisplayType.bind(this);
+  }
+
+  toggleDisplayType(type) {
+    this.setState({
+      displayType: type,
+    });
+  }
+
+  render() {
+    return (
+      <PageLayout>
+        <Grid>
+          <SupplierIndexHeader marginBottom="extra-large">
+            <Row>
+              <Column columns={12}>
+                <Flex alignItems="center">
+                  <Icon size={24} color="navy700" marginRight={8}>
+                    view_headline
+                  </Icon>
+                  <Heading size="800" marginRight="large">
+                    Index
+                  </Heading>
+                  <Input
+                    size="large"
+                    theme="transparent"
+                    placeholder="Search"
+                  />
+                  <Button variant="primary" icon="add" marginLeft="large">
+                    Invite
+                  </Button>
+                </Flex>
+              </Column>
+            </Row>
+          </SupplierIndexHeader>
+
+          <SupplierIndexFilterBar marginBottom="large">
             <Flex alignItems="center">
-              <Icon size={24} color="navy700" marginRight={8}>
+              <Filter label="More actions" />
+              <Filter label="More actions" />
+              <Filter label="More actions" />
+            </Flex>
+            <Flex alignItems="center">
+              <Icon size={20} onClick={() => this.toggleDisplayType('BARS')}>
                 view_headline
               </Icon>
-              <Heading size="800" marginRight="large">
-                Index
-              </Heading>
-              <Input size="large" theme="transparent" placeholder="Search" />
-              <Button variant="primary" icon="add" marginLeft="large">
-                Invite
-              </Button>
+              <Icon size={20} onClick={() => this.toggleDisplayType('CARDS')}>
+                view_module
+              </Icon>
             </Flex>
-          </Column>
-        </Row>
-      </SupplierIndexHeader>
+          </SupplierIndexFilterBar>
 
-      <SupplierIndexFilterBar marginBottom="large">
-        <Flex alignItems="center">
-          <Filter label="More actions" />
-          <Filter label="More actions" />
-        </Flex>
-        <Flex alignItems="center">
-          <Icon size={20}>view_headline</Icon>
-          <Icon size={20}>view_module</Icon>
-        </Flex>
-      </SupplierIndexFilterBar>
+          <Flex marginBottom="large">
+            <Text color="grey600">Displaying 300 matches</Text>
+          </Flex>
 
-      <Flex marginBottom="large">
-        <Text color="grey600">Displaying 300 matches</Text>
-      </Flex>
-
-      <SupplierIndex>
-        <List columns={3} spaced="large">
-          {suppliers.map(supplier => (
-            <SupplierCard key={supplier.id} supplier={supplier} />
-          ))}
-        </List>
-      </SupplierIndex>
-    </Grid>
-  </PageLayout>
-);
+          <SupplierIndex>
+            <List
+              columns={this.state.displayType === 'CARDS' ? 3 : 1}
+              spaced={this.state.displayType === 'CARDS' ? 'large' : 'medium'}
+            >
+              {suppliers.map(
+                supplier =>
+                  this.state.displayType === 'CARDS' ? (
+                    <SupplierCard key={supplier.id} supplier={supplier} />
+                  ) : (
+                    <SupplierBar key={supplier.id} supplier={supplier} />
+                  )
+              )}
+            </List>
+          </SupplierIndex>
+        </Grid>
+      </PageLayout>
+    );
+  }
+}
 
 const SupplierIndexHeader = styled(UIBase)`
   background-color: ${props => props.theme.colors.white};
@@ -145,7 +183,7 @@ const SupplierIndexHeader = styled(UIBase)`
 const SupplierIndex = Flex;
 
 const SupplierCard = ({supplier}) => (
-  <Paper padding={24}>
+  <Card padding={24}>
     <Flex justifyContent="space-between" marginBottom={24}>
       <AvailableLozenge>Available</AvailableLozenge>
       <Button
@@ -183,7 +221,37 @@ const SupplierCard = ({supplier}) => (
     <Flex justifyContent="center" marginBottom={16}>
       <StarRating score={supplier.rating} />
     </Flex>
-  </Paper>
+  </Card>
+);
+
+const SupplierBar = ({supplier}) => (
+  <Card padding={16} height={30}>
+    <Flex alignItems="center" height={30}>
+      <Flex flexBasis={200} flex={1} alignItems="center">
+        <Avatar src={supplier.avatar} size={32} marginRight={8} />
+        <Heading size="500" color={supplier.name ? 'navy700' : 'grey500'}>
+          {supplier.name ? supplier.name : 'No name added'}
+        </Heading>
+      </Flex>
+      <Flex flexBasis={48}>
+        <NewLozenge>New</NewLozenge>
+      </Flex>
+      <Flex flexBasis={120}>
+        <Text>{supplier.location}</Text>
+      </Flex>
+      <Flex flexBasis={120}>
+        <AvailableLozenge>{supplier.availability}</AvailableLozenge>
+      </Flex>
+      <Flex flexBasis={300} flex={1}>
+        <TagGroup>
+          {supplier.skills.map(skill => <SkillTag>{skill}</SkillTag>)}
+        </TagGroup>
+      </Flex>
+      <Flex flex={1} justifyContent="flex-end">
+        <StarRating score={supplier.rating} />
+      </Flex>
+    </Flex>
+  </Card>
 );
 
 const SupplierIndexFilterBar = styled(UIBase)`
@@ -193,6 +261,7 @@ const SupplierIndexFilterBar = styled(UIBase)`
   background-color: ${props => props.theme.colors.white};
   border: 1px solid ${props => props.theme.colors.grey300};
   height: 44px;
+  padding: 0 16px 0 0;
 `;
 
 const Filter = ({label}) => (

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, {css} from 'react-emotion';
 
-import {UIBase, Flex, Box} from '../../../../src/components';
+import {UIBase, Flex, Box, Paper, Text} from '../../../../src/components';
 
 export const Lozenge = styled.span`
   display: inline-flex;
@@ -87,21 +87,31 @@ export const SkillTag = styled(UIBase)`
   font-size: 12px;
 `;
 
-export const TagGroup = ({children}) => (
-  <Flex flexWrap="wrap">
-    {React.Children.map(
-      children,
-      child =>
-        child &&
-        React.cloneElement(child, {
-          marginRight: 8,
-          marginBottom: 8,
-        })
-    )}
-  </Flex>
-);
+export const TagGroup = ({children, limit, showOverflow}) => {
+  const limitedChildren = limit ? children.slice(0, limit) : children;
+  return (
+    <Flex flexWrap="wrap" alignItems="center">
+      {React.Children.map(
+        limitedChildren.slice(0, limit),
+        child =>
+          child &&
+          React.cloneElement(child, {
+            marginRight: 8,
+            marginBottom: 4,
+            marginTop: 4,
+          })
+      )}
+      {showOverflow &&
+      children.length > limit && (
+        <Text size="extra-small" color="navy600">
+          +{children.length - limit}
+        </Text>
+      )}
+    </Flex>
+  );
+};
 
-export const Avatar = styled.div`
+export const Avatar = styled(UIBase)`
   width: ${props => props.size}px;
   height: ${props => props.size}px;
   background-color: ${props => props.theme.colors.purple400};
@@ -140,10 +150,18 @@ const Main = styled.main`
   background-color: ${props => props.theme.colors.white};
 `;
 
-export const PageLayout = ({children}) => (
+export const PageLayout = ({children, withPageNavigation = true}) => (
   <Flex>
     <GlobalSideNavigation />
-    <PageSideNavigation />
+    {withPageNavigation && <PageSideNavigation />}
     <Main>{children}</Main>
   </Flex>
 );
+
+export const Card = styled(Paper)`
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid ${props => props.theme.colors.grey400};
+  }
+`;

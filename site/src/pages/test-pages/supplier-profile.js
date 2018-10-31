@@ -25,13 +25,12 @@ import {
   SkillTag,
   TabNavigation,
   TabNavigationTab,
-  Hr,
   Entity,
   Tag,
 } from './_shared-components';
 
 export default () => (
-  <PageLayout>
+  <PageLayout withPageNavigation={false}>
     <div css={{paddingBottom: 120}}>
       <ProfileHeader>
         <Grid padding={[0, 32]}>
@@ -93,6 +92,9 @@ export default () => (
                     <SkillTag>Skill one</SkillTag>
                     <SkillTag>A longer skill</SkillTag>
                     <SkillTag>Yet another skill</SkillTag>
+                    <Button size="small" variant="tertiary">
+                      Add skills
+                    </Button>
                   </TagGroup>
                 </Column>
               </Row>
@@ -130,16 +132,23 @@ export default () => (
             <Column columns={[12, 9]}>
               <Paper padding={24} marginBottom="medium">
                 <Flex justifyContent="space-between" marginBottom="medium">
-                  <Heading size="600">Netflix tags</Heading>
+                  <Heading size="600" icon="lock">
+                    Netflix tags
+                  </Heading>
                   <Button variant="tertiary" size="medium">
                     Edit tags
                   </Button>
                 </Flex>
                 <Flex>
-                  <TagGroup>
+                  <TagGroup limit={5} showOverflow={true}>
                     <Tag>Tag</Tag>
                     <Tag>Tagymctagface</Tag>
                     <Tag>Tagymctagface</Tag>
+                    <Tag>Tag</Tag>
+                    <Tag>Tag</Tag>
+                    <Tag>Tag</Tag>
+                    <Tag>Tag</Tag>
+                    <Tag>Tag</Tag>
                     <Tag>Tag</Tag>
                     <Tag>Tag</Tag>
                   </TagGroup>
@@ -148,7 +157,9 @@ export default () => (
 
               <Paper padding={24} marginBottom="medium">
                 <Flex justifyContent="space-between" marginBottom="large">
-                  <Heading size="600">Feedback on Quinten</Heading>
+                  <Heading size="600" icon="lock">
+                    Feedback on Quinten
+                  </Heading>
                   <Button variant="tertiary" size="medium">
                     Add feedback
                   </Button>
@@ -165,22 +176,42 @@ export default () => (
                   />
                 </GridLayout>
 
-                <Hr margin={[24, 0]} />
-
-                <Box>
-                  <Flex justifyContent="space-between" marginBottom="medium">
-                    <Entity name="Ava Gregoraci" secondary="Netflix" />
-                    <Text size="extra-small">Added 12th June</Text>
-                  </Flex>
-
-                  <FeedbackHighlightRow title="Performance" rating={3} />
-
-                  <p>
-                    In the long history of humankind (and animal kind, too)
-                    those who learned to collaborate and improvise most
-                    effectively have prevailed.
-                  </p>
-                </Box>
+                <ExpandedFeedbackRow
+                  entity={
+                    <Entity
+                      name="Ava Gregoraci"
+                      secondary="Netflix"
+                      avatarSrc="https://randomuser.me/api/portraits/men/29.jpg"
+                    />
+                  }
+                  date="12th June"
+                  rating={3}
+                  feedback="In the long history of humankind (and animal kind, too) those who learned to collaborate and improvise most effectively have prevailed."
+                />
+                <ExpandedFeedbackRow
+                  entity={
+                    <Entity
+                      name="Ava Gregoraci"
+                      secondary="Netflix"
+                      avatarSrc="https://randomuser.me/api/portraits/men/29.jpg"
+                    />
+                  }
+                  date="12th June"
+                  rating={5}
+                  feedback="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. "
+                />
+                <ExpandedFeedbackRow
+                  entity={
+                    <Entity
+                      name="Ava Gregoraci"
+                      secondary="Netflix"
+                      avatarSrc="https://randomuser.me/api/portraits/men/29.jpg"
+                    />
+                  }
+                  date="12th June"
+                  rating={1}
+                  feedback=" In the long history of humankind (and animal kind, too) those who learned to collaborate and improvise most effectively have prevailed."
+                />
               </Paper>
               <Paper padding={[24, 24, 40]}>
                 <Flex justifyContent="space-between" marginBottom="medium">
@@ -294,6 +325,11 @@ export default () => (
                   title="Video shoot for Narcos"
                   skills={['UI Design', 'Photography', 'Writing']}
                 />
+                <Flex justifyContent="center" marginTop={36}>
+                  <Button size="small" variant="tertiary">
+                    Show more
+                  </Button>
+                </Flex>
               </Paper>
             </Column>
           </Row>
@@ -307,7 +343,6 @@ const ProfileHeader = styled.div`
   width: 100%;
   height: 240px;
   background-color: ${props => props.theme.colors.grey500};
-  background-image: linear-gradient(to bottom, #2123ff, #4d399c);
   padding: 32px 0;
 `;
 
@@ -360,3 +395,24 @@ const GridLayout = styled.div`
   grid-template-columns: ${props => props.columns};
   grid-gap: 16px;
 `;
+
+const StyledExpandedFeedbackRow = styled(Box)`
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid ${props => props.theme.colors.grey300};
+`;
+
+const ExpandedFeedbackRow = ({entity, date, rating, feedback}) => (
+  <StyledExpandedFeedbackRow>
+    <Flex justifyContent="space-between" marginBottom="medium">
+      {entity}
+      <Text size="extra-small">Added {date}</Text>
+    </Flex>
+
+    <FeedbackHighlightRow title="Performance" rating={rating} />
+
+    <Text multiline={true} marginTop={16}>
+      {feedback}
+    </Text>
+  </StyledExpandedFeedbackRow>
+);
