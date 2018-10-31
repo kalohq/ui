@@ -97,14 +97,6 @@ gulp.task('npm:build-core-css', () =>
 );
 
 /**
- * Copy fonts
- */
-
-gulp.task('npm:copy-font-files', () =>
-  gulp.src('src/styles/fonts/**/*').pipe(gulp.dest('lib/styles/fonts'))
-);
-
-/**
  * ===========
  * Core Tasks
  * ===========
@@ -118,5 +110,4 @@ gulp.task('build-npm-package', [
   'npm:copy-icons',
   'npm:build-bundled-css',
   'npm:build-core-css',
-  'npm:copy-font-files',
 ]);
