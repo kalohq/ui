@@ -44,10 +44,22 @@ export default function Heading(props: TProps) {
     ...otherProps
   } = props;
 
+  const legacySizeMap = {
+    'extra-large': 800,
+    large: 700,
+    medium: 600,
+    small: 600,
+    '800': 800,
+    '700': 700,
+    '600': 600,
+    '500': 500,
+    '400': 400,
+  };
+
   const _classNames = cx(
     {
       [styles.heading]: true,
-      [styles[`heading--${size}`]]: true,
+      [styles[`heading--${legacySizeMap[size]}`]]: true,
       [colors[`color-${color}`]]: true,
     },
     className

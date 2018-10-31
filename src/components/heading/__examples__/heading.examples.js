@@ -1,35 +1,32 @@
 import React from 'react';
 
-import H1 from '../../h1';
-import H2 from '../../h2';
-import H3 from '../../h3';
-import H4 from '../../h4';
+import Heading from '../';
 
 export const examples = [
   {
-    title: 'H1',
-    description: 'The largest heading. A custom styled H1',
-    render: () => <H1>Account settings</H1>,
+    title: 'H800',
+    render: () => <Heading size="800">Account settings</Heading>,
   },
   {
-    title: 'H2',
-    description: 'A custom styled H2',
-    render: () => <H2>Your profile</H2>,
+    title: 'H700',
+    render: () => <Heading size="700">Your profile</Heading>,
   },
   {
-    title: 'H3',
-    description: 'A custom styled H3',
-    render: () => <H3>Invoice 16</H3>,
+    title: 'H600',
+    render: () => <Heading size="600">Invoice 16</Heading>,
   },
   {
-    title: 'H4',
-    description: 'A custom styled H4',
-    render: () => <H4>Create new template</H4>,
+    title: 'H500',
+    render: () => <Heading size="500">Create new template</Heading>,
   },
   {
-    title: 'H3 with icon',
+    title: 'H600 with icon',
     description:
       'An icon can be passed down to display either side of the heading',
-    render: () => <H3 icon="lock">Overall performance</H3>,
+    render: () => (
+      <Heading size="600" icon="lock">
+        Overall performance
+      </Heading>
+    ),
   },
 ];
