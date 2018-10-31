@@ -30,7 +30,7 @@ const INPUT_SIZE_MAP = {
 };
 
 const getInputFont = size =>
-  size && `normal ${INPUT_SIZE_MAP[size].fontSize}px WebFaktSoftPro`;
+  size && `normal ${INPUT_SIZE_MAP[size].fontSize}px system-ui`;
 
 export const InputAddon = (props: {
   content: string | React$Node,
