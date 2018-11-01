@@ -64,6 +64,8 @@ export {default as LoadingSpinner} from './loading-spinner';
 export {default as Sticky} from './sticky';
 export {default as StarRating} from './star-rating';
 export {default as Lozenge} from './lozenge';
+export {default as Tag} from './tag';
+export {default as TagGroup} from './tag-group';
 
 /**
  * Theme
