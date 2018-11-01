@@ -118,7 +118,7 @@ export default class SupplierIndexPage extends PureComponent {
                   <Icon size={24} color="navy700" marginRight={8}>
                     view_headline
                   </Icon>
-                  <Heading size="800" marginRight="large">
+                  <Heading size="extra-large" marginRight="large">
                     Index
                   </Heading>
                   <Input
@@ -229,7 +229,7 @@ const SupplierBar = ({supplier}) => (
     <Flex alignItems="center" height={30}>
       <Flex flexBasis={200} flex={1} alignItems="center">
         <Avatar src={supplier.avatar} size={32} marginRight={8} />
-        <Heading size="500" color={supplier.name ? 'navy700' : 'grey500'}>
+        <Heading size="small" color={supplier.name ? 'navy700' : 'grey500'}>
           {supplier.name ? supplier.name : 'No name added'}
         </Heading>
       </Flex>

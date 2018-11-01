@@ -58,7 +58,7 @@ export default () => (
                 <Column columns={12}>
                   <Flex flex={1} justifyContent="space-between">
                     <Flex>
-                      <Heading size="800" component="h1">
+                      <Heading size="extra-large" component="h1">
                         Quinten Kortum
                       </Heading>
                       <NewLozenge css={{marginLeft: 8}}>New</NewLozenge>
@@ -132,7 +132,7 @@ export default () => (
             <Column columns={[12, 9]}>
               <Paper padding={24} marginBottom="medium">
                 <Flex justifyContent="space-between" marginBottom="medium">
-                  <Heading size="600" icon="lock">
+                  <Heading size="medium" icon="lock">
                     Netflix tags
                   </Heading>
                   <Button variant="tertiary" size="medium">
@@ -157,7 +157,7 @@ export default () => (
 
               <Paper padding={24} marginBottom="medium">
                 <Flex justifyContent="space-between" marginBottom="large">
-                  <Heading size="600" icon="lock">
+                  <Heading size="medium" icon="lock">
                     Feedback on Quinten
                   </Heading>
                   <Button variant="tertiary" size="medium">
@@ -215,7 +215,7 @@ export default () => (
               </Paper>
               <Paper padding={[24, 24, 40]}>
                 <Flex justifyContent="space-between" marginBottom="medium">
-                  <Heading size="600" icon="lock">
+                  <Heading size="medium" icon="lock">
                     Netflix connections
                   </Heading>
                   <Button variant="tertiary" size="medium">
@@ -264,7 +264,7 @@ export default () => (
 
             <Column columns={[12, 3]}>
               <Paper padding={24} marginBottom={16}>
-                <Heading size="600">About Quinten</Heading>
+                <Heading size="medium">About Quinten</Heading>
                 <Text multiline={true}>
                   Some general information that Quinten has written about how
                   great she is MAX characters. Can go onto three lines but no
@@ -280,7 +280,7 @@ export default () => (
               </Paper>
 
               <Paper padding={24}>
-                <Heading size="600">Quintens experience</Heading>
+                <Heading size="medium">Quintens experience</Heading>
                 <ExperienceItem
                   entity={
                     <Entity
