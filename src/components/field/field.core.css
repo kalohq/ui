@@ -6,11 +6,15 @@
 }
 
 .ui-field:not(.ui-field--legacy) {
-  flex: 1 1 20rem;
+  flex: 0 0 auto;
   margin-top: 2.4rem;
   margin-left: 2.4rem;
   min-width: 20rem;
   max-width: calc(100% - 2.4rem);
+}
+
+.ui-field-row .ui-field {
+  flex: 1 1 20rem;
 }
 
 .ui-field--inline {
