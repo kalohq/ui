@@ -63,6 +63,7 @@ export {default as IconSymbols} from './icon-symbols';
 export {default as LoadingSpinner} from './loading-spinner';
 export {default as Sticky} from './sticky';
 export {default as StarRating} from './star-rating';
+export {default as Lozenge} from './lozenge';
 
 /**
  * Theme
