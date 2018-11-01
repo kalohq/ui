@@ -10,6 +10,6 @@
   text-decoration: inherit;
   text-overflow: initial;
   overflow: visible;
-  white-space: pre-wrap;
+  white-space: nowrap;
   word-break: break-word;
 }
