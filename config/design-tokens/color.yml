@@ -57,7 +57,7 @@ props: &COLORS
   BLUE700:
     value: '#259FBA'
   NAVY300:
-    value: '#ECEFF1'
+    value: '#EEF4FA'
   NAVY400:
     value: '#8393AC'
   NAVY500:
