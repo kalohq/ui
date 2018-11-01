@@ -1,0 +1,35 @@
+.ui-lozenge {
+  display: inline-block;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  padding: 4px 8px;
+  max-width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ui-lozenge--variant-red {
+  background-color: var(--pink300);
+  color: var(--pink600);
+}
+
+.ui-lozenge--variant-green {
+  background-color: var(--green300);
+  color: var(--green600);
+}
+
+.ui-lozenge--variant-purple {
+  background-color: var(--purple300);
+  color: var(--purple600);
+}
+
+.ui-lozenge--variant-orange {
+  background-color: var(--orange300);
+  color: var(--orange600);
+}
+
+.ui-lozenge--variant-blue {
+  background-color: var(--blue300);
+  color: var(--blue600);
+}
