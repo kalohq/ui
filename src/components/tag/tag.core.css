@@ -1,0 +1,53 @@
+.ui-tag {
+  display: inline-flex;
+  background-color: var(--navy300);
+  color: var(--navy600);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 16px;
+  border-radius: 3px;
+}
+
+.ui-tag__inner {
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ui-tag--link {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.ui-tag--link:hover {
+  background-color: var(--purple500);
+  color: #fff;
+}
+
+.ui-tag--avatar {
+  border-radius: 100px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.ui-tag--avatar .ui-avatar {
+  margin-right: 8px;
+}
+
+.ui-tag__remove {
+  appearance: none;
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  padding: 0;
+  margin-left: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+
+.ui-tag__remove:active {
+  box-shadow: none;
+}
