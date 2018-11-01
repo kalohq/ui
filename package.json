@@ -20,7 +20,6 @@
     "precommit": "lint-staged",
     "generate:tokens": "node scripts/tokens.js",
     "generate:icons": "node scripts/icons.js",
-    "generate:component": "reactman --config ./config/code-templates/reactman-config.json",
     "version": "npm run build"
   },
   "lint-staged": {
@@ -93,7 +92,6 @@
     "react-hotkeys": "^0.9.0",
     "react-intl": "2.1.5",
     "react-test-renderer": "15.6.2",
-    "reactman": "2.1.0",
     "recompose": "0.20.2",
     "rimraf": "2.6.1",
     "sinon": "^4.5.0",
