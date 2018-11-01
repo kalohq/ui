@@ -17,7 +17,7 @@ const TokenColor = styled.div`
   margin-right: 8px;
 `;
 
-const MetaDesignTokensPage = () => (
+export default () => (
   <DocumentationContent
     pageTitle="Design Tokens"
     pageDescription="The Kalo design system is built up from design tokens. Design tokens are the very lowest level variables that together, make up larger components."
@@ -96,5 +96,3 @@ const MetaDesignTokensPage = () => (
     </Wrapper>
   </DocumentationContent>
 );
-
-export default MetaDesignTokensPage;

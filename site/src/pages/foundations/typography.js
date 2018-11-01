@@ -15,7 +15,7 @@ const TypographyTable = styled.table`
   }
 `;
 
-const BrandTypographyPage = () => (
+export default () => (
   <DocumentationContent pageTitle="Typography">
     <Wrapper>
       <h1>Typography</h1>
@@ -146,5 +146,3 @@ const BrandTypographyPage = () => (
     </Wrapper>
   </DocumentationContent>
 );
-
-export default BrandTypographyPage;

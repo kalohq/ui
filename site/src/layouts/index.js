@@ -163,7 +163,7 @@ export default function Page({data, children, location}) {
 
   const stripPageNameFromPath = val =>
     val
-      .replace(/\/(product|components|brand|test pages)\//, '')
+      .replace(/\/(product|components|brand|foundations|test pages)\//, '')
       .replace(/\//, '');
 
   pages.map(page =>
@@ -243,7 +243,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    allSitePage(filter: {path: {regex: "/(brand|product|test-pages)/"}}) {
+    allSitePage(
+      filter: {path: {regex: "/(brand|product|foundations|test-pages)/"}}
+    ) {
       edges {
         node {
           path

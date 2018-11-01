@@ -129,23 +129,56 @@ const SocialIconSet = () => (
   </IconGridContainer>
 );
 
-const BrandIconsPage = () => (
+export default () => (
   <DocumentationContent
     pageTitle="Iconography"
     pageDescription="Our icon set is a mixture of Material Icons, and custom icons designed in house."
   >
     <Wrapper>
-      <h1>Icon Set</h1>
+      <h1>Iconography</h1>
       <p>
-        The icons used throughout Kalo are a mixture of{' '}
-        <a href="https://material.io/icons/">Material icons</a> custom icons
-        designed in house.
+        Icons are powerful visual helpers, and should be used with care. Icons
+        are visual representations of commands, files, devices, directories, or
+        common actions and are used to provide visual context and enhance
+        usability.
       </p>
+
+      <p>
+        Icons should have a clear purpose, using the same icon for multiple uses
+        can quickly dilute the meaning and add confusion.
+      </p>
+
+      <h2>Best practices</h2>
+
+      <ul>
+        <li>
+          Icons are on a 20px grid and exported with padding on a 24px art
+          board.
+        </li>
+        <li>
+          When scaling down icons, smaller elements like circles should be solid
+          to help with legibility.
+        </li>
+        <li>
+          Icons should always match the text colour they are accompanying to
+          create a clear relationship. Primary navigation and badges don’t need
+          to follow this convention.
+        </li>
+        <li>
+          If the copy and icon have different heights always vertically centre
+          align them.
+        </li>
+        <li>
+          Any spacing above or below should be measured from the largest
+          component i.e. if the icon is 20px high and the copy is 16px high the
+          spacing should be measured against the icon.
+        </li>
+      </ul>
 
       <h2>Implementation</h2>
       <p>
         If you're developing in the platform, you'll want to use the Icon
-        component. See <Link to="/component/icon">here</Link> for documentation
+        component. See <Link to="/components/icon">here</Link> for documentation
         on this component.
       </p>
 
@@ -163,5 +196,3 @@ const BrandIconsPage = () => (
     </Wrapper>
   </DocumentationContent>
 );
-
-export default BrandIconsPage;

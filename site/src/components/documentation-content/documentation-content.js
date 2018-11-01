@@ -7,10 +7,12 @@ const StyledDocumentationContent = styled.article`
   li,
   ol {
     color: ${props => props.theme.colors.navy700};
+    font-size: 1.5rem;
+    line-height: 2.4rem;
   }
 
-  p {
-    line-height: 1.6em;
+  li {
+    padding: 8px 0;
   }
 
   h1 {

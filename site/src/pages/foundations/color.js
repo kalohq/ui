@@ -156,7 +156,7 @@ const Swatch = ({colorGroup, name, keyColor}) => (
   </div>
 );
 
-const BrandColorsPage = () => (
+export default () => (
   <DocumentationContent
     pageTitle="Color Palette"
     pageDescription="The Kalo brand palette consists of two primary colors, and four secondary."
@@ -199,5 +199,3 @@ const BrandColorsPage = () => (
     </Wrapper>
   </DocumentationContent>
 );
-
-export default BrandColorsPage;
