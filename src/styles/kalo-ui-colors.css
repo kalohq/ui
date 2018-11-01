@@ -149,3 +149,11 @@
 .color-navy700 {
   color: var(--navy700);
 }
+
+.color-currentColor {
+  color: currentColor;
+}
+
+.color-none {
+  color: none;
+}

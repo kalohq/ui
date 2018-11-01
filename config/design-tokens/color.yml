@@ -39,9 +39,9 @@ props: &COLORS
   GREEN300:
     value: '#D8F0E8'
   GREEN400:
-    value: '#4FD2A4'
+    value: '#8CF4CF'
   GREEN500:
-    value: '#3eb38a'
+    value: '#4ED2A4'
   GREEN600:
     value: '#38A07C'
   GREEN700:
@@ -49,17 +49,17 @@ props: &COLORS
   BLUE300:
     value: '#C1F4FF'
   BLUE400:
-    value: '#65D2EA'
+    value: '#9EEAFB'
   BLUE500:
-    value: '#54C3DB'
+    value: '#65D2EA'
   BLUE600:
     value: '#4DB8CF'
   BLUE700:
-    value: '#2BA7C2'
+    value: '#259FBA'
   NAVY300:
-    value: '#F9FAFC'
+    value: '#ECEFF1'
   NAVY400:
-    value: '#C6C7D8'
+    value: '#8393AC'
   NAVY500:
     value: '#93A6C1'
   NAVY600:
@@ -69,7 +69,7 @@ props: &COLORS
   GREY200:
     value: '#F9FAFC'
   GREY300:
-    value: '#EEF4FA'
+    value: '#ECEFF1'
   GREY400:
     value: '#D0D8DF'
   GREY500:
