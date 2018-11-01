@@ -68,7 +68,7 @@ const BrandTypographyPage = () => (
         </tr>
       </TypographyTable>
 
-      <h2>Font scale</h2>
+      <h2>Type scale</h2>
 
       <p>
         Our font measurements are based on the line-height of the text, spacing
@@ -82,7 +82,7 @@ const BrandTypographyPage = () => (
         </tr>
         <tr>
           <td align="right">
-            <span className="heading--800">Heading800</span>
+            <span className="heading--extra-large">ExtraLarge</span>
           </td>
           <td>
             <p>
@@ -93,13 +93,13 @@ const BrandTypographyPage = () => (
         </tr>
         <tr>
           <td>
-            <span className="heading--700">Heading700</span>
+            <span className="heading--large">Large</span>
           </td>
           <td />
         </tr>
         <tr>
           <td>
-            <span className="heading--600">Heading600</span>
+            <span className="heading--medium">Medium</span>
           </td>
           <td>
             <p>
@@ -110,7 +110,7 @@ const BrandTypographyPage = () => (
         </tr>
         <tr>
           <td>
-            <span className="heading--500">Heading500</span>
+            <span className="heading--small">Small</span>
           </td>
           <td>
             <p>
@@ -121,7 +121,7 @@ const BrandTypographyPage = () => (
         </tr>
         <tr>
           <td>
-            <span className="heading--400">Heading400</span>
+            <span className="heading--extra-small">ExtraSmall</span>
           </td>
           <td />
         </tr>
