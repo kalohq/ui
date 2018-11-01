@@ -10,7 +10,7 @@ export default function H1(props: Props) {
   const {children} = props;
 
   return (
-    <Heading component="h1" weight="normal" size="800" {...props}>
+    <Heading component="h1" weight="normal" size="extra-large" {...props}>
       {children}
     </Heading>
   );

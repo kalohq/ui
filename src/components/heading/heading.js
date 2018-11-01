@@ -4,10 +4,10 @@ import cx from 'classnames';
 import Icon from '../icon';
 import {UIBase} from '../layout';
 
-import type {TEXT_COLOR, TEXT_SIZE} from '../text/constants';
+import type {TEXT_COLOR} from '../text/constants';
 
 import styles from './heading.core.css';
-import colors from '../../styles/colors.css';
+import colors from '../../styles/kalo-ui-colors.css';
 
 type TProps = {
   /** The heading content */
@@ -15,7 +15,7 @@ type TProps = {
   /** Sets the text color and fill color of any child icon */
   color?: TEXT_COLOR,
   /** Sets the size of the heading */
-  size?: TEXT_SIZE,
+  size?: 'extra-large' | 'large' | 'medium' | 'small' | 'extra-small',
   /** Sets interactive styles for the underlying text component - See Text component */
   hover?: 'underline' | 'none',
   /** Displays an icon before the heading */
@@ -44,35 +44,19 @@ export default function Heading(props: TProps) {
     ...otherProps
   } = props;
 
-  const legacySizeMap = {
-    'extra-large': 800,
-    large: 700,
-    medium: 600,
-    small: 600,
-    '800': 800,
-    '700': 700,
-    '600': 600,
-    '500': 500,
-    '400': 400,
-  };
-
   const _classNames = cx(
     {
       [styles.heading]: true,
-      [styles[`heading--${legacySizeMap[size]}`]]: true,
+      [styles[`heading--${size}`]]: true,
+      [styles['heading--interactive']]: hover === 'interactive',
       [colors[`color-${color}`]]: true,
     },
     className
   );
 
   return (
-    <UIBase
-      interactive={hover === 'interactive'}
-      className={_classNames}
-      component={component}
-      {...otherProps}
-    >
-      {icon ? (
+    <UIBase className={_classNames} component={component} {...otherProps}>
+      {icon && (
         <Icon
           size={size === 'extra-large' ? 24 : 14}
           color={color}
@@ -80,9 +64,9 @@ export default function Heading(props: TProps) {
         >
           {icon}
         </Icon>
-      ) : null}
+      )}
       {children}
-      {iconAfter ? (
+      {iconAfter && (
         <Icon
           size={size === 'extra-large' ? 24 : 14}
           color={color}
@@ -90,7 +74,7 @@ export default function Heading(props: TProps) {
         >
           {iconAfter}
         </Icon>
-      ) : null}
+      )}
     </UIBase>
   );
 }
