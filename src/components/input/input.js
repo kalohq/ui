@@ -9,7 +9,7 @@ import Icon from '../icon';
 import {focusOnMount as _focusOnMount} from '../../utils/react';
 import {cleanProps} from '../../utils/style';
 
-import coreStyles from './input.core.css';
+import coreStyles from './input.css';
 import reactStyles from './input.react.css';
 
 const EXPANDS_BUFFER = 5;

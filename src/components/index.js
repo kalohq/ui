@@ -42,6 +42,7 @@ export {
   default as ToggleButton,
   HEIGHT as TOGGLE_BUTTON_HEIGHT,
 } from './toggle-button';
+export {default as SeamlessButton} from './seamless-button';
 
 /**
  * Table
@@ -66,6 +67,7 @@ export {default as StarRating} from './star-rating';
 export {default as Lozenge} from './lozenge';
 export {default as Tag} from './tag';
 export {default as TagGroup} from './tag-group';
+export {default as Avatar} from './avatar';
 
 /**
  * Theme

@@ -5,7 +5,7 @@ import cx from 'classnames';
 import Text from '../text';
 import Icon from '../icon';
 
-import coreStyles from './select.core.css';
+import coreStyles from './select.css';
 import reactStyles from './select.react.css';
 import {cleanProps} from '../../utils/style';
 

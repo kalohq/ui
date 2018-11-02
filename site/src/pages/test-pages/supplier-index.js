@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react';
 import styled from 'react-emotion';
 
 import {
+  Avatar,
   Button,
   Paper,
   StarRating,
@@ -15,12 +16,12 @@ import {
   Input,
   Text,
   List,
+  TagGroup,
+  SeamlessButton,
 } from '../../../../src/components';
 
 import {
-  Avatar,
-  AvailableLozenge,
-  TagGroup,
+  AvailabilityLozenge,
   SkillTag,
   NewLozenge,
   PageLayout,
@@ -35,17 +36,17 @@ const suppliers = [
     avatar: 'https://randomuser.me/api/portraits/men/46.jpg',
     skills: ['Photography', 'Design'],
     rating: 4,
-    availability: 'Available',
+    availability: 'AVAILABLE',
     isNew: true,
   },
   {
     id: 2,
-    name: 'Rafeeda El Nouri',
+    name: 'Rafeeda El Nouri who has a really long name',
     location: 'Paris',
     avatar: 'https://randomuser.me/api/portraits/women/21.jpg',
     skills: ['English to French Translation'],
     rating: 3,
-    availability: 'Available',
+    availability: 'AVAILABLE',
     isNew: false,
   },
   {
@@ -55,7 +56,7 @@ const suppliers = [
     avatar: 'https://randomuser.me/api/portraits/men/5.jpg',
     skills: [],
     rating: null,
-    availability: 'Invitation Sent',
+    availability: 'INVITATION_SENT',
     isNew: false,
   },
   {
@@ -65,7 +66,7 @@ const suppliers = [
     avatar: 'https://randomuser.me/api/portraits/women/23.jpg',
     skills: ['Photography', 'Design'],
     rating: 4,
-    availability: 'Available',
+    availability: 'AVAILABLE',
     isNew: true,
   },
   {
@@ -75,7 +76,7 @@ const suppliers = [
     avatar: 'https://randomuser.me/api/portraits/women/25.jpg',
     skills: ['English to French Translation'],
     rating: 3,
-    availability: 'Available',
+    availability: 'AVAILABLE',
     isNew: false,
   },
   {
@@ -85,7 +86,7 @@ const suppliers = [
     avatar: 'https://randomuser.me/api/portraits/women/56.jpg',
     skills: ['UI Design'],
     rating: 4,
-    availability: 'Invitation Sent',
+    availability: 'INVITATION_SENT',
     isNew: false,
   },
 ];
@@ -115,16 +116,17 @@ export default class SupplierIndexPage extends PureComponent {
             <Row>
               <Column columns={12}>
                 <Flex alignItems="center">
-                  <Icon size={24} color="navy700" marginRight={8}>
+                  <Icon size={24} color="navy700" marginRight={16}>
                     view_headline
                   </Icon>
                   <Heading size="extra-large" marginRight="large">
                     Index
                   </Heading>
                   <Input
-                    size="large"
-                    theme="transparent"
+                    icon="search"
                     placeholder="Search"
+                    theme="well"
+                    size="large"
                   />
                   <Button variant="primary" icon="add" marginLeft="large">
                     Invite
@@ -154,7 +156,7 @@ export default class SupplierIndexPage extends PureComponent {
             <Text color="grey600">Displaying 300 matches</Text>
           </Flex>
 
-          <SupplierIndex>
+          <div>
             <List
               columns={this.state.displayType === 'CARDS' ? 3 : 1}
               spaced={this.state.displayType === 'CARDS' ? 'large' : 'medium'}
@@ -168,7 +170,7 @@ export default class SupplierIndexPage extends PureComponent {
                   )
               )}
             </List>
-          </SupplierIndex>
+          </div>
         </Grid>
       </PageLayout>
     );
@@ -180,30 +182,37 @@ const SupplierIndexHeader = styled(UIBase)`
   padding: 32px 0 0;
 `;
 
-const SupplierIndex = Flex;
-
 const SupplierCard = ({supplier}) => (
-  <Card padding={24}>
+  <Card padding={24} height={346}>
     <Flex justifyContent="space-between" marginBottom={24}>
-      <AvailableLozenge>Available</AvailableLozenge>
-      <Button
-        variant="tertiary"
-        loneIcon={true}
-        size="small"
+      <AvailabilityLozenge type="AVAILABLE" css={{marginLeft: 8}} />
+      <SeamlessButton
+        size="medium"
         icon="more_vert"
+        css={{marginTop: -8, marginRight: -8}}
       />
     </Flex>
     <Flex justifyContent="center" marginBottom={16}>
-      <Avatar src={supplier.avatar} size={90} />
+      <Avatar src={supplier.avatar} size="extra-large" />
     </Flex>
-    <Flex alignItems="center" flexDirection="column" marginBottom={16}>
+    <Flex
+      alignItems="center"
+      flexDirection="column"
+      marginBottom={16}
+      minWidth={0}
+    >
       <Heading
-        size="700"
+        size="large"
         marginBottom={14}
         color={supplier.name ? 'navy700' : 'grey500'}
+        multiline={false}
       >
         {supplier.name ? supplier.name : 'No name added'}
-        {supplier.isNew && <NewLozenge>New</NewLozenge>}
+        {supplier.isNew && (
+          <NewLozenge style={{verticalAlign: 'text-top', marginLeft: 8}}>
+            New
+          </NewLozenge>
+        )}
       </Heading>
       <Text color={supplier.location ? 'navy700' : 'grey500'}>
         {supplier.location ? supplier.location : 'No location added'}
@@ -228,7 +237,7 @@ const SupplierBar = ({supplier}) => (
   <Card padding={16} height={30}>
     <Flex alignItems="center" height={30}>
       <Flex flexBasis={200} flex={1} alignItems="center">
-        <Avatar src={supplier.avatar} size={32} marginRight={8} />
+        <Avatar src={supplier.avatar} size="medium" marginRight={8} />
         <Heading size="small" color={supplier.name ? 'navy700' : 'grey500'}>
           {supplier.name ? supplier.name : 'No name added'}
         </Heading>
@@ -240,7 +249,7 @@ const SupplierBar = ({supplier}) => (
         <Text>{supplier.location}</Text>
       </Flex>
       <Flex flexBasis={120}>
-        <AvailableLozenge>{supplier.availability}</AvailableLozenge>
+        <AvailabilityLozenge type={supplier.availability} />
       </Flex>
       <Flex flexBasis={300} flex={1}>
         <TagGroup>

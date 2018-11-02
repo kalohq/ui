@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 
-import coreStyles from './field-validation.core.css';
+import coreStyles from './field-validation.css';
 
 export type Validation = {
   message: string,

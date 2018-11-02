@@ -1,0 +1,30 @@
+.ui-seamless-button {
+  background: none;
+  border: 0;
+  padding: 0;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: var(--grey300);
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+.ui-seamless-button--small {
+  height: 30px;
+  width: 30px;
+}
+
+.ui-seamless-button--medium {
+  height: 36px;
+  width: 36px;
+}
+
+.ui-seamless-button--large {
+  height: 46px;
+  width: 46px;
+}

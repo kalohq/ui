@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'react-emotion';
 
 import {
+  Avatar,
   Button,
   Paper,
   StarRating,
@@ -14,19 +15,18 @@ import {
   ButtonGroup,
   Heading,
   Text,
+  Tag,
+  TagGroup,
 } from '../../../../src/components';
 
 import {
   PageLayout,
-  Avatar,
   NewLozenge,
-  AvailableLozenge,
-  TagGroup,
   SkillTag,
   TabNavigation,
   TabNavigationTab,
   Entity,
-  Tag,
+  AvailabilityLozenge,
 } from './_shared-components';
 
 export default () => (
@@ -49,10 +49,7 @@ export default () => (
       <ProfileMain>
         <Grid padding={[0, 32]}>
           <Flex>
-            <ProfileAvatar
-              size={160}
-              src="https://randomuser.me/api/portraits/men/46.jpg"
-            />
+            <ProfileAvatar src="https://randomuser.me/api/portraits/men/46.jpg" />
             <Box paddingLeft={32} paddingTop={40} flex={1}>
               <Row marginBottom="medium">
                 <Column columns={12}>
@@ -62,9 +59,10 @@ export default () => (
                         Quinten Kortum
                       </Heading>
                       <NewLozenge css={{marginLeft: 8}}>New</NewLozenge>
-                      <AvailableLozenge css={{marginLeft: 8}}>
-                        Available
-                      </AvailableLozenge>
+                      <AvailabilityLozenge
+                        type="AVAILABLE"
+                        css={{marginLeft: 8}}
+                      />
                     </Flex>
                     <Button
                       variant="tertiary"
@@ -348,13 +346,15 @@ const ProfileHeader = styled.div`
 
 const ProfileMain = styled.div`
   width: 100%;
-  background-color: #fff;
+  background-color: ${props => props.theme.colors.white};
 `;
 
 const ProfileAvatar = styled(Avatar)`
   top: -36px;
   position: relative;
   border: 4px solid #fff;
+  width: 160px;
+  height: 160px;
 `;
 
 const StyledExperienceItem = styled.article`
@@ -372,8 +372,8 @@ const StyledExperienceItem = styled.article`
 const ExperienceItem = ({entity, skills, title}) => (
   <StyledExperienceItem>
     {entity}
-    <Box marginLeft={46} marginTop={8}>
-      <span className="heading--500">{title}</span>
+    <Box marginLeft={8} marginTop={8}>
+      <Heading size="small">{title}</Heading>
       <Flex marginTop={16}>
         {skills.map(skill => (
           <SkillTag css={{marginRight: 8}}>{skill}</SkillTag>
@@ -385,7 +385,7 @@ const ExperienceItem = ({entity, skills, title}) => (
 
 const FeedbackHighlightRow = ({title, rating, ...otherProps}) => (
   <Flex justifyContent="space-between" {...otherProps}>
-    <span className="heading--500">{title}</span>
+    <Heading size="small">{title}</Heading>
     <StarRating score={rating} />
   </Flex>
 );

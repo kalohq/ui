@@ -6,7 +6,7 @@ import {UIBase} from '../layout';
 
 import type {TEXT_COLOR} from '../text/constants';
 
-import styles from './heading.core.css';
+import styles from './heading.css';
 import colors from '../../styles/kalo-ui-colors.css';
 
 type TProps = {
@@ -28,6 +28,8 @@ type TProps = {
   component?: string,
   /** Class to pass down */
   className?: string,
+  /** Should the heading wrap on to multiple lines? */
+  multiline?: boolean,
 };
 
 export default function Heading(props: TProps) {
@@ -41,6 +43,7 @@ export default function Heading(props: TProps) {
     iconPadding = 10,
     component = 'span',
     className,
+    multiline = false,
     ...otherProps
   } = props;
 
@@ -49,6 +52,7 @@ export default function Heading(props: TProps) {
       [styles.heading]: true,
       [styles[`heading--${size}`]]: true,
       [styles['heading--interactive']]: hover === 'interactive',
+      [styles['heading--multiline']]: multiline,
       [colors[`color-${color}`]]: true,
     },
     className

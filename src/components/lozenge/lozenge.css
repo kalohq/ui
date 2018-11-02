@@ -7,6 +7,8 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  height: 24px;
+  line-height: 1.4;
 }
 
 .ui-lozenge--variant-red {
@@ -32,4 +34,10 @@
 .ui-lozenge--variant-blue {
   background-color: var(--blue300);
   color: var(--blue600);
+}
+
+.ui-lozenge--variant-grey {
+  background-color: var(--grey200);
+  color: var(--grey600);
+  border: 1px solid var(--grey400);
 }

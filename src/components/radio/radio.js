@@ -8,7 +8,7 @@ import Text from '../text';
 import {Box} from '../layout';
 import {pickStyles} from '../../utils/style';
 
-import coreStyles from './radio.core.css';
+import coreStyles from './radio.css';
 
 type RadioProps = {
   /** Is the radio button checked */

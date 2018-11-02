@@ -9,6 +9,7 @@ const STATUS_MAP = {
   orange: 'Pending',
   green: 'Complete',
   blue: 'In progress',
+  grey: 'New',
 };
 
 export const examples = [

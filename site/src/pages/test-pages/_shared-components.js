@@ -1,29 +1,40 @@
 import React from 'react';
 import styled, {css} from 'react-emotion';
 
-import {UIBase, Flex, Box, Paper, Text} from '../../../../src/components';
+import {
+  UIBase,
+  Flex,
+  Box,
+  Paper,
+  Heading,
+  Avatar,
+  Lozenge,
+} from '../../../../src/components';
 
-export const Lozenge = styled.span`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 3px;
-  font-size: 12px;
-  font-weight: 500;
-  padding: 0 8px;
-  height: 24px;
-`;
+export const NewLozenge = props => (
+  <Lozenge variant="grey" {...props}>
+    New
+  </Lozenge>
+);
 
-export const NewLozenge = styled(Lozenge)`
-  border: 1px solid ${props => props.theme.colors.grey300};
-  background-color: ${props => props.theme.colors.grey200};
-  color: ${props => props.theme.colors.grey600};
-`;
+export const AvailabilityLozenge = ({type, ...otherProps}) => {
+  const TYPE_MAP = {
+    AVAILABLE: {
+      label: 'Available',
+      variant: 'green',
+    },
+    INVITATION_SENT: {
+      label: 'Invitation sent',
+      variant: 'orange',
+    },
+  };
 
-export const AvailableLozenge = styled(Lozenge)`
-  background-color: ${props => props.theme.colors.green300};
-  color: ${props => props.theme.colors.green600};
-`;
+  return (
+    <Lozenge variant={TYPE_MAP[type].variant} {...otherProps}>
+      {TYPE_MAP[type].label}
+    </Lozenge>
+  );
+};
 
 const StyledEntity = styled.div`
   display: flex;
@@ -32,9 +43,9 @@ const StyledEntity = styled.div`
 
 export const Entity = ({name, secondary, avatarSrc}) => (
   <StyledEntity>
-    <Avatar size={36} src={avatarSrc} />
+    <Avatar size="medium" src={avatarSrc} />
     <Box marginLeft={8}>
-      <span className="heading--500">{name}</span>
+      <Heading size="medium">{name}</Heading>
       <span className="text--helper">{secondary}</span>
     </Box>
   </StyledEntity>
@@ -58,22 +69,17 @@ export const TabNavigationTab = styled.a`
   color: ${props => props.theme.colors.navy700};
   padding: 16px 12px;
   border-bottom: 3px solid transparent;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
 
   ${props =>
     props.isSelected &&
     css`
       border-bottom-color: ${props.theme.colors.purple500};
     `};
-`;
-
-export const Tag = styled(UIBase)`
-  display: inline-flex;
-  align-items: center;
-  background-color: ${props => props.theme.colors.grey300};
-  padding: 4px 16px;
-  font-size: 12px;
-  color: ${props => props.theme.colors.navy600};
-  justify-content: center;
 `;
 
 export const SkillTag = styled(UIBase)`
@@ -85,41 +91,6 @@ export const SkillTag = styled(UIBase)`
   padding: 4px 8px;
   border-radius: 30px;
   font-size: 12px;
-`;
-
-export const TagGroup = ({children, limit, showOverflow}) => {
-  const limitedChildren = limit ? children.slice(0, limit) : children;
-  return (
-    <Flex flexWrap="wrap" alignItems="center">
-      {React.Children.map(
-        limitedChildren.slice(0, limit),
-        child =>
-          child &&
-          React.cloneElement(child, {
-            marginRight: 8,
-            marginBottom: 4,
-            marginTop: 4,
-          })
-      )}
-      {showOverflow &&
-      children.length > limit && (
-        <Text size="extra-small" color="navy600">
-          +{children.length - limit}
-        </Text>
-      )}
-    </Flex>
-  );
-};
-
-export const Avatar = styled(UIBase)`
-  width: ${props => props.size}px;
-  height: ${props => props.size}px;
-  background-color: ${props => props.theme.colors.purple400};
-  background-image: url(${props => props.src});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  border-radius: 50%;
 `;
 
 export const Hr = styled(UIBase)`
@@ -158,10 +129,4 @@ export const PageLayout = ({children, withPageNavigation = true}) => (
   </Flex>
 );
 
-export const Card = styled(Paper)`
-  cursor: pointer;
-
-  &:hover {
-    border: 1px solid ${props => props.theme.colors.grey400};
-  }
-`;
+export const Card = styled(Paper)`cursor: pointer;`;

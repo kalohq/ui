@@ -5,7 +5,7 @@ import cx from 'classnames';
 import {UIBase} from '../layout';
 import Icon from '../icon';
 
-import styles from './tag.core.css';
+import styles from './tag.css';
 
 type TProps = {
   children: string,
