@@ -20,21 +20,21 @@
 // H800
 .heading--extra-large {
   font-size: 2.4rem;
-  line-height: 2.6rem;
+  line-height: 2.8rem;
   font-weight: 700;
 }
 
 // H700
 .heading--large {
   font-size: 2rem;
-  line-height: 2.2rem;
+  line-height: 2.4rem;
   font-weight: 500;
 }
 
 // H600
 .heading--medium {
   font-size: 1.6rem;
-  line-height: 2.8rem;
+  line-height: 2rem;
   font-weight: 600;
 }
 
@@ -50,6 +50,5 @@
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.2rem;
-  margin-top: 1.2rem;
   text-transform: uppercase;
 }
