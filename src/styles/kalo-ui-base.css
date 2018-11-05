@@ -64,8 +64,8 @@ hr {
 }
 
 a {
-  color: var(--blue700);
-  text-decoration: none;
+  color: inherit;
+  text-decoration: underline;
 }
 
 a:hover {
