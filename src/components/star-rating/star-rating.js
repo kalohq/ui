@@ -15,7 +15,7 @@ type TProps = {
 
 export default class StarRating extends PureComponent<TProps> {
   render() {
-    const {score = null, ...otherProps} = this.props;
+    const {score = 0, ...otherProps} = this.props;
 
     return (
       <UIBase
@@ -25,8 +25,8 @@ export default class StarRating extends PureComponent<TProps> {
         {...otherProps}
       >
         {range(1, 6).map(star => {
-          const isLit = score >= star;
-          const isHalf = score < star && score > star - 1;
+          const isLit = Number(score) >= star;
+          const isHalf = Number(score) < star && Number(score) > star - 1;
           return (
             <div
               key={star}

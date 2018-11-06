@@ -17,7 +17,7 @@ type TProps = {
 export default function TagGroup(props: TProps) {
   const {children, limit, showOverflow, className, ...otherProps} = props;
 
-  const limitedChildren = limit ? children.slice(0, limit) : children;
+  const limitedChildren = limit ? [...children].slice(0, limit) : [...children];
 
   const _classNames = cx(
     {
@@ -31,7 +31,7 @@ export default function TagGroup(props: TProps) {
       {React.Children.map(
         limitedChildren.slice(0, limit),
         child =>
-          child && // $FlowFixMe
+          child &&
           React.cloneElement(child, {
             marginRight: 8,
             marginBottom: 4,
@@ -40,9 +40,9 @@ export default function TagGroup(props: TProps) {
       )}
       {limit &&
       showOverflow &&
-      children.length > limit && (
+      [...children].length > limit && (
         <Text size="extra-small" color="navy600">
-          +{children.length - limit}
+          +{[...children].length - limit}
         </Text>
       )}
     </UIBase>

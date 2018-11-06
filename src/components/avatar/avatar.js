@@ -9,7 +9,7 @@ import styles from './avatar.css';
 type TProps = {
   src: string,
   size?: 'small' | 'medium' | 'large',
-  className: string,
+  className?: string,
 };
 
 export default function Avatar(props: TProps) {
