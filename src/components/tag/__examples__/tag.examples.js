@@ -18,20 +18,41 @@ export const examples = [
   {
     title: 'Standard tag',
     render: () => <Tag>A standard tag</Tag>,
+    html: () => <span className="ui-tag">A standard tag</span>,
   },
   {
     title: 'Link tag',
     render: () => <Tag isLink={true}>A link tag</Tag>,
+    html: () => (
+      <a href="#" className="ui-tag ui-tag--link">
+        A link tag
+      </a>
+    ),
   },
   {
     title: 'Avatar tag',
     render: () => (
-      <Tag avatar={<MockAvatar className="ui-avatar" />}>A link tag</Tag>
+      <Tag avatar={<MockAvatar className="ui-avatar" />}>An avatar tag</Tag>
+    ),
+    html: () => (
+      <span className="ui-tag ui-tag--avatar">
+        <MockAvatar className="ui-avatar" />An avatar tag
+      </span>
     ),
   },
   {
     title: 'Removable tag',
     render: () => <Tag onRemove={() => {}}>Removable tag</Tag>,
+    html: () => (
+      <span className="ui-tag ui-tag--avatar ui-tag--remove">
+        <MockAvatar className="ui-avatar" />An avatar tag
+        <button className="ui-tag__remove">
+          <svg width="12" height="12" aria-hidden="true">
+            <use xlinkHref="#clear" />
+          </svg>
+        </button>
+      </span>
+    ),
   },
   {
     title: 'Truncation',

@@ -23,6 +23,7 @@
 .ui-tag--link:hover {
   background-color: var(--purple500);
   color: #fff;
+  text-decoration: none;
 }
 
 .ui-tag--avatar {
