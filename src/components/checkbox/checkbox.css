@@ -82,9 +82,11 @@
 }
 
 .ui-checkbox__label {
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--navy600);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--navy700);
+  line-height: 1.6rem;
+  margin-top: 2px;
 }
 
 .ui-checkbox input:disabled ~ label .ui-checkbox__label {
@@ -92,9 +94,11 @@
 }
 
 .ui-checkbox__hint {
-  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
   font-weight: 400;
   color: var(--navy600);
+  margin-top: 4px;
 }
 
 .ui-checkbox input:disabled ~ label .ui-checkbox__hint {
