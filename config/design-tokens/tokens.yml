@@ -2,11 +2,9 @@ props: {}
 imports:
   - ./color.yml
   - ./font-weight.yml
-  - ./border-radius.yml
+  - ./font-size.yml
   - ./box-shadow.yml
-  - ./input.yml
   - ./alerts.yml
   - ./grid.yml
   - ./layout.yml
-  - ./button.yml
   - ./table.yml
