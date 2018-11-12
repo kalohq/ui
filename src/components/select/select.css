@@ -2,9 +2,10 @@
   display: block;
   width: 100%;
   position: relative;
-  border: 1px solid var(--grey400);
+  border: var(--input-default-border);
+  background-color: var(--input-default-background);
+  color: var(--input-default-color);
   border-radius: 4px;
-  background-color: var(--white);
   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMS40MS41OUwwIDJsNiA2IDYtNkwxMC41OS41OSA2IDUuMTd6IiBmaWxsPSIjMzc0NTYxIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48L3N2Zz4=);
   background-repeat: no-repeat;
   background-position: calc(100% - 24px) 50%;
@@ -14,7 +15,6 @@
   font-size: 1.6rem;
   appearance: none;
   padding: 2px 16px;
-  color: var(--navy700);
 
   &:hover {
     border: 1px solid var(--grey500);
@@ -32,11 +32,11 @@
 
 .ui-select:disabled,
 .ui-select--disabled {
-  background-color: var(--navy300);
+  background-color: var(--input-disabled-background);
   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMS40MS41OUwwIDJsNiA2IDYtNkwxMC41OS41OSA2IDUuMTd6IiBmaWxsPSIjQjBCQUMzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48L3N2Zz4=);
-  border: 1px solid var(--grey400);
+  border: var(--input-disabled-border);
+  color: var(--input-disabled-color);
   cursor: not-allowed;
-  color: var(--navy600);
 
   &:hover {
     border: 1px solid var(--grey400);
@@ -44,10 +44,10 @@
 }
 
 .ui-select--read-only {
-  background-color: var(--navy300);
-  border: 1px solid var(--grey400);
+  background-color: var(--input-readonly-background);
+  border: var(--input-readonly-border);
+  color: var(--input-readonly-color);
   cursor: default;
-  color: var(--navy600);
 
   &:hover {
     border: 1px solid var(--grey400);

@@ -5,8 +5,9 @@ export const examples = [
   {
     title: 'Textarea',
     description: 'A standard Textarea',
-    render: () => (
-      <Textarea placeholder="Add a project summary" expand={true} />
+    render: () => <Textarea placeholder="Add a project summary" />,
+    html: () => (
+      <textarea className="ui-textarea" placeholder="Add a project summary" />
     ),
   },
   {

@@ -8,3 +8,4 @@ imports:
   - ./grid.yml
   - ./layout.yml
   - ./table.yml
+  - ./input.yml

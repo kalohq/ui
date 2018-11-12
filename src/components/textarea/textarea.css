@@ -1,0 +1,53 @@
+.ui-textarea {
+  background: transparent;
+  width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6em;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: var(--input-default-background);
+  border: var(--input-default-border);
+  color: var(--input-default-color);
+
+  &::placeholder {
+    color: var(--grey500);
+  }
+
+  &:hover {
+    border: 1px solid var(--grey500);
+  }
+
+  &:focus {
+    outline: 0;
+    border: 1px solid var(--blue500);
+  }
+
+  &:disabled {
+    background-color: var(--input-disabled-background);
+    border: var(--input-disabled-border);
+    color: var(--input-disabled-color);
+    cursor: not-allowed;
+  }
+
+  &:readonly {
+    background-color: var(--input-readonly-background);
+    border: var(--input-readonly-border);
+    color: var(--input-readonly-color);
+    cursor: default;
+  }
+}
+
+.ui-textarea--transparent {
+  background-color: transparent;
+  border: 0;
+}
+
+.ui-textarea--animate {
+  transition: height 0.2s ease-in-out;
+}
+
+.ui-textarea--expand {
+  overflow: hidden;
+  resize: none;
+}

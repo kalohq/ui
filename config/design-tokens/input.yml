@@ -1,0 +1,34 @@
+global:
+  type: border
+  category: input
+imports:
+  - ./color.yml
+props:
+  INPUT_DEFAULT_BACKGROUND:
+    type: color
+    value: '{!WHITE}'
+  INPUT_DEFAULT_BORDER:
+    value: 1px solid {!GREY400}
+  INPUT_DEFAULT_COLOR:
+    type: color
+    value: '{!NAVY600}'
+  INPUT_HOVER_BORDER:
+    value: 1px solid {!GREY500}
+  INPUT_ACTIVE_BORDER:
+    value: 1px solid {!BLUE500}
+  INPUT_DISABLED_BORDER:
+    value: 1px solid {!GREY400}
+  INPUT_DISABLED_BACKGROUND:
+    type: color
+    value: '{!NAVY300}'
+  INPUT_DISABLED_COLOR:
+    type: color
+    value: '{!NAVY600}'
+  INPUT_READONLY_BORDER:
+    value: 1px dashed {!GREY400}
+  INPUT_READONLY_BACKGROUND:
+    type: color
+    value: '{!NAVY300}'
+  INPUT_READONLY_COLOR:
+    type: color
+    value: '{!NAVY600}'

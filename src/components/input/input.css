@@ -1,11 +1,10 @@
 .ui-input {
   min-width: 0;
   width: 100%;
-  color: var(--navy700);
-
-  background-color: #fff;
+  color: var(--input-default-color);
+  background-color: var(--input-default-background);
+  border: var(--input-default-border);
   border-radius: 4px;
-  border: 1px solid var(--grey400);
   padding: 4px 8px 4px 16px;
   -webkit-appearance: none;
 
@@ -14,16 +13,16 @@
   }
 
   &:disabled {
-    background-color: var(--navy300);
-    border: 1px solid var(--grey400);
+    background-color: var(--input-disabled-background);
+    border: var(--input-disabled-border);
+    color: var(--input-disabled-color);
     cursor: not-allowed;
-    color: var(--navy600);
   }
 
   &:read-only {
-    background-color: var(--navy300);
-    border: 1px dashed var(--grey400);
-    color: var(--navy600);
+    background-color: var(--input-readonly-background);
+    border: var(--input-readonly-border);
+    color: var(--input-readonly-color);
   }
 
   &::placeholder {
