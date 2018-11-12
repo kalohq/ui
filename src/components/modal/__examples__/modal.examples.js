@@ -4,6 +4,9 @@ import Modal from '../modal';
 import Button from '../../button';
 import ButtonGroup from '../../button-group';
 import Text from '../../text';
+import FieldRow from '../../field-row';
+import Field from '../../field';
+import Input from '../../input';
 
 class DemoModal extends React.Component {
   constructor() {
@@ -47,22 +50,33 @@ export const examples = [
     render: () => (
       <DemoModal>
         <Modal
-          title="Create Project"
+          title="Create Account"
           actions={
             <ButtonGroup spacing={true} align="right">
-              <Button size="medium" variant="tertiary">
+              <Button size="large" variant="tertiary">
                 Cancel
               </Button>
-              <Button size="medium" variant="primary">
-                Create Project
+              <Button size="large" variant="primary">
+                Create Account
               </Button>
             </ButtonGroup>
           }
         >
-          <Text multiline={true}>
-            An American monkey, after getting drunk on brandy, would never touch
-            it again, and thus is much wiser than most men.
-          </Text>
+          <FieldRow>
+            <Field label="Your name">
+              <Input type="text" placeholder="John Smith" />
+            </Field>
+          </FieldRow>
+          <FieldRow>
+            <Field label="Your email">
+              <Input type="text" placeholder="john.smith@example.net" />
+            </Field>
+          </FieldRow>
+          <FieldRow>
+            <Field label="Choose a password" hint="Minimum of 8 characters">
+              <Input type="text" placeholder="123456" />
+            </Field>
+          </FieldRow>
         </Modal>,
       </DemoModal>
     ),
