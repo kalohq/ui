@@ -165,5 +165,55 @@ export const examples = [
         </Modal>,
       </DemoModal>
     ),
+    html: () => (
+      <div id="demo-container">
+        <div
+          className="ui-modal"
+          role="dialog"
+          aria-labelledby="dialog-title"
+          aria-describedby="dialog-description"
+        >
+          <div className="ui-modal__modal">
+            <header className="ui-modal__modal__header ui-modal__modal__header--fixed">
+              <h2 className="heading--large">Create Project</h2>
+            </header>
+
+            <main
+              className="ui-modal__modal__main"
+              aria-describedby="dialog-description"
+            >
+              {Array.apply(0, Array(10)).map(x => (
+                <p key={x}>
+                  Etiam aliquet turpis non est euismod egestas. Morbi fermentum
+                  maximus quam, ac porta lorem auctor ac. Vivamus sodales libero
+                  nec turpis iaculis, eu mollis risus ornare. Aliquam porttitor,
+                  metus vitae dignissim euismod, lacus felis luctus massa,
+                  eleifend convallis arcu odio cursus felis. Pellentesque eu
+                  tincidunt lacus. Etiam suscipit eget justo ac vulputate.
+                  Phasellus nec tempus nunc, et egestas dui. Praesent
+                  ullamcorper eros et aliquam ullamcorper. Cras eget metus
+                  feugiat, bibendum nisl id, facilisis ipsum.
+                </p>
+              ))}
+            </main>
+
+            <footer className="ui-modal__modal__footer ui-modal__modal__footer--fixed">
+              <div className="ui-btn-group ui-btn-group--align-right">
+                <button
+                  className="ui-btn ui-btn--medium ui-btn--tertiary"
+                  onClick={toggleHtmlModal}
+                >
+                  Cancel
+                </button>
+                <button className="ui-btn ui-btn--medium ui-btn--primary">
+                  Create Project
+                </button>
+              </div>
+            </footer>
+          </div>
+        </div>
+        <Button onClick={toggleHtmlModal}>Open Modal</Button>
+      </div>
+    ),
   },
 ];
