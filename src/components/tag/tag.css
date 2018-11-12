@@ -1,5 +1,6 @@
 .ui-tag {
   display: inline-flex;
+  flex-grow: 0;
   background-color: var(--navy300);
   color: var(--navy600);
   font-size: 12px;
