@@ -45,12 +45,12 @@ export default class Modal extends PureComponent<TProps> {
   }
 
   preventBackgroundScrolling(type: 'add' | 'remove') {
-    if (document.querySelector('body')) {
+    if (document.body) {
       if (type === 'add') {
-        document.querySelector('body').style.cssText =
+        document.body.style.cssText =
           'overflow: hidden; position: fixed; width: 100%; height: 100%';
       } else {
-        document.querySelector('body').style.cssText = '';
+        document.body.style.cssText = '';
       }
     }
   }
@@ -63,6 +63,10 @@ export default class Modal extends PureComponent<TProps> {
     } else {
       this.preventBackgroundScrolling('remove');
     }
+  }
+
+  componentWillUnmount() {
+    this.preventBackgroundScrolling('remove');
   }
 
   render() {
