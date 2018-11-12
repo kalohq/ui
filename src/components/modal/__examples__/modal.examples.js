@@ -28,7 +28,7 @@ class DemoModal extends React.Component {
         <Button onClick={this.toggleOpen}>Open Modal</Button>
         {React.cloneElement(this.props.children[0], {
           open: this.state.open,
-          onClose: this.toggleOpen,
+          onClose: !this.props.noClose && this.toggleOpen,
         })}
       </div>
     );
@@ -106,6 +106,64 @@ export const examples = [
         </div>
         <Button onClick={toggleHtmlModal}>Open Modal</Button>
       </div>
+    ),
+  },
+  {
+    title: 'Remove default footer',
+    render: () => (
+      <DemoModal>
+        <Modal title="Create Project">
+          <Text multiline={true}>
+            An American monkey, after getting drunk on brandy, would never touch
+            it again, and thus is much wiser than most men.
+          </Text>
+        </Modal>,
+      </DemoModal>
+    ),
+  },
+  {
+    title: 'A non-dismissable modal',
+    render: () => (
+      <DemoModal noClose={true}>
+        <Modal title="Warning">
+          <Text multiline={true}>This modal can't be closed</Text>
+        </Modal>,
+      </DemoModal>
+    ),
+  },
+  {
+    title: 'Tall body',
+    render: () => (
+      <DemoModal>
+        <Modal
+          hasFixedFooter={true}
+          hasFixedHeader={true}
+          title="Create Project"
+          actions={
+            <ButtonGroup spacing={true} align="right">
+              <Button size="large" variant="tertiary">
+                Cancel
+              </Button>
+              <Button size="large" variant="primary">
+                Create Project
+              </Button>
+            </ButtonGroup>
+          }
+        >
+          {Array.apply(0, Array(10)).map(x => (
+            <Text multiline={true} key={x}>
+              Etiam aliquet turpis non est euismod egestas. Morbi fermentum
+              maximus quam, ac porta lorem auctor ac. Vivamus sodales libero nec
+              turpis iaculis, eu mollis risus ornare. Aliquam porttitor, metus
+              vitae dignissim euismod, lacus felis luctus massa, eleifend
+              convallis arcu odio cursus felis. Pellentesque eu tincidunt lacus.
+              Etiam suscipit eget justo ac vulputate. Phasellus nec tempus nunc,
+              et egestas dui. Praesent ullamcorper eros et aliquam ullamcorper.
+              Cras eget metus feugiat, bibendum nisl id, facilisis ipsum.
+            </Text>
+          ))}
+        </Modal>,
+      </DemoModal>
     ),
   },
 ];

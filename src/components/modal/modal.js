@@ -19,6 +19,10 @@ type TProps = {
   actions?: React$Node,
   /** Is the modal open or not */
   open?: boolean,
+  /** Allows content to scroll underneath the header */
+  hasFixedHeader?: boolean,
+  /** Allows content to scroll underneath the footer */
+  hasFixedFooter?: boolean,
 };
 
 export default class Modal extends PureComponent<TProps> {
@@ -40,15 +44,37 @@ export default class Modal extends PureComponent<TProps> {
     if (this.props.onClose) this.props.onClose();
   }
 
+  preventBackgroundScrolling(type: 'add' | 'remove') {
+    if (document.querySelector('body')) {
+      if (type === 'add') {
+        document.querySelector('body').style.cssText =
+          'overflow: hidden; position: fixed; width: 100%; height: 100%';
+      } else {
+        document.querySelector('body').style.cssText = '';
+      }
+    }
+  }
+
   componentWillReceiveProps(nextProps: TProps) {
     if (nextProps.open === true && !this.props.open && this.modalElement) {
       // $FlowFixMe
       this.modalElement.focus();
+      this.preventBackgroundScrolling('add');
+    } else {
+      this.preventBackgroundScrolling('remove');
     }
   }
 
   render() {
-    const {title, open, actions, children} = this.props;
+    const {
+      title,
+      open,
+      actions,
+      children,
+      hasFixedFooter,
+      hasFixedHeader,
+      onClose,
+    } = this.props;
 
     return (
       <HotKeys handlers={this.__handlers__}>
@@ -67,15 +93,22 @@ export default class Modal extends PureComponent<TProps> {
               this.modalElement = modal;
             }}
           >
-            <header className={styles['ui-modal__modal__header']}>
+            <header
+              className={cx({
+                [styles['ui-modal__modal__header']]: true,
+                [styles['ui-modal__modal__header--fixed']]: !!hasFixedHeader,
+              })}
+            >
               <Heading size="large" id="dialog-title">
                 {title}
               </Heading>
-              <SeamlessButton
-                size="medium"
-                icon="close"
-                onClick={this.props.onClose}
-              />
+              {onClose && (
+                <SeamlessButton
+                  size="medium"
+                  icon="close"
+                  onClick={this.props.onClose}
+                />
+              )}
             </header>
 
             <main
@@ -85,9 +118,16 @@ export default class Modal extends PureComponent<TProps> {
               {children}
             </main>
 
-            <footer className={styles['ui-modal__modal__footer']}>
-              {actions}
-            </footer>
+            {actions && (
+              <footer
+                className={cx({
+                  [styles['ui-modal__modal__footer']]: true,
+                  [styles['ui-modal__modal__footer--fixed']]: !!hasFixedFooter,
+                })}
+              >
+                {actions}
+              </footer>
+            )}
           </div>
         </div>
       </HotKeys>
