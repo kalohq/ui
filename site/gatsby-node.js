@@ -178,6 +178,19 @@ exports.modifyWebpackConfig = ({config, stage}) => {
           customProperties: {
             variables: cssVariables,
           },
+          rem: {
+            rootValue: 10,
+          },
+        },
+      }),
+      // eslint-disable-next-line global-require
+      require('cssnano')({
+        cssnano: {
+          normalizeUrl: false,
+          discardEmpty: false,
+          core: false,
+          minifyFontValues: false,
+          discardUnused: false,
         },
       }),
     ],
