@@ -9,6 +9,7 @@
   text-overflow: ellipsis;
   height: 24px;
   line-height: 1.4;
+  flex-grow: 0;
 }
 
 .ui-lozenge--variant-red {
