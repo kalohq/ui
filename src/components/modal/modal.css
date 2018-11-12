@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: color(var(--navy700) a(90%));
+  background-color: red;
   z-index: 99999; /* Move to token */
   opacity: 0;
   visibility: hidden;
@@ -36,7 +36,7 @@
     max-width: 620px;
     max-height: calc(100% - 96px);
     border-radius: 4px;
-    box-shadow: 0 14px 25px color(var(--navy700) a(50%));
+    box-shadow: 0 14px 25px red;
   }
 }
 
