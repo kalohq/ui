@@ -1,43 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`H3 should allow weight to be overridden 1`] = `
-.emotion-2 {
-  display: block;
-  vertical-align: bottom;
-  font-family: 'WebFaktSoftPro',sans-serif;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  cursor: inherit;
-  text-align: unset;
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-  font-weight: 300;
-  font-size: 14px;
-  color: rgb(55,69,97);
-  line-height: 1.25em !important;
-}
-
-.emotion-2:hover {
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-}
-
-.emotion-2 strong {
-  font-weight: 500;
-}
-
-.emotion-2 > i {
-  position: relative;
-  left: 2px;
-  vertical-align: top;
-}
-
 <h3
-  className="emotion-0 emotion-1 emotion-2"
-  color="navy700"
-  onClick={undefined}
-  size="small"
+  className="heading heading--small color-navy700 emotion-0 emotion-1"
   style={Object {}}
 >
   An H3 Tag
@@ -45,43 +10,8 @@ exports[`H3 should allow weight to be overridden 1`] = `
 `;
 
 exports[`H3 should render shallow component ok 1`] = `
-.emotion-2 {
-  display: block;
-  vertical-align: bottom;
-  font-family: 'WebFaktSoftPro',sans-serif;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  cursor: inherit;
-  text-align: unset;
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-  font-weight: 600;
-  font-size: 14px;
-  color: rgb(55,69,97);
-  line-height: 1.25em !important;
-}
-
-.emotion-2:hover {
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-}
-
-.emotion-2 strong {
-  font-weight: 500;
-}
-
-.emotion-2 > i {
-  position: relative;
-  left: 2px;
-  vertical-align: top;
-}
-
 <h3
-  className="emotion-0 emotion-1 emotion-2"
-  color="navy700"
-  onClick={undefined}
-  size="small"
+  className="heading heading--small color-navy700 emotion-0 emotion-1"
   style={Object {}}
 >
   An H3 Tag

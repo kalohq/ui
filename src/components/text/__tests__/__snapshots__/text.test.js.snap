@@ -4,7 +4,6 @@ exports[`Text should render green text 1`] = `
 .emotion-1 {
   display: inline-block;
   vertical-align: bottom;
-  font-family: 'WebFaktSoftPro',sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -12,9 +11,10 @@ exports[`Text should render green text 1`] = `
   text-align: unset;
   -webkit-text-decoration: inherit;
   text-decoration: inherit;
+  line-height: 1.4;
   font-weight: 400;
   font-size: 16px;
-  color: rgb(62,179,138);
+  color: rgb(78,210,164);
 }
 
 .emotion-1:hover {
@@ -41,7 +41,6 @@ exports[`Text should render large text 1`] = `
 .emotion-1 {
   display: inline-block;
   vertical-align: bottom;
-  font-family: 'WebFaktSoftPro',sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -49,9 +48,10 @@ exports[`Text should render large text 1`] = `
   text-align: unset;
   -webkit-text-decoration: inherit;
   text-decoration: inherit;
+  line-height: 1.4;
   font-weight: 400;
   font-size: 18px;
-  color: rgb(55,69,97);
+  color: rgb(48,44,80);
 }
 
 .emotion-1:hover {
@@ -78,7 +78,6 @@ exports[`Text should render shallow component ok 1`] = `
 .emotion-1 {
   display: inline-block;
   vertical-align: bottom;
-  font-family: 'WebFaktSoftPro',sans-serif;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -86,9 +85,10 @@ exports[`Text should render shallow component ok 1`] = `
   text-align: unset;
   -webkit-text-decoration: inherit;
   text-decoration: inherit;
+  line-height: 1.4;
   font-weight: 400;
   font-size: 16px;
-  color: rgb(55,69,97);
+  color: rgb(48,44,80);
 }
 
 .emotion-1:hover {

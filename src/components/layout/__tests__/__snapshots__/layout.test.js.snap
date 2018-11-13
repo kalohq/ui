@@ -70,7 +70,7 @@ exports[`Box should allow passing spacing scales 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 8px 16px 32px;
+  margin: 8px 16px 24px;
   padding-top: 8px;
 }
 

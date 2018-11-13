@@ -5,7 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ul
-    className="e13caurm0 css-1tl1wmz"
+    className="e13caurm0 css-1tkozha"
     style={Object {}}
     wrap={undefined}
   >
@@ -70,7 +70,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "className": "e13caurm0 css-1tl1wmz",
+      "className": "e13caurm0 css-1tkozha",
       "style": Object {},
       "wrap": undefined,
     },
@@ -84,7 +84,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "className": "e13caurm0 css-1tl1wmz",
+        "className": "e13caurm0 css-1tkozha",
         "style": Object {},
         "wrap": undefined,
       },
@@ -108,7 +108,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ul
-    className="e13caurm0 css-1tl1wmz"
+    className="e13caurm0 css-1tkozha"
     style={Object {}}
     wrap={undefined}
   >
@@ -173,7 +173,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "className": "e13caurm0 css-1tl1wmz",
+      "className": "e13caurm0 css-1tkozha",
       "style": Object {},
       "wrap": undefined,
     },
@@ -187,7 +187,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "className": "e13caurm0 css-1tl1wmz",
+        "className": "e13caurm0 css-1tkozha",
         "style": Object {},
         "wrap": undefined,
       },
