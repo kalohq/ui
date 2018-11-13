@@ -3,9 +3,10 @@
   background-color: var(--white);
   border: 1px solid var(--navy500);
   color: var(--navy700);
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 400;
-  padding: 4px 16px;
+  line-height: 1.6rem;
+  padding: 0.4rem 1.6rem;
   border-radius: 12px;
   white-space: nowrap;
   flex-grow: 0;
@@ -19,7 +20,7 @@
 }
 
 .ui-skill-tag--removable {
-  padding: 4px 8px 4px 16px;
+  padding: 0.4rem 0.8rem 0.4rem 1.6rem;
 }
 
 .ui-skill-tag__remove {
@@ -29,7 +30,7 @@
   height: 16px;
   text-align: center;
   padding: 0;
-  margin-left: 8px;
+  margin-left: 0.8rem;
   cursor: pointer;
   border-radius: 50%;
   border: 1px solid transparent;

@@ -2,13 +2,13 @@
   display: inline-block;
   border-radius: 3px;
   font-size: 1.2rem;
-  padding: 4px 8px;
+  padding: 0.4rem 0.8rem;
   max-width: 180px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 24px;
-  line-height: 1.4;
+  height: 2.4rem;
+  line-height: 1.6rem;
   flex-grow: 0;
 }
 
