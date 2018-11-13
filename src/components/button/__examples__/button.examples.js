@@ -165,6 +165,13 @@ export const examples = [
         loneIcon={true}
       />
     ),
+    html: () => (
+      <button className="ui-btn ui-btn--large ui-btn--tertiary ui-btn--lone-icon">
+        <svg width="18" height="18" aria-hidden="true">
+          <use xlinkHref="#mode_edit" />
+        </svg>
+      </button>
+    ),
   },
   {
     title: 'Sizing',

@@ -15,6 +15,10 @@
   }
 }
 
+.ui-btn--lone-icon {
+  justify-content: center;
+}
+
 /**
   * Sizing
   */
@@ -26,6 +30,7 @@
 
   &.ui-btn--lone-icon {
     width: 30px;
+    padding: 0;
   }
 }
 
@@ -36,6 +41,7 @@
 
   &.ui-btn--lone-icon {
     width: 36px;
+    padding: 0;
   }
 }
 
@@ -46,6 +52,7 @@
 
   &.ui-btn--lone-icon {
     width: 46px;
+    padding: 0;
   }
 }
 
@@ -56,6 +63,7 @@
 
   &.ui-btn--lone-icon {
     width: 52px;
+    padding: 0;
   }
 }
 
