@@ -3,15 +3,20 @@
   border: 0;
   padding: 0;
   border-radius: 4px;
+  cursor: pointer;
+}
 
-  &:hover {
-    background-color: var(--grey300);
-  }
+.ui-seamless-button:hover {
+  background-color: var(--grey300);
+}
 
-  &::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-  }
+.ui-seamless-button:::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.ui-seamless-button svg {
+  fill: var(--navy700);
 }
 
 .ui-seamless-button--small {
