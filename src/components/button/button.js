@@ -154,11 +154,11 @@ export class Button extends PureComponent<TProps, TState> {
     const customBrandStyles = (theme: Object) => css`
       background-color: ${theme.user.primary};
 
-      &:hover {
+      &:not(:disabled):hover {
         background-color: ${lighten(0.1, theme.user.primary)};
       }
 
-      &:active {
+      &:not(:disabled):active {
         background-color: ${darken(0.1, theme.user.primary)};
       }
 

@@ -9,6 +9,8 @@
   align-items: center;
   vertical-align: middle;
   transition: background 0.3s ease-out, color 0.2s ease-out;
+  background-color: var(--white);
+  color: var(--navy700);
 
   &:focus {
     outline: 0;
