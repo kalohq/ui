@@ -51,6 +51,7 @@ export type TProps = {
   inline?: boolean,
   /** Set a width for the field label */
   labelWidth?: number,
+  useLegacyLayout?: boolean,
 };
 
 /**
@@ -77,6 +78,7 @@ export default function Field(props: TProps) {
     labelWidth,
     onBlur,
     controlChildren = true,
+    useLegacyLayout = true,
     ...otherProps
   } = props;
 
@@ -84,16 +86,16 @@ export default function Field(props: TProps) {
 
   const disabled = permissions.length > 0;
 
+  const _classNames = cx(
+    {
+      [coreStyles['ui-field']]: true,
+      [coreStyles['ui-field--legacy']]: !!useLegacyLayout,
+    },
+    className
+  );
+
   return (
-    <UIBase
-      className={cx(
-        coreStyles['ui-field'],
-        coreStyles['ui-field--legacy'],
-        className
-      )}
-      onClick={onClick}
-      {...otherProps}
-    >
+    <UIBase className={_classNames} onClick={onClick} {...otherProps}>
       {label && (
         <Box
           flexDirection="row"

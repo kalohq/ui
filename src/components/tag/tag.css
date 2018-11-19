@@ -34,6 +34,11 @@
   padding-right: 0.8rem;
 }
 
+.ui-tag--removable {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
 .ui-tag--avatar .ui-avatar {
   margin-right: 0.8rem;
 }
@@ -49,6 +54,7 @@
   cursor: pointer;
   border-radius: 50%;
   border: 1px solid transparent;
+  display: flex;
 }
 
 .ui-tag__remove:active {

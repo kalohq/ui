@@ -52,7 +52,7 @@ export default function Heading(props: TProps) {
       [styles.heading]: true,
       [styles[`heading--${size}`]]: true,
       [styles['heading--interactive']]: hover === 'interactive',
-      [styles['heading--multiline']]: multiline,
+      [styles['heading--ellipsis']]: !multiline,
       [colors[`color-${color}`]]: true,
     },
     className

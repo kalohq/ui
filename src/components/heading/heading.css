@@ -1,8 +1,22 @@
+.heading {
+  text-overflow: initial;
+  overflow: visible;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
 .heading > i {
   position: relative;
   left: 2px;
   top: 6px;
   vertical-align: top;
+}
+
+.heading--ellipsis {
+  overflow: hidden;
+  white-space: unset;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .heading--interactive {

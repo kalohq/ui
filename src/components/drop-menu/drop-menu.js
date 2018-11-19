@@ -103,10 +103,10 @@ export default class PaperMenu extends PureComponent<TProps> {
     return (
       <Sticky anchor={anchor} offset={offset} zIndex={zIndex} {...sticky}>
         <CSSTransitionGroup
-          transitionName="t-scale"
-          transitionEnterTimeout={300}
-          transitionLeaveTimeout={300}
-          transitionAppearTimeout={300}
+          transitionName="t-slide"
+          transitionEnterTimeout={220}
+          transitionLeaveTimeout={220}
+          transitionAppearTimeout={220}
         >
           {open && (
             <div

@@ -13,28 +13,28 @@
 }
 
 .ui-lozenge--variant-red {
-  background-color: var(--pink300);
-  color: var(--pink600);
+  background-color: #ffebee;
+  color: #c34a57;
 }
 
 .ui-lozenge--variant-green {
-  background-color: var(--green300);
-  color: var(--green600);
+  background-color: #e5f7f1;
+  color: #298665;
 }
 
 .ui-lozenge--variant-purple {
-  background-color: var(--purple300);
-  color: var(--purple600);
+  background-color: #f3eefc;
+  color: #604e83;
 }
 
 .ui-lozenge--variant-orange {
-  background-color: var(--orange300);
-  color: var(--orange600);
+  background-color: #fff6d8;
+  color: #d89118;
 }
 
 .ui-lozenge--variant-blue {
-  background-color: var(--blue300);
-  color: var(--blue600);
+  background-color: #e8fafc;
+  color: #2ba7c2;
 }
 
 .ui-lozenge--variant-grey {

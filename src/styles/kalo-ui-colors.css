@@ -157,3 +157,7 @@
 .color-none {
   color: none;
 }
+
+.color-inherit {
+  color: inherit;
+}

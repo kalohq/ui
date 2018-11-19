@@ -21,6 +21,8 @@ type TProps = {
   justifyContent?: 'left' | 'center',
   className?: string | Object,
   title?: string,
+  icon?: string,
+  fullWidth?: boolean,
 };
 
 export default function Alert(props: TProps) {
@@ -28,9 +30,11 @@ export default function Alert(props: TProps) {
     children,
     title,
     showIcon = true,
+    icon,
     type = 'info',
     justifyContent = 'center',
     className,
+    fullWidth,
     ...otherProps
   } = props;
 
@@ -43,12 +47,15 @@ export default function Alert(props: TProps) {
         {
           [styles['ui-alert']]: true,
           [styles[`ui-alert--${type}`]]: true,
+          [styles[`ui-alert--full-width`]]: !!fullWidth,
         },
         className
       )}
       {...otherProps}
     >
-      {showIcon && <Icon color="currentColor">{TYPE_ICON_MAP[type]}</Icon>}
+      {showIcon && (
+        <Icon color="currentColor">{icon ? icon : TYPE_ICON_MAP[type]}</Icon>
+      )}
       <div className={styles['ui-alert__content']}>
         {title && <span className={styles['ui-alert__title']}>{title}</span>}
         {children && (

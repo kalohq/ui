@@ -9,29 +9,35 @@
   padding: 1.6rem 2.4rem;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.11);
   max-width: 32rem;
+}
 
-  & svg {
-    flex-shrink: 0;
-  }
+.ui-alert svg {
+  flex-shrink: 0;
+}
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    padding-left: 8px;
-  }
+.ui-alert__content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 8px;
+}
 
-  &__title {
-    font-weight: 600;
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-  }
+.ui-alert__title {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
 
-  &__message {
-    font-weight: 400;
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-    margin-top: 8px;
-  }
+.ui-alert__message {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  margin-top: 8px;
+}
+
+.ui-alert--full-width {
+  max-width: unset;
+  width: 100%;
+  flex: 1;
 }
 
 .ui-alert--info {

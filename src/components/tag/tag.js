@@ -21,6 +21,7 @@ export default function Tag(props: TProps) {
     [styles['ui-tag']]: true,
     [styles['ui-tag--link']]: isLink,
     [styles['ui-tag--avatar']]: avatar,
+    [styles['ui-tag--removable']]: !!onRemove,
   });
 
   return (
