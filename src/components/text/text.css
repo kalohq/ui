@@ -1,17 +1,105 @@
-.p {
+.ui-text {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  cursor: inherit;
+  line-height: 1.4;
 }
 
-.text-align-left {
+.ui-text--interactive {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.ui-text--interactive:hover {
+  text-decoration: underline;
+}
+
+.ui-text--not-interactive {
+  cursor: default;
+}
+
+.ui-text--align-left {
   text-align: left;
 }
 
-.text-align-center {
+.ui-text--align-center {
   text-align: center;
 }
 
-.text-align-right {
+.ui-text--align-right {
   text-align: right;
+}
+
+.ui-text--align-unset {
+  text-align: unset;
+}
+
+.ui-text--align-initial {
+  text-align: initial;
+}
+
+.ui-text--weight-light {
+  font-weight: 300;
+}
+
+.ui-text--weight-normal {
+  font-weight: 400;
+}
+
+.ui-text--weight-medium {
+  font-weight: 500;
+}
+
+.ui-text--weight-semi-bold {
+  font-weight: 600;
+}
+
+.ui-text--weight-bold {
+  font-weight: 700;
+}
+
+.ui-text--size-extra-extra-small {
+  font-size: 1rem;
+}
+
+.ui-text--size-extra-small {
+  font-size: 1.2rem;
+}
+
+.ui-text--size-small {
+  font-size: 1.4rem;
+}
+
+.ui-text--size-medium {
+  font-size: 1.6rem;
+}
+
+.ui-text--size-large {
+  font-size: 1.8rem;
+}
+
+.ui-text--size-extra-large {
+  font-size: 2.4rem;
+}
+
+.ui-text--size-extra-extra-large {
+  font-size: 3.2rem;
+}
+
+.ui-text--multiline {
+  white-space: normal;
+  text-overflow: initial;
+  overflow: visible;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.ui-text--no-underline,
+.ui-text--no-underline:hover {
+  text-decoration: none;
+}
+
+.ui-text strong {
+  font-weight: 600;
 }
