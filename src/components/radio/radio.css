@@ -21,6 +21,7 @@
     border: 1px solid var(--grey500);
     transition: 100ms ease-in-out background-color, border-color;
     background-color: var(--white);
+    flex-shrink: 0;
   }
 }
 
@@ -57,6 +58,28 @@
 .ui-radio input:not(:disabled):not(:checked) ~ label:hover:before {
   background-color: var(--grey200);
   border-color: var(--navy600);
+}
+
+.ui-radio__label-group {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+.ui-radio__label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--navy700);
+  line-height: 1.6rem;
+  margin-top: 2px;
+}
+
+.ui-radio__hint {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+  color: var(--navy600);
+  margin-top: 4px;
 }
 
 .ui-radio--small label:before {

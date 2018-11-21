@@ -3,12 +3,10 @@ import * as React from 'react';
 import {isString, uniqueId} from 'lodash';
 import cx from 'classnames';
 
-import {TEXT_SIZE} from '../text/constants';
-import Text from '../text';
 import {Box} from '../layout';
 import {pickStyles} from '../../utils/style';
 
-import coreStyles from './radio.css';
+import styles from './radio.css';
 
 type RadioProps = {
   /** Is the radio button checked */
@@ -23,6 +21,8 @@ type RadioProps = {
   onClick?: Function,
   /** A name to pass down to the DOM - useful for testing */
   name?: string,
+  /** A secondary label to display under the label */
+  hint?: string,
 };
 
 export default function Radio(props: RadioProps) {
@@ -31,6 +31,7 @@ export default function Radio(props: RadioProps) {
     size = 'medium',
     disabled,
     label,
+    hint,
     onClick,
     name,
     ...otherProps
@@ -39,8 +40,8 @@ export default function Radio(props: RadioProps) {
   const id = uniqueId('radio');
 
   const _classNames = cx({
-    [coreStyles['ui-radio']]: true,
-    [coreStyles[`ui-radio--${size}`]]: size,
+    [styles['ui-radio']]: true,
+    [styles[`ui-radio--${size}`]]: size,
   });
 
   return (
@@ -57,16 +58,13 @@ export default function Radio(props: RadioProps) {
         disabled={disabled}
         onChange={() => {}}
       />
+
       <label htmlFor={id} onClick={!disabled && onClick}>
         {label && isString(label) ? (
-          <Text
-            marginLeft={10}
-            size={size === 'small' ? TEXT_SIZE.EXTRA_SMALL : TEXT_SIZE.SMALL}
-            color="navy600"
-            multiline={true}
-          >
-            {label}
-          </Text>
+          <div className={styles['ui-radio__label-group']}>
+            <span className={styles['ui-radio__label']}>{label}</span>
+            {hint && <span className={styles['ui-radio__hint']}>{hint}</span>}
+          </div>
         ) : (
           label && label
         )}

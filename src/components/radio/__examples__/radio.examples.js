@@ -80,4 +80,46 @@ export const examples = [
       </span>
     ),
   },
+  {
+    title: 'With hint',
+    render: () => (
+      <span>
+        <DemoRadio
+          label="Enable email notifications"
+          hint="This will override any previous settings"
+          checked={false}
+          size="medium"
+          marginBottom={8}
+        />
+        <DemoRadio label="Turn off notifications" checked={true} size="small" />
+      </span>
+    ),
+    html: () => (
+      <span>
+        <div className="ui-radio ui-radio--medium">
+          <input type="radio" id="4" />
+          <label htmlFor="4">
+            <div className="ui-radio__label-group">
+              <span className="ui-radio__label">
+                Enable email notifications
+              </span>
+              <span className="ui-radio__hint">
+                This will override any previous settings
+              </span>
+            </div>
+          </label>
+        </div>
+        <div className="ui-radio ui-radio--medium">
+          <input type="radio" id="5" />
+          <label htmlFor="5">
+            <div className="ui-radio__label-group">
+              <span className="ui-radio__label">
+                Disable email notifications
+              </span>
+            </div>
+          </label>
+        </div>
+      </span>
+    ),
+  },
 ];
