@@ -64,12 +64,14 @@ hr {
 }
 
 a {
-  color: inherit;
+  color: var(--navy700);
   text-decoration: underline;
+  cursor: pointer;
 }
 
 a:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 /** Sane defined list default */

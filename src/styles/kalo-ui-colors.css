@@ -161,3 +161,63 @@
 .color-inherit {
   color: inherit;
 }
+
+/** Legacy Colors - These are here for backwards compatibility */
+.color-navy {
+  color: var(--navy700);
+}
+
+.color-green {
+  color: var(--green500);
+}
+
+.color-pink {
+  color: var(--pink500);
+}
+
+.color-blue {
+  color: var(--blue500);
+}
+.color-purple {
+  color: var(--purple500);
+}
+
+.color-orange {
+  color: var(--orange500);
+}
+
+.color-grey {
+  color: var(--grey500);
+}
+
+.color-red {
+  color: var(--pink500);
+}
+
+.color-snow {
+  color: var(--grey300);
+}
+
+.color-platinum {
+  color: var(--grey400);
+}
+
+.color-silver {
+  color: var(--grey500);
+}
+
+.color-slate {
+  color: var(--navy600);
+}
+
+.color-charcoal {
+  color: var(--navy700);
+}
+
+.color-dark-grey {
+  color: var(--navy700);
+}
+
+.color-light-grey {
+  color: var(--grey500);
+}
