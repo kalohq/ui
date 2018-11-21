@@ -7,6 +7,7 @@ export {default as H3} from './h3';
 export {default as H4} from './h4';
 export {default as Heading} from './heading';
 export {default as Text} from './text';
+export {default as HelperText} from './helper-text';
 
 /**
  * Layout
