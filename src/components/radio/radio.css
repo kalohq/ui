@@ -25,7 +25,7 @@
 }
 
 .ui-radio input:checked ~ label:before {
-  background-color: var(--blue500);
+  background-color: var(--purple500);
   border: 1px solid transparent;
 }
 

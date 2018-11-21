@@ -39,9 +39,9 @@
 }
 
 .ui-checkbox input:checked ~ label:before {
-  background-image: url('data:image/svg+xml;charset=utf-8,<svg fill="#54C3DB" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>');
-  background-color: var(--grey200);
-  border: 1px solid var(--blue500);
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg fill="#fff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>');
+  background-color: var(--purple500);
+  border: 1px solid var(--purple500);
 }
 
 .ui-checkbox input:disabled:checked ~ label:before {
@@ -51,9 +51,9 @@
 }
 
 .ui-checkbox input:indeterminate ~ label:before {
-  background-image: url('data:image/svg+xml;charset=utf-8,<?xml version="1.0" encoding="UTF-8"?><svg fill="#54C3DB" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M19 13H5v-2h14v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
-  background-color: var(--grey200);
-  border: 1px solid var(--blue500);
+  background-image: url('data:image/svg+xml;charset=utf-8,<?xml version="1.0" encoding="UTF-8"?><svg fill="#fff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M19 13H5v-2h14v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-color: var(--purple500);
+  border: 1px solid var(--purple500);
 }
 
 .ui-checkbox input:not(:disabled) ~ label {
