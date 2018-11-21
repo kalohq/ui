@@ -20,7 +20,7 @@
 
   &:focus {
     outline: 0;
-    border: 1px solid var(--blue500);
+    border: 1px solid var(--grey600);
   }
 
   &:disabled {

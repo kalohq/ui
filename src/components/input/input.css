@@ -34,7 +34,7 @@
   }
 
   &:not(:read-only):not(:disabled):focus {
-    border: 1px solid var(--blue500);
+    border: 1px solid var(--grey600);
   }
 }
 
