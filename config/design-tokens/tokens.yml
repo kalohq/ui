@@ -1,6 +1,7 @@
 props: {}
 imports:
   - ./color.yml
+  - ./gradients.yml
   - ./font-weight.yml
   - ./font-size.yml
   - ./box-shadow.yml
