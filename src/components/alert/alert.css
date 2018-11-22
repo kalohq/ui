@@ -3,12 +3,12 @@
   position: relative;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: center;
-  flex-grow: 0;
+  justify-content: flex-start;
   border-radius: 4px;
   padding: 1.6rem 2.4rem;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.11);
-  max-width: 32rem;
+  width: 100%;
+  flex: 1;
 }
 
 .ui-alert svg {
@@ -32,12 +32,6 @@
   font-size: 1.2rem;
   line-height: 1.6rem;
   margin-top: 8px;
-}
-
-.ui-alert--full-width {
-  max-width: unset;
-  width: 100%;
-  flex: 1;
 }
 
 .ui-alert--info {

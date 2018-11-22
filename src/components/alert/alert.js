@@ -22,7 +22,6 @@ type TProps = {
   className?: string | Object,
   title?: string,
   icon?: string,
-  fullWidth?: boolean,
 };
 
 export default function Alert(props: TProps) {
@@ -34,7 +33,6 @@ export default function Alert(props: TProps) {
     type = 'info',
     justifyContent = 'center',
     className,
-    fullWidth,
     ...otherProps
   } = props;
 
@@ -47,7 +45,6 @@ export default function Alert(props: TProps) {
         {
           [styles['ui-alert']]: true,
           [styles[`ui-alert--${type}`]]: true,
-          [styles[`ui-alert--full-width`]]: !!fullWidth,
         },
         className
       )}
