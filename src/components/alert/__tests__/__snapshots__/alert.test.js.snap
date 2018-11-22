@@ -11,7 +11,6 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
 .emotion-1 {
   display: inline-block;
   vertical-align: bottom;
-  margin-right: 8px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -48,42 +47,132 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
       />
     </svg>
   </i>
-  A confirmation alert
+  <div
+    className="ui-alert__content"
+  >
+    <span
+      className="ui-alert__message"
+    >
+      A confirmation alert
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Alert should render a warning alert 1`] = `
-.emotion-1 {
+.emotion-3 {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
 
+.emotion-1 {
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1em;
+  vertical-align: middle;
+  cursor: inherit;
+  font-size: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
 <div
-  className="ui-alert ui-alert--warning emotion-0 emotion-1"
+  className="ui-alert ui-alert--warning emotion-2 emotion-3"
   role="alert"
   style={Object {}}
   type="warning"
 >
-  A warning alert
+  <i
+    className="emotion-0 emotion-1"
+    color="currentColor"
+    onClick={undefined}
+    size={16}
+    style={Object {}}
+    title={undefined}
+  >
+    <svg
+      aria-hidden="true"
+      height={16}
+      width={16}
+    >
+      <use
+        xlinkHref="#error_outline"
+      />
+    </svg>
+  </i>
+  <div
+    className="ui-alert__content"
+  >
+    <span
+      className="ui-alert__message"
+    >
+      A warning alert
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Alert should render shallow component ok 1`] = `
-.emotion-1 {
+.emotion-3 {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
 
+.emotion-1 {
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1em;
+  vertical-align: middle;
+  cursor: inherit;
+  font-size: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
 <div
-  className="ui-alert ui-alert--info emotion-0 emotion-1"
+  className="ui-alert ui-alert--info emotion-2 emotion-3"
   role="alert"
   style={Object {}}
   type="info"
 >
-  A info alert
+  <i
+    className="emotion-0 emotion-1"
+    color="currentColor"
+    onClick={undefined}
+    size={16}
+    style={Object {}}
+    title={undefined}
+  >
+    <svg
+      aria-hidden="true"
+      height={16}
+      width={16}
+    >
+      <use
+        xlinkHref="#info_outline"
+      />
+    </svg>
+  </i>
+  <div
+    className="ui-alert__content"
+  >
+    <span
+      className="ui-alert__message"
+    >
+      A info alert
+    </span>
+  </div>
 </div>
 `;
