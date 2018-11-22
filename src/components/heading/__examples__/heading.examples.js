@@ -20,13 +20,30 @@ export const examples = [
     render: () => <Heading size="small">Create new template</Heading>,
   },
   {
-    title: 'Medium header with icon',
+    title: 'Headings with icon',
     description:
       'An icon can be passed down to display either side of the heading',
     render: () => (
-      <Heading size="medium" icon="lock">
-        Overall performance
-      </Heading>
+      <span>
+        <Heading size="extra-large" icon="lock">
+          Extra Large Header
+        </Heading>
+        <br />
+        <br />
+        <Heading size="large" icon="lock">
+          Large Header
+        </Heading>
+        <br />
+        <br />
+        <Heading size="medium" icon="lock">
+          Medium Header
+        </Heading>
+        <br />
+        <br />
+        <Heading size="small" icon="lock">
+          Small Header
+        </Heading>
+      </span>
     ),
   },
 ];

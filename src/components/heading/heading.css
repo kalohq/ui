@@ -8,8 +8,7 @@
 .heading > i {
   position: relative;
   left: 2px;
-  top: 6px;
-  vertical-align: top;
+  vertical-align: baseline;
 }
 
 .heading--ellipsis {
@@ -60,4 +59,8 @@
   font-weight: 500;
   line-height: 1.2rem;
   text-transform: uppercase;
+}
+
+.heading--extra-large > i {
+  top: 1px;
 }
