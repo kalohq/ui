@@ -30,6 +30,8 @@ type TProps = {
   className?: string,
   /** Should the heading wrap on to multiple lines? */
   multiline?: boolean,
+  /* Text alignment of the heading */
+  align?: 'unset' | 'left' | 'center' | 'right' | 'inherit',
 };
 
 export default function Heading(props: TProps) {
