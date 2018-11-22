@@ -24,7 +24,7 @@ export default function Lozenge(props: TProps) {
   );
 
   return (
-    <UIBase className={_classNames} {...otherProps}>
+    <UIBase className={_classNames} title={String(children)} {...otherProps}>
       {children}
     </UIBase>
   );

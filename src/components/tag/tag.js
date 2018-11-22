@@ -25,7 +25,12 @@ export default function Tag(props: TProps) {
   });
 
   return (
-    <UIBase component="span" className={_classNames} {...otherProps}>
+    <UIBase
+      component="span"
+      className={_classNames}
+      title={String(children)}
+      {...otherProps}
+    >
       {avatar}
       <span className={styles['ui-tag__inner']}>{children}</span>
       {onRemove && (
