@@ -247,7 +247,7 @@ export default class Textarea extends PureComponent<TProps> {
     const _classNames = cx(
       {
         [styles['ui-textarea']]: true,
-        [styles[`ui-textarea--theme-${theme}`]]: theme && theme !== 'default',
+        [styles[`ui-textarea--${theme}`]]: theme && theme !== 'default',
         [styles['ui-textarea--animate']]: animate,
         [styles['ui-textarea--expand']]: expand,
       },

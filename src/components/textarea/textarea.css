@@ -14,11 +14,11 @@
     color: var(--grey500);
   }
 
-  &:hover {
+  &:not(.ui-textarea--transparent):hover {
     border: 1px solid var(--grey500);
   }
 
-  &:focus {
+  &:not(.ui-textarea--transparent):focus {
     outline: 0;
     border: 1px solid var(--grey600);
   }
