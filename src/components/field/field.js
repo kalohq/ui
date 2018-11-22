@@ -89,7 +89,8 @@ export default function Field(props: TProps) {
   const _classNames = cx(
     {
       [coreStyles['ui-field']]: true,
-      [coreStyles['ui-field--legacy']]: !!useLegacyLayout,
+      [coreStyles['ui-field--inline']]: Boolean(inline),
+      [coreStyles['ui-field--legacy']]: Boolean(useLegacyLayout),
     },
     className
   );
