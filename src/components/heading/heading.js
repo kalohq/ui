@@ -43,6 +43,7 @@ export default function Heading(props: TProps) {
     iconPadding = 10,
     component = 'span',
     className,
+    align = 'unset',
     multiline = false,
     ...otherProps
   } = props;
@@ -51,6 +52,7 @@ export default function Heading(props: TProps) {
     {
       [styles.heading]: true,
       [styles[`heading--${size}`]]: true,
+      [styles[`heading--align-${align}`]]: true,
       [styles['heading--interactive']]: hover === 'interactive',
       [styles['heading--ellipsis']]: !multiline,
       [colors[`color-${color}`]]: true,

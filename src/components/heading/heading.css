@@ -64,3 +64,23 @@
 .heading--extra-large > i {
   top: 1px;
 }
+
+.heading--align-unset {
+  text-align: unset;
+}
+
+.heading--align-left {
+  text-align: left;
+}
+
+.heading--align-center {
+  text-align: center;
+}
+
+.heading--align-right {
+  text-align: right;
+}
+
+.heading--align-inherit {
+  text-align: inherit;
+}
