@@ -8,32 +8,15 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
   justify-content: center;
 }
 
-.emotion-1 {
-  display: inline-block;
-  vertical-align: bottom;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  line-height: 1em;
-  vertical-align: middle;
-  cursor: inherit;
-  font-size: 16px;
-  height: 16px;
-  fill: currentColor;
-}
-
 <div
-  className="ui-alert ui-alert--confirmation emotion-2 emotion-3"
+  className="ui-alert ui-alert--confirmation emotion-0 emotion-3"
   role="alert"
   style={Object {}}
   type="confirmation"
 >
   <i
-    className="emotion-0 emotion-1"
-    color="currentColor"
+    className="ui-icon ui-icon--size-16 fill-currentColor emotion-0 emotion-1"
     onClick={undefined}
-    size={16}
     style={Object {}}
     title={undefined}
   >
@@ -67,32 +50,15 @@ exports[`Alert should render a warning alert 1`] = `
   justify-content: center;
 }
 
-.emotion-1 {
-  display: inline-block;
-  vertical-align: bottom;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  line-height: 1em;
-  vertical-align: middle;
-  cursor: inherit;
-  font-size: 16px;
-  height: 16px;
-  fill: currentColor;
-}
-
 <div
-  className="ui-alert ui-alert--warning emotion-2 emotion-3"
+  className="ui-alert ui-alert--warning emotion-0 emotion-3"
   role="alert"
   style={Object {}}
   type="warning"
 >
   <i
-    className="emotion-0 emotion-1"
-    color="currentColor"
+    className="ui-icon ui-icon--size-16 fill-currentColor emotion-0 emotion-1"
     onClick={undefined}
-    size={16}
     style={Object {}}
     title={undefined}
   >
@@ -126,32 +92,15 @@ exports[`Alert should render shallow component ok 1`] = `
   justify-content: center;
 }
 
-.emotion-1 {
-  display: inline-block;
-  vertical-align: bottom;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  line-height: 1em;
-  vertical-align: middle;
-  cursor: inherit;
-  font-size: 16px;
-  height: 16px;
-  fill: currentColor;
-}
-
 <div
-  className="ui-alert ui-alert--info emotion-2 emotion-3"
+  className="ui-alert ui-alert--info emotion-0 emotion-3"
   role="alert"
   style={Object {}}
   type="info"
 >
   <i
-    className="emotion-0 emotion-1"
-    color="currentColor"
+    className="ui-icon ui-icon--size-16 fill-currentColor emotion-0 emotion-1"
     onClick={undefined}
-    size={16}
     style={Object {}}
     title={undefined}
   >
