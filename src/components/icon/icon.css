@@ -1,0 +1,61 @@
+.ui-icon {
+  user-select: none;
+  line-height: 1em;
+  vertical-align: middle;
+  cursor: inherit;
+  display: inline;
+}
+
+.ui-icon--interactive {
+  cursor: pointer;
+}
+
+.ui-icon--size-12 {
+  height: 12px;
+  width: 12px;
+}
+
+.ui-icon--size-14 {
+  height: 14px;
+  width: 14px;
+}
+
+.ui-icon--size-16 {
+  height: 16px;
+  width: 16px;
+}
+
+.ui-icon--size-18 {
+  height: 18px;
+  width: 18px;
+}
+
+.ui-icon--size-20 {
+  height: 20px;
+  width: 20px;
+}
+
+.ui-icon--size-23 {
+  height: 23px;
+  width: 23px;
+}
+
+.ui-icon--size-24 {
+  height: 24px;
+  width: 24px;
+}
+
+.ui-icon--size-26 {
+  height: 26px;
+  width: 26px;
+}
+
+.ui-icon--size-36 {
+  height: 36px;
+  width: 36px;
+}
+
+.ui-icon--size-48 {
+  height: 48px;
+  width: 48px;
+}
