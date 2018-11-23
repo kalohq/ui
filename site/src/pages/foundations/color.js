@@ -4,84 +4,43 @@ import styled from 'react-emotion';
 import DocumentationContent from '../../components/documentation-content';
 import Wrapper from '../../components/wrapper';
 
+import theme from '../../../../src/components/theme';
+
 const colors = [
   {
-    swatch: 'Navy',
-    key: 'navy700',
-    colors: {
-      navy300: '#F9FAFC',
-      navy400: '#C6C7D8',
-      navy500: '#93A6C1',
-      navy600: '#546789',
-      navy700: '#374561',
-    },
+    swatch: 'navy',
+    key: 700,
+    colors: [300, 400, 500, 600, 700],
   },
   {
-    swatch: 'Pink',
-    key: 'pink500',
-    colors: {
-      pink300: '#FBDFE2',
-      pink400: '#FDB3C8',
-      pink500: '#EA5F6E',
-      pink600: '#E05867',
-      pink700: '#C34A57',
-    },
+    swatch: 'pink',
+    key: 500,
+    colors: [300, 400, 500, 600, 700],
   },
   {
-    swatch: 'Orange',
-    key: 'orange500',
-    colors: {
-      orange300: '#FFEDB4',
-      orange400: '#FFCE5E',
-      orange500: '#FDB81C',
-      orange600: '#F6AF0D',
-      orange700: '#D89118',
-    },
+    swatch: 'orange',
+    key: 500,
+    colors: [300, 400, 500, 600, 700],
   },
   {
-    swatch: 'Blue',
-    key: 'blue500',
-    colors: {
-      blue300: '#C1F4FF',
-      blue400: '#65D2EA',
-      blue500: '#54C3DB',
-      blue600: '#4DB8CF',
-      blue700: '#2BA7C2',
-    },
+    swatch: 'blue',
+    key: 500,
+    colors: [300, 400, 500, 600, 700],
   },
   {
-    swatch: 'Green',
-    key: 'green500',
-    colors: {
-      green300: '#D8F0E8',
-      green400: '#4FD2A4',
-      green500: '#3eb38a',
-      green600: '#38A07C',
-      green700: '#298665',
-    },
+    swatch: 'green',
+    key: 500,
+    colors: [300, 400, 500, 600, 700],
   },
   {
-    swatch: 'Purple',
-    key: 'purple500',
-    colors: {
-      purple300: '#e8e2f2',
-      purple400: '#9F81DA',
-      purple500: '#8A70BD',
-      purple600: '#775FA8',
-      purple700: '#604e83',
-    },
+    swatch: 'purple',
+    key: 500,
+    colors: [300, 400, 500, 600, 700],
   },
   {
-    swatch: 'Grey',
-    key: 'grey500',
-    colors: {
-      grey200: '#F9FAFC',
-      grey300: '#EEF4FA',
-      grey400: '#D0D8DF',
-      grey500: '#B0BAC3',
-      grey600: '#89929B',
-      grey700: '#707D8A',
-    },
+    swatch: 'grey',
+    key: 500,
+    colors: [200, 300, 400, 500, 600, 700],
   },
 ];
 
@@ -124,7 +83,7 @@ const StyledSwatchItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: ${props => props.color};
+  background-color: ${props => props.theme.colors[props.color]};
   height: 50px;
   padding: 16px;
 `;
@@ -145,11 +104,13 @@ const StyledSwatchItemColorName = styled.span`
 
 const Swatch = ({colorGroup, name, keyColor}) => (
   <div>
-    <StyledSwatchHeader color={keyColor}>{name}</StyledSwatchHeader>
-    {Object.keys(colorGroup).map(color => (
-      <StyledSwatchItem key={color} color={colorGroup[color]}>
-        <StyledSwatchItemColorName isLight={color.match(/(200|300)/)}>
-          {color} <span>{colorGroup[color]}</span>
+    <StyledSwatchHeader color={`${name}${keyColor}`}>{name}</StyledSwatchHeader>
+    {colorGroup.map(color => (
+      <StyledSwatchItem key={`${name}-${color}`} color={`${name}${color}`}>
+        <StyledSwatchItemColorName
+          isLight={Boolean(color === 200 || color === 300)}
+        >
+          {color} <span>{theme.colors[name + color]}</span>
         </StyledSwatchItemColorName>
       </StyledSwatchItem>
     ))}
@@ -178,7 +139,11 @@ export default () => (
 
       <HorizontalSwatchGroup>
         {colors.map(color => (
-          <HorizontalSwatch key={color.key} color={color.key}>
+          <HorizontalSwatch
+            key={color.swatch}
+            color={`${color.swatch}${color.key}`}
+          >
+            {color.swatch}
             {color.key}
           </HorizontalSwatch>
         ))}
