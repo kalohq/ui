@@ -101,13 +101,15 @@ gulp.task('npm:build-core-css', () =>
  * Core Tasks
  * ===========
  */
-
-gulp.task('build-npm-package', [
-  'npm:css',
-  'npm:js',
-  'npm:copy-files',
-  'npm:copy-design-tokens',
-  'npm:copy-icons',
-  'npm:build-bundled-css',
-  'npm:build-core-css',
-]);
+gulp.task(
+  'build-npm-package',
+  gulp.series(
+    'npm:css',
+    'npm:js',
+    'npm:copy-files',
+    'npm:copy-design-tokens',
+    'npm:copy-icons',
+    'npm:build-bundled-css',
+    'npm:build-core-css'
+  )
+);
