@@ -31,10 +31,10 @@
   "license": "ISC",
   "devDependencies": {
     "@kalo/eslint-config": "6.0.0",
-    "babel-cli": "6.24.1",
-    "babel-core": "6.24.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-eslint": "7.2.3",
-    "babel-istanbul": "0.8.0",
+    "babel-istanbul": "^0.12.2",
     "babel-jest": "22.4.1",
     "babel-loader": "7.0.0",
     "babel-plugin-add-react-displayname": "0.0.5",
