@@ -76,7 +76,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         githubRepoLink
-        sketchKitLink
       }
     }
   }

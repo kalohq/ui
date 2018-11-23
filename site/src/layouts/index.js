@@ -229,7 +229,6 @@ export const pageQuery = graphql`
         version
         title
         githubRepoLink
-        sketchKitLink
       }
     }
     allMarkdownRemark(sort: {fields: [fields___componentName], order: ASC}) {
