@@ -2,22 +2,22 @@
 
 exports[`Input should render shallow component ok 1`] = `
 <fieldset
-  className="e102tui80 css-u3d6jd"
+  className="e102tui80 css-1q7biq6"
   name={undefined}
   onClick={undefined}
   style={Object {}}
 >
   <div
-    className="ui-field ui-field--legacy e1q9f2xp6 css-l4muhg"
+    className="ui-field ui-field--legacy e1q9f2xp6 css-0"
     onClick={undefined}
     style={Object {}}
   >
     <div
-      className="e1q9f2xp0 css-1esq3aq"
+      className="e1q9f2xp0 css-1dvaom5"
       style={Object {}}
     >
       <label
-        className="ui-field-label e1q9f2xp6 css-174xyc9"
+        className="ui-field-label e1q9f2xp6 css-4or71o"
         htmlFor={undefined}
         style={Object {}}
         title={undefined}

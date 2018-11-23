@@ -15,7 +15,7 @@ exports[`Select should render a disabled select 1`] = `
     onClick={undefined}
   >
     <span
-      className="ui-text ui-text--size-small ui-text--weight-normal ui-text--align-unset color-navy500 hover-color-none e1q9f2xp6 css-l4muhg"
+      className="ui-text ui-text--size-small ui-text--weight-normal ui-text--align-unset color-navy500 hover-color-none e1q9f2xp6 css-0"
       onClick={undefined}
       style={Object {}}
     >
@@ -86,7 +86,7 @@ exports[`Select should render a readonly select 1`] = `
     onClick={undefined}
   >
     <span
-      className="ui-text ui-text--size-small ui-text--weight-normal ui-text--align-unset color-navy500 hover-color-none e1q9f2xp6 css-l4muhg"
+      className="ui-text ui-text--size-small ui-text--weight-normal ui-text--align-unset color-navy500 hover-color-none e1q9f2xp6 css-0"
       onClick={undefined}
       style={Object {}}
     >
@@ -157,7 +157,7 @@ exports[`Select should render shallow component ok 1`] = `
     onClick={[Function]}
   >
     <span
-      className="ui-text ui-text--size-small ui-text--weight-normal ui-text--align-unset color-navy700 hover-color-none e1q9f2xp6 css-l4muhg"
+      className="ui-text ui-text--size-small ui-text--weight-normal ui-text--align-unset color-navy700 hover-color-none e1q9f2xp6 css-0"
       onClick={undefined}
       style={Object {}}
     >
