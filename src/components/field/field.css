@@ -1,0 +1,29 @@
+.ui-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: inherit;
+}
+
+.ui-field:not(.ui-field--legacy) {
+  flex: 0 0 auto;
+  margin-top: 2.4rem;
+  margin-left: 2.4rem;
+  min-width: 20rem;
+  max-width: calc(100% - 2.4rem);
+}
+
+.ui-field-row .ui-field {
+  flex: 1 1 20rem;
+}
+
+.ui-field--inline {
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ui-field .ui-field-label {
+  flex-shrink: 0;
+  margin-right: 2.4rem;
+}

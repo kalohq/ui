@@ -9,7 +9,7 @@ import Icon from '../icon';
 import {focusOnMount as _focusOnMount} from '../../utils/react';
 import {cleanProps} from '../../utils/style';
 
-import coreStyles from './input.core.css';
+import coreStyles from './input.css';
 import reactStyles from './input.react.css';
 
 const EXPANDS_BUFFER = 5;
@@ -30,7 +30,7 @@ const INPUT_SIZE_MAP = {
 };
 
 const getInputFont = size =>
-  size && `normal ${INPUT_SIZE_MAP[size].fontSize}px WebFaktSoftPro`;
+  size && `normal ${INPUT_SIZE_MAP[size].fontSize}px system-ui`;
 
 export const InputAddon = (props: {
   content: string | React$Node,

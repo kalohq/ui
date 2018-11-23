@@ -2,19 +2,23 @@ global:
   type: font-size
   category: typography
 props:
+  FONT_SIZE_HEADING_EXTRA_LARGE:
+    value: 2.4rem
   FONT_SIZE_HEADING_LARGE:
-    value: 32px
+    value: 2rem
   FONT_SIZE_HEADING_MEDIUM:
-    value: 24px
+    value: 1.6rem
   FONT_SIZE_HEADING_SMALL:
-    value: 16px
-  FONT_SIZE_HEADING_X_SMALL:
-    value: 12px
+    value: 1.4rem
+  FONT_SIZE_HEADING_EXTRA_SMALL:
+    value: 1rem
+  FONT_SIZE_TEXT_EXTRA_LARGE:
+    value: 2.4rem
   FONT_SIZE_TEXT_LARGE:
-    value: 18px
+    value: 1.8rem
   FONT_SIZE_TEXT_MEDIUM:
-    value: 16px
+    value: 1.6rem
   FONT_SIZE_TEXT_SMALL:
-    value: 14px
-  FONT_SIZE_TEXT_X_SMALL:
-    value: 12px
+    value: 1.4rem
+  FONT_SIZE_TEXT_EXTRA_SMALL:
+    value: 1.2rem

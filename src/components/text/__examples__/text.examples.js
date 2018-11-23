@@ -29,7 +29,7 @@ export const examples = [
           component="a"
           href="https://kalohq.com"
           size="large"
-          color="red"
+          color="pink500"
           weight="semi-bold"
         >
           Hello World
@@ -43,7 +43,7 @@ export const examples = [
     render: () => {
       return (
         <a href="#">
-          <Text size="large" color="pink" weight="semi-bold">
+          <Text size="large" color="pink500" weight="semi-bold">
             An interactive text node
           </Text>
         </a>

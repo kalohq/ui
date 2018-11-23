@@ -10,7 +10,7 @@ import theme from '../../../src/components/theme';
 import IconSymbols from '../../../src/components/icon-symbols';
 
 import '../../../src/styles/kalo-ui-base.css';
-import '../../../src/styles/kalo-ui-fonts.css';
+import '../../../src/styles/kalo-ui-typography.css';
 import '../../../src/styles/kalo-ui-transitions.css';
 
 // eslint-disable-next-line no-unused-expressions
@@ -162,7 +162,9 @@ export default function Page({data, children, location}) {
   const currentCategory = location.pathname.split(/[\\\/]/)[1];
 
   const stripPageNameFromPath = val =>
-    val.replace(/\/(product|components|brand|meta)\//, '').replace(/\//, '');
+    val
+      .replace(/\/(product|components|brand|foundations|test pages)\//, '')
+      .replace(/\//, '');
 
   pages.map(page =>
     sitePages.push({
@@ -195,10 +197,24 @@ export default function Page({data, children, location}) {
   return (
     <ThemeProvider theme={theme}>
       <Container>
-        <Header projectMeta={projectMeta} />
+        {currentCategory !== 'test-pages' && (
+          <Header projectMeta={projectMeta} />
+        )}
         <FlexWrapper>
-          <SideNav currentCategory={currentCategory} links={groupedSitePages} />
-          <div style={{paddingTop: 58, width: '100%'}}>{children()}</div>
+          {currentCategory !== 'test-pages' && (
+            <SideNav
+              currentCategory={currentCategory}
+              links={groupedSitePages}
+            />
+          )}
+          <div
+            style={{
+              paddingTop: currentCategory !== 'test-pages' && 58,
+              width: '100%',
+            }}
+          >
+            {children()}
+          </div>
         </FlexWrapper>
         <IconSymbols />
       </Container>
@@ -227,7 +243,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    allSitePage(filter: {path: {regex: "/(brand|product|meta)/"}}) {
+    allSitePage(
+      filter: {path: {regex: "/(brand|product|foundations|test-pages)/"}}
+    ) {
       edges {
         node {
           path

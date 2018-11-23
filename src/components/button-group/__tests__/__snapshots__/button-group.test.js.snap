@@ -13,7 +13,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
 }
 
 .emotion-0 svg {
-  fill: rgb(198,199,216);
+  fill: rgb(131,147,172);
   position: absolute;
   top: 0;
   left: 0;

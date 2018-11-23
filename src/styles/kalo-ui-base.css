@@ -39,9 +39,10 @@ html {
 body {
   background-color: #fff;
   height: 100%;
-  font-family: 'WebFaktSoftPro', sans-serif;
+  font-family: system-ui;
   font-size: 1.6rem;
   font-weight: 400;
+  color: var(--navy600);
 }
 
 /** Typography **/
@@ -63,9 +64,14 @@ hr {
 }
 
 a {
-  text-decoration: none;
-  color: var(--pink500);
-  line-height: inherit;
+  color: var(--navy700);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 /** Sane defined list default */

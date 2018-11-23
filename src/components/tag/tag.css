@@ -1,0 +1,62 @@
+.ui-tag {
+  display: inline-flex;
+  flex-grow: 0;
+  background-color: var(--navy300);
+  color: var(--navy600);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+  padding: 0.4rem 1.6rem;
+  border-radius: 3px;
+}
+
+.ui-tag__inner {
+  max-width: 10rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ui-tag--link {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.ui-tag--link:hover {
+  background-color: var(--purple500);
+  color: #fff;
+  text-decoration: none;
+}
+
+.ui-tag--avatar {
+  border-radius: 100px;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+.ui-tag--removable {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+.ui-tag--avatar .ui-avatar {
+  margin-right: 0.8rem;
+}
+
+.ui-tag__remove {
+  appearance: none;
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  padding: 0;
+  margin-left: 0.8rem;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  display: flex;
+}
+
+.ui-tag__remove:active {
+  box-shadow: none;
+}

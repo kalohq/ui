@@ -43,9 +43,6 @@ export const examples = [
         <label htmlFor="2">
           <div className="ui-checkbox__label-group">
             <span className="ui-checkbox__label">Stay up to date</span>
-            <span className="ui-checkbox__hint">
-              We'll occasionally send you emails with updates
-            </span>
           </div>
         </label>
       </div>
@@ -62,6 +59,16 @@ export const examples = [
         disabled={true}
       />
     ),
+    html: () => (
+      <div className="ui-checkbox ui-checkbox--large">
+        <input type="checkbox" id="2" disabled={true} />
+        <label htmlFor="2">
+          <div className="ui-checkbox__label-group">
+            <span className="ui-checkbox__label">Stay up to date</span>
+          </div>
+        </label>
+      </div>
+    ),
   },
   {
     title: 'Sizing',
@@ -71,6 +78,34 @@ export const examples = [
         <DemoCheckbox label="Onboarding freelancers" size="small" />
         <DemoCheckbox label="Onboarding freelancers" size="medium" />
         <DemoCheckbox label="Freelancer invoices" size="large" />
+      </span>
+    ),
+    html: () => (
+      <span>
+        <div className="ui-checkbox ui-checkbox--small">
+          <input type="checkbox" id="2" />
+          <label htmlFor="2">
+            <div className="ui-checkbox__label-group">
+              <span className="ui-checkbox__label">Onboarding freelancers</span>
+            </div>
+          </label>
+        </div>
+        <div className="ui-checkbox ui-checkbox--medium">
+          <input type="checkbox" id="2" />
+          <label htmlFor="2">
+            <div className="ui-checkbox__label-group">
+              <span className="ui-checkbox__label">Onboarding freelancers</span>
+            </div>
+          </label>
+        </div>
+        <div className="ui-checkbox ui-checkbox--large">
+          <input type="checkbox" id="2" />
+          <label htmlFor="2">
+            <div className="ui-checkbox__label-group">
+              <span className="ui-checkbox__label">Onboarding freelancers</span>
+            </div>
+          </label>
+        </div>
       </span>
     ),
   },
@@ -109,6 +144,19 @@ export const examples = [
         size="large"
         disabled={true}
       />
+    ),
+    html: () => (
+      <div className="ui-checkbox ui-checkbox--large">
+        <input type="checkbox" id="2" />
+        <label htmlFor="2">
+          <div className="ui-checkbox__label-group">
+            <span className="ui-checkbox__label">Stay up to date</span>
+            <span className="ui-checkbox__hint">
+              We'll occasionally send you emails with updates
+            </span>
+          </div>
+        </label>
+      </div>
     ),
   },
 ];

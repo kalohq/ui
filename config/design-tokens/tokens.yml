@@ -1,13 +1,12 @@
 props: {}
 imports:
   - ./color.yml
-  - ./font-size.yml
+  - ./gradients.yml
   - ./font-weight.yml
-  - ./border-radius.yml
+  - ./font-size.yml
   - ./box-shadow.yml
-  - ./input.yml
   - ./alerts.yml
   - ./grid.yml
   - ./layout.yml
-  - ./button.yml
   - ./table.yml
+  - ./input.yml

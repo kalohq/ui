@@ -6,7 +6,7 @@ import {isString} from 'lodash';
 import Icon from '../icon';
 import {UIBase} from '../layout';
 
-import coreStyles from './field-hint.core.css';
+import coreStyles from './field-hint.css';
 
 type TProps = {
   hint?: string,

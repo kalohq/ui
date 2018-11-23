@@ -47,7 +47,7 @@ const StyledFieldset = styled(Box)`
   border-bottom: ${props =>
     props.bordered ? `1px solid ${props.theme.colors.grey300}` : null};
   background-color: ${props =>
-    props.inset ? `${props.theme.colors.navy300}` : null};
+    props.inset ? `${props.theme.colors.grey200}` : null};
   cursor: ${props => (props.interactive ? 'pointer' : 'inherit')};
 `;
 

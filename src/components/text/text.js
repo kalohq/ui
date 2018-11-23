@@ -1,9 +1,12 @@
 /* @flow */
 import * as React from 'react';
-import styled, {css} from 'react-emotion';
+import cx from 'classnames';
 
-import {Inline} from '../layout';
-import DefaultTheme from '../theme';
+import {UIBase} from '../layout';
+
+import styles from './text.css';
+import colors from '../../styles/kalo-ui-colors.css';
+import hoverColors from '../../styles/kalo-ui-hover-colors.css';
 
 import type {
   TEXT_WEIGHT,
@@ -12,8 +15,6 @@ import type {
   TEXT_HOVER_COLOR,
   TEXT_ALIGN,
 } from './constants';
-
-import {WEIGHT_MAP, SIZE_MAP} from './constants';
 
 type TProps = {
   weight?: TEXT_WEIGHT,
@@ -38,42 +39,6 @@ type TProps = {
   theme?: Object,
 };
 
-const StyledText = styled(Inline)`
-  font-family: 'WebFaktSoftPro', sans-serif;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  cursor: ${props =>
-    props.interactive
-      ? 'pointer'
-      : props.notInteractive ? 'default' : 'inherit'};
-  text-align: ${props => props.align};
-  text-decoration: ${props => (props.noUnderline ? 'none' : 'inherit')};
-  font-weight: ${props => WEIGHT_MAP[props.weight]};
-  font-size: ${props => SIZE_MAP[props.size]}px;
-  color: ${props => props.theme.colors[props.color]};
-
-  &:hover {
-    color: ${props => props.theme.colors[props.hoverColor]};
-    text-decoration: ${props =>
-      props.onClick ? (props.noUnderline ? 'none' : 'underline') : 'inherit'};
-  }
-
-  ${props =>
-    props.multiline &&
-    css`
-      white-space: normal;
-      text-overflow: initial;
-      overflow: visible;
-      white-space: pre-wrap;
-      word-break: break-word;
-    `};
-
-  strong {
-    font-weight: ${props => props.theme.typography.fontWeightMedium};
-  }
-`;
-
 export default function Text(props: TProps) {
   const {
     weight = 'normal',
@@ -81,28 +46,39 @@ export default function Text(props: TProps) {
     align = 'unset',
     color = 'navy600',
     hoverColor = 'none',
+    multiline,
     interactive,
     noUnderline,
     onClick,
+    className,
     children,
-    theme = DefaultTheme,
+    component = 'span',
     ...otherProps
   } = props;
 
+  const _classNames = cx(
+    {
+      [styles['ui-text']]: true,
+      [styles[`ui-text--size-${size}`]]: true,
+      [styles[`ui-text--weight-${weight}`]]: true,
+      [styles[`ui-text--align-${align}`]]: true,
+      [styles['ui-text--multiline']]: Boolean(multiline),
+      [styles['ui-text--no-underline']]: Boolean(noUnderline),
+      [styles['ui-text--interactive']]: Boolean(interactive || onClick),
+      [colors[`color-${color}`]]: true,
+      [hoverColors[`hover-color-${hoverColor}`]]: Boolean(hoverColor),
+    },
+    className
+  );
+
   return (
-    <StyledText
+    <UIBase
+      component={component}
       onClick={onClick}
-      weight={weight}
-      color={color}
-      hoverColor={hoverColor}
-      align={align}
-      interactive={interactive || onClick}
-      noUnderline={noUnderline}
-      size={size}
-      theme={theme}
+      className={_classNames}
       {...otherProps}
     >
       {children}
-    </StyledText>
+    </UIBase>
   );
 }

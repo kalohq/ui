@@ -10,3 +10,5 @@ props:
     value: 500
   FONT_WEIGHT_SEMIBOLD:
     value: 600
+  FONT_WEIGHT_BOLD:
+    value: 700

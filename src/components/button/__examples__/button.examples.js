@@ -150,8 +150,16 @@ export const examples = [
       'To provide more context to an action, an icon (see the Icon component) can be floated next the button copy.',
     render: () => (
       <Button variant="tertiary" icon="mode_edit">
-        Generate Invoice
+        Generate invoice
       </Button>
+    ),
+    html: () => (
+      <button className="ui-btn ui-btn--large ui-btn--tertiary">
+        <svg width="18" height="18" aria-hidden="true">
+          <use xlinkHref="#mode_edit" />
+        </svg>
+        Generate invoice
+      </button>
     ),
   },
   {
@@ -164,6 +172,13 @@ export const examples = [
         icon="mode_edit"
         loneIcon={true}
       />
+    ),
+    html: () => (
+      <button className="ui-btn ui-btn--large ui-btn--tertiary ui-btn--lone-icon">
+        <svg width="18" height="18" aria-hidden="true">
+          <use xlinkHref="#mode_edit" />
+        </svg>
+      </button>
     ),
   },
   {

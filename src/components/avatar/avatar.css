@@ -1,0 +1,42 @@
+.ui-avatar {
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.ui-avatar__avatar {
+  position: absolute;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.ui-avatar--small {
+  width: 25px;
+  height: 25px;
+}
+
+.ui-avatar--medium {
+  width: 32px;
+  height: 32px;
+}
+
+.ui-avatar--large {
+  width: 60px;
+  height: 60px;
+}
+
+.ui-avatar--extra-large {
+  width: 90px;
+  height: 90px;
+}
+
+.ui-avatar--extra-extra-large {
+  width: 130px;
+  height: 130px;
+}

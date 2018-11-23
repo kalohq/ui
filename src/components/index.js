@@ -7,16 +7,17 @@ export {default as H3} from './h3';
 export {default as H4} from './h4';
 export {default as Heading} from './heading';
 export {default as Text} from './text';
+export {default as HelperText} from './helper-text';
 
 /**
  * Layout
  */
 export * from './skeleton';
-export {Box, Flex, Block, Inline, InlineFlex, A} from './layout';
+export {Box, Flex, Block, Inline, InlineFlex, A, UIBase} from './layout';
 export {default as Paper, PaperToolbar} from './paper';
 export {default as PaperMenu, PaperMenuItem} from './paper-menu';
+export {default as DropMenu, DropMenuItem} from './drop-menu';
 export {Grid, Row, Column} from './grid';
-export {default as List} from './list';
 
 /**
  * Form
@@ -42,6 +43,7 @@ export {
   default as ToggleButton,
   HEIGHT as TOGGLE_BUTTON_HEIGHT,
 } from './toggle-button';
+export {default as SeamlessButton} from './seamless-button';
 
 /**
  * Table
@@ -62,6 +64,13 @@ export {default as Icon} from './icon';
 export {default as IconSymbols} from './icon-symbols';
 export {default as LoadingSpinner} from './loading-spinner';
 export {default as Sticky} from './sticky';
+export {default as StarRating} from './star-rating';
+export {default as Lozenge} from './lozenge';
+export {default as Tag} from './tag';
+export {default as SkillTag} from './skill-tag';
+export {default as TagGroup} from './tag-group';
+export {default as Avatar} from './avatar';
+export {default as Modal} from './modal';
 
 /**
  * Theme

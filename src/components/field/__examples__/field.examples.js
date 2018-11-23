@@ -6,7 +6,7 @@ import Input from '../../input';
 import Text from '../../text';
 
 const exampleAction = (
-  <Text size="extra-small" color="blue" onClick={() => {}}>
+  <Text size="extra-small" onClick={() => {}}>
     Show map
   </Text>
 );

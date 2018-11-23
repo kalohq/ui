@@ -1,10 +1,13 @@
 /* @flow */
 import * as React from 'react';
-import styled from 'react-emotion';
+import cx from 'classnames';
 import Icon from '../icon';
-import Text from '../text';
+import {UIBase} from '../layout';
 
-import type {TEXT_COLOR, TEXT_SIZE} from '../text/constants';
+import type {TEXT_COLOR} from '../text/constants';
+
+import styles from './heading.css';
+import colors from '../../styles/kalo-ui-colors.css';
 
 type TProps = {
   /** The heading content */
@@ -12,7 +15,7 @@ type TProps = {
   /** Sets the text color and fill color of any child icon */
   color?: TEXT_COLOR,
   /** Sets the size of the heading */
-  size?: TEXT_SIZE,
+  size?: 'extra-large' | 'large' | 'medium' | 'small' | 'extra-small',
   /** Sets interactive styles for the underlying text component - See Text component */
   hover?: 'underline' | 'none',
   /** Displays an icon before the heading */
@@ -21,17 +24,15 @@ type TProps = {
   iconAfter?: string,
   /** Adds padding between the icon and heading text */
   iconPadding?: number,
+  /** The underlying component */
+  component?: string,
+  /** Class to pass down */
+  className?: string,
+  /** Should the heading wrap on to multiple lines? */
+  multiline?: boolean,
+  /* Text alignment of the heading */
+  align?: 'unset' | 'left' | 'center' | 'right' | 'inherit',
 };
-
-const StyledHeading = styled(Text)`
-  line-height: 1.25em !important;
-
-  > i {
-    position: relative;
-    left: 2px;
-    vertical-align: top;
-  }
-`;
 
 export default function Heading(props: TProps) {
   const {
@@ -42,18 +43,28 @@ export default function Heading(props: TProps) {
     iconAfter,
     hover = false,
     iconPadding = 10,
+    component = 'span',
+    className,
+    align = 'unset',
+    multiline = false,
     ...otherProps
   } = props;
 
+  const _classNames = cx(
+    {
+      [styles.heading]: true,
+      [styles[`heading--${size}`]]: true,
+      [styles[`heading--align-${align}`]]: true,
+      [styles['heading--interactive']]: hover === 'interactive',
+      [styles['heading--ellipsis']]: !multiline,
+      [colors[`color-${color}`]]: true,
+    },
+    className
+  );
+
   return (
-    <StyledHeading
-      size={size}
-      interactive={hover === 'interactive'}
-      display="block"
-      color={color}
-      {...otherProps}
-    >
-      {icon ? (
+    <UIBase className={_classNames} component={component} {...otherProps}>
+      {icon && (
         <Icon
           size={size === 'extra-large' ? 24 : 14}
           color={color}
@@ -61,9 +72,9 @@ export default function Heading(props: TProps) {
         >
           {icon}
         </Icon>
-      ) : null}
+      )}
       {children}
-      {iconAfter ? (
+      {iconAfter && (
         <Icon
           size={size === 'extra-large' ? 24 : 14}
           color={color}
@@ -71,7 +82,7 @@ export default function Heading(props: TProps) {
         >
           {iconAfter}
         </Icon>
-      ) : null}
-    </StyledHeading>
+      )}
+    </UIBase>
   );
 }

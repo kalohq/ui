@@ -7,6 +7,9 @@ module.exports = {
         customProperties: {
           variables: cssVariables,
         },
+        rem: {
+          rootValue: 10,
+        },
       },
     },
     cssnano: {

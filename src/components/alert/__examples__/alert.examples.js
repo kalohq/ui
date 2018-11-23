@@ -1,5 +1,4 @@
 import React from 'react';
-import {Box} from '../../layout';
 
 import Alert, {AlertPopover} from '../';
 
@@ -7,17 +6,9 @@ export const examples = [
   {
     title: 'Info Alert',
     description: 'An alert to display information',
-    render: () => <Alert type="info">Information Alert</Alert>,
-    html: () => (
-      <div className="ui-alert ui-alert--info">Information Alert</div>
-    ),
-  },
-  {
-    title: 'Info Alert (with icon)',
-    description: 'An alert to display information',
     render: () => (
-      <Alert type="info" showIcon={true}>
-        Information Alert
+      <Alert type="info" title="Information Alert">
+        You can now set your teams timezone in the Kalo Team Admin
       </Alert>
     ),
     html: () => (
@@ -25,65 +16,62 @@ export const examples = [
         <svg width={16} height={16} aria-hidden="true" fill="currentColor">
           <use xlinkHref="#info_outline" />
         </svg>
-        Information Alert
+        <div className="ui-alert__content">
+          <span className="ui-alert__title">Information Alert</span>
+          <span className="ui-alert__message">
+            You can now set your teams timezone in the Kalo Team Admin
+          </span>
+        </div>
       </div>
     ),
   },
   {
     title: 'Warning Alert',
     description: 'An alert to display a warning',
-    render: () => <Alert type="warning">Warning Alert</Alert>,
-    html: () => <div className="ui-alert ui-alert--warning">Warning Alert</div>,
-  },
-  {
-    title: 'Warning Alert (with icon)',
-    description: 'An alert to display a warning',
     render: () => (
-      <Alert type="warning" showIcon={true}>
-        Warning Alert
-      </Alert>
+      <Alert type="warning" showIcon={true} title="Warning Alert" />
+    ),
+    html: () => (
+      <div className="ui-alert ui-alert--warning">
+        <svg width={16} height={16} aria-hidden="true" fill="currentColor">
+          <use xlinkHref="#error_outline" />
+        </svg>
+        <div className="ui-alert__content">
+          <span className="ui-alert__title">Warning Alert</span>
+        </div>
+      </div>
     ),
   },
   {
     title: 'Error Alert',
-    description: 'An alert to display an error',
-    render: () => <Alert type="error">Error Alert</Alert>,
-    html: () => <div className="ui-alert ui-alert--error">Error Alert</div>,
-  },
-  {
-    title: 'Error Alert (with icon)',
     description: 'An alert to display a error',
-    render: () => (
-      <Alert type="error" showIcon={true}>
-        Error Alert
-      </Alert>
+    render: () => <Alert type="error" showIcon={true} title="Error Alert" />,
+    html: () => (
+      <div className="ui-alert ui-alert--error">
+        <svg width={16} height={16} aria-hidden="true" fill="currentColor">
+          <use xlinkHref="#highlight_off" />
+        </svg>
+        <div className="ui-alert__content">
+          <span className="ui-alert__title">Error Alert</span>
+        </div>
+      </div>
     ),
   },
   {
     title: 'Confirmation Alert',
     description: 'An alert to display a confirmation',
-    render: () => <Alert type="confirmation">Confirmation Alert</Alert>,
+    render: () => (
+      <Alert type="confirmation" showIcon={true} title="Confirmation Alert" />
+    ),
     html: () => (
-      <div className="ui-alert ui-alert--confirmation">Confirmation Alert</div>
-    ),
-  },
-  {
-    title: 'Confirmation Alert (with icon)',
-    description: 'An alert to display a confirmation',
-    render: () => (
-      <Alert type="confirmation" showIcon={true}>
-        Confirmation Alert
-      </Alert>
-    ),
-  },
-  {
-    title: 'Block Alert',
-    description:
-      'Alerts will by default fit the horizontal space of their parent container',
-    render: () => (
-      <Box width={500}>
-        <Alert type="info">Information Alert</Alert>
-      </Box>
+      <div className="ui-alert ui-alert--confirmation">
+        <svg width={16} height={16} aria-hidden="true" fill="currentColor">
+          <use xlinkHref="#check_circle" />
+        </svg>
+        <div className="ui-alert__content">
+          <span className="ui-alert__title">Confirmation Alert</span>
+        </div>
+      </div>
     ),
   },
   {
@@ -104,26 +92,31 @@ export const examples = [
       <WithIncrement>
         {count => (
           <AlertPopover topOffset={32}>
-            {count < 5 ? (
-              <Alert type="info" showIcon={true}>
-                Information Alert
+            {count < 5 && (
+              <Alert type="info" showIcon={true} title="Information Alert">
+                You can now set your teams timezone in the Kalo Team Admin
               </Alert>
-            ) : null}
-            {count > 0 && count < 6 ? (
-              <Alert type="warning" showIcon={true}>
-                Warning Alert
+            )}
+            {count > 0 &&
+            count < 6 && (
+              <Alert type="warning" showIcon={true} title="Warning alert">
+                Your trial of Reporting expires in 12 days
               </Alert>
-            ) : null}
-            {count > 1 ? (
-              <Alert type="error" showIcon={true}>
-                Error Alert
+            )}
+            {count > 1 && (
+              <Alert type="error" showIcon={true} title="Error Alert">
+                There was an issue creating your project
               </Alert>
-            ) : null}
-            {count > 2 ? (
-              <Alert type="confirmation" showIcon={true}>
-                Confirmation Alert
+            )}
+            {count > 2 && (
+              <Alert
+                type="confirmation"
+                showIcon={true}
+                title="Invoice Submitted"
+              >
+                Your invoice has been submitted to the Kalo team for approval
               </Alert>
-            ) : null}
+            )}
           </AlertPopover>
         )}
       </WithIncrement>

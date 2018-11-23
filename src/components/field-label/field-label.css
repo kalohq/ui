@@ -1,0 +1,14 @@
+.ui-field-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy600);
+  display: inline-block;
+  vertical-align: bottom;
+  margin-bottom: 4px;
+  cursor: inherit;
+  text-align: unset;
+  text-decoration: inherit;
+  text-overflow: initial;
+  overflow: visible;
+  word-break: break-word;
+}

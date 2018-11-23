@@ -1,36 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Text should render green text 1`] = `
-.emotion-1 {
-  display: inline-block;
-  vertical-align: bottom;
-  font-family: 'WebFaktSoftPro',sans-serif;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  cursor: inherit;
-  text-align: unset;
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-  font-weight: 400;
-  font-size: 16px;
-  color: rgb(62,179,138);
-}
-
-.emotion-1:hover {
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-}
-
-.emotion-1 strong {
-  font-weight: 500;
-}
-
 <span
-  className="emotion-0 emotion-1"
-  color="green"
+  className="ui-text ui-text--size-medium ui-text--weight-normal ui-text--align-unset color-green hover-color-none emotion-0 emotion-1"
   onClick={undefined}
-  size="medium"
   style={Object {}}
 >
   Hello World
@@ -38,36 +11,9 @@ exports[`Text should render green text 1`] = `
 `;
 
 exports[`Text should render large text 1`] = `
-.emotion-1 {
-  display: inline-block;
-  vertical-align: bottom;
-  font-family: 'WebFaktSoftPro',sans-serif;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  cursor: inherit;
-  text-align: unset;
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-  font-weight: 400;
-  font-size: 18px;
-  color: rgb(55,69,97);
-}
-
-.emotion-1:hover {
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-}
-
-.emotion-1 strong {
-  font-weight: 500;
-}
-
 <span
-  className="emotion-0 emotion-1"
-  color="charcoal"
+  className="ui-text ui-text--size-large ui-text--weight-normal ui-text--align-unset color-charcoal hover-color-none emotion-0 emotion-1"
   onClick={undefined}
-  size="large"
   style={Object {}}
 >
   Hello World
@@ -75,36 +21,9 @@ exports[`Text should render large text 1`] = `
 `;
 
 exports[`Text should render shallow component ok 1`] = `
-.emotion-1 {
-  display: inline-block;
-  vertical-align: bottom;
-  font-family: 'WebFaktSoftPro',sans-serif;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  cursor: inherit;
-  text-align: unset;
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-  font-weight: 400;
-  font-size: 16px;
-  color: rgb(55,69,97);
-}
-
-.emotion-1:hover {
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-}
-
-.emotion-1 strong {
-  font-weight: 500;
-}
-
 <span
-  className="emotion-0 emotion-1"
-  color="charcoal"
+  className="ui-text ui-text--size-medium ui-text--weight-normal ui-text--align-unset color-charcoal hover-color-none emotion-0 emotion-1"
   onClick={undefined}
-  size="medium"
   style={Object {}}
 >
   Hello World

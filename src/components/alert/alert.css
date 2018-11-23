@@ -1,0 +1,55 @@
+.ui-alert {
+  display: inline-flex;
+  position: relative;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 4px;
+  padding: 1.6rem 2.4rem;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.11);
+  width: 100%;
+  flex: 1;
+}
+
+.ui-alert svg {
+  flex-shrink: 0;
+}
+
+.ui-alert__content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 8px;
+}
+
+.ui-alert__title {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.ui-alert__message {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  margin-top: 8px;
+}
+
+.ui-alert--info {
+  background-color: var(--navy600);
+  color: var(--white);
+}
+
+.ui-alert--confirmation {
+  background-color: var(--green600);
+  color: var(--white);
+}
+
+.ui-alert--error {
+  background-color: var(--pink500);
+  color: var(--white);
+}
+
+.ui-alert--warning {
+  background-color: var(--orange500);
+  color: var(--navy700);
+}

@@ -11,6 +11,8 @@ props:
   SPACING_MEDIUM:
     value: 16px
   SPACING_LARGE:
-    value: 32px
+    value: 24px
   SPACING_EXTRA_LARGE:
-    value: 64px
+    value: 32px
+  SPACING_EXTRA_EXTRA_LARGE:
+    value: 48px

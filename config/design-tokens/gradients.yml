@@ -1,0 +1,13 @@
+global:
+  type: background-image
+  category: gradients
+props: &GRADIENTS
+  GRADIENT_PINK_STOP_1:
+    type: color
+    value: '#E83F94'
+  GRADIENT_PINK_STOP_2:
+    type: color
+    value: '#F54E5E'
+  GRADIENT_PINK:
+    value: linear-gradient(19deg, {!GRADIENT_PINK_STOP_1} 0%, {!GRADIENT_PINK_STOP_2} 100%)
+aliases: *GRADIENTS

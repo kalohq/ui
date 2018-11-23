@@ -1,0 +1,6 @@
+.ui-field-validation {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--pink500);
+  margin-top: 4px;
+}

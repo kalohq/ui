@@ -2,20 +2,8 @@
 
 exports[`ButtonDropdown should render shallow component ok 1`] = `
 .emotion-1 {
-  display: inline-block;
-  vertical-align: bottom;
   margin-left: 8px;
   margin-right: -8px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  line-height: 1em;
-  vertical-align: middle;
-  cursor: inherit;
-  font-size: 20px;
-  height: 20px;
-  fill: currentColor;
 }
 
 .emotion-4 {
@@ -37,14 +25,14 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
 }
 
 .emotion-6 svg {
-  fill: rgb(198,199,216);
+  fill: rgb(131,147,172);
   position: absolute;
   top: 0;
   left: 0;
 }
 
 <button
-  className="ui-btn ui-btn--medium ui-btn--tertiary emotion-8 emotion-9"
+  className="ui-btn ui-btn--medium ui-btn--tertiary emotion-0 emotion-9"
   data-test="ui-button"
   disabled={false}
   name={undefined}
@@ -57,10 +45,8 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
     className="ui-btn__react-placeholder-message"
   >
     <i
-      className="emotion-0 emotion-1"
-      color="currentColor"
+      className="ui-icon ui-icon--size-20 fill-currentColor emotion-0 emotion-1"
       onClick={undefined}
-      size={20}
       style={Object {}}
       title={undefined}
     >
@@ -81,10 +67,8 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
     title={undefined}
   >
     <i
-      className="emotion-0 emotion-1"
-      color="currentColor"
+      className="ui-icon ui-icon--size-20 fill-currentColor emotion-0 emotion-1"
       onClick={undefined}
-      size={20}
       style={Object {}}
       title={undefined}
     >
@@ -138,20 +122,8 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
 
 exports[`ButtonDropdown should render with a checkbox 1`] = `
 .emotion-3 {
-  display: inline-block;
-  vertical-align: bottom;
   margin-left: 8px;
   margin-right: -8px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  line-height: 1em;
-  vertical-align: middle;
-  cursor: inherit;
-  font-size: 20px;
-  height: 20px;
-  fill: currentColor;
 }
 
 .emotion-8 {
@@ -173,7 +145,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
 }
 
 .emotion-10 svg {
-  fill: rgb(198,199,216);
+  fill: rgb(131,147,172);
   position: absolute;
   top: 0;
   left: 0;
@@ -201,7 +173,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
 }
 
 <button
-  className="ui-btn ui-btn--medium ui-btn--tertiary emotion-12 emotion-13"
+  className="ui-btn ui-btn--medium ui-btn--tertiary emotion-2 emotion-13"
   data-test="ui-button"
   disabled={false}
   name={undefined}
@@ -232,10 +204,8 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
       />
     </div>
     <i
-      className="emotion-2 emotion-3"
-      color="currentColor"
+      className="ui-icon ui-icon--size-20 fill-currentColor emotion-2 emotion-3"
       onClick={undefined}
-      size={20}
       style={Object {}}
       title={undefined}
     >
@@ -274,10 +244,8 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
       />
     </div>
     <i
-      className="emotion-2 emotion-3"
-      color="currentColor"
+      className="ui-icon ui-icon--size-20 fill-currentColor emotion-2 emotion-3"
       onClick={undefined}
-      size={20}
       style={Object {}}
       title={undefined}
     >

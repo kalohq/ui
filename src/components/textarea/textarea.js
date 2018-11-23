@@ -2,10 +2,14 @@
 import React, {PureComponent} from 'react';
 import ReactDOM from 'react-dom';
 import {omit} from 'lodash';
-import styled, {css} from 'react-emotion';
+import cx from 'classnames';
+
+import {UIBase} from '../layout';
 
 import {removeNode} from '../../utils/dom';
 import {parseStyleProps} from '../../utils/style';
+
+import styles from './textarea.css';
 
 /**
  * Escape any html markup from user input values to ensure correct
@@ -20,70 +24,6 @@ const escapeTags = (str: string): string =>
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/\n/g, '<br />');
-
-const StyledTextarea = styled.textarea`
-  background: transparent;
-  width: 100%;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.6em;
-  padding: 8px 16px;
-  color: ${props => props.theme.colors.navy700};
-
-  &::placeholder {
-    color: ${props => props.theme.colors.grey500};
-  }
-
-  &:focus {
-    outline: 0;
-  }
-
-  &:disabled {
-    background-color: ${props => props.theme.input.inputDisabledBackground};
-    border: ${props => props.theme.input.inputDisabledBorder};
-    cursor: not-allowed;
-    color: ${props => props.theme.input.inputDisabledColor};
-  }
-
-  &:readonly {
-    background-color: ${props => props.theme.input.inputReadonlyBackground};
-    border: ${props => props.theme.input.inputReadonlyBorder};
-    cursor: default;
-    color: ${props => props.theme.input.inputReadonlyColor};
-  }
-
-  ${props =>
-    props.textareaTheme === 'default' &&
-    css`
-      background-color: ${props.theme.colors.white};
-      border: ${props.theme.input.inputDefaultBorder};
-      border-radius: ${props.theme.input.inputBorderRadius};
-
-      &:not(:read-only):not(:disabled):hover {
-        border: ${props.theme.input.inputHoverBorder};
-      }
-
-      &:not(:read-only):not(:disabled):focus {
-        border: ${props.theme.input.inputActiveBorder};
-      }
-    `};
-
-  ${props =>
-    props.textareaTheme === 'transparent' &&
-    css`
-      background-color: transparent;
-      border: 0;
-    `};
-
-  ${props => props.animate && css`transition: height 0.2s ease-in-out;`};
-
-  ${props =>
-    props.expand &&
-    css`
-      overflow: hidden;
-      resize: none;
-    `};
-`;
 
 /**
  * Render a textarea which can expand vertically
@@ -290,7 +230,7 @@ export default class Textarea extends PureComponent<TProps> {
       animate,
       style,
       className,
-      theme,
+      theme = 'default',
       readonly,
       disabled,
       onChange,
@@ -304,13 +244,21 @@ export default class Textarea extends PureComponent<TProps> {
 
     const styleProps = parseStyleProps(filteredProps);
 
+    const _classNames = cx(
+      {
+        [styles['ui-textarea']]: true,
+        [styles[`ui-textarea--${theme}`]]: theme && theme !== 'default',
+        [styles['ui-textarea--animate']]: animate,
+        [styles['ui-textarea--expand']]: expand,
+      },
+      className
+    );
+
     return (
-      <StyledTextarea
-        animate={animate}
-        expand={expand}
-        textareaTheme={theme}
+      <UIBase
+        component="textarea"
         onChange={!readonly && onChange}
-        className={className}
+        className={_classNames}
         disabled={disabled}
         readOnly={readonly}
         onKeyUp={this.onKeyUp}

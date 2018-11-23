@@ -6,8 +6,8 @@ import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 import H3 from '../h3';
 import Icon from '../icon';
-import Paper from '../paper';
 import Sticky from '../sticky';
+import {UIBase} from '../layout';
 
 const StyledPaperMenu = styled.div`
   transform-origin: top;
@@ -35,6 +35,14 @@ const StyledPaperMenuOptionClose = styled.button`
   &:focus {
     outline: 0;
   }
+`;
+
+const MockedPaper = styled(UIBase)`
+  background-color: ${props => props.theme.colors.white};
+  border: 1px solid ${props => props.theme.colors.grey400};
+  box-shadow: ${props => props.theme.layout.boxShadowLevel2};
+  border-radius: 4px;
+  over-flow: hidden;
 `;
 
 /**
@@ -135,10 +143,10 @@ export default class PaperMenu extends PureComponent<TProps> {
     return (
       <Sticky anchor={anchor} offset={offset} zIndex={zIndex} {...sticky}>
         <CSSTransitionGroup
-          transitionName="t-scale"
-          transitionEnterTimeout={300}
-          transitionLeaveTimeout={300}
-          transitionAppearTimeout={300}
+          transitionName="t-slide"
+          transitionEnterTimeout={220}
+          transitionLeaveTimeout={220}
+          transitionAppearTimeout={220}
         >
           {open ? (
             <StyledPaperMenu
@@ -146,7 +154,7 @@ export default class PaperMenu extends PureComponent<TProps> {
               style={{transformOrigin: origin}}
               onClick={event => event.stopPropagation()}
             >
-              <Paper {...paper}>
+              <MockedPaper {...paper}>
                 {heading && (
                   <StyledPaperMenuHeader>
                     <H3>{heading}</H3>
@@ -161,7 +169,7 @@ export default class PaperMenu extends PureComponent<TProps> {
                   </StyledPaperMenuHeader>
                 )}
                 {children}
-              </Paper>
+              </MockedPaper>
             </StyledPaperMenu>
           ) : null}
         </CSSTransitionGroup>

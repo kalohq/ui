@@ -1,21 +1,14 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-import ActionCard from '../components/action-card';
 import DocumentationContent from '../components/documentation-content';
 import Wrapper from '../components/wrapper';
 
-const GridContainer = styled.div`
-  display: grid;
-  grid-gap: 16px 16px;
-  grid-template-columns: repeat(2, 50%);
-`;
-
 const IndexIntro = styled.div`
   width: 100%;
-  padding: 62px 0;
-  background-color: ${props => props.theme.colors.pink500};
-  color: #fff;
+  padding: 128px 0 64px;
+  background-color: ${props => props.theme.colors.grey400};
+  color: ${props => props.theme.colors.navy700};
 
   p {
     font-size: 1.8rem;
@@ -23,51 +16,54 @@ const IndexIntro = styled.div`
   }
 
   h1 {
-    font-weight: 600;
-    font-size: 3.2rem;
+    font-weight: 700;
+    font-size: 3.6rem;
     margin: 0 0 8px 0;
   }
 `;
 
-const IndexPage = ({data}) => {
+const IndexPage = () => {
   return (
     <div style={{width: '100%'}}>
       <IndexIntro>
         <Wrapper>
-          <h1>Kalo Design System</h1>
+          <h1>Kalo Design</h1>
           <p>
             Components, guidelines, and resources for building products at Kalo
           </p>
         </Wrapper>
       </IndexIntro>
-      <DocumentationContent>
+      <DocumentationContent style={{paddingTop: 0}}>
         <Wrapper>
-          <h1>What is KDS?</h1>
+          <h2>Simple</h2>
           <p>
-            The Kalo Design System, or 'KDS' for short, is a collection of
-            components, guidelines, and toolkits to assist product designers and
-            engineers with building products at Kalo. KDS helps enforce
-            consistency, makes onboarding new team members quicker, and helps to
-            speed up development of new features and products.
+            Our products should be designed to be intuitive, simple to use, and
+            clean to the eye. Even though we’re solving complex needs, the user
+            experience should feel effortless and save the user time allowing
+            them to focus on the things that matter.
           </p>
-          <GridContainer>
-            <ActionCard
-              title="Color"
-              description="Our brand colors"
-              link="/brand/color"
-            />
-            <ActionCard
-              title="Components"
-              description="React components, code snippets, and guidelines"
-              link="/components/button"
-            />
-            <ActionCard
-              title="Sketch Kit"
-              description="Sketch library implementation for the Kalo Design System"
-              link={data.site.siteMetadata.sketchKitLink}
-              externalLink={true}
-            />
-          </GridContainer>
+          <h2>Clear</h2>
+          <p>
+            Every element should be designed to help the user focus. It should
+            be clear to the user the priorities, visual hierarchy, contextual
+            awareness and path to success. Everything should have clarity, never
+            use ambiguous design or language.
+          </p>
+
+          <h2>Make work beautiful</h2>
+          <p>
+            Beautiful should go beyond just visuals. Our products should give
+            our users a world class experience to look at and use. Every UI
+            decision should consider the end user and always have a purpose, we
+            don’t just do ‘pretty’ for the sake of it.
+          </p>
+
+          <h2>Think like our users</h2>
+          <p>
+            Understand how our users think and feel through research and
+            empathy, understand the user's path to success and remove anything
+            unnecessary.
+          </p>
         </Wrapper>
       </DocumentationContent>
     </div>

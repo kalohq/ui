@@ -6,7 +6,7 @@ import cx from 'classnames';
 import {Box} from '../layout';
 import {pickStyles} from '../../utils/style';
 
-import coreStyles from './checkbox.core.css';
+import coreStyles from './checkbox.css';
 
 type TProps = {
   size?: 'small' | 'medium' | 'large',

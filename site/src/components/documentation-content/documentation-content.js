@@ -4,19 +4,21 @@ import Helmet from 'react-helmet';
 
 const StyledDocumentationContent = styled.article`
   p,
-  li {
-    font-size: 16px;
-    line-height: 1.6em;
-    color: #546789;
+  li,
+  ol {
+    color: ${props => props.theme.colors.navy700};
+    font-size: 1.5rem;
+    line-height: 2.4rem;
   }
-  p {
-    margin-bottom: 1em;
+
+  li {
+    padding: 8px 0;
   }
 
   h1 {
     font-size: 32px;
-    font-weight: 400;
-    color: ${props => props.theme.colors.navy700};
+    font-weight: 500;
+    color: #302c50;
     margin: 0 0 16px 0;
     padding: 0;
   }
@@ -82,8 +84,14 @@ const StyledDocumentationContent = styled.article`
   }
 `;
 
-const DocumentationContent = ({children, raw, pageTitle, pageDescription}) => (
-  <div style={{paddingTop: 62, width: '100%'}}>
+const DocumentationContent = ({
+  children,
+  raw,
+  pageTitle,
+  pageDescription,
+  ...otherProps
+}) => (
+  <div style={{paddingTop: 62, width: '100%'}} {...otherProps}>
     <Helmet
       title={
         pageTitle ? `${pageTitle} - Kalo Design System` : 'Kalo Design System'

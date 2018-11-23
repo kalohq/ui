@@ -33,17 +33,12 @@ const StyledPaperMenuItem = styled(Box)`
   }
 
   ${props =>
-    !props.disabled &&
-    !props.static &&
+    props.active &&
     css`
-      border-left: 2px solid transparent;
-    `} ${props =>
-      props.active &&
-      css`
-        background: ${props.theme.colors.blue500};
-        color: #fff;
-        padding-top: 0;
-      `};
+      background: ${props.theme.colors.navy300};
+      color: #fff;
+      padding-top: 0;
+    `};
 
   ${props =>
     props.highlighted &&

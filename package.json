@@ -1,6 +1,6 @@
 {
   "name": "@kalo/ui",
-  "version": "2.4.5",
+  "version": "3.0.0-9",
   "description": "A library of React components",
   "repository": {
     "type": "git",
@@ -20,7 +20,6 @@
     "precommit": "lint-staged",
     "generate:tokens": "node scripts/tokens.js",
     "generate:icons": "node scripts/icons.js",
-    "generate:component": "reactman --config ./config/code-templates/reactman-config.json",
     "version": "npm run build"
   },
   "lint-staged": {
@@ -81,7 +80,7 @@
     "postcss-css-variables": "0.7.0",
     "postcss-cssnext": "^3.0.2",
     "postcss-import": "9.1.0",
-    "postcss-loader": "1.3.3",
+    "postcss-loader": "3.0.0",
     "prettier": "1.6.1",
     "prop-types": "15.5.10",
     "qs": "5.2.1",
@@ -93,14 +92,12 @@
     "react-hotkeys": "^0.9.0",
     "react-intl": "2.1.5",
     "react-test-renderer": "15.6.2",
-    "reactman": "2.1.0",
     "recompose": "0.20.2",
     "rimraf": "2.6.1",
     "sinon": "^4.5.0",
     "style-loader": "0.16.1",
     "svg-sprite": "^1.3.7",
-    "theo": "^8.0.0-beta.2",
-    "webpack": "2.5.1"
+    "theo": "^8.0.0-beta.2"
   },
   "peerDependencies": {
     "classnames": "^2.2.5",
@@ -158,5 +155,6 @@
       "!src/design-tokens/**/*",
       "!src/icons/**/*"
     ]
-  }
+  },
+  "dependencies": {}
 }

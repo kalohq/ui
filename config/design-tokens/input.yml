@@ -3,10 +3,15 @@ global:
   category: input
 imports:
   - ./color.yml
-  - ./border-radius.yml
 props:
+  INPUT_DEFAULT_BACKGROUND:
+    type: color
+    value: '{!WHITE}'
   INPUT_DEFAULT_BORDER:
     value: 1px solid {!GREY400}
+  INPUT_DEFAULT_COLOR:
+    type: color
+    value: '{!NAVY600}'
   INPUT_HOVER_BORDER:
     value: 1px solid {!GREY500}
   INPUT_ACTIVE_BORDER:
@@ -27,6 +32,3 @@ props:
   INPUT_READONLY_COLOR:
     type: color
     value: '{!NAVY600}'
-  INPUT_BORDER_RADIUS:
-    type: border-radius
-    value: '{!BORDER_RADIUS}'

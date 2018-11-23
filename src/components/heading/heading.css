@@ -1,0 +1,86 @@
+.heading {
+  text-overflow: initial;
+  overflow: visible;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.heading > i {
+  position: relative;
+  left: 2px;
+  vertical-align: baseline;
+}
+
+.heading--ellipsis {
+  overflow: hidden;
+  white-space: unset;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.heading--interactive {
+  cursor: pointer;
+}
+
+.heading--extra-large,
+.heading--large,
+.heading--medium,
+.heading--small,
+.heading--extra-small {
+  color: var(--navy700);
+}
+
+.heading--extra-large {
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  font-weight: 700;
+}
+
+.heading--large {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+}
+
+.heading--medium {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+.heading--small {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  font-weight: 500;
+}
+
+.heading--extra-small {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+
+.heading--extra-large > i {
+  top: 1px;
+}
+
+.heading--align-unset {
+  text-align: unset;
+}
+
+.heading--align-left {
+  text-align: left;
+}
+
+.heading--align-center {
+  text-align: center;
+}
+
+.heading--align-right {
+  text-align: right;
+}
+
+.heading--align-inherit {
+  text-align: inherit;
+}

@@ -1,35 +1,49 @@
 import React from 'react';
 
-import H1 from '../../h1';
-import H2 from '../../h2';
-import H3 from '../../h3';
-import H4 from '../../h4';
+import Heading from '../';
 
 export const examples = [
   {
-    title: 'H1',
-    description: 'The largest heading. A custom styled H1',
-    render: () => <H1>Account settings</H1>,
+    title: 'Extra large header',
+    render: () => <Heading size="extra-large">Account settings</Heading>,
   },
   {
-    title: 'H2',
-    description: 'A custom styled H2',
-    render: () => <H2>Your profile</H2>,
+    title: 'Large header',
+    render: () => <Heading size="large">Your profile</Heading>,
   },
   {
-    title: 'H3',
-    description: 'A custom styled H3',
-    render: () => <H3>Invoice 16</H3>,
+    title: 'Medium header',
+    render: () => <Heading size="medium">Invoice 16</Heading>,
   },
   {
-    title: 'H4',
-    description: 'A custom styled H4',
-    render: () => <H4>Create new template</H4>,
+    title: 'Small header',
+    render: () => <Heading size="small">Create new template</Heading>,
   },
   {
-    title: 'H3 with icon',
+    title: 'Headings with icon',
     description:
       'An icon can be passed down to display either side of the heading',
-    render: () => <H3 icon="lock">Overall performance</H3>,
+    render: () => (
+      <span>
+        <Heading size="extra-large" icon="lock">
+          Extra Large Header
+        </Heading>
+        <br />
+        <br />
+        <Heading size="large" icon="lock">
+          Large Header
+        </Heading>
+        <br />
+        <br />
+        <Heading size="medium" icon="lock">
+          Medium Header
+        </Heading>
+        <br />
+        <br />
+        <Heading size="small" icon="lock">
+          Small Header
+        </Heading>
+      </span>
+    ),
   },
 ];

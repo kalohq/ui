@@ -1,0 +1,39 @@
+.text--helper {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+strong,
+b {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
+p,
+li,
+ol {
+  font-size: 1.4rem;
+}
+
+p {
+  margin-top: 1.6rem;
+}
+
+p:first-child {
+  margin-top: 0;
+}
+
+.u-align-left {
+  text-align: left;
+}
+
+.u-align-center {
+  text-align: center;
+}
+
+.u-align-right {
+  text-align: right;
+}

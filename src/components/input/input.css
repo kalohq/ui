@@ -1,0 +1,110 @@
+.ui-input {
+  min-width: 0;
+  width: 100%;
+  color: var(--input-default-color);
+  background-color: var(--input-default-background);
+  border: var(--input-default-border);
+  border-radius: 4px;
+  padding: 4px 8px 4px 16px;
+  -webkit-appearance: none;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:disabled {
+    background-color: var(--input-disabled-background);
+    border: var(--input-disabled-border);
+    color: var(--input-disabled-color);
+    cursor: not-allowed;
+  }
+
+  &:read-only {
+    background-color: var(--input-readonly-background);
+    border: var(--input-readonly-border);
+    color: var(--input-readonly-color);
+  }
+
+  &::placeholder {
+    color: var(--grey500);
+  }
+
+  &:not(:read-only):not(:disabled):hover {
+    border: 1px solid var(--grey500);
+  }
+
+  &:not(:read-only):not(:disabled):focus {
+    border: 1px solid var(--grey600);
+  }
+}
+
+.ui-input--theme-transparent {
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 4px 0;
+
+  &::placeholder {
+    color: var(--navy500);
+  }
+
+  &:disabled,
+  &:read-only {
+    background-color: transparent;
+    border: 0;
+  }
+
+  &:not(:read-only):not(:disabled):hover,
+  &:not(:read-only):not(:disabled):focus {
+    border: 1px solid transparent;
+  }
+}
+
+.ui-input--theme-well {
+  background-color: var(--grey200);
+  border: 1px solid transparent;
+
+  &::placeholder {
+    color: var(--navy500);
+  }
+
+  &:not(:read-only):not(:disabled):hover,
+  &:not(:read-only):not(:disabled):focus {
+    border: 1px solid transparent;
+  }
+}
+
+.ui-input--valid {
+  border-color: var(--green500) !important;
+}
+
+.ui-input--invalid {
+  border-color: var(--pink500) !important;
+}
+
+.ui-input--small {
+  height: 32px;
+  font-size: 1.6rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.4rem;
+  }
+}
+
+.ui-input--medium {
+  height: 40px;
+  font-size: 1.6rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.4rem;
+  }
+}
+
+.ui-input--large {
+  height: 48px;
+  font-size: 1.6rem;
+}
+
+.ui-input--extra-large {
+  height: 52px;
+  font-size: 1.6rem;
+}

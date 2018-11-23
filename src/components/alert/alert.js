@@ -5,7 +5,7 @@ import cx from 'classnames';
 import Icon from '../icon';
 import {UIBase} from '../layout';
 
-import coreStyles from './alert.core.css';
+import styles from './alert.css';
 
 const TYPE_ICON_MAP = {
   info: 'info_outline',
@@ -20,12 +20,16 @@ type TProps = {
   showIcon?: boolean,
   justifyContent?: 'left' | 'center',
   className?: string | Object,
+  title?: string,
+  icon?: string,
 };
 
 export default function Alert(props: TProps) {
   const {
     children,
-    showIcon,
+    title,
+    showIcon = true,
+    icon,
     type = 'info',
     justifyContent = 'center',
     className,
@@ -39,19 +43,22 @@ export default function Alert(props: TProps) {
       type={type}
       className={cx(
         {
-          [coreStyles['ui-alert']]: true,
-          [coreStyles[`ui-alert--${type}`]]: true,
+          [styles['ui-alert']]: true,
+          [styles[`ui-alert--${type}`]]: true,
         },
         className
       )}
       {...otherProps}
     >
       {showIcon && (
-        <Icon color="currentColor" marginRight={8}>
-          {TYPE_ICON_MAP[type]}
-        </Icon>
+        <Icon color="currentColor">{icon ? icon : TYPE_ICON_MAP[type]}</Icon>
       )}
-      {children}
+      <div className={styles['ui-alert__content']}>
+        {title && <span className={styles['ui-alert__title']}>{title}</span>}
+        {children && (
+          <span className={styles['ui-alert__message']}>{children}</span>
+        )}
+      </div>
     </UIBase>
   );
 }
