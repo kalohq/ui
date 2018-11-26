@@ -221,6 +221,9 @@ export const ICONS = new Enum({
   KALO_TASKS: {
     value: 'kalo_tasks',
   },
+  KALO_VERIFIED: {
+    value: 'kalo_verified',
+  },
   KEYBOARD_ARROW_DOWN: {
     value: 'keyboard_arrow_down',
   },
