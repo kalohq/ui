@@ -21,10 +21,24 @@ const spriter = new SVGSpriter({
   },
 });
 
-const template = data => `
+const gradients = `
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient-pink">
+      <stop offset="0%" stopColor="rgb(232, 63, 148)" />
+      <stop offset="50%" stopColor="rgb(245, 78, 94)" />
+    </linearGradient>
+  </defs>
+</svg>
+`;
+
+const template = icons => `
 import React from 'react';
 export default () => (
-  ${data}
+  <span>
+    ${gradients}
+    ${icons}
+  </span>
 );
 `;
 

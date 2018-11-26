@@ -221,3 +221,8 @@
 .fill-light-grey {
   fill: var(--grey500);
 }
+
+/* Special gradient filles */
+.fill-gradient-pink {
+  fill: url(#gradient-pink);
+}
