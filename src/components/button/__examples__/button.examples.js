@@ -209,6 +209,19 @@ export const examples = [
     ),
   },
   {
+    title: 'Button Link',
+    render: () => (
+      <Button component="a" variant="tertiary">
+        Link button
+      </Button>
+    ),
+    html: () => (
+      <a href="#" className="ui-btn ui-btn--tertiary ui-btn--medium">
+        Link button
+      </a>
+    ),
+  },
+  {
     title: 'Themed button',
     description:
       'When used in the platform, primary buttons can inherit their colors from the theme (React only)',
