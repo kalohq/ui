@@ -128,10 +128,10 @@ module.exports = {
     'input-active-border': '1px solid #4db9cf',
     'input-default-color': 'rgb(107, 109, 133)',
     'input-readonly-border': '1px dashed #dde1e4',
-    'input-disabled-color': 'rgb(150, 151, 171)',
-    'input-readonly-background': 'rgb(213, 213, 220)',
+    'input-disabled-color': 'rgb(189, 196, 203)',
+    'input-readonly-background': 'rgb(237, 241, 245)',
     'input-disabled-border': '1px solid #dde1e4',
-    'input-readonly-color': 'rgb(150, 151, 171)',
+    'input-readonly-color': 'rgb(189, 196, 203)',
     'input-disabled-background': 'rgb(237, 241, 245)',
     'input-default-border': '1px solid #dde1e4',
 }

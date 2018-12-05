@@ -127,10 +127,10 @@ module.exports = {
   inputActiveBorder: "1px solid #4db9cf",
   inputDefaultColor: "rgb(107, 109, 133)",
   inputReadonlyBorder: "1px dashed #dde1e4",
-  inputDisabledColor: "rgb(150, 151, 171)",
-  inputReadonlyBackground: "rgb(213, 213, 220)",
+  inputDisabledColor: "rgb(189, 196, 203)",
+  inputReadonlyBackground: "rgb(237, 241, 245)",
   inputDisabledBorder: "1px solid #dde1e4",
-  inputReadonlyColor: "rgb(150, 151, 171)",
+  inputReadonlyColor: "rgb(189, 196, 203)",
   inputDisabledBackground: "rgb(237, 241, 245)",
   inputDefaultBorder: "1px solid #dde1e4",
 };

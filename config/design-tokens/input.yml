@@ -23,12 +23,12 @@ props:
     value: '{!GREY100}'
   INPUT_DISABLED_COLOR:
     type: color
-    value: '{!NAVY400}'
+    value: '{!GREY400}'
   INPUT_READONLY_BORDER:
     value: 1px dashed {!GREY200}
   INPUT_READONLY_BACKGROUND:
     type: color
-    value: '{!NAVY100}'
+    value: '{!GREY100}'
   INPUT_READONLY_COLOR:
     type: color
-    value: '{!NAVY400}'
+    value: '{!GREY400}'
