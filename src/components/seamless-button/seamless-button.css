@@ -7,7 +7,7 @@
 }
 
 .ui-seamless-button:hover {
-  background-color: var(--grey300);
+  background-color: var(--grey100);
 }
 
 .ui-seamless-button:::-moz-focus-inner {

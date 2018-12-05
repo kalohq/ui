@@ -13,6 +13,6 @@
 }
 
 .ui-inline-alert--info {
-  background-color: #e8fafc;
-  color: var(--blue500);
+  background-color: var(--blue000);
+  color: var(--blue800);
 }

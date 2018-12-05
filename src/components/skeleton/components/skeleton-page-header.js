@@ -7,7 +7,7 @@ import {Box} from '../../layout';
  */
 const SkeletonPageHeader = styled(Box)`
   background-color: #fff;
-  border-bottom: 1px solid ${props => props.theme.colors.grey300};
+  border-bottom: 1px solid ${props => props.theme.colors.grey200};
 `;
 
 export default SkeletonPageHeader;

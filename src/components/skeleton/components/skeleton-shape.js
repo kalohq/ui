@@ -17,7 +17,7 @@ const SkeletonSheen = keyframes`
  */
 const SkeletonShape = styled(Box)`
   border-radius: ${props => (props.shape === 'circle' ? '50%' : 0)};
-  background-color: ${props => props.theme.colors.grey300};
+  background-color: ${props => props.theme.colors.grey100};
   position: relative;
   overflow: hidden;
 

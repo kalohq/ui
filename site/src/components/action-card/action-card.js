@@ -21,7 +21,7 @@ const StyledActionCard = styled.div`
   h3 {
     font-size: 16px;
     font-weight: 500;
-    color: ${props => props.theme.colors.navy700};
+    color: ${props => props.theme.colors.navy900};
     margin: 0;
     padding: 0;
     line-height: 1.2em;
@@ -30,7 +30,7 @@ const StyledActionCard = styled.div`
   span {
     font-size: 14px;
     font-weight: 400;
-    color: ${props => props.theme.colors.navy500};
+    color: ${props => props.theme.colors.navy900};
     padding: 0;
     margin: 0;
   }

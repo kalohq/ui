@@ -14,7 +14,7 @@ const StyledPaperMenuItem = styled(Box)`
   background-color: ${props => props.theme.colors.white};
   cursor: ${props => (props.disabled || props.static ? 'default' : 'pointer')};
   opacity: ${props => (props.disabled ? 0.5 : 1)};
-  border-bottom: 1px solid ${props => props.theme.colors.grey300};
+  border-bottom: 1px solid ${props => props.theme.colors.grey200};
   transition: all 0.2s ease-in;
   color: inherit;
   padding: 4px 16px;
@@ -28,14 +28,14 @@ const StyledPaperMenuItem = styled(Box)`
       !props.disabled &&
       !props.static &&
       css`
-        background-color: ${props.theme.colors.grey300};
+        background-color: ${props.theme.colors.grey100};
       `};
   }
 
   ${props =>
     props.active &&
     css`
-      background: ${props.theme.colors.navy300};
+      background: ${props.theme.colors.grey200};
       color: #fff;
       padding-top: 0;
     `};

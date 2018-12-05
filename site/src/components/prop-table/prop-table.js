@@ -8,7 +8,7 @@ const StyledTable = styled.table`
   border: ${props => props.theme.colors.navy700};
 
   th {
-    border-bottom: 2px solid ${props => props.theme.colors.grey300};
+    border-bottom: 2px solid ${props => props.theme.colors.grey100};
     padding: 8px;
     font-size: 14px;
     font-weight: 500;
@@ -17,7 +17,7 @@ const StyledTable = styled.table`
   }
 
   td {
-    border-bottom: 1px solid ${props => props.theme.colors.navy300};
+    border-bottom: 1px solid ${props => props.theme.colors.grey100};
     padding: 12px 8px;
     font-size: 14px;
     font-weight: 400;
@@ -25,7 +25,7 @@ const StyledTable = styled.table`
 
     pre {
       font-weight: 400;
-      background-color: ${props => props.theme.colors.grey200};
+      background-color: ${props => props.theme.colors.grey000};
       display: inline;
       font-size: 12px;
       padding: 4px 6px;

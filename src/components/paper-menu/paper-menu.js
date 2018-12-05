@@ -39,7 +39,7 @@ const StyledPaperMenuOptionClose = styled.button`
 
 const MockedPaper = styled(UIBase)`
   background-color: ${props => props.theme.colors.white};
-  border: 1px solid ${props => props.theme.colors.grey400};
+  border: 1px solid ${props => props.theme.colors.grey200};
   box-shadow: ${props => props.theme.layout.boxShadowLevel2};
   border-radius: 4px;
   over-flow: hidden;

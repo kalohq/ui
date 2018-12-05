@@ -1,8 +1,8 @@
 .ui-skill-tag {
   display: inline-flex;
   background-color: var(--white);
-  border: 1px solid var(--navy500);
-  color: var(--navy700);
+  border: 1px solid var(--navy300);
+  color: var(--navy900);
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.6rem;

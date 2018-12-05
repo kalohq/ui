@@ -37,7 +37,7 @@ type TProps = {
 export default function Heading(props: TProps) {
   const {
     children,
-    color = 'navy700',
+    color = 'navy900',
     icon = false,
     size = 'small',
     iconAfter,

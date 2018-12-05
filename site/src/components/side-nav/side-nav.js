@@ -10,8 +10,8 @@ const AsideContainer = styled.aside`
   width: auto;
   height: 100%;
   min-width: ${MENU_WIDTH};
-  background-color: ${props => props.theme.colors.grey200};
-  border-right: 1px solid ${props => props.theme.colors.grey300};
+  background-color: ${props => props.theme.colors.grey000};
+  border-right: 1px solid ${props => props.theme.colors.grey100};
   min-height: calc(100vh - 56px);
   padding: 20px 0 0;
   margin-top: 56px;
@@ -34,10 +34,10 @@ const FixedContainer = styled.div`
 const Title = styled.h1`
   font-size: 16px;
   font-weight: 500;
-  color: ${props => props.theme.colors.navy700};
+  color: ${props => props.theme.colors.navy900};
   padding: 24px 44px 4px;
   margin: 0;
-  border-top: 1px solid ${props => props.theme.colors.grey300};
+  border-top: 1px solid ${props => props.theme.colors.grey100};
 `;
 
 const LinkGroup = styled.ul`
@@ -50,15 +50,15 @@ const LinkItem = styled.li`
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: ${props => props.theme.colors.navy600};
+  color: ${props => props.theme.colors.navy900};
   padding: 8px 32px 8px 44px;
   font-size: 14px;
   font-weight: 400;
   background-color: ${props =>
-    props.isCurrent ? props.theme.colors.grey300 : 'transparent'};
+    props.isCurrent ? props.theme.colors.grey100 : 'transparent'};
 
   &:hover {
-    background-color: ${props => props.theme.colors.grey300};
+    background-color: ${props => props.theme.colors.grey100};
   }
 
   a {
@@ -87,10 +87,10 @@ const LinkItem = styled.li`
   }
 
   ul li a {
-    color: ${props => props.theme.colors.navy600};
+    color: ${props => props.theme.colors.navy800};
 
     &:hover {
-      color: ${props => props.theme.colors.blue500};
+      color: ${props => props.theme.colors.purple500};
     }
   }
 

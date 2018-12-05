@@ -37,12 +37,12 @@ html {
 }
 
 body {
-  background-color: #fff;
+  background-color: var(--white);
   height: 100%;
   font-family: system-ui;
   font-size: 1.6rem;
   font-weight: 400;
-  color: var(--navy600);
+  color: var(--navy800);
 }
 
 /** Typography **/
@@ -59,12 +59,12 @@ h6 {
 
 hr {
   border: 0;
-  border-bottom: 1px solid var(--grey300);
+  border-bottom: 1px solid var(--grey100);
   margin: 0;
 }
 
 a {
-  color: var(--navy700);
+  color: var(--navy900);
   text-decoration: underline;
   cursor: pointer;
 }
@@ -85,7 +85,7 @@ dt {
 }
 
 dd {
-  color: var(--navy600);
+  color: var(--navy800);
 }
 
 /**

@@ -27,7 +27,7 @@ const StyledLoadingSpinner = styled.div`
   height: ${props => SPINNER_DIMENSIONS[props.size]}px;
 
   svg {
-    fill: ${props => props.theme.colors.navy400};
+    fill: ${props => props.theme.colors.grey400};
     position: absolute;
     top: 0;
     left: 0;

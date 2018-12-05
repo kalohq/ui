@@ -44,7 +44,7 @@ export default function Text(props: TProps) {
     weight = 'normal',
     size = 'small',
     align = 'unset',
-    color = 'navy600',
+    color = 'navy800',
     hoverColor = 'none',
     multiline,
     interactive,
