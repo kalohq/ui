@@ -50,4 +50,24 @@ export const examples = [
       </span>
     ),
   },
+  {
+    title: 'Special icons',
+    description:
+      'Some icons have special styles, for example being able to use a gradient fill',
+    render: () => (
+      <Icon color="gradient-pink" size={48}>
+        kalo_verified
+      </Icon>
+    ),
+    html: () => (
+      <svg
+        width="48"
+        height="48"
+        aria-hidden="true"
+        className="ui-icon fill-gradient-pink"
+      >
+        <use xlinkHref="#kalo_verified" />
+      </svg>
+    ),
+  },
 ];
