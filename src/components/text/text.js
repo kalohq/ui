@@ -5,8 +5,8 @@ import cx from 'classnames';
 import {UIBase} from '../layout';
 
 import styles from './text.css';
-import colors from '../../styles/kalo-ui-colors.css';
-import hoverColors from '../../styles/kalo-ui-hover-colors.css';
+import colors from '../../design-tokens/kalo-ui-colors.css';
+import hoverColors from '../../design-tokens/kalo-ui-hover-colors.css';
 
 import type {
   TEXT_WEIGHT,
