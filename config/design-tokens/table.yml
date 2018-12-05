@@ -5,4 +5,4 @@ imports:
   - ./color.yml
 props:
   TABLE_DEFAULT_BORDER:
-    value: 1px solid {!GREY300}
+    value: 1px solid {!GREY100}

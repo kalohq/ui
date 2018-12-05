@@ -122,16 +122,16 @@
   --spacing-large: 24px;
   --spacing-extra-large: 32px;
   --spacing-extra-extra-large: 48px;
-  --table-default-border: 1px solid #cdd3d8;
+  --table-default-border: 1px solid #EDF1F5;
   --input-default-background: rgb(255, 255, 255);
-  --input-hover-border: 1px solid #abb4bb;
+  --input-hover-border: 1px solid #cdd3d8;
   --input-active-border: 1px solid #4db9cf;
   --input-default-color: rgb(107, 109, 133);
-  --input-readonly-border: 1px dashed #bdc4cb;
-  --input-disabled-color: rgb(107, 109, 133);
-  --input-readonly-background: rgb(171, 171, 185);
-  --input-disabled-border: 1px solid #bdc4cb;
-  --input-readonly-color: rgb(107, 109, 133);
-  --input-disabled-background: rgb(171, 171, 185);
-  --input-default-border: 1px solid #bdc4cb;
+  --input-readonly-border: 1px dashed #dde1e4;
+  --input-disabled-color: rgb(150, 151, 171);
+  --input-readonly-background: rgb(213, 213, 220);
+  --input-disabled-border: 1px solid #dde1e4;
+  --input-readonly-color: rgb(150, 151, 171);
+  --input-disabled-background: rgb(237, 241, 245);
+  --input-default-border: 1px solid #dde1e4;
 }
