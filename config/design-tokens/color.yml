@@ -6,45 +6,45 @@ props: &COLORS
     value: '#fff'
   BLACK:
     value: '#000'
-  RED000:
+  PINK000:
     value: '#fdecf1'
-  RED100:
+  PINK100:
     value: '#fbd6e3'
-  RED200:
-    value: '#f9bed2'    
-  RED300:
+  PINK200:
+    value: '#f9bed2'
+  PINK300:
     value: '#f6a2be'
-  RED400:
+  PINK400:
     value: '#f37da5'
-  RED500:
+  PINK500:
     value: '#ee467e'
-  RED600:
+  PINK600:
     value: '#d73f71'
-  RED700:
+  PINK700:
     value: '#bc3763'
-  RED800:
+  PINK800:
     value: '#9b2d52'
-  RED900:
+  PINK900:
     value: '#6f203b'
-  YELLOW000:
+  ORANGE000:
     value: '#fef5e1'
-  YELLOW100:
+  ORANGE100:
     value: '#feebc2'
-  YELLOW200:
+  ORANGE200:
     value: '#fee0a0'
-  YELLOW300:
+  ORANGE300:
     value: '#fdd479'
-  YELLOW400:
+  ORANGE400:
     value: '#fdc64e'
-  YELLOW500:
+  ORANGE500:
     value: '#fdb61c'
-  YELLOW600:
+  ORANGE600:
     value: '#e4a419'
-  YELLOW700:
+  ORANGE700:
     value: '#c99016'
-  YELLOW800:
+  ORANGE800:
     value: '#a77812'
-  YELLOW900:
+  ORANGE900:
     value: '#78560d'
   PURPLE000:
     value: '#f3effa'
@@ -147,13 +147,13 @@ props: &COLORS
   GREY900:
     value: '#3c3f42'
   RED:
-    value: '{!RED500}'
+    value: '{!PINK500}'
   BLUE:
     value: '{ BLUE500}'
   PURPLE:
     value: '{!PURPLE500}'
-  YELLOW:
-    value: '{!YELLOW500}'
+  ORANGE:
+    value: '{!ORANGE500}'
   GREEN:
     value: '{!GREEN500}'
   NAVY:
