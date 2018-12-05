@@ -1,46 +1,126 @@
 import React from 'react';
-import styled from 'react-emotion';
+import styled, {css} from 'react-emotion';
+import Color from 'color';
 
 import DocumentationContent from '../../components/documentation-content';
 import Wrapper from '../../components/wrapper';
 
 import theme from '../../../../src/components/theme';
 
+const AA_COLOR_THRESHOLD = 4.5;
+
 const colors = [
   {
     swatch: 'grey',
-    key: 500,
-    colors: ['000', 100, 200, 300, 400, 500, 600, 700, 800, 900],
+    key: '500',
+    colors: [
+      '000',
+      '100',
+      '200',
+      '300',
+      '400',
+      '500',
+      '600',
+      '700',
+      '800',
+      '900',
+    ],
   },
   {
     swatch: 'navy',
-    key: 900,
-    colors: ['000', 100, 200, 300, 400, 500, 600, 700, 800, 900],
+    key: '900',
+    colors: [
+      '000',
+      '100',
+      '200',
+      '300',
+      '400',
+      '500',
+      '600',
+      '700',
+      '800',
+      '900',
+    ],
   },
   {
     swatch: 'green',
-    key: 500,
-    colors: ['000', 100, 200, 300, 400, 500, 600, 700, 800, 900],
+    key: '500',
+    colors: [
+      '000',
+      '100',
+      '200',
+      '300',
+      '400',
+      '500',
+      '600',
+      '700',
+      '800',
+      '900',
+    ],
   },
   {
     swatch: 'blue',
-    key: 500,
-    colors: ['000', 100, 200, 300, 400, 500, 600, 700, 800, 900],
+    key: '500',
+    colors: [
+      '000',
+      '100',
+      '200',
+      '300',
+      '400',
+      '500',
+      '600',
+      '700',
+      '800',
+      '900',
+    ],
   },
   {
     swatch: 'purple',
-    key: 500,
-    colors: ['000', 100, 200, 300, 400, 500, 600, 700, 800, 900],
+    key: '500',
+    colors: [
+      '000',
+      '100',
+      '200',
+      '300',
+      '400',
+      '500',
+      '600',
+      '700',
+      '800',
+      '900',
+    ],
   },
   {
-    swatch: 'red',
-    key: 500,
-    colors: ['000', 100, 200, 300, 400, 500, 600, 700, 800, 900],
+    swatch: 'pink',
+    key: '500',
+    colors: [
+      '000',
+      '100',
+      '200',
+      '300',
+      '400',
+      '500',
+      '600',
+      '700',
+      '800',
+      '900',
+    ],
   },
   {
-    swatch: 'yellow',
-    key: 500,
-    colors: ['000', 100, 200, 300, 400, 500, 600, 700, 800, 900],
+    swatch: 'orange',
+    key: '500',
+    colors: [
+      '000',
+      '100',
+      '200',
+      '300',
+      '400',
+      '500',
+      '600',
+      '700',
+      '800',
+      '900',
+    ],
   },
 ];
 
@@ -138,7 +218,6 @@ export default () => (
         access it like so:
       </p>
       <h2>Core Palette</h2>
-
       <HorizontalSwatchGroup>
         {colors.map(color => (
           <HorizontalSwatch
@@ -150,9 +229,7 @@ export default () => (
           </HorizontalSwatch>
         ))}
       </HorizontalSwatchGroup>
-
       <h2>Extended Palette</h2>
-
       <Swatches>
         {colors.map(swatch => (
           <Swatch
@@ -163,6 +240,95 @@ export default () => (
           />
         ))}
       </Swatches>
+      <h2>Accessibility</h2>
+      <p>
+        We try to build our interfaces to be as inclusive as possible. We use
+        the WCAG 2.1 AA Level as a way of measuring whether the contrast between
+        two colors is high enough that it is legible. As a rough guideline, try
+        not to merge colors from the middle of the palette. For example, pink400
+        text on a green600 background will not pass whereas purple900 on
+        orange100 will.
+      </p>
+
+      <p>
+        The following chart shows our color palette on a few commonly used
+        background colors
+      </p>
+
+      {colors.map(swatch =>
+        swatch.colors.map(colorToken => {
+          const actualColor = theme.colors[swatch.swatch + colorToken];
+
+          const backgrounds = [
+            'white',
+            'grey000',
+            'grey100',
+            'navy900',
+            'black',
+          ];
+
+          return (
+            <div key={swatch.swatch + colorToken} style={{display: 'flex'}}>
+              {backgrounds.map(background => (
+                <AccessibilityColorTestGroup
+                  key={colorToken + background}
+                  color={background}
+                >
+                  <span style={{color: actualColor}}>
+                    <span>
+                      {swatch.swatch + colorToken} on {background}
+                    </span>
+                    <br />
+                  </span>
+                  <AccessibilityColorPassFailToken
+                    color={background}
+                    backgroundColor={actualColor}
+                    hasPassed={Boolean(
+                      Color(background).contrast(Color(actualColor)) >=
+                        AA_COLOR_THRESHOLD
+                    )}
+                  >
+                    {Color(background).contrast(Color(actualColor)) <=
+                    AA_COLOR_THRESHOLD ? (
+                      'FAIL'
+                    ) : (
+                      'PASS'
+                    )}
+                  </AccessibilityColorPassFailToken>
+                </AccessibilityColorTestGroup>
+              ))}
+            </div>
+          );
+        })
+      )}
     </Wrapper>
   </DocumentationContent>
 );
+
+const AccessibilityColorTestGroup = styled.div`
+  flex: 1;
+  text-align: center;
+  padding: 24px 8px;
+  margin: 4px 0 0 4px;
+  background-color: ${props => props.theme.colors[props.color]};
+  font-size: 12px;
+  font-weight: 500;
+`;
+
+const AccessibilityColorPassFailToken = styled.span`
+  font-size: 10px;
+  font-weight: 600;
+  color: ${props => props.backgroundColor};
+  background-color: ${props => props.theme.colors[props.color]};
+  border-radius: 2px;
+  padding: 2px 6px;
+  margin-top: 4px;
+  display: inline-block;
+
+  ${props =>
+    props.hasPassed &&
+    css`
+      background-color: ${props.backgroundColor};
+      color: ${props.theme.colors[props.color]};
+    `};
+`;
