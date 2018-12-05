@@ -25,7 +25,7 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
 }
 
 .emotion-6 svg {
-  fill: rgb(131,147,172);
+  fill: rgb(150,151,171);
   position: absolute;
   top: 0;
   left: 0;
@@ -145,7 +145,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
 }
 
 .emotion-10 svg {
-  fill: rgb(131,147,172);
+  fill: rgb(150,151,171);
   position: absolute;
   top: 0;
   left: 0;
