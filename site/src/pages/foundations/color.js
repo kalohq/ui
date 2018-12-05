@@ -8,39 +8,39 @@ import theme from '../../../../src/components/theme';
 
 const colors = [
   {
+    swatch: 'grey',
+    key: 500,
+    colors: ['000', 100, 200, 300, 400, 500, 600, 700, 800, 900],
+  },
+  {
     swatch: 'navy',
-    key: 700,
-    colors: [300, 400, 500, 600, 700],
-  },
-  {
-    swatch: 'pink',
-    key: 500,
-    colors: [300, 400, 500, 600, 700],
-  },
-  {
-    swatch: 'orange',
-    key: 500,
-    colors: [300, 400, 500, 600, 700],
-  },
-  {
-    swatch: 'blue',
-    key: 500,
-    colors: [300, 400, 500, 600, 700],
+    key: 900,
+    colors: ['000', 100, 200, 300, 400, 500, 600, 700, 800, 900],
   },
   {
     swatch: 'green',
     key: 500,
-    colors: [300, 400, 500, 600, 700],
+    colors: ['000', 100, 200, 300, 400, 500, 600, 700, 800, 900],
+  },
+  {
+    swatch: 'blue',
+    key: 500,
+    colors: ['000', 100, 200, 300, 400, 500, 600, 700, 800, 900],
   },
   {
     swatch: 'purple',
     key: 500,
-    colors: [300, 400, 500, 600, 700],
+    colors: ['000', 100, 200, 300, 400, 500, 600, 700, 800, 900],
   },
   {
-    swatch: 'grey',
+    swatch: 'red',
     key: 500,
-    colors: [200, 300, 400, 500, 600, 700],
+    colors: ['000', 100, 200, 300, 400, 500, 600, 700, 800, 900],
+  },
+  {
+    swatch: 'yellow',
+    key: 500,
+    colors: ['000', 100, 200, 300, 400, 500, 600, 700, 800, 900],
   },
 ];
 
@@ -95,7 +95,7 @@ const StyledSwatchItemColorName = styled.span`
   font-weight: 500;
   width: 100%;
   color: ${props =>
-    props.isLight ? props.theme.colors.navy600 : props.theme.colors.white};
+    props.isLight ? props.theme.colors.navy700 : props.theme.colors.white};
   span {
     font-weight: 400;
     float: right;
@@ -108,7 +108,9 @@ const Swatch = ({colorGroup, name, keyColor}) => (
     {colorGroup.map(color => (
       <StyledSwatchItem key={`${name}-${color}`} color={`${name}${color}`}>
         <StyledSwatchItemColorName
-          isLight={Boolean(color === 200 || color === 300)}
+          isLight={Boolean(
+            color === '000' || color === 100 || color === 200 || color === 300
+          )}
         >
           {color} <span>{theme.colors[name + color]}</span>
         </StyledSwatchItemColorName>
@@ -132,7 +134,7 @@ export default () => (
       <p>
         The whole color palette is available in several different formats (CSS
         variables, JS variables, and via the theme prop). Variables use the
-        color name (seen below on the right). For example, to use pink in CSS,
+        color name (seen below on the right). For example, to use red in CSS,
         access it like so:
       </p>
       <h2>Core Palette</h2>

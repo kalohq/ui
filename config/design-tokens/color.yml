@@ -6,92 +6,158 @@ props: &COLORS
     value: '#fff'
   BLACK:
     value: '#000'
-  PINK300:
-    value: '#FBDFE2'
-  PINK400:
-    value: '#FCB3C8'
-  PINK500:
-    value: '#F7707F'
-  PINK600:
-    value: '#E55565'
-  PINK700:
-    value: '#C83243'
-  ORANGE300:
-    value: '#FFEDB4'
-  ORANGE400:
-    value: '#FFCE5E'
-  ORANGE500:
-    value: '#FDB81C'
-  ORANGE600:
-    value: '#F6AF0D'
-  ORANGE700:
-    value: '#D89118'
+  RED000:
+    value: '#fdecf1'
+  RED100:
+    value: '#fbd6e3'
+  RED200:
+    value: '#f9bed2'    
+  RED300:
+    value: '#f6a2be'
+  RED400:
+    value: '#f37da5'
+  RED500:
+    value: '#ee467e'
+  RED600:
+    value: '#d73f71'
+  RED700:
+    value: '#bc3763'
+  RED800:
+    value: '#9b2d52'
+  RED900:
+    value: '#6f203b'
+  YELLOW000:
+    value: '#fef5e1'
+  YELLOW100:
+    value: '#feebc2'
+  YELLOW200:
+    value: '#fee0a0'
+  YELLOW300:
+    value: '#fdd479'
+  YELLOW400:
+    value: '#fdc64e'
+  YELLOW500:
+    value: '#fdb61c'
+  YELLOW600:
+    value: '#e4a419'
+  YELLOW700:
+    value: '#c99016'
+  YELLOW800:
+    value: '#a77812'
+  YELLOW900:
+    value: '#78560d'
+  PURPLE000:
+    value: '#f3effa'
+  PURPLE100:
+    value: '#e6def5'
+  PURPLE200:
+    value: '#d8cbf0'
   PURPLE300:
-    value: '#e8e2f2'
+    value: '#c8b6e9'
   PURPLE400:
-    value: '#D0B8FF'
+    value: '#b59ee2'
   PURPLE500:
-    value: '#9F81DA'
+    value: '#9f81da'
   PURPLE600:
-    value: '#604E83'
+    value: '#8f74c4'
   PURPLE700:
-    value: '#443364'
+    value: '#7d65ac'
+  PURPLE800:
+    value: '#67548e'
+  PURPLE900:
+    value: '#493b65'
+  GREEN000:
+    value: '#e8f9f3'
+  GREEN100:
+    value: '#d0f3e7'
+  GREEN200:
+    value: '#b5ecd9'
   GREEN300:
-    value: '#D8F0E8'
+    value: '#98e4ca'
   GREEN400:
-    value: '#8CF4CF'
+    value: '#76dcb8'
   GREEN500:
-    value: '#4ED2A4'
+    value: '#4ed2a4'
   GREEN600:
-    value: '#38A07C'
+    value: '#46be94'
   GREEN700:
-    value: '#298665'
+    value: '#3da682'
+  GREEN800:
+    value: '#338a6c'
+  GREEN900:
+    value: '#25644e'
+  BLUE000:
+    value: '#e8f6f8'
+  BLUE100:
+    value: '#d0ecf2'
+  BLUE200:
+    value: '#b5e2eb'
   BLUE300:
-    value: '#C1F4FF'
+    value: '#97d6e3'
   BLUE400:
-    value: '#9EEAFB'
+    value: '#75c8d9'
   BLUE500:
-    value: '#65D2EA'
+    value: '#4db9cf'
   BLUE600:
-    value: '#4DB8CF'
+    value: '#45a7bb'
   BLUE700:
-    value: '#259FBA'
+    value: '#3d92a4'
+  BLUE800:
+    value: '#327988'
+  BLUE900:
+    value: '#245761'
+  NAVY000:
+    value: '#EAEAEE'
+  NAVY100:
+    value: '#D5D5DC'
+  NAVY200:
+    value: '#C0C0CB'
   NAVY300:
-    value: '#EEF4FA'
+    value: '#ABABB9'
   NAVY400:
-    value: '#8393AC'
+    value: '#9697AB'
   NAVY500:
-    value: '#93A6C1'
+    value: '#808296'
   NAVY600:
-    value: '#515277'
+    value: '#6B6D85'
   NAVY700:
-    value: '#302C50'
-  GREY200:
+    value: '#565873'
+  NAVY800:
+    value: '#414262'
+  NAVY900:
+    value: '#2C2E50'
+  GREY000:
     value: '#F9FAFC'
+  GREY100:
+    value: '#EDF1F5'
+  GREY200:
+    value: '#dde1e4'
   GREY300:
-    value: '#ECEFF1'
+    value: '#cdd3d8'
   GREY400:
-    value: '#D0D8DF'
+    value: '#bdc4cb'
   GREY500:
-    value: '#B0BAC3'
+    value: '#abb4bb'
   GREY600:
-    value: '#89929B'
+    value: '#98a0a7'
   GREY700:
-    value: '#707D8A'
+    value: '#83898f'
+  GREY800:
+    value: '#676c71'
+  GREY900:
+    value: '#3c3f42'
   RED:
-    value: '{!PINK500}'
-  PINK:
-    value: '{!PINK500}'
+    value: '{!RED500}'
   BLUE:
-    value: '{!BLUE500}'
+    value: '{ BLUE500}'
   PURPLE:
     value: '{!PURPLE500}'
-  ORANGE:
-    value: '{!ORANGE500}'
+  YELLOW:
+    value: '{!YELLOW500}'
   GREEN:
     value: '{!GREEN500}'
   NAVY:
-    value: '{!NAVY500}'
+    value: '{!NAVY900}'
   GREY:
     value: '{!GREY600}'
   CHARCOAL:
