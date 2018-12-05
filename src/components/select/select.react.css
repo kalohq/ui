@@ -25,7 +25,7 @@
   align-items: center;
   height: 28px;
   width: 28px;
-  background-color: var(--grey300);
+  background-color: var(--grey100);
   border-radius: 4px;
 }
 
@@ -39,7 +39,7 @@
   overflow-x: hidden;
   height: 0px;
   z-index: 300;
-  border: 1px solid var(--grey400);
+  border: 1px solid var(--grey200);
   box-shadow: 0 3px 6px rgba(140, 140, 140, 0.08);
 }
 
@@ -57,7 +57,7 @@
   color: var(--navy700);
 
   &:hover {
-    background: var(--grey300);
+    background: var(--grey100);
     border-radius: 0;
     border: none;
   }

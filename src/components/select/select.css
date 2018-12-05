@@ -50,7 +50,7 @@
   cursor: default;
 
   &:hover {
-    border: 1px solid var(--grey400);
+    border: 1px dashed var(--grey200);
   }
 }
 
