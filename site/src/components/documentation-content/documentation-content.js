@@ -6,7 +6,7 @@ const StyledDocumentationContent = styled.article`
   p,
   li,
   ol {
-    color: ${props => props.theme.colors.navy700};
+    color: ${props => props.theme.colors.navy900};
     font-size: 1.5rem;
     line-height: 2.4rem;
   }
@@ -26,18 +26,18 @@ const StyledDocumentationContent = styled.article`
   h2 {
     font-size: 20px;
     font-weight: 500;
-    color: ${props => props.theme.colors.navy700};
+    color: ${props => props.theme.colors.navy900};
     margin-top: 40px;
   }
 
   h3 {
     font-size: 18px;
     font-weight: 500;
-    color: ${props => props.theme.colors.navy700};
+    color: ${props => props.theme.colors.navy900};
   }
 
   p > code {
-    background-color: ${props => props.theme.colors.grey200};
+    background-color: ${props => props.theme.colors.grey100};
     font-size: 14px;
     padding: 4px;
     border-radius: 4px;
@@ -47,27 +47,27 @@ const StyledDocumentationContent = styled.article`
     width: 100%;
     position: relative;
     border-radius: ${props => props.theme.layout.borderRadius};
-    border: ${props => props.theme.colors.navy700};
+    border: ${props => props.theme.colors.navy900};
 
     th {
-      border-bottom: 2px solid ${props => props.theme.colors.grey300};
+      border-bottom: 2px solid ${props => props.theme.colors.grey100};
       padding: 8px;
       font-size: 14px;
       font-weight: 500;
-      color: ${props => props.theme.colors.navy600};
+      color: ${props => props.theme.colors.navy800};
       text-align: left;
     }
 
     td {
-      border-bottom: 1px solid ${props => props.theme.colors.navy300};
+      border-bottom: 1px solid ${props => props.theme.colors.grey100};
       padding: 12px 8px;
       font-size: 14px;
       font-weight: 400;
-      color: ${props => props.theme.colors.navy600};
+      color: ${props => props.theme.colors.navy800};
 
       pre {
         font-weight: 400;
-        background-color: ${props => props.theme.colors.grey200};
+        background-color: ${props => props.theme.colors.grey100};
         display: inline;
         font-size: 12px;
         padding: 4px 6px;
@@ -77,7 +77,7 @@ const StyledDocumentationContent = styled.article`
 
   code {
     font-weight: 400;
-    background-color: ${props => props.theme.colors.grey200};
+    background-color: ${props => props.theme.colors.grey000};
     display: inline;
     font-size: 12px;
     padding: 4px 6px;

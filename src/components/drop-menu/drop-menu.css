@@ -4,7 +4,7 @@
   transition-duration: 0.2s !important;
   border-radius: 4px;
   background: var(--white);
-  border: 1px solid var(--grey400);
+  border: 1px solid var(--grey200);
   box-shadow: var(--box-shadow-level-2);
   width: 224px;
 }
@@ -16,7 +16,7 @@
   background-color: var(--white);
   padding: 1.2rem 1.6rem;
   cursor: pointer;
-  border-bottom: 1px solid var(--grey300);
+  border-bottom: 1px solid var(--grey100);
   transition: all 100ms ease-in-out;
   user-select: none;
   text-decoration: none;
@@ -31,7 +31,7 @@
 }
 
 .ui-drop-menu__item:hover {
-  background-color: var(--grey200);
+  background-color: var(--grey000);
   text-decoration: none;
 }
 
@@ -44,23 +44,23 @@
 
 .ui-drop-menu__item--disabled {
   cursor: default;
-  color: var(--navy600);
+  color: var(--navy400);
 }
 
 .ui-drop-menu__item--highlighted,
 .ui-drop-menu__item--active {
-  background-color: var(--navy300);
+  background-color: var(--navy200);
   color: var(--purple500);
 }
 
 .ui-drop-menu__item--sub-item {
   padding: 0.8rem 1.6rem;
-  background-color: var(--grey200);
+  background-color: var(--grey000);
   font-size: 1.2rem;
   height: 34px;
 }
 .ui-drop-menu__item:hover {
-  background-color: var(--navy300);
+  background-color: var(--grey000);
 }
 
 .ui-drop-menu__item span {

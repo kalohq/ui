@@ -7,8 +7,8 @@ import Wrapper from '../components/wrapper';
 const IndexIntro = styled.div`
   width: 100%;
   padding: 128px 0 64px;
-  background-color: ${props => props.theme.colors.grey400};
-  color: ${props => props.theme.colors.navy700};
+  background-color: ${props => props.theme.colors.grey200};
+  color: ${props => props.theme.colors.navy900};
 
   p {
     font-size: 1.8rem;

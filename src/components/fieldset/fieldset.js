@@ -45,9 +45,9 @@ export function FieldsetHeader(props: {
 const StyledFieldset = styled(Box)`
   border: 0;
   border-bottom: ${props =>
-    props.bordered ? `1px solid ${props.theme.colors.grey300}` : null};
+    props.bordered ? `1px solid ${props.theme.colors.grey100}` : null};
   background-color: ${props =>
-    props.inset ? `${props.theme.colors.grey200}` : null};
+    props.inset ? `${props.theme.colors.grey000}` : null};
   cursor: ${props => (props.interactive ? 'pointer' : 'inherit')};
 `;
 

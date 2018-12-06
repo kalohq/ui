@@ -1,0 +1,264 @@
+
+  .fill-navy600 {
+          fill: var(--navy600);
+        }
+        .fill-pink600 {
+          fill: var(--pink600);
+        }
+        .fill-navy700 {
+          fill: var(--navy700);
+        }
+        .fill-pink700 {
+          fill: var(--pink700);
+        }
+        .fill-navy800 {
+          fill: var(--navy800);
+        }
+        .fill-orange000 {
+          fill: var(--orange000);
+        }
+        .fill-pink800 {
+          fill: var(--pink800);
+        }
+        .fill-navy900 {
+          fill: var(--navy900);
+        }
+        .fill-orange100 {
+          fill: var(--orange100);
+        }
+        .fill-snow {
+          fill: var(--snow);
+        }
+        .fill-pink900 {
+          fill: var(--pink900);
+        }
+        .fill-green {
+          fill: var(--green);
+        }
+        .fill-orange200 {
+          fill: var(--orange200);
+        }
+        .fill-orange300 {
+          fill: var(--orange300);
+        }
+        .fill-orange400 {
+          fill: var(--orange400);
+        }
+        .fill-orange500 {
+          fill: var(--orange500);
+        }
+        .fill-orange600 {
+          fill: var(--orange600);
+        }
+        .fill-white {
+          fill: var(--white);
+        }
+        .fill-orange700 {
+          fill: var(--orange700);
+        }
+        .fill-orange800 {
+          fill: var(--orange800);
+        }
+        .fill-orange900 {
+          fill: var(--orange900);
+        }
+        .fill-platinum {
+          fill: var(--platinum);
+        }
+        .fill-green000 {
+          fill: var(--green000);
+        }
+        .fill-charcoal {
+          fill: var(--charcoal);
+        }
+        .fill-silver {
+          fill: var(--silver);
+        }
+        .fill-green100 {
+          fill: var(--green100);
+        }
+        .fill-orange {
+          fill: var(--orange);
+        }
+        .fill-green200 {
+          fill: var(--green200);
+        }
+        .fill-green300 {
+          fill: var(--green300);
+        }
+        .fill-red {
+          fill: var(--red);
+        }
+        .fill-grey000 {
+          fill: var(--grey000);
+        }
+        .fill-green400 {
+          fill: var(--green400);
+        }
+        .fill-grey100 {
+          fill: var(--grey100);
+        }
+        .fill-green500 {
+          fill: var(--green500);
+        }
+        .fill-grey200 {
+          fill: var(--grey200);
+        }
+        .fill-green600 {
+          fill: var(--green600);
+        }
+        .fill-purple000 {
+          fill: var(--purple000);
+        }
+        .fill-grey300 {
+          fill: var(--grey300);
+        }
+        .fill-green700 {
+          fill: var(--green700);
+        }
+        .fill-purple100 {
+          fill: var(--purple100);
+        }
+        .fill-grey400 {
+          fill: var(--grey400);
+        }
+        .fill-green800 {
+          fill: var(--green800);
+        }
+        .fill-purple200 {
+          fill: var(--purple200);
+        }
+        .fill-grey500 {
+          fill: var(--grey500);
+        }
+        .fill-green900 {
+          fill: var(--green900);
+        }
+        .fill-blue000 {
+          fill: var(--blue000);
+        }
+        .fill-navy {
+          fill: var(--navy);
+        }
+        .fill-purple300 {
+          fill: var(--purple300);
+        }
+        .fill-grey600 {
+          fill: var(--grey600);
+        }
+        .fill-blue100 {
+          fill: var(--blue100);
+        }
+        .fill-grey700 {
+          fill: var(--grey700);
+        }
+        .fill-blue200 {
+          fill: var(--blue200);
+        }
+        .fill-none {
+          fill: var(--none);
+        }
+        .fill-purple400 {
+          fill: var(--purple400);
+        }
+        .fill-grey800 {
+          fill: var(--grey800);
+        }
+        .fill-slate {
+          fill: var(--slate);
+        }
+        .fill-blue300 {
+          fill: var(--blue300);
+        }
+        .fill-purple500 {
+          fill: var(--purple500);
+        }
+        .fill-blue {
+          fill: var(--blue);
+        }
+        .fill-grey900 {
+          fill: var(--grey900);
+        }
+        .fill-pink000 {
+          fill: var(--pink000);
+        }
+        .fill-blue400 {
+          fill: var(--blue400);
+        }
+        .fill-navy000 {
+          fill: var(--navy000);
+        }
+        .fill-purple600 {
+          fill: var(--purple600);
+        }
+        .fill-pink100 {
+          fill: var(--pink100);
+        }
+        .fill-inherit {
+          fill: var(--inherit);
+        }
+        .fill-blue500 {
+          fill: var(--blue500);
+        }
+        .fill-navy100 {
+          fill: var(--navy100);
+        }
+        .fill-purple700 {
+          fill: var(--purple700);
+        }
+        .fill-pink200 {
+          fill: var(--pink200);
+        }
+        .fill-blue600 {
+          fill: var(--blue600);
+        }
+        .fill-navy200 {
+          fill: var(--navy200);
+        }
+        .fill-purple800 {
+          fill: var(--purple800);
+        }
+        .fill-purple {
+          fill: var(--purple);
+        }
+        .fill-pink300 {
+          fill: var(--pink300);
+        }
+        .fill-currentColor {
+          fill: var(--currentColor);
+        }
+        .fill-blue700 {
+          fill: var(--blue700);
+        }
+        .fill-navy300 {
+          fill: var(--navy300);
+        }
+        .fill-purple900 {
+          fill: var(--purple900);
+        }
+        .fill-blue800 {
+          fill: var(--blue800);
+        }
+        .fill-navy400 {
+          fill: var(--navy400);
+        }
+        .fill-pink400 {
+          fill: var(--pink400);
+        }
+        .fill-blue900 {
+          fill: var(--blue900);
+        }
+        .fill-navy500 {
+          fill: var(--navy500);
+        }
+        .fill-grey {
+          fill: var(--grey);
+        }
+        .fill-pink500 {
+          fill: var(--pink500);
+        }
+        .fill-black {
+          fill: var(--black);
+        }
+        
+  

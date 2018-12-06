@@ -1,8 +1,8 @@
 .ui-tag {
   display: inline-flex;
   flex-grow: 0;
-  background-color: var(--navy300);
-  color: var(--navy600);
+  background-color: var(--grey100);
+  color: var(--navy800);
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.6rem;

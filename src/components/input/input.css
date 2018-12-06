@@ -60,7 +60,7 @@
 }
 
 .ui-input--theme-well {
-  background-color: var(--grey200);
+  background-color: var(--grey000);
   border: 1px solid transparent;
 
   &::placeholder {

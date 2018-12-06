@@ -7,7 +7,7 @@ import {UIBase} from '../layout';
 import type {TEXT_COLOR} from '../text/constants';
 
 import styles from './heading.css';
-import colors from '../../styles/kalo-ui-colors.css';
+import colors from '../../design-tokens/kalo-ui-colors.css';
 
 type TProps = {
   /** The heading content */
@@ -37,7 +37,7 @@ type TProps = {
 export default function Heading(props: TProps) {
   const {
     children,
-    color = 'navy700',
+    color = 'navy900',
     icon = false,
     size = 'small',
     iconAfter,

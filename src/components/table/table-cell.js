@@ -13,7 +13,7 @@ const outerBorder = props =>
 
 const StyledTableCell = styled('td')`
   display: table-cell;
-  color: ${props => props.theme.colors.navy700};
+  color: ${props => props.theme.colors.navy900};
   font-weight: 300;
   text-align: left;
   padding: ${CELL_PADDING};
@@ -60,13 +60,13 @@ const StyledTableCell = styled('td')`
 
 const StyledTableHeaderCell = styled('th')`
   display: table-cell;
-  color: ${props => props.theme.colors.navy700};
+  color: ${props => props.theme.colors.navy900};
   font-weight: 300;
   text-align: left;
   padding: ${CELL_PADDING};
   font-size: 14px;
   min-height: 40px;
-  color: ${props => props.theme.colors.grey500};
+  color: ${props => props.theme.colors.grey300};
 
   ${props => props.sortable && css`cursor: pointer;`};
 

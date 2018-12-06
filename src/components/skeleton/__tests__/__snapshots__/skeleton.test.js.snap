@@ -23,7 +23,7 @@ exports[`components/skeleton SkeletonAvatar should render shallow component ok 1
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  background-color: rgb(236,239,241);
+  background-color: rgb(237,241,245);
   position: relative;
   overflow: hidden;
 }
@@ -73,7 +73,7 @@ exports[`components/skeleton SkeletonButton should render shallow component ok 1
   height: 36px;
   width: 36px;
   border-radius: 0;
-  background-color: rgb(236,239,241);
+  background-color: rgb(237,241,245);
   position: relative;
   overflow: hidden;
 }
@@ -200,7 +200,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   margin-top: 10px;
   margin-left: 0;
   border-radius: 0;
-  background-color: rgb(236,239,241);
+  background-color: rgb(237,241,245);
   position: relative;
   overflow: hidden;
 }
@@ -244,7 +244,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   margin-top: 10px;
   margin-left: 0;
   border-radius: 0;
-  background-color: rgb(236,239,241);
+  background-color: rgb(237,241,245);
   position: relative;
   overflow: hidden;
 }
@@ -340,7 +340,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   height: 36px;
   width: 36px;
   border-radius: 0;
-  background-color: rgb(236,239,241);
+  background-color: rgb(237,241,245);
   position: relative;
   overflow: hidden;
 }
@@ -382,7 +382,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   height: 12px;
   width: 50%;
   border-radius: 0;
-  background-color: rgb(236,239,241);
+  background-color: rgb(237,241,245);
   position: relative;
   overflow: hidden;
 }
@@ -443,7 +443,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -ms-flexbox;
   display: flex;
   background-color: #fff;
-  border-bottom: 1px solid rgb(236,239,241);
+  border-bottom: 1px solid rgb(221,225,228);
 }
 
 .emotion-5 {
@@ -501,7 +501,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  border-top: 1px solid rgb(236,239,241);
+  border-top: 1px solid rgb(237,241,245);
 }
 
 .emotion-15 {
@@ -574,7 +574,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   margin-top: 0;
   margin-left: 25px;
   border-radius: 0;
-  background-color: rgb(236,239,241);
+  background-color: rgb(237,241,245);
   position: relative;
   overflow: hidden;
 }
@@ -696,7 +696,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   margin-top: 25px;
   margin-left: 0;
   border-radius: 50%;
-  background-color: rgb(236,239,241);
+  background-color: rgb(237,241,245);
   position: relative;
   overflow: hidden;
 }
@@ -740,7 +740,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   margin-top: 25px;
   margin-left: 0;
   border-radius: 0;
-  background-color: rgb(236,239,241);
+  background-color: rgb(237,241,245);
   position: relative;
   overflow: hidden;
 }
@@ -784,7 +784,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   margin-top: 25px;
   margin-left: 0;
   border-radius: 0;
-  background-color: rgb(236,239,241);
+  background-color: rgb(237,241,245);
   position: relative;
   overflow: hidden;
 }
@@ -1016,7 +1016,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   margin-top: 0;
   margin-left: 25px;
   border-radius: 0;
-  background-color: rgb(236,239,241);
+  background-color: rgb(237,241,245);
   position: relative;
   overflow: hidden;
 }
@@ -1060,7 +1060,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   margin-top: 0;
   margin-left: 25px;
   border-radius: 0;
-  background-color: rgb(236,239,241);
+  background-color: rgb(237,241,245);
   position: relative;
   overflow: hidden;
 }
@@ -1167,7 +1167,7 @@ exports[`components/skeleton SkeletonText should render shallow component ok 1`]
   height: 12px;
   width: 50%;
   border-radius: 0;
-  background-color: rgb(236,239,241);
+  background-color: rgb(237,241,245);
   position: relative;
   overflow: hidden;
 }

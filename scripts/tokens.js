@@ -35,6 +35,18 @@ const formatsRequired = [
     format: 'scss',
     fileName: 'tokens.scss',
   },
+  {
+    format: 'css-helpers/colors',
+    fileName: 'kalo-ui-colors.css',
+  },
+  {
+    format: 'css-helpers/hover-colors',
+    fileName: 'kalo-ui-hover-colors.css',
+  },
+  {
+    format: 'css-helpers/fills',
+    fileName: 'kalo-ui-fills.css',
+  },
 ];
 
 const writeToNewFile = (name, contents) => {
@@ -70,49 +82,61 @@ theo.registerFormat('theme.js', result => {
 theo.registerFormat(
   'custom-properties-as-an-object',
   `
-module.exports = {
-  {{#each props as |prop|}}
-    '{{kebabcase prop.name}}': '{{prop.value}}',
-  {{/each}}
-}
+  module.exports = {
+    {{#each props as |prop|}}
+      '{{kebabcase prop.name}}': '{{prop.value}}',
+    {{/each}}
+  }
 `
 );
 
-/**
- * A custom token format to generate a sketch pallete for product
- * designers. 
- */
-theo.registerFormat('sketch', result => {
-  const TEMPLATE_BASE = {
-    compatibleVersion: '2.0',
-    pluginVersion: '2.0',
-    colors: [],
-  };
-
-  result
+theo.registerFormat('css-helpers/colors', result =>
+  `
+  ${result
     .get('props')
-    .filter(token => token.get('category') === 'colors')
-    .filter(token => token.get('value').match(/rgb/))
-    .filter(token => token.get('originalValue').match(/#/))
-    .sort((a, b) => a.get('name').localeCompare(b.get('name')))
-    .map(token => {
-      const [r, g, b] = token
-        .get('value')
-        .replace('rgb(', '')
-        .replace(')', '')
-        .split(',')
-        .map(i => i / 255);
+    .filter(prop => prop.get('category') === 'colors')
+    .map(
+      prop =>
+        `.color-${camelCase(prop.get('name'))} {
+          color: var(--${camelCase(prop.get('name'))});
+        }
+        `
+    )
+    .toJS()}
+  `.replace(/,/g, '')
+);
 
-      return TEMPLATE_BASE.colors.push({
-        red: r,
-        green: g,
-        blue: b,
-        alpha: 1,
-      });
-    });
+theo.registerFormat('css-helpers/hover-colors', result =>
+  `
+  ${result
+    .get('props')
+    .filter(prop => prop.get('category') === 'colors')
+    .map(
+      prop =>
+        `.hover-color-${camelCase(prop.get('name'))}:hover {
+          color: var(--${camelCase(prop.get('name'))});
+        }
+        `
+    )
+    .toJS()}
+  `.replace(/,/g, '')
+);
 
-  return JSON.stringify(TEMPLATE_BASE);
-});
+theo.registerFormat('css-helpers/fills', result =>
+  `
+  ${result
+    .get('props')
+    .filter(prop => prop.get('category') === 'colors')
+    .map(
+      prop =>
+        `.fill-${camelCase(prop.get('name'))} {
+          fill: var(--${camelCase(prop.get('name'))});
+        }
+        `
+    )
+    .toJS()}
+  `.replace(/,/g, '')
+);
 
 formatsRequired.map(format => {
   return theo

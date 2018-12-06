@@ -19,7 +19,7 @@
     display: block;
     flex-shrink: 0;
     border-radius: 3px;
-    border: 1px solid var(--grey500);
+    border: 1px solid var(--grey300);
     transition: 100ms ease-in-out background-color, border-color;
     background-size: cover;
     background-position: center center;
@@ -28,8 +28,8 @@
   }
 
   &:hover:before {
-    background-color: var(--grey200);
-    border-color: var(--navy600);
+    background-color: var(--grey000);
+    border-color: var(--grey400);
   }
 }
 
@@ -46,8 +46,8 @@
 
 .ui-checkbox input:disabled:checked ~ label:before {
   background-image: url('data:image/svg+xml;charset=utf-8,<svg fill="#B0BAC3" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>');
-  background-color: var(--grey200);
-  border: 1px solid var(--grey500);
+  background-color: var(--grey100);
+  border: 1px solid var(--grey300);
 }
 
 .ui-checkbox input:indeterminate ~ label:before {
@@ -84,23 +84,23 @@
 .ui-checkbox__label {
   font-size: 1.4rem;
   font-weight: 500;
-  color: var(--navy700);
+  color: var(--navy900);
   line-height: 1.6rem;
   margin-top: 2px;
 }
 
 .ui-checkbox input:disabled ~ label .ui-checkbox__label {
-  color: var(--grey600);
+  color: var(--grey800);
 }
 
 .ui-checkbox__hint {
   font-size: 1.2rem;
   line-height: 1.8rem;
   font-weight: 400;
-  color: var(--navy600);
+  color: var(--navy900);
   margin-top: 4px;
 }
 
 .ui-checkbox input:disabled ~ label .ui-checkbox__hint {
-  color: var(--grey500);
+  color: var(--grey700);
 }

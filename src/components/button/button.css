@@ -11,7 +11,7 @@
   vertical-align: middle;
   transition: background 0.3s ease-out, color 0.2s ease-out;
   background-color: var(--white);
-  color: var(--navy700);
+  color: var(--navy900);
   text-decoration: none;
 
   &:hover {
@@ -104,48 +104,48 @@
 }
 
 .ui-btn--secondary {
-  background-color: var(--navy700);
+  background-color: var(--navy900);
   color: var(--white);
 
   &:hover {
-    background-color: var(--navy600);
+    background-color: var(--navy700);
   }
 
   &:active,
   &.ui-btn--active {
-    background-color: var(--navy700);
+    background-color: var(--navy900);
     box-shadow: none;
-  }
-
-  &:focus {
-    box-shadow: 0 0 0 3px var(--grey400);
-  }
-}
-
-.ui-btn--tertiary {
-  background-color: #fff;
-  border: 1px solid var(--grey400);
-  color: var(--navy700);
-
-  &:hover {
-    border-color: var(--grey400);
-    background-color: var(--grey200);
   }
 
   &:focus {
     box-shadow: 0 0 0 3px var(--grey300);
   }
+}
+
+.ui-btn--tertiary {
+  background-color: var(--white);
+  border: 1px solid var(--grey200);
+  color: var(--navy900);
+
+  &:hover {
+    border-color: var(--grey300);
+    background-color: var(--grey000);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px var(--grey100);
+  }
 
   &:active,
   &.ui-btn--active {
-    background-color: var(--grey300);
+    background-color: var(--grey100);
     box-shadow: none;
   }
 
   &.ui-btn--subdued {
-    background-color: var(--grey300);
-    border: 1px solid var(--grey400);
-    color: var(--navy700);
+    background-color: var(--grey100);
+    border: 1px solid var(--grey200);
+    color: var(--navy900);
   }
 }
 
@@ -221,7 +221,7 @@
   */
 .ui-btn--disabled,
 .ui-btn:disabled {
-  background-color: var(--grey300);
-  color: var(--grey400);
+  background-color: var(--grey100);
+  color: var(--grey500);
   cursor: default;
 }

@@ -39,7 +39,7 @@
   cursor: not-allowed;
 
   &:hover {
-    border: 1px solid var(--grey400);
+    border: 1px solid var(--grey200);
   }
 }
 
@@ -50,13 +50,13 @@
   cursor: default;
 
   &:hover {
-    border: 1px solid var(--grey400);
+    border: 1px dashed var(--grey200);
   }
 }
 
 .ui-select--open {
-  border-color: var(--grey500);
-  background-color: var(--grey200);
+  border-color: var(--grey300);
+  background-color: var(--grey000);
 }
 
 .ui-select--invalid {

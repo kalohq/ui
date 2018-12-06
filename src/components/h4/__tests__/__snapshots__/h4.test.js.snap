@@ -2,7 +2,7 @@
 
 exports[`H4 should allow size to be overridden 1`] = `
 <h4
-  className="heading heading--large heading--align-unset heading--ellipsis color-navy700 emotion-0 emotion-1"
+  className="heading heading--large heading--align-unset heading--ellipsis color-navy900 emotion-0 emotion-1"
   style={Object {}}
 >
   An H4 Tag
@@ -11,7 +11,7 @@ exports[`H4 should allow size to be overridden 1`] = `
 
 exports[`H4 should render shallow component ok 1`] = `
 <h4
-  className="heading heading--small heading--align-unset heading--ellipsis color-navy700 emotion-0 emotion-1"
+  className="heading heading--small heading--align-unset heading--ellipsis color-navy900 emotion-0 emotion-1"
   style={Object {}}
 >
   An H4 Tag

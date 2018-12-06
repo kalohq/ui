@@ -203,16 +203,16 @@ const StoryContainer = styled.div`
 const StoryTitle = styled.h3`
   font-size: 22px;
   font-weight: 500;
-  color: ${props => props.theme.colors.navy700};
+  color: ${props => props.theme.colors.navy900};
   margin: 0 0 8px;
   padding: 0 0 8px;
-  border-bottom: 1px solid ${props => props.theme.colors.grey300};
+  border-bottom: 1px solid ${props => props.theme.colors.grey100};
 `;
 
 const StoryDescription = styled.span`
   font-size: 14px;
   font-weight: 400;
-  color: ${props => props.theme.colors.navy600};
+  color: ${props => props.theme.colors.navy800};
 `;
 
 const StoryMain = styled.div`
@@ -220,13 +220,13 @@ const StoryMain = styled.div`
   padding: 32px 16px;
   margin-top: 16px;
   background-color: ${props => props.theme.colors.white};
-  border: 1px solid ${props => props.theme.colors.grey300};
+  border: 1px solid ${props => props.theme.colors.grey100};
   border-radius: ${props => props.theme.layout.borderRadius}
     ${props => props.theme.layout.borderRadius} 0 0;
 `;
 
 const StorySnippet = styled.div`
-  background-color: ${props => props.theme.colors.grey200};
+  background-color: ${props => props.theme.colors.grey000};
   color: #586e75;
   width: 100%;
   font-size: 14px;

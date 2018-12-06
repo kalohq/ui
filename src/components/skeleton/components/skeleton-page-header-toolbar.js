@@ -7,7 +7,7 @@ import SpacerBox from './skeleton-spacer-box';
 import {Box} from '../../layout';
 
 const StyledSkeletonPageHeaderToolbar = styled(Box)`
-  border-top: 1px solid ${props => props.theme.colors.grey300};
+  border-top: 1px solid ${props => props.theme.colors.grey100};
 `;
 
 /** Skeleton page header heading */

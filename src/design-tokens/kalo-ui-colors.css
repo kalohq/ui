@@ -1,0 +1,264 @@
+
+  .color-navy600 {
+          color: var(--navy600);
+        }
+        .color-pink600 {
+          color: var(--pink600);
+        }
+        .color-navy700 {
+          color: var(--navy700);
+        }
+        .color-pink700 {
+          color: var(--pink700);
+        }
+        .color-navy800 {
+          color: var(--navy800);
+        }
+        .color-orange000 {
+          color: var(--orange000);
+        }
+        .color-pink800 {
+          color: var(--pink800);
+        }
+        .color-navy900 {
+          color: var(--navy900);
+        }
+        .color-orange100 {
+          color: var(--orange100);
+        }
+        .color-snow {
+          color: var(--snow);
+        }
+        .color-pink900 {
+          color: var(--pink900);
+        }
+        .color-green {
+          color: var(--green);
+        }
+        .color-orange200 {
+          color: var(--orange200);
+        }
+        .color-orange300 {
+          color: var(--orange300);
+        }
+        .color-orange400 {
+          color: var(--orange400);
+        }
+        .color-orange500 {
+          color: var(--orange500);
+        }
+        .color-orange600 {
+          color: var(--orange600);
+        }
+        .color-white {
+          color: var(--white);
+        }
+        .color-orange700 {
+          color: var(--orange700);
+        }
+        .color-orange800 {
+          color: var(--orange800);
+        }
+        .color-orange900 {
+          color: var(--orange900);
+        }
+        .color-platinum {
+          color: var(--platinum);
+        }
+        .color-green000 {
+          color: var(--green000);
+        }
+        .color-charcoal {
+          color: var(--charcoal);
+        }
+        .color-silver {
+          color: var(--silver);
+        }
+        .color-green100 {
+          color: var(--green100);
+        }
+        .color-orange {
+          color: var(--orange);
+        }
+        .color-green200 {
+          color: var(--green200);
+        }
+        .color-green300 {
+          color: var(--green300);
+        }
+        .color-red {
+          color: var(--red);
+        }
+        .color-grey000 {
+          color: var(--grey000);
+        }
+        .color-green400 {
+          color: var(--green400);
+        }
+        .color-grey100 {
+          color: var(--grey100);
+        }
+        .color-green500 {
+          color: var(--green500);
+        }
+        .color-grey200 {
+          color: var(--grey200);
+        }
+        .color-green600 {
+          color: var(--green600);
+        }
+        .color-purple000 {
+          color: var(--purple000);
+        }
+        .color-grey300 {
+          color: var(--grey300);
+        }
+        .color-green700 {
+          color: var(--green700);
+        }
+        .color-purple100 {
+          color: var(--purple100);
+        }
+        .color-grey400 {
+          color: var(--grey400);
+        }
+        .color-green800 {
+          color: var(--green800);
+        }
+        .color-purple200 {
+          color: var(--purple200);
+        }
+        .color-grey500 {
+          color: var(--grey500);
+        }
+        .color-green900 {
+          color: var(--green900);
+        }
+        .color-blue000 {
+          color: var(--blue000);
+        }
+        .color-navy {
+          color: var(--navy);
+        }
+        .color-purple300 {
+          color: var(--purple300);
+        }
+        .color-grey600 {
+          color: var(--grey600);
+        }
+        .color-blue100 {
+          color: var(--blue100);
+        }
+        .color-grey700 {
+          color: var(--grey700);
+        }
+        .color-blue200 {
+          color: var(--blue200);
+        }
+        .color-none {
+          color: var(--none);
+        }
+        .color-purple400 {
+          color: var(--purple400);
+        }
+        .color-grey800 {
+          color: var(--grey800);
+        }
+        .color-slate {
+          color: var(--slate);
+        }
+        .color-blue300 {
+          color: var(--blue300);
+        }
+        .color-purple500 {
+          color: var(--purple500);
+        }
+        .color-blue {
+          color: var(--blue);
+        }
+        .color-grey900 {
+          color: var(--grey900);
+        }
+        .color-pink000 {
+          color: var(--pink000);
+        }
+        .color-blue400 {
+          color: var(--blue400);
+        }
+        .color-navy000 {
+          color: var(--navy000);
+        }
+        .color-purple600 {
+          color: var(--purple600);
+        }
+        .color-pink100 {
+          color: var(--pink100);
+        }
+        .color-inherit {
+          color: var(--inherit);
+        }
+        .color-blue500 {
+          color: var(--blue500);
+        }
+        .color-navy100 {
+          color: var(--navy100);
+        }
+        .color-purple700 {
+          color: var(--purple700);
+        }
+        .color-pink200 {
+          color: var(--pink200);
+        }
+        .color-blue600 {
+          color: var(--blue600);
+        }
+        .color-navy200 {
+          color: var(--navy200);
+        }
+        .color-purple800 {
+          color: var(--purple800);
+        }
+        .color-purple {
+          color: var(--purple);
+        }
+        .color-pink300 {
+          color: var(--pink300);
+        }
+        .color-currentColor {
+          color: var(--currentColor);
+        }
+        .color-blue700 {
+          color: var(--blue700);
+        }
+        .color-navy300 {
+          color: var(--navy300);
+        }
+        .color-purple900 {
+          color: var(--purple900);
+        }
+        .color-blue800 {
+          color: var(--blue800);
+        }
+        .color-navy400 {
+          color: var(--navy400);
+        }
+        .color-pink400 {
+          color: var(--pink400);
+        }
+        .color-blue900 {
+          color: var(--blue900);
+        }
+        .color-navy500 {
+          color: var(--navy500);
+        }
+        .color-grey {
+          color: var(--grey);
+        }
+        .color-pink500 {
+          color: var(--pink500);
+        }
+        .color-black {
+          color: var(--black);
+        }
+        
+  

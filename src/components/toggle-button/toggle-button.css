@@ -24,7 +24,7 @@
   height: 26px;
   cursor: pointer;
   background-color: transparent;
-  border: 2px solid var(--grey200);
+  border: 2px solid var(--grey100);
   position: relative;
 
   &:after {
@@ -58,7 +58,7 @@
 }
 
 .ui-toggle-button--orangeToGreen input ~ label > div:after {
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .ui-toggle-button--orangeToGreen input:checked ~ label > div {

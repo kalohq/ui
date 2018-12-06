@@ -2,7 +2,7 @@
 
 exports[`Heading should match snapshot 1`] = `
 <span
-  className="heading heading--medium heading--align-unset heading--ellipsis color-navy700 e1q9f2xp6 css-0"
+  className="heading heading--medium heading--align-unset heading--ellipsis color-navy900 e1q9f2xp6 css-0"
   style={Object {}}
 >
   A medium sized header
