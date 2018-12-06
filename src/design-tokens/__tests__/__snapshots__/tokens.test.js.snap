@@ -3,7 +3,7 @@
 exports[`Tokens should be present 1`] = `
 Object {
   "black": "rgb(0, 0, 0)",
-  "blue": "rgb(0, 0, 0)",
+  "blue": "rgb(77, 185, 207)",
   "blue000": "rgb(232, 246, 248)",
   "blue100": "rgb(208, 236, 242)",
   "blue200": "rgb(181, 226, 235)",
@@ -19,7 +19,7 @@ Object {
   "boxShadowLevel2": "0 10px 25px rgba(140, 140, 140, 0.14)",
   "boxShadowLevel3": "0 12px 25px rgba(140, 140, 140, 0.21)",
   "boxShadowLevel4": "0 14px 25px rgba(140, 140, 140, 0.27)",
-  "charcoal": "rgb(86, 88, 115)",
+  "charcoal": "rgb(44, 46, 80)",
   "confirmation": "rgb(229, 247, 241)",
   "currentColor": "currentColor",
   "error": "rgb(255, 235, 238)",
@@ -124,7 +124,7 @@ Object {
   "purple900": "rgb(73, 59, 101)",
   "red": "rgb(238, 70, 126)",
   "silver": "rgb(171, 180, 187)",
-  "slate": "rgb(107, 109, 133)",
+  "slate": "rgb(65, 66, 98)",
   "snow": "rgb(221, 225, 228)",
   "spacingExtraExtraLarge": "48px",
   "spacingExtraLarge": "32px",
