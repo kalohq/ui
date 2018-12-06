@@ -5,7 +5,7 @@ import styled from 'react-emotion';
 import {Box} from '../../layout';
 
 const StyledPaperToolbar = styled(Box)`
-  border-bottom: 1px solid ${props => props.theme.colors.grey300};
+  border-bottom: 1px solid ${props => props.theme.colors.grey100};
 `;
 
 /**
