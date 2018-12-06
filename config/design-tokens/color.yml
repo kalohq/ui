@@ -149,7 +149,7 @@ props: &COLORS
   RED:
     value: '{!PINK500}'
   BLUE:
-    value: '{ BLUE500}'
+    value: '{!BLUE500}'
   PURPLE:
     value: '{!PURPLE500}'
   ORANGE:
