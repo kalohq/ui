@@ -161,9 +161,9 @@ props: &COLORS
   GREY:
     value: '{!GREY600}'
   CHARCOAL:
-    value: '{!NAVY700}'
+    value: '{!NAVY900}'
   SLATE:
-    value: '{!NAVY600}'
+    value: '{!NAVY800}'
   SILVER:
     value: '{!GREY500}'
   PLATINUM:

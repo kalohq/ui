@@ -31,8 +31,8 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  background-color: var(--grey300);
-  color: var(--navy600);
+  background-color: var(--grey100);
+  color: var(--navy900);
   border: 1px solid #dfe2e4;
   padding: 0 16px;
   display: flex;
