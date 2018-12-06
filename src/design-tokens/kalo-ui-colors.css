@@ -156,7 +156,7 @@
           color: var(--blue200);
         }
         .color-none {
-          color: var(--none);
+          color: none;
         }
         .color-purple400 {
           color: var(--purple400);
@@ -195,7 +195,7 @@
           color: var(--pink100);
         }
         .color-inherit {
-          color: var(--inherit);
+          color: inherit;
         }
         .color-blue500 {
           color: var(--blue500);
@@ -225,7 +225,7 @@
           color: var(--pink300);
         }
         .color-currentColor {
-          color: var(--currentColor);
+          color: currentColor;
         }
         .color-blue700 {
           color: var(--blue700);

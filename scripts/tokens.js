@@ -98,7 +98,11 @@ theo.registerFormat('css-helpers/colors', result =>
     .map(
       prop =>
         `.color-${camelCase(prop.get('name'))} {
-          color: var(--${camelCase(prop.get('name'))});
+          ${prop.get('name') === 'CURRENT_COLOR' ||
+          prop.get('name') === 'NONE' ||
+          prop.get('name') === 'INHERIT'
+            ? `color: ${camelCase(prop.get('name'))};`
+            : `color: var(--${camelCase(prop.get('name'))});`}
         }
         `
     )
@@ -114,7 +118,11 @@ theo.registerFormat('css-helpers/hover-colors', result =>
     .map(
       prop =>
         `.hover-color-${camelCase(prop.get('name'))}:hover {
-          color: var(--${camelCase(prop.get('name'))});
+          ${prop.get('name') === 'CURRENT_COLOR' ||
+          prop.get('name') === 'NONE' ||
+          prop.get('name') === 'INHERIT'
+            ? `color: ${camelCase(prop.get('name'))};`
+            : `color: var(--${camelCase(prop.get('name'))});`}
         }
         `
     )
@@ -130,7 +138,11 @@ theo.registerFormat('css-helpers/fills', result =>
     .map(
       prop =>
         `.fill-${camelCase(prop.get('name'))} {
-          fill: var(--${camelCase(prop.get('name'))});
+          ${prop.get('name') === 'CURRENT_COLOR' ||
+          prop.get('name') === 'NONE' ||
+          prop.get('name') === 'INHERIT'
+            ? `fill: ${camelCase(prop.get('name'))};`
+            : `fill: var(--${camelCase(prop.get('name'))});`}
         }
         `
     )

@@ -156,7 +156,7 @@
           color: var(--blue200);
         }
         .hover-color-none:hover {
-          color: var(--none);
+          color: none;
         }
         .hover-color-purple400:hover {
           color: var(--purple400);
@@ -195,7 +195,7 @@
           color: var(--pink100);
         }
         .hover-color-inherit:hover {
-          color: var(--inherit);
+          color: inherit;
         }
         .hover-color-blue500:hover {
           color: var(--blue500);
@@ -225,7 +225,7 @@
           color: var(--pink300);
         }
         .hover-color-currentColor:hover {
-          color: var(--currentColor);
+          color: currentColor;
         }
         .hover-color-blue700:hover {
           color: var(--blue700);

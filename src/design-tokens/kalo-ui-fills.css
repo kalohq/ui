@@ -156,7 +156,7 @@
           fill: var(--blue200);
         }
         .fill-none {
-          fill: var(--none);
+          fill: none;
         }
         .fill-purple400 {
           fill: var(--purple400);
@@ -195,7 +195,7 @@
           fill: var(--pink100);
         }
         .fill-inherit {
-          fill: var(--inherit);
+          fill: inherit;
         }
         .fill-blue500 {
           fill: var(--blue500);
@@ -225,7 +225,7 @@
           fill: var(--pink300);
         }
         .fill-currentColor {
-          fill: var(--currentColor);
+          fill: currentColor;
         }
         .fill-blue700 {
           fill: var(--blue700);
