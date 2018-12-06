@@ -203,6 +203,7 @@ exports.modifyWebpackConfig = ({config, stage}) => {
         exclude: [
           path.resolve(__dirname, '../src/components/'),
           path.resolve(__dirname, '../src/styles/'),
+          path.resolve(__dirname, '../src/design-tokens/'),
         ],
         include: [path.resolve(__dirname)],
         loaders: [`style`, `css`, `postcss`],
@@ -213,6 +214,7 @@ exports.modifyWebpackConfig = ({config, stage}) => {
         include: [
           path.resolve(__dirname, '../src/components/'),
           path.resolve(__dirname, '../src/styles/'),
+          path.resolve(__dirname, '../src/design-tokens/'),
         ],
         exclude: [path.resolve(__dirname)],
         loaders: ['style', cssModulesConfig(stage), 'postcss'],
@@ -226,6 +228,7 @@ exports.modifyWebpackConfig = ({config, stage}) => {
         include: [
           path.resolve(__dirname, '../src/components/'),
           path.resolve(__dirname, '../src/styles/'),
+          path.resolve(__dirname, '../src/design-tokens/'),
         ],
         exclude: [path.resolve(__dirname)],
         loader: ExtractTextPlugin.extract('style', [
@@ -239,6 +242,7 @@ exports.modifyWebpackConfig = ({config, stage}) => {
         exclude: [
           path.resolve(__dirname, '../src/components/'),
           path.resolve(__dirname, '../src/styles/'),
+          path.resolve(__dirname, '../src/design-tokens/'),
         ],
         loader: `null`,
       });
@@ -251,6 +255,7 @@ exports.modifyWebpackConfig = ({config, stage}) => {
         include: [
           path.resolve(__dirname, '../src/components/'),
           path.resolve(__dirname, '../src/styles/'),
+          path.resolve(__dirname, '../src/design-tokens/'),
         ],
         exclude: [path.resolve(__dirname)],
         loader: ExtractTextPlugin.extract('style', [
@@ -264,6 +269,7 @@ exports.modifyWebpackConfig = ({config, stage}) => {
         exclude: [
           path.resolve(__dirname, '../src/components/'),
           path.resolve(__dirname, '../src/styles/'),
+          path.resolve(__dirname, '../src/design-tokens/'),
         ],
         loader: ExtractTextPlugin.extract([`css?minimize`, `postcss`]),
       });
@@ -275,6 +281,7 @@ exports.modifyWebpackConfig = ({config, stage}) => {
         include: [
           path.resolve(__dirname, '../src/components/'),
           path.resolve(__dirname, '../src/styles/'),
+          path.resolve(__dirname, '../src/design-tokens/'),
         ],
         loader: ExtractTextPlugin.extract('style', [
           cssModulesConfig(stage),
@@ -287,6 +294,7 @@ exports.modifyWebpackConfig = ({config, stage}) => {
         exclude: [
           path.resolve(__dirname, '../src/components/'),
           path.resolve(__dirname, '../src/styles/'),
+          path.resolve(__dirname, '../src/design-tokens/'),
         ],
         // loader: `null`,
         loader: ExtractTextPlugin.extract([`css`]),
