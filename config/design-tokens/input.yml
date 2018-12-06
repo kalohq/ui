@@ -11,7 +11,7 @@ props:
     value: 1px solid {!GREY200}
   INPUT_DEFAULT_COLOR:
     type: color
-    value: '{!NAVY600}'
+    value: '{!NAVY900}'
   INPUT_HOVER_BORDER:
     value: 1px solid {!GREY300}
   INPUT_ACTIVE_BORDER:

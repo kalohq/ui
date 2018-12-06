@@ -126,7 +126,7 @@
       'input-default-background': 'rgb(255, 255, 255)',
       'input-hover-border': '1px solid #cdd3d8',
       'input-active-border': '1px solid #4db9cf',
-      'input-default-color': 'rgb(107, 109, 133)',
+      'input-default-color': 'rgb(44, 46, 80)',
       'input-readonly-border': '1px dashed #dde1e4',
       'input-disabled-color': 'rgb(189, 196, 203)',
       'input-readonly-background': 'rgb(237, 241, 245)',
