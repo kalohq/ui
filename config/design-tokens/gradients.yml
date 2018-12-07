@@ -9,5 +9,21 @@ props: &GRADIENTS
     type: color
     value: '#F54E5E'
   GRADIENT_PINK:
-    value: linear-gradient(19deg, {!GRADIENT_PINK_STOP_1} 0%, {!GRADIENT_PINK_STOP_2} 100%)
+    value: linear-gradient(to right, {!GRADIENT_PINK_STOP_1} 0%, {!GRADIENT_PINK_STOP_2} 100%)
+  GRADIENT_BLUE_STOP_1:
+    type: color
+    value: '#2DC9EB'
+  GRADIENT_BLUE_STOP_2:
+    type: color
+    value: '#14D2B8'
+  GRADIENT_BLUE:
+    value: linear-gradient(to right, {!GRADIENT_BLUE_STOP_1} 0%, {!GRADIENT_BLUE_STOP_2} 100%)
+  GRADIENT_PURPLE_STOP_1:
+    type: color
+    value: '#E62888'
+  GRADIENT_PURPLE_STOP_2:
+    type: color
+    value: '#211660'
+  GRADIENT_PURPLE:
+    value: linear-gradient(135deg, {!GRADIENT_PURPLE_STOP_1} 0%, {!GRADIENT_PURPLE_STOP_2} 100%)
 aliases: *GRADIENTS
