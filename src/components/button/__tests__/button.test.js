@@ -80,7 +80,7 @@ describe('Button', () => {
       preventDefault: () => {},
     });
 
-    expect(onButtonClick.callCount).toBe(1);
+    expect(onButtonClick.calledOnce).toBe(true);
   });
 
   test('should not allow onClick events to be set if disabled', () => {
@@ -97,6 +97,6 @@ describe('Button', () => {
       preventDefault: () => {},
     });
 
-    expect(onButtonClick.callCount).toBe(0);
+    expect(onButtonClick.notCalled).toBe(true);
   });
 });
