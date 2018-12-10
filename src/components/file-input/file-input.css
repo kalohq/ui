@@ -1,0 +1,49 @@
+.ui-file-input {
+  background-color: var(--input-default-background);
+  border: var(--input-default-border);
+  border-radius: 4px;
+  padding: 2.4rem 1.6rem;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ui-file-input:hover {
+  border: var(--input-hover-border);
+}
+
+.ui-file-input:focus {
+  box-shadow: 0 0 0 3px var(--grey100);
+}
+
+.ui-file-input__label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--navy600);
+}
+
+.ui-file-input__preview {
+  margin: 0;
+  padding: 0;
+}
+
+.ui-file-input__preview:not(:empty) {
+  display: flex;
+  flex-direction: column;
+  margin: 0.8rem 0 0;
+  padding: 1.6rem 0 0 1.6rem;
+  border-top: 1px solid var(--grey200);
+}
+
+.ui-file-input__preview__item {
+  font-size: 1.2rem;
+  color: var(--navy700);
+  font-weight: 600;
+  padding: 0.2rem 0;
+}
+
+.ui-file-input--js-loaded input {
+  display: none;
+}
