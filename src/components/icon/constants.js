@@ -157,6 +157,9 @@ export const ICONS = new Enum({
   FILE_UPLOAD: {
     value: 'file_upload',
   },
+  FILE_XLS: {
+    value: 'file_xls',
+  },
   FOLDER_SHARED: {
     value: 'folder_shared',
   },
