@@ -2,7 +2,6 @@
   background-color: var(--input-default-background);
   border: var(--input-default-border);
   border-radius: 4px;
-  padding: 2.4rem 1.6rem;
   position: relative;
   cursor: pointer;
   display: flex;
@@ -46,4 +45,16 @@
 
 .ui-file-input--js-loaded input {
   display: none;
+}
+
+.ui-file-input--small {
+  padding: 0.8rem 1.2rem;
+}
+
+.ui-file-input--medium {
+  padding: 1.1rem 1.6rem;
+}
+
+.ui-file-input--large {
+  padding: 1.6rem 1.6rem;
 }
