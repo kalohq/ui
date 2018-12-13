@@ -10,10 +10,6 @@ export type Validations = List<Validation>;
 
 const StyledFieldValidation = styled.div`
   text-align: ${props => (props.centered ? 'center' : 'left')};
-
-  > * {
-    margin-top: 5px;
-  }
 `;
 
 type TProps = {
