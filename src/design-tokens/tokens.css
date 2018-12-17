@@ -87,9 +87,15 @@
   --grey: rgb(152, 160, 167);
   --pink500: rgb(238, 70, 126);
   --black: rgb(0, 0, 0);
+  --gradient-pink: linear-gradient(to right, #E83F94 0%, #F54E5E 100%);
+  --gradient-purple-stop-1: rgb(230, 40, 136);
+  --gradient-blue: linear-gradient(to right, #2DC9EB 0%, #14D2B8 100%);
+  --gradient-purple-stop-2: rgb(33, 22, 96);
+  --gradient-blue-stop-1: rgb(45, 201, 235);
+  --gradient-blue-stop-2: rgb(20, 210, 184);
+  --gradient-purple: linear-gradient(135deg, #E62888 0%, #211660 100%);
   --gradient-pink-stop-1: rgb(232, 63, 148);
   --gradient-pink-stop-2: rgb(245, 78, 94);
-  --gradient-pink: linear-gradient(19deg, #E83F94 0%, #F54E5E 100%);
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
