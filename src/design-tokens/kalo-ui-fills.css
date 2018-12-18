@@ -261,4 +261,8 @@
           fill: var(--black);
         }
         
+    /* Special gradient fills */
+    .fill-gradient-pink {
+      fill: url(#gradient-pink);
+    }
   

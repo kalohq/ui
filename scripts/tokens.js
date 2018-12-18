@@ -147,6 +147,10 @@ theo.registerFormat('css-helpers/fills', result =>
         `
     )
     .toJS()}
+    /* Special gradient fills */
+    .fill-gradient-pink {
+      fill: url(#gradient-pink);
+    }
   `.replace(/,/g, '')
 );
 
