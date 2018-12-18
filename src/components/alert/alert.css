@@ -45,11 +45,11 @@
 }
 
 .ui-alert--error {
-  background-color: var(--pink500);
+  background-color: #ea5f6e;
   color: var(--white);
 }
 
 .ui-alert--warning {
   background-color: var(--orange500);
-  color: var(--navy700);
+  color: var(--navy900);
 }
