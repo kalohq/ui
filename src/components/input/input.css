@@ -4,7 +4,7 @@
   color: var(--input-default-color);
   background-color: var(--input-default-background);
   border: var(--input-default-border);
-  border-radius: 4px;
+  border-radius: var(--input-border-radius);
   padding: 4px 8px 4px 16px;
   -webkit-appearance: none;
 
@@ -26,15 +26,15 @@
   }
 
   &::placeholder {
-    color: var(--grey500);
+    color: var(--input-placeholder-color);
   }
 
   &:not(:read-only):not(:disabled):hover {
-    border: 1px solid var(--grey500);
+    border: var(--input-hover-border);
   }
 
   &:not(:read-only):not(:disabled):focus {
-    border: 1px solid var(--grey600);
+    border: var(--input-active-border);
   }
 }
 
