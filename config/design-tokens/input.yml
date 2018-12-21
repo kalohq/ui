@@ -13,9 +13,9 @@ props:
     type: color
     value: '{!NAVY900}'
   INPUT_HOVER_BORDER:
-    value: 1px solid {!GREY300}
+    value: 1px solid {!GREY500}
   INPUT_ACTIVE_BORDER:
-    value: 1px solid {!BLUE500}
+    value: 1px solid {!GREY600}
   INPUT_DISABLED_BORDER:
     value: 1px solid {!GREY200}
   INPUT_DISABLED_BACKGROUND:
@@ -32,3 +32,9 @@ props:
   INPUT_READONLY_COLOR:
     type: color
     value: '{!GREY400}'
+  INPUT_PLACEHOLDER_COLOR:
+    type: 'color'
+    value: '{!GREY500}'
+  INPUT_BORDER_RADIUS:
+    type: 'border-radius'
+    value: 4
