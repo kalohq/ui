@@ -131,7 +131,7 @@ module.exports = {
   inputDefaultBackground: "rgb(255, 255, 255)",
   inputPlaceholderColor: "rgb(171, 180, 187)",
   inputHoverBorder: "1px solid #abb4bb",
-  inputBorderRadius: 4,
+  inputBorderRadius: "4px",
   inputActiveBorder: "1px solid #98a0a7",
   inputDefaultColor: "rgb(44, 46, 80)",
   inputReadonlyBorder: "1px dashed #dde1e4",

@@ -37,4 +37,4 @@ props:
     value: '{!GREY500}'
   INPUT_BORDER_RADIUS:
     type: 'border-radius'
-    value: 4
+    value: 4px

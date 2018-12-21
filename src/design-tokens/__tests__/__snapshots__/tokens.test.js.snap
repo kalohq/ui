@@ -73,7 +73,7 @@ Object {
   "info": "rgb(232, 250, 252)",
   "inherit": "inherit",
   "inputActiveBorder": "1px solid #98a0a7",
-  "inputBorderRadius": 4,
+  "inputBorderRadius": "4px",
   "inputDefaultBackground": "rgb(255, 255, 255)",
   "inputDefaultBorder": "1px solid #dde1e4",
   "inputDefaultColor": "rgb(44, 46, 80)",
