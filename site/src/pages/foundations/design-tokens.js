@@ -10,7 +10,7 @@ import tokens from '../../../../src/design-tokens/tokens.theme.js';
 const TokenColor = styled.div`
   width: 16px;
   height: 16px;
-  background-color: ${props => props.color};
+  background: ${props => props.background};
   border-radius: 3px;
   display: inline-block;
   vertical-align: middle;
@@ -83,9 +83,10 @@ export default () => (
                 </td>
                 <td>
                   {isString(tokens[tokenGroup][token]) &&
-                  tokens[tokenGroup][token].includes('rgb') ? (
-                    <TokenColor color={tokens[tokenGroup][token]} />
-                  ) : null}
+                  (tokens[tokenGroup][token].includes('rgb') ||
+                    tokens[tokenGroup][token].includes('linear-gradient')) && (
+                    <TokenColor background={tokens[tokenGroup][token]} />
+                  )}
                   {tokens[tokenGroup][token]}
                 </td>
               </tr>
