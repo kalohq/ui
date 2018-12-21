@@ -29,4 +29,12 @@ export const examples = [
       </span>
     ),
   },
+  {
+    title: 'With no border-radius',
+    render: () => (
+      <Paper padding={48} rounded={false}>
+        this is some demo content
+      </Paper>
+    ),
+  },
 ];

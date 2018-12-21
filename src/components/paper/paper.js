@@ -30,6 +30,7 @@ type Props = {
 export default function Paper(props: Props) {
   const {
     border = true,
+    rounded = true,
     children,
     elevation = 1,
     hoverElevation = 1,
@@ -52,14 +53,14 @@ export default function Paper(props: Props) {
       [coreStyles['ui-paper--opaque']]: opaque,
       [coreStyles['ui-paper--wireframe']]: wireframe,
       [coreStyles['ui-paper--no-border']]: !border,
-      [coreStyles['ui-paper--interactive']]: !!onClick,
+      [coreStyles['ui-paper--not-rounded']]: !rounded,
+      [coreStyles['ui-paper--interactive']]: Boolean(onClick),
     },
     className
   );
 
   return (
     <UIBase
-      interactive={!!onClick}
       onClick={onClick}
       className={_classNames}
       component={component}

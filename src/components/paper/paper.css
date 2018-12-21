@@ -69,6 +69,10 @@
   border: 0;
 }
 
+.ui-paper--not-rounded {
+  border-radius: 0;
+}
+
 .ui-paper--interactive {
   cursor: pointer;
 }
