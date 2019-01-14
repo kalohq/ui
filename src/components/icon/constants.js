@@ -93,6 +93,9 @@ export const ICONS = new Enum({
   CHECK_CIRCLE: {
     value: 'check_circle',
   },
+  CHECK_CIRCLE_OUTLINE: {
+    value: 'check_circle_outline',
+  },
   CHEVRON_LEFT: {
     value: 'chevron_left',
   },
