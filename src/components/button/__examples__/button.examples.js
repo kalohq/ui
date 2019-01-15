@@ -131,6 +131,14 @@ export const examples = [
     title: 'Loading button',
     description: 'A button in a loading state',
     render: () => <Button loading={true}>Loading Button</Button>,
+    html: () => (
+      <button
+        className="ui-btn ui-btn--primary ui-btn--large ui-btn--loading"
+        disabled={true}
+      >
+        Loading Button
+      </button>
+    ),
   },
   {
     title: 'Loading button with success',
