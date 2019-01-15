@@ -7,7 +7,7 @@ import renderer from 'react-test-renderer';
 import {ThemeProvider} from 'emotion-theming';
 import sinon from 'sinon';
 
-import {shallow} from '../../../utils/test/enzyme';
+import {shallow, mount} from '../../../utils/test/enzyme';
 
 import theme from 'components/theme';
 import Button from '../button';
@@ -59,12 +59,9 @@ describe('Button', () => {
       loading: true,
     });
 
-    const result = shallow(element);
-    expect(
-      result
-        .dive()
-        .find({className: reactStyles['ui-btn__react-loading-spinner']}).length
-    ).toBe(1);
+    const result = mount(element);
+
+    expect(result.find('.ui-btn--loading').hostNodes().length).toBe(1);
   });
 
   test('should call a given onClick event on click', () => {
