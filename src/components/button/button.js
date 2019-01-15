@@ -9,7 +9,6 @@ import {darken, lighten} from 'polished';
 
 import {UIBase} from '../layout';
 import Icon from '../icon';
-import LoadingSpinner from '../loading-spinner';
 
 import coreStyles from './button.css';
 import reactStyles from './button.react.css';
@@ -177,9 +176,9 @@ export class Button extends PureComponent<TProps, TState> {
         [coreStyles[`ui-btn--lone-icon`]]: loneIcon,
         [coreStyles[`ui-btn--grouped`]]: grouped,
         [coreStyles[`ui-btn--grouped-with-spacing`]]: spacing,
+        [coreStyles[`ui-btn--loading`]]: Boolean(loading),
 
         [reactStyles[`ui-btn--state-success`]]: success,
-        [reactStyles[`ui-btn--state-loading`]]: loading,
         [reactStyles[`ui-btn--state-loaded`]]: loaded,
         [reactStyles[`ui-btn--state-loaded`]]: loaded,
         [reactStyles[`ui-btn--react-wide`]]: wide,
@@ -246,9 +245,6 @@ export class Button extends PureComponent<TProps, TState> {
         <div className={reactStyles['ui-btn__react-success-message']}>
           {iconElement}
           {message}
-        </div>
-        <div className={reactStyles['ui-btn__react-loading-spinner']}>
-          <LoadingSpinner size="small" />
         </div>
       </UIBase>
     );
