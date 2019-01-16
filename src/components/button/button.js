@@ -38,7 +38,13 @@ type TProps = {
   /** The visual size */
   size?: 'small' | 'medium' | 'large' | 'extra-large',
   /** The visual theme */
-  variant?: 'primary' | 'secondary' | 'tertiary' | 'delete' | 'action',
+  variant?:
+    | 'primary'
+    | 'secondary'
+    | 'tertiary'
+    | 'delete'
+    | 'action'
+    | 'flare',
   /** Ignore - Set by ButtonGroup */
   grouped?: boolean,
   /** Ignore - Set by ButtonGroup */

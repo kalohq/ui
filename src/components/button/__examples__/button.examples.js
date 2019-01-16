@@ -80,6 +80,16 @@ export const examples = [
     ),
   },
   {
+    title: 'Flare Button',
+    description: 'Used for marketing, and flows in to the app',
+    render: () => <Button variant="flare">Create Account</Button>,
+    html: () => (
+      <button className="ui-btn ui-btn--flare ui-btn--medium">
+        Create Account
+      </button>
+    ),
+  },
+  {
     title: 'Delete Button',
     description: 'An action button for deleting/removing.',
     render: () => <Button variant="delete">Remove freelancer</Button>,

@@ -170,6 +170,27 @@
   }
 }
 
+.ui-btn--flare {
+  background: var(--gradient-pink);
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.3rem;
+  transition: filter 0.2s ease-out;
+
+  &:hover {
+    filter: brightness(110%);
+  }
+
+  &:active {
+    filter: brightness(95%);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px var(--pink200);
+  }
+}
+
 .ui-btn--delete {
   border-style: solid;
   border-width: 1px;
@@ -242,9 +263,10 @@
   */
 .ui-btn--disabled,
 .ui-btn:disabled {
-  background-color: var(--grey100);
+  background: var(--grey100);
   color: var(--grey500);
   cursor: default;
+  filter: none;
 }
 
 .ui-btn--loading {
