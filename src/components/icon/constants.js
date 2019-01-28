@@ -332,6 +332,9 @@ export const ICONS = new Enum({
   PRESENT_TO_ALL: {
     value: 'present_to_all',
   },
+  QUESTION_HELP_MESSAGE: {
+    value: 'question_help_message',
+  },
   RADIO_BUTTON_CHECKED: {
     value: 'radio_button_checked',
   },
