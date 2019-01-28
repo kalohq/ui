@@ -28,6 +28,11 @@ const gradients = `
       <stop offset="0%" stopColor="rgb(232, 63, 148)" />
       <stop offset="50%" stopColor="rgb(245, 78, 94)" />
     </linearGradient>
+
+    <linearGradient id="gradient-purple">
+      <stop offset="0%" stopColor="#e62888" />
+      <stop offset="100%" stopColor="#211660" />
+    </linearGradient>
   </defs>
 </svg>
 `;

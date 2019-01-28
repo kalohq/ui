@@ -151,6 +151,9 @@ theo.registerFormat('css-helpers/fills', result =>
     .fill-gradient-pink {
       fill: url(#gradient-pink);
     }
+    .fill-gradient-purple {
+      fill: url(#gradient-purple);
+    }
   `.replace(/,/g, '')
 );
 
