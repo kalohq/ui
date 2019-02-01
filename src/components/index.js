@@ -71,6 +71,7 @@ export {default as SkillTag} from './skill-tag';
 export {default as TagGroup} from './tag-group';
 export {default as Avatar} from './avatar';
 export {default as Modal} from './modal';
+export {Tab, Tabs} from './tabs';
 
 /**
  * Theme
