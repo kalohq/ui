@@ -177,19 +177,18 @@ export default function Page({data, children, location}) {
     })
   );
 
-  data.allMarkdownRemark.edges.map(
-    page =>
-      page.node.fields
-        ? sitePages.push({
-            slug: page.node.fields.slug,
-            toc: page.node.tableOfContents,
-            name: upperFirst(
-              camelCase(stripPageNameFromPath(page.node.fields.slug))
-            ),
-            isCurrent: currentPath === page.node.fields.slug,
-            category: page.node.fields.slug.split(/[\\\/]/)[1],
-          })
-        : false
+  data.allMarkdownRemark.edges.map(page =>
+    page.node.fields
+      ? sitePages.push({
+          slug: page.node.fields.slug,
+          toc: page.node.tableOfContents,
+          name: upperFirst(
+            camelCase(stripPageNameFromPath(page.node.fields.slug))
+          ),
+          isCurrent: currentPath === page.node.fields.slug,
+          category: page.node.fields.slug.split(/[\\\/]/)[1],
+        })
+      : false
   );
 
   const groupedSitePages = groupBy(sitePages, page => page.category);
@@ -216,7 +215,11 @@ export default function Page({data, children, location}) {
             {children()}
           </div>
         </FlexWrapper>
-        <IconSymbols />
+        <div
+          style={{position: 'absolute', zIndex: '-3', pointerEvents: 'none'}}
+        >
+          <IconSymbols />
+        </div>
       </Container>
     </ThemeProvider>
   );
