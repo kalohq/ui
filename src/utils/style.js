@@ -33,7 +33,7 @@ export function cleanProps(originalProps: Object) {
   return cleanedProps;
 }
 
-/** 
+/**
  * Flexbox style overrides for Safari 8
  * Safari 8 detection is performed in advance
  */
@@ -138,12 +138,13 @@ export function spacing(originalProps: Object): Object {
     .filter(prop => SPACING_REGEX.test(prop))
     .map(prop => {
       props[prop] = returnArray(originalProps[prop])
-        .map(
-          val =>
-            isNumber(val)
-              ? `${String(val)}px`
-              : // $FlowFixMe
-                isString(val) && SPACING_MAP[val] ? SPACING_MAP[val] : val
+        .map(val =>
+          isNumber(val)
+            ? `${String(val)}px`
+            : // $FlowFixMe
+            isString(val) && SPACING_MAP[val]
+            ? SPACING_MAP[val]
+            : val
         )
         .join(' ');
 

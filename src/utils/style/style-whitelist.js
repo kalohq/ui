@@ -1,6 +1,6 @@
 /**
  * @flow
- * 
+ *
  * Lookup to determine what props we include in style
  *
  * For now this is limited purely to style rules dealing with

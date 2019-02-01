@@ -36,7 +36,8 @@ export const examples = [
     ),
     html: () => (
       <span className="ui-tag ui-tag--avatar">
-        <MockAvatar className="ui-avatar" />An avatar tag
+        <MockAvatar className="ui-avatar" />
+        An avatar tag
       </span>
     ),
   },
@@ -45,7 +46,8 @@ export const examples = [
     render: () => <Tag onRemove={() => {}}>Removable tag</Tag>,
     html: () => (
       <span className="ui-tag ui-tag--avatar ui-tag--removable">
-        <MockAvatar className="ui-avatar" />An avatar tag
+        <MockAvatar className="ui-avatar" />
+        An avatar tag
         <button className="ui-tag__remove">
           <svg width="12" height="12" aria-hidden="true">
             <use xlinkHref="#clear" />

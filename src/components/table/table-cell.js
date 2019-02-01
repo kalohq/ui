@@ -68,9 +68,17 @@ const StyledTableHeaderCell = styled('th')`
   min-height: 40px;
   color: ${props => props.theme.colors.grey300};
 
-  ${props => props.sortable && css`cursor: pointer;`};
+  ${props =>
+    props.sortable &&
+    css`
+      cursor: pointer;
+    `};
 
-  ${props => props.active && css`font-weight: 400 !important;`};
+  ${props =>
+    props.active &&
+    css`
+      font-weight: 400 !important;
+    `};
 `;
 
 type TTableCellProps = {

@@ -97,8 +97,7 @@ export const examples = [
                 You can now set your teams timezone in the Kalo Team Admin
               </Alert>
             )}
-            {count > 0 &&
-            count < 6 && (
+            {count > 0 && count < 6 && (
               <Alert type="warning" showIcon={true} title="Warning alert">
                 Your trial of Reporting expires in 12 days
               </Alert>

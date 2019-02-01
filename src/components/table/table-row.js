@@ -4,7 +4,9 @@ import styled from 'react-emotion';
 import {compose, getContext, withProps, setDisplayName} from 'recompose';
 import PropTypes from 'prop-types';
 
-const StyledTableRow = styled('tr')`display: table-row;`;
+const StyledTableRow = styled('tr')`
+  display: table-row;
+`;
 
 type TTableRowProps = {
   children: React$Node,

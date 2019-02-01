@@ -118,27 +118,25 @@ export default function Field(props: TProps) {
           {labelAction}
         </Box>
       )}
-      {!controlChildren ? (
-        children
-      ) : (
-        React.Children.map(children, child =>
-          React.cloneElement(child, {
-            onBlur,
-            disabled:
-              child.props.disabled === undefined
-                ? disabled
-                : child.props.disabled,
-            editable:
-              child.props.editable === undefined
-                ? !disabled
-                : child.props.editable,
-            readonly:
-              child.props.readonly === undefined
-                ? disabled
-                : child.props.readonly,
-          })
-        )
-      )}
+      {!controlChildren
+        ? children
+        : React.Children.map(children, child =>
+            React.cloneElement(child, {
+              onBlur,
+              disabled:
+                child.props.disabled === undefined
+                  ? disabled
+                  : child.props.disabled,
+              editable:
+                child.props.editable === undefined
+                  ? !disabled
+                  : child.props.editable,
+              readonly:
+                child.props.readonly === undefined
+                  ? disabled
+                  : child.props.readonly,
+            })
+          )}
 
       {!!size(validations) ? (
         <FieldValidations centered={centered} validations={validations} />
