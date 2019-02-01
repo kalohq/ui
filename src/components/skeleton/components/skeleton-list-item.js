@@ -18,14 +18,12 @@ export default function SkeletonListItem(props: TProps) {
   return (
     <SkeletonPaper padding={25} {...otherProps}>
       <SpacerBox overflow="hidden">
-        {children ? (
-          children
-        ) : (
-          [
-            <SkeletonText width="20%" key={0} />,
-            <SkeletonText key={1} width="10%" />,
-          ]
-        )}
+        {children
+          ? children
+          : [
+              <SkeletonText width="20%" key={0} />,
+              <SkeletonText key={1} width="10%" />,
+            ]}
       </SpacerBox>
     </SkeletonPaper>
   );

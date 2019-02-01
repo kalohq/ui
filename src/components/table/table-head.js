@@ -3,7 +3,9 @@ import React from 'react';
 import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 
-const StyledTableHead = styled('thead')`display: table-header-group;`;
+const StyledTableHead = styled('thead')`
+  display: table-header-group;
+`;
 
 export class TableHead extends React.Component<{children: React$Node}> {
   static propTypes = {

@@ -156,8 +156,7 @@ export default class Select extends PureComponent<TProps, TState> {
               {placeholder}
             </Text>
           )}
-          {(!readonly || !disabled) &&
-          (!!selection && nullable) && (
+          {(!readonly || !disabled) && (!!selection && nullable) && (
             <div className={reactStyles['ui-select__clear']}>
               <Icon
                 size={18}

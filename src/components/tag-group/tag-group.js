@@ -38,9 +38,7 @@ export default function TagGroup(props: TProps) {
             marginTop: 4,
           })
       )}
-      {limit &&
-      showOverflow &&
-      [...children].length > limit && (
+      {limit && showOverflow && [...children].length > limit && (
         <Text size="extra-small" color="navy600">
           +{[...children].length - limit}
         </Text>

@@ -108,12 +108,12 @@ export default class ButtonDropdown extends PureComponent<TProps, TState> {
               minWidth={item.minWidth}
               {...item.componentProps}
               onClick={
-                !item.disabled ? (
-                  () => {
-                    if (item.onClick) item.onClick();
-                    this.onToggle();
-                  }
-                ) : null
+                !item.disabled
+                  ? () => {
+                      if (item.onClick) item.onClick();
+                      this.onToggle();
+                    }
+                  : null
               }
             >
               {item.title}

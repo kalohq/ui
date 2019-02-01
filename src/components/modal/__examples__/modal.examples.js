@@ -77,7 +77,8 @@ export const examples = [
               <Input type="text" placeholder="123456" />
             </Field>
           </FieldRow>
-        </Modal>,
+        </Modal>
+        ,
       </DemoModal>
     ),
     html: () => (
@@ -131,7 +132,8 @@ export const examples = [
             An American monkey, after getting drunk on brandy, would never touch
             it again, and thus is much wiser than most men.
           </Text>
-        </Modal>,
+        </Modal>
+        ,
       </DemoModal>
     ),
   },
@@ -141,7 +143,8 @@ export const examples = [
       <DemoModal noClose={true}>
         <Modal title="Warning">
           <Text multiline={true}>This modal can't be closed</Text>
-        </Modal>,
+        </Modal>
+        ,
       </DemoModal>
     ),
   },
@@ -176,7 +179,8 @@ export const examples = [
               Cras eget metus feugiat, bibendum nisl id, facilisis ipsum.
             </Text>
           ))}
-        </Modal>,
+        </Modal>
+        ,
       </DemoModal>
     ),
     html: () => (

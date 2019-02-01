@@ -24,12 +24,12 @@ export default function FieldValidations(props: TProps) {
 
   return (
     <StyledFieldValidation centered={centered}>
-      {validations ? (
-        validations.map(validation => (
-          // $FlowFixMe
-          <FieldValidation validation={validation} key={validation.message} />
-        ))
-      ) : null}
+      {validations
+        ? validations.map(validation => (
+            // $FlowFixMe
+            <FieldValidation validation={validation} key={validation.message} />
+          ))
+        : null}
     </StyledFieldValidation>
   );
 }

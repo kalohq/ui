@@ -108,10 +108,8 @@ export function Row(props: TRowProps) {
     justifyContentSM,
     justifyContentMD,
     justifyContentLG,
-  ] = (Array.isArray(justifyContent)
-    ? justifyContent
-    : [justifyContent]).map(val =>
-    val.replace('flex-', '').replace('space-', '')
+  ] = (Array.isArray(justifyContent) ? justifyContent : [justifyContent]).map(
+    val => val.replace('flex-', '').replace('space-', '')
   );
 
   const _classNames = cx(

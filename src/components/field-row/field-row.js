@@ -31,16 +31,14 @@ export default function FieldRow(props: TProps) {
       marginTop={DEFAULT_SPACING}
       {...pickStyles(otherProps)}
     >
-      {React.Children.map(
-        children,
-        child =>
-          child
-            ? React.cloneElement(child, {
-                flex: child.props.flex || 1,
-                marginLeft: 0,
-                paddingLeft: gutter,
-              })
-            : child
+      {React.Children.map(children, child =>
+        child
+          ? React.cloneElement(child, {
+              flex: child.props.flex || 1,
+              marginLeft: 0,
+              paddingLeft: gutter,
+            })
+          : child
       )}
     </Box>
   );

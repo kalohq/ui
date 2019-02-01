@@ -243,7 +243,7 @@ export default class Sticky extends React.Component {
     this.el.style.left = `${anchoredPosition.x}px`;
     this.el.style.top = `${anchoredPosition.y}px`;
     if (width) {
-      this.el.style.width = `${parent.clientWidth / 100 * width}px`;
+      this.el.style.width = `${(parent.clientWidth / 100) * width}px`;
     }
     if (noPointerEvents) {
       this.el.style.pointerEvents = 'none';
