@@ -6,18 +6,22 @@ export const examples = [
   {
     title: 'Extra large header',
     render: () => <Heading size="extra-large">Account settings</Heading>,
+    html: () => <h1 className="heading--extra-large">Account settings</h1>,
   },
   {
     title: 'Large header',
     render: () => <Heading size="large">Your profile</Heading>,
+    html: () => <h1 className="heading--large">Your profile</h1>,
   },
   {
     title: 'Medium header',
     render: () => <Heading size="medium">Invoice 16</Heading>,
+    html: () => <h1 className="heading--medium">Invoice 16</h1>,
   },
   {
     title: 'Small header',
     render: () => <Heading size="small">Create new template</Heading>,
+    html: () => <h1 className="heading--small">Create new template</h1>,
   },
   {
     title: 'Headings with icon',
