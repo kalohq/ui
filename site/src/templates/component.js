@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {upperFirst, camelCase} from 'lodash';
-import styled, {css} from 'react-emotion';
+import styled from 'react-emotion';
 import Prism from 'prismjs';
 import reactElementToJSXString from 'react-element-to-jsx-string';
 
@@ -9,6 +9,8 @@ import PropTable from '../components/prop-table';
 import Wrapper from '../components/wrapper';
 
 import * as Stories from '../data/examples.js';
+
+import {Tabs, Tab} from '../../../src/components';
 
 export default class ComponentDocumentation extends React.PureComponent {
   constructor(props) {
@@ -50,27 +52,26 @@ export default class ComponentDocumentation extends React.PureComponent {
         </Wrapper>
 
         <Wrapper>
-          <Tabs>
+          <Tabs marginTop={8}>
             <Tab
-              isActive={this.state.currentTab === 'react'}
+              active={this.state.currentTab === 'react'}
+              component="span"
               onClick={() => this.toggleTab('react')}
             >
-              React Components ({`
-                ${stories &&
-                  stories.filter(story => story.render).length} examples`})
+              React
             </Tab>
             <Tab
-              isActive={this.state.currentTab === 'css'}
+              active={this.state.currentTab === 'css'}
+              component="span"
               onClick={() =>
                 stories.filter(story => story.html).length !== 0 &&
-                this.toggleTab('css')}
-              isDisabled={
+                this.toggleTab('css')
+              }
+              disabled={
                 stories && stories.filter(story => story.html).length === 0
               }
             >
-              Vanilla HTML/CSS ({`
-                ${stories &&
-                  stories.filter(story => story.html).length} examples`})
+              HTML/CSS
             </Tab>
           </Tabs>
         </Wrapper>
@@ -119,34 +120,36 @@ export default class ComponentDocumentation extends React.PureComponent {
         ) : (
           <section>
             <Wrapper>
-              {stories.filter(story => story.html).map(story => {
-                const grammar = Prism.languages.html;
-                const HTMLStory = story.html;
-                return (
-                  <StoryContainer key={story.title}>
-                    <StoryTitle>{story.title}</StoryTitle>
-                    <StoryDescription>{story.description}</StoryDescription>
-                    <StoryMain>
-                      <HTMLStory />
-                    </StoryMain>
-                    <StorySnippet
-                      dangerouslySetInnerHTML={{
-                        __html: Prism.highlight(
-                          reactElementToJSXString(story.html(), {
-                            showDefaultProps: false,
-                            useBooleanShorthandSyntax: false,
-                          })
-                            .replace(/className/g, 'class')
-                            .replace(/xlinkHref/g, 'xlink:href')
-                            .replace(/htmlFor/g, 'for'),
-                          grammar,
-                          'html'
-                        ),
-                      }}
-                    />
-                  </StoryContainer>
-                );
-              })}
+              {stories
+                .filter(story => story.html)
+                .map(story => {
+                  const grammar = Prism.languages.html;
+                  const HTMLStory = story.html;
+                  return (
+                    <StoryContainer key={story.title}>
+                      <StoryTitle>{story.title}</StoryTitle>
+                      <StoryDescription>{story.description}</StoryDescription>
+                      <StoryMain>
+                        <HTMLStory />
+                      </StoryMain>
+                      <StorySnippet
+                        dangerouslySetInnerHTML={{
+                          __html: Prism.highlight(
+                            reactElementToJSXString(story.html(), {
+                              showDefaultProps: false,
+                              useBooleanShorthandSyntax: false,
+                            })
+                              .replace(/className/g, 'class')
+                              .replace(/xlinkHref/g, 'xlink:href')
+                              .replace(/htmlFor/g, 'for'),
+                            grammar,
+                            'html'
+                          ),
+                        }}
+                      />
+                    </StoryContainer>
+                  );
+                })}
             </Wrapper>
           </section>
         )}
@@ -244,34 +247,4 @@ const StyledTitle = styled.h2`
   font-weight: 500;
   color: ${props => props.theme.colors.navy700};
   margin-top: 24px;
-`;
-
-const Tabs = styled.div`
-  width: 100%;
-  height: 40px;
-  border-bottom: 1px solid ${props => props.theme.colors.grey300};
-`;
-
-const Tab = styled.button`
-  font-size: 12px;
-  color: ${props => props.theme.colors.navy700};
-  font-weight: 600;
-  border: 1px solid transparent;
-  width: 50%;
-  height: 40px;
-  cursor: pointer;
-  background-color: transparent;
-  border-bottom: ${props =>
-    props.isActive && `2px solid ${props.theme.colors.pink500}`};
-
-  ${props =>
-    props.isDisabled &&
-    css`
-      color: ${props.theme.colors.grey500};
-      cursor: default;
-    `};
-
-  &:focus {
-    outline: 0;
-  }
 `;
