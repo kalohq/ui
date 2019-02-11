@@ -278,6 +278,9 @@ export const ICONS = new Enum({
   MAIL: {
     value: 'mail',
   },
+  MEGAPHONE: {
+    value: 'megaphone',
+  },
   MESSAGE: {
     value: 'message',
   },
