@@ -289,11 +289,9 @@ export default () => (
                     )}
                   >
                     {Color(background).contrast(Color(actualColor)) <=
-                    AA_COLOR_THRESHOLD ? (
-                      'FAIL'
-                    ) : (
-                      'PASS'
-                    )}
+                    AA_COLOR_THRESHOLD
+                      ? 'FAIL'
+                      : 'PASS'}
                   </AccessibilityColorPassFailToken>
                 </AccessibilityColorTestGroup>
               ))}
