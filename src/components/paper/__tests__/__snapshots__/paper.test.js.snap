@@ -42,7 +42,7 @@ exports[`components/paper PaperToolbar should render shallow component ok 1`] = 
   display: -ms-flexbox;
   display: flex;
   padding: 0px 25px;
-  border-bottom: 1px solid rgb(237,241,245);
+  border-bottom: 1px solid #edf1f5;
 }
 
 <div
