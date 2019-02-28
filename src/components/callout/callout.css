@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   padding: 1.6rem 2.4rem;
+  line-height: 1.6;
 }
 
 .ui-callout--variant-blue {
