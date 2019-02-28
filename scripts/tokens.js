@@ -1,10 +1,15 @@
 /**
-  * A helper function to convert our base variables
-  * into formats that are useful (CSS, JS)
-*/
+ * A helper function to convert our base variables
+ * into formats that are useful (CSS, JS)
+ */
 const theo = require('theo');
 const fs = require('fs');
-const camelCase = require('lodash/camelCase');
+
+const formatTheme = require('./custom-token-formats/theme.js');
+const formatCustomPropertiesAsAnObject = require('./custom-token-formats/custom-properties-as-an-object');
+const formatCSSHelpersColors = require('./custom-token-formats/css-helper-colors');
+const formatCSSHelpersHoverColors = require('./custom-token-formats/css-helper-hover-colors');
+const formatCSSHelpersFills = require('./custom-token-formats/css-helper-fills');
 
 const formatsRequired = [
   {
@@ -49,6 +54,15 @@ const formatsRequired = [
   },
 ];
 
+theo.registerFormat('theme.js', formatTheme);
+theo.registerFormat(
+  'custom-properties-as-an-object',
+  formatCustomPropertiesAsAnObject
+);
+theo.registerFormat('css-helpers/colors', formatCSSHelpersColors);
+theo.registerFormat('css-helpers/hover-colors', formatCSSHelpersHoverColors);
+theo.registerFormat('css-helpers/fills', formatCSSHelpersFills);
+
 const writeToNewFile = (name, contents) => {
   try {
     fs.writeFileSync(`./src/design-tokens/${name}`, contents);
@@ -58,104 +72,7 @@ const writeToNewFile = (name, contents) => {
   }
 };
 
-/**
- * A custom token format for passing into a ThemeProvider
- */
-theo.registerFormat('theme.js', result => {
-  const grouped = result.get('props').groupBy(token => token.get('category'));
-  const collect = {};
-
-  grouped.map((category, index) => {
-    collect[index] = {};
-    return category.map(token => {
-      collect[index][camelCase(token.get('name'))] = token.get('value');
-      return collect;
-    });
-  });
-  return `module.exports = ${JSON.stringify(collect)}`;
-});
-
-/**
- * A custom token format to pass in non-camelCased CSS variables
- * in to the post-css build step as a standard JS object.
- */
-theo.registerFormat(
-  'custom-properties-as-an-object',
-  `
-  module.exports = {
-    {{#each props as |prop|}}
-      '{{kebabcase prop.name}}': '{{prop.value}}',
-    {{/each}}
-  }
-`
-);
-
-theo.registerFormat('css-helpers/colors', result =>
-  `
-  ${result
-    .get('props')
-    .filter(prop => prop.get('category') === 'colors')
-    .map(
-      prop =>
-        `.color-${camelCase(prop.get('name'))} {
-          ${prop.get('name') === 'CURRENT_COLOR' ||
-          prop.get('name') === 'NONE' ||
-          prop.get('name') === 'INHERIT'
-            ? `color: ${camelCase(prop.get('name'))};`
-            : `color: var(--${camelCase(prop.get('name'))});`}
-        }
-        `
-    )
-    .toJS()}
-  `.replace(/,/g, '')
-);
-
-theo.registerFormat('css-helpers/hover-colors', result =>
-  `
-  ${result
-    .get('props')
-    .filter(prop => prop.get('category') === 'colors')
-    .map(
-      prop =>
-        `.hover-color-${camelCase(prop.get('name'))}:hover {
-          ${prop.get('name') === 'CURRENT_COLOR' ||
-          prop.get('name') === 'NONE' ||
-          prop.get('name') === 'INHERIT'
-            ? `color: ${camelCase(prop.get('name'))};`
-            : `color: var(--${camelCase(prop.get('name'))});`}
-        }
-        `
-    )
-    .toJS()}
-  `.replace(/,/g, '')
-);
-
-theo.registerFormat('css-helpers/fills', result =>
-  `
-  ${result
-    .get('props')
-    .filter(prop => prop.get('category') === 'colors')
-    .map(
-      prop =>
-        `.fill-${camelCase(prop.get('name'))} {
-          ${prop.get('name') === 'CURRENT_COLOR' ||
-          prop.get('name') === 'NONE' ||
-          prop.get('name') === 'INHERIT'
-            ? `fill: ${camelCase(prop.get('name'))};`
-            : `fill: var(--${camelCase(prop.get('name'))});`}
-        }
-        `
-    )
-    .toJS()}
-    /* Special gradient fills */
-    .fill-gradient-pink {
-      fill: url(#gradient-pink);
-    }
-    .fill-gradient-purple {
-      fill: url(#gradient-purple);
-    }
-  `.replace(/,/g, '')
-);
+theo.registerTransform('web', ['color/hex']);
 
 formatsRequired.map(format => {
   return theo
