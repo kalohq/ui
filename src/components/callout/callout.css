@@ -1,0 +1,15 @@
+.ui-callout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem 2.4rem;
+}
+
+.ui-callout--variant-blue {
+  background-color: var(--blue000);
+  border: 1px solid var(--blue300);
+  color: var(--blue500);
+  font-weight: var(--font-weight-semibold);
+  font-size: 1.6rem;
+}
