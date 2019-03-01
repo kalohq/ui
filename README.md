@@ -1,10 +1,16 @@
-# @kalo/ui 🍃
+<h1 align="center">Kalo UI</h1>
+<p align="center">React and CSS kit for building user interfaces at Kalo.</p>
 
-![@kalo/ui](https://img.shields.io/npm/v/@kalo/ui.svg) [![codecov](https://codecov.io/gh/kalohq/ui/branch/master/graph/badge.svg?token=UMKMabKV8s)](https://codecov.io/gh/kalohq/ui)
+<p align="center">
+  <img src="https://img.shields.io/npm/v/@kalo/ui.svg">
+  <a href="https://codecov.io/gh/kalohq/ui">
+    <img src="https://codecov.io/gh/kalohq/ui/branch/master/graph/badge.svg?token=UMKMabKV8s">
+  </a>
+</p>
 
 ---
 
-Welcome to the Kalo Design System (KDS).
+**Welcome to Kalo UI.**
 
 This repo contains the source code for the design system, as well as the source for the documentation site that powers [kalo.design](http://kalo.design)
 
