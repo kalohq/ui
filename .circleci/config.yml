@@ -1,21 +1,66 @@
 version: 2.0
 
+defaultRestoreCachedModules: &defaultRestoreCachedModules
+  restore_cache:
+    name: Restore cached node_modules
+    keys:
+      - v1-dependencies-{{ checksum "package.json" }}
+      # fallback to using the latest cache if no exact match is found
+      - v1-dependencies-
+
+defaultNpmInstall: &defaultNpmInstall
+  run:
+    name: Install dependencies
+    # only run npm ci if node_modules doesn't exist, as it clears
+    # out node_modules and installs everything from scratch,
+    # removing the benefit from using circle's caching
+    command: |
+      if [ ! -d node_modules ]; then
+        npm ci
+      fi
+
+defaultCacheModules: &defaultCacheModules
+  save_cache:
+    name: Save node_modules cache
+    paths:
+      - node_modules
+    key: v1-dependencies-{{ checksum "package.json" }}
+
 jobs:
-  test:
+  lint:
     docker:
-      - image: circleci/node:8.9.3
+      - image: circleci/node:10.14.1
     steps:
       - checkout
-      - restore_cache:
-          keys:
-          - dependencies-{{ checksum "package-lock.json" }}
-      - run: npm install
-      - save_cache:
-          paths:
-            - node_modules
-          key: dependencies-{{ checksum "package-lock.json" }}
+
+      - <<: *defaultRestoreCachedModules
+      - <<: *defaultNpmInstall
+      - <<: *defaultCacheModules
+
       - run: npm run lint
+
+  typecheck:
+    docker:
+      - image: circleci/node:10.14.1
+    steps:
+      - checkout
+
+      - <<: *defaultRestoreCachedModules
+      - <<: *defaultNpmInstall
+      - <<: *defaultCacheModules
+
       - run: npm run typecheck
+
+  test:
+    docker:
+      - image: circleci/node:10.14.1
+    steps:
+      - checkout
+
+      - <<: *defaultRestoreCachedModules
+      - <<: *defaultNpmInstall
+      - <<: *defaultCacheModules
+
       - run: npm run test -- --coverage
       - run: bash <(curl -s https://codecov.io/bash)
 
@@ -23,4 +68,6 @@ workflows:
   version: 2
   lint_and_test:
     jobs:
+      - lint
+      - typecheck
       - test
