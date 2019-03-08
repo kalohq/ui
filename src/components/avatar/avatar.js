@@ -6,19 +6,48 @@ import {UIBase} from '../layout';
 
 import styles from './avatar.css';
 
+const FALLBACK_COLORS = ['blue', 'orange', 'green', 'pink', 'navy'];
+
+export const getFallbackColor = (resource: string) => {
+  const hash = [...String(resource)].reduce(
+    (sum, character) => sum + character.codePointAt(0),
+    0
+  );
+
+  if (hash) {
+    const id = hash % FALLBACK_COLORS.length;
+    return FALLBACK_COLORS[id];
+  }
+  return FALLBACK_COLORS[1];
+};
+
 type TProps = {
-  src: string,
+  src?: string,
   size?: 'small' | 'medium' | 'large',
+  initials?: string,
+  resourceHash?: string,
   className?: string,
 };
 
 export default function Avatar(props: TProps) {
-  const {src, size = 'medium', className, ...otherProps} = props;
+  const {
+    src,
+    size = 'medium',
+    className,
+    initials,
+    resourceHash,
+    ...otherProps
+  } = props;
+
+  const fallbackColor = getFallbackColor(
+    String(resourceHash) || String(initials)
+  );
 
   const _classNames = cx(
     {
       [styles['ui-avatar']]: true,
       [styles[`ui-avatar--${size}`]]: true,
+      [styles[`ui-avatar--fallback-${fallbackColor}`]]: true,
     },
     className
   );
@@ -28,7 +57,7 @@ export default function Avatar(props: TProps) {
       <span
         className={styles['ui-avatar__avatar']}
         role="img"
-        style={{backgroundImage: `url(${src})`}}
+        style={src && {backgroundImage: `url(${src})`}}
       />
     </UIBase>
   );
