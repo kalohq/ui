@@ -4,9 +4,7 @@ defaultRestoreCachedModules: &defaultRestoreCachedModules
   restore_cache:
     name: Restore cached node_modules
     keys:
-      - v1-dependencies-{{ checksum "package.json" }}
-      # fallback to using the latest cache if no exact match is found
-      - v1-dependencies-
+      - v1-dependencies-{{ checksum "package-lock.json" }}
 
 defaultNpmInstall: &defaultNpmInstall
   run:
@@ -24,7 +22,7 @@ defaultCacheModules: &defaultCacheModules
     name: Save node_modules cache
     paths:
       - node_modules
-    key: v1-dependencies-{{ checksum "package.json" }}
+    key: v1-dependencies-{{ checksum "package-lock.json" }}
 
 jobs:
   lint:
