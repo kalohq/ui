@@ -5,6 +5,7 @@ import cx from 'classnames';
 import styles from './avatar-group.css';
 
 type TProps = {
+  /** An iterable set of children Avatar components */
   children: Iterable<React.Element<*>>,
 };
 
