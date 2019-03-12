@@ -9,7 +9,15 @@ jobs:
       - restore_cache:
           keys:
           - dependencies-{{ checksum "package-lock.json" }}
-      - run: npm install
+      - run:
+          name: Install dependencies
+          # only run npm ci if node_modules doesn't exist, as it clears
+          # out node_modules and installs everything from scratch,
+          # removing the benefit from using circle's caching
+          command: |
+            if [ ! -d node_modules ]; then
+              npm ci
+            fi
       - save_cache:
           paths:
             - node_modules
