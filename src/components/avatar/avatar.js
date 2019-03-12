@@ -8,11 +8,7 @@ import styles from './avatar.css';
 
 const FALLBACK_COLORS = ['blue', 'orange', 'green', 'pink', 'navy'];
 
-<<<<<<< HEAD
 export const getFallbackColor = (resource: string) => {
-=======
-export const getFallbackColor = resource => {
->>>>>>> 41d291e... Add tests for Avatar and AvatarGroup
   const hash = [...String(resource)].reduce(
     (sum, character) => sum + character.codePointAt(0),
     0
