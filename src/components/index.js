@@ -70,6 +70,7 @@ export {default as Tag} from './tag';
 export {default as SkillTag} from './skill-tag';
 export {default as TagGroup} from './tag-group';
 export {default as Avatar} from './avatar';
+export {default as AvatarGroup} from './avatar-group';
 export {default as Modal} from './modal';
 export {Tab, Tabs} from './tabs';
 export {default as FeatureCalloutCard} from './feature-callout-card';

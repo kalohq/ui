@@ -10,4 +10,4 @@ Avatars are used to represent individual users and teams.
 
 Avatars can be grouped into collections, for example when a project has more than one associated freelancer.
 
-No more than three avatars should be grouped together.
+No more than five avatars should be grouped together. See also the [Avatar Group](/components/avatar-group) component

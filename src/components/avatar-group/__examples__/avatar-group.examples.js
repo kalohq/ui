@@ -9,12 +9,9 @@ export const examples = [
     title: 'Grouped Avatars',
     render: () => (
       <AvatarGroup>
-        <Avatar src="https://randomuser.me/api/portraits/women/21.jpg" />
-        <Avatar src="https://randomuser.me/api/portraits/women/21.jpg" />
-        <Avatar src="https://randomuser.me/api/portraits/women/21.jpg" />
-        <Avatar src="https://randomuser.me/api/portraits/women/21.jpg" />
-        <Avatar src="https://randomuser.me/api/portraits/women/21.jpg" />
-        <Avatar src="https://randomuser.me/api/portraits/women/21.jpg" />
+        <Avatar initials="LC" />
+        <Avatar initials="PJ" />
+        <Avatar initials="CL" />
       </AvatarGroup>
     ),
     html: () => (
@@ -51,7 +48,32 @@ export const examples = [
     description:
       'By default, only five avatars should be displayed. The total number of remaining avatars that are not shown is shown in a chip next to the avatars.',
     render: () => (
-      <Avatar src="https://randomuser.me/api/portraits/women/21.jpg" />
+      <AvatarGroup>
+        <Avatar
+          src="https://randomuser.me/api/portraits/women/21.jpg"
+          initials="AP"
+        />
+        <Avatar
+          src="https://randomuser.me/api/portraits/women/21.jpg"
+          initials="AP"
+        />
+        <Avatar
+          src="https://randomuser.me/api/portraits/women/21.jpg"
+          initials="AP"
+        />
+        <Avatar
+          src="https://randomuser.me/api/portraits/women/21.jpg"
+          initials="AP"
+        />
+        <Avatar
+          src="https://randomuser.me/api/portraits/women/21.jpg"
+          initials="AP"
+        />
+        <Avatar
+          src="https://randomuser.me/api/portraits/women/21.jpg"
+          initials="AP"
+        />
+      </AvatarGroup>
     ),
     html: () => (
       <div className="ui-avatar-group">
