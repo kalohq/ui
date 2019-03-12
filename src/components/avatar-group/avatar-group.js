@@ -10,6 +10,7 @@ type TProps = {
 
 export default function AvatarGroup(props: TProps) {
   const {children} = props;
+
   const _classNames = cx(styles['ui-avatar-group']);
 
   const numberOfChildren = Number([...children].length);

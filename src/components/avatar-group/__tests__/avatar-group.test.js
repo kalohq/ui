@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+/* @flow */
+>>>>>>> 41d291e... Add tests for Avatar and AvatarGroup
 /* eslint-env jest */
 import * as React from 'react';
 

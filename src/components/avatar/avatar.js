@@ -8,7 +8,11 @@ import styles from './avatar.css';
 
 const FALLBACK_COLORS = ['blue', 'orange', 'green', 'pink', 'navy'];
 
+<<<<<<< HEAD
 export const getFallbackColor = (resource: string) => {
+=======
+export const getFallbackColor = resource => {
+>>>>>>> 41d291e... Add tests for Avatar and AvatarGroup
   const hash = [...String(resource)].reduce(
     (sum, character) => sum + character.codePointAt(0),
     0
@@ -53,7 +57,13 @@ export default function Avatar(props: TProps) {
   );
 
   return (
-    <UIBase component="figure" className={_classNames} {...otherProps}>
+    <UIBase
+      component="span"
+      data-fallback-initials={String(initials).substr(0, 2)}
+      role="img"
+      className={_classNames}
+      {...otherProps}
+    >
       <span
         className={styles['ui-avatar__avatar']}
         role="img"

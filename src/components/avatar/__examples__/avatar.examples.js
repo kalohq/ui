@@ -69,10 +69,8 @@ export const examples = [
   {
     title: 'Avatar fallback',
     description:
-      'If no image is passed in, then the avatar will fallback to displaying two initials',
-    render: () => (
-      <Avatar src="https://randomuser.me/api/portraits/women/21.jpg" />
-    ),
+      'If no image (or a broken image resource) is passed in, then the avatar will fallback to displaying two initials',
+    render: () => <Avatar initials="MF" src="https://kalohq.com" />,
     html: () => (
       <span
         className="ui-avatar ui-avatar--large ui-avatar--fallback-orange"

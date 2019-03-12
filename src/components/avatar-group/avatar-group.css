@@ -1,6 +1,8 @@
 .ui-avatar-group {
   display: flex;
   flex-wrap: no-wrap;
+  z-index: 1;
+  position: relative;
 }
 
 /*
@@ -16,6 +18,11 @@
 .ui-avatar-group .ui-avatar--large,
 .ui-avatar-group .ui-avatar--extra-large {
   box-shadow: 0 0 0 3px var(--white);
+}
+
+.ui-avatar-group .ui-avatar--large,
+.ui-avatar-group .ui-avatar--extra-large {
+  border: 3px solid var(--white);
 }
 
 .ui-avatar-group .ui-avatar:nth-of-type(1) {
@@ -44,7 +51,7 @@
 
 .ui-avatar-group__chip {
   background-color: var(--grey100);
-  border: 2px solid var(--grey300);
+  border: 2px solid var(--grey400);
   color: var(--grey800);
   font-size: 1.4rem;
   font-weight: 500;
