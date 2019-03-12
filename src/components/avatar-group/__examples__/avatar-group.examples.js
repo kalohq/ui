@@ -9,9 +9,9 @@ export const examples = [
     title: 'Grouped Avatars',
     render: () => (
       <AvatarGroup>
-        <Avatar initials="LC" />
-        <Avatar initials="PJ" />
-        <Avatar initials="CL" />
+        <Avatar initials="GX" resourceHash="george@example.com" />
+        <Avatar initials="SJ" resourceHash="susil@example.com" />
+        <Avatar initials="ML" resourceHash="mary@example.com" />
       </AvatarGroup>
     ),
     html: () => (

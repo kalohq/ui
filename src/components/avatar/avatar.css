@@ -78,3 +78,7 @@
 .ui-avatar--fallback-blue:after {
   background-color: var(--blue500);
 }
+
+.ui-avatar--fallback-navy:after {
+  background-color: var(--navy900);
+}
