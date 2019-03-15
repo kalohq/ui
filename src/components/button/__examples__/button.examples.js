@@ -217,7 +217,7 @@ export const examples = [
       </ButtonGroup>
     ),
     html: () => (
-      <div className="ui-button-group">
+      <div className="ui-btn-group">
         <button className="ui-btn ui-btn--tertiary ui-btn--small">Small</button>
         <button className="ui-btn ui-btn--tertiary ui-btn--medium">
           medium
