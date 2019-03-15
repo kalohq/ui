@@ -173,9 +173,6 @@
 .ui-btn--flare {
   background: var(--gradient-pink);
   color: var(--white);
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.3rem;
   transition: filter 0.2s ease-out;
 
   &:hover {
