@@ -82,3 +82,42 @@
 .ui-avatar--fallback-navy:after {
   background-color: var(--navy900);
 }
+
+.ui-avatar--grouped {
+  margin-left: -0.45em;
+  box-shadow: 0 0 0 2px var(--white);
+}
+
+.ui-avatar--grouped .ui-avatar--large,
+.ui-avatar--grouped .ui-avatar--extra-large {
+  box-shadow: 0 0 0 3px var(--white);
+}
+
+.ui-avatar--grouped .ui-avatar--large,
+.ui-avatar--grouped .ui-avatar--extra-large {
+  border: 3px solid var(--white);
+}
+
+.ui-avatar--grouped .ui-avatar:nth-of-type(1) {
+  z-index: 5;
+}
+
+.ui-avatar--grouped .ui-avatar:nth-of-type(2) {
+  z-index: 4;
+}
+
+.ui-avatar--grouped .ui-avatar:nth-of-type(3) {
+  z-index: 3;
+}
+
+.ui-avatar--grouped .ui-avatar:nth-of-type(4) {
+  z-index: 2;
+}
+
+.ui-avatar--grouped .ui-avatar:nth-of-type(5) {
+  z-index: 1;
+}
+
+.ui-avatar--grouped .ui-avatar:first-of-type {
+  margin-left: 0;
+}

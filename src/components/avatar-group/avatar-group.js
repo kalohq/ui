@@ -21,7 +21,15 @@ export default function AvatarGroup(props: TProps) {
 
   return (
     <div className={_classNames}>
-      {slicedChildren}
+      {slicedChildren &&
+        React.Children.map(
+          slicedChildren,
+          child =>
+            child && // $FlowFixMe
+            React.cloneElement(child, {
+              isGrouped: true,
+            })
+        )}
       {numberOfChildren > 5 && (
         <span className="ui-avatar--medium ui-avatar-group__chip">
           {numberOfChildren - 5}
