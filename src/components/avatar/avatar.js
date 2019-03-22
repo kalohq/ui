@@ -32,6 +32,8 @@ type TProps = {
   resourceHash?: string,
   /** Any classes to pass down */
   className?: string,
+  /** Is the avatar grouped */
+  isGrouped?: boolean,
 };
 
 export default function Avatar(props: TProps) {
@@ -41,6 +43,7 @@ export default function Avatar(props: TProps) {
     className,
     initials,
     resourceHash,
+    isGrouped,
     ...otherProps
   } = props;
 
@@ -53,6 +56,7 @@ export default function Avatar(props: TProps) {
       [styles['ui-avatar']]: true,
       [styles[`ui-avatar--${size}`]]: true,
       [styles[`ui-avatar--fallback-${fallbackColor}`]]: true,
+      [styles[`ui-avatar--grouped`]]: isGrouped,
     },
     className
   );
