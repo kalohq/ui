@@ -3,6 +3,7 @@ import * as React from 'react';
 import cx from 'classnames';
 
 import styles from './avatar-group.css';
+import avatarStyles from '../avatar/avatar.css';
 
 type TProps = {
   /** An iterable set of children Avatar components */
@@ -31,7 +32,12 @@ export default function AvatarGroup(props: TProps) {
             })
         )}
       {numberOfChildren > 5 && (
-        <span className="ui-avatar--medium ui-avatar-group__chip">
+        <span
+          className={cx(
+            avatarStyles['ui-avatar--medium'],
+            styles['ui-avatar-group__chip']
+          )}
+        >
           {numberOfChildren - 5}
         </span>
       )}
