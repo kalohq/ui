@@ -2,7 +2,6 @@
 import React, {PureComponent} from 'react';
 import type {List} from 'immutable';
 import {random} from 'lodash';
-import styled from 'react-emotion';
 
 import Icon from '../icon';
 import PaperMenu, {PaperMenuItem} from '../paper-menu';
@@ -10,12 +9,7 @@ import Checkbox from '../checkbox';
 import {Box} from '../layout';
 import Button from '../button';
 
-const StyledButtonDropdownMenu = styled.div`
-  position: absolute;
-  top: calc(100% + 2px);
-  min-width: calc(100% + 4px);
-  left: -2px;
-`;
+import styles from './button-dropdown.css';
 
 type TProps = {
   children?: string,
@@ -98,7 +92,7 @@ export default class ButtonDropdown extends PureComponent<TProps, TState> {
     // renders childern twice).
 
     const _singleRenderChildren = selectItems.length ? (
-      <StyledButtonDropdownMenu>
+      <div className={styles.root}>
         <PaperMenu open={this.state.open} origin="top" width="100%">
           {selectItems.map(item => (
             <PaperMenuItem
@@ -120,7 +114,7 @@ export default class ButtonDropdown extends PureComponent<TProps, TState> {
             </PaperMenuItem>
           ))}
         </PaperMenu>
-      </StyledButtonDropdownMenu>
+      </div>
     ) : null;
 
     return (
