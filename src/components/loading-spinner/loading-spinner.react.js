@@ -1,6 +1,8 @@
 /* @flow */
 import React from 'react';
-import styled, {keyframes} from 'react-emotion';
+import cx from 'classnames';
+
+import styles from './loading-spinner.css';
 
 const SPINNER_DIMENSIONS = {
   small: 20,
@@ -8,41 +10,23 @@ const SPINNER_DIMENSIONS = {
   large: 50,
 };
 
-const SPINNER_KEYFRAMES = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-
-`;
-
-const StyledLoadingSpinner = styled.div`
-  position: relative;
-  transform-origin: 48% 50%;
-  animation: ${SPINNER_KEYFRAMES} 1600ms linear infinite;
-  width: ${props => SPINNER_DIMENSIONS[props.size]}px;
-  height: ${props => SPINNER_DIMENSIONS[props.size]}px;
-
-  svg {
-    fill: ${props => props.theme.colors.grey400};
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-`;
-
 type TProps = {
   size?: 'small' | 'medium' | 'large',
 };
 
 export default function LoadingSpinner(props: TProps) {
-  const {size = 'medium'} = props;
+  const {size = 'medium', className} = props;
+
+  const _classNames = cx(
+    {
+      [styles['ui-loading-spinner']]: true,
+      [styles[`ui-loading-spinner--${size}`]]: true,
+    },
+    className
+  );
 
   return (
-    <StyledLoadingSpinner size={size}>
+    <div className={_classNames}>
       <svg
         width={`${SPINNER_DIMENSIONS[size]}px`}
         height={`${SPINNER_DIMENSIONS[size]}px`}
@@ -54,7 +38,7 @@ export default function LoadingSpinner(props: TProps) {
           stroke="none"
         />
       </svg>
-    </StyledLoadingSpinner>
+    </div>
   );
 }
 

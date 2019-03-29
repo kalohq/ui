@@ -1,0 +1,37 @@
+.ui-loading-spinner {
+  position: relative;
+  transform-origin: 48% 50%;
+  animation: spinner 1600ms linear infinite;
+}
+
+.ui-loading-spinner--small {
+  height: 20px;
+  width: 20px;
+}
+
+.ui-loading-spinner--medium {
+  height: 30px;
+  width: 30px;
+}
+
+.ui-loading-spinner--large {
+  height: 50px;
+  width: 50px;
+}
+
+.ui-loading-spinner svg {
+  fill: var(--grey400);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

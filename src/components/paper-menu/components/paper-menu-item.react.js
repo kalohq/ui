@@ -1,80 +1,18 @@
 /* @flow */
 import * as React from 'react';
 import {isString} from 'lodash';
-import styled, {css} from 'react-emotion';
+import cx from 'classnames';
 
-import {Box} from '../../layout';
+import {UIBase} from '../../layout';
 import Icon from '../../icon';
 
-const StyledPaperMenuItem = styled(Box)`
-  display: flex;
-  align-items: center;
-  align-content: center;
-  flex-direction: row;
-  background-color: ${props => props.theme.colors.white};
-  cursor: ${props => (props.disabled || props.static ? 'default' : 'pointer')};
-  opacity: ${props => (props.disabled ? 0.5 : 1)};
-  border-bottom: 1px solid ${props => props.theme.colors.grey200};
-  transition: all 0.2s ease-in;
-  color: inherit;
-  padding: 4px 16px;
-  user-select: none;
-  text-decoration: none;
-  min-height: 52px;
-  min-width: ${props => props.minWidth};
-
-  &:hover {
-    ${props =>
-      !props.disabled &&
-      !props.static &&
-      css`
-        background-color: ${props.theme.colors.grey100};
-      `};
-  }
-
-  ${props =>
-    props.active &&
-    css`
-      background: ${props.theme.colors.grey200};
-      color: #fff;
-      padding-top: 0;
-    `};
-
-  ${props =>
-    props.highlighted &&
-    css`
-      background: ${props.theme.colors.grey200};
-      color: ${props.theme.colors.blue500};
-    `};
-`;
-
-const StyledPaperMenuItemContent = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 400;
-  color: ${props => props.theme.colors.navy700};
-
-  > * {
-    margin-right: 10px !important;
-  }
-
-  > *:last-child {
-    margin-right: 0px !important;
-  }
-`;
+import styles from './paper-menu-item.css';
 
 type Props = {
   icon?: React.Node | string,
   iconAfter?: React.Node | string,
   children?: React.Node,
   active?: boolean,
-  success?: boolean,
   disabled?: boolean,
   highlighted?: boolean,
   padded?: boolean,
@@ -96,46 +34,52 @@ export default function PaperMenuItem(props: Props) {
     disabled,
     highlighted,
     name,
-    success,
     className,
     onClick,
-    component = Box,
+    component = 'div',
     minWidth,
     iconAfter,
     ...otherProps
   } = props;
 
+  const _classNames = cx(
+    {
+      [styles['ui-paper-menu-item']]: true,
+      [styles['ui-paper-menu-item--highlighted']]: highlighted,
+      [styles['ui-paper-menu-item--disabled']]: disabled,
+      [styles['ui-paper-menu-item--active']]: active,
+    },
+    className
+  );
+
   return (
-    <StyledPaperMenuItem
-      minWidth={minWidth ? minWidth : 'auto'}
+    <UIBase
+      style={{minWidth: minWidth ? minWidth : 'auto'}}
       onClick={onClick}
       name={name}
       component={component}
-      className={className}
-      highlighted={highlighted}
-      active={active}
-      success={success}
-      disabled={disabled}
-      data-test="ui-paper-menu-item"
+      className={_classNames}
       {...otherProps}
     >
-      {icon ? (
-        <Box marginRight={10}>
+      {icon && (
+        <UIBase marginRight={10}>
           {isString(icon) ? <Icon size={16}>{String(icon)}</Icon> : icon}
-        </Box>
-      ) : null}
+        </UIBase>
+      )}
 
-      <StyledPaperMenuItemContent>{children}</StyledPaperMenuItemContent>
+      <UIBase className={styles['ui-paper-menu-item__content']}>
+        {children}
+      </UIBase>
 
-      {iconAfter ? (
-        <Box marginLeft={10}>
+      {iconAfter && (
+        <UIBase marginLeft={10}>
           {isString(iconAfter) ? (
             <Icon size={16}>{String(iconAfter)}</Icon>
           ) : (
             iconAfter
           )}
-        </Box>
-      ) : null}
-    </StyledPaperMenuItem>
+        </UIBase>
+      )}
+    </UIBase>
   );
 }
