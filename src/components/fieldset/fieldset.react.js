@@ -1,11 +1,14 @@
 /* @flow */
 import * as React from 'react';
-import styled from 'react-emotion';
+import cx from 'classnames';
+
 import {pickStyles} from '../../utils/style';
 
-import {Box} from '../layout';
+import {UIBase} from '../layout';
 import FieldLabel from '../field-label';
 import Text from '../text';
+
+import styles from './fieldset.css';
 
 export function FieldsetHeader(props: {
   legend: string,
@@ -15,14 +18,14 @@ export function FieldsetHeader(props: {
   const {legend, description, meta} = props;
 
   return (
-    <Box marginTop={20}>
-      {legend ? (
+    <UIBase marginTop={20}>
+      {legend && (
         <FieldLabel>
           {legend}
-          {meta ? (
+          {meta && (
             <Text
               size="extra-small"
-              color="silver"
+              color="grey500"
               marginLeft={10}
               weight="normal"
               resetTransform={true}
@@ -30,26 +33,17 @@ export function FieldsetHeader(props: {
             >
               {meta}
             </Text>
-          ) : null}
+          )}
         </FieldLabel>
-      ) : null}
-      {description ? (
+      )}
+      {description && (
         <Text color="navy600" multiline={true}>
           {description}
         </Text>
-      ) : null}
-    </Box>
+      )}
+    </UIBase>
   );
 }
-
-const StyledFieldset = styled(Box)`
-  border: 0;
-  border-bottom: ${props =>
-    props.bordered ? `1px solid ${props.theme.colors.grey100}` : null};
-  background-color: ${props =>
-    props.inset ? `${props.theme.colors.grey000}` : null};
-  cursor: ${props => (props.interactive ? 'pointer' : 'inherit')};
-`;
 
 type TProps = {
   /** Fieldset children to display within the fieldset content area */
@@ -86,26 +80,33 @@ export default function Fieldset(props: TProps) {
     ...otherProps
   } = props;
 
+  const _classNames = cx(
+    {
+      [styles['ui-fieldset']]: true,
+      [styles['ui-fieldset--no-border']]: !bordered,
+      [styles['ui-fieldset--inset']]: inset,
+      [styles['ui-fieldset--interactive']]: !!onClick,
+    },
+    className
+  );
+
   return (
-    <StyledFieldset
-      className={className}
-      bordered={bordered}
+    <UIBase
+      className={_classNames}
       component="fieldset"
-      inset={inset}
-      interactive={!!onClick}
       onClick={onClick}
       padding={[20, 50, 40, 50]} // top -20 accounts forr vertical spacing
       name={name}
       {...pickStyles(otherProps)}
     >
-      {legend ? (
+      {legend && (
         <FieldsetHeader
           meta={legendMeta}
           legend={legend}
           description={description}
         />
-      ) : null}
+      )}
       {children}
-    </StyledFieldset>
+    </UIBase>
   );
 }

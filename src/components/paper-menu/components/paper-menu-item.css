@@ -1,0 +1,59 @@
+.ui-paper-menu-item {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--grey200);
+  transition: all 0.2s ease-in;
+  color: inherit;
+  padding: 4px 16px;
+  user-select: none;
+  text-decoration: none;
+  min-height: 52px;
+}
+
+.ui-paper-menu-item:not(.ui-paper-menu-item--disabled):not(.ui-paper-menu-item--static):hover {
+  background-color: var(--grey100);
+}
+
+.ui-paper-menu-item--disabled,
+.ui-paper-menu-item--static {
+  cursor: default;
+}
+
+.ui-paper-menu-item--active {
+  background-color: var(--grey200);
+  color: var(--white);
+  padding-top: 0;
+}
+
+.ui-paper-menu-item--highlighted {
+  background-color: var(--grey200);
+  color: var(--blue500);
+}
+
+.ui-paper-menu-item--disabled {
+  opacity: 0.5;
+}
+
+.ui-paper-menu-item__content {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--navy700);
+}
+
+.ui-paper-menu-item__content > * {
+  margin-right: 10px !important;
+}
+
+.ui-paper-menu-item__content > *:last-child {
+  margin-right: 0px !important;
+}

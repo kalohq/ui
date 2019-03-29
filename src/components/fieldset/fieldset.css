@@ -1,0 +1,16 @@
+.ui-fieldset {
+  border: 0;
+  border-bottom: 1px solid var(--grey100);
+}
+
+.ui-fieldset--no-border {
+  border-bottom: 0;
+}
+
+.ui-fieldset--inset {
+  background-color: var(--grey000);
+}
+
+.ui-fieldset--interactive {
+  cursor: pointer;
+}

@@ -1,6 +1,6 @@
 /* @flow */
 import React, {PureComponent} from 'react';
-import styled from 'react-emotion';
+import cx from 'classnames';
 
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
@@ -9,41 +9,7 @@ import Icon from '../icon';
 import Sticky from '../sticky';
 import {UIBase} from '../layout';
 
-const StyledPaperMenu = styled.div`
-  transform-origin: top;
-  transition: box-shadow 0.2s linear;
-  transition-duration: 0.2s !important;
-`;
-
-const StyledPaperMenuHeader = styled.div`
-  display: flex;
-  padding: 32px 32px 16px 32px;
-  justify-content: space-between;
-`;
-
-const StyledPaperMenuOption = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  margin-top: -6px;
-`;
-
-const StyledPaperMenuOptionClose = styled.button`
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-
-  &:focus {
-    outline: 0;
-  }
-`;
-
-const MockedPaper = styled(UIBase)`
-  background-color: ${props => props.theme.colors.white};
-  border: 1px solid ${props => props.theme.colors.grey200};
-  box-shadow: ${props => props.theme.layout.boxShadowLevel2};
-  border-radius: 4px;
-  over-flow: hidden;
-`;
+import styles from './paper-menu.css';
 
 /**
  * Generic open/close popup paper styled menu
@@ -138,6 +104,7 @@ export default class PaperMenu extends PureComponent<TProps> {
       zIndex,
       sticky,
       optionIcons,
+      className,
     } = this.props;
 
     return (
@@ -148,30 +115,38 @@ export default class PaperMenu extends PureComponent<TProps> {
           transitionLeaveTimeout={220}
           transitionAppearTimeout={220}
         >
-          {open ? (
-            <StyledPaperMenu
+          {open && (
+            <UIBase
+              className={cx(
+                {
+                  [styles['ui-paper-menu']]: true,
+                },
+                className
+              )}
               {...root}
               style={{transformOrigin: origin}}
               onClick={event => event.stopPropagation()}
             >
-              <MockedPaper {...paper}>
+              <UIBase className={styles['ui-paper-menu__paper']} {...paper}>
                 {heading && (
-                  <StyledPaperMenuHeader>
+                  <UIBase className={styles['ui-paper-menu__header']}>
                     <H3>{heading}</H3>
-                    <StyledPaperMenuOption>
+                    <UIBase className={styles['ui-paper-menu__option']}>
                       {optionIcons}
-                      <StyledPaperMenuOptionClose
+                      <UIBase
+                        className={styles['ui-paper-menu__option__button']}
+                        component="button"
                         onClick={this.props.onRequestClose}
                       >
                         <Icon size={18}>clear</Icon>
-                      </StyledPaperMenuOptionClose>
-                    </StyledPaperMenuOption>
-                  </StyledPaperMenuHeader>
+                      </UIBase>
+                    </UIBase>
+                  </UIBase>
                 )}
                 {children}
-              </MockedPaper>
-            </StyledPaperMenu>
-          ) : null}
+              </UIBase>
+            </UIBase>
+          )}
         </CSSTransitionGroup>
       </Sticky>
     );
