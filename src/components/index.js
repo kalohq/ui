@@ -35,6 +35,7 @@ export {default as FieldValidations} from './field-validations';
 export {default as Fieldset} from './fieldset';
 export {default as Form} from './form';
 export {default as Input} from './input';
+export {default as ImageInput} from './image-input';
 export {Option as SelectOption} from './select';
 export {default as Radio} from './radio';
 export {default as Select} from './select';
