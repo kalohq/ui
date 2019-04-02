@@ -1,28 +1,47 @@
-export default class ImageInput {
-  constructor(attr) {
-    this.element = attr.element;
-    this.inputLabel = attr.inputLabel;
-    this.inputPlaceholder = attr.inputPlaceholder;
+//  @flow
+/**
+ * UI Image Input
+ *
+ * Implements some custom UI around a native file input, whilst
+ * still supporting drag-and-drop
+ *
+ */
+
+export const FILEREADER_ENABLED_CLASS = 'ui-has-feature__filereader';
+
+type attributes = {
+  element: HTMLElement,
+  onChange: Function,
+};
+
+export default class UIImageInput {
+  constructor(attributes: attributes) {
+    /** This class only works if the browser has FileReader enabled.
+     * Lets return early if the browser doesnt support it. */
+    if (!window.FileReader) return false;
+
+    /** The root element */
+    this.element = attributes.element;
+    this.onChange = attributes.onChange;
 
     this.resetInput = this.resetInput.bind(this);
     this.handleFileSelect = this.handleFileSelect.bind(this);
     this.removeThumbnailsElement = this.removeThumbnailsElement.bind(this);
 
-    if (!window.FileReader) return false;
-    this.element.classList.add('ui-has-feature__filereader');
+    this.element.classList.add(FILEREADER_ENABLED_CLASS);
 
     if (this.element) {
+      this.element.addEventListener('change', this.handleFileSelect, false);
       this.inputElement = this.element.querySelector('#imageInput');
       this.resetElement = this.element.querySelector('#resetButton');
-      this.element.addEventListener('change', this.handleFileSelect, false);
-    }
 
-    if (this.resetElement) {
-      this.resetElement.addEventListener('click', this.resetInput);
+      if (this.resetElement) {
+        this.resetElement.addEventListener('click', this.resetInput);
+      }
     }
   }
 
-  handleFileSelect(event) {
+  handleFileSelect(event: SyntheticEvent<*>) {
     const files = event.target.files[0];
 
     this.removeThumbnailsElement();
@@ -50,6 +69,10 @@ export default class ImageInput {
 
       reader.readAsDataURL(images[0]);
     }
+
+    if (this.onChange) {
+      this.onChange({files});
+    }
   }
 
   removeThumbnailsElement() {
@@ -61,7 +84,6 @@ export default class ImageInput {
 
   resetInput() {
     this.removeThumbnailsElement();
-
     this.inputElement.value = '';
   }
 }

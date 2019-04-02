@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import imageInput from '../image-input';
+import UIImageInput, {FILEREADER_ENABLED_CLASS} from '../image-input';
 
 describe('ImageInput (web)', () => {
   beforeEach(() => {
@@ -38,7 +38,7 @@ describe('ImageInput (web)', () => {
 
   test('should instantiate correctly', () => {
     const element = document.querySelector('#inputWrapper');
-    const instance = new imageInput({
+    const instance = new UIImageInput({
       element,
     });
 
@@ -46,17 +46,17 @@ describe('ImageInput (web)', () => {
   });
 
   test('should get a file-reader available class if FileReader is enabled in the browser', () => {
-    const instance = new imageInput({
+    const instance = new UIImageInput({
       element: document.querySelector('#inputWrapper'),
     });
 
-    expect(
-      instance.element.classList.contains('ui-has-feature__filereader')
-    ).toBe(true);
+    expect(instance.element.classList.contains(FILEREADER_ENABLED_CLASS)).toBe(
+      true
+    );
   });
 
   test('resetInput should remove the thumbnail element', () => {
-    const instance = new imageInput({
+    const instance = new UIImageInput({
       element: document.querySelector('#inputWrapper'),
     });
 

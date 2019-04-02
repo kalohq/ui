@@ -1,14 +1,25 @@
 /* @flow */
 import React from 'react';
-import imageInput from '../image-input';
 
-import '../image-input.css';
+import Field from '../../field';
+import Input from '../../input';
+import imageInput from '../image-input';
+import ImageInput from '../image-input.react';
 
 export const examples = [
   {
     title: 'Image Input',
     description: 'An input for the upload of images',
-    render: () => <div>empty</div>,
+    render: () => (
+      <ImageInput
+        onChange={value => console.log(value)}
+        placeholder="Upload image"
+      >
+        <Field label="Title">
+          <Input id="imageTitle" placeholder="e.g. Cover Illustration" />
+        </Field>
+      </ImageInput>
+    ),
     html: () => {
       return (
         <div
