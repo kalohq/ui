@@ -1,0 +1,93 @@
+.ui-image-input__label {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.ui-image-input__input-wrapper {
+  margin-top: 4px;
+}
+
+.ui-has-feature__filereader .ui-image-input__input-wrapper {
+  display: flex;
+  position: relative;
+}
+
+.ui-has-feature__filereader .ui-image-input__input,
+.ui-has-feature__filereader .ui-image-input__pseudo,
+.ui-has-feature__filereader .ui-image-input__thumb {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 112px;
+  height: 112px;
+  margin-right: 1.6rem;
+}
+
+.ui-has-feature__filereader .ui-image-input__input {
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1;
+}
+
+.ui-image-input__pseudo {
+  display: none;
+}
+
+.ui-has-feature__filereader .ui-image-input__pseudo {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed #d0d8df;
+  border-radius: 6px;
+  background-color: #f9fafc;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.ui-has-feature__filereader .ui-image-input__thumb {
+  position: absolute;
+  border: 1px solid #eaeaee;
+  border-radius: 6px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ui-image-input__meta {
+  margin-top: 2.4rem;
+}
+
+.ui-has-feature__filereader .ui-image-input__meta {
+  display: none;
+  width: calc(100% - 128px);
+  margin-top: 0;
+}
+
+.ui-has-feature__filereader
+  .ui-image-input__input:focus
+  + .ui-image-input__pseudo {
+  outline: 1px dotted #212121;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.ui-has-feature__filereader .ui-image-input__title {
+  margin-bottom: 1.2rem;
+}
+
+.ui-image-input__reset {
+  display: none;
+}
+
+.ui-has-feature__filereader .ui-image-input__reset {
+  display: block;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #414262;
+  text-decoration: underline;
+}

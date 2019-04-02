@@ -11,7 +11,7 @@ export const examples = [
       return (
         <div
           id="inputWrapper"
-          className="image-input__input-wrapper"
+          className="ui-image-input__input-wrapper"
           ref={el => {
             const instance = new imageInput({
               element: el,
@@ -26,23 +26,23 @@ export const examples = [
             type="file"
             name="imageInput"
             id="imageInput"
-            className="ui-input image-input__input"
+            className="ui-input ui-image-input__input"
             accept="image/*"
             tabIndex="0"
           />
-          <div className="image-input__pseudo">Add image</div>
-          <div className="image-input__meta">
-            <label htmlFor="imageTitle" className="image-input__label">
+          <div className="ui-image-input__pseudo">Add image</div>
+          <div className="ui-image-input__meta">
+            <label htmlFor="imageTitle" className="ui-image-input__label">
               Title
             </label>
             <input
               type="text"
               name="imageTitle"
               id="imageTitle"
-              className="ui-input image-input__title"
+              className="ui-input ui-image-input__title"
               placeholder="e.g. Cover illustration"
             />
-            <button className="image-input__reset" id="resetButton">
+            <button className="ui-image-input__reset" id="resetButton">
               Remove
             </button>
           </div>
