@@ -6,11 +6,11 @@
   margin-bottom: 0.8rem;
 }
 
-.ui-image-input__input-wrapper {
+.ui-image-input {
   margin-top: 4px;
 }
 
-.ui-has-feature__filereader .ui-image-input__input-wrapper {
+.ui-has-feature__filereader.ui-image-input {
   display: flex;
   position: relative;
 }

@@ -2,6 +2,8 @@
 import React from 'react';
 import imageInput from '../image-input';
 
+import '../image-input.css';
+
 export const examples = [
   {
     title: 'Image Input',
@@ -11,7 +13,7 @@ export const examples = [
       return (
         <div
           id="inputWrapper"
-          className="ui-image-input__input-wrapper"
+          className="ui-image-input"
           ref={el => {
             const instance = new imageInput({
               element: el,
@@ -26,7 +28,7 @@ export const examples = [
             type="file"
             name="imageInput"
             id="imageInput"
-            className="ui-input ui-image-input__input"
+            className="ui-input ui-input--medium ui-image-input__input"
             accept="image/*"
             tabIndex="0"
           />
@@ -39,7 +41,7 @@ export const examples = [
               type="text"
               name="imageTitle"
               id="imageTitle"
-              className="ui-input ui-image-input__title"
+              className="ui-input ui-input--medium ui-image-input__title"
               placeholder="e.g. Cover illustration"
             />
             <button className="ui-image-input__reset" id="resetButton">
