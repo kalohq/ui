@@ -9,6 +9,7 @@ export default class ImageInput {
     this.removeThumbnailsElement = this.removeThumbnailsElement.bind(this);
 
     if (!window.FileReader) return false;
+    this.element.classList.add('ui-has-feature__filereader');
 
     if (this.element) {
       this.inputElement = this.element.querySelector('#imageInput');
@@ -37,12 +38,12 @@ export default class ImageInput {
         if (theFile) {
           const el = document.createElement('div');
           el.setAttribute('id', 'thumbnails');
-          el.innerHTML = `<img class="image-input__thumb" src="${
+          el.innerHTML = `<img class="ui-image-input__thumb" src="${
             ev.target.result
           }" title="${escape(theFile.name)}" />`;
           document.getElementById('inputWrapper').insertBefore(el, null);
           document.getElementsByClassName(
-            'image-input__meta'
+            'ui-image-input__meta'
           )[0].style.display = 'block';
         }
       })(images[0]);
