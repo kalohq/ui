@@ -1,8 +1,11 @@
 /* @flow */
 import * as React from 'react';
+import cx from 'classnames';
 import {pickStyles} from '../../utils/style';
 
-import {Box} from '../layout';
+import {UIBase} from '../layout';
+
+import styles from './field-row.css';
 
 export const DEFAULT_SPACING = 20;
 
@@ -22,11 +25,16 @@ type TProps = {
 export default function FieldRow(props: TProps) {
   const {children, gutter = DEFAULT_SPACING, className, ...otherProps} = props;
 
+  const _classNames = cx(
+    {
+      [styles['ui-field-row']]: true,
+    },
+    className
+  );
+
   return (
-    <Box
-      className={className}
-      flexDirection="row"
-      alignItems="top"
+    <UIBase
+      className={_classNames}
       marginLeft={-gutter}
       marginTop={DEFAULT_SPACING}
       {...pickStyles(otherProps)}
@@ -40,6 +48,6 @@ export default function FieldRow(props: TProps) {
             })
           : child
       )}
-    </Box>
+    </UIBase>
   );
 }
