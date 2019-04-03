@@ -2,7 +2,7 @@
 
 exports[`Input should render shallow component ok 1`] = `
 <div
-  className="e1q9f2xp0 css-10rqj9x"
+  className="ui-field-row e1q9f2xp6 css-150a2en"
   style={Object {}}
 >
   <div
