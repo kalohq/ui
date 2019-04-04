@@ -9,20 +9,20 @@
 
 export const FILEREADER_ENABLED_CLASS = 'ui-has-feature__filereader';
 
-type attributes = {
+type TAttributes = {
   element: HTMLElement,
   onChange: Function,
 };
 
 export default class UIImageInput {
-  constructor(attributes: attributes) {
+  constructor(attrs: TAttributes) {
     /** This class only works if the browser has FileReader enabled.
      * Lets return early if the browser doesnt support it. */
     if (!window.FileReader) return false;
 
     /** The root element */
-    this.element = attributes.element;
-    this.onChange = attributes.onChange;
+    this.element = attrs.element;
+    this.onChange = attrs.onChange;
 
     this.resetInput = this.resetInput.bind(this);
     this.handleFileSelect = this.handleFileSelect.bind(this);
@@ -80,6 +80,8 @@ export default class UIImageInput {
     if (thumbnailsElement) {
       thumbnailsElement.remove();
     }
+    document.getElementsByClassName('ui-image-input__meta')[0].style.display =
+      'none';
   }
 
   resetInput() {

@@ -11,10 +11,7 @@ export const examples = [
     title: 'Image Input',
     description: 'An input for the upload of images',
     render: () => (
-      <ImageInput
-        onChange={value => console.log(value)}
-        placeholder="Upload image"
-      >
+      <ImageInput placeholder="Upload image">
         <Field label="Title">
           <Input id="imageTitle" placeholder="e.g. Cover Illustration" />
         </Field>
