@@ -2,9 +2,9 @@
 import * as React from 'react';
 import renderer from 'react-test-renderer';
 
-import {shallow, mount} from '../../../utils/test/enzyme';
+import {shallow, mount} from 'utils/test/enzyme';
 
-import Heading from '../heading';
+import Heading from '../heading.react';
 
 describe('Heading', () => {
   const create = props => <Heading {...props}>A Heading Component</Heading>;

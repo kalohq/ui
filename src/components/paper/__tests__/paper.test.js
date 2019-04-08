@@ -9,7 +9,7 @@ import {ThemeProvider} from 'emotion-theming';
 import theme from 'components/theme';
 
 import Paper from 'components/paper';
-import {PaperToolbar} from '../components/paper-toolbar';
+import {PaperToolbar} from '../components/paper-toolbar.react';
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 

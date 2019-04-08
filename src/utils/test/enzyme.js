@@ -3,7 +3,7 @@ import {mount as enzymeMount, shallow as enzymeShallow} from 'enzyme';
 import {channel, createBroadcast} from 'emotion-theming';
 import PropTypes from 'prop-types';
 
-import theme from '../../components/theme/theme';
+import theme from '../../components/theme';
 
 // Create a new context broadcast with our theme
 const BROADCAST = createBroadcast({theme, user: {}});

@@ -5,7 +5,7 @@ import {shallow} from 'enzyme';
 import renderer from 'react-test-renderer';
 import {ThemeProvider} from 'emotion-theming';
 
-import FieldLabel from '../field-label';
+import FieldLabel from '../field-label.react';
 import Icon from '../../icon';
 import theme from '../../theme';
 

@@ -2,7 +2,7 @@
 import React from 'react';
 import Icon from '../../icon';
 import {shallow} from 'enzyme';
-import TableCell from '../table-cell';
+import {TableCell} from '../';
 
 describe('<TableCell />', () => {
   it('should render children', () => {

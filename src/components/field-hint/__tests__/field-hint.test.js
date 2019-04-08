@@ -4,7 +4,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import renderer from 'react-test-renderer';
 
-import FieldHint from '../field-hint';
+import FieldHint from '../';
 import Icon from '../../icon';
 
 describe('FieldHint', () => {

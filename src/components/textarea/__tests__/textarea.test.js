@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import {ThemeProvider} from 'emotion-theming';
 
 import theme from '../../theme';
-import Textarea from '../textarea';
+import Textarea from '../';
 
 describe('Input', () => {
   const defaultProps = {

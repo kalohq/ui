@@ -2,16 +2,16 @@
 
 exports[`Field should render shallow component ok 1`] = `
 <div
-  className="ui-field ui-field--legacy e1q9f2xp6 css-0"
+  className="ui-field ui-field--legacy e1krcyn16 css-0"
   onClick={undefined}
   style={Object {}}
 >
   <div
-    className="e1q9f2xp0 css-1dvaom5"
+    className="e1krcyn10 css-1dvaom5"
     style={Object {}}
   >
     <label
-      className="ui-field-label e1q9f2xp6 css-4or71o"
+      className="ui-field-label e1krcyn16 css-4or71o"
       htmlFor={undefined}
       style={Object {}}
       title={undefined}
@@ -41,7 +41,7 @@ exports[`Field should render shallow component ok 1`] = `
     />
   </div>
   <span
-    className="ui-field-hint e1q9f2xp6 css-0"
+    className="ui-field-hint e1krcyn16 css-0"
     style={Object {}}
   >
     My Hint

@@ -1,8 +1,8 @@
 /* eslint-env jest */
 import * as React from 'react';
-import {mount} from '../../../utils/test/enzyme';
+import {mount} from 'utils/test/enzyme';
 
-import Avatar, {getFallbackColor} from '../avatar';
+import Avatar, {getFallbackColor} from '../avatar.react';
 
 describe('Avatar', () => {
   test('should render an avatar', () => {

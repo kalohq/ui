@@ -4,7 +4,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import {ThemeProvider} from 'emotion-theming';
 
-import ToggleButton from '../toggle-button';
+import ToggleButton from '../toggle-button.react';
 import theme from '../../theme';
 
 describe('ToggleButton', () => {

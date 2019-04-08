@@ -7,10 +7,10 @@ import renderer from 'react-test-renderer';
 import {ThemeProvider} from 'emotion-theming';
 import sinon from 'sinon';
 
-import {shallow, mount} from '../../../utils/test/enzyme';
+import {shallow, mount} from 'utils/test/enzyme';
 
 import theme from 'components/theme';
-import Button from '../button';
+import Button from '../button.react';
 
 import reactStyles from '../button.react.css';
 

@@ -6,7 +6,7 @@ import renderer from 'react-test-renderer';
 import {ThemeProvider} from 'emotion-theming';
 
 import theme from '../../theme';
-import Input, {InputAddon} from '../input';
+import Input, {InputAddon} from '../input.react';
 
 describe('Input', () => {
   const create = props => shallow(<Input {...props} />);
