@@ -7,7 +7,7 @@ const concat = require('gulp-concat');
  * Compile component CSS. We also convert variables here
  * to make the published package more consumable.
  */
-gulp.task('npm:css', () => {
+gulp.task('shared:css', () => {
   return gulp
     .src('./src/components/**/*.css')
     .pipe(postcss())
@@ -15,12 +15,14 @@ gulp.task('npm:css', () => {
 });
 
 /**
- * Compile component JS from ES6/JSX down to ES5
+ * Compile React components JS from ES6/JSX down to ES5 and remove flowtypes
  */
-gulp.task('npm:js', () =>
+gulp.task('react:js', () =>
   gulp
     .src([
-      'src/**/*.js',
+      '!src/**/*.js',
+      'src/**/*.react.js',
+      'src/**/index.js',
       '!**/__tests__/*',
       '!src/design-tokens/*',
       '!**/__examples__/*',
@@ -36,9 +38,31 @@ gulp.task('npm:js', () =>
 );
 
 /**
+ * Compile vanilla JS from ES6 down to ES5 and remove flowtypes
+ */
+gulp.task('vanilla:js', () =>
+  gulp
+    .src([
+      'src/**/*.js',
+      '!src/**/*.react.js',
+      '!**/__tests__/*',
+      '!src/design-tokens/*',
+      '!**/__examples__/*',
+      '!src/utils/test/**/*',
+    ])
+    .pipe(
+      babel({
+        presets: ['es2015', 'stage-2'],
+        ignore: ['__tests__', '__examples__'],
+      })
+    )
+    .pipe(gulp.dest('lib'))
+);
+
+/**
  * Copy component assets (font files, images)
  */
-gulp.task('npm:copy-files', () =>
+gulp.task('shared:copy-files', () =>
   gulp
     .src(
       'src/components/**/*(*.woff|*.woff2|*.ttf|*.jpg|*.jpeg|*.png|*.gif|*.svg)'
@@ -49,16 +73,7 @@ gulp.task('npm:copy-files', () =>
 /**
  * Copy design tokens to lib
  */
-gulp.task('npm:copy-design-tokens', () =>
-  gulp
-    .src(['src/design-tokens/*(*.js|*.json|*.css)'])
-    .pipe(gulp.dest('lib/design-tokens'))
-);
-
-/**
- * Copy design tokens to lib
- */
-gulp.task('npm:copy-design-tokens', () =>
+gulp.task('shared:copy-design-tokens', () =>
   gulp
     .src(['src/design-tokens/*(*.js|*.json|*.css)'])
     .pipe(gulp.dest('lib/design-tokens'))
@@ -67,14 +82,14 @@ gulp.task('npm:copy-design-tokens', () =>
 /**
  * Copy icons to lib
  */
-gulp.task('npm:copy-icons', () =>
+gulp.task('shared:copy-icons', () =>
   gulp.src(['src/icons/**/*']).pipe(gulp.dest('lib/icons'))
 );
 
 /**
  * Copy compiled CSS to NPM lib
  */
-gulp.task('npm:build-bundled-css', () =>
+gulp.task('vanilla:build-bundled-css', () =>
   gulp
     .src([
       './src/components/**/*.css',
@@ -89,7 +104,7 @@ gulp.task('npm:build-bundled-css', () =>
 /**
  * Copy and compile core stylesheets
  */
-gulp.task('npm:build-core-css', () =>
+gulp.task('shared:build-core-css', () =>
   gulp
     .src(['./src/styles/kalo-ui-*.css'])
     .pipe(postcss())
@@ -104,12 +119,13 @@ gulp.task('npm:build-core-css', () =>
 gulp.task(
   'build-npm-package',
   gulp.series(
-    'npm:css',
-    'npm:js',
-    'npm:copy-files',
-    'npm:copy-design-tokens',
-    'npm:copy-icons',
-    'npm:build-bundled-css',
-    'npm:build-core-css'
+    'react:js',
+    // 'vanilla:js',
+    'shared:css',
+    'shared:copy-files',
+    'shared:copy-design-tokens',
+    'shared:copy-icons',
+    'vanilla:build-bundled-css',
+    'shared:build-core-css'
   )
 );
