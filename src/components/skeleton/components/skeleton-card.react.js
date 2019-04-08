@@ -1,10 +1,10 @@
 /* @flow */
 import * as React from 'react';
 
-import SkeletonPaper from './skeleton-paper';
-import SkeletonText from './skeleton-text';
-import SkeletonAvatar from './skeleton-avatar';
-import SpacerBox from './skeleton-spacer-box';
+import SkeletonPaper from './skeleton-paper.react';
+import SkeletonText from './skeleton-text.react';
+import SkeletonAvatar from './skeleton-avatar.react';
+import SpacerBox from './skeleton-spacer-box.react';
 
 type TProps = {
   children: React.Element<*>,

@@ -1,7 +1,7 @@
 /* @flow */
 import * as React from 'react';
 
-import SpacerBox from './skeleton-spacer-box';
+import SpacerBox from './skeleton-spacer-box.react';
 
 /**
  * Single row horizontal grid skeleton

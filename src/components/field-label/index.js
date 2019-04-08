@@ -1,2 +1,2 @@
 /* @flow */
-export {default} from './field-label';
+export {default} from './field-label.react';

@@ -1,2 +1,2 @@
 /* @flow */
-export {default} from './field-validations';
+export {default} from './field-validations.react';

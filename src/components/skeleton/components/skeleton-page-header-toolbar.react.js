@@ -2,7 +2,7 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 
-import SpacerBox from './skeleton-spacer-box';
+import SpacerBox from './skeleton-spacer-box.react';
 
 import {Box} from '../../layout';
 

@@ -1,2 +1,2 @@
 /* @flow */
-export {Box, Flex, Block, Inline, InlineFlex, A, UIBase} from './layout';
+export {Box, Flex, Block, Inline, InlineFlex, A, UIBase} from './layout.react';

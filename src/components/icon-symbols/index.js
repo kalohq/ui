@@ -1,2 +1,2 @@
 /* @flow */
-export {default} from './icon-symbols';
+export {default} from './icon-symbols.react';

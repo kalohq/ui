@@ -1,2 +1,2 @@
 /* @flow */
-export {default} from './callout';
+export {default} from './callout.react';

@@ -1,3 +1,3 @@
 /* @flow */
-export {default} from './select';
-export {default as Option} from './option';
+export {default} from './select.react';
+export {default as Option} from './option.react';

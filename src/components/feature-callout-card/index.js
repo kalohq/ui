@@ -1,2 +1,2 @@
 /* @flow */
-export {default} from './feature-callout-card';
+export {default} from './feature-callout-card.react';

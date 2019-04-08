@@ -1,2 +1,2 @@
 /* @flow */
-export {default} from './field';
+export {default} from './field.react';

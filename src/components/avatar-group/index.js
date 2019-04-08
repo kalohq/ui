@@ -1,2 +1,2 @@
 /* @flow */
-export {default} from './avatar-group';
+export {default} from './avatar-group.react';

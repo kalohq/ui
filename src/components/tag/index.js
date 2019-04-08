@@ -1,2 +1,2 @@
 /* @flow */
-export {default} from './tag';
+export {default} from './tag.react';

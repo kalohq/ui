@@ -1,2 +1,2 @@
 /* @flow */
-export {default} from './field-row';
+export {default} from './field-row.react';

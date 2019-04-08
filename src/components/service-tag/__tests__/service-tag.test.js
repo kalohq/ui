@@ -2,7 +2,7 @@
 import * as React from 'react';
 import {mount} from '../../../utils/test/enzyme';
 
-import ServiceTag from '../service-tag';
+import ServiceTag from '../';
 
 describe('ServiceTag', () => {
   const create = props => <ServiceTag {...props}>{props.children}</ServiceTag>;
