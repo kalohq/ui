@@ -2,12 +2,12 @@
 import * as React from 'react';
 import {mount} from '../../../utils/test/enzyme';
 
-import SkillTag from '../skill-tag';
+import ServiceTag from '../service-tag';
 
-describe('SkillTag', () => {
-  const create = props => <SkillTag {...props}>{props.children}</SkillTag>;
+describe('ServiceTag', () => {
+  const create = props => <ServiceTag {...props}>{props.children}</ServiceTag>;
 
-  it('should render a skill tag', () => {
+  it('should render a service tag', () => {
     const element = create({
       children: 'Food Photography',
     });
@@ -23,7 +23,7 @@ describe('SkillTag', () => {
     });
 
     const result = mount(element);
-    expect(result.render().hasClass('ui-skill-tag--removable')).toBe(true);
-    expect(result.find('.ui-skill-tag__remove').length).toBe(1);
+    expect(result.render().hasClass('ui-service-tag--removable')).toBe(true);
+    expect(result.find('.ui-service-tag__remove').length).toBe(1);
   });
 });
