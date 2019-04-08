@@ -7,7 +7,7 @@ import {ThemeProvider} from 'emotion-theming';
 
 import theme from '../../theme';
 import Input from '../../input';
-import Fieldset, {FieldsetHeader} from '../fieldset';
+import Fieldset, {FieldsetHeader} from '../fieldset.react';
 import Field from '../../field';
 
 const defaultProps = {

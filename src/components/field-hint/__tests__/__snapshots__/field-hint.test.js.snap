@@ -2,7 +2,7 @@
 
 exports[`FieldHint should render shallow component ok 1`] = `
 <span
-  className="ui-field-hint e1q9f2xp6 css-0"
+  className="ui-field-hint e1krcyn16 css-0"
   style={Object {}}
 />
 `;

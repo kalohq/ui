@@ -2,20 +2,20 @@
 
 exports[`Input should render shallow component ok 1`] = `
 <div
-  className="ui-field-row e1q9f2xp6 css-150a2en"
+  className="ui-field-row e1krcyn16 css-150a2en"
   style={Object {}}
 >
   <div
-    className="ui-field ui-field--legacy e1q9f2xp6 css-6smw74"
+    className="ui-field ui-field--legacy e1krcyn16 css-6smw74"
     onClick={undefined}
     style={Object {}}
   >
     <div
-      className="e1q9f2xp0 css-1dvaom5"
+      className="e1krcyn10 css-1dvaom5"
       style={Object {}}
     >
       <label
-        className="ui-field-label e1q9f2xp6 css-4or71o"
+        className="ui-field-label e1krcyn16 css-4or71o"
         htmlFor={undefined}
         style={Object {}}
         title={undefined}
@@ -46,16 +46,16 @@ exports[`Input should render shallow component ok 1`] = `
     </div>
   </div>
   <div
-    className="ui-field ui-field--legacy e1q9f2xp6 css-6smw74"
+    className="ui-field ui-field--legacy e1krcyn16 css-6smw74"
     onClick={undefined}
     style={Object {}}
   >
     <div
-      className="e1q9f2xp0 css-1dvaom5"
+      className="e1krcyn10 css-1dvaom5"
       style={Object {}}
     >
       <label
-        className="ui-field-label e1q9f2xp6 css-4or71o"
+        className="ui-field-label e1krcyn16 css-4or71o"
         htmlFor={undefined}
         style={Object {}}
         title={undefined}

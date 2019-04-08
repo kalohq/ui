@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 import {shallow} from 'enzyme';
-import Table from '../table';
+import Table from '../';
 
 describe('<Table />', () => {
   it('should render children', () => {

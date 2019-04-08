@@ -1,2 +1,2 @@
 /* @flow */
-export {default} from './theme.react';
+export {default} from './theme';

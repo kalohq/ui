@@ -4,7 +4,7 @@ import expect from 'expect';
 import {shallow} from 'enzyme';
 import {testComponent} from 'utils/test/react';
 
-import Form from '../form';
+import Form from '../';
 
 describe('Form', () => {
   const create = testComponent(Form, () => ({

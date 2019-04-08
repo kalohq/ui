@@ -4,7 +4,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import {ThemeProvider} from 'emotion-theming';
 
-import Field from '../field';
+import Field from '../field.react';
 import Input from '../../input';
 import theme from '../../theme';
 

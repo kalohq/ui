@@ -1,8 +1,8 @@
 /* eslint-env jest */
 import * as React from 'react';
-import {mount} from '../../../utils/test/enzyme';
+import {mount} from 'utils/test/enzyme';
 
-import Icon from '../icon';
+import Icon from '../icon.react';
 
 describe('Icon', () => {
   const create = props => <Icon {...props}>{props.children}</Icon>;

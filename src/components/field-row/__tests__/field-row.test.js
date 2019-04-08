@@ -6,7 +6,7 @@ import {ThemeProvider} from 'emotion-theming';
 
 import theme from '../../theme';
 import Input from '../../input';
-import FieldRow, {DEFAULT_SPACING} from '../field-row';
+import FieldRow, {DEFAULT_SPACING} from '../field-row.react';
 import Field from '../../field';
 
 describe('Input', () => {

@@ -1,10 +1,10 @@
 /* eslint-env jest */
 import * as React from 'react';
 
-import {shallow, mount} from '../../../utils/test/enzyme';
+import {shallow, mount} from 'utils/test/enzyme';
 
 import Avatar from 'components/avatar';
-import AvatarGroup from 'components/avatar-group';
+import AvatarGroup from '../avatar-group.react';
 
 import styles from '../avatar-group.css';
 
