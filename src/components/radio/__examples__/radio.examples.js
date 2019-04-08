@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Radio from '../radio';
+import Radio from '../';
 
 class DemoRadio extends React.PureComponent {
   constructor(props) {

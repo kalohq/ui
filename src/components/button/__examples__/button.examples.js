@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button from '../button';
+import Button from '../';
 import ButtonGroup from '../../button-group';
 import {ThemeProvider} from 'emotion-theming';
 

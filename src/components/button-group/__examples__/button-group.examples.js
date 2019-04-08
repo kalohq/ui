@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ButtonGroup from '../button-group';
+import ButtonGroup from '../';
 import Button from '../../button';
 import Checkbox from '../../checkbox';
 

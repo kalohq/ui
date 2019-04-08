@@ -2,7 +2,7 @@
 import React from 'react';
 
 import Avatar from '../../avatar';
-import AvatarGroup from '../avatar-group';
+import AvatarGroup from '../';
 
 export const examples = [
   {

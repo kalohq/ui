@@ -1,6 +1,6 @@
 import React from 'react';
 
-import FieldRow from '../field-row';
+import FieldRow from '../';
 import Field from '../../field';
 import Input from '../../input';
 

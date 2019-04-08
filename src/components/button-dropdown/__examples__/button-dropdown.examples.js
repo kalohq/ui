@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ButtonDropdown from '../button-dropdown';
+import ButtonDropdown from '../';
 import ButtonGroup from '../../button-group';
 import Button from '../../button';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Box, InlineFlex} from '../layout';
+import {Box, InlineFlex} from '../';
 
 export const examples = [
   {

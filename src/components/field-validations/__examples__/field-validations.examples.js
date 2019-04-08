@@ -1,6 +1,6 @@
 import React from 'react';
 
-import FieldValidations from '../field-validations';
+import FieldValidations from '../';
 
 export const examples = [
   {

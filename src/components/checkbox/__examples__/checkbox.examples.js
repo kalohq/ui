@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Checkbox from '../checkbox';
+import Checkbox from '../';
 import Text from '../../text';
 
 class DemoCheckbox extends React.PureComponent {
