@@ -13,7 +13,7 @@
 }
 
 .ui-service-tag__inner {
-  max-width: 120px;
+  max-width: 220px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
