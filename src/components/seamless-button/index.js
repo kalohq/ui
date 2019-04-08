@@ -1,2 +1,2 @@
 /* @flow */
-export {default} from './seamless-button';
+export {default} from './seamless-button.react';

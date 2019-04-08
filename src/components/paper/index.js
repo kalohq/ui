@@ -1,3 +1,3 @@
 /* @flow */
-export {default} from './paper';
-export {PaperToolbar} from './components/paper-toolbar';
+export {default} from './paper.react';
+export {PaperToolbar} from './components/paper-toolbar.react';

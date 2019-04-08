@@ -1,2 +1,2 @@
 /* @flow */
-export {default} from './heading';
+export {default} from './heading.react';

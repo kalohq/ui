@@ -1,2 +1,2 @@
 /* @flow */
-export {default} from './service-tag';
+export {default} from './service-tag.react';

@@ -1,8 +1,8 @@
 /* @flow */
 import * as React from 'react';
-import SkeletonShape from './skeleton-shape';
+import SkeletonShape from './skeleton-shape.react';
 
-import {AVATAR_SIZE_MULTIPLIER} from '../skeleton';
+import {AVATAR_SIZE_MULTIPLIER} from '../skeleton.react';
 /**
  * Avatar Skeleton
  */

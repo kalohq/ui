@@ -1,8 +1,8 @@
 /* @flow */
 import * as React from 'react';
 
-import SkeletonShape from './skeleton-shape';
-import {TEXT_SIZE_MULTIPLIER, BUTTON_HEIGHT} from '../skeleton';
+import SkeletonShape from './skeleton-shape.react';
+import {TEXT_SIZE_MULTIPLIER, BUTTON_HEIGHT} from '../skeleton.react';
 
 /**
  * Button Skeleton

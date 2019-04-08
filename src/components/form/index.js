@@ -1,2 +1,2 @@
 /* @flow */
-export {default} from './form';
+export {default} from './form.react';

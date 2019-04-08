@@ -1,1 +1,1 @@
-export {default} from './sticky';
+export {default} from './sticky.react';

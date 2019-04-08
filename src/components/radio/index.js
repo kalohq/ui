@@ -1,2 +1,2 @@
 /* @flow */
-export {default} from './radio';
+export {default} from './radio.react';

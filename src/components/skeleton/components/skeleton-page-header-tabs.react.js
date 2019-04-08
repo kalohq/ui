@@ -2,7 +2,7 @@
 import * as React from 'react';
 
 import {Box} from '../../layout';
-import SpacerBox from './skeleton-spacer-box';
+import SpacerBox from './skeleton-spacer-box.react';
 
 /** Skeleton page header heading */
 

@@ -1,2 +1,2 @@
 /* @flow */
-export {Grid, Row, Column} from './grid';
+export {Grid, Row, Column} from './grid.react';

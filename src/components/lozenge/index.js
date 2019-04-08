@@ -1,2 +1,2 @@
 /* @flow */
-export {default} from './lozenge';
+export {default} from './lozenge.react';

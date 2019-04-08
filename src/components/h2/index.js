@@ -1,2 +1,2 @@
 /* @flow */
-export {default} from './h2';
+export {default} from './h2.react';
