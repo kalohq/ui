@@ -68,7 +68,7 @@ export {default as Sticky} from './sticky';
 export {default as StarRating} from './star-rating';
 export {default as Lozenge} from './lozenge';
 export {default as Tag} from './tag';
-export {default as SkillTag} from './skill-tag';
+export {default as ServiceTag} from './service-tag';
 export {default as TagGroup} from './tag-group';
 export {default as Avatar} from './avatar';
 export {default as AvatarGroup} from './avatar-group';

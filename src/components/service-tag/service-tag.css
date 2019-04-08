@@ -1,4 +1,4 @@
-.ui-skill-tag {
+.ui-service-tag {
   display: inline-flex;
   background-color: var(--white);
   border: 1px solid var(--navy300);
@@ -12,18 +12,18 @@
   flex-grow: 0;
 }
 
-.ui-skill-tag__inner {
+.ui-service-tag__inner {
   max-width: 120px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.ui-skill-tag--removable {
+.ui-service-tag--removable {
   padding: 0.4rem 0.8rem 0.4rem 1.6rem;
 }
 
-.ui-skill-tag__remove {
+.ui-service-tag__remove {
   appearance: none;
   background-color: transparent;
   width: 16px;
@@ -36,6 +36,6 @@
   border: 1px solid transparent;
 }
 
-.ui-skill-tag__remove:active {
+.ui-service-tag__remove:active {
   box-shadow: none;
 }
