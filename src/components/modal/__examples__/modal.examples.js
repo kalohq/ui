@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Modal from '../modal';
+import Modal from '../';
 import Button from '../../button';
 import ButtonGroup from '../../button-group';
 import Text from '../../text';

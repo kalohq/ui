@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 
-import FieldLabel from '../field-label';
+import FieldLabel from '../';
 
 export const examples = [
   {

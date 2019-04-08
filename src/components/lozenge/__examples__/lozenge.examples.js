@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 
-import Lozenge from '../lozenge';
+import Lozenge from '../';
 
 const STATUS_MAP = {
   red: 'Declined',

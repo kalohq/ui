@@ -2,7 +2,7 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-import {Grid, Row, Column} from '../grid';
+import {Grid, Row, Column} from '../';
 import H3 from '../../h3';
 import Text from '../../text';
 import Input from '../../input';

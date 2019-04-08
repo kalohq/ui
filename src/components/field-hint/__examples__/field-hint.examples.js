@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 
-import FieldHint from '../field-hint';
+import FieldHint from '../';
 
 export const examples = [
   {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ToggleButton from '../toggle-button';
+import ToggleButton from '../';
 
 class ToggleButtonDemo extends React.Component {
   constructor(props) {

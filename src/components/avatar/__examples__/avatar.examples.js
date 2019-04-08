@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 
-import Avatar from '../avatar';
+import Avatar from '../';
 
 export const examples = [
   {

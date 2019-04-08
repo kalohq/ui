@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 
-import Icon from '../icon';
+import Icon from '../';
 
 export const examples = [
   {

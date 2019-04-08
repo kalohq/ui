@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SeamlessButton from '../seamless-button';
+import SeamlessButton from '../';
 
 export const examples = [
   {

@@ -2,7 +2,7 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-import Tag from '../tag';
+import Tag from '../';
 
 const MockAvatar = styled.div`
   width: 16px;

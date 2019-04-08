@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Paper from '../paper';
+import Paper from '../';
 
 export const examples = [
   {

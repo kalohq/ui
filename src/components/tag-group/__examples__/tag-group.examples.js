@@ -2,7 +2,7 @@
 import React from 'react';
 
 import Tag from '../../tag';
-import TagGroup from '../tag-group';
+import TagGroup from '../';
 
 export const examples = [
   {

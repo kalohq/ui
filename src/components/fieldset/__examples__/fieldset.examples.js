@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 
-import Fieldset from '../fieldset';
+import Fieldset from '../';
 
 import Field from '../../field';
 import Input from '../../input';
