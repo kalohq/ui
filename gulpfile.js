@@ -120,7 +120,7 @@ gulp.task(
   'build-npm-package',
   gulp.series(
     'react:js',
-    // 'vanilla:js',
+    'vanilla:js',
     'shared:css',
     'shared:copy-files',
     'shared:copy-design-tokens',
