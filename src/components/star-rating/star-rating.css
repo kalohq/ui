@@ -5,7 +5,6 @@
 
 .star {
   position: relative;
-  padding-right: 5px;
   overflow: hidden;
 }
 
@@ -16,17 +15,18 @@
 
 .background {
   display: flex;
-  color: var(--grey400);
+  color: var(--grey300);
 }
 
 .foreground {
   display: flex;
-  color: var(--grey400);
+  color: var(--grey300);
 }
 
 .foreground.highlight {
-  color: var(--green500);
+  color: var(--purple500);
 }
+
 .half {
   width: 50%;
   overflow: hidden;

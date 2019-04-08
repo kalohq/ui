@@ -1,5 +1,5 @@
 /* @flow */
-import React, {PureComponent} from 'react';
+import React from 'react';
 import {range} from 'lodash';
 import cx from 'classnames';
 
@@ -11,50 +11,52 @@ import styles from './star-rating.css';
 type TProps = {
   score: Number,
   component?: string,
+  className?: string | Object,
 };
 
-export default class StarRating extends PureComponent<TProps> {
-  render() {
-    const {score = 0, ...otherProps} = this.props;
+export default function StarRating(props: TProps) {
+  const {score = 0, className, ...otherProps} = props;
 
-    return (
-      <UIBase
-        className={cx({
+  return (
+    <UIBase
+      className={cx(
+        {
           [styles.root]: true,
-        })}
-        {...otherProps}
-      >
-        {range(1, 6).map(star => {
-          const isLit = Number(score) >= star;
-          const isHalf = Number(score) < star && Number(score) > star - 1;
-          return (
-            <div
-              key={star}
-              style={{width: 20, height: 20}}
-              className={styles.star}
+        },
+        className
+      )}
+      {...otherProps}
+    >
+      {range(1, 6).map(star => {
+        const isLit = Number(score) >= star;
+        const isHalf = Number(score) < star && Number(score) > star - 1;
+        return (
+          <div
+            key={star}
+            style={{width: 20, height: 20}}
+            className={styles.star}
+          >
+            <span
+              className={cx({
+                [styles.icon]: true,
+                [styles.background]: true,
+              })}
             >
-              <span
-                className={cx({
-                  [styles.icon]: true,
-                  [styles.background]: true,
-                })}
-              >
-                <Icon size={20}>star</Icon>
-              </span>
-              <span
-                className={cx({
-                  [styles.icon]: true,
-                  [styles.foreground]: true,
-                  [styles.highlight]: score ? isLit || isHalf : false,
-                  [styles.half]: score ? isHalf : false,
-                })}
-              >
-                <Icon size={20}>star</Icon>
-              </span>
-            </div>
-          );
-        })}
-      </UIBase>
-    );
-  }
+              <Icon size={20}>star</Icon>
+            </span>
+            <span
+              className={cx({
+                [styles.icon]: true,
+                [styles.foreground]: true,
+                [styles.highlight]: score ? isLit || isHalf : false,
+                [styles.half]: score ? isHalf : false,
+              })}
+            >
+              <Icon size={20}>star</Icon>
+            </span>
+          </div>
+        );
+      })}
+    </UIBase>
+  );
 }
