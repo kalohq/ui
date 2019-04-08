@@ -75,7 +75,7 @@ const generate = () => {
           'style={{display: "none"}}'
         );
       return fs.writeFileSync(
-        path.join(OUT_DIRECTORY, 'icon-symbols.js'),
+        path.join(OUT_DIRECTORY, 'icon-symbols.react.js'),
         template(formattedData)
       );
     });
