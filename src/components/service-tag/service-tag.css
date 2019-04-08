@@ -1,13 +1,13 @@
 .ui-service-tag {
   display: inline-flex;
   background-color: var(--white);
-  border: 1px solid var(--navy300);
-  color: var(--navy900);
+  border: 1px solid var(--grey400);
+  color: var(--navy800);
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.6rem;
-  padding: 0.4rem 1.6rem;
-  border-radius: 12px;
+  padding: 0.6rem 1.6rem;
+  border-radius: 30px;
   white-space: nowrap;
   flex-grow: 0;
 }
@@ -20,7 +20,7 @@
 }
 
 .ui-service-tag--removable {
-  padding: 0.4rem 0.8rem 0.4rem 1.6rem;
+  1padding: 0.6rem 1.2rem 0.6rem 1.8rem;
 }
 
 .ui-service-tag__remove {
