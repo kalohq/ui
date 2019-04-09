@@ -1,19 +1,25 @@
 /* @flow */
 import * as React from 'react';
-import styled from 'react-emotion';
+import cx from 'classnames';
 
-import {Box} from '../../layout';
+import {UIBase} from '../../layout';
 
-const StyledPaperToolbar = styled(Box)`
-  border-bottom: 1px solid ${props => props.theme.colors.grey100};
-`;
+import styles from './paper-toolbar.css';
 
-/**
- * @summary A basic toolbar container to display at the top of paper
- */
+type TProps = {
+  children?: React.Node,
+  className?: string | Object,
+};
 
-export function PaperToolbar(props: {children?: React.Node}) {
-  const {children} = props;
+export function PaperToolbar(props: TProps) {
+  const {children, className} = props;
 
-  return <StyledPaperToolbar padding={[0, 25]}>{children}</StyledPaperToolbar>;
+  const _classNames = cx(
+    {
+      [styles['ui-paper-toolbar']]: true,
+    },
+    className
+  );
+
+  return <UIBase className={_classNames}>{children}</UIBase>;
 }
