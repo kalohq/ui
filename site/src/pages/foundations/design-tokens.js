@@ -76,21 +76,25 @@ export default () => (
                 <strong>{tokenGroup}</strong>
               </td>
             </tr>
-            {Object.keys(tokens[tokenGroup]).map(token => (
-              <tr key={token}>
-                <td>
-                  <pre>{token}</pre>
-                </td>
-                <td>
-                  {isString(tokens[tokenGroup][token]) &&
-                  (tokens[tokenGroup][token].includes('rgb') ||
-                    tokens[tokenGroup][token].includes('linear-gradient')) && (
-                    <TokenColor background={tokens[tokenGroup][token]} />
-                  )}
-                  {tokens[tokenGroup][token]}
-                </td>
-              </tr>
-            ))}
+            {Object.keys(tokens[tokenGroup])
+              .sort()
+              .map(token => (
+                <tr key={token}>
+                  <td>
+                    <pre>{token}</pre>
+                  </td>
+                  <td>
+                    {isString(tokens[tokenGroup][token]) &&
+                      (tokens[tokenGroup][token].includes('#') ||
+                        tokens[tokenGroup][token].includes(
+                          'linear-gradient'
+                        )) && (
+                        <TokenColor background={tokens[tokenGroup][token]} />
+                      )}
+                    {tokens[tokenGroup][token]}
+                  </td>
+                </tr>
+              ))}
           </tbody>
         ))}
       </table>
