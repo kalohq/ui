@@ -26,4 +26,12 @@ props: &GRADIENTS
     value: '#211660'
   GRADIENT_PURPLE:
     value: linear-gradient(135deg, {!GRADIENT_PURPLE_STOP_1} 0%, {!GRADIENT_PURPLE_STOP_2} 100%)
+  GRADIENT_BLUE_TWO_STOP_1:
+    type: color
+    value: '#0d7ef2'
+  GRADIENT_BLUE_TWO_STOP_2:
+    type: color
+    value: '#49a1fb'
+  GRADIENT_BLUE_TWO:
+    value: linear-gradient(135deg, {!GRADIENT_BLUE_TWO_STOP_1} 0%, {!GRADIENT_BLUE_TWO_STOP_2} 100%)
 aliases: *GRADIENTS

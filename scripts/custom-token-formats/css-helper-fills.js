@@ -33,4 +33,7 @@ module.exports = result =>
     .fill-gradient-purple {
       fill: url(#gradient-purple);
     }
+    .fill-gradient-blue-two {
+      fill: url(#gradient-blue-two);
+    }
   `.replace(/,/g, '');
