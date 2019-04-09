@@ -31,6 +31,8 @@ class DemoCheckbox extends React.PureComponent {
   }
 }
 
+DemoCheckbox.displayName = 'Checkbox';
+
 export const examples = [
   {
     title: 'Checkbox',

@@ -30,6 +30,8 @@ class DemoRadio extends React.PureComponent {
   }
 }
 
+DemoRadio.displayName = 'Radio';
+
 export const examples = [
   {
     title: 'Radio',
