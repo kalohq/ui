@@ -6,7 +6,7 @@ import Link from 'gatsby-link';
 const StyledBar = styled.div`
   width: 100%;
   height: 58px;
-  background-color: ${props => props.theme.colors.navy900};
+  background: ${props => props.theme.gradients.gradientBlueTwo};
   position: fixed;
   top: 0;
   left: 0;
