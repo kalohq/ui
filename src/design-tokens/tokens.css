@@ -96,6 +96,9 @@
   --gradient-purple: linear-gradient(135deg, #E62888 0%, #211660 100%);
   --gradient-pink-stop-1: #e83f94;
   --gradient-pink-stop-2: #f54e5e;
+  --gradient-blue-two: linear-gradient(135deg, #0d7ef2 0%, #49a1fb 100%);
+  --gradient-blue-two-stop-1: #0d7ef2;
+  --gradient-blue-two-stop-2: #49a1fb;
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
