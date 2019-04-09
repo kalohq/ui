@@ -12,6 +12,7 @@ export default class UIImageInput {
   constructor(attrs) {
     /** This class only works if the browser has FileReader enabled.
      * Lets return early if the browser doesnt support it. */
+    if (!window) return false;
     if (!window.FileReader) return false;
 
     /** The root element */
