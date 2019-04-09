@@ -1,0 +1,33 @@
+.ui-jumbo-btn {
+  padding: 2.4rem 2.8rem;
+  background-color: var(--white);
+  border: 1px solid var(--grey200);
+  color: var(--navy900);
+  box-shadow: 0 2px 4px 0 rgba(232, 232, 232, 0.5);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &:hover {
+    border-color: var(--grey300);
+    background-color: var(--grey000);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px var(--grey100);
+  }
+
+  &:active,
+  &.ui-jumbo-btn--active {
+    background-color: var(--grey000);
+    box-shadow: none;
+  }
+}
+
+.ui-jumbo-btn__icon {
+  margin-right: 2rem;
+}
