@@ -1,32 +1,41 @@
 /* @flow */
 import React from 'react';
-import styled from 'react-emotion';
+
+import theme from '../../theme';
 
 import {Grid, Row, Column} from '../';
 import H3 from '../../h3';
 import Text from '../../text';
 import Input from '../../input';
 
-const DemoSlab = styled.div`
-  width: 100%;
-  background-color: #fff;
-  padding: 16px;
-  color: ${props => props.theme.colors.navy500};
-  border: 1px solid ${props => props.theme.colors.grey400};
-  font-size: 14px;
-  display: block;
-`;
+const DemoSlab = ({children}) => (
+  <div
+    style={{
+      width: '100%',
+      backgroundColor: theme.colors.white,
+      padding: '16px',
+      color: theme.colors.navy500,
+      border: `1px solid ${theme.colors.grey400}`,
+      fontSize: '14px',
+      display: 'block',
+    }}
+  >
+    {children}
+  </div>
+);
 
-DemoSlab.displayName = 'DemoSlab';
-
-const DemoCard = styled.div`
-  width: 100%;
-  background-color: #fff;
-  border: 1px solid ${props => props.theme.colors.grey400};
-  padding: 16px 16px;
-`;
-
-DemoCard.displayName = 'DemoCard';
+const DemoCard = ({children}) => (
+  <div
+    style={{
+      width: '100%',
+      backgroundColor: theme.colors.white,
+      border: `1px solid ${theme.colors.grey400}`,
+      padding: '16px',
+    }}
+  >
+    {children}
+  </div>
+);
 
 export const examples = [
   {

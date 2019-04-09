@@ -1,0 +1,10 @@
+.ui-paper-toolbar {
+  display: flex;
+  border-bottom: 1px solid var(--grey100);
+  position: relative;
+  flex-direction: column;
+  align-items: stretch;
+  flex-shrink: 0;
+  align-content: flex-start;
+  padding: 0 2.4rem;
+}

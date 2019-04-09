@@ -1,18 +1,23 @@
 /* @flow */
 import React from 'react';
-import styled from 'react-emotion';
 
 import Tag from '../';
 
-const MockAvatar = styled.div`
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-image: url('https://randomuser.me/api/portraits/women/46.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-`;
+const MockAvatar = ({className}) => (
+  <div
+    className={className}
+    style={{
+      width: 16,
+      height: 16,
+      borderRadius: '50%',
+      backgroundImage:
+        "url('https://randomuser.me/api/portraits/women/46.jpg')",
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center center',
+    }}
+  />
+);
 
 export const examples = [
   {
