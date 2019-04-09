@@ -12,6 +12,7 @@ type TProps = {
   children?: string,
   component?: string,
   onClick?: Function,
+  active?: boolean,
 };
 
 export default function JumboButton(props: TProps) {
