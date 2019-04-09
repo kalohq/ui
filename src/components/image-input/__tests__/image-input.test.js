@@ -1,5 +1,9 @@
 /* eslint-env jest */
+import React from 'react';
+import ImageInput from '../image-input.react';
 import UIImageInput, {FILEREADER_ENABLED_CLASS} from '../image-input';
+
+import {shallow} from 'utils/test/enzyme';
 
 describe('ImageInput (web)', () => {
   beforeEach(() => {
@@ -65,5 +69,16 @@ describe('ImageInput (web)', () => {
 
     expect(instance.removeThumbnailsElement).toHaveBeenCalled();
     expect(instance.inputElement.value).toBe('');
+  });
+});
+
+describe('ImageInput (React)', () => {
+  test('should mount', () => {
+    const create = <ImageInput />;
+
+    const result = shallow(create);
+
+    const wrapper = result.find('.ui-image-input');
+    expect(wrapper.length).toBe(1);
   });
 });
