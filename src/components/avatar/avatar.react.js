@@ -25,7 +25,7 @@ type TProps = {
   /** A URL to the avatar */
   src?: string,
   /** The avatar size */
-  size?: 'small' | 'medium' | 'large',
+  size?: 'small' | 'medium' | 'large' | 'extra-large' | 'extra-extra-large',
   /** Two initials to be displayed as a fallback if no src is set */
   initials?: string,
   /** A consistent resource (an email or name) to be used as a hash to generate the fallback color */
