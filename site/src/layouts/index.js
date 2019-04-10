@@ -232,6 +232,8 @@ export const pageQuery = graphql`
         version
         title
         githubRepoLink
+        buildPreviewPullRequestId
+        buildPreviewCommitRef
       }
     }
     allMarkdownRemark(sort: {fields: [fields___componentName], order: ASC}) {

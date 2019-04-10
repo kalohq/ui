@@ -17,12 +17,17 @@ const StyledLogo = styled.div`
   color: white;
   font-size: 14px;
   font-weight: 500;
+  display: flex;
 
   a {
     color: inherit;
     display: flex;
     align-items: center;
     text-decoration: none;
+  }
+
+  a + a {
+    margin-left: 1.6rem;
   }
 `;
 
@@ -101,7 +106,13 @@ const BrandLogo = () => (
 );
 
 export default function GlobalNavigation({projectMeta}) {
-  const {title, version, githubRepoLink} = projectMeta;
+  const {
+    title,
+    version,
+    githubRepoLink,
+    buildPreviewPullRequestId: pr,
+    buildPreviewCommitRef: commit,
+  } = projectMeta;
   return (
     <StyledBar>
       <Inner>
@@ -110,6 +121,10 @@ export default function GlobalNavigation({projectMeta}) {
             <BrandLogo />
             {title} ({version})
           </Link>
+          {pr && <a href={`${githubRepoLink}/pull/${pr}`}>PR: {pr}</a>}
+          {pr && commit && (
+            <a href={`${githubRepoLink}/commit/${commit}`}>Commit: {commit}</a>
+          )}
         </StyledLogo>
         <StyledNav>
           <NavItem href={githubRepoLink}>GitHub Repo</NavItem>
