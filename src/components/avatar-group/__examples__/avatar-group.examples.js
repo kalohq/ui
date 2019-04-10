@@ -17,7 +17,7 @@ export const examples = [
     html: () => (
       <div className="ui-avatar-group">
         <span
-          className="ui-avatar ui-avatar--medium ui-avatar--grouped ui-avatar--fallback-orange"
+          className="ui-avatar ui-avatar--medium ui-avatar--fallback-orange"
           data-fallback-initials="AC"
           aria-label="Mary Freelancer"
           role="img"
@@ -25,7 +25,7 @@ export const examples = [
           <span className="ui-avatar__avatar" />
         </span>
         <span
-          className="ui-avatar ui-avatar--medium ui-avatar--grouped ui-avatar--fallback-pink"
+          className="ui-avatar ui-avatar--medium ui-avatar--fallback-pink"
           data-fallback-initials="PJ"
           aria-label="Mary Freelancer"
           role="img"
@@ -33,7 +33,7 @@ export const examples = [
           <span className="ui-avatar__avatar" />
         </span>
         <span
-          className="ui-avatar ui-avatar--medium ui-avatar--grouped ui-avatar--fallback-green"
+          className="ui-avatar ui-avatar--medium ui-avatar--fallback-green"
           data-fallback-initials="CL"
           aria-label="Mary Freelancer"
           role="img"
@@ -78,7 +78,7 @@ export const examples = [
     html: () => (
       <div className="ui-avatar-group">
         <span
-          className="ui-avatar ui-avatar--medium ui-avatar--grouped ui-avatar--fallback-orange"
+          className="ui-avatar ui-avatar--medium ui-avatar--fallback-orange"
           data-fallback-initials="AC"
           aria-label="Mary Freelancer"
           role="img"
@@ -86,7 +86,7 @@ export const examples = [
           <span className="ui-avatar__avatar" />
         </span>
         <span
-          className="ui-avatar ui-avatar--medium ui-avatar--grouped ui-avatar--fallback-pink"
+          className="ui-avatar ui-avatar--medium ui-avatar--fallback-pink"
           data-fallback-initials="PJ"
           aria-label="Mary Freelancer"
           role="img"
@@ -94,7 +94,7 @@ export const examples = [
           <span className="ui-avatar__avatar" />
         </span>
         <span
-          className="ui-avatar ui-avatar--medium ui-avatar--grouped ui-avatar--fallback-green"
+          className="ui-avatar ui-avatar--medium ui-avatar--fallback-green"
           data-fallback-initials="CL"
           aria-label="Mary Freelancer"
           role="img"
@@ -102,7 +102,7 @@ export const examples = [
           <span className="ui-avatar__avatar" />
         </span>
         <span
-          className="ui-avatar ui-avatar--medium ui-avatar--grouped ui-avatar--fallback-blue"
+          className="ui-avatar ui-avatar--medium ui-avatar--fallback-blue"
           data-fallback-initials="PJ"
           aria-label="Mary Freelancer"
           role="img"
@@ -110,7 +110,7 @@ export const examples = [
           <span className="ui-avatar__avatar" />
         </span>
         <span
-          className="ui-avatar ui-avatar--medium ui-avatar--grouped ui-avatar--fallback-orange"
+          className="ui-avatar ui-avatar--medium ui-avatar--fallback-orange"
           data-fallback-initials="MF"
           aria-label="Mary Freelancer"
           role="img"
