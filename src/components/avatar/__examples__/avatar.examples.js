@@ -30,39 +30,38 @@ export const examples = [
     title: 'Avatar sizes',
     render: () => (
       <span>
-        <Avatar
-          src="https://randomuser.me/api/portraits/women/21.jpg"
-          size="small"
-        />
-        <Avatar
-          src="https://randomuser.me/api/portraits/women/21.jpg"
-          size="medium"
-        />
-        <Avatar
-          src="https://randomuser.me/api/portraits/women/21.jpg"
-          size="large"
-        />
+        {['small', 'medium', 'large', 'extra-large', 'extra-extra-large'].map(
+          size => (
+            <Avatar
+              key={size}
+              src="https://randomuser.me/api/portraits/women/21.jpg"
+              size={size}
+            />
+          )
+        )}
       </span>
     ),
     html: () => (
       <span>
-        {['small', 'medium', 'large'].map(size => (
-          <span
-            key={size}
-            className={`ui-avatar ui-avatar--${size} ui-avatar--fallback-orange`}
-            data-fallback-initials="MF"
-            aria-label="Mary Freelancer"
-            role="img"
-          >
+        {['small', 'medium', 'large', 'extra-large', 'extra-extra-large'].map(
+          size => (
             <span
-              className="ui-avatar__avatar"
-              style={{
-                backgroundImage:
-                  'url(https://randomuser.me/api/portraits/women/21.jpg)',
-              }}
-            />
-          </span>
-        ))}
+              key={size}
+              className={`ui-avatar ui-avatar--${size} ui-avatar--fallback-orange`}
+              data-fallback-initials="MF"
+              aria-label="Mary Freelancer"
+              role="img"
+            >
+              <span
+                className="ui-avatar__avatar"
+                style={{
+                  backgroundImage:
+                    'url(https://randomuser.me/api/portraits/women/21.jpg)',
+                }}
+              />
+            </span>
+          )
+        )}
       </span>
     ),
   },
