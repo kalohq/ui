@@ -92,11 +92,22 @@ const DocumentationContent = ({
   ...otherProps
 }) => (
   <div style={{paddingTop: 62, width: '100%'}} {...otherProps}>
-    <Helmet
-      title={
-        pageTitle ? `${pageTitle} - Kalo Design System` : 'Kalo Design System'
-      }
-    >
+    <Helmet title={pageTitle ? `${pageTitle} - Kalo UI` : 'Kalo UI'}>
+      <meta
+        property="og:title"
+        content={pageTitle ? `${pageTitle} - Kalo UI` : 'Kalo UI'}
+      />
+      <meta property="og:description" content={pageDescription} />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content="https://kalohq.com/images/card.png" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:creator" content="@kalohq" />
+      <meta
+        name="twitter:title"
+        content={pageTitle ? `${pageTitle} - Kalo UI` : 'Kalo UI'}
+      />
+      <meta name="twitter:description" content={pageDescription} />
+      <meta name="twitter:image" content="https://kalohq.com/images/card.png" />
       <meta name="description" content={pageDescription} />
     </Helmet>
     {raw ? (

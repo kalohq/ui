@@ -5,6 +5,8 @@ module.exports = {
   siteMetadata: {
     title: 'Kalo UI Kit',
     version: uiVersion,
+    buildPreviewPullRequestId: process.env.REVIEW_ID, // Netlify
+    buildPreviewCommitRef: process.env.COMMIT_REF, // Netlify
     githubRepoLink: 'https://github.com/kalohq/ui',
   },
   plugins: [
