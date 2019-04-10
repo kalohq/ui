@@ -14,6 +14,11 @@ export default () => (
       <stop offset="0%" stopColor="#e62888" />
       <stop offset="100%" stopColor="#211660" />
     </linearGradient>
+
+    <linearGradient id="gradient-blue-two">
+      <stop offset="0%" stopColor="#0d7ef2" />
+      <stop offset="100%" stopColor="#49a1fb" />
+    </linearGradient>
   </defs>
 </svg>
 
