@@ -5,7 +5,7 @@ import cx from 'classnames';
 import {UIBase} from '../layout';
 import Icon from '../icon';
 
-import styles from './seamless-button.css';
+import styles from './seamless-button.module.css';
 
 /**
  * A thing which doesn’t look like a button but makes things happen when you

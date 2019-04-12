@@ -5,7 +5,7 @@ import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 import Sticky from '../sticky';
 
-import styles from './drop-menu.css';
+import styles from './drop-menu.module.css';
 
 /**
  * Generic open/close popup menu

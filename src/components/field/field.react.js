@@ -8,7 +8,7 @@ import FieldHint from '../field-hint';
 import FieldLabel from '../field-label';
 import FieldValidations from '../field-validations';
 
-import coreStyles from './field.css';
+import coreStyles from './field.module.css';
 
 /**
  * Basic form field container component

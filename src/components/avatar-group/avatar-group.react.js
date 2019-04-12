@@ -2,8 +2,8 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import styles from './avatar-group.css';
-import avatarStyles from '../avatar/avatar.css';
+import styles from './avatar-group.module.css';
+import avatarStyles from '../avatar/avatar.module.css';
 
 const AvatarGroup = props => {
   const {children} = props;

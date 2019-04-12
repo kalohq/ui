@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 import {UIBase} from '../layout';
 
-import styles from './lozenge.css';
+import styles from './lozenge.module.css';
 
 const Lozenge = props => {
   const {variant = 'blue', children, className, ...otherProps} = props;

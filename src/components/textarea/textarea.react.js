@@ -9,7 +9,7 @@ import {UIBase} from '../layout';
 import {removeNode} from '../../utils/dom';
 import {parseStyleProps} from '../../utils/style';
 
-import styles from './textarea.css';
+import styles from './textarea.module.css';
 
 /**
  * Escape any html markup from user input values to ensure correct

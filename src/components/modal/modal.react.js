@@ -6,7 +6,7 @@ import {HotKeys} from 'react-hotkeys';
 import Heading from '../heading';
 import SeamlessButton from '../seamless-button';
 
-import styles from './modal.css';
+import styles from './modal.module.css';
 
 export default class Modal extends PureComponent {
   static propTypes = {

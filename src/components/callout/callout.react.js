@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 import {UIBase} from '../layout';
 
-import styles from './callout.css';
+import styles from './callout.module.css';
 
 const Callout = props => {
   const {children, variant = 'blue', className, ...otherProps} = props;

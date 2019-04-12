@@ -7,7 +7,7 @@ import Icon from '../icon';
 import {UIBase} from '../layout';
 import colors from '../../design-tokens/tokens';
 
-import styles from './star-rating.css';
+import styles from './star-rating.module.css';
 
 const DEFAULT_COLOR = 'coral';
 

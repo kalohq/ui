@@ -5,7 +5,7 @@ import cx from 'classnames';
 import {UIBase} from '../layout';
 import Text from '../text';
 
-import styles from './tag-group.css';
+import styles from './tag-group.module.css';
 
 const TagGroup = props => {
   const {children, limit, showOverflow, className, ...otherProps} = props;

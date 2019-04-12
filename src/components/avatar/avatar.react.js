@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 import {UIBase} from '../layout';
 
-import styles from './avatar.css';
+import styles from './avatar.module.css';
 
 const FALLBACK_COLORS = ['blue', 'orange', 'green', 'pink', 'navy'];
 

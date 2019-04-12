@@ -6,7 +6,7 @@ import {pickStyles} from '../../utils/style';
 import Icon from '../icon';
 import {UIBase} from '../layout';
 
-import coreStyles from './field-hint.css';
+import coreStyles from './field-hint.module.css';
 
 const FieldHint = props => {
   const {hint, icon, ...otherProps} = props;

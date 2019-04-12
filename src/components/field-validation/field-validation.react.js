@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import coreStyles from './field-validation.css';
+import coreStyles from './field-validation.module.css';
 
 const FieldValidation = ({validation}) => (
   <span className={coreStyles['ui-field-validation']}>
