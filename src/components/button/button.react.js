@@ -6,8 +6,8 @@ import cx from 'classnames';
 import {UIBase} from '../layout';
 import Icon from '../icon';
 
-import coreStyles from './button.css';
-import reactStyles from './button.react.css';
+import coreStyles from './button.module.css';
+import reactStyles from './button.react.module.css';
 
 const ICON_SIZE = {
   small: 14,

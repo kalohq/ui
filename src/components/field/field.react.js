@@ -12,7 +12,7 @@ import FieldValidations from '../field-validations';
 import type Validation from '../field-validation';
 import type LabelProps from '../field-label';
 
-import coreStyles from './field.css';
+import coreStyles from './field.module.css';
 
 export type TProps = {
   children?: React$Element<*>,

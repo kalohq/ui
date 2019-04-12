@@ -6,7 +6,7 @@ import cx from 'classnames';
 import {Box} from '../layout';
 import {pickStyles} from '../../utils/style';
 
-import styles from './radio.css';
+import styles from './radio.module.css';
 
 type RadioProps = {
   /** Is the radio button checked */

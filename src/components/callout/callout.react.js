@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 import {UIBase} from '../layout';
 
-import styles from './callout.css';
+import styles from './callout.module.css';
 
 type TProps = {
   children: string | React.Element<*>,

@@ -2,8 +2,8 @@
 import * as React from 'react';
 import cx from 'classnames';
 
-import styles from './avatar-group.css';
-import avatarStyles from '../avatar/avatar.css';
+import styles from './avatar-group.module.css';
+import avatarStyles from '../avatar/avatar.module.css';
 
 type TProps = {
   /** An iterable set of children Avatar components */

@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 import {UIBase} from '../layout';
 
-import styles from './tabs.css';
+import styles from './tabs.module.css';
 
 type TProps = {
   /** The contents of the tab */

@@ -8,7 +8,7 @@ import {shallow, mount} from 'enzyme';
 
 import Button from '../button.react';
 
-import reactStyles from '../button.react.css';
+import reactStyles from '../button.react.module.css';
 
 describe('Button', () => {
   const defaultProps = {

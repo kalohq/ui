@@ -6,7 +6,7 @@ import cx from 'classnames';
 import {Box, UIBase} from '../layout';
 import Icon from '../icon';
 
-import styles from './drop-menu.css';
+import styles from './drop-menu.module.css';
 
 type TProps = {
   icon?: React.Node | string,

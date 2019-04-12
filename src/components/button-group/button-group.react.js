@@ -4,7 +4,7 @@ import cx from 'classnames';
 import {isArray} from 'lodash';
 import {UIBase} from '../layout';
 
-import coreStyles from './button-group.css';
+import coreStyles from './button-group.module.css';
 
 /**
  * A basic container for grouped buttons

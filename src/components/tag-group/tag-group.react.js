@@ -5,7 +5,7 @@ import cx from 'classnames';
 import {UIBase} from '../layout';
 import Text from '../text';
 
-import styles from './tag-group.css';
+import styles from './tag-group.module.css';
 
 type TProps = {
   children: Iterable<React.Element<*>>,

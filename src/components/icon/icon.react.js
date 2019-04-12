@@ -6,8 +6,8 @@ import {UIBase} from '../layout';
 import type {ICON_SIZE, ICON_COLOR} from './constants';
 import {ICONS, DEFAULT_SIZE, DEFAULT_COLOR} from './constants';
 
-import styles from './icon.css';
-import fills from '../../design-tokens/kalo-ui-fills.css';
+import styles from './icon.module.css';
+import fills from '../../design-tokens/kalo-ui-fills.module.css';
 
 type Props = {
   children: $Keys<typeof ICONS>,

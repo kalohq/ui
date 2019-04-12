@@ -5,7 +5,7 @@ import cx from 'classnames';
 import {UIBase} from '../layout';
 import Icon from '../icon';
 
-import styles from './seamless-button.css';
+import styles from './seamless-button.module.css';
 
 type TProps = {
   /** An onclick event to call */

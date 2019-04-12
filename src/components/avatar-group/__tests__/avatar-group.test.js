@@ -6,7 +6,7 @@ import {shallow, mount} from 'enzyme';
 import Avatar from 'components/avatar';
 import AvatarGroup from '../avatar-group.react';
 
-import styles from '../avatar-group.css';
+import styles from '../avatar-group.module.css';
 
 describe('AvatarGroup', () => {
   test('should render 4 avatars', () => {

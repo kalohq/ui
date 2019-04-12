@@ -5,7 +5,7 @@ import cx from 'classnames';
 import {UIBase} from '../layout';
 import Icon from '../icon';
 
-import styles from './service-tag.css';
+import styles from './service-tag.module.css';
 
 type TProps = {
   /** The main tag label */

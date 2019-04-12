@@ -5,7 +5,7 @@ import cx from 'classnames';
 import {UIBase} from '../layout';
 import Icon from '../icon';
 
-import styles from './inline-alert.css';
+import styles from './inline-alert.module.css';
 
 const TYPE_ICON_MAP = {
   info: 'info',

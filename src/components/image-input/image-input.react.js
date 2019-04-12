@@ -6,7 +6,7 @@ import Text from '../text';
 
 import UIImageInput from './image-input';
 
-import styles from './image-input.css';
+import styles from './image-input.module.css';
 
 type TProps = {
   children?: React$Node,

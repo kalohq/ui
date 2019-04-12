@@ -6,7 +6,7 @@ import {pickStyles} from '../../utils/style';
 import Icon from '../icon';
 import {Inline, UIBase} from '../layout';
 
-import coreStyles from './field-label.css';
+import coreStyles from './field-label.module.css';
 
 export type TProps = {
   htmlFor?: string,

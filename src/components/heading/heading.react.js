@@ -6,8 +6,8 @@ import {UIBase} from '../layout';
 
 import type {TEXT_COLOR} from '../text/constants';
 
-import styles from './heading.css';
-import colors from '../../design-tokens/kalo-ui-colors.css';
+import styles from './heading.module.css';
+import colors from '../../design-tokens/kalo-ui-colors.module.css';
 
 type TProps = {
   /** The heading content */

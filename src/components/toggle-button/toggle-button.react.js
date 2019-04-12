@@ -7,7 +7,7 @@ import FieldLabel from '../field-label';
 
 import {cleanProps} from '../../utils/style';
 
-import coreStyles from './toggle-button.css';
+import coreStyles from './toggle-button.module.css';
 
 export const HEIGHT = 26;
 

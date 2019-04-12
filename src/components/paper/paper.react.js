@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 import {UIBase} from '../layout';
 
-import coreStyles from './paper.css';
+import coreStyles from './paper.module.css';
 
 type Props = {
   focused?: boolean,
