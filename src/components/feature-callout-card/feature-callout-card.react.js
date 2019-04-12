@@ -5,7 +5,7 @@ import cx from 'classnames';
 import {UIBase} from '../layout';
 import Icon from '../icon';
 
-import styles from './feature-callout-card.css';
+import styles from './feature-callout-card.module.css';
 
 const FeatureCalloutCard = props => {
   const {icon = 'megaphone', children, title, className} = props;

@@ -4,9 +4,9 @@ import cx from 'classnames';
 
 import {UIBase} from '../layout';
 
-import styles from './text.css';
-import colors from '../../design-tokens/kalo-ui-colors.css';
-import hoverColors from '../../design-tokens/kalo-ui-hover-colors.css';
+import styles from './text.module.css';
+import colors from '../../design-tokens/kalo-ui-colors.module.css';
+import hoverColors from '../../design-tokens/kalo-ui-hover-colors.module.css';
 
 import {TEXT_WEIGHT, TEXT_SIZE, TEXT_COLOR, TEXT_ALIGN} from './constants';
 

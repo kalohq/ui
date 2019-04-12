@@ -6,8 +6,8 @@ import {UIBase} from '../layout';
 
 import {ICON_SIZE, ICON_COLOR, DEFAULT_SIZE, DEFAULT_COLOR} from './constants';
 
-import styles from './icon.css';
-import fills from '../../design-tokens/kalo-ui-fills.css';
+import styles from './icon.module.css';
+import fills from '../../design-tokens/kalo-ui-fills.module.css';
 
 const Icon = props => {
   const {

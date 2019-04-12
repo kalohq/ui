@@ -6,7 +6,7 @@ import cx from 'classnames';
 import {Box} from '../layout';
 import {pickStyles} from '../../utils/style';
 
-import coreStyles from './checkbox.css';
+import coreStyles from './checkbox.module.css';
 
 export default class Checkbox extends PureComponent {
   static propTypes = {

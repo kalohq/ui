@@ -5,7 +5,7 @@ import cx from 'classnames';
 import {UIBase} from '../layout';
 import Icon from '../icon';
 
-import styles from './jumbo-button.css';
+import styles from './jumbo-button.module.css';
 
 const JumboButton = props => {
   const {

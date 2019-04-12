@@ -5,7 +5,7 @@ import cx from 'classnames';
 import {pickStyles} from '../../utils/style';
 import {UIBase} from '../layout';
 
-import styles from './field-row.css';
+import styles from './field-row.module.css';
 
 export const DEFAULT_SPACING = 20;
 

@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 import {parseStyleProps, cleanProps} from '../../utils/style';
 
-import styles from './grid.css';
+import styles from './grid.module.css';
 
 /**
  * Grid Container
