@@ -180,6 +180,7 @@ exports.modifyWebpackConfig = ({config, stage}) => {
         features: {
           customProperties: {
             variables: cssVariables,
+            preserve: true,
           },
           rem: {
             rootValue: 10,
