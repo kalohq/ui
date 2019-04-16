@@ -1,16 +1,19 @@
 /* @flow */
 import React from 'react';
-import styled from 'react-emotion';
+import cx from 'classnames';
 import PropTypes from 'prop-types';
 
-const StyledTableBody = styled('tbody')`
-  display: table-row-group;
-`;
+import {UIBase} from '../layout';
 
-export class TableBody extends React.Component<{
+import styles from './table.css';
+
+type TProps = {
   border?: boolean,
   children: React$Node,
-}> {
+  className?: string | Object,
+};
+
+export class TableBody extends React.Component<TProps> {
   static propTypes = {
     border: PropTypes.bool,
     children: PropTypes.node.isRequired,
@@ -31,7 +34,19 @@ export class TableBody extends React.Component<{
   }
 
   render() {
-    return <StyledTableBody {...this.props} />;
+    const {className, children, ...otherProps} = this.props;
+
+    const _classNames = cx(
+      {
+        [styles['ui-table-body']]: true,
+      },
+      className
+    );
+    return (
+      <UIBase component="tbody" className={_classNames} {...otherProps}>
+        {children}
+      </UIBase>
+    );
   }
 }
 

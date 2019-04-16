@@ -1,15 +1,15 @@
 /* @flow */
 import React from 'react';
-import styled from 'react-emotion';
+import cx from 'classnames';
 import {compose, getContext, withProps, setDisplayName} from 'recompose';
 import PropTypes from 'prop-types';
 
-const StyledTableRow = styled('tr')`
-  display: table-row;
-`;
+import {UIBase} from '../layout';
+import styles from './table.css';
 
 type TTableRowProps = {
   children: React$Node,
+  className?: string | Object,
   // Provided by context
   table: {
     head?: boolean,
@@ -19,7 +19,20 @@ type TTableRowProps = {
 };
 
 export function TableRow(props: TTableRowProps) {
-  return <StyledTableRow {...props} />;
+  const {children, className, ...otherProps} = props;
+
+  const _classNames = cx(
+    {
+      [styles['ui-table-row']]: true,
+    },
+    className
+  );
+
+  return (
+    <UIBase component="tr" className={_classNames} {...otherProps}>
+      {children}
+    </UIBase>
+  );
 }
 
 export default compose(
