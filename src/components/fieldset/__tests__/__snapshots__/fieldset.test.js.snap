@@ -2,7 +2,7 @@
 
 exports[`Input should render shallow component ok 1`] = `
 <fieldset
-  className="e1vppvsh0 css-qcaxwu"
+  className="ui-fieldset e1krcyn16 css-12i09t1"
   name={undefined}
   onClick={undefined}
   style={Object {}}

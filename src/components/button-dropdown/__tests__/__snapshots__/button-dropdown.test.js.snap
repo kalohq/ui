@@ -6,15 +6,8 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
   margin-right: -8px;
 }
 
-.emotion-4 {
-  position: absolute;
-  top: calc(100% + 2px);
-  min-width: calc(100% + 4px);
-  left: -2px;
-}
-
 <button
-  className="ui-btn ui-btn--medium ui-btn--tertiary emotion-0 emotion-7"
+  className="ui-btn ui-btn--medium ui-btn--tertiary emotion-0 emotion-5"
   data-test="ui-button"
   disabled={false}
   name={undefined}
@@ -65,7 +58,7 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
       </svg>
     </i>
     <div
-      className="emotion-4 emotion-5"
+      className="root"
     >
       <div
         style={
@@ -86,13 +79,6 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
 .emotion-3 {
   margin-left: 8px;
   margin-right: -8px;
-}
-
-.emotion-8 {
-  position: absolute;
-  top: calc(100% + 2px);
-  min-width: calc(100% + 4px);
-  left: -2px;
 }
 
 .emotion-1 {
@@ -117,7 +103,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
 }
 
 <button
-  className="ui-btn ui-btn--medium ui-btn--tertiary emotion-2 emotion-11"
+  className="ui-btn ui-btn--medium ui-btn--tertiary emotion-2 emotion-9"
   data-test="ui-button"
   disabled={false}
   name={undefined}
@@ -204,7 +190,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
       </svg>
     </i>
     <div
-      className="emotion-8 emotion-9"
+      className="root"
     >
       <div
         style={

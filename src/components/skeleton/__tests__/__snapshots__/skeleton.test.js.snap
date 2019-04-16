@@ -1,101 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/skeleton SkeletonAvatar should render shallow component ok 1`] = `
-.emotion-1 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  background-color: #edf1f5;
-  position: relative;
-  overflow: hidden;
-}
-
-.emotion-1:after {
-  content: '';
-  top: 0;
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  -webkit-animation: animation-1q16f5v 1s infinite 2s;
-  animation: animation-1q16f5v 1s infinite 2s;
-  background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
-}
-
 <div
-  className="emotion-0 emotion-1"
-  shape="circle"
-  style={Object {}}
+  className="ui-skeleton-shape ui-skeleton-shape--circle emotion-0 emotion-1"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
 />
 `;
 
 exports[`components/skeleton SkeletonButton should render shallow component ok 1`] = `
-.emotion-1 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 36px;
-  width: 36px;
-  border-radius: 0;
-  background-color: #edf1f5;
-  position: relative;
-  overflow: hidden;
-}
-
-.emotion-1:after {
-  content: '';
-  top: 0;
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  -webkit-animation: animation-1q16f5v 1s infinite 2s;
-  animation: animation-1q16f5v 1s infinite 2s;
-  background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
-}
-
 <div
-  className="emotion-0 emotion-1"
-  style={Object {}}
+  className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+  style={
+    Object {
+      "height": 36,
+      "width": 36,
+    }
+  }
 />
 `;
 
@@ -177,91 +102,8 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 }
 
 .emotion-1 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 24px;
-  width: 50%;
   margin-top: 10px;
   margin-left: 0;
-  border-radius: 0;
-  background-color: #edf1f5;
-  position: relative;
-  overflow: hidden;
-}
-
-.emotion-1:after {
-  content: '';
-  top: 0;
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  -webkit-animation: animation-1q16f5v 1s infinite 2s;
-  animation: animation-1q16f5v 1s infinite 2s;
-  background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
-}
-
-.emotion-11 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 50%;
-  margin-top: 10px;
-  margin-left: 0;
-  border-radius: 0;
-  background-color: #edf1f5;
-  position: relative;
-  overflow: hidden;
-}
-
-.emotion-11:after {
-  content: '';
-  top: 0;
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  -webkit-animation: animation-1q16f5v 1s infinite 2s;
-  animation: animation-1q16f5v 1s infinite 2s;
-  background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
 <div
@@ -273,7 +115,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
     style={Object {}}
   >
     <div
-      className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-4 emotion-5"
+      className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-0 emotion-5"
       onClick={undefined}
       style={Object {}}
     >
@@ -282,9 +124,14 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
         style={Object {}}
       >
         <div
-          className="emotion-0 emotion-1"
+          className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
           size={14}
-          style={Object {}}
+          style={
+            Object {
+              "height": 24,
+              "width": "50%",
+            }
+          }
         />
       </div>
     </div>
@@ -294,7 +141,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
     style={Object {}}
   >
     <div
-      className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-4 emotion-5"
+      className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-0 emotion-5"
       onClick={undefined}
       style={Object {}}
     >
@@ -303,13 +150,23 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
         style={Object {}}
       >
         <div
-          className="emotion-0 emotion-1"
-          style={Object {}}
+          className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+          style={
+            Object {
+              "height": 24,
+              "width": "50%",
+            }
+          }
         />
         <div
-          className="emotion-0 emotion-11"
+          className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
           size={14}
-          style={Object {}}
+          style={
+            Object {
+              "height": 12,
+              "width": "50%",
+            }
+          }
         />
       </div>
     </div>
@@ -318,190 +175,9 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 `;
 
 exports[`components/skeleton SkeletonGrid should render shallow component ok 2`] = `
-.emotion-3 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 36px;
-  width: 36px;
-  border-radius: 0;
-  background-color: #edf1f5;
-  position: relative;
-  overflow: hidden;
-}
-
-.emotion-3:after {
-  content: '';
-  top: 0;
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  -webkit-animation: animation-1q16f5v 1s infinite 2s;
-  animation: animation-1q16f5v 1s infinite 2s;
-  background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
-}
-
-.emotion-1 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 50%;
-  border-radius: 0;
-  background-color: #edf1f5;
-  position: relative;
-  overflow: hidden;
-}
-
-.emotion-1:after {
-  content: '';
-  top: 0;
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  -webkit-animation: animation-1q16f5v 1s infinite 2s;
-  animation: animation-1q16f5v 1s infinite 2s;
-  background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
-}
-
-.emotion-55 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-19 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #fff;
-  border-bottom: 1px solid #dde1e4;
-}
-
-.emotion-5 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 1100px;
-  margin: 0 auto;
-  width: 1100px;
-  height: 80px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-17 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-top: 1px solid #edf1f5;
+.emotion-7 {
+  margin-top: 0;
+  margin-left: 25px;
 }
 
 .emotion-15 {
@@ -550,7 +226,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   height: 46px;
 }
 
-.emotion-7 {
+.emotion-55 {
   position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -569,29 +245,6 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 12px;
-  width: 50%;
-  margin-top: 0;
-  margin-left: 25px;
-  border-radius: 0;
-  background-color: #edf1f5;
-  position: relative;
-  overflow: hidden;
-}
-
-.emotion-7:after {
-  content: '';
-  top: 0;
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  -webkit-animation: animation-1q16f5v 1s infinite 2s;
-  animation: animation-1q16f5v 1s infinite 2s;
-  background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
 .emotion-53 {
@@ -673,157 +326,44 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 }
 
 .emotion-21 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 80px;
-  width: 80px;
   margin-top: 25px;
   margin-left: 0;
-  border-radius: 50%;
-  background-color: #edf1f5;
-  position: relative;
-  overflow: hidden;
-}
-
-.emotion-21:after {
-  content: '';
-  top: 0;
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  -webkit-animation: animation-1q16f5v 1s infinite 2s;
-  animation: animation-1q16f5v 1s infinite 2s;
-  background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
-}
-
-.emotion-23 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 14%;
-  margin-top: 25px;
-  margin-left: 0;
-  border-radius: 0;
-  background-color: #edf1f5;
-  position: relative;
-  overflow: hidden;
-}
-
-.emotion-23:after {
-  content: '';
-  top: 0;
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  -webkit-animation: animation-1q16f5v 1s infinite 2s;
-  animation: animation-1q16f5v 1s infinite 2s;
-  background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
-}
-
-.emotion-25 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 20%;
-  margin-top: 25px;
-  margin-left: 0;
-  border-radius: 0;
-  background-color: #edf1f5;
-  position: relative;
-  overflow: hidden;
-}
-
-.emotion-25:after {
-  content: '';
-  top: 0;
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  -webkit-animation: animation-1q16f5v 1s infinite 2s;
-  animation: animation-1q16f5v 1s infinite 2s;
-  background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
 <div>
   <div
-    className="emotion-18 emotion-19"
+    className="ui-skeleton-page-header emotion-0 emotion-1"
     style={Object {}}
   >
     <div
-      className="emotion-4 emotion-5"
-      style={Object {}}
+      className="ui-skeleton-page-header-heading emotion-0 emotion-1"
+      style={
+        Object {
+          "width": 1100,
+        }
+      }
     >
       <div
-        className="emotion-0 emotion-1"
-        style={Object {}}
+        className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+        style={
+          Object {
+            "height": 12,
+            "width": "50%",
+          }
+        }
       />
       <div
-        className="emotion-0 emotion-3"
-        style={Object {}}
+        className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+        style={
+          Object {
+            "height": 36,
+            "width": 36,
+          }
+        }
       />
     </div>
     <div
-      className="emotion-16 emotion-17"
+      className="ui-skeleton-page-header-toolbar emotion-0 emotion-1"
       style={Object {}}
     >
       <div
@@ -835,16 +375,31 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
           style={Object {}}
         >
           <div
-            className="emotion-0 emotion-7"
-            style={Object {}}
+            className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-7"
+            style={
+              Object {
+                "height": 12,
+                "width": "50%",
+              }
+            }
           />
           <div
-            className="emotion-0 emotion-7"
-            style={Object {}}
+            className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-7"
+            style={
+              Object {
+                "height": 12,
+                "width": "50%",
+              }
+            }
           />
           <div
-            className="emotion-0 emotion-7"
-            style={Object {}}
+            className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-7"
+            style={
+              Object {
+                "height": 12,
+                "width": "50%",
+              }
+            }
           />
         </div>
       </div>
@@ -863,7 +418,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
         style={Object {}}
       >
         <div
-          className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-28 emotion-29"
+          className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-0 emotion-29"
           onClick={undefined}
           style={Object {}}
         >
@@ -872,22 +427,36 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
             style={Object {}}
           >
             <div
-              className="emotion-0 emotion-21"
-              shape="circle"
-              style={Object {}}
+              className="ui-skeleton-shape ui-skeleton-shape--circle emotion-0 emotion-21"
+              style={
+                Object {
+                  "height": 80,
+                  "width": 80,
+                }
+              }
             />
             <div
-              className="emotion-0 emotion-23"
-              style={Object {}}
+              className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-21"
+              style={
+                Object {
+                  "height": 12,
+                  "width": "14%",
+                }
+              }
             />
             <div
-              className="emotion-0 emotion-25"
-              style={Object {}}
+              className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-21"
+              style={
+                Object {
+                  "height": 12,
+                  "width": "20%",
+                }
+              }
             />
           </div>
         </div>
         <div
-          className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-28 emotion-29"
+          className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-0 emotion-29"
           onClick={undefined}
           style={Object {}}
         >
@@ -896,22 +465,36 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
             style={Object {}}
           >
             <div
-              className="emotion-0 emotion-21"
-              shape="circle"
-              style={Object {}}
+              className="ui-skeleton-shape ui-skeleton-shape--circle emotion-0 emotion-21"
+              style={
+                Object {
+                  "height": 80,
+                  "width": 80,
+                }
+              }
             />
             <div
-              className="emotion-0 emotion-23"
-              style={Object {}}
+              className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-21"
+              style={
+                Object {
+                  "height": 12,
+                  "width": "14%",
+                }
+              }
             />
             <div
-              className="emotion-0 emotion-25"
-              style={Object {}}
+              className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-21"
+              style={
+                Object {
+                  "height": 12,
+                  "width": "20%",
+                }
+              }
             />
           </div>
         </div>
         <div
-          className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-28 emotion-29"
+          className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-0 emotion-29"
           onClick={undefined}
           style={Object {}}
         >
@@ -920,17 +503,31 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
             style={Object {}}
           >
             <div
-              className="emotion-0 emotion-21"
-              shape="circle"
-              style={Object {}}
+              className="ui-skeleton-shape ui-skeleton-shape--circle emotion-0 emotion-21"
+              style={
+                Object {
+                  "height": 80,
+                  "width": 80,
+                }
+              }
             />
             <div
-              className="emotion-0 emotion-23"
-              style={Object {}}
+              className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-21"
+              style={
+                Object {
+                  "height": 12,
+                  "width": "14%",
+                }
+              }
             />
             <div
-              className="emotion-0 emotion-25"
-              style={Object {}}
+              className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-21"
+              style={
+                Object {
+                  "height": 12,
+                  "width": "20%",
+                }
+              }
             />
           </div>
         </div>
@@ -993,91 +590,8 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 }
 
 .emotion-1 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 20%;
   margin-top: 0;
   margin-left: 25px;
-  border-radius: 0;
-  background-color: #edf1f5;
-  position: relative;
-  overflow: hidden;
-}
-
-.emotion-1:after {
-  content: '';
-  top: 0;
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  -webkit-animation: animation-1q16f5v 1s infinite 2s;
-  animation: animation-1q16f5v 1s infinite 2s;
-  background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
-}
-
-.emotion-3 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 10%;
-  margin-top: 0;
-  margin-left: 25px;
-  border-radius: 0;
-  background-color: #edf1f5;
-  position: relative;
-  overflow: hidden;
-}
-
-.emotion-3:after {
-  content: '';
-  top: 0;
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  -webkit-animation: animation-1q16f5v 1s infinite 2s;
-  animation: animation-1q16f5v 1s infinite 2s;
-  background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
 }
 
 <div
@@ -1085,7 +599,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   style={Object {}}
 >
   <div
-    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-6 emotion-7"
+    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-0 emotion-7"
     onClick={undefined}
     style={Object {}}
   >
@@ -1094,17 +608,27 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
       style={Object {}}
     >
       <div
-        className="emotion-0 emotion-1"
-        style={Object {}}
+        className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+        style={
+          Object {
+            "height": 12,
+            "width": "20%",
+          }
+        }
       />
       <div
-        className="emotion-0 emotion-3"
-        style={Object {}}
+        className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+        style={
+          Object {
+            "height": 12,
+            "width": "10%",
+          }
+        }
       />
     </div>
   </div>
   <div
-    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-6 emotion-7"
+    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-0 emotion-7"
     onClick={undefined}
     style={Object {}}
   >
@@ -1113,17 +637,27 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
       style={Object {}}
     >
       <div
-        className="emotion-0 emotion-1"
-        style={Object {}}
+        className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+        style={
+          Object {
+            "height": 12,
+            "width": "20%",
+          }
+        }
       />
       <div
-        className="emotion-0 emotion-3"
-        style={Object {}}
+        className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+        style={
+          Object {
+            "height": 12,
+            "width": "10%",
+          }
+        }
       />
     </div>
   </div>
   <div
-    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-6 emotion-7"
+    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-0 emotion-7"
     onClick={undefined}
     style={Object {}}
   >
@@ -1132,12 +666,22 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
       style={Object {}}
     >
       <div
-        className="emotion-0 emotion-1"
-        style={Object {}}
+        className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+        style={
+          Object {
+            "height": 12,
+            "width": "20%",
+          }
+        }
       />
       <div
-        className="emotion-0 emotion-3"
-        style={Object {}}
+        className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+        style={
+          Object {
+            "height": 12,
+            "width": "10%",
+          }
+        }
       />
     </div>
   </div>
@@ -1145,50 +689,13 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 `;
 
 exports[`components/skeleton SkeletonText should render shallow component ok 1`] = `
-.emotion-1 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 12px;
-  width: 50%;
-  border-radius: 0;
-  background-color: #edf1f5;
-  position: relative;
-  overflow: hidden;
-}
-
-.emotion-1:after {
-  content: '';
-  top: 0;
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  -webkit-animation: animation-1q16f5v 1s infinite 2s;
-  animation: animation-1q16f5v 1s infinite 2s;
-  background: linear-gradient( to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100% );
-}
-
 <div
-  className="emotion-0 emotion-1"
-  style={Object {}}
+  className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+  style={
+    Object {
+      "height": 12,
+      "width": "50%",
+    }
+  }
 />
 `;
