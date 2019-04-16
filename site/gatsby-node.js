@@ -129,7 +129,10 @@ exports.createPages = ({boundActionCreators, graphql}) => {
   const componentPageTemplate = path.resolve(`src/templates/component.js`);
   return graphql(`
     {
-      allMarkdownRemark(sort: {fields: [fields___componentName], order: ASC}, filter: {fields: {ignorePage: {eq: false}}}) {
+      allMarkdownRemark(
+        sort: {fields: [fields___componentName], order: ASC}
+        filter: {fields: {ignorePage: {eq: false}}}
+      ) {
         edges {
           node {
             fields {
@@ -177,6 +180,7 @@ exports.modifyWebpackConfig = ({config, stage}) => {
         features: {
           customProperties: {
             variables: cssVariables,
+            preserve: true,
           },
           rem: {
             rootValue: 10,
