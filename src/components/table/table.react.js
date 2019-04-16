@@ -1,16 +1,16 @@
 /* @flow */
 import React from 'react';
-import styled from 'react-emotion';
+import cx from 'classnames';
 import PropTypes from 'prop-types';
 
-const StyledTable = styled('table')`
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-  border-spacing: 0;
-`;
+import {UIBase} from '../layout';
 
-export class Table extends React.Component<{children: React$Node}> {
+import styles from './table.css';
+
+export class Table extends React.Component<{
+  children: React$Node,
+  className?: string | Object,
+}> {
   static propTypes = {
     children: PropTypes.node.isRequired,
   };
@@ -26,7 +26,24 @@ export class Table extends React.Component<{children: React$Node}> {
   }
 
   render() {
-    return <StyledTable cellSpacing={0} {...this.props} />;
+    const {className, children, ...otherProps} = this.props;
+
+    const _classNames = cx(
+      {
+        [styles['ui-table']]: true,
+      },
+      className
+    );
+    return (
+      <UIBase
+        component="table"
+        className={_classNames}
+        cellSpacing={0}
+        {...otherProps}
+      >
+        {children}
+      </UIBase>
+    );
   }
 }
 

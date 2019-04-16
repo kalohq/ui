@@ -1,0 +1,84 @@
+.ui-table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.ui-table-body {
+  display: table-row-group;
+}
+
+.ui-table-head {
+  display: table-header-group;
+}
+
+.ui-table-row {
+  display: table-row;
+}
+
+.ui-table-cell {
+  display: table-cell;
+  color: var(--navy900);
+  font-weight: 300;
+  text-align: left;
+  padding: var(--spacing-small);
+  font-size: 1.4rem;
+  min-height: 40px;
+  background-color: var(--white);
+}
+
+tbody > tr:not(:last-child) > .ui-table-cell {
+  border-bottom: var(--table-default-border);
+}
+
+.ui-table:not(.ui-table--no-border) tbody > tr:last-child > .ui-table-cell {
+  border-bottom: var(--table-default-border);
+}
+
+.ui-table-cell:first-child {
+  border-left: var(--table-default-border);
+}
+
+.ui-table-cell:last-child {
+  border-right: var(--table-default-border);
+}
+
+tbody > tr:first-child .ui-table-cell {
+  border-top: var(--table-default-border);
+}
+
+tbody > tr:first-child .ui-table-cell:first-child {
+  border-top-left-radius: 4px;
+}
+
+tbody > tr:first-child .ui-table-cell:last-child {
+  border-top-right-radius: 4px;
+}
+
+tbody > tr:last-child .ui-table-cell:first-child {
+  border-bottom-left-radius: 4px;
+}
+
+tbody > tr:last-child .ui-table-cell:last-child {
+  border-bottom-right-radius: 4px;
+}
+
+.ui-table-header {
+  display: table-cell;
+  color: var(--navy900);
+  font-weight: 300;
+  text-align: left;
+  padding: var(--spacing-small);
+  font-size: 14px;
+  min-height: 40px;
+  color: var(--grey300);
+}
+
+.ui-table-header.sortable {
+  cursor: pointer;
+}
+
+.ui-table-header.active {
+  font-weight: 400 !important;
+}
