@@ -1,17 +1,25 @@
-import styled from 'react-emotion';
+import React from 'react';
+import cx from 'classnames';
 
-import {Box} from '../../layout';
+import {UIBase} from '../../layout';
+
+import styles from '../skeleton.css';
 
 /**
  * Skeleton page header heading
  */
-const SkeletonPageHeaderHeading = styled(Box)`
-  margin: 0 auto;
-  width: ${props => (props.width ? props.width : 1180)}px;
-  height: 80px;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
-`;
+export default function SkeletonPageHeaderHeading(props) {
+  const {width, children, className, ...otherProps} = props;
 
-export default SkeletonPageHeaderHeading;
+  const _classNames = cx(
+    {
+      [styles['ui-skeleton-page-header-heading']]: true,
+    },
+    className
+  );
+  return (
+    <UIBase className={_classNames} style={{width}} {...otherProps}>
+      {children}
+    </UIBase>
+  );
+}
