@@ -1,13 +1,25 @@
-import styled from 'react-emotion';
+import React from 'react';
+import cx from 'classnames';
 
-import {Box} from '../../layout';
+import {UIBase} from '../../layout';
+
+import styles from '../skeleton.css';
 
 /**
  * Skeleton page header
  */
-const SkeletonPageHeader = styled(Box)`
-  background-color: #fff;
-  border-bottom: 1px solid ${props => props.theme.colors.grey200};
-`;
 
-export default SkeletonPageHeader;
+export default function SkeletonPageHeader(props) {
+  const {children, className, ...otherProps} = props;
+  const _classNames = cx(
+    {
+      [styles['ui-skeleton-page-header']]: true,
+    },
+    className
+  );
+  return (
+    <UIBase className={_classNames} {...otherProps}>
+      {children}
+    </UIBase>
+  );
+}
