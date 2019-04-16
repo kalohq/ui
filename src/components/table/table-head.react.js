@@ -1,13 +1,18 @@
 /* @flow */
 import React from 'react';
-import styled from 'react-emotion';
+import cx from 'classnames';
 import PropTypes from 'prop-types';
 
-const StyledTableHead = styled('thead')`
-  display: table-header-group;
-`;
+import {UIBase} from '../layout';
 
-export class TableHead extends React.Component<{children: React$Node}> {
+import styles from './table.css';
+
+type TProps = {
+  children: React$Node,
+  className?: string | Object,
+};
+
+export class TableHead extends React.Component<TProps> {
   static propTypes = {
     children: PropTypes.node.isRequired,
   };
@@ -25,7 +30,20 @@ export class TableHead extends React.Component<{children: React$Node}> {
   }
 
   render() {
-    return <StyledTableHead {...this.props} />;
+    const {children, className, ...otherProps} = this.props;
+
+    const _classNames = cx(
+      {
+        [styles['ui-table-head']]: true,
+      },
+      className
+    );
+
+    return (
+      <UIBase component="thead" className={_classNames} {...otherProps}>
+        {children}
+      </UIBase>
+    );
   }
 }
 

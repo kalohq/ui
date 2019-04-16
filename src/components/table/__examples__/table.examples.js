@@ -2,9 +2,10 @@
 import React from 'react';
 
 import Table, {TableHead, TableRow, TableCell, TableBody} from '../';
-import {CELL_PADDING} from '../constants';
 import {Box, Text, SkeletonAvatar, Icon} from '../..';
+import theme from '../../theme';
 
+const CELL_PADDING = theme.layout.spacingSmall;
 const AVATAR_SIZE = 32;
 const ICON_BUTTON_SIZE = 24;
 
