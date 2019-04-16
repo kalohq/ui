@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import {parseStyleProps, cleanProps} from '../../utils/style';
-import {cx} from 'react-emotion';
+import cx from 'classnames';
 
 export const makePrimitive = (name, DefaultComponent, defaultStyle) => {
   class Primitive extends PureComponent {
