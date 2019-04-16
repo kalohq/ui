@@ -2,7 +2,6 @@ import React from 'react';
 
 import Button from '../';
 import ButtonGroup from '../../button-group';
-import {ThemeProvider} from 'emotion-theming';
 
 const myClickFunction = () => {
   /* eslint-disable no-alert */
@@ -242,19 +241,34 @@ export const examples = [
   {
     title: 'Themed button',
     description:
-      'When used in the platform, primary buttons can inherit their colors from the theme (React only)',
+      'When used in the platform, primary buttons expose their CSS custom properties making them overridable.',
     render: () => (
-      <ThemeProvider
-        theme={{
-          user: {
-            primary: '#4885ed',
-          },
+      <div
+        style={{
+          '--ui-button-primary-default-background': '#0d7ef2',
+          '--ui-button-primary-hover-background': '#49a1fb',
+          '--ui-button-primary-active-background': '#49a1fb',
+          '--ui-button-primary-focus-shadow': '#cad9e8',
         }}
       >
         <Button variant="primary" size="large">
           A themed button
         </Button>
-      </ThemeProvider>
+      </div>
+    ),
+    html: () => (
+      <div
+        style={{
+          '--ui-button-primary-default-background': '#0d7ef2',
+          '--ui-button-primary-hover-background': '#49a1fb',
+          '--ui-button-primary-active-background': '#49a1fb',
+          '--ui-button-primary-focus-shadow': '#cad9e8',
+        }}
+      >
+        <button className="ui-btn ui-btn--primary ui-btn--large">
+          A themed button
+        </button>
+      </div>
     ),
   },
 ];

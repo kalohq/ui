@@ -1,3 +1,10 @@
+:root {
+  --ui-button-primary-default-background: var(--purple500);
+  --ui-button-primary-hover-background: var(--purple600);
+  --ui-button-primary-active-background: var(--purple600);
+  --ui-button-primary-focus-shadow: var(--purple300);
+}
+
 .ui-btn {
   position: relative;
   overflow: hidden;
@@ -106,21 +113,21 @@
   */
 
 .ui-btn--primary {
-  background-color: var(--purple500);
+  background-color: var(--ui-button-primary-default-background);
   color: var(--white);
 
   &:hover {
-    background-color: var(--purple400);
+    background-color: var(--ui-button-primary-hover-background);
   }
 
   &:active,
   &.ui-btn--active {
-    background-color: var(--purple600);
+    background-color: var(--ui-button-primary-active-background);
     box-shadow: none;
   }
 
   &:focus {
-    box-shadow: 0 0 0 3px var(--purple300);
+    box-shadow: 0 0 0 3px var(--ui-button-primary-focus-shadow);
   }
 }
 
