@@ -33,6 +33,7 @@ type TProps = {
   zIndex?: number,
   anchor?: string,
   optionIcons?: Object,
+  className?: string | Object,
 };
 
 export default class PaperMenu extends PureComponent<TProps> {

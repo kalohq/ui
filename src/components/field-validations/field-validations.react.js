@@ -33,6 +33,7 @@ export default function FieldValidations(props: TProps) {
     <div className={_classNames}>
       {validations &&
         validations.map(validation => (
+          // $FlowFixMe
           <FieldValidation validation={validation} key={validation.message} />
         ))}
     </div>
