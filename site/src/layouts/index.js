@@ -12,6 +12,7 @@ import IconSymbols from '../../../src/components/icon-symbols';
 import '../../../src/styles/kalo-ui-base.css';
 import '../../../src/styles/kalo-ui-typography.css';
 import '../../../src/styles/kalo-ui-transitions.css';
+import '../../../src/design-tokens/tokens.css';
 
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
