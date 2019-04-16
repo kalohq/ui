@@ -4,7 +4,7 @@ import React from 'react';
 import coreStyles from './field-validation.css';
 
 export type Validation = {
-  message: string,
+  message?: string,
 };
 
 type TProps = {

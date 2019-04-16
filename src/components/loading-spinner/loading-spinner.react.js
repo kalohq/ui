@@ -12,6 +12,7 @@ const SPINNER_DIMENSIONS = {
 
 type TProps = {
   size?: 'small' | 'medium' | 'large',
+  className?: string | Object,
 };
 
 export default function LoadingSpinner(props: TProps) {

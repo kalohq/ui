@@ -61,7 +61,7 @@ type TProps = {
   /** Will be set on the root element */
   name?: string,
   /** Class name to style your fieldset */
-  className?: string | Array<string> | Object,
+  className?: string | Object,
   /** Adds a bottom border */
   bordered?: boolean,
 };
