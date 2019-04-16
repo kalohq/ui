@@ -45,7 +45,7 @@
   border-top: 1px solid var(--grey100);
 }
 
-.skeleton-page-header {
+.ui-skeleton-page-header {
   background-color: var(--white);
   border-bottom: 1px solid var(--grey200);
 }
