@@ -6,7 +6,8 @@
   cursor: pointer;
 }
 
-.ui-seamless-button:hover {
+.ui-seamless-button:hover,
+.ui-seamless-button--active {
   background-color: var(--grey100);
 }
 
