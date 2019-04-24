@@ -26,6 +26,7 @@ export const examples = [
               element: el,
               inputLabel: 'Custom label',
               inputPlaceholder: 'Custom Placeholder',
+              recommendation: 'Recommendation text',
             });
 
             return instance;
@@ -40,6 +41,9 @@ export const examples = [
             tabIndex="0"
           />
           <div className="ui-image-input__pseudo">Add image</div>
+          <div className="ui-image-input__recommendation">
+            <p>We recommend an image of 640px to 1200px wide.</p>
+          </div>
           <div className="ui-image-input__meta">
             <label htmlFor="imageTitle" className="ui-image-input__label">
               Title
