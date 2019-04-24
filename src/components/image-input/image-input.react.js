@@ -2,6 +2,7 @@
 import React, {PureComponent} from 'react';
 
 import {UIBase} from '../layout';
+import Text from '../text';
 
 import UIImageInput from './image-input';
 
@@ -65,7 +66,7 @@ export default class ImageInput extends PureComponent<TProps> {
         />
         <div className={styles['ui-image-input__pseudo']}>{placeholder}</div>
         <div className="ui-image-input__recommendation">
-          <p>{recommendation}</p>
+          <Text>{recommendation}</Text>
         </div>
         <div className={styles['ui-image-input__meta']}>
           {children}
