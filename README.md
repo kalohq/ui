@@ -14,12 +14,31 @@
 
 This repo contains the source code for the design system, as well as the source for the documentation site that powers [kalo.design](http://kalo.design)
 
+## Getting started
+
+The documentation site (kalo.design) are built using GatsbyJS and live in `site/`.
+
+To run the docs locally:
+
+1. `npm install` in the root of UI
+1. `cd site` - this is where the docs live.
+1. `npm install` (you will also need to `npm install` in the root UI directory).
+1. `npm run start`
+1. And you should be up and running at [localhost:8000](http://localhost:8000)
+
 ## Documentation
+
 For full documentation on how to use @kalo/ui, please refer to the documentation site: [KDS Documentation](http://kalo.design)
+
+- Common workflows
+  - [Adding a new icon](#adding-a-new-icon)
+  - [Adding a new design token](#adding-a-new-design-token)
+- [Releasing](#releasing)
 
 ## Common workflows
 
 ### Adding a new icon
+
 The raw SVG files are stored in `src/icons/svg`. These are then converted in to symbols which are imported in to Kalo Frontend.
 
 To add a new icon, follow these steps:
@@ -30,6 +49,7 @@ To add a new icon, follow these steps:
 4. Add the new icon to the ICON Enum in `src/components/icon/constants.js`.
 
 ### Adding a new design token
+
 Design tokens make up the core of our design system. They are shipped in several formats (including JSON, JS, CSS Custom Variables, and SCSS Variables). The source files are in `config/design-tokens`.
 
 To add a new design token:
@@ -37,17 +57,21 @@ To add a new design token:
 1. Add the token name and value to the appropriate file in `config/design-tokens`.
 2. Then run `npm run generate:tokens`.
 
+## Releasing
 
-### Releasing a new version of `@kalo/ui` (NPM package).
-1. Ensure you have been added to the `@kalo` NPM team.
-2. On the master branch, run `npm run release`. This will bump the version, run the tests, and publish to NPM.
+1. **Ensure you have been added to the `@kalo` NPM team.**
 
+   If you're not sure, you can ask in #frontend-cohort.
 
-### Run the docs locally
-The documentation site (kalo.design) are built using GatsbyJS and live in `site/`.
+2. **Once your changes have been merged in to master, checkout master and pull the latest.**
+3. **Run `npm run release`.**
 
-To run the docs locally:
-1. `cd site` to change in to the site directory
-2. `npm install` (you will also need to `npm install` in the root UI directory).
-3. `npm run start`
-4. And you should be up and running at [localhost:8000](http://localhost:8000)
+   This will open an interactive cli, which will let you select the type of version that you're releasing.
+
+   Here's a rough guidance to the types of version:
+
+   - `patch` - Isolated bug fixes.
+   - `minor` - An internal backwards-compatible change
+   - `major` - A breaking change has been introduced.
+
+4. Your change has been published 🎉. Remember to let the rest of the team know!
