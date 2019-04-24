@@ -1,4 +1,7 @@
 .ui-seamless-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: 0;
   padding: 0;
