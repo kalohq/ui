@@ -21,7 +21,7 @@ body {
 }
 
 html {
-  overflow-y: scroll;
+  overflow-y: auto;
   font-size: 62.5%;
 
   /**
