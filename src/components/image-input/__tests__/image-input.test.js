@@ -21,6 +21,9 @@ describe('ImageInput (web)', () => {
           tabIndex="0"
         />
         <div class="ui-image-input__pseudo">Add image</div>
+        <div class="ui-image-input__recommendation">
+          <p></p>
+        </div>
         <div class="ui-image-input__meta">
           <label htmlFor="imageTitle" class="ui-image-input__label">
             Title

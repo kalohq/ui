@@ -11,6 +11,7 @@ type TProps = {
   children?: React$Node,
   onChange?: Function,
   placeholder?: string,
+  recommendation?: string,
 };
 
 export default class ImageInput extends PureComponent<TProps> {
@@ -40,7 +41,11 @@ export default class ImageInput extends PureComponent<TProps> {
   }
 
   render() {
-    const {children, placeholder = 'Add image'} = this.props;
+    const {
+      children,
+      placeholder = 'Add image',
+      recommendation = '',
+    } = this.props;
 
     return (
       <UIBase
@@ -59,6 +64,9 @@ export default class ImageInput extends PureComponent<TProps> {
           tabIndex="0"
         />
         <div className={styles['ui-image-input__pseudo']}>{placeholder}</div>
+        <div className="ui-image-input__recommendation">
+          <p>{recommendation}</p>
+        </div>
         <div className={styles['ui-image-input__meta']}>
           {children}
           <button className={styles['ui-image-input__reset']} id="resetButton">

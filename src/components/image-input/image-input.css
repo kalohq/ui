@@ -66,6 +66,16 @@
   margin-top: 0;
 }
 
+.ui-image-input__recommendation {
+  display: none;
+}
+
+.ui-has-feature__filereader .ui-image-input__recommendation {
+  display: block;
+  max-width: 270px;
+  align-self: center;
+}
+
 .ui-has-feature__filereader
   .ui-image-input__input:focus
   + .ui-image-input__pseudo {
