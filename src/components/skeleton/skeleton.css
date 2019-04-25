@@ -29,6 +29,10 @@
   border-radius: 50%;
 }
 
+.ui-skeleton-shape--square {
+  border-radius: 0;
+}
+
 .ui-skeleton-page-header-heading {
   display: flex;
   margin: 0 auto;

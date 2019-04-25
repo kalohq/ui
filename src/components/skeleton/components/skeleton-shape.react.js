@@ -15,7 +15,14 @@ type TProps = {
 };
 
 export default function SkeletonShape(props: TProps) {
-  const {children, className, shape, width, height, ...otherProps} = props;
+  const {
+    children,
+    className,
+    shape = 'square',
+    width,
+    height,
+    ...otherProps
+  } = props;
 
   const _classNames = cx(
     {
