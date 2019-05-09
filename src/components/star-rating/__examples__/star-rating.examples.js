@@ -10,6 +10,6 @@ export const examples = [
   },
   {
     title: 'Star rating with half score',
-    render: () => <StarRating score={3.5} />,
+    render: () => <StarRating score={3.5} color="gold" />,
   },
 ];
