@@ -1,5 +1,5 @@
-/* @flow */
 import React from 'react';
+import PropTypes from 'prop-types';
 import {range} from 'lodash';
 import cx from 'classnames';
 
@@ -8,14 +8,7 @@ import {UIBase} from '../layout';
 
 import styles from './star-rating.css';
 
-type TProps = {
-  score: Number,
-  component?: string,
-  className?: string | Object,
-};
-
-export default function StarRating(props: TProps) {
-  const {score = 0, className, ...otherProps} = props;
+function StarRating(props) {
   const {score = 0, className, color, ...otherProps} = props;
 
   return (
@@ -62,3 +55,11 @@ export default function StarRating(props: TProps) {
     </UIBase>
   );
 }
+
+StarRating.propTypes = {
+  score: PropTypes.number.isRequired,
+  className: PropTypes.oneOf(['PropTypes.string', 'PropTypes.object']),
+  color: PropTypes.string,
+};
+
+export default StarRating;
