@@ -8,8 +8,10 @@ import {UIBase} from '../layout';
 
 import styles from './star-rating.css';
 
+const DEFAULT_COLOR = '#f07a7a';
+
 function StarRating(props) {
-  const {score = 0, className, color, ...otherProps} = props;
+  const {score = 0, className, color = DEFAULT_COLOR, ...otherProps} = props;
 
   return (
     <UIBase
@@ -42,7 +44,6 @@ function StarRating(props) {
               className={cx({
                 [styles.icon]: true,
                 [styles.foreground]: true,
-                [styles.highlight]: score ? isLit || isHalf : false,
                 [styles.half]: score ? isHalf : false,
               })}
               style={{color: isLit || isHalf ? color : false}}
