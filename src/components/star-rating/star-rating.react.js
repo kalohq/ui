@@ -16,6 +16,7 @@ type TProps = {
 
 export default function StarRating(props: TProps) {
   const {score = 0, className, ...otherProps} = props;
+  const {score = 0, className, color, ...otherProps} = props;
 
   return (
     <UIBase
@@ -51,6 +52,7 @@ export default function StarRating(props: TProps) {
                 [styles.highlight]: score ? isLit || isHalf : false,
                 [styles.half]: score ? isHalf : false,
               })}
+              style={{color: isLit || isHalf ? color : false}}
             >
               <Icon size={20}>star</Icon>
             </span>
