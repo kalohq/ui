@@ -23,10 +23,6 @@
   color: var(--grey300);
 }
 
-.foreground.highlight {
-  color: #f07a7a;
-}
-
 .half {
   width: 50%;
   overflow: hidden;
