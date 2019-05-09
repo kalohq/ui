@@ -20,7 +20,9 @@
     "precommit": "lint-staged",
     "generate:tokens": "node scripts/tokens.js",
     "generate:icons": "node scripts/icons.js",
-    "version": "npm run build"
+    "version": "npm run build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "lint-staged": {
     "*.js": [
@@ -31,6 +33,10 @@
   "license": "ISC",
   "devDependencies": {
     "@kalo/eslint-config": "6.0.0",
+    "@storybook/addon-actions": "^4.1.18",
+    "@storybook/addon-links": "^4.1.18",
+    "@storybook/addons": "^4.1.18",
+    "@storybook/react": "^4.1.18",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "7.2.3",
