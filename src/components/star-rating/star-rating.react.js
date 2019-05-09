@@ -5,13 +5,15 @@ import cx from 'classnames';
 
 import Icon from '../icon';
 import {UIBase} from '../layout';
+import colors from '../../design-tokens/tokens';
 
 import styles from './star-rating.css';
 
 const DEFAULT_COLOR = '#f07a7a';
 
 function StarRating(props) {
-  const {score = 0, className, color = DEFAULT_COLOR, ...otherProps} = props;
+  const {score = 0, className, color, ...otherProps} = props;
+  const starColor = color ? colors[color] : DEFAULT_COLOR;
 
   return (
     <UIBase
@@ -46,7 +48,7 @@ function StarRating(props) {
                 [styles.foreground]: true,
                 [styles.half]: score ? isHalf : false,
               })}
-              style={{color: isLit || isHalf ? color : false}}
+              style={{color: isLit || isHalf ? starColor : false}}
             >
               <Icon size={20}>star</Icon>
             </span>
@@ -60,6 +62,9 @@ function StarRating(props) {
 StarRating.propTypes = {
   score: PropTypes.number.isRequired,
   className: PropTypes.oneOf(['PropTypes.string', 'PropTypes.object']),
+  /**
+   * It needs to be a valid design token name.
+   */
   color: PropTypes.string,
 };
 
