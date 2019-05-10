@@ -3,6 +3,7 @@ import styled from 'react-emotion';
 
 import DocumentationContent from '../components/documentation-content';
 import Wrapper from '../components/wrapper';
+import '../../../lib/ui-bundle.css';
 
 const IndexIntro = styled.div`
   width: 100%;

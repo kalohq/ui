@@ -129,3 +129,10 @@ gulp.task(
     'shared:build-core-css'
   )
 );
+
+gulp.task('watch', () => {
+  gulp.watch(
+    ['./src/components/**/*.module.css'],
+    gulp.parallel('vanilla:build-bundled-css')
+  );
+});
