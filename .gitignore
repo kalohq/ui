@@ -2,7 +2,7 @@ node_modules
 lib
 coverage
 npm-debug*
-design-tokens/*
+src/design-tokens/*
 
 ##
 # Documentation site
