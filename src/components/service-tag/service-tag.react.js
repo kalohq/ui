@@ -12,15 +12,19 @@ type TProps = {
   children: string,
   /** A function to call when the tag is removed */
   onRemove?: Function,
+  className?: string,
 };
 
 export default function ServiceTag(props: TProps) {
-  const {children, onRemove, ...otherProps} = props;
+  const {children, className, onRemove, ...otherProps} = props;
 
-  const _classNames = cx({
-    [styles['ui-service-tag']]: true,
-    [styles['ui-service-tag--removable']]: !!onRemove,
-  });
+  const _classNames = cx(
+    {
+      [styles['ui-service-tag']]: true,
+      [styles['ui-service-tag--removable']]: !!onRemove,
+    },
+    className
+  );
   return (
     <UIBase className={_classNames} title={String(children)} {...otherProps}>
       <span className={styles['ui-service-tag__inner']}>{children}</span>
