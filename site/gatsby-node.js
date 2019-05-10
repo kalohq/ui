@@ -3,14 +3,7 @@ const slugify = require('slug');
 const fs = require('fs');
 const glob = require('glob');
 const {upperFirst, camelCase} = require('lodash');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const {createFilePath} = require('gatsby-source-filesystem');
-
-const cssModulesConfig = stage => {
-  const LOCAL_IDENT_NAME = `[local]`;
-  const loader = `css?modules&minimize&importLoaders=1&localIdentName=${LOCAL_IDENT_NAME}`;
-  return stage.startsWith(`build`) ? loader : `${loader}&sourceMap`;
-};
 
 const cssVariables = require('../src/design-tokens/tokens.css.js');
 
@@ -167,7 +160,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
   });
 };
 
-exports.modifyWebpackConfig = ({config, stage}) => {
+exports.modifyWebpackConfig = ({config}) => {
   config.merge({
     resolve: {
       root: path.resolve(__dirname, './src'),
@@ -200,113 +193,4 @@ exports.modifyWebpackConfig = ({config, stage}) => {
       }),
     ],
   });
-
-  switch (stage) {
-    case 'develop':
-      config.loader(`css`, {
-        test: /\.css$/,
-        exclude: [
-          path.resolve(__dirname, '../src/components/'),
-          path.resolve(__dirname, '../src/styles/'),
-          path.resolve(__dirname, '../src/design-tokens/'),
-        ],
-        include: [path.resolve(__dirname)],
-        loaders: [`style`, `css`, `postcss`],
-      });
-
-      config.loader('customCSSModules', {
-        test: /\.css$/,
-        include: [
-          path.resolve(__dirname, '../src/components/'),
-          path.resolve(__dirname, '../src/styles/'),
-          path.resolve(__dirname, '../src/design-tokens/'),
-        ],
-        exclude: [path.resolve(__dirname)],
-        loaders: ['style', cssModulesConfig(stage), 'postcss'],
-      });
-
-      return config;
-
-    case 'develop-html':
-      config.loader('customCSSModules', {
-        test: /\.css$/,
-        include: [
-          path.resolve(__dirname, '../src/components/'),
-          path.resolve(__dirname, '../src/styles/'),
-          path.resolve(__dirname, '../src/design-tokens/'),
-        ],
-        exclude: [path.resolve(__dirname)],
-        loader: ExtractTextPlugin.extract('style', [
-          cssModulesConfig(stage),
-          'postcss',
-        ]),
-      });
-
-      config.loader(`css`, {
-        test: /\.css$/,
-        exclude: [
-          path.resolve(__dirname, '../src/components/'),
-          path.resolve(__dirname, '../src/styles/'),
-          path.resolve(__dirname, '../src/design-tokens/'),
-        ],
-        loader: `null`,
-      });
-
-      return config;
-
-    case 'build-css':
-      config.loader('customCSSModules', {
-        test: /\.css$/,
-        include: [
-          path.resolve(__dirname, '../src/components/'),
-          path.resolve(__dirname, '../src/styles/'),
-          path.resolve(__dirname, '../src/design-tokens/'),
-        ],
-        exclude: [path.resolve(__dirname)],
-        loader: ExtractTextPlugin.extract('style', [
-          cssModulesConfig(stage),
-          'postcss',
-        ]),
-      });
-
-      config.loader(`css`, {
-        test: /\.css$/,
-        exclude: [
-          path.resolve(__dirname, '../src/components/'),
-          path.resolve(__dirname, '../src/styles/'),
-          path.resolve(__dirname, '../src/design-tokens/'),
-        ],
-        loader: ExtractTextPlugin.extract([`css?minimize`, `postcss`]),
-      });
-      return config;
-
-    case 'build-javascript':
-      config.loader('customCSSModules', {
-        test: /\.css$/,
-        include: [
-          path.resolve(__dirname, '../src/components/'),
-          path.resolve(__dirname, '../src/styles/'),
-          path.resolve(__dirname, '../src/design-tokens/'),
-        ],
-        loader: ExtractTextPlugin.extract('style', [
-          cssModulesConfig(stage),
-          'postcss',
-        ]),
-      });
-
-      config.loader(`css`, {
-        test: /\.css$/,
-        exclude: [
-          path.resolve(__dirname, '../src/components/'),
-          path.resolve(__dirname, '../src/styles/'),
-          path.resolve(__dirname, '../src/design-tokens/'),
-        ],
-        // loader: `null`,
-        loader: ExtractTextPlugin.extract([`css`]),
-      });
-      return config;
-
-    default:
-      return config;
-  }
 };

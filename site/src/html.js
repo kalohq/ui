@@ -3,13 +3,6 @@ import React from 'react';
 import favicon from 'static/favicon.png';
 
 let stylesStr;
-if (process.env.NODE_ENV === `production`) {
-  try {
-    stylesStr = require('!raw-loader!../public/styles.css'); // eslint-disable-line global-require, import/no-webpack-loader-syntax, import/no-unresolved
-  } catch (e) {
-    console.log(e); // eslint-disable-line no-console
-  }
-}
 
 export default function Html({headComponents, body, postBodyComponents}) {
   let css;

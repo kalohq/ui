@@ -20,7 +20,8 @@
     "precommit": "lint-staged",
     "generate:tokens": "node scripts/tokens.js",
     "generate:icons": "node scripts/icons.js",
-    "version": "npm run build"
+    "version": "npm run build",
+    "start-styleguide": "concurrently \"gulp watch\" \"cd site && gatsby develop\""
   },
   "lint-staged": {
     "*.js": [
@@ -47,6 +48,7 @@
     "babel-preset-stage-2": "6.24.1",
     "classnames": "2.2.5",
     "css-loader": "0.28.0",
+    "concurrently": "^4.1.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-15": "^1.3.0",
     "enzyme-to-json": "^3.3.5",
