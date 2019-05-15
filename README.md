@@ -1,5 +1,5 @@
 <h1 align="center">Kalo UI</h1>
-<p align="center">React and CSS kit for building user interfaces at Kalo.</p>
+<p align="center">Design system for building user interfaces at Kalo.</p>
 
 <p align="center">
   <img src="https://img.shields.io/npm/v/@kalo/ui.svg">
@@ -12,7 +12,7 @@
 
 **Welcome to Kalo UI.**
 
-This repo contains the source code for the design system, as well as the source for the documentation site that powers [kalo.design](http://kalo.design)
+This repo contains the source code for the design system, as well as the source for the documentation site that powers [kalo.design](http://kalo.design) The purpose of Kalo UI is to provide a UI kit of components to be used across all Kalo products, regardless of the technologies they are implememnted with. It should be our equivalent to Material, containing components, icons, design tokens and other tools required on Kalo products.
 
 ## Getting started
 
