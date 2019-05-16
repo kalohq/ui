@@ -26,7 +26,7 @@ describe('<TableCell />', () => {
           {
             context: {table: {head: true}},
           }
-        );
+        ).dive();
         const icon = result.find(Icon);
         expect(icon.props().children).toEqual('keyboard_arrow_down');
       });
@@ -41,7 +41,7 @@ describe('<TableCell />', () => {
           {
             context: {table: {head: true}},
           }
-        );
+        ).dive();
         const icon = result.find(Icon);
         expect(icon.props().children).toEqual('keyboard_arrow_up');
       });
@@ -57,7 +57,7 @@ describe('<TableCell />', () => {
         {
           context: {table: {body: true}},
         }
-      );
+      ).dive();
       const icon = result.find(Icon);
       expect(icon.length).toBe(0);
     });

@@ -34,6 +34,24 @@ export function TableCell(props) {
   );
 }
 
+TableCell.propTypes = {
+  children: PropTypes.any.isRequired,
+  id: PropTypes.string,
+  /** 'asc' | 'desc' */
+  order: PropTypes.oneOf(['asc', 'desc']),
+  orderBy: PropTypes.string,
+  table: PropTypes.shape({
+    head: PropTypes.bool,
+    body: PropTypes.bool,
+    footer: PropTypes.bool,
+    border: PropTypes.bool,
+  }),
+  header: PropTypes.bool,
+  active: PropTypes.bool,
+  sortable: PropTypes.bool,
+  outerBorder: PropTypes.bool,
+};
+
 export default compose(
   setDisplayName('TableCell'),
   getContext({
