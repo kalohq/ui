@@ -1,4 +1,3 @@
-/* @flow */
 import React from 'react';
 import {get} from 'lodash';
 import cx from 'classnames';
@@ -10,30 +9,10 @@ import {UIBase} from '../layout';
 
 import styles from './table.css';
 
-type TTableCellProps = {
-  children: any,
-  id?: string,
-  order?: 'asc' | 'desc',
-  orderBy?: string,
-  className?: string | Object,
-  // Provided via context
-  table: {
-    head?: boolean,
-    body?: boolean,
-    footer?: boolean,
-    border?: boolean,
-  },
-  // Derived from props
-  header: boolean,
-  active: boolean,
-  sortable: boolean,
-  outerBorder: boolean,
-};
-
-export function TableCell(props: TTableCellProps) {
+export function TableCell(props) {
   const {active, children, header, order, className, ...otherProps} = props;
+  const style = pickStyles(otherProps);
   const icon = `keyboard_arrow_${order === 'desc' ? 'down' : 'up'}`;
-  // const Component = header ? StyledTableHeaderCell : StyledTableCell;
 
   const _classNames = cx(
     {

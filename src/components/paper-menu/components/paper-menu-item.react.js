@@ -1,5 +1,5 @@
-/* @flow */
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import {isString} from 'lodash';
 import cx from 'classnames';
 
@@ -8,25 +8,10 @@ import Icon from '../../icon';
 
 import styles from './paper-menu-item.css';
 
-type Props = {
-  icon?: React.Node | string,
-  iconAfter?: React.Node | string,
-  children?: React.Node,
-  active?: boolean,
-  disabled?: boolean,
-  highlighted?: boolean,
-  padded?: boolean,
-  name?: string,
-  className?: string,
-  onClick?: ?Function,
-  component?: any,
-  minWidth?: number,
-};
-
 /**
  * Generic item container for use in paper menus
  */
-export default function PaperMenuItem(props: Props) {
+const PaperMenuItem = props => {
   const {
     icon,
     children,
@@ -82,4 +67,22 @@ export default function PaperMenuItem(props: Props) {
       )}
     </UIBase>
   );
-}
+};
+
+PaperMenuItem.propTypes = {
+  icon: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  iconAfter: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  children: PropTypes.node,
+  active: PropTypes.bool,
+  success: PropTypes.bool,
+  disabled: PropTypes.bool,
+  highlighted: PropTypes.bool,
+  padded: PropTypes.bool,
+  name: PropTypes.string,
+  className: PropTypes.string,
+  onClick: PropTypes.func,
+  component: PropTypes.any,
+  minWidth: PropTypes.number,
+};
+
+export default PaperMenuItem;

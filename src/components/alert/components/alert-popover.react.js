@@ -1,17 +1,11 @@
-/* @flow */
 import * as React from 'react';
-import {Box} from '../../layout';
+import PropTypes from 'prop-types';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
-type TProps = {
-  children: React.Element<*>,
-  topOffset?: number,
-  zIndex?: number,
-};
+import {Box} from '../../layout';
 
-export default function AlertPopover(props: TProps) {
+const AlertPopover = props => {
   const {children, topOffset = 0, zIndex = 999} = props;
-
   return (
     <CSSTransitionGroup
       transitionName="t-slide-from-right"
@@ -36,4 +30,15 @@ export default function AlertPopover(props: TProps) {
       )}
     </CSSTransitionGroup>
   );
-}
+};
+
+AlertPopover.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.arrayOf(PropTypes.node).isRequired,
+  ]),
+  topOffset: PropTypes.number,
+  zIndex: PropTypes.number,
+};
+
+export default AlertPopover;

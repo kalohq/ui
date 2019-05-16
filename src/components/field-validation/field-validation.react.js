@@ -1,22 +1,18 @@
-/* @flow */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import coreStyles from './field-validation.css';
 
-export type Validation = {
-  message?: string,
+const FieldValidation = ({validation}) => (
+  <span className={coreStyles['ui-field-validation']}>
+    {validation.message}
+  </span>
+);
+
+FieldValidation.propTypes = {
+  validation: PropTypes.shape({
+    message: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
-type TProps = {
-  validation: Validation,
-};
-
-export default function FieldValidation(props: TProps) {
-  const {validation} = props;
-
-  return (
-    <span className={coreStyles['ui-field-validation']}>
-      {validation.message}
-    </span>
-  );
-}
+export default FieldValidation;

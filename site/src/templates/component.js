@@ -177,11 +177,6 @@ export const pageQuery = graphql`
               name
               raw
             }
-            flowType {
-              name
-              raw
-              nullable
-            }
           }
         }
       }

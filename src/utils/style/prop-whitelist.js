@@ -1,6 +1,4 @@
 /**
- * @flow
- *
  * Lookup to determine what props we allow through to the DOM
  *
  */

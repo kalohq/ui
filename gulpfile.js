@@ -15,7 +15,7 @@ gulp.task('shared:css', () => {
 });
 
 /**
- * Compile React components JS from ES6/JSX down to ES5 and remove flowtypes
+ * Compile React components JS from ES6/JSX down to ES5
  */
 gulp.task('react:js', () =>
   gulp
@@ -38,7 +38,7 @@ gulp.task('react:js', () =>
 );
 
 /**
- * Compile vanilla JS from ES6 down to ES5 and remove flowtypes
+ * Compile vanilla JS from ES6 down to ES5
  */
 gulp.task('vanilla:js', () =>
   gulp

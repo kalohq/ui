@@ -1,5 +1,5 @@
-/* @flow */
 import React, {PureComponent} from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import {HotKeys} from 'react-hotkeys';
 
@@ -8,35 +8,29 @@ import SeamlessButton from '../seamless-button';
 
 import styles from './modal.css';
 
-type TProps = {
-  /** The main body of the modal */
-  children: React$Node,
-  /** The main heading of the modal */
-  title: string,
-  /** A function to call when closing the modal - If not set, the modal will not be dismissable */
-  onClose?: Function,
-  /** A set of actions to be displayed in the modal footer */
-  actions?: React$Node,
-  /** Is the modal open or not */
-  open?: boolean,
-  /** Allows content to scroll underneath the header */
-  hasFixedHeader?: boolean,
-  /** Allows content to scroll underneath the footer */
-  hasFixedFooter?: boolean,
-};
-
-export default class Modal extends PureComponent<TProps> {
-  __handlers__: Object;
-  onEscHotkey: Function;
-  modalElement: React$Node;
+export default class Modal extends PureComponent {
+  static propTypes = {
+    /** The main body of the modal */
+    children: PropTypes.node.isRequired,
+    /** The main heading of the modal */
+    title: PropTypes.string.isRequired,
+    /** A function to call when closing the modal - If not set, the modal will not be dismissable */
+    onClose: PropTypes.oneOfType([PropTypes.func, PropTypes.bool]),
+    /** A set of actions to be displayed in the modal footer */
+    actions: PropTypes.node,
+    /** Is the modal open or not */
+    open: PropTypes.bool,
+    /** Allows content to scroll underneath the header */
+    hasFixedHeader: PropTypes.bool,
+    /** Allows content to scroll underneath the footer */
+    hasFixedFooter: PropTypes.bool,
+  };
 
   constructor() {
     super();
-
     this.__handlers__ = {
       esc: this.onEscHotkey.bind(this),
     };
-
     this.onEscHotkey = this.onEscHotkey.bind(this);
   }
 
@@ -44,7 +38,7 @@ export default class Modal extends PureComponent<TProps> {
     if (this.props.onClose) this.props.onClose();
   }
 
-  preventBackgroundScrolling(type: 'add' | 'remove') {
+  preventBackgroundScrolling(type) {
     if (document.body) {
       if (type === 'add') {
         document.body.style.cssText =
@@ -55,9 +49,8 @@ export default class Modal extends PureComponent<TProps> {
     }
   }
 
-  componentWillReceiveProps(nextProps: TProps) {
+  componentWillReceiveProps(nextProps) {
     if (nextProps.open === true && !this.props.open && this.modalElement) {
-      // $FlowFixMe
       this.modalElement.focus();
       this.preventBackgroundScrolling('add');
     } else {

@@ -1,4 +1,3 @@
-/* @flow */
 import React from 'react';
 
 import theme from '../../../design-tokens/tokens.theme.js';

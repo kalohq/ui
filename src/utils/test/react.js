@@ -1,14 +1,8 @@
-/* @flow */
 import * as React from 'react';
 
-type RC = React.ComponentType<*> | (Object => React.Node);
-
 /** Provide a uniform way of easily creating component fixtures for testing */
-export const testComponent = (
-  Component: RC,
-  defaultProps?: () => Object = () => ({})
-) => {
-  return (otherProps?: Object, hoc?: RC => RC) => {
+export const testComponent = (Component, defaultProps = () => ({})) => {
+  return (otherProps, hoc) => {
     // our final props for the component merged from default
     // and per-test
     const props = {
@@ -24,7 +18,7 @@ export const testComponent = (
 
     // shallow render our component, diving until we reach the
     // original component. useful for testing hocs!
-    const render = (doRender: Function) => {
+    const render = doRender => {
       return doRender(element);
     };
 
@@ -40,4 +34,4 @@ export const testComponent = (
 export const TargetComponent = () => null;
 
 /** A simple mock component which will provide access to all props passed */
-export const MockComponent = (props: Object) => <TargetComponent {...props} />;
+export const MockComponent = props => <TargetComponent {...props} />;

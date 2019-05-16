@@ -1,40 +1,16 @@
-/* @flow */
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
+
 import Icon from '../icon';
 import {UIBase} from '../layout';
 
-import type {TEXT_COLOR} from '../text/constants';
+import {TEXT_COLOR} from '../text/constants';
 
 import styles from './heading.css';
 import colors from '../../design-tokens/kalo-ui-colors.css';
 
-type TProps = {
-  /** The heading content */
-  children: React.Node,
-  /** Sets the text color and fill color of any child icon */
-  color?: TEXT_COLOR,
-  /** Sets the size of the heading */
-  size?: 'extra-large' | 'large' | 'medium' | 'small' | 'extra-small',
-  /** Sets interactive styles for the underlying text component - See Text component */
-  hover?: 'underline' | 'none',
-  /** Displays an icon before the heading */
-  icon?: string,
-  /** Displays an icon after the heading */
-  iconAfter?: string,
-  /** Adds padding between the icon and heading text */
-  iconPadding?: number,
-  /** The underlying component */
-  component?: string,
-  /** Class to pass down */
-  className?: string,
-  /** Should the heading wrap on to multiple lines? */
-  multiline?: boolean,
-  /* Text alignment of the heading */
-  align?: 'unset' | 'left' | 'center' | 'right' | 'inherit',
-};
-
-export default function Heading(props: TProps) {
+const Heading = props => {
   const {
     children,
     color = 'navy900',
@@ -85,4 +61,37 @@ export default function Heading(props: TProps) {
       )}
     </UIBase>
   );
-}
+};
+
+Heading.propTypes = {
+  /** The heading content */
+  children: PropTypes.node.isRequired,
+  /** Sets the text color and fill color of any child icon */
+  color: PropTypes.oneOf(TEXT_COLOR),
+  /** Sets the size of the heading */
+  size: PropTypes.oneOf([
+    'extra-large',
+    'large',
+    'medium',
+    'small',
+    'extra-small',
+  ]),
+  /** Sets interactive styles for the underlying text component - See Text component */
+  hover: PropTypes.oneOf(['underline', 'none']),
+  /** Displays an icon before the heading */
+  icon: PropTypes.string,
+  /** Displays an icon after the heading */
+  iconAfter: PropTypes.string,
+  /** Adds padding between the icon and heading text */
+  iconPadding: PropTypes.number,
+  /** The underlying component */
+  component: PropTypes.string,
+  /** Class to pass down */
+  className: PropTypes.string,
+  /** Should the heading wrap on to multiple lines? */
+  multiline: PropTypes.bool,
+  /* Text alignment of the heading */
+  align: PropTypes.oneOf(['unset', 'left', 'center', 'right', 'inherit']),
+};
+
+export default Heading;

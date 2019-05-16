@@ -1,15 +1,17 @@
-/* @flow */
 import * as React from 'react';
+import PropTypes from 'prop-types';
 
-type TProps = {
-  /** A value that's passed back via onSelect when a user selects the option */
-  value?: any,
-  /** Whether or not this option is selected. */
-  selected?: boolean,
-  /** Dropdown children */
-  children: React.Node,
+const Option = props => {
+  return <div>{props.children}</div>;
 };
 
-export default function Option(props: TProps) {
-  return <div>{props.children}</div>;
-}
+Option.propTypes = {
+  /** A value that's passed back via onSelect when a user selects the option */
+  value: PropTypes.any,
+  /** Whether or not this option is selected. */
+  selected: PropTypes.bool,
+  /** Dropdown children */
+  children: PropTypes.node.isRequired,
+};
+
+export default Option;

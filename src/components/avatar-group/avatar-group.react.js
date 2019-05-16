@@ -1,16 +1,11 @@
-/* @flow */
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import styles from './avatar-group.css';
 import avatarStyles from '../avatar/avatar.css';
 
-type TProps = {
-  /** An iterable set of children Avatar components */
-  children: Iterable<React.Element<*>>,
-};
-
-export default function AvatarGroup(props: TProps) {
+const AvatarGroup = props => {
   const {children} = props;
 
   const _classNames = cx(styles['ui-avatar-group']);
@@ -26,7 +21,7 @@ export default function AvatarGroup(props: TProps) {
         React.Children.map(
           slicedChildren,
           child =>
-            child && // $FlowFixMe
+            child &&
             React.cloneElement(child, {
               isGrouped: true,
             })
@@ -43,4 +38,11 @@ export default function AvatarGroup(props: TProps) {
       )}
     </div>
   );
-}
+};
+
+AvatarGroup.propTypes = {
+  /** An iterable set of children Avatar components */
+  children: PropTypes.arrayOf(PropTypes.node).isRequired,
+};
+
+export default AvatarGroup;

@@ -1,5 +1,5 @@
-/* @flow */
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import {UIBase} from '../layout';
@@ -7,14 +7,7 @@ import Icon from '../icon';
 
 import styles from './tag.css';
 
-type TProps = {
-  children: string,
-  avatar?: React$Node,
-  isLink?: boolean,
-  onRemove?: Function,
-};
-
-export default function Tag(props: TProps) {
+const Tag = props => {
   const {children, avatar, isLink, onRemove, ...otherProps} = props;
 
   const _classNames = cx({
@@ -40,4 +33,13 @@ export default function Tag(props: TProps) {
       )}
     </UIBase>
   );
-}
+};
+
+Tag.propTypes = {
+  children: PropTypes.string.isRequired,
+  avatar: PropTypes.node,
+  isLink: PropTypes.bool,
+  onRemove: PropTypes.func,
+};
+
+export default Tag;

@@ -1,5 +1,3 @@
-/* @flow */
-
 /** Multiplier for textual content "size" */
 export const TEXT_SIZE_MULTIPLIER = 10;
 

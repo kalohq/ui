@@ -1,5 +1,3 @@
-/* @flow */
-
 export * from './skeleton.react';
 export {default as SkeletonAvatar} from './components/skeleton-avatar.react';
 export {default as SkeletonButton} from './components/skeleton-button.react';

@@ -1,4 +1,3 @@
-/* @flow */
 import React from 'react';
 
 import Table, {TableHead, TableRow, TableCell, TableBody} from '../';

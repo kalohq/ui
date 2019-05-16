@@ -1,4 +1,3 @@
-/* @flow */
 /* eslint-env jest */
 import expect from 'expect';
 import {shallow} from 'enzyme';

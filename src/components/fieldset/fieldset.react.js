@@ -1,7 +1,6 @@
-/* @flow */
 import * as React from 'react';
 import cx from 'classnames';
-
+import PropTypes from 'prop-types';
 import {pickStyles} from '../../utils/style';
 
 import {UIBase} from '../layout';
@@ -10,11 +9,7 @@ import Text from '../text';
 
 import styles from './fieldset.css';
 
-export function FieldsetHeader(props: {
-  legend: string,
-  description?: string,
-  meta?: string,
-}) {
+export const FieldsetHeader = props => {
   const {legend, description, meta} = props;
 
   return (
@@ -43,30 +38,15 @@ export function FieldsetHeader(props: {
       )}
     </UIBase>
   );
-}
-
-type TProps = {
-  /** Fieldset children to display within the fieldset content area */
-  children?: React.Node,
-  /** Show fieldset as slightly inset into the form? Good for separation between fiedsets. */
-  inset?: boolean,
-  /** A heading for your legend */
-  legend?: string,
-  /** Provide further description to the user about this section (fieldset) */
-  description?: string,
-  /** Meta text to render next to fieldset legend text */
-  legendMeta?: string,
-  /** onClick passthrough */
-  onClick?: Function,
-  /** Will be set on the root element */
-  name?: string,
-  /** Class name to style your fieldset */
-  className?: string | Object,
-  /** Adds a bottom border */
-  bordered?: boolean,
 };
 
-export default function Fieldset(props: TProps) {
+FieldsetHeader.propTypes = {
+  legend: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  meta: PropTypes.string,
+};
+
+const Fieldset = props => {
   const {
     children,
     inset = false,
@@ -109,4 +89,31 @@ export default function Fieldset(props: TProps) {
       {children}
     </UIBase>
   );
-}
+};
+
+Fieldset.propTypes = {
+  /** Fieldset children to display within the fieldset content area */
+  children: PropTypes.node,
+  /** Show fieldset as slightly inset into the form? Good for separation between fiedsets. */
+  inset: PropTypes.bool,
+  /** A heading for your legend */
+  legend: PropTypes.string,
+  /** Provide further description to the user about this section (fieldset) */
+  description: PropTypes.string,
+  /** Meta text to render next to fieldset legend text */
+  legendMeta: PropTypes.string,
+  /** onClick passthrough */
+  onClick: PropTypes.func,
+  /** Will be set on the root element */
+  name: PropTypes.string,
+  /** Class name to style your fieldset */
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string),
+    PropTypes.object,
+  ]),
+  /** Adds a bottom border */
+  bordered: PropTypes.bool,
+};
+
+export default Fieldset;

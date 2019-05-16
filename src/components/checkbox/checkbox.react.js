@@ -1,5 +1,5 @@
-/* @flow */
 import React, {PureComponent} from 'react';
+import PropTypes from 'prop-types';
 import {isString, uniqueId} from 'lodash';
 import cx from 'classnames';
 
@@ -8,29 +8,22 @@ import {pickStyles} from '../../utils/style';
 
 import coreStyles from './checkbox.css';
 
-type TProps = {
-  size?: 'small' | 'medium' | 'large',
-  checked?: ?boolean,
-  indeterminate?: ?boolean,
-  disabled?: boolean,
-  label?: string | React$Node,
-  hint?: string,
-  onClick?: Function,
-  name?: string,
-};
+export default class Checkbox extends PureComponent {
+  static propTypes = {
+    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    checked: PropTypes.bool,
+    indeterminate: PropTypes.bool,
+    disabled: PropTypes.bool,
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+    hint: PropTypes.string,
+    onClick: PropTypes.func,
+    name: PropTypes.string,
+  };
 
-export default class Checkbox extends PureComponent<TProps> {
-  setIndeterminateState: Function;
-  setCheckboxRef: Function;
-  checkboxElement: HTMLInputElement;
-
-  constructor(props: TProps) {
+  constructor(props) {
     super(props);
-
-    // $FlowFixMe
     this.checkboxElement = undefined;
     this.setIndeterminateState = this.setIndeterminateState.bind(this);
-
     this.setCheckboxRef = this.setCheckboxRef.bind(this);
   }
 
@@ -38,15 +31,15 @@ export default class Checkbox extends PureComponent<TProps> {
     this.setIndeterminateState(this.props);
   }
 
-  componentWillReceiveProps(newProps: TProps) {
+  componentWillReceiveProps(newProps) {
     this.setIndeterminateState(newProps);
   }
 
-  setCheckboxRef(element: HTMLInputElement) {
+  setCheckboxRef(element) {
     this.checkboxElement = element;
   }
 
-  setIndeterminateState(props: TProps) {
+  setIndeterminateState(props) {
     if (this.checkboxElement) {
       if (props.indeterminate && !props.checked) {
         this.checkboxElement.indeterminate = true;

@@ -1,16 +1,9 @@
-/* @flow */
 import * as React from 'react';
+import PropTypes from 'prop-types';
 
 import {Box} from '../../layout';
 
-/** Skeleton page */
-
-type TProps = {
-  width?: number,
-  children: React.Node,
-};
-
-export default function SkeletonPage(props: TProps) {
+const SkeletonPage = props => {
   const {width = 1180, children, ...otherProps} = props;
   return (
     <Box>
@@ -19,4 +12,11 @@ export default function SkeletonPage(props: TProps) {
       </Box>
     </Box>
   );
-}
+};
+
+SkeletonPage.propTypes = {
+  width: PropTypes.number,
+  children: PropTypes.node.isRequired,
+};
+
+export default SkeletonPage;

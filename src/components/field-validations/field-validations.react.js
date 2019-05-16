@@ -1,5 +1,5 @@
-/* @flow */
 import React from 'react';
+import PropTypes from 'prop-types';
 import {List} from 'immutable';
 import cx from 'classnames';
 
@@ -7,18 +7,8 @@ import FieldValidation from '../field-validation';
 import type Validation from '../field-validation';
 
 import styles from './field-validations.css';
-export type Validations = List<Validation>;
 
-type TProps = {
-  /** A list of validations to be displayed to the user */
-  validations?: Validations,
-  /** Visually centeres the validations */
-  centered?: boolean,
-  /** Any classes to pass down */
-  className?: string | Object,
-};
-
-export default function FieldValidations(props: TProps) {
+const FieldValidations = (props) => {
   const {validations, centered, className} = props;
 
   const _classNames = cx(
@@ -39,3 +29,17 @@ export default function FieldValidations(props: TProps) {
     </div>
   );
 }
+
+FieldValidations.propTypes = {
+  /** A list of validations to be displayed to the user */
+  validations: PropTypes.array,
+  /** Visually centeres the validations */
+  centered: PropTypes.bool,,
+  /** Any classes to pass down */
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+  ]),
+}
+
+export default FieldValidations;

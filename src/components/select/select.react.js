@@ -1,5 +1,5 @@
-/* @flow */
 import React, {PureComponent} from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import Text from '../text';
@@ -13,27 +13,23 @@ import {cleanProps} from '../../utils/style';
  * The kalo generic select component
  */
 
-type TProps = {
-  children: React$Element<*>,
-  selection?: any,
-  onSelect?: Function,
-  /** Placeholder copy to show before a selection has been made */
-  placeholder?: React$Node,
-  nullable?: boolean,
-  formatSelection?: Function,
-  onBlur?: Function,
-  /** Disables user interaction, but can still display a value */
-  readonly?: boolean,
-  /** Visually disables user interaction */
-  disabled?: boolean,
-  empty?: string,
-};
+export default class Select extends PureComponent {
+  static propTypes = {
+    children: PropTypes.node.isRequired,
+    selection: PropTypes.any,
+    onSelect: PropTypes.func,
+    /** Placeholder copy to show before a selection has been made */
+    placeholder: PropTypes.node,
+    nullable: PropTypes.bool,
+    formatSelection: PropTypes.func,
+    onBlur: PropTypes.func,
+    /** Disables user interaction, but can still display a value */
+    readonly: PropTypes.bool,
+    /** Visually disables user interaction */
+    disabled: PropTypes.bool,
+    empty: PropTypes.string,
+  };
 
-type TState = {
-  open: boolean,
-};
-
-export default class Select extends PureComponent<TProps, TState> {
   static defaultProps = {
     onSelect: () => {},
     center: false,
@@ -47,18 +43,11 @@ export default class Select extends PureComponent<TProps, TState> {
 
   static displayName = 'Select';
 
-  onToggle: Function;
-  onSelect: Function;
-  onClose: Function;
-  onClear: Function;
-
   constructor() {
     super();
-
     this.state = {
       open: false,
     };
-
     this.onToggle = this.onToggle.bind(this);
     this.onSelect = this.onSelect.bind(this);
     this.onClose = this.onClose.bind(this);
@@ -93,13 +82,13 @@ export default class Select extends PureComponent<TProps, TState> {
     this.close();
   }
 
-  onClear(event: SyntheticEvent<*>) {
+  onClear(event) {
     if (this.props.onSelect) this.props.onSelect(undefined);
     this.close();
     event.stopPropagation();
   }
 
-  onSelect(value: SyntheticEvent<*>) {
+  onSelect(value) {
     if (this.props.onSelect) this.props.onSelect(value);
     this.close();
   }

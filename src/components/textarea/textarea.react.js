@@ -1,6 +1,6 @@
-/* @flow */
 import React, {PureComponent} from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import {omit} from 'lodash';
 import cx from 'classnames';
 
@@ -16,7 +16,7 @@ import styles from './textarea.css';
  * text measurement
  */
 
-const escapeTags = (str: string): string =>
+const escapeTags = str =>
   str
     .replace(/&/g, '&amp;')
     .replace(/"/g, '&quot;')
@@ -36,32 +36,32 @@ const escapeTags = (str: string): string =>
  *     out of sync
  */
 
-type TProps = {
-  /** The minimum number of rows to be displayed on render */
-  minRows?: number,
-  /** Should the component expand as more text is added? */
-  expand?: boolean,
-  lineBuffer?: number,
-  /** A function to call on keyUp */
-  onKeyUp?: Function,
-  /** Should the component animate as it expands? */
-  animate?: boolean,
-  /** A class to pass down */
-  className?: string,
-  /** Disables user interaction, but can still display a value */
-  readonly?: boolean,
-  /** A function to call onChange */
-  onChange?: Function,
-  /** The overall theme for the component */
-  theme?: 'default' | 'transparent',
-  /** A function to call when a user hits the return key */
-  onReturn?: Function,
-  /** Is is disabled? */
-  disabled?: boolean,
-  style?: Object,
-};
+export default class Textarea extends PureComponent {
+  static propTypes = {
+    /** The minimum number of rows to be displayed on render */
+    minRows: PropTypes.number,
+    /** Should the component expand as more text is added? */
+    expand: PropTypes.bool,
+    lineBuffer: PropTypes.number,
+    /** A function to call on keyUp */
+    onKeyUp: PropTypes.func,
+    /** Should the component animate as it expands? */
+    animate: PropTypes.bool,
+    /** A class to pass down */
+    className: PropTypes.string,
+    /** Disables user interaction, but can still display a value */
+    readonly: PropTypes.bool,
+    /** A function to call onChange */
+    onChange: PropTypes.func,
+    /** The overall theme for the component */
+    theme: PropTypes.string,
+    /** A function to call when a user hits the return key */
+    onReturn: PropTypes.func,
+    /** Is is disabled? */
+    disabled: PropTypes.bool,
+    style: PropTypes.shape({}),
+  };
 
-export default class Textarea extends PureComponent<TProps> {
   static defaultProps = {
     minRows: 2,
     lineBuffer: 2,
@@ -71,10 +71,6 @@ export default class Textarea extends PureComponent<TProps> {
   };
 
   static displayName = 'Textarea';
-
-  onKeyDown: Function;
-  onKeyUp: Function;
-  onScroll: Function;
 
   constructor() {
     super();
@@ -94,11 +90,10 @@ export default class Textarea extends PureComponent<TProps> {
   }
 
   componentWillUnmount() {
-    // $FlowFixMe
     removeNode(this.mirror);
   }
 
-  onKeyDown(event: SyntheticEvent<*>) {
+  onKeyDown(event) {
     if (
       !!this.props.onReturn &&
       event.which === 13 &&
@@ -115,7 +110,7 @@ export default class Textarea extends PureComponent<TProps> {
    * Key up is hooked to watch for content changes
    * @param {Event} event
    */
-  onKeyUp(event: SyntheticEvent<*>) {
+  onKeyUp(event) {
     this.update();
 
     if (this.props.onKeyUp) {
@@ -128,11 +123,10 @@ export default class Textarea extends PureComponent<TProps> {
    * to fit content
    * @param {Event} event
    */
-  onScroll(event: SyntheticWheelEvent<*>) {
+  onScroll(event) {
     if (this.props.expand) {
       event.preventDefault();
       const el = ReactDOM.findDOMNode(this);
-      // $FlowFixMe
       if (el) el.scrollTop = 0;
     }
   }
@@ -144,7 +138,6 @@ export default class Textarea extends PureComponent<TProps> {
   update() {
     if (this.props.expand) {
       const textarea = ReactDOM.findDOMNode(this);
-      // $FlowFixMe
       const value = textarea ? textarea.value : null;
 
       // If the value hasn’t changed we don’t need to do anything
@@ -152,13 +145,11 @@ export default class Textarea extends PureComponent<TProps> {
         return false;
       }
 
-      // $FlowFixMe
       const mirror = this.mirror;
       let html = '';
 
       mirror.style.display = 'block';
 
-      // $FlowFixMe
       for (let i = 0; i < this.props.minRows; i++) {
         html += '<br/>';
       }
@@ -168,7 +159,6 @@ export default class Textarea extends PureComponent<TProps> {
 
       html = escapeTags(String(value));
 
-      // $FlowFixMe
       for (let i = 0; i < this.props.lineBuffer; i++) {
         html += '<br/>';
       }
@@ -179,11 +169,9 @@ export default class Textarea extends PureComponent<TProps> {
       mirror.style.display = 'none';
 
       if (!this.state || this.state.height !== mirrorHeight) {
-        // $FlowFixMe
         this.setState({height: mirrorHeight});
       }
 
-      // $FlowFixMe
       this.__lastUpdatedValue__ = value;
     }
     return true;
@@ -197,14 +185,11 @@ export default class Textarea extends PureComponent<TProps> {
     if (this.props.expand) {
       // Create a new mirror if we do not have one
       if (!this.mirror) {
-        // $FlowFixMe
         this.mirror = document.createElement('div');
-        // $FlowFixMe
         document.body.appendChild(this.mirror);
       }
 
       const textarea = ReactDOM.findDOMNode(this);
-      // $FlowFixMe
       const mirror = this.mirror;
       const style = window.getComputedStyle(textarea);
 

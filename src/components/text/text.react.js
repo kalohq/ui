@@ -1,5 +1,5 @@
-/* @flow */
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import {UIBase} from '../layout';
@@ -8,38 +8,9 @@ import styles from './text.css';
 import colors from '../../design-tokens/kalo-ui-colors.css';
 import hoverColors from '../../design-tokens/kalo-ui-hover-colors.css';
 
-import type {
-  TEXT_WEIGHT,
-  TEXT_SIZE,
-  TEXT_COLOR,
-  TEXT_HOVER_COLOR,
-  TEXT_ALIGN,
-} from './constants';
+import {TEXT_WEIGHT, TEXT_SIZE, TEXT_COLOR, TEXT_ALIGN} from './constants';
 
-type TProps = {
-  weight?: TEXT_WEIGHT,
-  size?: TEXT_SIZE,
-  color?: TEXT_COLOR,
-  hoverColor?: TEXT_HOVER_COLOR,
-  align?: TEXT_ALIGN,
-  domElement?: Function | string,
-  component?: Function | string,
-  multiline?: boolean,
-  children?: React.Node,
-  className?: string,
-  onClick?: Function,
-  interactive?: boolean,
-  notInteractive?: boolean,
-  noUnderline?: boolean,
-  resetTransform?: boolean,
-  dangerouslySetInnerHTML?: Object,
-  target?: string,
-  href?: string,
-  name?: string,
-  theme?: Object,
-};
-
-export default function Text(props: TProps) {
+const Text = props => {
   const {
     weight = 'normal',
     size = 'small',
@@ -81,4 +52,29 @@ export default function Text(props: TProps) {
       {children}
     </UIBase>
   );
-}
+};
+
+Text.propTypes = {
+  weight: PropTypes.oneOf(TEXT_WEIGHT),
+  size: PropTypes.oneOf(TEXT_SIZE),
+  color: PropTypes.oneOf(TEXT_COLOR),
+  hoverColor: PropTypes.oneOf(TEXT_COLOR),
+  align: PropTypes.oneOf(TEXT_ALIGN),
+  domElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  multiline: PropTypes.bool,
+  children: PropTypes.node,
+  className: PropTypes.string,
+  onClick: PropTypes.func,
+  interactive: PropTypes.bool,
+  notInteractive: PropTypes.bool,
+  noUnderline: PropTypes.bool,
+  resetTransform: PropTypes.bool,
+  dangerouslySetInnerHTML: PropTypes.object,
+  target: PropTypes.string,
+  href: PropTypes.string,
+  name: PropTypes.string,
+  theme: PropTypes.object,
+};
+
+export default Text;

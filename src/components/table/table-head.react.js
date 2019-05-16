@@ -1,18 +1,13 @@
-/* @flow */
 import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
+import styled from 'react-emotion';
 
 import {UIBase} from '../layout';
 
 import styles from './table.css';
 
-type TProps = {
-  children: React$Node,
-  className?: string | Object,
-};
-
-export class TableHead extends React.Component<TProps> {
+export class TableHead extends React.Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
   };

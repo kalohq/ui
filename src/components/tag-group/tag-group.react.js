@@ -1,5 +1,5 @@
-/* @flow */
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import {UIBase} from '../layout';
@@ -7,14 +7,7 @@ import Text from '../text';
 
 import styles from './tag-group.css';
 
-type TProps = {
-  children: Iterable<React.Element<*>>,
-  limit?: number,
-  showOverflow?: boolean,
-  className?: string,
-};
-
-export default function TagGroup(props: TProps) {
+const TagGroup = props => {
   const {children, limit, showOverflow, className, ...otherProps} = props;
 
   const limitedChildren = limit ? [...children].slice(0, limit) : [...children];
@@ -45,4 +38,13 @@ export default function TagGroup(props: TProps) {
       )}
     </UIBase>
   );
-}
+};
+
+TagGroup.propTypes = {
+  children: PropTypes.array,
+  limit: PropTypes.number,
+  showOverflow: PropTypes.bool,
+  className: PropTypes.string,
+};
+
+export default TagGroup;

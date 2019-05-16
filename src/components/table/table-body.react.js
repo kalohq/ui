@@ -1,4 +1,3 @@
-/* @flow */
 import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
@@ -7,13 +6,7 @@ import {UIBase} from '../layout';
 
 import styles from './table.css';
 
-type TProps = {
-  border?: boolean,
-  children: React$Node,
-  className?: string | Object,
-};
-
-export class TableBody extends React.Component<TProps> {
+export class TableBody extends React.Component {
   static propTypes = {
     border: PropTypes.bool,
     children: PropTypes.node.isRequired,

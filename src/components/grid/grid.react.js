@@ -1,6 +1,7 @@
-/* @flow */
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
+
 import {parseStyleProps, cleanProps} from '../../utils/style';
 
 import styles from './grid.css';
@@ -9,13 +10,7 @@ import styles from './grid.css';
  * Grid Container
  */
 
-type TGridProps = {
-  children?: any,
-  fluid?: boolean,
-  className?: string | Object,
-};
-
-export function Grid(props: TGridProps) {
+export function Grid(props) {
   const {children, fluid, className, ...otherProps} = props;
 
   const _classNames = cx(
@@ -33,17 +28,17 @@ export function Grid(props: TGridProps) {
   );
 }
 
+Grid.propTypes = {
+  children: PropTypes.any,
+  fluid: PropTypes.bool,
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+};
+
 /**
  * Generic Spacer
  */
 
-type TSpacerProps = {
-  is?: string,
-  children?: any,
-  className?: string | Object,
-};
-
-const Spacer = (originalProps: TSpacerProps) => {
+const Spacer = originalProps => {
   const {
     is: Element = 'div',
     children,
@@ -64,27 +59,17 @@ const Spacer = (originalProps: TSpacerProps) => {
   );
 };
 
+Spacer.propTypes = {
+  is: PropTypes.string,
+  children: PropTypes.any,
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+};
+
 /**
  * Row
  */
 
-type TRowProps = {
-  children?: any,
-  gutters?:
-    | 'extra-small'
-    | 'small'
-    | 'medium'
-    | 'large'
-    | 'extra-large'
-    | 'none',
-  collapse?: boolean,
-  reverse?: boolean,
-  alignItems?: Array<*> | string,
-  justifyContent?: Array<*> | string,
-  className?: string | Object,
-};
-
-export function Row(props: TRowProps) {
+export function Row(props) {
   const {
     children,
     reverse,
@@ -135,18 +120,28 @@ export function Row(props: TRowProps) {
   );
 }
 
+Row.propTypes = {
+  children: PropTypes.any,
+  gutters: PropTypes.oneOf([
+    'extra-small',
+    'small',
+    'medium',
+    'large',
+    'extra-large',
+    'none',
+  ]),
+  collapse: PropTypes.bool,
+  reverse: PropTypes.bool,
+  alignItems: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
+  justifyContent: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+};
+
 /**
  * Column
  */
 
-type TColumnProps = {
-  columns?: Array<*> | number,
-  children?: any,
-  largeColumn?: number,
-  className?: string | Object,
-};
-
-export function Column(props: TColumnProps) {
+export function Column(props) {
   const {columns = [12], children, className, ...otherProps} = props;
 
   const [columnXS, columnSM, columnMD, columnLG, columnXL] = Array.isArray(
@@ -172,3 +167,10 @@ export function Column(props: TColumnProps) {
     </Spacer>
   );
 }
+
+Column.propTypes = {
+  columns: PropTypes.oneOfType([PropTypes.array, PropTypes.number]),
+  children: PropTypes.any,
+  largeColumn: PropTypes.number,
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+};

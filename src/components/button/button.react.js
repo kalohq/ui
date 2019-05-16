@@ -1,5 +1,5 @@
-/* @flow */
 import React, {PureComponent} from 'react';
+import PropTypes from 'prop-types';
 import {isString} from 'lodash';
 import cx from 'classnames';
 
@@ -16,68 +16,67 @@ const ICON_SIZE = {
   'extra-large': 24,
 };
 
-type TProps = {
-  /** Button contents */
-  children?: any,
-  /** A message to display after loading */
-  message?: string,
-  /** An ARIA role to pass down */
-  role?: string,
-  /** Is the button disabled? */
-  disabled?: boolean,
-  /** An icon from our icon set to display */
-  icon?: string,
-  /** Is the icon the only child? The button will be displayed as a square if true */
-  loneIcon?: boolean,
-  /** Should the button expand to 100% of the parent? */
-  wide?: boolean,
-  /** The visual size */
-  size?: 'small' | 'medium' | 'large' | 'extra-large',
-  /** The visual theme */
-  variant?:
-    | 'primary'
-    | 'secondary'
-    | 'tertiary'
-    | 'delete'
-    | 'action'
-    | 'flare',
-  /** Ignore - Set by ButtonGroup */
-  grouped?: boolean,
-  /** Ignore - Set by ButtonGroup */
-  spacing?: boolean,
-  /** Expand the button using flex */
-  flex?: boolean,
-  /** Is the button active? - Useful for when a button is used as a nav pill */
-  active?: boolean,
-  /** Is the button loading? - This will replace the content with a spinner */
-  loading?: boolean,
-  /** Displays the callback message if the loading was successful */
-  success?: boolean,
-  /** A function to call on user interaction */
-  onClick?: Function,
-  /** After a successful load, how long should the UI wait before continuing? */
-  loadedTimeout?: number,
-  /** Override the component - Use with caution */
-  component?: 'string' | React$Node,
-  /** A name to pass down to the DOM */
-  name?: string,
-  /** A type to pass down to the DOM */
-  type?: string,
-  /** Places the button in a visually subdued state */
-  subdued?: boolean,
-  /** Children that should not be double rendered - See ButtonDropdown */
-  singleRenderChildren?: any,
-  /** Class to pass down */
-  className?: string | Object,
-  /** Style to pass down */
-  style?: Object,
-};
+export class Button extends PureComponent {
+  static propTypes = {
+    /** Button contents */
+    children: PropTypes.any,
+    /** A message to display after loading */
+    message: PropTypes.string,
+    /** An ARIA role to pass down */
+    role: PropTypes.string,
+    /** Is the button disabled? */
+    disabled: PropTypes.bool,
+    /** An icon from our icon set to display */
+    icon: PropTypes.string,
+    /** Is the icon the only child? The button will be displayed as a square if true */
+    loneIcon: PropTypes.bool,
+    /** Should the button expand to 100% of the parent? */
+    wide: PropTypes.bool,
+    /** The visual size */
+    size: PropTypes.oneOf(['small', 'medium', 'large', 'extra-large']),
+    /** The visual theme */
+    variant: PropTypes.oneOf([
+      'primary',
+      'secondary',
+      'tertiary',
+      'delete',
+      'action',
+      'flare',
+    ]),
+    /** Ignore - Set by ButtonGroup */
+    grouped: PropTypes.bool,
+    /** Ignore - Set by ButtonGroup */
+    spacing: PropTypes.bool,
+    /** Expand the button using flex */
+    flex: PropTypes.bool,
+    /** Is the button active? - Useful for when a button is used as a nav pill */
+    active: PropTypes.bool,
+    /** Is the button loading? - This will replace the content with a spinner */
+    loading: PropTypes.bool,
+    /** Displays the callback message if the loading was successful */
+    success: PropTypes.bool,
+    /** A function to call on user interaction */
+    onClick: PropTypes.func,
+    /** After a successful load, how long should the UI wait before continuing? */
+    loadedTimeout: PropTypes.number,
+    /** Override the component - Use with caution */
+    component: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /** A name to pass down to the DOM */
+    name: PropTypes.string,
+    /** A type to pass down to the DOM */
+    type: PropTypes.string,
+    /** Places the button in a visually subdued state */
+    subdued: PropTypes.bool,
+    /** Children that should not be double rendered - See ButtonDropdown */
+    singleRenderChildren: PropTypes.any,
+    /** Class to pass down */
+    className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    /** Style to pass down */
+    style: PropTypes.object,
+    /** A theme - set via context by Emotion */
+    theme: PropTypes.object,
+  };
 
-type TState = {
-  loaded: boolean,
-};
-
-export default class Button extends PureComponent<TProps, TState> {
   static defaultProps = {
     role: 'button',
     size: 'large',
@@ -104,12 +103,10 @@ export default class Button extends PureComponent<TProps, TState> {
     }
   }
 
-  componentWillReceiveProps(nextProps: TProps) {
+  componentWillReceiveProps(nextProps) {
     if (this.props.loading && !nextProps.loading) {
       this.setState({loaded: true});
-      // $FlowFixMe
       clearTimeout(this.__loadedTimeout__);
-      // $FlowFixMe
       this.__loadedTimeout__ = setTimeout(() => {
         if (this.state.loaded) {
           this.setState({loaded: false});

@@ -1,5 +1,5 @@
-/* @flow */
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import styles from './loading-spinner.css';
@@ -10,12 +10,7 @@ const SPINNER_DIMENSIONS = {
   large: 50,
 };
 
-type TProps = {
-  size?: 'small' | 'medium' | 'large',
-  className?: string | Object,
-};
-
-export default function LoadingSpinner(props: TProps) {
+const LoadingSpinner = props => {
   const {size = 'medium', className} = props;
 
   const _classNames = cx(
@@ -41,6 +36,10 @@ export default function LoadingSpinner(props: TProps) {
       </svg>
     </div>
   );
-}
+};
 
-LoadingSpinner.displayName = 'LoadingSpinner';
+LoadingSpinner.propTypes = {
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+};
+
+export default LoadingSpinner;

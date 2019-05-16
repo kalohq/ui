@@ -1,8 +1,8 @@
-/* @flow */
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
-import {pickStyles} from '../../utils/style';
 
+import {pickStyles} from '../../utils/style';
 import {UIBase} from '../layout';
 
 import styles from './field-row.css';
@@ -13,16 +13,7 @@ export const DEFAULT_SPACING = 20;
  * Render fields (children) in a row
  */
 
-type TProps = {
-  /** A set of one or more fields */
-  children?: React.Element<*>,
-  /** Pixel value of spacing between field elements */
-  gutter?: number,
-  /** A class to pass down */
-  className?: string,
-};
-
-export default function FieldRow(props: TProps) {
+const FieldRow = props => {
   const {children, gutter = DEFAULT_SPACING, className, ...otherProps} = props;
 
   const _classNames = cx(
@@ -50,4 +41,14 @@ export default function FieldRow(props: TProps) {
       )}
     </UIBase>
   );
-}
+};
+
+FieldRow.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.node]),
+  /** Pixel value of spacing between field elements */
+  gutter: PropTypes.number,
+  /** A class to pass down */
+  className: PropTypes.string,
+};
+
+export default FieldRow;

@@ -1,5 +1,5 @@
-/* @flow */
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import {UIBase} from '../layout';
@@ -7,15 +7,7 @@ import Icon from '../icon';
 
 import styles from './jumbo-button.css';
 
-type TProps = {
-  icon?: string,
-  children?: string,
-  component?: string,
-  onClick?: Function,
-  active?: boolean,
-};
-
-export default function JumboButton(props: TProps) {
+const JumboButton = props => {
   const {
     icon,
     children,
@@ -49,4 +41,14 @@ export default function JumboButton(props: TProps) {
       {children}
     </UIBase>
   );
-}
+};
+
+JumboButton.propTypes = {
+  icon: PropTypes.string,
+  children: PropTypes.string,
+  component: PropTypes.string,
+  onClick: PropTypes.func,
+  active: PropTypes.bool,
+};
+
+export default JumboButton;

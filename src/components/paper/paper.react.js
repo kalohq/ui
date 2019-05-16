@@ -1,25 +1,10 @@
-/* @flow */
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import {UIBase} from '../layout';
 
 import coreStyles from './paper.css';
-
-type Props = {
-  focused?: boolean,
-  rounded?: boolean,
-  padded?: boolean,
-  border?: boolean,
-  children: React.Node,
-  elevation?: number,
-  hoverElevation?: number,
-  className?: string | Object,
-  opaque?: boolean,
-  wireframe?: boolean,
-  onClick?: Function,
-  component?: string | React.Node,
-};
 
 /**
  * @summary This is the kalo paper component.
@@ -27,7 +12,7 @@ type Props = {
  * our cards and the focus/blur animations.
  *
  */
-export default function Paper(props: Props) {
+const Paper = props => {
   const {
     border = true,
     rounded = true,
@@ -69,4 +54,21 @@ export default function Paper(props: Props) {
       {children}
     </UIBase>
   );
-}
+};
+
+Paper.propTypes = {
+  focused: PropTypes.bool,
+  rounded: PropTypes.bool,
+  padded: PropTypes.bool,
+  border: PropTypes.bool,
+  children: PropTypes.node.isRequired,
+  elevation: PropTypes.number,
+  hoverElevation: PropTypes.number,
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  opaque: PropTypes.bool,
+  wireframe: PropTypes.bool,
+  onClick: PropTypes.func,
+  component: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+};
+
+export default Paper;

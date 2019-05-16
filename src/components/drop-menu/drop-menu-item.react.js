@@ -1,5 +1,5 @@
-/* @flow */
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import {isString} from 'lodash';
 import cx from 'classnames';
 
@@ -8,27 +8,10 @@ import Icon from '../icon';
 
 import styles from './drop-menu.css';
 
-type TProps = {
-  icon?: React.Node | string,
-  iconAfter?: React.Node | string,
-  children?: React.Node,
-  active?: boolean,
-  success?: boolean,
-  disabled?: boolean,
-  highlighted?: boolean,
-  padded?: boolean,
-  name?: string,
-  className?: string,
-  onClick?: ?Function,
-  component?: any,
-  isSubItem?: boolean,
-  isHighlighted?: boolean,
-};
-
 /**
  * Generic item container for use in paper menus
  */
-export default function DropMenuItem(props: TProps) {
+const DropMenuItem = props => {
   const {
     icon,
     children,
@@ -84,4 +67,23 @@ export default function DropMenuItem(props: TProps) {
       )}
     </UIBase>
   );
-}
+};
+
+DropMenuItem.propTypes = {
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  iconAfter: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  children: PropTypes.node,
+  active: PropTypes.bool,
+  success: PropTypes.bool,
+  disabled: PropTypes.bool,
+  highlighted: PropTypes.bool,
+  padded: PropTypes.bool,
+  name: PropTypes.string,
+  className: PropTypes.string,
+  onClick: PropTypes.func,
+  component: PropTypes.any,
+  isSubItem: PropTypes.bool,
+  isHighlighted: PropTypes.bool,
+};
+
+export default DropMenuItem;
