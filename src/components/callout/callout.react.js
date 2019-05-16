@@ -26,6 +26,7 @@ const Callout = props => {
 Callout.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   className: PropTypes.object,
+  /** 'blue' */
   variant: PropTypes.oneOf(['blue']),
 };
 

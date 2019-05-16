@@ -69,7 +69,7 @@ ToggleButton.propTypes = {
   onChange: PropTypes.func.isRequired,
   /** A label to display next to the toggle button  */
   label: PropTypes.string,
-  /** The overall visual theme of the button */
+  /** The overall visual theme of the button ('default' | 'orange' | 'green' | 'orangeToGreen') */
   theme: PropTypes.oneOf(['default', 'orange', 'green', 'orangeToGreen']),
   /** A className to pass down */
   className: PropTypes.string,

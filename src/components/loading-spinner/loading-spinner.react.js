@@ -39,6 +39,7 @@ const LoadingSpinner = props => {
 };
 
 LoadingSpinner.propTypes = {
+  /** 'small' | 'medium' | 'large' */
   size: PropTypes.oneOf(['small', 'medium', 'large']),
 };
 

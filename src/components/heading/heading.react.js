@@ -66,7 +66,7 @@ const Heading = props => {
 Heading.propTypes = {
   /** The heading content */
   children: PropTypes.node.isRequired,
-  /** Sets the text color and fill color of any child icon */
+  /** Sets the text color and fill color of any child icon (TEXT_COLOR) */
   color: PropTypes.oneOf(TEXT_COLOR),
   /** Sets the size of the heading */
   size: PropTypes.oneOf([
@@ -90,7 +90,7 @@ Heading.propTypes = {
   className: PropTypes.string,
   /** Should the heading wrap on to multiple lines? */
   multiline: PropTypes.bool,
-  /* Text alignment of the heading */
+  /* Text alignment of the heading ('unset' | 'left' | 'center' | 'right' | 'inherit') */
   align: PropTypes.oneOf(['unset', 'left', 'center', 'right', 'inherit']),
 };
 

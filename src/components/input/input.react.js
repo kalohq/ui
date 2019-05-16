@@ -58,11 +58,11 @@ InputAddon.propTypes = {
 
 export default class Input extends PureComponent {
   static propTypes = {
-    /** The visual theme of the input */
+    /** The visual theme of the input ('default' | 'transparent' | 'well') */
     theme: PropTypes.oneOf(['default', 'transparent', 'well']),
-    /** Adds a bottom margin */
+    /** Adds a bottom margin ('none' | 'small' | 'medium' | 'large') */
     margin: PropTypes.oneOf(['none', 'small', 'medium', 'large']),
-    /** The overall size of the input */
+    /** The overall size of the input ('small' | 'medium' | 'large' | 'extra-large') */
     size: PropTypes.oneOf(['small', 'medium', 'large', 'extra-large']),
     /** Sets the initial value for the input outside of the React lifecycle */
     defaultValue: PropTypes.string,

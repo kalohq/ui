@@ -66,7 +66,7 @@ const Avatar = props => {
 Avatar.propTypes = {
   /** A URL to the avatar */
   src: PropTypes.string,
-  /** The avatar size */
+  /** The avatar size ('small' | 'medium' | 'large' | 'extra-large' | 'extra-extra-large') */
   size: PropTypes.oneOf([
     'small',
     'medium',

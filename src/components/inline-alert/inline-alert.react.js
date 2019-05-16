@@ -34,6 +34,7 @@ const InlineAlert = props => {
 
 InlineAlert.propTypes = {
   children: PropTypes.string,
+  /** 'info' | 'warning' | 'error' | 'confirmation' */
   type: PropTypes.oneOf(['info', 'warning', 'error', 'confirmation']),
 };
 

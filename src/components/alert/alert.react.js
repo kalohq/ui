@@ -55,9 +55,11 @@ const Alert = props => {
 
 Alert.propTypes = {
   children: PropTypes.node,
+  /** 'info' | 'error' | 'warning' | 'confirmation' */
   type: PropTypes.oneOf(['info', 'error', 'warning', 'confirmation'])
     .isRequired,
   showIcon: PropTypes.bool,
+  /** 'left' | 'center' */
   justifyContent: PropTypes.oneOf(['left', 'center']),
   className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   title: PropTypes.string,

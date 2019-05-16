@@ -59,7 +59,7 @@ const Radio = props => {
 Radio.propTypes = {
   /** Is the radio button checked */
   checked: PropTypes.bool,
-  /** Changes the size of the radio */
+  /** Changes the size of the radio ('small' | 'medium') */
   size: PropTypes.oneOf(['small', 'medium']),
   /** Disables user interaction */
   disabled: PropTypes.bool,

@@ -10,6 +10,7 @@ import coreStyles from './checkbox.css';
 
 export default class Checkbox extends PureComponent {
   static propTypes = {
+    /** 'small' | 'medium' | 'large' */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
     checked: PropTypes.bool,
     indeterminate: PropTypes.bool,
