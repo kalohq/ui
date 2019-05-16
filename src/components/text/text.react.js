@@ -55,9 +55,13 @@ const Text = props => {
 };
 
 Text.propTypes = {
+  /** TEXT_WEIGHT */
   weight: PropTypes.oneOf(TEXT_WEIGHT),
+  /** TEXT_SIZE */
   size: PropTypes.oneOf(TEXT_SIZE),
+  /** TEXT_COLOR */
   color: PropTypes.oneOf(TEXT_COLOR),
+  /** TEXT_COLOR */
   hoverColor: PropTypes.oneOf(TEXT_COLOR),
   align: PropTypes.oneOf(TEXT_ALIGN),
   domElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),

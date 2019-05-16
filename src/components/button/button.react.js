@@ -32,9 +32,9 @@ export class Button extends PureComponent {
     loneIcon: PropTypes.bool,
     /** Should the button expand to 100% of the parent? */
     wide: PropTypes.bool,
-    /** The visual size */
+    /** The visual size ('small' | 'medium' | 'large' | 'extra-large') */
     size: PropTypes.oneOf(['small', 'medium', 'large', 'extra-large']),
-    /** The visual theme */
+    /** The visual theme ('primary' | 'secondary' | 'tertiary' | 'delete' | 'action' | 'flare') */
     variant: PropTypes.oneOf([
       'primary',
       'secondary',

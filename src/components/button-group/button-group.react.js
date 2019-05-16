@@ -60,7 +60,7 @@ ButtonGroup.propTypes = {
   spacing: PropTypes.bool,
   /** Reverses the order of child buttons */
   reverse: PropTypes.bool,
-  /** X Alignment of the buttons */
+  /** X Alignment of the buttons ('left' | 'center' | 'right') */
   align: PropTypes.oneOf(['left', 'center', 'right']),
 };
 

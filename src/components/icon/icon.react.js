@@ -48,7 +48,9 @@ const Icon = props => {
 
 Icon.propTypes = {
   // children: $Keys<typeof ICONS>,
+  /** ICON_SIZE */
   size: PropTypes.oneOf(ICON_SIZE),
+  /** ICON_COLOR */
   color: PropTypes.oneOf(ICON_COLOR),
   className: PropTypes.string,
   onClick: PropTypes.func,

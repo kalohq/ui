@@ -52,7 +52,7 @@ SeamlessButton.propTypes = {
   name: PropTypes.string,
   /** Any classes to pass down */
   className: PropTypes.string,
-  /** The physical size of the button */
+  /** The physical size of the button ('small' | 'medium' | 'large') */
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   /** An icon to display as a child */
   icon: PropTypes.string,

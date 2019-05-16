@@ -122,6 +122,7 @@ export function Row(props) {
 
 Row.propTypes = {
   children: PropTypes.any,
+  /** 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large' | 'none' */
   gutters: PropTypes.oneOf([
     'extra-small',
     'small',
