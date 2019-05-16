@@ -1,18 +1,9 @@
-/* @flow */
 import * as React from 'react';
+import PropTypes from 'prop-types';
 
 import SpacerBox from './skeleton-spacer-box.react';
 
-/**
- * Vertical list layout skeleton componen
- */
-
-type TProps = {
-  children: React.Element<*>,
-  center?: boolean,
-};
-
-export default function SkeletonList(props: TProps) {
+const SkeletonList = props => {
   const {children, center, ...otherProps} = props;
   return (
     <SpacerBox
@@ -25,4 +16,10 @@ export default function SkeletonList(props: TProps) {
       {children}
     </SpacerBox>
   );
-}
+};
+
+SkeletonList.propTypes = {
+  children: PropTypes.node.isRequired,
+  center: PropTypes.bool,
+};
+export default SkeletonList;

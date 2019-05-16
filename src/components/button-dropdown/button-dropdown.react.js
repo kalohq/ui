@@ -1,6 +1,5 @@
-/* @flow */
 import React, {PureComponent} from 'react';
-import type {List} from 'immutable';
+import PropTypes from 'prop-types';
 import {random} from 'lodash';
 
 import Icon from '../icon';
@@ -11,37 +10,32 @@ import Button from '../button';
 
 import styles from './button-dropdown.css';
 
-type TProps = {
-  children?: string,
-  selectItems: List<{
-    title: string,
-    onClick?: Function,
-    disabled?: boolean,
-    component?: any,
-    componentProps?: any,
-    minWidth?: number | string,
-  }>,
-  open?: boolean,
-  onClick?: Function,
-  onRequestClose?: Function,
-  checkboxProps?: {
-    size?: string,
-    onClick?: Function,
-  },
-  disabled?: boolean,
-};
-
-type TState = {
-  open: boolean,
-};
-
-export default class ButtonDropdown extends PureComponent<TProps, TState> {
-  onToggle: Function;
-  onClose: Function;
+export default class ButtonDropdown extends PureComponent {
+  static propTypes = {
+    children: PropTypes.string,
+    selectItems: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        onClick: PropTypes.func,
+        disabled: PropTypes.bool,
+        component: PropTypes.any,
+        componentProps: PropTypes.any,
+        minWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+      })
+    ),
+    open: PropTypes.bool,
+    onClick: PropTypes.func,
+    onRequestClose: PropTypes.func,
+    checkboxProps: PropTypes.shape({
+      size: PropTypes.string,
+      onClick: PropTypes.func,
+    }),
+    disabled: PropTypes.bool,
+  };
 
   static displayName = 'ButtonDropdown';
 
-  constructor(props: TProps) {
+  constructor(props) {
     super(props);
 
     this.state = {

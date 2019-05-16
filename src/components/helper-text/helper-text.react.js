@@ -1,13 +1,9 @@
-/* @flow */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Text from '../text';
 
-type TProps = {
-  children: any,
-};
-
-export default function HelperText(props: TProps) {
+const HelperText = props => {
   const {children, ...otherProps} = props;
 
   return (
@@ -15,4 +11,10 @@ export default function HelperText(props: TProps) {
       {children}
     </Text>
   );
-}
+};
+
+HelperText.propTypes = {
+  children: PropTypes.array,
+};
+
+export default HelperText;

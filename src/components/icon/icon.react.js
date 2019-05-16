@@ -1,25 +1,15 @@
-/* @flow */
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
+
 import {UIBase} from '../layout';
 
-import type {ICON_SIZE, ICON_COLOR} from './constants';
-import {ICONS, DEFAULT_SIZE, DEFAULT_COLOR} from './constants';
+import {ICON_SIZE, ICON_COLOR, DEFAULT_SIZE, DEFAULT_COLOR} from './constants';
 
 import styles from './icon.css';
 import fills from '../../design-tokens/kalo-ui-fills.css';
 
-type Props = {
-  children: $Keys<typeof ICONS>,
-  size?: ICON_SIZE,
-  color?: ICON_COLOR,
-  className?: string,
-  onClick?: Function,
-  theme?: Object,
-  title?: string,
-};
-
-export default function Icon(props: Props) {
+const Icon = props => {
   const {
     children,
     size = DEFAULT_SIZE,
@@ -54,4 +44,16 @@ export default function Icon(props: Props) {
       </svg>
     </UIBase>
   );
-}
+};
+
+Icon.propTypes = {
+  // children: $Keys<typeof ICONS>,
+  size: PropTypes.oneOf(ICON_SIZE),
+  color: PropTypes.oneOf(ICON_COLOR),
+  className: PropTypes.string,
+  onClick: PropTypes.func,
+  theme: PropTypes.object,
+  title: PropTypes.string,
+};
+
+export default Icon;

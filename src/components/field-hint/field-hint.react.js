@@ -1,19 +1,14 @@
-/* @flow */
 import React from 'react';
-import {pickStyles} from '../../utils/style';
+import PropTypes from 'prop-types';
 import {isString} from 'lodash';
 
+import {pickStyles} from '../../utils/style';
 import Icon from '../icon';
 import {UIBase} from '../layout';
 
 import coreStyles from './field-hint.css';
 
-type TProps = {
-  hint?: string,
-  icon?: React$Node | string,
-};
-
-export default function FieldHint(props: TProps) {
+const FieldHint = props => {
   const {hint, icon, ...otherProps} = props;
 
   return (
@@ -38,4 +33,11 @@ export default function FieldHint(props: TProps) {
       {hint}
     </UIBase>
   );
-}
+};
+
+FieldHint.propTypes = {
+  hint: PropTypes.string,
+  icon: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+};
+
+export default FieldHint;

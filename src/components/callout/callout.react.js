@@ -1,18 +1,12 @@
-/* @flow */
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import {UIBase} from '../layout';
 
 import styles from './callout.css';
 
-type TProps = {
-  children: string | React.Element<*>,
-  className?: Object,
-  variant?: 'blue',
-};
-
-export default function Callout(props: TProps) {
+const Callout = props => {
   const {children, variant = 'blue', className, ...otherProps} = props;
   const _classNames = cx(
     {
@@ -27,4 +21,12 @@ export default function Callout(props: TProps) {
       {children}
     </UIBase>
   );
-}
+};
+
+Callout.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
+  className: PropTypes.object,
+  variant: PropTypes.oneOf(['blue']),
+};
+
+export default Callout;

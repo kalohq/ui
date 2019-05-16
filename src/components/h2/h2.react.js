@@ -1,12 +1,9 @@
-/* @flow */
 import * as React from 'react';
+import PropTypes from 'prop-types';
+
 import Heading from '../heading';
 
-type Props = {
-  children: React.Node,
-};
-
-export default function H2(props: Props) {
+const H2 = props => {
   const {children} = props;
 
   return (
@@ -14,4 +11,10 @@ export default function H2(props: Props) {
       {children}
     </Heading>
   );
-}
+};
+
+H2.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default H2;

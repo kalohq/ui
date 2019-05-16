@@ -1,19 +1,16 @@
-/* @flow */
 import * as React from 'react';
+import PropTypes from 'prop-types';
 
 import {Box} from '../../layout';
 
-/** Generic content skeleton */
+const SkeletonContent = ({children, ...otherProps}) => (
+  <Box padding={16} {...otherProps}>
+    {children}
+  </Box>
+);
 
-type TProps = {
-  children: React.Node,
+SkeletonContent.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
-export default function SkeletonContent(props: TProps) {
-  const {children, ...otherProps} = props;
-  return (
-    <Box padding={16} {...otherProps}>
-      {children}
-    </Box>
-  );
-}
+export default SkeletonContent;

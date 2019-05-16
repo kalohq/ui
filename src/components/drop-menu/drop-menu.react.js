@@ -1,5 +1,5 @@
-/* @flow */
 import React, {PureComponent} from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
@@ -11,26 +11,24 @@ import styles from './drop-menu.css';
  * Generic open/close popup menu
  */
 
-type TProps = {
-  offset?: {
-    x?: number,
-    y?: number,
-  },
-  children?: React$Node,
-  open?: boolean,
-  origin?: string,
-  root?: Object,
-  onRequestClose?: Function,
-  heading?: string,
-  closeOnOutsideClick?: boolean,
-  sticky?: Object,
-  zIndex?: number,
-  anchor?: string,
-  className?: string | Object,
-};
-
-export default class PaperMenu extends PureComponent<TProps> {
-  onWindowClick: Function;
+export default class PaperMenu extends PureComponent {
+  static propTypes = {
+    offset: PropTypes.shape({
+      x: PropTypes.number,
+      y: PropTypes.number,
+    }),
+    children: PropTypes.node,
+    open: PropTypes.bool,
+    origin: PropTypes.string,
+    root: PropTypes.object,
+    onRequestClose: PropTypes.func,
+    heading: PropTypes.string,
+    closeOnOutsideClick: PropTypes.bool,
+    sticky: PropTypes.object,
+    zIndex: PropTypes.number,
+    anchor: PropTypes.string,
+    className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  };
 
   static defaultProps = {
     children: '',
@@ -41,7 +39,7 @@ export default class PaperMenu extends PureComponent<TProps> {
     closeOnOutsideClick: true,
   };
 
-  constructor(props: TProps) {
+  constructor(props) {
     super();
 
     this.onWindowClick = this.onWindowClick.bind(this);
@@ -51,7 +49,7 @@ export default class PaperMenu extends PureComponent<TProps> {
     }
   }
 
-  componentWillReceiveProps(newProps: TProps) {
+  componentWillReceiveProps(newProps) {
     // We only bind a window click event handler while the menu is open.
     // We also wait for the animation to finish. This means that multiple
     // paper menu’s will not stay open at the same time.
@@ -66,7 +64,7 @@ export default class PaperMenu extends PureComponent<TProps> {
     }
   }
 
-  onWindowClick(event: SyntheticEvent<*>) {
+  onWindowClick(event) {
     if (
       this.props.open &&
       this.props.closeOnOutsideClick &&

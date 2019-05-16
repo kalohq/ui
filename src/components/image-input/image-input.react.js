@@ -1,5 +1,5 @@
-/* @flow */
 import React, {PureComponent} from 'react';
+import PropTypes from 'prop-types';
 
 import {UIBase} from '../layout';
 import Text from '../text';
@@ -8,21 +8,16 @@ import UIImageInput from './image-input';
 
 import styles from './image-input.css';
 
-type TProps = {
-  children?: React$Node,
-  onChange?: Function,
-  placeholder?: string,
-  recommendation?: string,
-};
-
-export default class ImageInput extends PureComponent<TProps> {
-  onChange: Function;
-  element: Node;
-  instance: UIImageInput;
+export default class ImageInput extends PureComponent {
+  static propTypes = {
+    children: PropTypes.node,
+    onChange: PropTypes.func,
+    placeholder: PropTypes.string,
+    recommendation: PropTypes.string,
+  };
 
   constructor() {
     super();
-
     this.onChange = this.onChange.bind(this);
   }
 
@@ -35,7 +30,7 @@ export default class ImageInput extends PureComponent<TProps> {
     }
   }
 
-  onChange(event: SyntheticEvent<*>) {
+  onChange(event) {
     if (this.props.onChange) {
       this.props.onChange(event);
     }

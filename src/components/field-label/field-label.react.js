@@ -1,24 +1,14 @@
-/* @flow */
 import React from 'react';
+import PropTypes from 'prop-types';
 import {isString} from 'lodash';
-import {pickStyles} from '../../utils/style';
 
+import {pickStyles} from '../../utils/style';
 import Icon from '../icon';
 import {Inline, UIBase} from '../layout';
 
 import coreStyles from './field-label.css';
 
-export type TProps = {
-  htmlFor?: string,
-  children?: React$Node,
-  required?: boolean,
-  locked?: boolean,
-  icon?: React$Node | string,
-  title?: string,
-  width?: number,
-};
-
-export default function FieldLabel(props: TProps) {
+const FieldLabel = props => {
   const {
     htmlFor,
     children,
@@ -59,4 +49,16 @@ export default function FieldLabel(props: TProps) {
       ) : null}
     </UIBase>
   );
-}
+};
+
+FieldLabel.propTypes = {
+  htmlFor: PropTypes.string,
+  children: PropTypes.node,
+  required: PropTypes.bool,
+  locked: PropTypes.bool,
+  icon: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  title: PropTypes.string,
+  width: PropTypes.number,
+};
+
+export default FieldLabel;

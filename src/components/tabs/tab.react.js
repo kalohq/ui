@@ -1,23 +1,12 @@
-/* @flow */
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import {UIBase} from '../layout';
 
 import styles from './tabs.css';
 
-type TProps = {
-  /** The contents of the tab */
-  children: React$Node,
-  /** Any classes to pass down */
-  className?: string,
-  /** Is the tab in a selected/active state */
-  active?: boolean,
-  /** Prevents the user from interacting, and makes the tab visually disabled */
-  disabled?: boolean,
-};
-
-export default function Tab(props: TProps) {
+const Tab = props => {
   const {children, className, active, disabled, ...otherProps} = props;
 
   return (
@@ -39,4 +28,17 @@ export default function Tab(props: TProps) {
       </UIBase>
     </UIBase>
   );
-}
+};
+
+Tab.propTypes = {
+  /** The contents of the tab */
+  children: PropTypes.node.isRequired,
+  /** Any classes to pass down */
+  className: PropTypes.string,
+  /** Is the tab in a selected/active state */
+  active: PropTypes.bool,
+  /** Prevents the user from interacting, and makes the tab visually disabled */
+  disabled: PropTypes.bool,
+};
+
+export default Tab;

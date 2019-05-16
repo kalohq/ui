@@ -1,17 +1,12 @@
-/* @flow */
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import {UIBase} from '../layout';
 
 import styles from './tabs.css';
 
-type TabsProps = {
-  children: React$Node,
-  className?: string,
-};
-
-export default function Tabs(props: TabsProps) {
+const Tabs = props => {
   const {children, className, ...otherProps} = props;
 
   return (
@@ -37,4 +32,11 @@ export default function Tabs(props: TabsProps) {
       </UIBase>
     </UIBase>
   );
-}
+};
+
+Tabs.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+};
+
+export default Tabs;

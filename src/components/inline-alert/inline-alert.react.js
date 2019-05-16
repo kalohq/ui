@@ -1,5 +1,5 @@
-/* @flow */
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import {UIBase} from '../layout';
@@ -14,12 +14,7 @@ const TYPE_ICON_MAP = {
   confirmation: 'check_circle',
 };
 
-type TProps = {
-  children: string,
-  type?: 'info' | 'warning' | 'error' | 'confirmation',
-};
-
-export default function InlineAlert(props: TProps) {
+const InlineAlert = props => {
   const {children, type = 'info'} = props;
 
   const _classNames = cx({
@@ -35,4 +30,11 @@ export default function InlineAlert(props: TProps) {
       <span className={styles['ui-inline-alert__content']}>{children}</span>
     </UIBase>
   );
-}
+};
+
+InlineAlert.propTypes = {
+  children: PropTypes.string,
+  type: PropTypes.oneOf(['info', 'warning', 'error', 'confirmation']),
+};
+
+export default InlineAlert;

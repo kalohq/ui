@@ -1,5 +1,5 @@
-/* @flow */
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import {isString, uniqueId} from 'lodash';
 import cx from 'classnames';
 
@@ -8,24 +8,7 @@ import {pickStyles} from '../../utils/style';
 
 import styles from './radio.css';
 
-type RadioProps = {
-  /** Is the radio button checked */
-  checked?: ?boolean,
-  /** Changes the size of the radio */
-  size?: 'small' | 'medium',
-  /** Disables user interaction */
-  disabled?: boolean,
-  /** A label to display to the right of the radio button */
-  label?: string | React.Node,
-  /** A function to call when a user clicks */
-  onClick?: Function,
-  /** A name to pass down to the DOM - useful for testing */
-  name?: string,
-  /** A secondary label to display under the label */
-  hint?: string,
-};
-
-export default function Radio(props: RadioProps) {
+const Radio = props => {
   const {
     checked = false,
     size = 'medium',
@@ -71,4 +54,23 @@ export default function Radio(props: RadioProps) {
       </label>
     </Box>
   );
-}
+};
+
+Radio.propTypes = {
+  /** Is the radio button checked */
+  checked: PropTypes.bool,
+  /** Changes the size of the radio */
+  size: PropTypes.oneOf(['small', 'medium']),
+  /** Disables user interaction */
+  disabled: PropTypes.bool,
+  /** A label to display to the right of the radio button */
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  /** A function to call when a user clicks */
+  onClick: PropTypes.func,
+  /** A name to pass down to the DOM - useful for testing */
+  name: PropTypes.string,
+  /** A secondary label to display under the label */
+  hint: PropTypes.string,
+};
+
+export default Radio;

@@ -1,5 +1,5 @@
-/* @flow */
 import * as React from 'react';
+import PropTypes from 'prop-types';
 
 import {UIBase, Box} from '../../layout';
 
@@ -7,14 +7,7 @@ import SpacerBox from './skeleton-spacer-box.react';
 
 import styles from '../skeleton.css';
 
-/** Skeleton page header heading */
-
-type TProps = {
-  width?: number,
-  children: React.Element<*>,
-};
-
-export default function SkeletonPageHeaderToolbar(props: TProps) {
+const SkeletonPageHeaderToolbar = props => {
   const {width = 1180, children} = props;
   return (
     <UIBase className={styles['ui-skeleton-page-header-toolbar']}>
@@ -23,4 +16,11 @@ export default function SkeletonPageHeaderToolbar(props: TProps) {
       </Box>
     </UIBase>
   );
-}
+};
+
+SkeletonPageHeaderToolbar.propTypes = {
+  width: PropTypes.number,
+  children: PropTypes.node.isRequired,
+};
+
+export default SkeletonPageHeaderToolbar;

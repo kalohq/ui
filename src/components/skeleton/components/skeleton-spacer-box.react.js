@@ -1,17 +1,9 @@
-/* @flow */
 import * as React from 'react';
+import PropTypes from 'prop-types';
 
 import {Box} from '../../layout';
 
-type TProps = {
-  spacing?: number,
-  vertical?: boolean,
-  center?: boolean,
-  childFlex?: string | number,
-  children?: React.Element<*> | Array<*>,
-};
-
-export default function SpacerBox(props: TProps) {
+const SpacerBox = props => {
   const {
     spacing = 25,
     vertical,
@@ -38,4 +30,14 @@ export default function SpacerBox(props: TProps) {
       )}
     </Box>
   );
-}
+};
+
+SpacerBox.propTypes = {
+  spacing: PropTypes.number,
+  vertical: PropTypes.bool,
+  center: PropTypes.bool,
+  childFlex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+};
+
+export default SpacerBox;

@@ -1,4 +1,3 @@
-/* @flow */
 import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
@@ -7,10 +6,7 @@ import {UIBase} from '../layout';
 
 import styles from './table.css';
 
-export class Table extends React.Component<{
-  children: React$Node,
-  className?: string | Object,
-}> {
+export class Table extends React.Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
   };

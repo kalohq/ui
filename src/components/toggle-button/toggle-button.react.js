@@ -1,5 +1,5 @@
-/* @flow */
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import {uniqueId} from 'lodash';
 
@@ -17,21 +17,7 @@ export const HEIGHT = 26;
  * A standard toggle button for toggling between two states
  */
 
-type TProps = {
-  /** Is the toggle toggled? */
-  value?: boolean,
-  /** A function to call when toggled */
-  onChange: Function,
-  value?: boolean,
-  /** A label to display next to the toggle button  */
-  label?: string,
-  /** The overall visual theme of the button */
-  theme?: 'default' | 'orange' | 'green' | 'orangeToGreen',
-  /** A className to pass down */
-  className?: string,
-};
-
-export default function ToggleButton(props: TProps) {
+const ToggleButton = props => {
   const {
     value = false,
     theme = 'default',
@@ -74,4 +60,19 @@ export default function ToggleButton(props: TProps) {
       </label>
     </div>
   );
-}
+};
+
+ToggleButton.propTypes = {
+  /** Is the toggle toggled? */
+  value: PropTypes.bool,
+  /** A function to call when toggled */
+  onChange: PropTypes.func.isRequired,
+  /** A label to display next to the toggle button  */
+  label: PropTypes.string,
+  /** The overall visual theme of the button */
+  theme: PropTypes.oneOf(['default', 'orange', 'green', 'orangeToGreen']),
+  /** A className to pass down */
+  className: PropTypes.string,
+};
+
+export default ToggleButton;

@@ -1,6 +1,5 @@
-/* @flow */
 import * as React from 'react';
-import {List} from 'immutable';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import {size} from '../../utils/type';
 
@@ -9,55 +8,12 @@ import FieldHint from '../field-hint';
 import FieldLabel from '../field-label';
 import FieldValidations from '../field-validations';
 
-import type Validation from '../field-validation';
-import type LabelProps from '../field-label';
-
 import coreStyles from './field.css';
-
-export type TProps = {
-  children?: React$Element<*>,
-  /** A list of validations */
-  validations?: List<Validation>,
-  /** Any disabling permissions for this field */
-  permissions?: Array<Error>,
-  /** A label to be displayed above the input */
-  label?: React.Node,
-  /** A secondary label - This can be a function (for example, to toggle an option) */
-  labelAction?: React.Node,
-  /** Props to pass down to the label component */
-  labelProps?: LabelProps,
-  /** Sets the 'for' property to bind a label and input */
-  htmlFor?: string,
-  /** A string to provide additional information to the user */
-  hint?: string,
-  /** An optional icon to be displayed next to the hint */
-  hintIcon?: React.Node | string,
-  /** Displays an asterisk next to the label if the field is required */
-  required?: boolean,
-  /** Displays a padlock if the field is locked - mainly used for templates */
-  locked?: boolean,
-  /** An icon to display next to the label */
-  icon?: React.Node | string,
-  onClick?: Function,
-  /** A classname to pass down */
-  className?: string,
-  /** Centers the field and children components */
-  centered?: boolean,
-  /** Toggles ability for component to override child props */
-  controlChildren?: boolean,
-  /** on blur handler to pass to input children */
-  onBlur?: Function,
-  /** Displays the field inline with the label and input floated */
-  inline?: boolean,
-  /** Set a width for the field label */
-  labelWidth?: number,
-  useLegacyLayout?: boolean,
-};
 
 /**
  * Basic form field container component
  */
-export default function Field(props: TProps) {
+const Field = props => {
   const {
     children,
     validations,
@@ -145,4 +101,46 @@ export default function Field(props: TProps) {
       ) : null}
     </UIBase>
   );
-}
+};
+
+Field.propTypes = {
+  children: PropTypes.node,
+  /** A list of validations */
+  validations: PropTypes.array,
+  /** Any disabling permissions for this field */
+  permissions: PropTypes.array,
+  /** A label to be displayed above the input */
+  label: PropTypes.node,
+  /** A secondary label - This can be a function (for example, to toggle an option) */
+  labelAction: PropTypes.node,
+  /** Props to pass down to the label component */
+  labelProps: PropTypes.shape({}),
+  /** Sets the 'for' property to bind a label and input */
+  htmlFor: PropTypes.string,
+  /** A string to provide additional information to the user */
+  hint: PropTypes.string,
+  /** An optional icon to be displayed next to the hint */
+  hintIcon: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  /** Displays an asterisk next to the label if the field is required */
+  required: PropTypes.bool,
+  /** Displays a padlock if the field is locked - mainly used for templates */
+  locked: PropTypes.bool,
+  /** An icon to display next to the label */
+  icon: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  onClick: PropTypes.func,
+  /** A classname to pass down */
+  className: PropTypes.string,
+  /** Centers the field and children components */
+  centered: PropTypes.bool,
+  /** Toggles ability for component to override child props */
+  controlChildren: PropTypes.bool,
+  /** on blur handler to pass to input children */
+  onBlur: PropTypes.func,
+  /** Displays the field inline with the label and input floated */
+  inline: PropTypes.bool,
+  /** Set a width for the field label */
+  labelWidth: PropTypes.number,
+  useLegacyLayout: PropTypes.bool,
+};
+
+export default Field;

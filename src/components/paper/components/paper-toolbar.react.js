@@ -1,17 +1,12 @@
-/* @flow */
 import * as React from 'react';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
 
 import {UIBase} from '../../layout';
 
 import styles from './paper-toolbar.css';
 
-type TProps = {
-  children?: React.Node,
-  className?: string | Object,
-};
-
-export function PaperToolbar(props: TProps) {
+const PaperToolbar = props => {
   const {children, className} = props;
 
   const _classNames = cx(
@@ -22,4 +17,8 @@ export function PaperToolbar(props: TProps) {
   );
 
   return <UIBase className={_classNames}>{children}</UIBase>;
-}
+};
+
+PaperToolbar.propTypes = {
+  children: PropTypes.node,
+};

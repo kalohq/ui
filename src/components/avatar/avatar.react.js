@@ -1,5 +1,5 @@
-/* @flow */
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import {UIBase} from '../layout';
@@ -8,7 +8,7 @@ import styles from './avatar.css';
 
 const FALLBACK_COLORS = ['blue', 'orange', 'green', 'pink', 'navy'];
 
-export const getFallbackColor = (resource: string) => {
+export const getFallbackColor = resource => {
   const hash = [...String(resource)].reduce(
     (sum, character) => sum + character.codePointAt(0),
     0
@@ -21,22 +21,7 @@ export const getFallbackColor = (resource: string) => {
   return FALLBACK_COLORS[1];
 };
 
-type TProps = {
-  /** A URL to the avatar */
-  src?: string,
-  /** The avatar size */
-  size?: 'small' | 'medium' | 'large' | 'extra-large' | 'extra-extra-large',
-  /** Two initials to be displayed as a fallback if no src is set */
-  initials?: string,
-  /** A consistent resource (an email or name) to be used as a hash to generate the fallback color */
-  resourceHash?: string,
-  /** Any classes to pass down */
-  className?: string,
-  /** Is the avatar grouped */
-  isGrouped?: boolean,
-};
-
-export default function Avatar(props: TProps) {
+const Avatar = props => {
   const {
     src,
     size = 'medium',
@@ -76,4 +61,27 @@ export default function Avatar(props: TProps) {
       />
     </UIBase>
   );
-}
+};
+
+Avatar.propTypes = {
+  /** A URL to the avatar */
+  src: PropTypes.string,
+  /** The avatar size */
+  size: PropTypes.oneOf([
+    'small',
+    'medium',
+    'large',
+    'extra-large',
+    'extra-extra-large',
+  ]),
+  /** Two initials to be displayed as a fallback if no src is set */
+  initials: PropTypes.string,
+  /** A consistent resource (an email or name) to be used as a hash to generate the fallback color */
+  resourceHash: PropTypes.string,
+  /** Any classes to pass down */
+  className: PropTypes.string,
+  /** Is the avatar grouped */
+  isGrouped: PropTypes.bool,
+};
+
+export default Avatar;

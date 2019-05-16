@@ -2,18 +2,12 @@
 
 module.exports = {
   parser: 'babel-eslint',
-  plugins: ['react', 'import', 'flowtype', 'prettier'],
+  plugins: ['react', 'import', 'prettier'],
   env: {
     browser: true,
     node: true,
   },
-  extends: [
-    '@kalo/eslint-config',
-    'plugin:flowtype/recommended',
-    'prettier',
-    'prettier/flowtype',
-    'prettier/react',
-  ],
+  extends: ['@kalo/eslint-config', 'prettier', 'prettier/react'],
   settings: {
     'import/ignore': ['node_modules', /.css$/],
     'import/resolver': {
@@ -52,8 +46,8 @@ module.exports = {
     ],
     'object-property-newline': [2, {allowMultiplePropertiesPerLine: true}],
     // definite nice to haves...
-    'react/no-unused-prop-types': 0, // lots to type at this point... and flow may overtake soon
-    'react/prop-types': 0, // lots to type at this point... and flow may overtake soon
+    'react/no-unused-prop-types': 0, // lots to type at this point...
+    'react/prop-types': 0, // lots to type at this point...
     'react/no-danger': 0,
     'class-methods-use-this': 0,
     'jsx-a11y/img-has-alt': 0,
@@ -80,16 +74,14 @@ module.exports = {
     'operator-assignment': [0, 'never'], // incorrectly detects based on our usage
     'import/no-extraneous-dependencies': 0, // we define deps used during dev as devDep
     'react/jsx-filename-extension': 0, // more language extensions than just jsx...
-    'react/require-default-props': 0, // props are defined with flow
+    'react/require-default-props': 0, // we should address this at some point
     'import/prefer-default-export': 0, // generally prefer collections of utils than many micro-modules
     'arrow-body-style': 0, // freeeedom
     'no-extra-boolean-cast': 0, // no issues with a bit of extra clarity!
     'prefer-arrow-callback': 0, // no issues with a bit of extra clarity (from named funcs)!
     'react/no-find-dom-node': 0, // IS really useful/required *sometimes*
     'react/no-multi-comp': 0, // Useful to have internal breakup of components
-    'new-cap': 0, // bad for performance + flow doesn’t allow it with Immutable.js
-    'flowtype/space-after-type-colon': 0, // broken at the time of writing – false negatives
-    'flowtype/space-before-type-colon': 0, // broken at the time of writing – false negatives
+    'new-cap': 0, // bad for performance
     'no-useless-rename': 0, // sometimes good for clarity
   },
 };

@@ -1,5 +1,5 @@
-/* @flow */
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import Icon from '../icon';
@@ -14,17 +14,7 @@ const TYPE_ICON_MAP = {
   confirmation: 'check_circle',
 };
 
-type TProps = {
-  children: React.Node,
-  type: $Keys<typeof TYPE_ICON_MAP>,
-  showIcon?: boolean,
-  justifyContent?: 'left' | 'center',
-  className?: string | Object,
-  title?: string,
-  icon?: string,
-};
-
-export default function Alert(props: TProps) {
+const Alert = props => {
   const {
     children,
     title,
@@ -61,4 +51,17 @@ export default function Alert(props: TProps) {
       </div>
     </UIBase>
   );
-}
+};
+
+Alert.propTypes = {
+  children: PropTypes.node,
+  type: PropTypes.oneOf(['info', 'error', 'warning', 'confirmation'])
+    .isRequired,
+  showIcon: PropTypes.bool,
+  justifyContent: PropTypes.oneOf(['left', 'center']),
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  title: PropTypes.string,
+  icon: PropTypes.string,
+};
+
+export default Alert;

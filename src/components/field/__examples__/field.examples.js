@@ -1,4 +1,3 @@
-/* @flow */
 import React from 'react';
 
 import Field from '../';
@@ -37,7 +36,6 @@ export const examples = [
     title: 'Field with validation',
     description: 'A field with an input with validations',
     render: () => (
-      // $FlowFixMe
       <Field
         label="Your email"
         validations={[{message: 'Your email was not valid'}]}

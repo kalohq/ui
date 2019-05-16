@@ -1,5 +1,5 @@
-/* @flow */
 import React, {PureComponent} from 'react';
+import PropTypes from 'prop-types';
 import {isBoolean, isString} from 'lodash';
 import cx from 'classnames';
 
@@ -32,10 +32,7 @@ const INPUT_SIZE_MAP = {
 const getInputFont = size =>
   size && `normal ${INPUT_SIZE_MAP[size].fontSize}px system-ui`;
 
-export const InputAddon = (props: {
-  content: string | React$Node,
-  type: string,
-}) => {
+export const InputAddon = props => {
   return (
     <div
       className={cx({
@@ -54,59 +51,57 @@ export const InputAddon = (props: {
   );
 };
 
-type TProps = {
-  /** The visual theme of the input */
-  theme?: 'default' | 'transparent' | 'well',
-  /** Adds a bottom margin */
-  margin?: 'none' | 'small' | 'medium' | 'large',
-  /** The overall size of the input */
-  size?: 'small' | 'medium' | 'large' | 'extra-large',
-  /** Sets the initial value for the input outside of the React lifecycle */
-  defaultValue?: string,
-  /** The value of the input */
-  value?: string,
-  /** A function to call when a user focuses on the input */
-  onFocus?: Function,
-  /** A function to call when a user focuses away from the input */
-  onBlur?: Function,
-  /** A function to call when the input value changes */
-  onChange?: Function,
-  onEdited?: Function,
-  /** A style object to pass to the underlying element */
-  style?: Object,
-  /** A class to pass down */
-  className?: string,
-  expands?: boolean,
-  /** Will focus the input automatically on render */
-  focusOnMount?: boolean,
-  /** Sets the input placeholder copy */
-  placeholder?: string,
-  /** Displays the input with a valid status if true, and an invalid status if false */
-  valid?: boolean,
-  /** Removes user interaction, but can still display a value */
-  readonly?: boolean,
-  /** A name to pass down to the DOM */
-  name?: string,
-  /** A React 'ref' */
-  inputRef?: Function,
-  /** A value to display before (to the left) of the input */
-  addonPrefix: string | React$Node,
-  /** A value to display after (to the right) the input */
-  addonSuffix: string | React$Node,
-  fullWidth?: boolean,
-  /** An icon to displau to the left of the input */
-  icon?: string,
-  /** Native DOM properties to pass to the input element */
-  properties?: Object,
+InputAddon.propTypes = {
+  content: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
+  type: PropTypes.string.isRequired,
 };
 
-type TState = {
-  focused: boolean,
-  changed: boolean,
-};
-
-// $FlowFixMe
-export default class Input extends PureComponent<TProps, TState> {
+export default class Input extends PureComponent {
+  static propTypes = {
+    /** The visual theme of the input */
+    theme: PropTypes.oneOf(['default', 'transparent', 'well']),
+    /** Adds a bottom margin */
+    margin: PropTypes.oneOf(['none', 'small', 'medium', 'large']),
+    /** The overall size of the input */
+    size: PropTypes.oneOf(['small', 'medium', 'large', 'extra-large']),
+    /** Sets the initial value for the input outside of the React lifecycle */
+    defaultValue: PropTypes.string,
+    /** The value of the input */
+    value: PropTypes.string,
+    /** A function to call when a user focuses on the input */
+    onFocus: PropTypes.func,
+    /** A function to call when a user focuses away from the input */
+    onBlur: PropTypes.func,
+    /** A function to call when the input value changes */
+    onChange: PropTypes.func,
+    onEdited: PropTypes.func,
+    /** A style object to pass to the underlying element */
+    style: PropTypes.object,
+    /** A class to pass down */
+    className: PropTypes.string,
+    expands: PropTypes.bool,
+    /** Will focus the input automatically on render */
+    focusOnMount: PropTypes.bool,
+    /** Sets the input placeholder copy */
+    placeholder: PropTypes.string,
+    /** Displays the input with a valid status if true, and an invalid status if false */
+    valid: PropTypes.bool,
+    /** Removes user interaction, but can still display a value */
+    readonly: PropTypes.bool,
+    /** A name to pass down to the DOM */
+    name: PropTypes.string,
+    /** A React 'ref' */
+    inputRef: PropTypes.func,
+    /** A value to display before (to the left) of the input */
+    addonPrefix: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+    /** A value to display after (to the right) the input */
+    addonSuffix: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+    fullWidth: PropTypes.bool,
+    /** An icon to displau to the left of the input */
+    icon: PropTypes.string,
+    /** Native DOM properties to pass to the input element */
+    properties: PropTypes.object,
+  };
   static defaultProps = {
     onFocus: () => {},
     onBlur: () => {},
@@ -115,10 +110,6 @@ export default class Input extends PureComponent<TProps, TState> {
   };
 
   static displayName = 'Input';
-
-  onFocus: Function;
-  onBlur: Function;
-  onChange: Function;
 
   constructor() {
     super();
@@ -130,7 +121,7 @@ export default class Input extends PureComponent<TProps, TState> {
     this.onChange = this.onChange.bind(this);
   }
 
-  onFocus(event: SyntheticEvent<*>) {
+  onFocus(event) {
     if (this.props.onFocus) {
       this.props.onFocus(event);
 
@@ -142,7 +133,7 @@ export default class Input extends PureComponent<TProps, TState> {
     }
   }
 
-  onBlur(event: SyntheticEvent<*>) {
+  onBlur(event) {
     if (this.props.onBlur) {
       this.props.onBlur(event);
     }
@@ -159,7 +150,7 @@ export default class Input extends PureComponent<TProps, TState> {
     }
   }
 
-  onChange(event: SyntheticEvent<*>) {
+  onChange(event) {
     if (this.props.onChange) {
       this.props.onChange(event);
     }
@@ -171,10 +162,8 @@ export default class Input extends PureComponent<TProps, TState> {
    * our input should have, this will depend on the width of the text currently
    * entered as well as the font. We use canvas to measure this value.
    */
-  getTextWidth(text: string, font: string): number {
-    // $FlowFixMe
+  getTextWidth(text, font) {
     this.canvas = this.canvas ? this.canvas : document.createElement('canvas');
-    // $FlowFixMe
     const context = this.canvas.getContext('2d');
     if (context) {
       context.font = font;

@@ -1,19 +1,11 @@
-/* @flow */
 import * as React from 'react';
+import PropTypes from 'prop-types';
 
 import SkeletonPaper from './skeleton-paper.react';
 import SkeletonText from './skeleton-text.react';
 import SpacerBox from './skeleton-spacer-box.react';
 
-/**
- * List Item Skeleton
- */
-
-type TProps = {
-  children: React.Element<*>,
-};
-
-export default function SkeletonListItem(props: TProps) {
+const SkeletonListItem = props => {
   const {children, ...otherProps} = props;
   return (
     <SkeletonPaper padding={25} {...otherProps}>
@@ -27,4 +19,10 @@ export default function SkeletonListItem(props: TProps) {
       </SpacerBox>
     </SkeletonPaper>
   );
-}
+};
+
+SkeletonListItem.propTypes = {
+  children: PropTypes.node,
+};
+
+export default SkeletonListItem;

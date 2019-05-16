@@ -1,4 +1,3 @@
-/* @flow */
 /* eslint-env jest */
 import {shallow} from 'enzyme';
 import React from 'react';
