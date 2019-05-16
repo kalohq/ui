@@ -37,18 +37,6 @@ jobs:
 
       - run: npm run lint
 
-  typecheck:
-    docker:
-      - image: circleci/node:10.14.1
-    steps:
-      - checkout
-
-      - <<: *defaultRestoreCachedModules
-      - <<: *defaultNpmInstall
-      - <<: *defaultCacheModules
-
-      - run: npm run typecheck
-
   test:
     docker:
       - image: circleci/node:10.14.1
@@ -67,5 +55,4 @@ workflows:
   lint_and_test:
     jobs:
       - lint
-      - typecheck
       - test
