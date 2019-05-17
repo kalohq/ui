@@ -2,10 +2,19 @@
 
 exports[`Checkbox should render a checkbox partially checked 1`] = `
 <div
-  className="ui-checkbox ui-checkbox--medium e1krcyn10 css-2l1w6y"
+  className="ui-checkbox ui-checkbox--medium"
   data-test="ui-checkbox"
   name={undefined}
-  style={Object {}}
+  style={
+    Object {
+      "alignContent": "flex-start",
+      "alignItems": "stretch",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexShrink": 0,
+      "position": "relative",
+    }
+  }
 >
   <input
     checked={false}
@@ -33,10 +42,19 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
 
 exports[`Checkbox should render a checkbox with label 1`] = `
 <div
-  className="ui-checkbox ui-checkbox--medium e1krcyn10 css-2l1w6y"
+  className="ui-checkbox ui-checkbox--medium"
   data-test="ui-checkbox"
   name={undefined}
-  style={Object {}}
+  style={
+    Object {
+      "alignContent": "flex-start",
+      "alignItems": "stretch",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexShrink": 0,
+      "position": "relative",
+    }
+  }
 >
   <input
     checked={true}
@@ -64,10 +82,19 @@ exports[`Checkbox should render a checkbox with label 1`] = `
 
 exports[`Checkbox should render shallow component ok 1`] = `
 <div
-  className="ui-checkbox ui-checkbox--medium e1krcyn10 css-2l1w6y"
+  className="ui-checkbox ui-checkbox--medium"
   data-test="ui-checkbox"
   name={undefined}
-  style={Object {}}
+  style={
+    Object {
+      "alignContent": "flex-start",
+      "alignItems": "stretch",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexShrink": 0,
+      "position": "relative",
+    }
+  }
 >
   <input
     checked={true}

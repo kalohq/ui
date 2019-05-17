@@ -2,13 +2,17 @@
 
 exports[`Alert should render a confirmation alert with an icon 1`] = `
 <div
-  className="ui-alert ui-alert--confirmation e1krcyn16 css-1tyndxa"
+  className="ui-alert ui-alert--confirmation"
   role="alert"
-  style={Object {}}
+  style={
+    Object {
+      "justifyContent": "center",
+    }
+  }
   type="confirmation"
 >
   <i
-    className="ui-icon ui-icon--size-16 fill-currentColor e1krcyn16 css-0"
+    className="ui-icon ui-icon--size-16 fill-currentColor"
     onClick={undefined}
     style={Object {}}
     title={undefined}
@@ -37,13 +41,17 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
 
 exports[`Alert should render a warning alert 1`] = `
 <div
-  className="ui-alert ui-alert--warning e1krcyn16 css-1tyndxa"
+  className="ui-alert ui-alert--warning"
   role="alert"
-  style={Object {}}
+  style={
+    Object {
+      "justifyContent": "center",
+    }
+  }
   type="warning"
 >
   <i
-    className="ui-icon ui-icon--size-16 fill-currentColor e1krcyn16 css-0"
+    className="ui-icon ui-icon--size-16 fill-currentColor"
     onClick={undefined}
     style={Object {}}
     title={undefined}
@@ -72,13 +80,17 @@ exports[`Alert should render a warning alert 1`] = `
 
 exports[`Alert should render shallow component ok 1`] = `
 <div
-  className="ui-alert ui-alert--info e1krcyn16 css-1tyndxa"
+  className="ui-alert ui-alert--info"
   role="alert"
-  style={Object {}}
+  style={
+    Object {
+      "justifyContent": "center",
+    }
+  }
   type="info"
 >
   <i
-    className="ui-icon ui-icon--size-16 fill-currentColor e1krcyn16 css-0"
+    className="ui-icon ui-icon--size-16 fill-currentColor"
     onClick={undefined}
     style={Object {}}
     title={undefined}

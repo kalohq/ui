@@ -2,7 +2,7 @@
 
 exports[`Text should render green text 1`] = `
 <span
-  className="ui-text ui-text--size-medium ui-text--weight-normal ui-text--align-unset color-green hover-color-none e1krcyn16 css-0"
+  className="ui-text ui-text--size-medium ui-text--weight-normal ui-text--align-unset color-green hover-color-none"
   onClick={undefined}
   style={Object {}}
 >
@@ -12,7 +12,7 @@ exports[`Text should render green text 1`] = `
 
 exports[`Text should render large text 1`] = `
 <span
-  className="ui-text ui-text--size-large ui-text--weight-normal ui-text--align-unset color-charcoal hover-color-none e1krcyn16 css-0"
+  className="ui-text ui-text--size-large ui-text--weight-normal ui-text--align-unset color-charcoal hover-color-none"
   onClick={undefined}
   style={Object {}}
 >
@@ -22,7 +22,7 @@ exports[`Text should render large text 1`] = `
 
 exports[`Text should render shallow component ok 1`] = `
 <span
-  className="ui-text ui-text--size-medium ui-text--weight-normal ui-text--align-unset color-charcoal hover-color-none e1krcyn16 css-0"
+  className="ui-text ui-text--size-medium ui-text--weight-normal ui-text--align-unset color-charcoal hover-color-none"
   onClick={undefined}
   style={Object {}}
 >
