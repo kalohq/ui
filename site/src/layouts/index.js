@@ -6,7 +6,7 @@ import {groupBy, upperFirst, camelCase} from 'lodash';
 import Header from '../components/navigation';
 import SideNav, {NAV_IN_FOOTER_BREAKPOINT} from '../components/side-nav';
 
-import theme from '../../../src/components/theme';
+import theme from '../../../src/design-tokens/tokens.theme.js';
 import IconSymbols from '../../../src/components/icon-symbols';
 
 import '../../../src/styles/kalo-ui-base.css';

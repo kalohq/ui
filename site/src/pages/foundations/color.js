@@ -5,7 +5,7 @@ import Color from 'color';
 import DocumentationContent from '../../components/documentation-content';
 import Wrapper from '../../components/wrapper';
 
-import theme from '../../../../src/components/theme';
+import theme from '../../../../src/design-tokens/tokens.theme.js';
 
 const AA_COLOR_THRESHOLD = 4.5;
 
