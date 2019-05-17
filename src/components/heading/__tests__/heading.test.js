@@ -2,7 +2,7 @@
 import * as React from 'react';
 import renderer from 'react-test-renderer';
 
-import {shallow, mount} from 'utils/test/enzyme';
+import {shallow, mount} from 'enzyme';
 
 import Heading from '../heading.react';
 

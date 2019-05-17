@@ -3,9 +3,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import renderer from 'react-test-renderer';
-import {ThemeProvider} from 'emotion-theming';
 
-import theme from '../../theme';
 import Input, {InputAddon} from '../input.react';
 
 describe('Input', () => {
@@ -17,13 +15,7 @@ describe('Input', () => {
   };
 
   test('should render shallow component ok', () => {
-    const element = renderer
-      .create(
-        <ThemeProvider theme={theme}>
-          <Input {...defaultProps} />
-        </ThemeProvider>
-      )
-      .toJSON();
+    const element = renderer.create(<Input {...defaultProps} />).toJSON();
     expect(element).toMatchSnapshot();
   });
 

@@ -1,6 +1,6 @@
 /* eslint-env jest */
 import * as React from 'react';
-import {mount} from 'utils/test/enzyme';
+import {mount} from 'enzyme';
 
 import TagGroup from '../tag-group.react';
 import Tag from 'components/tag';

@@ -1,20 +1,14 @@
 /* @flow */
 /* eslint-env jest */
 import * as React from 'react';
-import * as emotion from 'emotion';
-import {createSerializer} from 'jest-emotion';
 import renderer from 'react-test-renderer';
-import {ThemeProvider} from 'emotion-theming';
 import sinon from 'sinon';
 
-import {shallow, mount} from 'utils/test/enzyme';
+import {shallow, mount} from 'enzyme';
 
-import theme from 'components/theme';
 import Button from '../button.react';
 
 import reactStyles from '../button.react.css';
-
-expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe('Button', () => {
   const defaultProps = {
@@ -31,11 +25,9 @@ describe('Button', () => {
   test('should render shallow component ok', () => {
     const element = renderer
       .create(
-        <ThemeProvider theme={theme}>
-          <Button variant="tertiary" size="medium">
-            A tertiary button
-          </Button>
-        </ThemeProvider>
+        <Button variant="tertiary" size="medium">
+          A tertiary button
+        </Button>
       )
       .toJSON();
     expect(element).toMatchSnapshot();

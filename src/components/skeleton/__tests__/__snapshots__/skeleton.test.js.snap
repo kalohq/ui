@@ -2,7 +2,7 @@
 
 exports[`components/skeleton SkeletonAvatar should render shallow component ok 1`] = `
 <div
-  className="ui-skeleton-shape ui-skeleton-shape--circle emotion-0 emotion-1"
+  className="ui-skeleton-shape ui-skeleton-shape--circle e1krcyn16 css-0"
   style={
     Object {
       "height": 40,
@@ -14,7 +14,7 @@ exports[`components/skeleton SkeletonAvatar should render shallow component ok 1
 
 exports[`components/skeleton SkeletonButton should render shallow component ok 1`] = `
 <div
-  className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
+  className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-0"
   style={
     Object {
       "height": 36,
@@ -25,106 +25,25 @@ exports[`components/skeleton SkeletonButton should render shallow component ok 1
 `;
 
 exports[`components/skeleton SkeletonGrid should render shallow component ok 1`] = `
-.emotion-3 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: -10px;
-}
-
-.emotion-19 {
-  position: relative;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: -25px;
-}
-
-.emotion-7 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0;
-  margin-left: 25px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-5 {
-  padding: 16px;
-  margin-top: 10px;
-  margin-left: 0;
-}
-
-.emotion-1 {
-  margin-top: 10px;
-  margin-left: 0;
-}
-
 <div
-  className="emotion-2 emotion-19"
+  className="e1krcyn10 css-1yw3gw6"
   style={Object {}}
 >
   <div
-    className="emotion-2 emotion-7"
+    className="e1krcyn10 css-xpg5aq"
     style={Object {}}
   >
     <div
-      className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-0 emotion-5"
+      className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 e1krcyn16 css-10hree7"
       onClick={undefined}
       style={Object {}}
     >
       <div
-        className="emotion-2 emotion-3"
+        className="e1krcyn10 css-1une52z"
         style={Object {}}
       >
         <div
-          className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
+          className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-1k5qjm9"
           size={14}
           style={
             Object {
@@ -137,20 +56,20 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
     </div>
   </div>
   <div
-    className="emotion-2 emotion-7"
+    className="e1krcyn10 css-xpg5aq"
     style={Object {}}
   >
     <div
-      className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-0 emotion-5"
+      className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 e1krcyn16 css-10hree7"
       onClick={undefined}
       style={Object {}}
     >
       <div
-        className="emotion-2 emotion-3"
+        className="e1krcyn10 css-1une52z"
         style={Object {}}
       >
         <div
-          className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
+          className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-1k5qjm9"
           style={
             Object {
               "height": 24,
@@ -159,7 +78,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
           }
         />
         <div
-          className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
+          className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-1k5qjm9"
           size={14}
           style={
             Object {
@@ -175,168 +94,13 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 `;
 
 exports[`components/skeleton SkeletonGrid should render shallow component ok 2`] = `
-.emotion-7 {
-  margin-top: 0;
-  margin-left: 25px;
-}
-
-.emotion-15 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0px auto;
-  width: 1100px;
-}
-
-.emotion-13 {
-  position: relative;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: -25px;
-  height: 46px;
-}
-
-.emotion-55 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-53 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 50px auto;
-  width: 1100px;
-}
-
-.emotion-51 {
-  position: relative;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: -25px;
-}
-
-.emotion-29 {
-  padding: 16px;
-  padding-top: 75px;
-  padding-bottom: 150px;
-  margin-top: 0;
-  margin-left: 25px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-27 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: -25px;
-}
-
-.emotion-21 {
-  margin-top: 25px;
-  margin-left: 0;
-}
-
 <div>
   <div
-    className="ui-skeleton-page-header emotion-0 emotion-1"
+    className="ui-skeleton-page-header e1krcyn16 css-0"
     style={Object {}}
   >
     <div
-      className="ui-skeleton-page-header-heading emotion-0 emotion-1"
+      className="ui-skeleton-page-header-heading e1krcyn16 css-0"
       style={
         Object {
           "width": 1100,
@@ -344,7 +108,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
       }
     >
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
+        className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-0"
         style={
           Object {
             "height": 12,
@@ -353,7 +117,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
         }
       />
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
+        className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-0"
         style={
           Object {
             "height": 36,
@@ -363,19 +127,19 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
       />
     </div>
     <div
-      className="ui-skeleton-page-header-toolbar emotion-0 emotion-1"
+      className="ui-skeleton-page-header-toolbar e1krcyn16 css-0"
       style={Object {}}
     >
       <div
-        className="emotion-12 emotion-15"
+        className="e1krcyn10 css-1lw0t84"
         style={Object {}}
       >
         <div
-          className="emotion-12 emotion-13"
+          className="e1krcyn10 css-yaps0e"
           style={Object {}}
         >
           <div
-            className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-7"
+            className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-vu3rrr"
             style={
               Object {
                 "height": 12,
@@ -384,7 +148,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
             }
           />
           <div
-            className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-7"
+            className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-vu3rrr"
             style={
               Object {
                 "height": 12,
@@ -393,7 +157,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
             }
           />
           <div
-            className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-7"
+            className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-vu3rrr"
             style={
               Object {
                 "height": 12,
@@ -406,28 +170,28 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
     </div>
   </div>
   <div
-    className="emotion-12 emotion-55"
+    className="e1krcyn10 css-2l1w6y"
     style={Object {}}
   >
     <div
-      className="emotion-12 emotion-53"
+      className="e1krcyn10 css-1ovlff0"
       style={Object {}}
     >
       <div
-        className="emotion-12 emotion-51"
+        className="e1krcyn10 css-38z0j0"
         style={Object {}}
       >
         <div
-          className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-0 emotion-29"
+          className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 e1krcyn16 css-kd7fyf"
           onClick={undefined}
           style={Object {}}
         >
           <div
-            className="emotion-12 emotion-27"
+            className="e1krcyn10 css-rnemgu"
             style={Object {}}
           >
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--circle emotion-0 emotion-21"
+              className="ui-skeleton-shape ui-skeleton-shape--circle e1krcyn16 css-9lt90s"
               style={
                 Object {
                   "height": 80,
@@ -436,7 +200,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
               }
             />
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-21"
+              className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-9lt90s"
               style={
                 Object {
                   "height": 12,
@@ -445,7 +209,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
               }
             />
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-21"
+              className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-9lt90s"
               style={
                 Object {
                   "height": 12,
@@ -456,16 +220,16 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
           </div>
         </div>
         <div
-          className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-0 emotion-29"
+          className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 e1krcyn16 css-kd7fyf"
           onClick={undefined}
           style={Object {}}
         >
           <div
-            className="emotion-12 emotion-27"
+            className="e1krcyn10 css-rnemgu"
             style={Object {}}
           >
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--circle emotion-0 emotion-21"
+              className="ui-skeleton-shape ui-skeleton-shape--circle e1krcyn16 css-9lt90s"
               style={
                 Object {
                   "height": 80,
@@ -474,7 +238,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
               }
             />
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-21"
+              className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-9lt90s"
               style={
                 Object {
                   "height": 12,
@@ -483,7 +247,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
               }
             />
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-21"
+              className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-9lt90s"
               style={
                 Object {
                   "height": 12,
@@ -494,16 +258,16 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
           </div>
         </div>
         <div
-          className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-0 emotion-29"
+          className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 e1krcyn16 css-kd7fyf"
           onClick={undefined}
           style={Object {}}
         >
           <div
-            className="emotion-12 emotion-27"
+            className="e1krcyn10 css-rnemgu"
             style={Object {}}
           >
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--circle emotion-0 emotion-21"
+              className="ui-skeleton-shape ui-skeleton-shape--circle e1krcyn16 css-9lt90s"
               style={
                 Object {
                   "height": 80,
@@ -512,7 +276,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
               }
             />
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-21"
+              className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-9lt90s"
               style={
                 Object {
                   "height": 12,
@@ -521,7 +285,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
               }
             />
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-21"
+              className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-9lt90s"
               style={
                 Object {
                   "height": 12,
@@ -538,77 +302,21 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 `;
 
 exports[`components/skeleton SkeletonList should render shallow component ok 1`] = `
-.emotion-25 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: -10px;
-}
-
-.emotion-7 {
-  padding: 25px;
-  margin-top: 10px;
-  margin-left: 0;
-}
-
-.emotion-5 {
-  position: relative;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: -25px;
-  overflow: hidden;
-}
-
-.emotion-1 {
-  margin-top: 0;
-  margin-left: 25px;
-}
-
 <div
-  className="emotion-4 emotion-25"
+  className="e1krcyn10 css-1une52z"
   style={Object {}}
 >
   <div
-    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-0 emotion-7"
+    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 e1krcyn16 css-ubsjkn"
     onClick={undefined}
     style={Object {}}
   >
     <div
-      className="emotion-4 emotion-5"
+      className="e1krcyn10 css-1t4fv6k"
       style={Object {}}
     >
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
+        className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-vu3rrr"
         style={
           Object {
             "height": 12,
@@ -617,7 +325,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
         }
       />
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
+        className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-vu3rrr"
         style={
           Object {
             "height": 12,
@@ -628,16 +336,16 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
     </div>
   </div>
   <div
-    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-0 emotion-7"
+    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 e1krcyn16 css-ubsjkn"
     onClick={undefined}
     style={Object {}}
   >
     <div
-      className="emotion-4 emotion-5"
+      className="e1krcyn10 css-1t4fv6k"
       style={Object {}}
     >
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
+        className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-vu3rrr"
         style={
           Object {
             "height": 12,
@@ -646,7 +354,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
         }
       />
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
+        className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-vu3rrr"
         style={
           Object {
             "height": 12,
@@ -657,16 +365,16 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
     </div>
   </div>
   <div
-    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 emotion-0 emotion-7"
+    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 e1krcyn16 css-ubsjkn"
     onClick={undefined}
     style={Object {}}
   >
     <div
-      className="emotion-4 emotion-5"
+      className="e1krcyn10 css-1t4fv6k"
       style={Object {}}
     >
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
+        className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-vu3rrr"
         style={
           Object {
             "height": 12,
@@ -675,7 +383,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
         }
       />
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
+        className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-vu3rrr"
         style={
           Object {
             "height": 12,
@@ -690,7 +398,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 
 exports[`components/skeleton SkeletonText should render shallow component ok 1`] = `
 <div
-  className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
+  className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-0"
   style={
     Object {
       "height": 12,

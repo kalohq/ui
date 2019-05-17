@@ -1,14 +1,8 @@
 /* eslint-env jest */
 import * as React from 'react';
-import * as emotion from 'emotion';
-import {createSerializer} from 'jest-emotion';
 import renderer from 'react-test-renderer';
-import {ThemeProvider} from 'emotion-theming';
 
-import theme from 'components/theme';
 import ButtonDropdown from 'components/button-dropdown';
-
-expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe('ButtonDropdown', () => {
   const defaultProps = {
@@ -31,13 +25,7 @@ describe('ButtonDropdown', () => {
     ],
   };
   const create = (props = {}) =>
-    renderer
-      .create(
-        <ThemeProvider theme={theme}>
-          <ButtonDropdown {...defaultProps} {...props} />
-        </ThemeProvider>
-      )
-      .toJSON();
+    renderer.create(<ButtonDropdown {...defaultProps} {...props} />).toJSON();
 
   test('should render shallow component ok', () => {
     const element = create();
