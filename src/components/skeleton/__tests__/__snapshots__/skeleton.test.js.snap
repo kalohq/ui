@@ -2,7 +2,7 @@
 
 exports[`components/skeleton SkeletonAvatar should render shallow component ok 1`] = `
 <div
-  className="ui-skeleton-shape ui-skeleton-shape--circle e1krcyn16 css-0"
+  className="ui-skeleton-shape ui-skeleton-shape--circle"
   style={
     Object {
       "height": 40,
@@ -14,7 +14,7 @@ exports[`components/skeleton SkeletonAvatar should render shallow component ok 1
 
 exports[`components/skeleton SkeletonButton should render shallow component ok 1`] = `
 <div
-  className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-0"
+  className="ui-skeleton-shape ui-skeleton-shape--square"
   style={
     Object {
       "height": 36,
@@ -26,28 +26,72 @@ exports[`components/skeleton SkeletonButton should render shallow component ok 1
 
 exports[`components/skeleton SkeletonGrid should render shallow component ok 1`] = `
 <div
-  className="e1krcyn10 css-1yw3gw6"
-  style={Object {}}
+  className={null}
+  style={
+    Object {
+      "alignContent": "flex-start",
+      "alignItems": "stretch",
+      "display": "flex",
+      "flexDirection": "row",
+      "flexShrink": 0,
+      "marginLeft": "-25px",
+      "marginTop": null,
+      "position": "relative",
+    }
+  }
 >
   <div
-    className="e1krcyn10 css-xpg5aq"
-    style={Object {}}
+    className={null}
+    style={
+      Object {
+        "alignContent": "flex-start",
+        "alignItems": "stretch",
+        "display": "flex",
+        "flex": 1,
+        "flexDirection": "column",
+        "flexShrink": 0,
+        "marginLeft": "25px",
+        "marginTop": 0,
+        "position": "relative",
+      }
+    }
   >
     <div
-      className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 e1krcyn16 css-10hree7"
+      className="ui-paper ui-paper--level-1 ui-paper--hover-level-1"
       onClick={undefined}
-      style={Object {}}
+      style={
+        Object {
+          "flex": undefined,
+          "marginLeft": 0,
+          "marginTop": "10px",
+          "padding": "16px",
+        }
+      }
     >
       <div
-        className="e1krcyn10 css-1une52z"
-        style={Object {}}
+        className={null}
+        style={
+          Object {
+            "alignContent": "flex-start",
+            "alignItems": "stretch",
+            "display": "flex",
+            "flexDirection": "column",
+            "flexShrink": 0,
+            "marginLeft": null,
+            "marginTop": "-10px",
+            "position": "relative",
+          }
+        }
       >
         <div
-          className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-1k5qjm9"
+          className="ui-skeleton-shape ui-skeleton-shape--square"
           size={14}
           style={
             Object {
+              "flex": undefined,
               "height": 24,
+              "marginLeft": 0,
+              "marginTop": "10px",
               "width": "50%",
             }
           }
@@ -56,33 +100,69 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
     </div>
   </div>
   <div
-    className="e1krcyn10 css-xpg5aq"
-    style={Object {}}
+    className={null}
+    style={
+      Object {
+        "alignContent": "flex-start",
+        "alignItems": "stretch",
+        "display": "flex",
+        "flex": 1,
+        "flexDirection": "column",
+        "flexShrink": 0,
+        "marginLeft": "25px",
+        "marginTop": 0,
+        "position": "relative",
+      }
+    }
   >
     <div
-      className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 e1krcyn16 css-10hree7"
+      className="ui-paper ui-paper--level-1 ui-paper--hover-level-1"
       onClick={undefined}
-      style={Object {}}
+      style={
+        Object {
+          "flex": undefined,
+          "marginLeft": 0,
+          "marginTop": "10px",
+          "padding": "16px",
+        }
+      }
     >
       <div
-        className="e1krcyn10 css-1une52z"
-        style={Object {}}
+        className={null}
+        style={
+          Object {
+            "alignContent": "flex-start",
+            "alignItems": "stretch",
+            "display": "flex",
+            "flexDirection": "column",
+            "flexShrink": 0,
+            "marginLeft": null,
+            "marginTop": "-10px",
+            "position": "relative",
+          }
+        }
       >
         <div
-          className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-1k5qjm9"
+          className="ui-skeleton-shape ui-skeleton-shape--square"
           style={
             Object {
+              "flex": undefined,
               "height": 24,
+              "marginLeft": 0,
+              "marginTop": "10px",
               "width": "50%",
             }
           }
         />
         <div
-          className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-1k5qjm9"
+          className="ui-skeleton-shape ui-skeleton-shape--square"
           size={14}
           style={
             Object {
+              "flex": undefined,
               "height": 12,
+              "marginLeft": 0,
+              "marginTop": "10px",
               "width": "50%",
             }
           }
@@ -96,11 +176,11 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
 exports[`components/skeleton SkeletonGrid should render shallow component ok 2`] = `
 <div>
   <div
-    className="ui-skeleton-page-header e1krcyn16 css-0"
+    className="ui-skeleton-page-header"
     style={Object {}}
   >
     <div
-      className="ui-skeleton-page-header-heading e1krcyn16 css-0"
+      className="ui-skeleton-page-header-heading"
       style={
         Object {
           "width": 1100,
@@ -108,7 +188,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
       }
     >
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-0"
+        className="ui-skeleton-shape ui-skeleton-shape--square"
         style={
           Object {
             "height": 12,
@@ -117,7 +197,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
         }
       />
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-0"
+        className="ui-skeleton-shape ui-skeleton-shape--square"
         style={
           Object {
             "height": 36,
@@ -127,40 +207,72 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
       />
     </div>
     <div
-      className="ui-skeleton-page-header-toolbar e1krcyn16 css-0"
+      className="ui-skeleton-page-header-toolbar"
       style={Object {}}
     >
       <div
-        className="e1krcyn10 css-1lw0t84"
-        style={Object {}}
+        className={null}
+        style={
+          Object {
+            "alignContent": "flex-start",
+            "alignItems": "stretch",
+            "display": "flex",
+            "flexDirection": "column",
+            "flexShrink": 0,
+            "margin": "0px auto",
+            "position": "relative",
+            "width": 1100,
+          }
+        }
       >
         <div
-          className="e1krcyn10 css-yaps0e"
-          style={Object {}}
+          className={null}
+          style={
+            Object {
+              "alignContent": "flex-start",
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "row",
+              "flexShrink": 0,
+              "height": 46,
+              "marginLeft": "-25px",
+              "marginTop": null,
+              "position": "relative",
+            }
+          }
         >
           <div
-            className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-vu3rrr"
+            className="ui-skeleton-shape ui-skeleton-shape--square"
             style={
               Object {
+                "flex": undefined,
                 "height": 12,
+                "marginLeft": "25px",
+                "marginTop": 0,
                 "width": "50%",
               }
             }
           />
           <div
-            className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-vu3rrr"
+            className="ui-skeleton-shape ui-skeleton-shape--square"
             style={
               Object {
+                "flex": undefined,
                 "height": 12,
+                "marginLeft": "25px",
+                "marginTop": 0,
                 "width": "50%",
               }
             }
           />
           <div
-            className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-vu3rrr"
+            className="ui-skeleton-shape ui-skeleton-shape--square"
             style={
               Object {
+                "flex": undefined,
                 "height": 12,
+                "marginLeft": "25px",
+                "marginTop": 0,
                 "width": "50%",
               }
             }
@@ -170,49 +282,109 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
     </div>
   </div>
   <div
-    className="e1krcyn10 css-2l1w6y"
-    style={Object {}}
+    className={null}
+    style={
+      Object {
+        "alignContent": "flex-start",
+        "alignItems": "stretch",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexShrink": 0,
+        "position": "relative",
+      }
+    }
   >
     <div
-      className="e1krcyn10 css-1ovlff0"
-      style={Object {}}
+      className={null}
+      style={
+        Object {
+          "alignContent": "flex-start",
+          "alignItems": "stretch",
+          "display": "flex",
+          "flexDirection": "column",
+          "flexShrink": 0,
+          "margin": "50px auto",
+          "position": "relative",
+          "width": 1100,
+        }
+      }
     >
       <div
-        className="e1krcyn10 css-38z0j0"
-        style={Object {}}
+        className={null}
+        style={
+          Object {
+            "alignContent": "flex-start",
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "flexShrink": 0,
+            "marginLeft": "-25px",
+            "marginTop": null,
+            "position": "relative",
+          }
+        }
       >
         <div
-          className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 e1krcyn16 css-kd7fyf"
+          className="ui-paper ui-paper--level-1 ui-paper--hover-level-1"
           onClick={undefined}
-          style={Object {}}
+          style={
+            Object {
+              "flex": 1,
+              "marginLeft": "25px",
+              "marginTop": 0,
+              "padding": "16px",
+              "paddingBottom": "150px",
+              "paddingTop": "75px",
+            }
+          }
         >
           <div
-            className="e1krcyn10 css-rnemgu"
-            style={Object {}}
+            className={null}
+            style={
+              Object {
+                "alignContent": "flex-start",
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "column",
+                "flexShrink": 0,
+                "marginLeft": null,
+                "marginTop": "-25px",
+                "position": "relative",
+              }
+            }
           >
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--circle e1krcyn16 css-9lt90s"
+              className="ui-skeleton-shape ui-skeleton-shape--circle"
               style={
                 Object {
+                  "flex": undefined,
                   "height": 80,
+                  "marginLeft": 0,
+                  "marginTop": "25px",
                   "width": 80,
                 }
               }
             />
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-9lt90s"
+              className="ui-skeleton-shape ui-skeleton-shape--square"
               style={
                 Object {
+                  "flex": undefined,
                   "height": 12,
+                  "marginLeft": 0,
+                  "marginTop": "25px",
                   "width": "14%",
                 }
               }
             />
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-9lt90s"
+              className="ui-skeleton-shape ui-skeleton-shape--square"
               style={
                 Object {
+                  "flex": undefined,
                   "height": 12,
+                  "marginLeft": 0,
+                  "marginTop": "25px",
                   "width": "20%",
                 }
               }
@@ -220,37 +392,66 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
           </div>
         </div>
         <div
-          className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 e1krcyn16 css-kd7fyf"
+          className="ui-paper ui-paper--level-1 ui-paper--hover-level-1"
           onClick={undefined}
-          style={Object {}}
+          style={
+            Object {
+              "flex": 1,
+              "marginLeft": "25px",
+              "marginTop": 0,
+              "padding": "16px",
+              "paddingBottom": "150px",
+              "paddingTop": "75px",
+            }
+          }
         >
           <div
-            className="e1krcyn10 css-rnemgu"
-            style={Object {}}
+            className={null}
+            style={
+              Object {
+                "alignContent": "flex-start",
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "column",
+                "flexShrink": 0,
+                "marginLeft": null,
+                "marginTop": "-25px",
+                "position": "relative",
+              }
+            }
           >
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--circle e1krcyn16 css-9lt90s"
+              className="ui-skeleton-shape ui-skeleton-shape--circle"
               style={
                 Object {
+                  "flex": undefined,
                   "height": 80,
+                  "marginLeft": 0,
+                  "marginTop": "25px",
                   "width": 80,
                 }
               }
             />
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-9lt90s"
+              className="ui-skeleton-shape ui-skeleton-shape--square"
               style={
                 Object {
+                  "flex": undefined,
                   "height": 12,
+                  "marginLeft": 0,
+                  "marginTop": "25px",
                   "width": "14%",
                 }
               }
             />
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-9lt90s"
+              className="ui-skeleton-shape ui-skeleton-shape--square"
               style={
                 Object {
+                  "flex": undefined,
                   "height": 12,
+                  "marginLeft": 0,
+                  "marginTop": "25px",
                   "width": "20%",
                 }
               }
@@ -258,37 +459,66 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
           </div>
         </div>
         <div
-          className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 e1krcyn16 css-kd7fyf"
+          className="ui-paper ui-paper--level-1 ui-paper--hover-level-1"
           onClick={undefined}
-          style={Object {}}
+          style={
+            Object {
+              "flex": 1,
+              "marginLeft": "25px",
+              "marginTop": 0,
+              "padding": "16px",
+              "paddingBottom": "150px",
+              "paddingTop": "75px",
+            }
+          }
         >
           <div
-            className="e1krcyn10 css-rnemgu"
-            style={Object {}}
+            className={null}
+            style={
+              Object {
+                "alignContent": "flex-start",
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "column",
+                "flexShrink": 0,
+                "marginLeft": null,
+                "marginTop": "-25px",
+                "position": "relative",
+              }
+            }
           >
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--circle e1krcyn16 css-9lt90s"
+              className="ui-skeleton-shape ui-skeleton-shape--circle"
               style={
                 Object {
+                  "flex": undefined,
                   "height": 80,
+                  "marginLeft": 0,
+                  "marginTop": "25px",
                   "width": 80,
                 }
               }
             />
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-9lt90s"
+              className="ui-skeleton-shape ui-skeleton-shape--square"
               style={
                 Object {
+                  "flex": undefined,
                   "height": 12,
+                  "marginLeft": 0,
+                  "marginTop": "25px",
                   "width": "14%",
                 }
               }
             />
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-9lt90s"
+              className="ui-skeleton-shape ui-skeleton-shape--square"
               style={
                 Object {
+                  "flex": undefined,
                   "height": 12,
+                  "marginLeft": 0,
+                  "marginTop": "25px",
                   "width": "20%",
                 }
               }
@@ -303,32 +533,68 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 
 exports[`components/skeleton SkeletonList should render shallow component ok 1`] = `
 <div
-  className="e1krcyn10 css-1une52z"
-  style={Object {}}
+  className={null}
+  style={
+    Object {
+      "alignContent": "flex-start",
+      "alignItems": "stretch",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexShrink": 0,
+      "marginLeft": null,
+      "marginTop": "-10px",
+      "position": "relative",
+    }
+  }
 >
   <div
-    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 e1krcyn16 css-ubsjkn"
+    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1"
     onClick={undefined}
-    style={Object {}}
+    style={
+      Object {
+        "flex": undefined,
+        "marginLeft": 0,
+        "marginTop": "10px",
+        "padding": "25px",
+      }
+    }
   >
     <div
-      className="e1krcyn10 css-1t4fv6k"
-      style={Object {}}
+      className={null}
+      style={
+        Object {
+          "alignContent": "flex-start",
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "flexShrink": 0,
+          "marginLeft": "-25px",
+          "marginTop": null,
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
     >
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-vu3rrr"
+        className="ui-skeleton-shape ui-skeleton-shape--square"
         style={
           Object {
+            "flex": undefined,
             "height": 12,
+            "marginLeft": "25px",
+            "marginTop": 0,
             "width": "20%",
           }
         }
       />
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-vu3rrr"
+        className="ui-skeleton-shape ui-skeleton-shape--square"
         style={
           Object {
+            "flex": undefined,
             "height": 12,
+            "marginLeft": "25px",
+            "marginTop": 0,
             "width": "10%",
           }
         }
@@ -336,28 +602,53 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
     </div>
   </div>
   <div
-    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 e1krcyn16 css-ubsjkn"
+    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1"
     onClick={undefined}
-    style={Object {}}
+    style={
+      Object {
+        "flex": undefined,
+        "marginLeft": 0,
+        "marginTop": "10px",
+        "padding": "25px",
+      }
+    }
   >
     <div
-      className="e1krcyn10 css-1t4fv6k"
-      style={Object {}}
+      className={null}
+      style={
+        Object {
+          "alignContent": "flex-start",
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "flexShrink": 0,
+          "marginLeft": "-25px",
+          "marginTop": null,
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
     >
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-vu3rrr"
+        className="ui-skeleton-shape ui-skeleton-shape--square"
         style={
           Object {
+            "flex": undefined,
             "height": 12,
+            "marginLeft": "25px",
+            "marginTop": 0,
             "width": "20%",
           }
         }
       />
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-vu3rrr"
+        className="ui-skeleton-shape ui-skeleton-shape--square"
         style={
           Object {
+            "flex": undefined,
             "height": 12,
+            "marginLeft": "25px",
+            "marginTop": 0,
             "width": "10%",
           }
         }
@@ -365,28 +656,53 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
     </div>
   </div>
   <div
-    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1 e1krcyn16 css-ubsjkn"
+    className="ui-paper ui-paper--level-1 ui-paper--hover-level-1"
     onClick={undefined}
-    style={Object {}}
+    style={
+      Object {
+        "flex": undefined,
+        "marginLeft": 0,
+        "marginTop": "10px",
+        "padding": "25px",
+      }
+    }
   >
     <div
-      className="e1krcyn10 css-1t4fv6k"
-      style={Object {}}
+      className={null}
+      style={
+        Object {
+          "alignContent": "flex-start",
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "flexShrink": 0,
+          "marginLeft": "-25px",
+          "marginTop": null,
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
     >
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-vu3rrr"
+        className="ui-skeleton-shape ui-skeleton-shape--square"
         style={
           Object {
+            "flex": undefined,
             "height": 12,
+            "marginLeft": "25px",
+            "marginTop": 0,
             "width": "20%",
           }
         }
       />
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-vu3rrr"
+        className="ui-skeleton-shape ui-skeleton-shape--square"
         style={
           Object {
+            "flex": undefined,
             "height": 12,
+            "marginLeft": "25px",
+            "marginTop": 0,
             "width": "10%",
           }
         }
@@ -398,7 +714,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 
 exports[`components/skeleton SkeletonText should render shallow component ok 1`] = `
 <div
-  className="ui-skeleton-shape ui-skeleton-shape--square e1krcyn16 css-0"
+  className="ui-skeleton-shape ui-skeleton-shape--square"
   style={
     Object {
       "height": 12,

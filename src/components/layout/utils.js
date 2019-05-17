@@ -23,9 +23,8 @@ export const makePrimitive = (name, DefaultComponent, defaultStyle) => {
         <Component
           ref={elRef}
           className={className ? cx(className) : null}
-          css={{...defaultStyle, ...style}}
           {...cleanedProps}
-          style={{...propStyle}}
+          style={{...defaultStyle, ...style, ...propStyle}}
         />
       );
     }

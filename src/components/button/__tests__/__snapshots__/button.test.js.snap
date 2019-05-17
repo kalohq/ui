@@ -2,7 +2,7 @@
 
 exports[`Button should render shallow component ok 1`] = `
 <button
-  className="ui-btn ui-btn--medium ui-btn--tertiary e1krcyn16 css-0"
+  className="ui-btn ui-btn--medium ui-btn--tertiary"
   data-test="ui-button"
   disabled={false}
   name={undefined}

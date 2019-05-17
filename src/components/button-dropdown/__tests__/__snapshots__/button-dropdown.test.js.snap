@@ -2,7 +2,7 @@
 
 exports[`ButtonDropdown should render shallow component ok 1`] = `
 <button
-  className="ui-btn ui-btn--medium ui-btn--tertiary e1krcyn16 css-0"
+  className="ui-btn ui-btn--medium ui-btn--tertiary"
   data-test="ui-button"
   disabled={false}
   name={undefined}
@@ -15,9 +15,14 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
     className="ui-btn__react-placeholder-message"
   >
     <i
-      className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-1brs5yl"
+      className="ui-icon ui-icon--size-20 fill-currentColor"
       onClick={undefined}
-      style={Object {}}
+      style={
+        Object {
+          "marginLeft": "8px",
+          "marginRight": "-8px",
+        }
+      }
       title={undefined}
     >
       <svg
@@ -37,9 +42,14 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
     title={undefined}
   >
     <i
-      className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-1brs5yl"
+      className="ui-icon ui-icon--size-20 fill-currentColor"
       onClick={undefined}
-      style={Object {}}
+      style={
+        Object {
+          "marginLeft": "8px",
+          "marginRight": "-8px",
+        }
+      }
       title={undefined}
     >
       <svg
@@ -72,7 +82,7 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
 
 exports[`ButtonDropdown should render with a checkbox 1`] = `
 <button
-  className="ui-btn ui-btn--medium ui-btn--tertiary e1krcyn16 css-0"
+  className="ui-btn ui-btn--medium ui-btn--tertiary"
   data-test="ui-button"
   disabled={false}
   name={undefined}
@@ -85,10 +95,19 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
     className="ui-btn__react-placeholder-message"
   >
     <div
-      className="ui-checkbox ui-checkbox--large e1krcyn10 css-2l1w6y"
+      className="ui-checkbox ui-checkbox--large"
       data-test="ui-checkbox"
       name={undefined}
-      style={Object {}}
+      style={
+        Object {
+          "alignContent": "flex-start",
+          "alignItems": "stretch",
+          "display": "flex",
+          "flexDirection": "column",
+          "flexShrink": 0,
+          "position": "relative",
+        }
+      }
     >
       <input
         checked={false}
@@ -103,9 +122,14 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
       />
     </div>
     <i
-      className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-1brs5yl"
+      className="ui-icon ui-icon--size-20 fill-currentColor"
       onClick={undefined}
-      style={Object {}}
+      style={
+        Object {
+          "marginLeft": "8px",
+          "marginRight": "-8px",
+        }
+      }
       title={undefined}
     >
       <svg
@@ -125,10 +149,19 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
     title={undefined}
   >
     <div
-      className="ui-checkbox ui-checkbox--large e1krcyn10 css-2l1w6y"
+      className="ui-checkbox ui-checkbox--large"
       data-test="ui-checkbox"
       name={undefined}
-      style={Object {}}
+      style={
+        Object {
+          "alignContent": "flex-start",
+          "alignItems": "stretch",
+          "display": "flex",
+          "flexDirection": "column",
+          "flexShrink": 0,
+          "position": "relative",
+        }
+      }
     >
       <input
         checked={false}
@@ -143,9 +176,14 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
       />
     </div>
     <i
-      className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-1brs5yl"
+      className="ui-icon ui-icon--size-20 fill-currentColor"
       onClick={undefined}
-      style={Object {}}
+      style={
+        Object {
+          "marginLeft": "8px",
+          "marginRight": "-8px",
+        }
+      }
       title={undefined}
     >
       <svg
