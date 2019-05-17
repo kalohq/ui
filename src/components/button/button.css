@@ -1,8 +1,6 @@
 :root {
-  --ui-button-primary-default-background: var(--purple500);
-  --ui-button-primary-hover-background: var(--purple600);
-  --ui-button-primary-active-background: var(--purple600);
-  --ui-button-primary-focus-shadow: var(--purple300);
+  --ui-user-primary: var(--purple500);
+  --ui-user-primary--lighter: var(--purple300);
 }
 
 .ui-btn {
@@ -113,21 +111,22 @@
   */
 
 .ui-btn--primary {
-  background-color: var(--ui-button-primary-default-background);
+  background-color: var(--ui-user-primary);
   color: var(--white);
+  transition: filter 0.2s ease-out;
 
   &:hover {
-    background-color: var(--ui-button-primary-hover-background);
+    filter: brightness(110%);
   }
 
   &:active,
   &.ui-btn--active {
-    background-color: var(--ui-button-primary-active-background);
+    filter: brightness(95%);
     box-shadow: none;
   }
 
   &:focus {
-    box-shadow: 0 0 0 3px var(--ui-button-primary-focus-shadow);
+    box-shadow: 0 0 0 3px var(--ui-user-primary--lighter);
   }
 }
 
@@ -223,20 +222,21 @@
 .ui-btn--action {
   border-radius: 50%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.13), 0 6px 6px rgba(0, 0, 0, 0);
-  background-color: var(--pink500);
+  background-color: var(--ui-user-primary);
   color: #fff;
+  transition: filter 0.2s ease-out;
 
   &:hover {
-    background-color: var(--pink400);
+    filter: brightness(110%);
+  }
+
+  &:active {
+    filter: brightness(95%);
   }
 
   &:focus {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.13), 0 6px 6px rgba(0, 0, 0, 0),
-      0 0 0 3px var(--pink300);
-  }
-
-  &:active {
-    background-color: var(--pink600);
+      0 0 0 3px var(--ui-user-primary--lighter);
   }
 }
 
