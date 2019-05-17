@@ -2,24 +2,44 @@
 
 exports[`Input should render shallow component ok 1`] = `
 <fieldset
-  className="ui-fieldset e1krcyn16 css-12i09t1"
+  className="ui-fieldset"
   name={undefined}
   onClick={undefined}
-  style={Object {}}
+  style={
+    Object {
+      "padding": "20px 50px 40px 50px",
+    }
+  }
 >
   <div
-    className="ui-field ui-field--legacy e1krcyn16 css-0"
+    className="ui-field ui-field--legacy"
     onClick={undefined}
     style={Object {}}
   >
     <div
-      className="e1krcyn10 css-1dvaom5"
-      style={Object {}}
+      className={null}
+      style={
+        Object {
+          "alignContent": "flex-start",
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "flexShrink": 0,
+          "justifyContent": "space-between",
+          "position": "relative",
+        }
+      }
     >
       <label
-        className="ui-field-label e1krcyn16 css-4or71o"
+        className="ui-field-label"
         htmlFor={undefined}
-        style={Object {}}
+        style={
+          Object {
+            "marginBottom": "4px",
+            "marginRight": 0,
+            "width": null,
+          }
+        }
         title={undefined}
       >
         Your name

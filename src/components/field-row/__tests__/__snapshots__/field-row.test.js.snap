@@ -2,22 +2,49 @@
 
 exports[`Input should render shallow component ok 1`] = `
 <div
-  className="ui-field-row e1krcyn16 css-150a2en"
-  style={Object {}}
+  className="ui-field-row"
+  style={
+    Object {
+      "marginLeft": "-20px",
+      "marginTop": "20px",
+    }
+  }
 >
   <div
-    className="ui-field ui-field--legacy e1krcyn16 css-6smw74"
+    className="ui-field ui-field--legacy"
     onClick={undefined}
-    style={Object {}}
+    style={
+      Object {
+        "flex": 1,
+        "marginLeft": 0,
+        "paddingLeft": "20px",
+      }
+    }
   >
     <div
-      className="e1krcyn10 css-1dvaom5"
-      style={Object {}}
+      className={null}
+      style={
+        Object {
+          "alignContent": "flex-start",
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "flexShrink": 0,
+          "justifyContent": "space-between",
+          "position": "relative",
+        }
+      }
     >
       <label
-        className="ui-field-label e1krcyn16 css-4or71o"
+        className="ui-field-label"
         htmlFor={undefined}
-        style={Object {}}
+        style={
+          Object {
+            "marginBottom": "4px",
+            "marginRight": 0,
+            "width": null,
+          }
+        }
         title={undefined}
       >
         Project name
@@ -46,18 +73,40 @@ exports[`Input should render shallow component ok 1`] = `
     </div>
   </div>
   <div
-    className="ui-field ui-field--legacy e1krcyn16 css-6smw74"
+    className="ui-field ui-field--legacy"
     onClick={undefined}
-    style={Object {}}
+    style={
+      Object {
+        "flex": 1,
+        "marginLeft": 0,
+        "paddingLeft": "20px",
+      }
+    }
   >
     <div
-      className="e1krcyn10 css-1dvaom5"
-      style={Object {}}
+      className={null}
+      style={
+        Object {
+          "alignContent": "flex-start",
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "flexShrink": 0,
+          "justifyContent": "space-between",
+          "position": "relative",
+        }
+      }
     >
       <label
-        className="ui-field-label e1krcyn16 css-4or71o"
+        className="ui-field-label"
         htmlFor={undefined}
-        style={Object {}}
+        style={
+          Object {
+            "marginBottom": "4px",
+            "marginRight": 0,
+            "width": null,
+          }
+        }
         title={undefined}
       >
         Task name

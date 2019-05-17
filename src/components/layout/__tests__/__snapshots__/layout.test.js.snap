@@ -2,18 +2,30 @@
 
 exports[`Block should render correctly 1`] = `
 <div
-  className="e1krcyn12 css-lc5qmv"
+  className={null}
   onClick={null}
-  style={Object {}}
+  style={
+    Object {
+      "display": "block",
+      "flex": 0,
+    }
+  }
 />
 `;
 
 exports[`Box should allow overriding of default styles 1`] = `
 <div
-  className="e1krcyn10 css-sd5hxs"
+  className={null}
   style={
     Object {
+      "alignContent": "flex-end",
+      "alignItems": "stretch",
       "color": "red",
+      "display": "flex",
+      "flex": 0,
+      "flexDirection": "column",
+      "flexShrink": 1,
+      "position": "relative",
     }
   }
 />
@@ -21,45 +33,92 @@ exports[`Box should allow overriding of default styles 1`] = `
 
 exports[`Box should allow passing spacing scales 1`] = `
 <div
-  className="e1krcyn10 css-fnjpj6"
-  style={Object {}}
+  className={null}
+  style={
+    Object {
+      "alignContent": "flex-start",
+      "alignItems": "stretch",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexShrink": 0,
+      "margin": "8px 16px 24px",
+      "paddingTop": "8px",
+      "position": "relative",
+    }
+  }
 />
 `;
 
 exports[`Box should allow passing vector style values 1`] = `
 <div
-  className="e1krcyn10 css-8byqpd"
-  style={Object {}}
+  className={null}
+  style={
+    Object {
+      "alignContent": "flex-start",
+      "alignItems": "stretch",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexShrink": 0,
+      "margin": "0px 5px 10% 15px",
+      "padding": "15px ",
+      "position": "relative",
+    }
+  }
 />
 `;
 
 exports[`Box should render correctly 1`] = `
 <div
-  className="e1krcyn10 css-2l1w6y"
-  style={Object {}}
+  className={null}
+  style={
+    Object {
+      "alignContent": "flex-start",
+      "alignItems": "stretch",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexShrink": 0,
+      "position": "relative",
+    }
+  }
 />
 `;
 
 exports[`Flex should render correctly 1`] = `
 <div
-  className="e1krcyn11 css-1r7gzeu"
+  className={null}
   onClick={null}
-  style={Object {}}
+  style={
+    Object {
+      "display": "flex",
+      "flex": 0,
+    }
+  }
 />
 `;
 
 exports[`Inline should render correctly 1`] = `
 <span
-  className="e1krcyn13 css-ilphoc"
+  className={null}
   onClick={null}
-  style={Object {}}
+  style={
+    Object {
+      "display": "inline-block",
+      "flex": 0,
+      "verticalAlign": "bottom",
+    }
+  }
 />
 `;
 
 exports[`InlineFlex should render correctly 1`] = `
 <span
-  className="e1krcyn14 css-134c52"
+  className={null}
   onClick={null}
-  style={Object {}}
+  style={
+    Object {
+      "display": "inline-flex",
+      "flex": 0,
+    }
+  }
 />
 `;
