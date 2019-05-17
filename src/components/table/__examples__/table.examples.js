@@ -3,7 +3,7 @@ import React from 'react';
 
 import Table, {TableHead, TableRow, TableCell, TableBody} from '../';
 import {Box, Text, SkeletonAvatar, Icon} from '../..';
-import theme from '../../theme';
+import theme from '../../../design-tokens/tokens.theme.js';
 
 const CELL_PADDING = theme.layout.spacingSmall;
 const AVATAR_SIZE = 32;

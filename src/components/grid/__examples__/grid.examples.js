@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 
-import theme from '../../theme';
+import theme from '../../../design-tokens/tokens.theme.js';
 
 import {Grid, Row, Column} from '../';
 import H3 from '../../h3';
