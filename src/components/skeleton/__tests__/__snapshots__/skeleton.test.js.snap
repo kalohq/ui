@@ -14,7 +14,7 @@ exports[`components/skeleton SkeletonAvatar should render shallow component ok 1
 
 exports[`components/skeleton SkeletonButton should render shallow component ok 1`] = `
 <div
-  className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+  className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
   style={
     Object {
       "height": 36,
@@ -124,7 +124,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
         style={Object {}}
       >
         <div
-          className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+          className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
           size={14}
           style={
             Object {
@@ -150,7 +150,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
         style={Object {}}
       >
         <div
-          className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+          className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
           style={
             Object {
               "height": 24,
@@ -159,7 +159,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
           }
         />
         <div
-          className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+          className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
           size={14}
           style={
             Object {
@@ -344,7 +344,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
       }
     >
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+        className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
         style={
           Object {
             "height": 12,
@@ -353,7 +353,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
         }
       />
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+        className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
         style={
           Object {
             "height": 36,
@@ -375,7 +375,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
           style={Object {}}
         >
           <div
-            className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-7"
+            className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-7"
             style={
               Object {
                 "height": 12,
@@ -384,7 +384,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
             }
           />
           <div
-            className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-7"
+            className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-7"
             style={
               Object {
                 "height": 12,
@@ -393,7 +393,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
             }
           />
           <div
-            className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-7"
+            className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-7"
             style={
               Object {
                 "height": 12,
@@ -436,7 +436,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
               }
             />
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-21"
+              className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-21"
               style={
                 Object {
                   "height": 12,
@@ -445,7 +445,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
               }
             />
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-21"
+              className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-21"
               style={
                 Object {
                   "height": 12,
@@ -474,7 +474,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
               }
             />
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-21"
+              className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-21"
               style={
                 Object {
                   "height": 12,
@@ -483,7 +483,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
               }
             />
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-21"
+              className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-21"
               style={
                 Object {
                   "height": 12,
@@ -512,7 +512,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
               }
             />
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-21"
+              className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-21"
               style={
                 Object {
                   "height": 12,
@@ -521,7 +521,7 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
               }
             />
             <div
-              className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-21"
+              className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-21"
               style={
                 Object {
                   "height": 12,
@@ -608,7 +608,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
       style={Object {}}
     >
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+        className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
         style={
           Object {
             "height": 12,
@@ -617,7 +617,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
         }
       />
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+        className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
         style={
           Object {
             "height": 12,
@@ -637,7 +637,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
       style={Object {}}
     >
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+        className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
         style={
           Object {
             "height": 12,
@@ -646,7 +646,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
         }
       />
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+        className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
         style={
           Object {
             "height": 12,
@@ -666,7 +666,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
       style={Object {}}
     >
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+        className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
         style={
           Object {
             "height": 12,
@@ -675,7 +675,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
         }
       />
       <div
-        className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+        className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
         style={
           Object {
             "height": 12,
@@ -690,7 +690,7 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
 
 exports[`components/skeleton SkeletonText should render shallow component ok 1`] = `
 <div
-  className="ui-skeleton-shape ui-skeleton-shape--undefined emotion-0 emotion-1"
+  className="ui-skeleton-shape ui-skeleton-shape--square emotion-0 emotion-1"
   style={
     Object {
       "height": 12,
