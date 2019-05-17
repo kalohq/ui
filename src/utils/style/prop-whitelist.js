@@ -2,7 +2,7 @@
  * @flow
  *
  * Lookup to determine what props we allow through to the DOM
- * - Taken from react-emotion/src/props.js
+ *
  */
 const props = {
   // react props
