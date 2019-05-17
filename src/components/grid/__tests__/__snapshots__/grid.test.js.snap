@@ -3,19 +3,19 @@
 exports[`components/grid should render shallow component ok 1`] = `
 <div
   className="container"
-  css={Object {}}
+  style={Object {}}
 >
   <div
     className="row"
-    css={Object {}}
+    style={Object {}}
   >
     <div
       className="col-xs-2"
-      css={Object {}}
+      style={Object {}}
     />
     <div
       className="col-xs-10"
-      css={Object {}}
+      style={Object {}}
     />
   </div>
 </div>
