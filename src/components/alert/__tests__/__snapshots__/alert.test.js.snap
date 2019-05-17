@@ -1,21 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Alert should render a confirmation alert with an icon 1`] = `
-.emotion-3 {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 <div
-  className="ui-alert ui-alert--confirmation emotion-0 emotion-3"
+  className="ui-alert ui-alert--confirmation e1krcyn16 css-1tyndxa"
   role="alert"
   style={Object {}}
   type="confirmation"
 >
   <i
-    className="ui-icon ui-icon--size-16 fill-currentColor emotion-0 emotion-1"
+    className="ui-icon ui-icon--size-16 fill-currentColor e1krcyn16 css-0"
     onClick={undefined}
     style={Object {}}
     title={undefined}
@@ -43,21 +36,14 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
 `;
 
 exports[`Alert should render a warning alert 1`] = `
-.emotion-3 {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 <div
-  className="ui-alert ui-alert--warning emotion-0 emotion-3"
+  className="ui-alert ui-alert--warning e1krcyn16 css-1tyndxa"
   role="alert"
   style={Object {}}
   type="warning"
 >
   <i
-    className="ui-icon ui-icon--size-16 fill-currentColor emotion-0 emotion-1"
+    className="ui-icon ui-icon--size-16 fill-currentColor e1krcyn16 css-0"
     onClick={undefined}
     style={Object {}}
     title={undefined}
@@ -85,21 +71,14 @@ exports[`Alert should render a warning alert 1`] = `
 `;
 
 exports[`Alert should render shallow component ok 1`] = `
-.emotion-3 {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 <div
-  className="ui-alert ui-alert--info emotion-0 emotion-3"
+  className="ui-alert ui-alert--info e1krcyn16 css-1tyndxa"
   role="alert"
   style={Object {}}
   type="info"
 >
   <i
-    className="ui-icon ui-icon--size-16 fill-currentColor emotion-0 emotion-1"
+    className="ui-icon ui-icon--size-16 fill-currentColor e1krcyn16 css-0"
     onClick={undefined}
     style={Object {}}
     title={undefined}

@@ -3,9 +3,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import renderer from 'react-test-renderer';
-import {ThemeProvider} from 'emotion-theming';
 
-import theme from '../../theme';
 import Input from '../../input';
 import Fieldset, {FieldsetHeader} from '../fieldset.react';
 import Field from '../../field';
@@ -27,13 +25,11 @@ describe('Input', () => {
   test('should render shallow component ok', () => {
     const element = renderer
       .create(
-        <ThemeProvider theme={theme}>
-          <Fieldset>
-            <Field label="Your name" required={true}>
-              <Input placeholder="Alex" />
-            </Field>
-          </Fieldset>
-        </ThemeProvider>
+        <Fieldset>
+          <Field label="Your name" required={true}>
+            <Input placeholder="Alex" />
+          </Field>
+        </Fieldset>
       )
       .toJSON();
     expect(element).toMatchSnapshot();

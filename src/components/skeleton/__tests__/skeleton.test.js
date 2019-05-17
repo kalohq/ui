@@ -1,11 +1,7 @@
 /* eslint-env jest */
 import * as React from 'react';
-import * as emotion from 'emotion';
-import {createSerializer} from 'jest-emotion';
 import renderer from 'react-test-renderer';
-import {ThemeProvider} from 'emotion-theming';
 
-import theme from 'components/theme';
 import {
   SkeletonGrid,
   SkeletonList,
@@ -21,13 +17,8 @@ import {
   SkeletonPaper,
 } from '../';
 
-expect.addSnapshotSerializer(createSerializer(emotion));
-
 describe('components/skeleton', () => {
-  const createForSnapshot = children =>
-    renderer
-      .create(<ThemeProvider theme={theme}>{children}</ThemeProvider>)
-      .toJSON();
+  const createForSnapshot = children => renderer.create(children).toJSON();
 
   describe('SkeletonAvatar', () => {
     test('should render shallow component ok', () => {

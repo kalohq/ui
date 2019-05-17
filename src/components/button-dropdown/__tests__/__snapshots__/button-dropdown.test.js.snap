@@ -1,13 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ButtonDropdown should render shallow component ok 1`] = `
-.emotion-1 {
-  margin-left: 8px;
-  margin-right: -8px;
-}
-
 <button
-  className="ui-btn ui-btn--medium ui-btn--tertiary emotion-0 emotion-5"
+  className="ui-btn ui-btn--medium ui-btn--tertiary e1krcyn16 css-0"
   data-test="ui-button"
   disabled={false}
   name={undefined}
@@ -20,7 +15,7 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
     className="ui-btn__react-placeholder-message"
   >
     <i
-      className="ui-icon ui-icon--size-20 fill-currentColor emotion-0 emotion-1"
+      className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-1brs5yl"
       onClick={undefined}
       style={Object {}}
       title={undefined}
@@ -42,7 +37,7 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
     title={undefined}
   >
     <i
-      className="ui-icon ui-icon--size-20 fill-currentColor emotion-0 emotion-1"
+      className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-1brs5yl"
       onClick={undefined}
       style={Object {}}
       title={undefined}
@@ -76,34 +71,8 @@ exports[`ButtonDropdown should render shallow component ok 1`] = `
 `;
 
 exports[`ButtonDropdown should render with a checkbox 1`] = `
-.emotion-3 {
-  margin-left: 8px;
-  margin-right: -8px;
-}
-
-.emotion-1 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 <button
-  className="ui-btn ui-btn--medium ui-btn--tertiary emotion-2 emotion-9"
+  className="ui-btn ui-btn--medium ui-btn--tertiary e1krcyn16 css-0"
   data-test="ui-button"
   disabled={false}
   name={undefined}
@@ -116,7 +85,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
     className="ui-btn__react-placeholder-message"
   >
     <div
-      className="ui-checkbox ui-checkbox--large emotion-0 emotion-1"
+      className="ui-checkbox ui-checkbox--large e1krcyn10 css-2l1w6y"
       data-test="ui-checkbox"
       name={undefined}
       style={Object {}}
@@ -134,7 +103,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
       />
     </div>
     <i
-      className="ui-icon ui-icon--size-20 fill-currentColor emotion-2 emotion-3"
+      className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-1brs5yl"
       onClick={undefined}
       style={Object {}}
       title={undefined}
@@ -156,7 +125,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
     title={undefined}
   >
     <div
-      className="ui-checkbox ui-checkbox--large emotion-0 emotion-1"
+      className="ui-checkbox ui-checkbox--large e1krcyn10 css-2l1w6y"
       data-test="ui-checkbox"
       name={undefined}
       style={Object {}}
@@ -174,7 +143,7 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
       />
     </div>
     <i
-      className="ui-icon ui-icon--size-20 fill-currentColor emotion-2 emotion-3"
+      className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-1brs5yl"
       onClick={undefined}
       style={Object {}}
       title={undefined}

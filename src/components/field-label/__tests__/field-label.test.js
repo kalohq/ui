@@ -3,11 +3,9 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import renderer from 'react-test-renderer';
-import {ThemeProvider} from 'emotion-theming';
 
 import FieldLabel from '../field-label.react';
 import Icon from '../../icon';
-import theme from '../../theme';
 
 describe('FieldLabel', () => {
   const defaultProps = {
@@ -17,13 +15,7 @@ describe('FieldLabel', () => {
   const create = props => <FieldLabel {...defaultProps} {...props} />;
 
   test('should render shallow component ok', () => {
-    const element = renderer
-      .create(
-        <ThemeProvider theme={theme}>
-          <FieldLabel {...defaultProps} />
-        </ThemeProvider>
-      )
-      .toJSON();
+    const element = renderer.create(<FieldLabel {...defaultProps} />).toJSON();
     expect(element).toMatchSnapshot();
   });
 
