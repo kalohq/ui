@@ -78,3 +78,8 @@ export {Tab, Tabs} from './tabs';
 export {default as FeatureCalloutCard} from './feature-callout-card';
 export {default as Callout} from './callout';
 export {default as TooltipBox} from './tooltip-box';
+
+/**
+ * Theme
+ */
+export {default as theme} from '../design-tokens/tokens.theme';
