@@ -245,10 +245,8 @@ export const examples = [
     render: () => (
       <div
         style={{
-          '--ui-button-primary-default-background': '#0d7ef2',
-          '--ui-button-primary-hover-background': '#49a1fb',
-          '--ui-button-primary-active-background': '#49a1fb',
-          '--ui-button-primary-focus-shadow': '#cad9e8',
+          '--ui-user-primary': '#0d7ef2',
+          '--ui-user-primary--lighter': '#cad9e8',
         }}
       >
         <Button variant="primary" size="large">
@@ -259,10 +257,8 @@ export const examples = [
     html: () => (
       <div
         style={{
-          '--ui-button-primary-default-background': '#0d7ef2',
-          '--ui-button-primary-hover-background': '#49a1fb',
-          '--ui-button-primary-active-background': '#49a1fb',
-          '--ui-button-primary-focus-shadow': '#cad9e8',
+          '--ui-user-primary': '#0d7ef2',
+          '--ui-user-primary--lighter': '#cad9e8',
         }}
       >
         <button className="ui-btn ui-btn--primary ui-btn--large">
