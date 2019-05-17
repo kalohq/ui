@@ -58,7 +58,7 @@ const Spacer = (originalProps: TSpacerProps) => {
   const cleanedProps = cleanProps(props);
 
   return (
-    <Element className={className} {...cleanedProps} css={style}>
+    <Element className={className} {...cleanedProps} style={style}>
       {children}
     </Element>
   );
