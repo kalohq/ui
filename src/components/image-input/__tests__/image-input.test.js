@@ -3,7 +3,7 @@ import React from 'react';
 import ImageInput from '../image-input.react';
 import UIImageInput, {FILEREADER_ENABLED_CLASS} from '../image-input';
 
-import {shallow} from 'utils/test/enzyme';
+import {shallow} from 'enzyme';
 
 describe('ImageInput (web)', () => {
   beforeEach(() => {

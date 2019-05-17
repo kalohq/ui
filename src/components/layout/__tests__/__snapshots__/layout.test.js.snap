@@ -1,47 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Block should render correctly 1`] = `
-.emotion-1 {
-  display: block;
-  -webkit-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
-}
-
 <div
-  className="emotion-0 emotion-1"
+  className="e1krcyn12 css-lc5qmv"
   onClick={null}
   style={Object {}}
 />
 `;
 
 exports[`Box should allow overriding of default styles 1`] = `
-.emotion-1 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  -webkit-align-content: flex-end;
-  -ms-flex-line-pack: end;
-  align-content: flex-end;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
-}
-
 <div
-  className="emotion-0 emotion-1"
+  className="e1krcyn10 css-sd5hxs"
   style={
     Object {
       "color": "red",
@@ -51,140 +20,45 @@ exports[`Box should allow overriding of default styles 1`] = `
 `;
 
 exports[`Box should allow passing spacing scales 1`] = `
-.emotion-1 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 8px 16px 24px;
-  padding-top: 8px;
-}
-
 <div
-  className="emotion-0 emotion-1"
+  className="e1krcyn10 css-fnjpj6"
   style={Object {}}
 />
 `;
 
 exports[`Box should allow passing vector style values 1`] = `
-.emotion-1 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0px 5px 10% 15px;
-  padding: 15px;
-}
-
 <div
-  className="emotion-0 emotion-1"
+  className="e1krcyn10 css-8byqpd"
   style={Object {}}
 />
 `;
 
 exports[`Box should render correctly 1`] = `
-.emotion-1 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 <div
-  className="emotion-0 emotion-1"
+  className="e1krcyn10 css-2l1w6y"
   style={Object {}}
 />
 `;
 
 exports[`Flex should render correctly 1`] = `
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
-}
-
 <div
-  className="emotion-0 emotion-1"
+  className="e1krcyn11 css-1r7gzeu"
   onClick={null}
   style={Object {}}
 />
 `;
 
 exports[`Inline should render correctly 1`] = `
-.emotion-1 {
-  display: inline-block;
-  vertical-align: bottom;
-  -webkit-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
-}
-
 <span
-  className="emotion-0 emotion-1"
+  className="e1krcyn13 css-ilphoc"
   onClick={null}
   style={Object {}}
 />
 `;
 
 exports[`InlineFlex should render correctly 1`] = `
-.emotion-1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
-}
-
 <span
-  className="emotion-0 emotion-1"
+  className="e1krcyn14 css-134c52"
   onClick={null}
   style={Object {}}
 />

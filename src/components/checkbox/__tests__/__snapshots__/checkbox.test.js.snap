@@ -1,29 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox should render a checkbox partially checked 1`] = `
-.emotion-1 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 <div
-  className="ui-checkbox ui-checkbox--medium emotion-0 emotion-1"
+  className="ui-checkbox ui-checkbox--medium e1krcyn10 css-2l1w6y"
   data-test="ui-checkbox"
   name={undefined}
   style={Object {}}
@@ -53,29 +32,8 @@ exports[`Checkbox should render a checkbox partially checked 1`] = `
 `;
 
 exports[`Checkbox should render a checkbox with label 1`] = `
-.emotion-1 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 <div
-  className="ui-checkbox ui-checkbox--medium emotion-0 emotion-1"
+  className="ui-checkbox ui-checkbox--medium e1krcyn10 css-2l1w6y"
   data-test="ui-checkbox"
   name={undefined}
   style={Object {}}
@@ -105,29 +63,8 @@ exports[`Checkbox should render a checkbox with label 1`] = `
 `;
 
 exports[`Checkbox should render shallow component ok 1`] = `
-.emotion-1 {
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 <div
-  className="ui-checkbox ui-checkbox--medium emotion-0 emotion-1"
+  className="ui-checkbox ui-checkbox--medium e1krcyn10 css-2l1w6y"
   data-test="ui-checkbox"
   name={undefined}
   style={Object {}}

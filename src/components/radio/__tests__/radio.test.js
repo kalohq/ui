@@ -1,17 +1,11 @@
 /* @flow */
 /* eslint-env jest */
 import * as React from 'react';
-import * as emotion from 'emotion';
-import {createSerializer} from 'jest-emotion';
 import renderer from 'react-test-renderer';
-import {ThemeProvider} from 'emotion-theming';
 import {shallow} from 'enzyme';
 
-import theme from 'components/theme';
 import Radio from 'components/radio';
 import Text from 'components/text';
-
-expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe('Radio', () => {
   const defaultProps = {
@@ -19,13 +13,7 @@ describe('Radio', () => {
     checked: true,
   };
   const create = (props = {}) =>
-    renderer
-      .create(
-        <ThemeProvider theme={theme}>
-          <Radio {...defaultProps} {...props} />
-        </ThemeProvider>
-      )
-      .toJSON();
+    renderer.create(<Radio {...defaultProps} {...props} />).toJSON();
 
   test('should render shallow component ok', () => {
     const element = create();

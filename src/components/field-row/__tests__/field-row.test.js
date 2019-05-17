@@ -2,9 +2,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import renderer from 'react-test-renderer';
-import {ThemeProvider} from 'emotion-theming';
 
-import theme from '../../theme';
 import Input from '../../input';
 import FieldRow, {DEFAULT_SPACING} from '../field-row.react';
 import Field from '../../field';
@@ -25,16 +23,14 @@ describe('Input', () => {
   test('should render shallow component ok', () => {
     const element = renderer
       .create(
-        <ThemeProvider theme={theme}>
-          <FieldRow>
-            <Field label="Project name">
-              <Input placeholder="My first project" />
-            </Field>
-            <Field label="Task name">
-              <Input placeholder="My first task" />
-            </Field>
-          </FieldRow>
-        </ThemeProvider>
+        <FieldRow>
+          <Field label="Project name">
+            <Input placeholder="My first project" />
+          </Field>
+          <Field label="Task name">
+            <Input placeholder="My first task" />
+          </Field>
+        </FieldRow>
       )
       .toJSON();
     expect(element).toMatchSnapshot();

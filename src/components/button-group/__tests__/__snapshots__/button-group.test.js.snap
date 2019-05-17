@@ -2,12 +2,12 @@
 
 exports[`ButtonGroup should render shallow component ok 1`] = `
 <div
-  className="ui-btn-group ui-btn-group--wide emotion-0 emotion-1"
+  className="ui-btn-group ui-btn-group--wide e1krcyn16 css-0"
   data-test="ui-button-group"
   style={Object {}}
 >
   <button
-    className="ui-btn ui-btn--large ui-btn--primary ui-btn--grouped-with-spacing emotion-0 emotion-1"
+    className="ui-btn ui-btn--large ui-btn--primary ui-btn--grouped-with-spacing e1krcyn16 css-0"
     data-test="ui-button"
     disabled={false}
     name={undefined}
@@ -33,7 +33,7 @@ exports[`ButtonGroup should render shallow component ok 1`] = `
     />
   </button>
   <button
-    className="ui-btn ui-btn--large ui-btn--primary ui-btn--grouped-with-spacing emotion-0 emotion-1"
+    className="ui-btn ui-btn--large ui-btn--primary ui-btn--grouped-with-spacing e1krcyn16 css-0"
     data-test="ui-button"
     disabled={false}
     name={undefined}

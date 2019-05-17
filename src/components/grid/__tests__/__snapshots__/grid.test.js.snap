@@ -2,16 +2,16 @@
 
 exports[`components/grid should render shallow component ok 1`] = `
 <div
-  className="emotion-0 container"
+  className="css-0 container"
 >
   <div
-    className="emotion-0 row"
+    className="css-0 row"
   >
     <div
-      className="emotion-0 col-xs-2"
+      className="css-0 col-xs-2"
     />
     <div
-      className="emotion-0 col-xs-10"
+      className="css-0 col-xs-10"
     />
   </div>
 </div>

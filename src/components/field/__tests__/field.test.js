@@ -2,11 +2,9 @@
 import {shallow} from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import {ThemeProvider} from 'emotion-theming';
 
 import Field from '../field.react';
 import Input from '../../input';
-import theme from '../../theme';
 
 describe('Field', () => {
   const defaultProps = {
@@ -16,20 +14,16 @@ describe('Field', () => {
 
   const create = props => (
     <Field {...defaultProps} {...props}>
-      <ThemeProvider theme={theme}>
-        <Input value="My Input Value" />
-      </ThemeProvider>
+      <Input value="My Input Value" />
     </Field>
   );
 
   test('should render shallow component ok', () => {
     const element = renderer
       .create(
-        <ThemeProvider theme={theme}>
-          <Field {...defaultProps}>
-            <Input value="My Input Value" />
-          </Field>
-        </ThemeProvider>
+        <Field {...defaultProps}>
+          <Input value="My Input Value" />
+        </Field>
       )
       .toJSON();
     expect(element).toMatchSnapshot();

@@ -1,26 +1,18 @@
 /* @flow */
 /* eslint-env jest */
 import * as React from 'react';
-import * as emotion from 'emotion';
-import {createSerializer} from 'jest-emotion';
 import renderer from 'react-test-renderer';
-import {ThemeProvider} from 'emotion-theming';
 
-import theme from 'components/theme';
 import H4 from 'components/h4';
-
-expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe('H4', () => {
   const defaultProps = {};
   const create = (props = {}) =>
     renderer
       .create(
-        <ThemeProvider theme={theme}>
-          <H4 {...defaultProps} {...props}>
-            An H4 Tag
-          </H4>
-        </ThemeProvider>
+        <H4 {...defaultProps} {...props}>
+          An H4 Tag
+        </H4>
       )
       .toJSON();
 

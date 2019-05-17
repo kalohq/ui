@@ -1,15 +1,9 @@
 /* @flow */
 /* eslint-env jest */
 import * as React from 'react';
-import * as emotion from 'emotion';
-import {createSerializer} from 'jest-emotion';
 import renderer from 'react-test-renderer';
-import {ThemeProvider} from 'emotion-theming';
 
-import theme from 'components/theme';
 import Alert from 'components/alert';
-
-expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe('Alert', () => {
   const defaultProps = {
@@ -18,13 +12,11 @@ describe('Alert', () => {
   const create = (props = {}) =>
     renderer
       .create(
-        <ThemeProvider theme={theme}>
-          <Alert
-            {...defaultProps}
-            {...props}
-            children={`A ${props.type || defaultProps.type} alert`}
-          />
-        </ThemeProvider>
+        <Alert
+          {...defaultProps}
+          {...props}
+          children={`A ${props.type || defaultProps.type} alert`}
+        />
       )
       .toJSON();
 

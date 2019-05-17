@@ -71,8 +71,6 @@ type TProps = {
   className?: string | Object,
   /** Style to pass down */
   style?: Object,
-  /** A theme - set via context by Emotion */
-  theme?: Object,
 };
 
 type TState = {

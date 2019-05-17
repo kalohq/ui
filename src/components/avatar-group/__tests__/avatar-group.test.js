@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import * as React from 'react';
 
-import {shallow, mount} from 'utils/test/enzyme';
+import {shallow, mount} from 'enzyme';
 
 import Avatar from 'components/avatar';
 import AvatarGroup from '../avatar-group.react';
