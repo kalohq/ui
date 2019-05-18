@@ -1,34 +1,26 @@
 import {makePrimitive} from './utils';
-
+import styles from './layout.react.css';
 /**
  * Layout primitives
  */
 
-export const Box = makePrimitive('Box', 'div', {
-  position: 'relative',
-  flexDirection: 'column',
-  alignItems: 'stretch',
-  flexShrink: 0,
-  alignContent: 'flex-start',
-  display: 'flex',
-});
+export const Box = makePrimitive('Box', 'div', styles['ui-box']);
 Box.displayName = 'Box';
 
-export const Flex = makePrimitive('Flex', 'div', {display: 'flex'});
+export const Flex = makePrimitive('Flex', 'div', styles['ui-flex']);
 Flex.displayName = 'Flex';
 
-export const Block = makePrimitive('Block', 'div', {display: 'block'});
+export const Block = makePrimitive('Block', 'div', styles['ui-block']);
 Block.displayName = 'Block';
 
-export const Inline = makePrimitive('Inline', 'span', {
-  display: 'inline-block',
-  verticalAlign: 'bottom',
-});
+export const Inline = makePrimitive('Inline', 'span', styles['ui-inline']);
 Inline.displayName = 'Inline';
 
-export const InlineFlex = makePrimitive('InlineFlex', 'span', {
-  display: 'inline-flex',
-});
+export const InlineFlex = makePrimitive(
+  'InlineFlex',
+  'span',
+  styles['ui-inline-flex']
+);
 InlineFlex.displayName = 'InlineFlex';
 
 /**
@@ -36,7 +28,7 @@ InlineFlex.displayName = 'InlineFlex';
  * Eg. Button, Input, Select, Table etc.
  */
 
-export const A = makePrimitive('A', 'a', {display: 'inline-flex'});
+export const A = makePrimitive('A', 'a', styles['ui-a']);
 A.displayName = 'A';
 
 /**

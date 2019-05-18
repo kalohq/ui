@@ -2,19 +2,10 @@
 
 exports[`Radio should render shallow component ok 1`] = `
 <div
-  className="ui-radio ui-radio--medium"
+  className="ui-box ui-radio ui-radio--medium"
   data-test="ui-radio"
   name={undefined}
-  style={
-    Object {
-      "alignContent": "flex-start",
-      "alignItems": "stretch",
-      "display": "flex",
-      "flexDirection": "column",
-      "flexShrink": 0,
-      "position": "relative",
-    }
-  }
+  style={Object {}}
 >
   <input
     checked={true}
