@@ -22,16 +22,12 @@ exports[`Input should render shallow component ok 1`] = `
     }
   >
     <div
-      className={null}
+      className="ui-box"
       style={
         Object {
-          "alignContent": "flex-start",
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
-          "flexShrink": 0,
           "justifyContent": "space-between",
-          "position": "relative",
         }
       }
     >
@@ -84,16 +80,12 @@ exports[`Input should render shallow component ok 1`] = `
     }
   >
     <div
-      className={null}
+      className="ui-box"
       style={
         Object {
-          "alignContent": "flex-start",
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
-          "flexShrink": 0,
           "justifyContent": "space-between",
-          "position": "relative",
         }
       }
     >

@@ -1,0 +1,29 @@
+.ui-box {
+  position: relative;
+  flex-direction: column;
+  align-items: stretch;
+  flex-shrink: 0;
+  align-content: flex-start;
+  display: flex;
+}
+
+.ui-flex {
+  display: flex;
+}
+
+.ui-block {
+  display: block;
+}
+
+.ui-inline {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.ui-inline-flex {
+  display: inline-flex;
+}
+
+.ui-a {
+  display: inline-flex;
+}

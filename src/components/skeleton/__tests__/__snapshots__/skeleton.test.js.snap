@@ -26,33 +26,25 @@ exports[`components/skeleton SkeletonButton should render shallow component ok 1
 
 exports[`components/skeleton SkeletonGrid should render shallow component ok 1`] = `
 <div
-  className={null}
+  className="ui-box"
   style={
     Object {
-      "alignContent": "flex-start",
       "alignItems": "stretch",
-      "display": "flex",
       "flexDirection": "row",
-      "flexShrink": 0,
       "marginLeft": "-25px",
       "marginTop": null,
-      "position": "relative",
     }
   }
 >
   <div
-    className={null}
+    className="ui-box"
     style={
       Object {
-        "alignContent": "flex-start",
         "alignItems": "stretch",
-        "display": "flex",
         "flex": 1,
         "flexDirection": "column",
-        "flexShrink": 0,
         "marginLeft": "25px",
         "marginTop": 0,
-        "position": "relative",
       }
     }
   >
@@ -69,17 +61,13 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
       }
     >
       <div
-        className={null}
+        className="ui-box"
         style={
           Object {
-            "alignContent": "flex-start",
             "alignItems": "stretch",
-            "display": "flex",
             "flexDirection": "column",
-            "flexShrink": 0,
             "marginLeft": null,
             "marginTop": "-10px",
-            "position": "relative",
           }
         }
       >
@@ -100,18 +88,14 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
     </div>
   </div>
   <div
-    className={null}
+    className="ui-box"
     style={
       Object {
-        "alignContent": "flex-start",
         "alignItems": "stretch",
-        "display": "flex",
         "flex": 1,
         "flexDirection": "column",
-        "flexShrink": 0,
         "marginLeft": "25px",
         "marginTop": 0,
-        "position": "relative",
       }
     }
   >
@@ -128,17 +112,13 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
       }
     >
       <div
-        className={null}
+        className="ui-box"
         style={
           Object {
-            "alignContent": "flex-start",
             "alignItems": "stretch",
-            "display": "flex",
             "flexDirection": "column",
-            "flexShrink": 0,
             "marginLeft": null,
             "marginTop": "-10px",
-            "position": "relative",
           }
         }
       >
@@ -211,33 +191,23 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
       style={Object {}}
     >
       <div
-        className={null}
+        className="ui-box"
         style={
           Object {
-            "alignContent": "flex-start",
-            "alignItems": "stretch",
-            "display": "flex",
-            "flexDirection": "column",
-            "flexShrink": 0,
             "margin": "0px auto",
-            "position": "relative",
             "width": 1100,
           }
         }
       >
         <div
-          className={null}
+          className="ui-box"
           style={
             Object {
-              "alignContent": "flex-start",
               "alignItems": "center",
-              "display": "flex",
               "flexDirection": "row",
-              "flexShrink": 0,
               "height": 46,
               "marginLeft": "-25px",
               "marginTop": null,
-              "position": "relative",
             }
           }
         >
@@ -282,45 +252,26 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
     </div>
   </div>
   <div
-    className={null}
-    style={
-      Object {
-        "alignContent": "flex-start",
-        "alignItems": "stretch",
-        "display": "flex",
-        "flexDirection": "column",
-        "flexShrink": 0,
-        "position": "relative",
-      }
-    }
+    className="ui-box"
+    style={Object {}}
   >
     <div
-      className={null}
+      className="ui-box"
       style={
         Object {
-          "alignContent": "flex-start",
-          "alignItems": "stretch",
-          "display": "flex",
-          "flexDirection": "column",
-          "flexShrink": 0,
           "margin": "50px auto",
-          "position": "relative",
           "width": 1100,
         }
       }
     >
       <div
-        className={null}
+        className="ui-box"
         style={
           Object {
-            "alignContent": "flex-start",
             "alignItems": "center",
-            "display": "flex",
             "flexDirection": "row",
-            "flexShrink": 0,
             "marginLeft": "-25px",
             "marginTop": null,
-            "position": "relative",
           }
         }
       >
@@ -339,17 +290,13 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
           }
         >
           <div
-            className={null}
+            className="ui-box"
             style={
               Object {
-                "alignContent": "flex-start",
                 "alignItems": "center",
-                "display": "flex",
                 "flexDirection": "column",
-                "flexShrink": 0,
                 "marginLeft": null,
                 "marginTop": "-25px",
-                "position": "relative",
               }
             }
           >
@@ -406,17 +353,13 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
           }
         >
           <div
-            className={null}
+            className="ui-box"
             style={
               Object {
-                "alignContent": "flex-start",
                 "alignItems": "center",
-                "display": "flex",
                 "flexDirection": "column",
-                "flexShrink": 0,
                 "marginLeft": null,
                 "marginTop": "-25px",
-                "position": "relative",
               }
             }
           >
@@ -473,17 +416,13 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
           }
         >
           <div
-            className={null}
+            className="ui-box"
             style={
               Object {
-                "alignContent": "flex-start",
                 "alignItems": "center",
-                "display": "flex",
                 "flexDirection": "column",
-                "flexShrink": 0,
                 "marginLeft": null,
                 "marginTop": "-25px",
-                "position": "relative",
               }
             }
           >
@@ -533,17 +472,13 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
 
 exports[`components/skeleton SkeletonList should render shallow component ok 1`] = `
 <div
-  className={null}
+  className="ui-box"
   style={
     Object {
-      "alignContent": "flex-start",
       "alignItems": "stretch",
-      "display": "flex",
       "flexDirection": "column",
-      "flexShrink": 0,
       "marginLeft": null,
       "marginTop": "-10px",
-      "position": "relative",
     }
   }
 >
@@ -560,18 +495,14 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
     }
   >
     <div
-      className={null}
+      className="ui-box"
       style={
         Object {
-          "alignContent": "flex-start",
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
-          "flexShrink": 0,
           "marginLeft": "-25px",
           "marginTop": null,
           "overflow": "hidden",
-          "position": "relative",
         }
       }
     >
@@ -614,18 +545,14 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
     }
   >
     <div
-      className={null}
+      className="ui-box"
       style={
         Object {
-          "alignContent": "flex-start",
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
-          "flexShrink": 0,
           "marginLeft": "-25px",
           "marginTop": null,
           "overflow": "hidden",
-          "position": "relative",
         }
       }
     >
@@ -668,18 +595,14 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
     }
   >
     <div
-      className={null}
+      className="ui-box"
       style={
         Object {
-          "alignContent": "flex-start",
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
-          "flexShrink": 0,
           "marginLeft": "-25px",
           "marginTop": null,
           "overflow": "hidden",
-          "position": "relative",
         }
       }
     >
