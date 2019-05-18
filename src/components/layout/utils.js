@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import {parseStyleProps, cleanProps} from '../../utils/style';
 import cx from 'classnames';
 
-export const makePrimitive = (name, DefaultComponent, defaultStyle) => {
+export const makePrimitive = (name, DefaultComponent, klassName) => {
   class Primitive extends PureComponent {
     render() {
       const {
@@ -22,9 +22,9 @@ export const makePrimitive = (name, DefaultComponent, defaultStyle) => {
       return (
         <Component
           ref={elRef}
-          className={className ? cx(className) : null}
+          className={cx(klassName, className)}
           {...cleanedProps}
-          style={{...defaultStyle, ...style, ...propStyle}}
+          style={{...style, ...propStyle}}
         />
       );
     }

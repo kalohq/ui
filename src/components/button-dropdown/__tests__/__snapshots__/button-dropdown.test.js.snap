@@ -95,19 +95,10 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
     className="ui-btn__react-placeholder-message"
   >
     <div
-      className="ui-checkbox ui-checkbox--large"
+      className="ui-box ui-checkbox ui-checkbox--large"
       data-test="ui-checkbox"
       name={undefined}
-      style={
-        Object {
-          "alignContent": "flex-start",
-          "alignItems": "stretch",
-          "display": "flex",
-          "flexDirection": "column",
-          "flexShrink": 0,
-          "position": "relative",
-        }
-      }
+      style={Object {}}
     >
       <input
         checked={false}
@@ -149,19 +140,10 @@ exports[`ButtonDropdown should render with a checkbox 1`] = `
     title={undefined}
   >
     <div
-      className="ui-checkbox ui-checkbox--large"
+      className="ui-box ui-checkbox ui-checkbox--large"
       data-test="ui-checkbox"
       name={undefined}
-      style={
-        Object {
-          "alignContent": "flex-start",
-          "alignItems": "stretch",
-          "display": "flex",
-          "flexDirection": "column",
-          "flexShrink": 0,
-          "position": "relative",
-        }
-      }
+      style={Object {}}
     >
       <input
         checked={false}
