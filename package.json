@@ -67,6 +67,7 @@
     "gulp-postcss": "^7.0.0",
     "husky": "0.13.3",
     "identity-obj-proxy": "^3.0.0",
+    "inline-style-prefixer": "^5.1.0",
     "jest": "22.4.1",
     "lint-staged": "3.4.2",
     "lodash": "^4.17.11",

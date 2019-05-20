@@ -29,6 +29,9 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
   className="ui-box"
   style={
     Object {
+      "WebkitBoxAlign": "stretch",
+      "WebkitBoxDirection": "normal",
+      "WebkitBoxOrient": "horizontal",
       "alignItems": "stretch",
       "flexDirection": "row",
       "marginLeft": "-25px",
@@ -40,6 +43,9 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
     className="ui-box"
     style={
       Object {
+        "WebkitBoxAlign": "stretch",
+        "WebkitBoxDirection": "normal",
+        "WebkitBoxOrient": "vertical",
         "alignItems": "stretch",
         "flex": 1,
         "flexDirection": "column",
@@ -64,6 +70,9 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
         className="ui-box"
         style={
           Object {
+            "WebkitBoxAlign": "stretch",
+            "WebkitBoxDirection": "normal",
+            "WebkitBoxOrient": "vertical",
             "alignItems": "stretch",
             "flexDirection": "column",
             "marginLeft": null,
@@ -91,6 +100,9 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
     className="ui-box"
     style={
       Object {
+        "WebkitBoxAlign": "stretch",
+        "WebkitBoxDirection": "normal",
+        "WebkitBoxOrient": "vertical",
         "alignItems": "stretch",
         "flex": 1,
         "flexDirection": "column",
@@ -115,6 +127,9 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 1`]
         className="ui-box"
         style={
           Object {
+            "WebkitBoxAlign": "stretch",
+            "WebkitBoxDirection": "normal",
+            "WebkitBoxOrient": "vertical",
             "alignItems": "stretch",
             "flexDirection": "column",
             "marginLeft": null,
@@ -203,6 +218,9 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
           className="ui-box"
           style={
             Object {
+              "WebkitBoxAlign": "center",
+              "WebkitBoxDirection": "normal",
+              "WebkitBoxOrient": "horizontal",
               "alignItems": "center",
               "flexDirection": "row",
               "height": 46,
@@ -268,6 +286,9 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
         className="ui-box"
         style={
           Object {
+            "WebkitBoxAlign": "center",
+            "WebkitBoxDirection": "normal",
+            "WebkitBoxOrient": "horizontal",
             "alignItems": "center",
             "flexDirection": "row",
             "marginLeft": "-25px",
@@ -293,6 +314,9 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
             className="ui-box"
             style={
               Object {
+                "WebkitBoxAlign": "center",
+                "WebkitBoxDirection": "normal",
+                "WebkitBoxOrient": "vertical",
                 "alignItems": "center",
                 "flexDirection": "column",
                 "marginLeft": null,
@@ -356,6 +380,9 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
             className="ui-box"
             style={
               Object {
+                "WebkitBoxAlign": "center",
+                "WebkitBoxDirection": "normal",
+                "WebkitBoxOrient": "vertical",
                 "alignItems": "center",
                 "flexDirection": "column",
                 "marginLeft": null,
@@ -419,6 +446,9 @@ exports[`components/skeleton SkeletonGrid should render shallow component ok 2`]
             className="ui-box"
             style={
               Object {
+                "WebkitBoxAlign": "center",
+                "WebkitBoxDirection": "normal",
+                "WebkitBoxOrient": "vertical",
                 "alignItems": "center",
                 "flexDirection": "column",
                 "marginLeft": null,
@@ -475,6 +505,9 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
   className="ui-box"
   style={
     Object {
+      "WebkitBoxAlign": "stretch",
+      "WebkitBoxDirection": "normal",
+      "WebkitBoxOrient": "vertical",
       "alignItems": "stretch",
       "flexDirection": "column",
       "marginLeft": null,
@@ -498,6 +531,9 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
       className="ui-box"
       style={
         Object {
+          "WebkitBoxAlign": "center",
+          "WebkitBoxDirection": "normal",
+          "WebkitBoxOrient": "horizontal",
           "alignItems": "center",
           "flexDirection": "row",
           "marginLeft": "-25px",
@@ -548,6 +584,9 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
       className="ui-box"
       style={
         Object {
+          "WebkitBoxAlign": "center",
+          "WebkitBoxDirection": "normal",
+          "WebkitBoxOrient": "horizontal",
           "alignItems": "center",
           "flexDirection": "row",
           "marginLeft": "-25px",
@@ -598,6 +637,9 @@ exports[`components/skeleton SkeletonList should render shallow component ok 1`]
       className="ui-box"
       style={
         Object {
+          "WebkitBoxAlign": "center",
+          "WebkitBoxDirection": "normal",
+          "WebkitBoxOrient": "horizontal",
           "alignItems": "center",
           "flexDirection": "row",
           "marginLeft": "-25px",

@@ -6,6 +6,7 @@ exports[`Alert should render a confirmation alert with an icon 1`] = `
   role="alert"
   style={
     Object {
+      "WebkitBoxPack": "center",
       "justifyContent": "center",
     }
   }
@@ -45,6 +46,7 @@ exports[`Alert should render a warning alert 1`] = `
   role="alert"
   style={
     Object {
+      "WebkitBoxPack": "center",
       "justifyContent": "center",
     }
   }
@@ -84,6 +86,7 @@ exports[`Alert should render shallow component ok 1`] = `
   role="alert"
   style={
     Object {
+      "WebkitBoxPack": "center",
       "justifyContent": "center",
     }
   }
