@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`makePrimitive should render correctly 1`] = `
+<p
+  className="ui-foo-component"
+  style={
+    Object {
+      "WebkitBoxAlign": "center",
+      "alignItems": "center",
+    }
+  }
+/>
+`;
