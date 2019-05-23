@@ -29,6 +29,7 @@
       'orange': '#fdb61c',
       'green200': '#b5ecd9',
       'green300': '#98e4ca',
+      'coral': '#f07a7a',
       'red': '#ee467e',
       'grey000': '#f9fafc',
       'green400': '#76dcb8',

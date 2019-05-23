@@ -6,6 +6,8 @@ props: &COLORS
     value: '#fff'
   BLACK:
     value: '#000'
+  CORAL:
+    value: '#f07a7a'
   PINK000:
     value: '#fdecf1'
   PINK100:

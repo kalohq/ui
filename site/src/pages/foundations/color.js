@@ -122,11 +122,15 @@ const colors = [
       '900',
     ],
   },
+  {
+    swatch: 'coral',
+    key: '',
+  },
 ];
 
 const HorizontalSwatchGroup = styled.div`
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   grid-column-gap: 8px;
   margin-bottom: 24px;
 `;
@@ -231,14 +235,16 @@ export default () => (
       </HorizontalSwatchGroup>
       <h2>Extended Palette</h2>
       <Swatches>
-        {colors.map(swatch => (
-          <Swatch
-            name={swatch.swatch}
-            key={swatch.swatch}
-            keyColor={swatch.key}
-            colorGroup={swatch.colors}
-          />
-        ))}
+        {colors
+          .filter(color => color.colors)
+          .map(swatch => (
+            <Swatch
+              name={swatch.swatch}
+              key={swatch.swatch}
+              keyColor={swatch.key}
+              colorGroup={swatch.colors}
+            />
+          ))}
       </Swatches>
       <h2>Accessibility</h2>
       <p>
@@ -255,50 +261,52 @@ export default () => (
         background colors
       </p>
 
-      {colors.map(swatch =>
-        swatch.colors.map(colorToken => {
-          const actualColor = theme.colors[swatch.swatch + colorToken];
+      {colors
+        .filter(color => color.colors)
+        .map(swatch =>
+          swatch.colors.map(colorToken => {
+            const actualColor = theme.colors[swatch.swatch + colorToken];
 
-          const backgrounds = [
-            'white',
-            'grey000',
-            'grey100',
-            'navy900',
-            'black',
-          ];
+            const backgrounds = [
+              'white',
+              'grey000',
+              'grey100',
+              'navy900',
+              'black',
+            ];
 
-          return (
-            <div key={swatch.swatch + colorToken} style={{display: 'flex'}}>
-              {backgrounds.map(background => (
-                <AccessibilityColorTestGroup
-                  key={colorToken + background}
-                  color={background}
-                >
-                  <span style={{color: actualColor}}>
-                    <span>
-                      {swatch.swatch + colorToken} on {background}
-                    </span>
-                    <br />
-                  </span>
-                  <AccessibilityColorPassFailToken
+            return (
+              <div key={swatch.swatch + colorToken} style={{display: 'flex'}}>
+                {backgrounds.map(background => (
+                  <AccessibilityColorTestGroup
+                    key={colorToken + background}
                     color={background}
-                    backgroundColor={actualColor}
-                    hasPassed={Boolean(
-                      Color(background).contrast(Color(actualColor)) >=
-                        AA_COLOR_THRESHOLD
-                    )}
                   >
-                    {Color(background).contrast(Color(actualColor)) <=
-                    AA_COLOR_THRESHOLD
-                      ? 'FAIL'
-                      : 'PASS'}
-                  </AccessibilityColorPassFailToken>
-                </AccessibilityColorTestGroup>
-              ))}
-            </div>
-          );
-        })
-      )}
+                    <span style={{color: actualColor}}>
+                      <span>
+                        {swatch.swatch + colorToken} on {background}
+                      </span>
+                      <br />
+                    </span>
+                    <AccessibilityColorPassFailToken
+                      color={background}
+                      backgroundColor={actualColor}
+                      hasPassed={Boolean(
+                        Color(background).contrast(Color(actualColor)) >=
+                          AA_COLOR_THRESHOLD
+                      )}
+                    >
+                      {Color(background).contrast(Color(actualColor)) <=
+                      AA_COLOR_THRESHOLD
+                        ? 'FAIL'
+                        : 'PASS'}
+                    </AccessibilityColorPassFailToken>
+                  </AccessibilityColorTestGroup>
+                ))}
+              </div>
+            );
+          })
+        )}
     </Wrapper>
   </DocumentationContent>
 );

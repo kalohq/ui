@@ -86,6 +86,9 @@
         .fill-green300 {
           fill: var(--green300);
         }
+        .fill-coral {
+          fill: var(--coral);
+        }
         .fill-red {
           fill: var(--red);
         }

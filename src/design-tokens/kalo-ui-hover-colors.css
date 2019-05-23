@@ -86,6 +86,9 @@
         .hover-color-green300:hover {
           color: var(--green300);
         }
+        .hover-color-coral:hover {
+          color: var(--coral);
+        }
         .hover-color-red:hover {
           color: var(--red);
         }
