@@ -1,0 +1,284 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StarRating should render properly 1`] = `
+<div
+  className="root e1krcyn16 css-0"
+  style={Object {}}
+>
+  <div
+    className="star"
+    style={
+      Object {
+        "height": 20,
+        "width": 20,
+      }
+    }
+  >
+    <span
+      className="icon background"
+    >
+      <i
+        className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-0"
+        onClick={undefined}
+        style={Object {}}
+        title={undefined}
+      >
+        <svg
+          aria-hidden="true"
+          height={20}
+          width={20}
+        >
+          <use
+            xlinkHref="#star"
+          />
+        </svg>
+      </i>
+    </span>
+    <span
+      className="icon foreground"
+      style={
+        Object {
+          "color": "#f07a7a",
+        }
+      }
+    >
+      <i
+        className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-0"
+        onClick={undefined}
+        style={Object {}}
+        title={undefined}
+      >
+        <svg
+          aria-hidden="true"
+          height={20}
+          width={20}
+        >
+          <use
+            xlinkHref="#star"
+          />
+        </svg>
+      </i>
+    </span>
+  </div>
+  <div
+    className="star"
+    style={
+      Object {
+        "height": 20,
+        "width": 20,
+      }
+    }
+  >
+    <span
+      className="icon background"
+    >
+      <i
+        className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-0"
+        onClick={undefined}
+        style={Object {}}
+        title={undefined}
+      >
+        <svg
+          aria-hidden="true"
+          height={20}
+          width={20}
+        >
+          <use
+            xlinkHref="#star"
+          />
+        </svg>
+      </i>
+    </span>
+    <span
+      className="icon foreground"
+      style={
+        Object {
+          "color": "#f07a7a",
+        }
+      }
+    >
+      <i
+        className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-0"
+        onClick={undefined}
+        style={Object {}}
+        title={undefined}
+      >
+        <svg
+          aria-hidden="true"
+          height={20}
+          width={20}
+        >
+          <use
+            xlinkHref="#star"
+          />
+        </svg>
+      </i>
+    </span>
+  </div>
+  <div
+    className="star"
+    style={
+      Object {
+        "height": 20,
+        "width": 20,
+      }
+    }
+  >
+    <span
+      className="icon background"
+    >
+      <i
+        className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-0"
+        onClick={undefined}
+        style={Object {}}
+        title={undefined}
+      >
+        <svg
+          aria-hidden="true"
+          height={20}
+          width={20}
+        >
+          <use
+            xlinkHref="#star"
+          />
+        </svg>
+      </i>
+    </span>
+    <span
+      className="icon foreground"
+      style={
+        Object {
+          "color": "#f07a7a",
+        }
+      }
+    >
+      <i
+        className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-0"
+        onClick={undefined}
+        style={Object {}}
+        title={undefined}
+      >
+        <svg
+          aria-hidden="true"
+          height={20}
+          width={20}
+        >
+          <use
+            xlinkHref="#star"
+          />
+        </svg>
+      </i>
+    </span>
+  </div>
+  <div
+    className="star"
+    style={
+      Object {
+        "height": 20,
+        "width": 20,
+      }
+    }
+  >
+    <span
+      className="icon background"
+    >
+      <i
+        className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-0"
+        onClick={undefined}
+        style={Object {}}
+        title={undefined}
+      >
+        <svg
+          aria-hidden="true"
+          height={20}
+          width={20}
+        >
+          <use
+            xlinkHref="#star"
+          />
+        </svg>
+      </i>
+    </span>
+    <span
+      className="icon foreground half"
+      style={
+        Object {
+          "color": "#f07a7a",
+        }
+      }
+    >
+      <i
+        className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-0"
+        onClick={undefined}
+        style={Object {}}
+        title={undefined}
+      >
+        <svg
+          aria-hidden="true"
+          height={20}
+          width={20}
+        >
+          <use
+            xlinkHref="#star"
+          />
+        </svg>
+      </i>
+    </span>
+  </div>
+  <div
+    className="star"
+    style={
+      Object {
+        "height": 20,
+        "width": 20,
+      }
+    }
+  >
+    <span
+      className="icon background"
+    >
+      <i
+        className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-0"
+        onClick={undefined}
+        style={Object {}}
+        title={undefined}
+      >
+        <svg
+          aria-hidden="true"
+          height={20}
+          width={20}
+        >
+          <use
+            xlinkHref="#star"
+          />
+        </svg>
+      </i>
+    </span>
+    <span
+      className="icon foreground"
+      style={
+        Object {
+          "color": false,
+        }
+      }
+    >
+      <i
+        className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-0"
+        onClick={undefined}
+        style={Object {}}
+        title={undefined}
+      >
+        <svg
+          aria-hidden="true"
+          height={20}
+          width={20}
+        >
+          <use
+            xlinkHref="#star"
+          />
+        </svg>
+      </i>
+    </span>
+  </div>
+</div>
+`;
