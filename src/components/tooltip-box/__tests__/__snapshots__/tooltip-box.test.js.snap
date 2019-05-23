@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TooltipBox should render properly 1`] = `
+<div
+  className="tooltip-container"
+>
+  Hover me :)
+  <div
+    className="tooltip-bubble"
+  >
+    Hello! I am a tooltip
+  </div>
+</div>
+`;

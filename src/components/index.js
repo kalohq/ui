@@ -77,6 +77,7 @@ export {default as Modal} from './modal';
 export {Tab, Tabs} from './tabs';
 export {default as FeatureCalloutCard} from './feature-callout-card';
 export {default as Callout} from './callout';
+export {default as TooltipBox} from './tooltip-box';
 
 /**
  * Theme
