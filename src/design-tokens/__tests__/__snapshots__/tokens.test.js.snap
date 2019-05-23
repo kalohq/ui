@@ -21,6 +21,7 @@ Object {
   "boxShadowLevel4": "0 14px 25px rgba(140, 140, 140, 0.27)",
   "charcoal": "#2c2e50",
   "confirmation": "#e5f7f1",
+  "coral": "#f07a7a",
   "currentColor": "currentColor",
   "error": "#ffebee",
   "fontSizeHeadingExtraLarge": "2.4rem",
