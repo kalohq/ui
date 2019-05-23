@@ -27,6 +27,7 @@ export const green100 = "#d0f3e7";
 export const orange = "#fdb61c";
 export const green200 = "#b5ecd9";
 export const green300 = "#98e4ca";
+export const coral = "#f07a7a";
 export const red = "#ee467e";
 export const grey000 = "#f9fafc";
 export const green400 = "#76dcb8";
