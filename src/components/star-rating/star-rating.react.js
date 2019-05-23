@@ -9,11 +9,11 @@ import colors from '../../design-tokens/tokens';
 
 import styles from './star-rating.css';
 
-const DEFAULT_COLOR = '#f07a7a';
+const DEFAULT_COLOR = 'coral';
 
 function StarRating(props) {
   const {score = 0, className, color, ...otherProps} = props;
-  const starColor = color ? colors[color] : DEFAULT_COLOR;
+  const starColor = color ? colors[color] : colors[DEFAULT_COLOR];
 
   return (
     <UIBase
