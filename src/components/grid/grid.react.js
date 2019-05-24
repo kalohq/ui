@@ -149,7 +149,9 @@ type TColumnProps = {
 export function Column(props: TColumnProps) {
   const {columns = [12], children, className, ...otherProps} = props;
 
-  const [columnXS, columnSM, columnMD, columnLG] = Array.isArray(columns)
+  const [columnXS, columnSM, columnMD, columnLG, columnXL] = Array.isArray(
+    columns
+  )
     ? columns
     : [columns];
 
@@ -159,6 +161,7 @@ export function Column(props: TColumnProps) {
       [styles[`col-sm-${String(columnSM)}`]]: columnSM,
       [styles[`col-md-${String(columnMD)}`]]: columnMD,
       [styles[`col-lg-${String(columnLG)}`]]: columnLG,
+      [styles[`col-xl-${String(columnXL)}`]]: columnXL,
     },
     className
   );
