@@ -5,12 +5,11 @@
 
 .tooltip-bubble {
   position: absolute;
-  left: 0;
   bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 100%, 0);
   border-radius: 4px;
   background: var(--navy900);
-  transform: translate3d(-50%, 100%, 0);
-  margin-left: 50%;
   font-size: 14px;
   color: var(--white);
   text-align: center;
@@ -24,16 +23,15 @@
 
   &:before {
     position: absolute;
-    top: 0px;
-    left: 0;
-    margin-left: 50%;
     display: block;
     content: '';
     height: 0;
     border: transparent solid;
-    border-bottom-color: var(--navy900);
-    transform: translate3d(-50%, -100%, 0);
     border-width: 0 6px 6px 6px;
+    border-bottom-color: var(--navy900);
+    top: 0;
+    left: 50%;
+    transform: translate3d(-50%, -100%, 0);
   }
 }
 
@@ -41,4 +39,24 @@
   visibility: visible;
   opacity: 1;
   transform: translate3d(-50%, calc(100% + 8px), 0);
+}
+
+.tooltip-bubble--right {
+  top: 50%;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  transform: translate3d(100%, -50%, 0);
+  &:before {
+    border-width: 6px 6px 6px 0;
+    border-color: transparent var(--navy900) transparent transparent;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    transform: translate3d(-100%, -50%, 0);
+  }
+}
+.tooltip-container:hover .tooltip-bubble--right {
+  transform: translate3d(calc(100% + 8px), -50%, 0);
 }
