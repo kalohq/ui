@@ -2,7 +2,7 @@
 
 exports[`StarRating should render properly 1`] = `
 <div
-  className="root e1krcyn16 css-0"
+  className="root"
   style={Object {}}
 >
   <div
@@ -18,7 +18,7 @@ exports[`StarRating should render properly 1`] = `
       className="icon background"
     >
       <i
-        className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-0"
+        className="ui-icon ui-icon--size-20 fill-currentColor"
         onClick={undefined}
         style={Object {}}
         title={undefined}
@@ -43,7 +43,7 @@ exports[`StarRating should render properly 1`] = `
       }
     >
       <i
-        className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-0"
+        className="ui-icon ui-icon--size-20 fill-currentColor"
         onClick={undefined}
         style={Object {}}
         title={undefined}
@@ -73,7 +73,7 @@ exports[`StarRating should render properly 1`] = `
       className="icon background"
     >
       <i
-        className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-0"
+        className="ui-icon ui-icon--size-20 fill-currentColor"
         onClick={undefined}
         style={Object {}}
         title={undefined}
@@ -98,7 +98,7 @@ exports[`StarRating should render properly 1`] = `
       }
     >
       <i
-        className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-0"
+        className="ui-icon ui-icon--size-20 fill-currentColor"
         onClick={undefined}
         style={Object {}}
         title={undefined}
@@ -128,7 +128,7 @@ exports[`StarRating should render properly 1`] = `
       className="icon background"
     >
       <i
-        className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-0"
+        className="ui-icon ui-icon--size-20 fill-currentColor"
         onClick={undefined}
         style={Object {}}
         title={undefined}
@@ -153,7 +153,7 @@ exports[`StarRating should render properly 1`] = `
       }
     >
       <i
-        className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-0"
+        className="ui-icon ui-icon--size-20 fill-currentColor"
         onClick={undefined}
         style={Object {}}
         title={undefined}
@@ -183,7 +183,7 @@ exports[`StarRating should render properly 1`] = `
       className="icon background"
     >
       <i
-        className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-0"
+        className="ui-icon ui-icon--size-20 fill-currentColor"
         onClick={undefined}
         style={Object {}}
         title={undefined}
@@ -208,7 +208,7 @@ exports[`StarRating should render properly 1`] = `
       }
     >
       <i
-        className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-0"
+        className="ui-icon ui-icon--size-20 fill-currentColor"
         onClick={undefined}
         style={Object {}}
         title={undefined}
@@ -238,7 +238,7 @@ exports[`StarRating should render properly 1`] = `
       className="icon background"
     >
       <i
-        className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-0"
+        className="ui-icon ui-icon--size-20 fill-currentColor"
         onClick={undefined}
         style={Object {}}
         title={undefined}
@@ -263,7 +263,7 @@ exports[`StarRating should render properly 1`] = `
       }
     >
       <i
-        className="ui-icon ui-icon--size-20 fill-currentColor e1krcyn16 css-0"
+        className="ui-icon ui-icon--size-20 fill-currentColor"
         onClick={undefined}
         style={Object {}}
         title={undefined}
