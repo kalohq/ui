@@ -1,7 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
 
 import {UIBase} from '../layout';
 

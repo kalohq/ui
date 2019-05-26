@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {List} from 'immutable';
 import cx from 'classnames';
 
 import FieldValidation from '../field-validation';
-import type Validation from '../field-validation';
 
 import styles from './field-validations.css';
 
-const FieldValidations = (props) => {
+const FieldValidations = props => {
   const {validations, centered, className} = props;
 
   const _classNames = cx(
@@ -28,18 +26,15 @@ const FieldValidations = (props) => {
         ))}
     </div>
   );
-}
+};
 
 FieldValidations.propTypes = {
   /** A list of validations to be displayed to the user */
   validations: PropTypes.array,
   /** Visually centeres the validations */
-  centered: PropTypes.bool,,
+  centered: PropTypes.bool,
   /** Any classes to pass down */
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-  ]),
-}
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+};
 
 export default FieldValidations;

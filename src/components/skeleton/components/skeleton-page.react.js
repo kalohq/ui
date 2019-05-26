@@ -16,7 +16,7 @@ const SkeletonPage = props => {
 
 SkeletonPage.propTypes = {
   width: PropTypes.number,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
 export default SkeletonPage;

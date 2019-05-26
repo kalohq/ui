@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import {Box} from '../../layout';
 
 import {UIBase} from '../../layout';
 
@@ -39,3 +38,5 @@ SkeletonShape.propTypes = {
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
+
+export default SkeletonShape;
