@@ -122,8 +122,7 @@ export const pickStyles = obj => pickBy(obj, (v, key) => STYLE_WHITELIST[key]);
 export const omitStyles = obj => omitBy(obj, (v, key) => STYLE_WHITELIST[key]);
 
 /**
- * Transforms margin and padding props in to real pixel values.
- * We use this rather than the built in Emotion transformers
+ * Transforms margin and padding props in to real pixel values,
  * to transform our custom scale values ('small', 'medium' etc.)
  */
 export function spacing(originalProps) {
@@ -146,22 +145,3 @@ export function spacing(originalProps) {
 
   return props;
 }
-
-/**
- * Filters style props to be passed back to emotion as
- * a CSS object. Emotion takes care of the rest.
- *
- * We also remove spacing props, as these are transformed
- * in a seperate function (see 'spacing' function below)
- */
-export const filterStyleProps = originalProps => {
-  const filteredProps = Object.keys(originalProps)
-    .filter(key => STYLE_WHITELIST[key])
-    .filter(key => !SPACING_REGEX.test(key))
-    .reduce((obj, key) => {
-      const obj2 = obj;
-      obj2[key] = originalProps[key];
-      return obj2;
-    }, {});
-  return filteredProps;
-};

@@ -11,7 +11,6 @@ import styles from './table.css';
 
 export function TableCell(props) {
   const {active, children, header, order, className, ...otherProps} = props;
-  const style = pickStyles(otherProps);
   const icon = `keyboard_arrow_${order === 'desc' ? 'down' : 'up'}`;
 
   const _classNames = cx(
@@ -35,7 +34,7 @@ export function TableCell(props) {
 }
 
 TableCell.propTypes = {
-  children: PropTypes.any.isRequired,
+  children: PropTypes.any,
   id: PropTypes.string,
   /** 'asc' | 'desc' */
   order: PropTypes.oneOf(['asc', 'desc']),

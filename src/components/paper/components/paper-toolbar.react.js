@@ -6,7 +6,7 @@ import {UIBase} from '../../layout';
 
 import styles from './paper-toolbar.css';
 
-const PaperToolbar = props => {
+export const PaperToolbar = props => {
   const {children, className} = props;
 
   const _classNames = cx(

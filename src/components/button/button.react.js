@@ -16,7 +16,7 @@ const ICON_SIZE = {
   'extra-large': 24,
 };
 
-export class Button extends PureComponent {
+export default class Button extends PureComponent {
   static propTypes = {
     /** Button contents */
     children: PropTypes.any,
@@ -73,8 +73,6 @@ export class Button extends PureComponent {
     className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     /** Style to pass down */
     style: PropTypes.object,
-    /** A theme - set via context by Emotion */
-    theme: PropTypes.object,
   };
 
   static defaultProps = {
