@@ -22,4 +22,15 @@ describe('TooltipBox', () => {
       .toJSON();
     expect(wrapper).toMatchSnapshot();
   });
+
+  test('should render properly - type info', () => {
+    const wrapper = renderer
+      .create(
+        <TooltipBox text="Hello! I am a tooltip" type="info">
+          Hover me :)
+        </TooltipBox>
+      )
+      .toJSON();
+    expect(wrapper).toMatchSnapshot();
+  });
 });

@@ -31,4 +31,12 @@ export const examples = [
       </div>
     ),
   },
+  {
+    title: 'TooltipBox Info',
+    render: () => (
+      <TooltipBox text="Hello! I am a tooltip" type="info">
+        Hover me :)
+      </TooltipBox>
+    ),
+  },
 ];

@@ -5,8 +5,39 @@ exports[`TooltipBox should render properly - show right 1`] = `
   className="tooltip-container"
 >
   Hover me :)
+   
   <div
     className="tooltip-bubble tooltip-bubble--right"
+  >
+    Hello! I am a tooltip
+  </div>
+</div>
+`;
+
+exports[`TooltipBox should render properly - type info 1`] = `
+<div
+  className="tooltip-container tooltip-container--info"
+>
+  Hover me :)
+   
+  <i
+    className="ui-icon ui-icon--size-16 fill-currentColor e1krcyn16 css-0"
+    onClick={undefined}
+    style={Object {}}
+    title={undefined}
+  >
+    <svg
+      aria-hidden="true"
+      height={16}
+      width={16}
+    >
+      <use
+        xlinkHref="#info_outline"
+      />
+    </svg>
+  </i>
+  <div
+    className="tooltip-bubble"
   >
     Hello! I am a tooltip
   </div>
@@ -18,6 +49,7 @@ exports[`TooltipBox should render properly 1`] = `
   className="tooltip-container"
 >
   Hover me :)
+   
   <div
     className="tooltip-bubble"
   >
