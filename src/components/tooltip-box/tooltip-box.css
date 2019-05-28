@@ -3,6 +3,14 @@
   display: inline-block;
 }
 
+.tooltip-container--info {
+  color: var(--blue700);
+  transition: color 0.2s ease-out;
+  &:hover {
+    color: var(--blue800);
+  }
+}
+
 .tooltip-bubble {
   position: absolute;
   bottom: 0;
