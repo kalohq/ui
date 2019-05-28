@@ -1,7 +1,6 @@
 .ui-loading-spinner {
   position: relative;
   transform-origin: 48% 50%;
-  animation: spinner 1600ms linear infinite;
 }
 
 .ui-loading-spinner--small {
@@ -24,6 +23,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  animation: spinner 1600ms linear infinite;
 }
 
 @keyframes spinner {
