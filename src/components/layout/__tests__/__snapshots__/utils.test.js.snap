@@ -7,6 +7,7 @@ exports[`makePrimitive should render correctly 1`] = `
     Object {
       "WebkitBoxAlign": "center",
       "alignItems": "center",
+      "display": "inline-flex",
     }
   }
 />
