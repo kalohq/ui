@@ -8,6 +8,7 @@ describe('makePrimitive', () => {
   let wrapper;
   const props = {
     alignItems: 'center',
+    display: 'inline-flex',
   };
 
   beforeEach(() => {
