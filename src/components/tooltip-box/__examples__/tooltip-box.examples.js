@@ -38,5 +38,14 @@ export const examples = [
         Hover me :)
       </TooltipBox>
     ),
+    html: () => (
+      <div className="tooltip-container tooltip-container--info">
+        Hover me :){' '}
+        <svg aria-hidden="true" fill="currentColor" height={16} width={16}>
+          <use xlinkHref="#info_outline" />
+        </svg>
+        <div className="tooltip-bubble">Hello! I am a tooltip</div>
+      </div>
+    ),
   },
 ];
