@@ -5,11 +5,11 @@
   line-height: 1.6rem;
   background-color: pink;
   padding: 0.8rem 1.6rem;
+}
 
-  &__content {
-    padding-left: 8px;
-    padding-top: 2px;
-  }
+.ui-inline-alert__content {
+  padding-left: 8px;
+  padding-top: 2px;
 }
 
 .ui-inline-alert--info {
