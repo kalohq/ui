@@ -7,7 +7,29 @@ import TooltipBox from '../tooltip-box.react';
 describe('TooltipBox', () => {
   test('should render properly', () => {
     const wrapper = renderer
-      .create(<TooltipBox text="Hello! I am a tooltip">Hover me :)</TooltipBox>)
+      .create(
+        <TooltipBox tooltip="Hello! I am a tooltip">Hover me :)</TooltipBox>
+      )
+      .toJSON();
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  test('should render properly - with node tooltip', () => {
+    const wrapper = renderer
+      .create(
+        <TooltipBox
+          tooltip={
+            <ul>
+              Hello!<li>I am</li>
+              <li>a</li>
+              <li>tooltip</li>
+            </ul>
+          }
+          show="right"
+        >
+          Hover me :)
+        </TooltipBox>
+      )
       .toJSON();
     expect(wrapper).toMatchSnapshot();
   });
@@ -15,7 +37,7 @@ describe('TooltipBox', () => {
   test('should render properly - show right', () => {
     const wrapper = renderer
       .create(
-        <TooltipBox text="Hello! I am a tooltip" show="right">
+        <TooltipBox tooltip="Hello! I am a tooltip" show="right">
           Hover me :)
         </TooltipBox>
       )
@@ -26,7 +48,7 @@ describe('TooltipBox', () => {
   test('should render properly - type info', () => {
     const wrapper = renderer
       .create(
-        <TooltipBox text="Hello! I am a tooltip" type="info">
+        <TooltipBox tooltip="Hello! I am a tooltip" type="info">
           Hover me :)
         </TooltipBox>
       )

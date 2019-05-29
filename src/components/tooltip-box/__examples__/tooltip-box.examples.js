@@ -6,7 +6,7 @@ export const examples = [
   {
     title: 'TooltipBox',
     render: () => (
-      <TooltipBox text="Hello! I am a tooltip">Hover me :)</TooltipBox>
+      <TooltipBox tooltip="Hello! I am a tooltip">Hover me :)</TooltipBox>
     ),
     html: () => (
       <div className="tooltip-container">
@@ -16,9 +16,25 @@ export const examples = [
     ),
   },
   {
+    title: 'TooltipBox - Node',
+    render: () => (
+      <TooltipBox
+        tooltip={
+          <ul>
+            Hello!<li>I am</li>
+            <li>a</li>
+            <li>tooltip</li>
+          </ul>
+        }
+      >
+        Hover me :)
+      </TooltipBox>
+    ),
+  },
+  {
     title: 'TooltipBox - show right',
     render: () => (
-      <TooltipBox text="Hello! I am a tooltip" show="right">
+      <TooltipBox tooltip="Hello! I am a tooltip" show="right">
         Hover me :)
       </TooltipBox>
     ),
@@ -34,7 +50,7 @@ export const examples = [
   {
     title: 'TooltipBox Info',
     render: () => (
-      <TooltipBox text="Hello! I am a tooltip" type="info">
+      <TooltipBox tooltip="Hello! I am a tooltip" type="info">
         Hover me :)
       </TooltipBox>
     ),

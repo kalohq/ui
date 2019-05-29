@@ -44,6 +44,31 @@ exports[`TooltipBox should render properly - type info 1`] = `
 </div>
 `;
 
+exports[`TooltipBox should render properly - with node tooltip 1`] = `
+<div
+  className="tooltip-container"
+>
+  Hover me :)
+   
+  <div
+    className="tooltip-bubble tooltip-bubble--right"
+  >
+    <ul>
+      Hello!
+      <li>
+        I am
+      </li>
+      <li>
+        a
+      </li>
+      <li>
+        tooltip
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
 exports[`TooltipBox should render properly 1`] = `
 <div
   className="tooltip-container"

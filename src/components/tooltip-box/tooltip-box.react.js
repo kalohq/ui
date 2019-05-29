@@ -11,7 +11,7 @@ const TYPE_ICON_MAP = {
 };
 
 const TooltipBox = props => {
-  const {children, text, show, className, type, ...otherProps} = props;
+  const {children, tooltip, show, className, type, ...otherProps} = props;
 
   const isTypeSupported = Boolean(TYPE_ICON_MAP[type]);
 
@@ -34,16 +34,16 @@ const TooltipBox = props => {
       {isTypeSupported && (
         <Icon color="currentColor">{TYPE_ICON_MAP[type]}</Icon>
       )}
-      <div className={classnames.bubble}>{text}</div>
+      <div className={classnames.bubble}>{tooltip}</div>
     </div>
   );
 };
 
 TooltipBox.propTypes = {
   /**
-   * The text of the tooltip.
+   * The tooltip content.
    */
-  text: PropTypes.string.isRequired,
+  tooltip: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
   /**
    * It's the element that triggers the visibility of the tooltip.
    */
