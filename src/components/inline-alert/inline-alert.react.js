@@ -8,7 +8,7 @@ import Icon from '../icon';
 import styles from './inline-alert.css';
 
 const TYPE_ICON_MAP = {
-  info: 'info_outline',
+  info: 'info',
   error: 'highlight_off',
   warning: 'error_outline',
   confirmation: 'check_circle',
