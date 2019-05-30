@@ -28,7 +28,7 @@
   max-width: 260px;
   min-width: 200px;
   padding: 10px 20px;
-
+  z-index: 99999; /* Move to token */
   &:before {
     position: absolute;
     display: block;
