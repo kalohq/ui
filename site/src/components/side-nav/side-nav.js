@@ -4,6 +4,7 @@ import styled from 'react-emotion';
 import {upperFirst} from 'lodash';
 
 const MENU_WIDTH = '280px';
+const TOP_NAV_HEIGHT = '58px';
 export const NAV_IN_FOOTER_BREAKPOINT = '1100px';
 
 const AsideContainer = styled.aside`
@@ -12,9 +13,9 @@ const AsideContainer = styled.aside`
   min-width: ${MENU_WIDTH};
   background-color: ${props => props.theme.colors.grey000};
   border-right: 1px solid ${props => props.theme.colors.grey100};
-  min-height: calc(100vh - 56px);
+  min-height: calc(100vh - ${TOP_NAV_HEIGHT});
   padding: 20px 0 0;
-  margin-top: 56px;
+  margin-top: ${TOP_NAV_HEIGHT};
   position: relative;
 `;
 
@@ -23,11 +24,10 @@ const FixedContainer = styled.div`
     position: fixed;
     left: 0;
     width: ${MENU_WIDTH};
-    height: 100%;
+    height: calc(100% - ${TOP_NAV_HEIGHT});
     overflow-y: auto;
-    margin-top: 56px;
+    top: ${TOP_NAV_HEIGHT};
     padding-bottom: 70px;
-    top: 0;
   }
 `;
 
