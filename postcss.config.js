@@ -19,6 +19,7 @@ module.exports = {
       core: false,
       minifyFontValues: false,
       discardUnused: false,
+      zindex: false,
     },
   },
 };
