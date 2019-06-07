@@ -21,7 +21,7 @@ exports[`TooltipBox should render properly - type info 1`] = `
   Hover me :)
    
   <i
-    className="ui-icon ui-icon--size-16 fill-currentColor e1krcyn16 css-0"
+    className="ui-icon ui-icon--size-16 fill-currentColor"
     onClick={undefined}
     style={Object {}}
     title={undefined}
