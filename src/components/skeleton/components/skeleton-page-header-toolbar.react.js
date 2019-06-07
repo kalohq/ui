@@ -5,7 +5,7 @@ import {UIBase, Box} from '../../layout';
 
 import SpacerBox from './skeleton-spacer-box.react';
 
-import styles from '../skeleton.css';
+import styles from '../skeleton.module.css';
 
 const SkeletonPageHeaderToolbar = props => {
   const {width = 1180, children} = props;

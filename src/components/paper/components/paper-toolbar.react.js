@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import {UIBase} from '../../layout';
 
-import styles from './paper-toolbar.css';
+import styles from './paper-toolbar.module.css';
 
 export const PaperToolbar = props => {
   const {children, className} = props;

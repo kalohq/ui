@@ -8,7 +8,7 @@ import Checkbox from '../checkbox';
 import {Box} from '../layout';
 import Button from '../button';
 
-import styles from './button-dropdown.css';
+import styles from './button-dropdown.module.css';
 
 export default class ButtonDropdown extends PureComponent {
   static propTypes = {

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import {UIBase} from '../layout';
 
-import styles from './table.css';
+import styles from './table.module.css';
 
 export class TableHead extends React.Component {
   static propTypes = {

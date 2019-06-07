@@ -9,7 +9,7 @@ import Icon from '../icon';
 import Sticky from '../sticky';
 import {UIBase} from '../layout';
 
-import styles from './paper-menu.css';
+import styles from './paper-menu.module.css';
 
 /**
  * Generic open/close popup paper styled menu

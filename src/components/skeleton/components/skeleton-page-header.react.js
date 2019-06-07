@@ -3,7 +3,7 @@ import cx from 'classnames';
 
 import {UIBase} from '../../layout';
 
-import styles from '../skeleton.css';
+import styles from '../skeleton.module.css';
 
 /**
  * Skeleton page header
