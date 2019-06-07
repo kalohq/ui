@@ -126,6 +126,7 @@
       "\\.(css|less)$": "identity-obj-proxy"
     },
     "testEnvironment": "jsdom",
+    "testURL": "http://localhost/",
     "testMatch": [
       "**/__tests__/**/?(*.)(spec|test).js?(x)"
     ],
