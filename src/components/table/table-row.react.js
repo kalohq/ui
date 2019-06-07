@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {compose, getContext, withProps, setDisplayName} from 'recompose';
 
 import {UIBase} from '../layout';
-import styles from './table.css';
+import styles from './table.module.css';
 
 const TableRow = props => {
   const {children, className, ...otherProps} = props;

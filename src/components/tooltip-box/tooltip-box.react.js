@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import styles from './tooltip-box.css';
+import styles from './tooltip-box.module.css';
 import Icon from '../icon';
 
 const SUPPORTED_DIRECTIONS = ['right'];

@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import Icon from '../icon';
 import {UIBase} from '../layout';
 
-import styles from './table.css';
+import styles from './table.module.css';
 
 export function TableCell(props) {
   const {active, children, header, order, className, ...otherProps} = props;
