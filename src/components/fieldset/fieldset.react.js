@@ -8,7 +8,7 @@ import {UIBase} from '../layout';
 import FieldLabel from '../field-label';
 import Text from '../text';
 
-import styles from './fieldset.css';
+import styles from './fieldset.module.css';
 
 export function FieldsetHeader(props: {
   legend: string,

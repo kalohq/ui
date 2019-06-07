@@ -2,7 +2,7 @@
 import React from 'react';
 import cx from 'classnames';
 
-import styles from './loading-spinner.css';
+import styles from './loading-spinner.module.css';
 
 const SPINNER_DIMENSIONS = {
   small: 20,

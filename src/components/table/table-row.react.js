@@ -5,7 +5,7 @@ import {compose, getContext, withProps, setDisplayName} from 'recompose';
 import PropTypes from 'prop-types';
 
 import {UIBase} from '../layout';
-import styles from './table.css';
+import styles from './table.module.css';
 
 type TTableRowProps = {
   children: React$Node,

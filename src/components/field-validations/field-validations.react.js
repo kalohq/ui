@@ -6,7 +6,7 @@ import cx from 'classnames';
 import FieldValidation from '../field-validation';
 import type Validation from '../field-validation';
 
-import styles from './field-validations.css';
+import styles from './field-validations.module.css';
 export type Validations = List<Validation>;
 
 type TProps = {

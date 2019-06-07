@@ -1,5 +1,5 @@
 import {makePrimitive} from './utils';
-import styles from './layout.react.css';
+import styles from './layout.react.module.css';
 /**
  * Layout primitives
  */

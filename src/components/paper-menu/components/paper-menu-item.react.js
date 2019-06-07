@@ -6,7 +6,7 @@ import cx from 'classnames';
 import {UIBase} from '../../layout';
 import Icon from '../../icon';
 
-import styles from './paper-menu-item.css';
+import styles from './paper-menu-item.module.css';
 
 type Props = {
   icon?: React.Node | string,

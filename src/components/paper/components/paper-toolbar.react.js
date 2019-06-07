@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 import {UIBase} from '../../layout';
 
-import styles from './paper-toolbar.css';
+import styles from './paper-toolbar.module.css';
 
 type TProps = {
   children?: React.Node,

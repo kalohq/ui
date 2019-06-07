@@ -9,7 +9,7 @@ import Checkbox from '../checkbox';
 import {Box} from '../layout';
 import Button from '../button';
 
-import styles from './button-dropdown.css';
+import styles from './button-dropdown.module.css';
 
 type TProps = {
   children?: string,
