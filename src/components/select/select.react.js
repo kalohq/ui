@@ -15,7 +15,7 @@ import {cleanProps} from '../../utils/style';
 
 export default class Select extends PureComponent {
   static propTypes = {
-    children: PropTypes.node.isRequired,
+    children: PropTypes.node,
     selection: PropTypes.any,
     onSelect: PropTypes.func,
     /** Placeholder copy to show before a selection has been made */

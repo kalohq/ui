@@ -14,7 +14,7 @@ const HelperText = props => {
 };
 
 HelperText.propTypes = {
-  children: PropTypes.array,
+  children: PropTypes.string,
 };
 
 export default HelperText;

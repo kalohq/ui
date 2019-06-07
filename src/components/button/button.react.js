@@ -27,7 +27,7 @@ export default class Button extends PureComponent {
     /** Is the button disabled? */
     disabled: PropTypes.bool,
     /** An icon from our icon set to display */
-    icon: PropTypes.string,
+    icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     /** Is the icon the only child? The button will be displayed as a square if true */
     loneIcon: PropTypes.bool,
     /** Should the button expand to 100% of the parent? */
@@ -60,7 +60,11 @@ export default class Button extends PureComponent {
     /** After a successful load, how long should the UI wait before continuing? */
     loadedTimeout: PropTypes.number,
     /** Override the component - Use with caution */
-    component: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    component: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.node,
+      PropTypes.func,
+    ]),
     /** A name to pass down to the DOM */
     name: PropTypes.string,
     /** A type to pass down to the DOM */
