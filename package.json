@@ -20,7 +20,7 @@
     "generate:tokens": "node scripts/tokens.js",
     "generate:icons": "node scripts/icons.js",
     "version": "npm run build",
-    "start-styleguide": "concurrently \"gulp watch\" \"cd site && gatsby develop\""
+    "start-styleguide": "concurrently \"gulp watch\" \"cd site && gatsby develop --p 5000\""
   },
   "lint-staged": {
     "*.js": [
