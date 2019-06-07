@@ -106,7 +106,7 @@ const Field = props => {
 Field.propTypes = {
   children: PropTypes.node,
   /** A list of validations */
-  validations: PropTypes.array,
+  validations: PropTypes.object,
   /** Any disabling permissions for this field */
   permissions: PropTypes.array,
   /** A label to be displayed above the input */

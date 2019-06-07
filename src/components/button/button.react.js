@@ -60,7 +60,7 @@ export default class Button extends PureComponent {
     /** After a successful load, how long should the UI wait before continuing? */
     loadedTimeout: PropTypes.number,
     /** Override the component - Use with caution */
-    component: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    component: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     /** A name to pass down to the DOM */
     name: PropTypes.string,
     /** A type to pass down to the DOM */

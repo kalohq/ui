@@ -59,8 +59,8 @@ Alert.propTypes = {
   type: PropTypes.oneOf(['info', 'error', 'warning', 'confirmation'])
     .isRequired,
   showIcon: PropTypes.bool,
-  /** 'left' | 'center' */
-  justifyContent: PropTypes.oneOf(['left', 'center']),
+  /** 'left' | 'center' | 'flex-start' */
+  justifyContent: PropTypes.oneOf(['left', 'center', 'flex-start']),
   className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   title: PropTypes.string,
   icon: PropTypes.string,

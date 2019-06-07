@@ -1,15 +1,18 @@
-export const TEXT_WEIGHT = ['light', 'normal', 'medium', 'semi-bold'];
+export const TEXT_WEIGHT = ['light', 'normal', 'medium', 'semi-bold', 'bold'];
 
 export const TEXT_SIZE = [
   'tiny',
+  'extra-extra-small',
   'extra-small',
   'small',
   'medium',
   'large',
   'extra-large',
+  'extra-extra-large',
 ];
 
 export const TEXT_COLOR = [
+  'inherit',
   /* PINK */
   'pink000',
   'pink100',
