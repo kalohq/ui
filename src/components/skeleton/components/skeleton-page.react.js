@@ -15,7 +15,7 @@ const SkeletonPage = props => {
 };
 
 SkeletonPage.propTypes = {
-  width: PropTypes.number,
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   children: PropTypes.node,
 };
 

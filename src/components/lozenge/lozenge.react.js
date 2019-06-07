@@ -25,7 +25,7 @@ const Lozenge = props => {
 };
 
 Lozenge.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired,
   /** 'blue' | 'green' | 'orange' | 'purple' | 'red' | 'grey' */
   variant: PropTypes.oneOf([
     'blue',
