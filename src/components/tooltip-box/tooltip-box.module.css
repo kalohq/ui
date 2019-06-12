@@ -68,3 +68,9 @@
 .tooltip-container:hover .tooltip-bubble--right {
   transform: translate3d(calc(100% + 8px), -50%, 0);
 }
+
+.tooltip-bubble--content-width {
+  min-width: auto;
+  max-width: none;
+  white-space: nowrap;
+}
