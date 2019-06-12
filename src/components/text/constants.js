@@ -13,6 +13,7 @@ export const TEXT_SIZE = [
 
 export const TEXT_COLOR = [
   'inherit',
+  'coral',
   /* PINK */
   'pink000',
   'pink100',
