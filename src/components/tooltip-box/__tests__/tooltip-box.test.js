@@ -66,4 +66,15 @@ describe('TooltipBox', () => {
       .toJSON();
     expect(wrapper).toMatchSnapshot();
   });
+
+  test('should render properly - extend bubble classname', () => {
+    const wrapper = renderer
+      .create(
+        <TooltipBox tooltip="Hello! I am a tooltip" bubbleClassName="foo">
+          Hover me :)
+        </TooltipBox>
+      )
+      .toJSON();
+    expect(wrapper).toMatchSnapshot();
+  });
 });
