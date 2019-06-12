@@ -55,4 +55,15 @@ describe('TooltipBox', () => {
       .toJSON();
     expect(wrapper).toMatchSnapshot();
   });
+
+  test('should render properly - content width', () => {
+    const wrapper = renderer
+      .create(
+        <TooltipBox tooltip="Hello! I am a tooltip" contentWidth={true}>
+          Hover me :)
+        </TooltipBox>
+      )
+      .toJSON();
+    expect(wrapper).toMatchSnapshot();
+  });
 });

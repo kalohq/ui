@@ -48,6 +48,20 @@ export const examples = [
     ),
   },
   {
+    title: 'TooltipBox - content width',
+    render: () => (
+      <TooltipBox tooltip="Hi!" contentWidth={true}>
+        Hover me :)
+      </TooltipBox>
+    ),
+    html: () => (
+      <div className="tooltip-container">
+        Hover me :)
+        <div className="tooltip-bubble tooltip-bubble--content-width">Hi!</div>
+      </div>
+    ),
+  },
+  {
     title: 'TooltipBox Info',
     render: () => (
       <TooltipBox tooltip="Hello! I am a tooltip" type="info">

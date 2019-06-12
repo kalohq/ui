@@ -11,7 +11,15 @@ const TYPE_ICON_MAP = {
 };
 
 const TooltipBox = props => {
-  const {children, tooltip, show, className, type, ...otherProps} = props;
+  const {
+    children,
+    tooltip,
+    show,
+    className,
+    contentWidth,
+    type,
+    ...otherProps
+  } = props;
 
   const isTypeSupported = Boolean(TYPE_ICON_MAP[type]);
 
@@ -23,9 +31,15 @@ const TooltipBox = props => {
       },
       className
     ),
-    bubble: cx(styles['tooltip-bubble'], {
-      [styles[`tooltip-bubble--${show}`]]: SUPPORTED_DIRECTIONS.includes(show),
-    }),
+    bubble: cx(
+      styles['tooltip-bubble'],
+      {
+        [styles[`tooltip-bubble--${show}`]]: SUPPORTED_DIRECTIONS.includes(
+          show
+        ),
+        [styles[`tooltip-bubble--content-width`]]: contentWidth,
+      },
+    ),
   };
 
   return (
@@ -56,6 +70,10 @@ TooltipBox.propTypes = {
    * the type of the tooltip box ['info']
    */
   type: PropTypes.oneOf(['info']),
+  /**
+   * adapt the width to its content
+   */
+  contentWidth: PropTypes.bool,
   className: PropTypes.string,
 };
 
