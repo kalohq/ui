@@ -41,7 +41,10 @@ const TagGroup = props => {
 };
 
 TagGroup.propTypes = {
-  children: PropTypes.array,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf([PropTypes.node]),
+    PropTypes.node,
+  ]),
   limit: PropTypes.number,
   showOverflow: PropTypes.bool,
   className: PropTypes.string,
