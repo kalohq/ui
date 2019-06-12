@@ -16,6 +16,7 @@ const TooltipBox = props => {
     tooltip,
     show,
     className,
+    bubbleClassName,
     contentWidth,
     type,
     ...otherProps
@@ -39,6 +40,7 @@ const TooltipBox = props => {
         ),
         [styles[`tooltip-bubble--content-width`]]: contentWidth,
       },
+      bubbleClassName
     ),
   };
 
@@ -74,6 +76,10 @@ TooltipBox.propTypes = {
    * adapt the width to its content
    */
   contentWidth: PropTypes.bool,
+  /**
+   * className given to the tooltip bubble
+   */
+  bubbleClassName: PropTypes.string,
   className: PropTypes.string,
 };
 
