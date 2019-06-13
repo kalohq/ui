@@ -51,22 +51,17 @@ export function parseStyle(name, value) {
 }
 
 /** Pull out styles from props */
-export function parseStyleProps(originalProps) {
-  const props = {};
-  const style = originalProps.style || {};
-
-  for (const key in originalProps) {
-    if ({}.hasOwnProperty.call(originalProps, key)) {
-      if (STYLE_WHITELIST[key]) {
-        style[key] = parseStyle(key, originalProps[key]);
-      } else if (key !== 'style') {
-        props[key] = originalProps[key];
-      }
-    }
-  }
-
-  return {props, style};
-}
+export const parseStyleProps = ({style = {}, ...otherProps}) =>
+  Object.keys(otherProps).reduce(
+    (parsed, key) =>
+      STYLE_WHITELIST[key]
+        ? {
+            ...parsed,
+            style: {...parsed.style, [key]: parseStyle(key, otherProps[key])},
+          }
+        : {...parsed, props: {...parsed.props, [key]: otherProps[key]}},
+    {props: {}, style}
+  );
 
 export function stylePropTransform(originalProps) {
   const props = {};
