@@ -32,34 +32,6 @@ export function cleanProps(originalProps) {
   return cleanedProps;
 }
 
-/**
- * Flexbox style overrides for Safari 8
- * Safari 8 detection is performed in advance
- */
-const VENDOR_STYLERS =
-  typeof window !== 'undefined' &&
-  window.navigator.userAgent.indexOf('Safari/') !== -1 &&
-  window.navigator.userAgent.indexOf('Version/8') !== -1
-    ? {
-        display: (key, value) => ({
-          key,
-          value: (value.indexOf('flex') > -1 ? '-webkit-' : '') + value,
-        }),
-        alignContent: (key, value) => ({key: 'WebkitAlignContent', value}),
-        alignItems: (key, value) => ({key: 'WebkitAlignItems', value}),
-        alignSelf: (key, value) => ({key: 'WebkitAlignSelf', value}),
-        justifyContent: (key, value) => ({key: 'WebkitJustifyContent', value}),
-        order: (key, value) => ({key: 'WebkitOrder', value}),
-        flexDirection: (key, value) => ({key: 'WebkitFlexDirection', value}),
-        flexWrap: (key, value) => ({key: 'WebkitFlexWrap', value}),
-        flexFlow: (key, value) => ({key: 'WebkitFlexFlow', value}),
-        flex: (key, value) => ({key: 'WebkitFlex', value}),
-        flexBasis: (key, value) => ({key: 'WebkitFlexBasis', value}),
-        flexShrink: (key, value) => ({key: 'WebkitFlexShrink', value}),
-        flexGrow: (key, value) => ({key: 'WebkitFlexGrow', value}),
-      }
-    : {};
-
 /** Parse a specific style */
 export function parseStyle(name, value) {
   if (value && SPACING_REGEX.test(name)) {
@@ -86,13 +58,7 @@ export function parseStyleProps(originalProps) {
   for (const key in originalProps) {
     if ({}.hasOwnProperty.call(originalProps, key)) {
       if (STYLE_WHITELIST[key]) {
-        const parsedStyleValue = parseStyle(key, originalProps[key]);
-        if (!!VENDOR_STYLERS[key]) {
-          const pair = VENDOR_STYLERS[key](key, parsedStyleValue);
-          style[pair.key] = pair.value;
-        } else {
-          style[key] = parsedStyleValue;
-        }
+        style[key] = parseStyle(key, originalProps[key]);
       } else if (key !== 'style') {
         props[key] = originalProps[key];
       }
