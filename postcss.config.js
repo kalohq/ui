@@ -1,25 +1,22 @@
+const postcssPresetEnv = require('postcss-preset-env');
 const cssVariables = require('./src/design-tokens/tokens.css.js');
+const cssnano = require('cssnano');
 
-module.exports = {
-  plugins: {
-    'postcss-cssnext': {
+module.exports = () => ({
+  plugins: [
+    postcssPresetEnv({
+      autoprefixer: {grid: true},
       features: {
-        customProperties: {
-          variables: cssVariables,
-          preserve: true,
-        },
-        rem: {
-          rootValue: 10,
-        },
+        'custom-properties': {variables: cssVariables},
       },
-    },
-    cssnano: {
+    }),
+    cssnano({
       normalizeUrl: false,
       discardEmpty: false,
       core: false,
       minifyFontValues: false,
       discardUnused: false,
       zindex: false,
-    },
-  },
-};
+    }),
+  ],
+});
