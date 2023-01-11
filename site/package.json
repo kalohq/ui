@@ -17,7 +17,7 @@
     "gatsby-remark-prismjs": "^1.2.11",
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-react-docgen": "^1.0.12",
-    "gatsby-transformer-remark": "^1.7.27",
+    "gatsby-transformer-remark": "^5.25.1",
     "glob": "^7.1.2",
     "react-element-to-jsx-string": "^14.0.1",
     "react-emotion": "^9.0.0",
